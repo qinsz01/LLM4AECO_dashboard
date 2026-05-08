@@ -1,0 +1,35 @@
+{
+  "id": "zhang2025b",
+  "citation": "Zhang et al./2025",
+  "title": "Data-Driven Building Load Prediction and Large Language Models: Comprehensive Overview",
+  "year": 2025,
+  "abstract": "Building load forecasting is essential for optimizing the architectural design and managing energy efficiently, enhancing the performance of Heating, Ventilation, and Air Conditioning systems, and enhancing occupant comfort. With advancements in data science and machine learning, the focus on predicting building loads through data analysis has significantly intensified as a research domain. However, previous studies have typically faced challenges such as data scarcity, improper feature extraction methods, and weak model generalization capabilities. To gain a deeper understanding of these issues, a comprehensive review of data processing, feature selection, and model selection methods in previous research is conducted from the perspective of the entire load forecasting process. The aim is to identify the most suitable methods for each step of load forecasting to enhance prediction accuracy. This review surveys the research progress of statistical learning methods, traditional machine learning methods, deep learning methods, and hybrid methods in different application scenarios of building load prediction. Then, it emphasized the critical role of data preprocessing and focused on techniques like data fusion and transfer learning to overcome data shortages and bolster the models' ability to generalize. Moreover, the obtainment of significant features from building characteristics, weather data, and operational statistics to boost prediction accuracy is explored. A notable contribution of this review is the proposed technical framework for EnergyPlus model generation using LLM-based Retrieval Augmented Generation (RAG) technology and room-level load prediction with Spatio-Temporal Graph Neural Networks. This framework utilizes architectural design drawings to achieve an end-to-end prediction process, aiming to reduce the professional threshold of load prediction and provide technical support for fine-grained regulation of building operation. Exploratory experiment is conducted using a single-zone building model to verify the feasibility of LLM-generated EnergyPlus models, with IDF simulation file generation taking only 196 s. Room-level load forecasting with LLMs remains to be explored further. It is reasonable to believe that the methods proposed in this review hold promise for advancing data-driven building load forecasting technologies.",
+  "journal": "ENERGY AND BUILDINGS",
+  "pdfFile": "Zhang et al. - 2025 - Data-driven building load prediction and large language models Comprehensive overview",
+  "markdownFile": "Zhang et al. - 2025 - Data-driven building load prediction and large language models Comprehensive overview",
+  "url": "https://doi.org/10.1016/j.enbuild.2024.115001",
+  "category": "能耗管理与优化",
+  "task": "建筑负荷预测综述与EnergyPlus模型生成",
+  "taskEn": "Building load prediction review and EnergyPlus model generation",
+  "phase": "全生命周期",
+  "inputData": "建筑能耗数据与设计规范",
+  "inputDataEn": "Building energy consumption data and design standards",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "llmModels": [
+    "Llama-3-8B"
+  ],
+  "keywords": [
+    "Data-driven approach",
+    "Building load prediction",
+    "Machine learning",
+    "Large language models",
+    "Feature engineering",
+    "Data preparation",
+    "Room-scale load prediction",
+    "Retrieval augmented generation"
+  ],
+  "contribution": "全面综述了数据驱动建筑负荷预测方法，并提出了基于LLM的RAG技术生成EnergyPlus模型的技术框架，结合时空图神经网络实现房间级负荷预测，降低负荷预测的专业门槛。",
+  "methodology": "系统回顾了统计学习、传统机器学习、深度学习和混合方法在建筑负荷预测中的应用，提出利用RAG技术结合Llama-3-8B模型从设计标准和历史模型库中检索相似案例，自动生成EnergyPlus IDF文件，并用STGNN进行房间级负荷预测。",
+  "results": "探索性实验验证了LLM生成EnergyPlus模型的可行性，IDF文件生成仅需196秒，生成的建筑模型年能耗模拟结果为8681 kWh（其中制冷2380 kWh，供暖6301 kWh），最大制冷负荷5956 W，最大供暖负荷13112 W。"
+}

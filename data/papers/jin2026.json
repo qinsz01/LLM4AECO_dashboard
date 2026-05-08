@@ -1,0 +1,34 @@
+{
+  "id": "jin2026",
+  "citation": "Jin et al./2026",
+  "title": "Evaluating Large Language Models (LLMs) for Semantic Interpretation of IFC-based BIM Data",
+  "year": 2026,
+  "abstract": "Building Information Modeling (BIM) produces structured datasets, commonly exchanged through Industry Foundation Classes (IFC) format, that capture information about building geometry, object properties, and spatial relationships. Although these datasets are rich in detail, they usually require proprietary software and expert knowledge to interpret, which limits their broader usability. Recent advances in large language models (LLMs) raise the question of whether they can serve as independent interpreters of BIM data when provided in text-based formats. This paper investigates that possibility by restructuring IFC files into JSON and testing LLMs across two tasks: (1) exploring natural language queries on a BIM model and (2) detecting modifications between paired models. Results show that LLMs can extract and summarize information with reasonable accuracy when data is explicitly structured, though spatial reasoning and subtle modifications posed consistent challenges. These findings provide evidence for a text-driven approach to BIM interpretation and highlight opportunities for platform-independent applications.",
+  "journal": "Automation in Construction",
+  "pdfFile": "Jin et al. - 2026 - Evaluating large language models (LLMs) for semantic interpretation of IFC-based BIM data",
+  "markdownFile": "Jin et al. - 2026 - Evaluating large language models (LLMs) for semantic interpretation of IFC-based BIM data",
+  "url": "https://doi.org/10.1016/j.autcon.2026.106879",
+  "category": "BIM检索与管理",
+  "task": "IFC-BIM数据语义解释",
+  "taskEn": "Semantic interpretation of IFC-based BIM data",
+  "phase": "规划与设计",
+  "inputData": "IFC格式BIM模型数据",
+  "inputDataEn": "IFC-format BIM model data",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "llmModels": [
+    "GPT-4o",
+    "GPT-4o-mini",
+    "GPT-3.5-turbo"
+  ],
+  "keywords": [
+    "building information modeling (BIM)",
+    "industry foundation classes (IFC)",
+    "large language models (LLMs)",
+    "construction informatics",
+    "text-based BIM interpretation"
+  ],
+  "contribution": "首次系统评估了通用LLM在无需微调条件下独立解释IFC-BIM数据的能力，提出了一个将IFC文件重构为JSON格式的框架，用于平台无关的BIM语义查询和设计变更检测。",
+  "methodology": "使用IfcOpenShell库将IFC文件解析并转换为结构化JSON文件，通过零样本提示范式让GPT模型执行自然语言查询和模型变更检测两项任务，在软件无关环境下评估LLM的BIM推理能力。",
+  "results": "LLM在数据显式结构化时能够以合理准确度提取和总结BIM信息，但在空间推理和细微变更检测方面存在持续性挑战，为基于文本的BIM解释方法提供了实证依据。"
+}

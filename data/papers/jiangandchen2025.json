@@ -1,0 +1,33 @@
+{
+  "id": "jiangandchen2025",
+  "citation": "Jiang and Chen / 2025",
+  "title": "Efficient fine-tuning of large language models for automated building energy modeling in complex cases",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "自动化建筑能耗建模",
+  "phase": "规划与设计",
+  "inputData": "文本（自然语言描述）",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "contribution": "提出基于LoRA高效微调大语言模型（T5-11B）的自动化建筑能耗建模平台EPlus-LLMv2，结合模型量化和混合精度训练实现资源高效定制，在402个复杂建模案例中实现100%建模准确率并减少98%以上建模工作量",
+  "abstract": "Building energy modeling (BEM) requires extensive time and efforts in building development. Automated building energy modeling (ABEM) is significant to reduce this burden, promoting widespread adoption of building energy modeling in building design and operation practice. This paper presents an efficient fine-tuning approach to tailor large language models (LLMs) for ABEM. Leveraging Low-Rank Adapter (LoRA) and a comprehensive training dataset (490k samples), the proposed approach enhances LLM customization while maintaining computational efficiency. Model quantization and mixed-precision training further optimize efficiency without compromising performance. Using this approach, the developed platform (EPlus-LLMv2) can auto-generate complex buildings with varying geometries, thermal zones, materials, hourly schedules, operation settings, etc. Tests on 402 modeling cases demonstrate 100% accuracy of modeling while reducing modeling efforts by >98%. Additionally, an interactive human-AI interface is developed to further enhance the platform's accessibility. Finally, insights and future work to customize LLMs in ABEM and other building applications are discussed.",
+  "journal": "Automation in Construction 175 (2025) 106223",
+  "llmModels": [
+    "T5-11B"
+  ],
+  "keywords": [
+    "artificial intelligence",
+    "large language models",
+    "parameter-efficient fine-tuning",
+    "machine learning",
+    "automated building energy modeling",
+    "building energy models"
+  ],
+  "methodology": "基于T5-11B（110亿参数）seq2seq基础模型，采用参数高效微调技术定制LLM用于自动化建筑能耗建模（ABEM）。数据准备方面，利用拉丁超立方采样（LHS）生成涵盖多种建筑建模场景（几何形状、屋顶类型、热分区、材料属性、运行调度等）的49万条训练样本（prompt-IDF对），并设计简洁且灵活的prompt格式以兼顾训练稳定性和用户输入多样性。微调方面，采用LoRA适配器仅微调Attention模块的低秩分解矩阵（显著减少可训练参数），结合Int-8模型量化（将FP32权重压缩至8位整数，降低约75%内存占用）和BF16混合精度训练（加速训练过程且保持数值稳定性）。开发了交互式人机界面，支持自然语言描述自动生成IDF模型文件、天气文件上传、EnergyPlus模拟运行及结果可视化。验证涵盖360个准确率测试、30个鲁棒性测试和12个时间效率对比测试。",
+  "results": "EPlus-LLMv2在全部360个准确率测试案例（180个随机生成+180个专家手动创建）中实现100%建模准确率，自动生成的IDF文件与手动创建的基准模型在几何参数和模拟结果上完全一致。在30个鲁棒性测试中，即使输入包含拼写错误、不同语气和省略短语等噪声，模型仍100%正确生成符合要求的建筑模型。时间效率方面，使用EPlus-LLMv2仅需3-4分钟（含编写prompt时间），相比EnergyPlus IDF Editor（单区域3-3.2小时，多区域8-8.5小时）和OpenStudio（单区域2-2.5小时，多区域2.5-3小时），建模工作量减少97.5%-99.9%。LoRA仅应用于Attention模块效果优于应用于所有线性层，BF16训练优于FP16，Int-8量化在精度和效率间取得最佳平衡。",
+  "markdownFile": "Jiang and Chen - 2025 - Efficient fine-tuning of large language models for automated building energy modeling in complex cas.md",
+  "pdfFile": "Jiang and Chen - 2025 - Efficient fine-tuning of large language models for automated building energy modeling in complex cas.pdf",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106223",
+  "taskEn": "Automated building energy modeling",
+  "inputDataEn": "Text (natural language descriptions)"
+}

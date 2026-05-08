@@ -1,0 +1,37 @@
+{
+  "id": "mehrishal2025",
+  "citation": "Mehrishal et al./2025",
+  "title": "Tunnel Rapid AI Classification (TRaiC): An Open-Source Code for 360° Tunnel Face Mapping, Discontinuity Analysis, and RAG-LLM Powered Geo-Engineering Reporting",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "隧道掌子面映射与岩体分类",
+  "phase": "施工",
+  "inputData": "现场图像（360°全景图像）",
+  "representation": "多模态",
+  "llmMethod": "RAG",
+  "contribution": "TRaiC开源平台集成了360°成像、AI分析和RAG-LLM，实现了快速自动化隧道地质评估和报告生成",
+  "pdfFile": "Mehrishal, S etal - 2025 - Tunnel Rapid AI Classification (TRaiC) An Open-Source Code for 360° Tunnel Face Mapping, Discontinui....pdf",
+  "markdownFile": "Mehrishal, S etal - 2025 - Tunnel Rapid AI Classification (TRaiC) An Open-Source Code for 360° Tunnel Face Mapping, Discontinui....md",
+  "abstract": "Accurate and efficient rock mass characterization is essential in geotechnical engineering, yet traditional tunnel face mapping remains time-consuming, subjective, and potentially hazardous. Recent advances in digital technologies and AI offer automation opportunities, but many existing solutions are hindered by slow 3D scanning, computationally intensive processing, and limited integration flexibility. This paper presents Tunnel Rapid AI Classification (TRaiC), an open-source MATLAB-based platform for rapid and automated tunnel face mapping. TRaiC integrates single-shot 360° panoramic photography, AI-powered discontinuity detection, 3D textured digital twin generation, rock mass discontinuity characterization, and Retrieval-Augmented Generation with Large Language Models (RAG-LLM) for automated geological interpretation and standardized reporting. The modular eight-stage workflow includes simplified 3D modeling, trace segmentation, 3D joint network analysis, and rock mass classification using RMR, with outputs optimized for Geo-BIM integration. Initial evaluations indicate substantial reductions in processing time and expert assessment workload. Producing a lightweight yet high-fidelity digital twin, TRaiC enables computational efficiency, transparency, and reproducibility, serving as a foundation for future AI-assisted geotechnical engineering research. Its graphical user interface and well-structured open-source code make it accessible to users ranging from beginners to advanced researchers.",
+  "journal": "Preprints.org (Preprint, not peer-reviewed, Posted: 12 August 2025)",
+  "llmModels": [
+    "GPT-4",
+    "OpenAI text-embedding-ada-002",
+    "Llama Vision",
+    "Llava"
+  ],
+  "keywords": [
+    "tunnel face mapping",
+    "tunnel panoramic photography",
+    "AI-based discontinuity detection",
+    "digital joint characterization",
+    "Geo-RAG-LLM",
+    "tunnel digital twin",
+    "rock mass classification"
+  ],
+  "methodology": "The TRaiC platform implements an eight-stage modular processing pipeline built in MATLAB (120 functions): (1) Tunnel profile drawing and geometric modeling using parametric and custom drawing approaches for multiple standard tunnel profiles (circular, rectangular, D-shaped, horseshoe); (2) Panoramic image to cubemap conversion via spherical coordinate transformations, converting 2:1 aspect ratio panoramic imagery onto six discrete cubic faces; (3) AI-driven semi-automatic trace detection using a pre-trained DeepLabV3+ semantic segmentation network for pixel-level discontinuity trace identification, with manual supervisory refinement steps for removing incorrect segments and adding missed traces; (4) Digital twin development via geometric modeling and texture mapping to create textured 3D models exported as OBJ/PLY/RGB point clouds; (5) 2D trace segmentation using Hough Transform and Line Segment Detector (LSD) algorithms for linear feature extraction from binary trace masks; (6) 2D line-segment linking via threshold-based agglomerative clustering and multi-stage geometric optimization; (7) 3D trace network creation using six-channel texture representations (RGB+XYZ) with Bresenham's line algorithm and coordinate lookup for 3D trace polylines, followed by joint set analysis including size distribution, orientation measurement (curved/co-planar trace identification with PCA and stereonet analysis), and spacing calculation under multiple geological assumptions; (8) LLM-assisted geological description and RAG-LLM report generation. The LLM integration uses structured prompt engineering for rock mass characterization (rock type, weathering grade W1-W5, joint conditions, spacing, strength) via OpenAI API with base64-encoded images. The RAG system constructs a private knowledge database from historical tunnel documents (PDF, DOCX, TXT), generates embeddings using OpenAI text-embedding-ada-002, and retrieves relevant context via cosine similarity. GPT-4 variants generate standardized tunnel face mapping reports combining quantitative trace analysis data with qualitative LLM-generated geological descriptions, including RMR scoring with automated joint orientation adjustment.",
+  "results": "The TRaiC platform successfully demonstrated an integrated eight-stage workflow from raw 360° panoramic images to comprehensive geological reports. The DeepLabV3+ based trace detection achieved effective pixel-level segmentation of discontinuity traces across multiple tunnel faces. The LSD algorithm detected 879 line segments compared to 275 by Hough Transform, with LSD showing superior geometric precision but higher computational cost. The 2D segment linking consolidated 879 fragmented segments into 84 longer linked segments. The 3D trace network analysis produced mean visible trace length of 1.29 m with identified joint sets via Kernel density stereonet analysis. The LLM-assisted face description system generated geological interpretations including rock type, weathering grade, joint conditions, and structural features. The RMR scoring module automated rock mass classification with real-time calculation. The RAG-LLM system produced standardized tunnel face mapping reports integrating quantitative measurements and qualitative geological descriptions. Initial evaluations indicated substantial reductions in processing time and expert assessment workload compared to traditional manual mapping. However, the authors note the current system remains semi-automated, sensitive to threshold settings, and relies on non-secure cloud-based LLM APIs, serving primarily as a prototype rather than a production-ready solution.",
+  "url": "https://doi.org/10.20944/preprints202508.0784.v1",
+  "taskEn": "Tunnel face mapping and rock mass classification",
+  "inputDataEn": "On-site images (360-degree panoramic images)"
+}

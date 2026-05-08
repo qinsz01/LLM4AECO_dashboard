@@ -1,0 +1,35 @@
+{
+  "id": "hettiarachchi2025",
+  "citation": "Hettiarachchi et al., 2025",
+  "title": "CODE-ACCORD: A Corpus of building regulatory data for rule generation towards automatic compliance checking",
+  "year": 2025,
+  "category": "规范与合规检查",
+  "task": "自动合规检查",
+  "phase": "规划与设计",
+  "inputData": "建筑规范文档",
+  "representation": "文本",
+  "llmMethod": "其他",
+  "contribution": "构建了CODE-ACCORD语料库，包含862条来自英格兰和芬兰建筑法规的自含句，由12名标注者手动标注了4,297个实体和4,329个关系，为LLM在建筑合规检查中的规则生成应用提供高质量标注数据基准",
+  "abstract": "Automatic Compliance Checking (ACC) within the Architecture, Engineering, and Construction (AEC) sector necessitates automating the interpretation of building regulations to achieve its full potential. Converting textual rules into machine-readable formats is challenging due to the complexities of natural language and the scarcity of resources for advanced Machine Learning (ML). Addressing these challenges, we introduce CODE-ACCORD, a dataset of 862 sentences from the building regulations of England and Finland. Only the self-contained sentences, which express complete rules without needing additional context, were considered as they are essential for ACC. Each sentence was manually annotated with entities and relations by a team of 12 annotators to facilitate machine-readable rule generation, followed by careful curation to ensure accuracy. The final dataset comprises 4,297 entities and 4,329 relations across various categories, serving as a robust ground truth. CODE-ACCORD supports a range of ML and Natural Language Processing (NLP) tasks, including text classification, entity recognition, and relation extraction. It enables applying recent trends, such as deep neural networks and large language models, to ACC.",
+  "journal": "Scientific Data (Nature)",
+  "llmModels": [
+    "N/A (dataset paper)"
+  ],
+  "keywords": [
+    "automatic compliance checking",
+    "building regulations",
+    "named entity recognition",
+    "relation extraction",
+    "corpus annotation",
+    "rule generation",
+    "NLP",
+    "AEC"
+  ],
+  "methodology": "The development of the CODE-ACCORD corpus involved two main stages: (1) Data collection: Building regulations from England (23 documents, 1548 pages) and Finland (10 documents, 140 pages) were collected from official government sources. PDFs were converted to text using PDFMiner, sentences were split using NLTK tokenizer, then semi-automatically filtered through keyword matching targeting quantitative, subjective, and deontic requirements. Manual curation was applied to select 1,246 self-contained sentences (sentences expressing complete rules without external references). (2) Data annotation: 862 randomly selected sentences were manually annotated by 12 annotators with backgrounds in computer science and civil engineering using the LightTag platform. Four entity categories (object, quality, value, others) and ten relation categories (selection, necessity, part-of, not-part-of, greater, greater-equal, equal, less-equal, less, none) were defined. Annotations were conducted in 7 rounds with 2-3 annotators per sentence, followed by curation rounds by domain experts. Entity annotations use BIO format; relation annotations use tagged entity pair format. The dataset was split into 80% train and 20% test using stratified sampling.",
+  "results": "The final CODE-ACCORD dataset contains 862 annotated sentences with 4,297 entities distributed across four categories and 4,329 relations distributed across ten categories (including 1,000 randomly sampled 'none' relations from 8,104 possible unrelated entity pairs). Most sentences contain up to 5 entities and 2-3 relations. Mean inter-annotator agreement (IAA) for entities was 0.37 (max 0.66), with the relatively low values attributed to the strict matching criteria and domain complexity. Stratified train/test splits maintain equivalent class distributions across entity and relation categories. The dataset is publicly available on Zenodo and GitHub.",
+  "url": "https://doi.org/10.1038/s41597-024-04320-x",
+  "pdfFile": "Hettiarachchi et al. - 2025 - CODE-ACCORD A Corpus of building regulatory data for rule generation towards automatic compliance c.pdf",
+  "markdownFile": "Hettiarachchi et al. - 2025 - CODE-ACCORD A Corpus of building regulatory data for rule generation towards automatic compliance c.md",
+  "taskEn": "Automated compliance checking",
+  "inputDataEn": "Building code documents"
+}

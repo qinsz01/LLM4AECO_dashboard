@@ -1,0 +1,40 @@
+{
+  "id": "lietal2025b",
+  "citation": "Li et al. / 2025",
+  "title": "Estimating demolition waste from residential interior photos: A Large Language Model solution",
+  "year": 2025,
+  "category": "其他",
+  "task": "拆除废弃物预测、室内设计类型分类、平面图分割",
+  "phase": "翻新与拆除",
+  "inputData": "住宅室内照片、建筑平面图",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "提出了一种基于LLM和深度学习的住宅拆除废弃物预测框架，利用GPT-4o通过精心设计的提示词对室内设计类型（天花板、墙壁、地板）进行分类，结合Deepfloorplan深度学习模型分割平面图提取房间几何信息，并通过OCR技术匹配房间位置，最终在房间层面预测拆除废弃物的类型和数量，超越传统基于废弃物产生率的方法",
+  "abstract": "This paper proposes a framework integrating deep learning models with Large Language Models (LLMs) to automatically classify interior design types and predict demolition waste from residential interior photos and floor plans. The LLM (GPT-4o) is used with designed prompts to identify interior design types of ceilings, walls, and floors. Deep learning (Deepfloorplan) segments floor plans to extract room geometries, and OCR matches room positions. The framework predicts demolition waste at the room level, achieving high classification accuracy (precision 0.89-0.94) and outperforming traditional waste generation rate methods (RMSE 2.88, MAE 1.87, R-squared 0.55 vs. expert estimates).",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "GPT-4o",
+    "Qwen-VL-plus",
+    "Qwen-VL-max",
+    "doubao-1.5-vision-lite",
+    "doubao-1.5-vision-pro",
+    "glm-4v"
+  ],
+  "keywords": [
+    "demolition waste quantification",
+    "waste type recognition",
+    "large language model",
+    "interior design classification",
+    "floor plan recognition",
+    "prompt engineering",
+    "deep learning",
+    "OCR"
+  ],
+  "methodology": "以GPT-4o-2024-0806为核心LLM，提出三步框架：(1) 室内设计类型识别：基于国家建筑标准12BJ1-1定义天花板、墙壁和地板的设计类型及厚度，设计包含角色设定（家装顾问）、分类指令、领域知识和格式约束的结构化提示词，利用GPT-4o对室内照片进行零样本分类，支持多标签输出；(2) 平面图处理：采用Deepfloorplan深度学习模型对平面图进行像素级分割（墙体、门、窗），通过形态学操作和轮廓检测提取房间几何形状，利用OCR提取房间名称及坐标，将室内照片与房间位置匹配，并计算墙体长度（区分承重墙和隔墙）；(3) 拆除废弃物估算：基于设计类型对应的材料厚度和密度，计算结构废弃物（墙体和楼板）和装修废弃物（天花板、墙面、地面材料），汇总得到房间层面的拆除废弃物总量。数据集来自链家网站，包含1500个房间样本用于分类和99个房间样本用于废弃物预测。",
+  "results": "室内设计类型分类方面，天花板、墙壁和地板的精确度分别为0.89、0.90和0.94，召回率分别为0.88、0.87和0.89，F1分数均接近0.90；GPT-4o在多个对比模型中表现最优；提示词消融实验表明领域知识对分类性能提升最大；在模糊、低光照和非标准角度照片上分类结果保持稳健（F1>0.87）。废弃物预测方面，与专家评估相比，MAE为1.87，RMSE为2.88，R-squared为0.55，显著优于传统废弃物产生率方法（0.2100 m3/m2方法的MAE=8.22, MAPE=74.12%；0.1388 m3/m2方法的MAE=9.24, MAPE=82.89%）；与专家方法的整体误差仅为0.7%；各类材料的WGR值均在已有文献报告范围内，验证了方法的可靠性。",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106478",
+  "markdownFile": "Li et al. - 2025 - Estimating demolition waste from residential interior photos A Large Language Model solution",
+  "taskEn": "Demolition waste prediction, interior design type classification, floor plan segmentation",
+  "inputDataEn": "Residential interior photos, architectural floor plans",
+  "pdfFile": "Li et al. - 2025 - Estimating demolition waste from residential interior photos A Large Language Model solution"
+}

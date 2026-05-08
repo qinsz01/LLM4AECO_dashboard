@@ -1,0 +1,37 @@
+{
+  "id": "maharjan2026",
+  "json_id": "maharjan2026",
+  "citation": "Maharjan et al./2026",
+  "title": "A Large Language Model-Driven Framework for Automated Bridge Specification Generation and Simulation Validation",
+  "year": 2026,
+  "abstract": "Many bridges have incomplete or fragmented specification records in legacy practitioner documents, which hinders building analysis-ready digital models. Reality capture and scan-to-BrIM workflows can recover external geometry but typically miss specification parameters needed for simulation, such as materials, supports, and representative loads. This study proposes BrDSL, a bridge domain-specific framework that generates validated, analysis-ready specification data from minimal user inputs within a defined bridge class and analysis setting. BrDSL is demonstrated for simply supported steel girder bridges with reinforced concrete deck slabs, using standardized practitioner design dossiers and linear static serviceability verification under representative loads. An LLM-based extraction pipeline converts design dossiers into a canonical JSON schema to build a reference database. A constrained generation module uses retrieval over this database to synthesize full specifications from sparse inputs (e.g., span and deck width), while multi-level validation and bounded iterative repair enforce schema consistency, engineering rule checks, and statistical plausibility. Finally, an automated JSON-to-Abaqus pipeline constructs FE models and verifies stress and deflection criteria.",
+  "journal": "Computer-Aided Civil and Infrastructure Engineering",
+  "doi": "10.1016/j.cacaie.2026.100014",
+  "pdfFile": "Maharjan and Chun - 2026 - A large language model-driven framework for automated bridge specification generation and simulation",
+  "markdownFile": "Maharjan and Chun - 2026 - A large language model-driven framework for automated bridge specification generation and simulation",
+  "url": "https://doi.org/10.1016/j.cacaie.2026.100014",
+  "category": "结构设计与分析",
+  "task": "桥梁规格数据自动生成与仿真验证",
+  "taskEn": "Automated bridge specification generation and simulation validation",
+  "phase": "全生命周期",
+  "inputData": "最小用户输入（跨径、桥面宽度等）、桥梁设计文档（DOCX）",
+  "inputDataEn": "Minimal user inputs (span, deck width, etc.), bridge design documents (DOCX)",
+  "representation": "结构化",
+  "llmMethod": "RAG",
+  "llmModels": [
+    "GPT-5",
+    "OpenAI text-embedding-3-large"
+  ],
+  "keywords": [
+    "bridge specification",
+    "BrDSL",
+    "retrieval-augmented generation",
+    "finite element model",
+    "Abaqus",
+    "constrained generation",
+    "iterative repair"
+  ],
+  "contribution": "提出BrDSL端到端框架，通过LLM驱动的文档提取、约束RAG生成、多级验证与迭代修复、自动有限元仿真验证，从最小用户输入生成满足工程约束的桥梁规格数据，严格可行率达95%，基线方法均为0%。",
+  "methodology": "三模块框架：(1)文档-JSON提取模块——LLM将标准化桥梁设计文档转换为规范JSON模式，构建领域知识库（1056份文档，96.7%提取覆盖率）；(2)桥梁数据生成模块——基于OpenAI嵌入的语义检索获取原型设计，GPT-5约束生成候选规格，三级验证（模式/工程规则/统计合理性），有界迭代修复（确定性规则修复+可选LLM补丁）；(3)自动FEM验证模块——JSON-to-Abaqus自动构建有限元模型，线性静力分析验证应力与挠度标准。",
+  "results": "信息提取：从1056份文档中成功提取1021份JSON（96.7%覆盖率），字段级F1=85.7%。生成对比：BrDSL严格可行率95%（38/40），而LLM/RAG/RAG+Prior基线均为0%。BrDSL平均复合违规分数J=0.10，工程规则违规降低98.3%。仿真验证：所有40个生成规格均通过FEM应力与挠度验证，50个额外配置同样全部通过。"
+}

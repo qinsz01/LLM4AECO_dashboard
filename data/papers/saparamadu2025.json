@@ -1,0 +1,37 @@
+{
+  "id": "saparamadu2025",
+  "citation": "Saparamadu et al./2025",
+  "title": "Optimising Contract Interpretations with Large Language Models: A Comparative Evaluation of a Vector Database-Powered Chatbot vs. ChatGPT",
+  "year": 2025,
+  "category": "其他",
+  "task": "合同解读",
+  "phase": "施工",
+  "inputData": "规范文档+合同文本",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "contribution": "基于向量数据库的领域专用RAG聊天机器人在建筑合同解读中显著优于通用ChatGPT，平均准确率从36%提升至88%",
+  "pdfFile": "Saparamadu, P.V.I.N. etal - 2025 - Optimising Contract Interpretations with Large Language Models A Comparative Evaluation of a Vector....pdf",
+  "markdownFile": "Saparamadu, P.V.I.N. etal - 2025 - Optimising Contract Interpretations with Large Language Models A Comparative Evaluation of a Vector....md",
+  "abstract": "Frequent ambiguities in contract terms often lead to costly legal disputes and project delays in the construction industry. Large Language Models (LLMs) offer a promising solution, enhancing accuracy and reducing misinterpretations. As studies pointed out, many professionals use LLMs, such as ChatGPT, to assist with their professional tasks at a minor level, such as information retrieval from the Internet and content editing. With access to a construction regulation database, LLMs can automate contract interpretation. However, the lack of Artificial Intelligence tools tailored to industry regulations hinders their adoption in the construction sector. This research addresses the gap by developing and deploying a publicly available specialised chatbot using the ChatGPT language model. The development process includes architectural design, data preparation, vector embeddings, and model integration. The study uses qualitative and quantitative methodologies to evaluate the chatbot's role in resolving contract-related issues through standardised tests. The specialised chatbot, trained on construction-specific legal information, achieved an average score of 88%, significantly outperforming ChatGPT's 36%. The integration of a domain-specific language model promises to revolutionise construction practices through increased precision, efficiency, and innovation. These findings demonstrate the potential of optimised language models to transform construction practices.",
+  "journal": "Buildings",
+  "url": "https://doi.org/10.3390/buildings15071144",
+  "llmModels": [
+    "GPT-3.5",
+    "GPT-4o"
+  ],
+  "keywords": [
+    "artificial intelligence",
+    "automated contracts",
+    "building construction",
+    "chatbot",
+    "ChatGPT",
+    "intelligent contract",
+    "large language models",
+    "natural language processing",
+    "smart contracts"
+  ],
+  "methodology": "Mixed-method approach combining qualitative (systematic literature review of 50 articles from Scopus, IEEE Xplore, ResearchGate, and ACM Digital Library) and quantitative methods. Developed a custom chatbot using LangChain framework with GPT-4o as the principal LLM and GPT-3.5 as the baseline comparison model, OpenAI Embeddings for vector representations, and Chroma as the vector database. Training data comprised 15 prevalent standard construction contract forms (including FIDIC 1999) processed via CSV loading, RecursiveCharacterTextSplitter (500-character chunks), and semantic search retrieval (RetrievalQA chain). Evaluated using 200 question-answer pairs with both automatic evaluation (cosine similarity between OpenAI Embeddings of model outputs and reference answers) and manual evaluation (three contract interpretation professionals scoring responses on a 0-4 relevance scale).",
+  "results": "The specialised chatbot achieved an average score of 88% (automatic cosine similarity: 0.839/83.9%; manual expert evaluation: 91.21%), significantly outperforming the baseline ChatGPT-3.5 which scored 36% (automatic cosine similarity: 0.442/44.2%; manual expert evaluation: 27.85%). Expert evaluation scores ranged from 100% accuracy for most custom chatbot prompts to as low as 10% for ChatGPT-generated responses. The study also reports potential time savings of up to 70% and 85% report accuracy when leveraging ChatGPT for project reporting. The results demonstrate that domain-specific RAG-based chatbots with vector databases substantially outperform general-purpose LLMs in construction contract interpretation.",
+  "taskEn": "Contract interpretation",
+  "inputDataEn": "Regulatory documents + contract texts"
+}

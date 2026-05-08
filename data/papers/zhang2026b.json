@@ -1,0 +1,33 @@
+{
+  "id": "zhang2026b",
+  "citation": "Zhang et al./2026",
+  "title": "Bridging Dual Knowledge Graphs for Multi-Hop Question Answering in Construction Safety",
+  "year": 2026,
+  "abstract": "Information retrieval and question answering from safety regulations are essential for automated construction compliance checking but are hindered by the linguistic and structural complexity of regulatory text. Many queries are multi-hop, requiring synthesis across interlinked clauses. To address the challenge, this paper introduces BifrostRAG, a dual-graph retrieval-augmented generation (RAG) system that models both linguistic relationships and document structure. The proposed architecture supports a hybrid retrieval mechanism that combines graph traversal with vector-based semantic search, enabling large language models to reason over both the content and the structure of the text. On a multi-hop question dataset, BifrostRAG achieves 92.8% precision, 85.5% recall, and an F1 score of 87.3%. These results significantly outperform vector-only and graph-only RAG baselines, establishing BifrostRAG as a robust knowledge engine for LLM-driven compliance checking. The dual-graph, hybrid retrieval mechanism presented in this paper offers a transferable blueprint for navigating complex technical documents across knowledge-intensive engineering domains.",
+  "journal": "Automation in Construction",
+  "pdfFile": "Zhang et al. - 2026 - Bridging dual knowledge graphs for multi-hop question answering in construction safety",
+  "markdownFile": "Zhang et al. - 2026 - Bridging dual knowledge graphs for multi-hop question answering in construction safety",
+  "url": "https://doi.org/10.1016/j.autcon.2026.106794",
+  "category": "施工管理与安全",
+  "task": "施工安全规范多跳问答",
+  "taskEn": "Multi-hop question answering in construction safety regulations",
+  "phase": "施工",
+  "inputData": "施工安全规范文本（OSHA 1926）",
+  "inputDataEn": "Construction safety regulation text (OSHA 1926)",
+  "representation": "图结构",
+  "llmMethod": "RAG",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Retrieval augmented generation",
+    "Artificial intelligence",
+    "Knowledge graph",
+    "Multi-hop question answering",
+    "Construction safety",
+    "Large language model"
+  ],
+  "contribution": "提出了BifrostRAG双知识图谱增强的RAG系统，通过构建实体网络图（ENG）和文档导航图（DNG）捕捉安全规范中的语言关系和文档结构，实现了对复杂施工安全规范的多跳问答。",
+  "methodology": "构建双知识图谱架构：实体网络图（ENG）捕获词和短语级别的语义关系，文档导航图（DNG）建模文档级别的层级结构和交叉引用关系。采用混合检索机制结合图遍历和向量语义搜索，使用GPT-4o作为LLM代理进行实体提取和知识图谱构建。",
+  "results": "在93个多跳问题数据集上，BifrostRAG达到92.8%精确率、85.5%召回率和87.3%的F1分数，显著优于纯向量RAG和纯图RAG基线方法。"
+}

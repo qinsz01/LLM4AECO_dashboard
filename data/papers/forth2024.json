@@ -1,0 +1,36 @@
+{
+  "id": "forth2024",
+  "citation": "Forth & Borrmann/2024",
+  "title": "Semantic enrichment for BIM-based building energy performance simulations using semantic textual similarity and fine-tuning multilingual LLM",
+  "year": 2024,
+  "category": "BIM检索与管理",
+  "task": "BIM-to-BEM语义增强",
+  "phase": "规划与设计",
+  "inputData": "BIM模型",
+  "representation": "结构化",
+  "llmMethod": "微调",
+  "contribution": "通过语义文本相似度和微调LLM实现BIM到BEM的语义自动增强，匹配精度优于传统方法",
+  "abstract": "To achieve the global targets of the Paris Agreement of limiting global warming, it is necessary to reduce the operational energy of buildings, which are responsible for around 30% of the global greenhouse gas emissions. Building Energy Performance Simulation (BEPS) is an established method to estimate the building's energy demand in early design stages. Building Information Models (BIM) provides geometric and semantic information to create precise Building Energy Models (BEM) in early design stages. However, manual enrichment of missing semantic information is still a time-consuming and laborious process. Therefore, we propose a novel methodology to automatically enrich missing information to BIM using Semantic Textual Similarity (STS) and fine-tuned Large Language Models (LLM). For every IfcSpace, we match room-specific space types and constructions with missing thermal properties using the semantic most similar pairs of the BIM model and the according databases. We use three real-world case studies to fine-tune LLMs, and two case studies evaluate the whole methodology. Different fine-tuning strategies, such as using different loss functions, adding opposing word pairs or domain-specific abbreviations, significantly improve the accuracy of the matching. At the same time, however, findings show that semantic matching based on multilingual fine-tuned LLM performs worse than translated, monolingually fine-tuned LLM. Finally, BEPS results from automatically enriched BEM only slightly deviate from manually enriched BEM.",
+  "journal": "Journal of Building Engineering",
+  "llmModels": [
+    "German BERT (bert-base-german-cased)",
+    "LaBSE",
+    "XLM-RoBERTa",
+    "Distiluse-base-multilingual-cased-v2",
+    "SBERT (Sentence-BERT)"
+  ],
+  "keywords": [
+    "BIM to BEM",
+    "BEPS",
+    "Semantic enrichment",
+    "Semantic textual similarity",
+    "Fine tuning LLM"
+  ],
+  "methodology": "Proposes a methodology using Semantic Textual Similarity (STS) and fine-tuned multilingual LLMs to automatically enrich BIM models with BEPS-related semantic information. The approach involves two matching use cases: (1) matching NREL space types to architectural rooms via IfcSpace names, and (2) matching thermal constructions with thermal properties to BIM elements via IfcTypeObject and IfcMaterial descriptions. The fine-tuning workflow consists of monolingual fine-tuning using Siamese BERT-Networks with German BERT, followed by multilingual fine-tuning via knowledge distillation. Multiple strategies are tested including different loss functions (Cosine Loss, Contrastive Loss, MNRL), adding negative pairs, domain-specific abbreviations (AEC and BIM), context labels, and different multilingual student models (LaBSE, XLM-RoBERTa, Distiluse-v2). Five real-world German office building case studies are used: three for training and two for testing.",
+  "results": "For room-specific space type matching, the monolingual fine-tuned LLM with MNRL at 15 epochs achieves the highest accuracy of approximately 86%. For element-specific thermal construction matching, the best accuracy reaches 43.88% using multilingual fine-tuning with XLM-RoBERTa. The translated monolingual approach outperforms the multilingual fine-tuned LLM for room matching. BEPS results using automatically enriched BEM show only minor deviations from manually enriched BEM: 1.83% and 0% EUI deviation for room-specific enrichment in the two test case studies, and -0.90% and 2.11% for the fully automated enrichment (both rooms and elements), compared to 45.18% and 36.02% deviation when using generic profiles.",
+  "url": "https://doi.org/10.1016/j.jobe.2024.110312",
+  "pdfFile": "Forth, K. etal - 2024 - Semantic enrichment for BIM-based building energy performance simulations using semantic textual sim....pdf",
+  "markdownFile": "Forth, K. etal - 2024 - Semantic enrichment for BIM-based building energy performance simulations using semantic textual sim....md",
+  "taskEn": "BIM-to-BEM semantic enrichment",
+  "inputDataEn": "BIM models"
+}

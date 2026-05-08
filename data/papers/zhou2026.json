@@ -1,0 +1,33 @@
+{
+  "id": "zhou2026",
+  "citation": "Zhou et al./2026",
+  "title": "DeepSeek-R1-assisted Design and Maintenance of Concrete-Filled Steel Tubular Structures through Automated Modeling Code Generation",
+  "year": 2026,
+  "abstract": "Large language models (LLMs) demonstrate remarkable performances across diverse domains, with DeepSeek-R1 being a representative one. This paper devises a DeepSeek-R1-based code generation framework, automatically achieving the code generation, code correction, model optimization, and result evaluation through iterative interactions between user and LLM. The programming performance of DeepSeek-R1 is comprehensively evaluated in terms of code correctness, code stability, and prediction accuracy, focusing on three promising application paradigms for concrete-filled steel tubular (CFST) structures, including finite element (FE), machine learning (ML), and deep learning (DL) models. Results indicate that DeepSeek-R1 typically generates sophisticated modeling codes with reasonable logicality and high feasibility. Among three application scenarios, DeepSeek-R1 excels in generating modeling codes for ML and DL models, which generally execute correctly even without any corrections. However, DeepSeek-R1 exhibits certain limitations in applying domain-specific knowledge, necessitating user-guided corrections to ensure code accuracy. For high-freedom tasks like algorithm selection and model optimization, generated codes exhibit low stability unless detailed methodological guidance is incorporated into the prompts. Comparatively, the code stability is higher in the FE modeling due to its relatively standardized workflow. Models developed by DeepSeek-R1 consistently achieve highly accurate prediction results across three scenarios, highlighting the potential of LLMs in assisting the design and maintenance of CFST structures.",
+  "journal": "Engineering Applications of Artificial Intelligence",
+  "pdfFile": "Zhou and Hou - 2026 - DeepSeek-R1-assisted design and maintenance of concrete-filled steel tubular structures through auto",
+  "markdownFile": "Zhou and Hou - 2026 - DeepSeek-R1-assisted design and maintenance of concrete-filled steel tubular structures through auto",
+  "url": "https://doi.org/10.1016/j.engappai.2025.113373",
+  "category": "结构设计与分析",
+  "task": "钢管混凝土结构建模代码自动生成",
+  "taskEn": "Automated modeling code generation for CFST structures",
+  "phase": "全生命周期",
+  "inputData": "结构设计参数与腐蚀图像",
+  "inputDataEn": "Structural design parameters and corrosion images",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "llmModels": [
+    "DeepSeek-R1"
+  ],
+  "keywords": [
+    "Automated code generation",
+    "Structural design and maintenance",
+    "Concrete-filled steel tube (CFST)",
+    "Large language model (LLM)",
+    "DeepSeek-R1",
+    "Programming performance evaluation"
+  ],
+  "contribution": "提出了基于DeepSeek-R1的自动化代码生成框架，涵盖有限元、机器学习和深度学习三种建模场景，用于钢管混凝土结构的设计与维护，全面评估了LLM在结构工程中的编程性能。",
+  "methodology": "设计三步框架：提示词制定与代码生成、代码执行与纠错（自动纠错和用户引导纠错）、模型优化与评估。针对CFST结构的三种应用场景（有限元建模、机器学习强度预测、深度学习腐蚀检测），使用DeepSeek-R1生成Abaqus和PyCharm代码。",
+  "results": "DeepSeek-R1在ML和DL模型代码生成方面表现优异，无需纠错即可正确执行；FE模型代码稳定性最高；三个场景中模型预测精度均表现良好，但领域特定知识应用存在局限性，高自由度任务的代码稳定性较低。"
+}

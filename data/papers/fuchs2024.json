@@ -1,0 +1,33 @@
+{
+  "id": "fuchs2024",
+  "citation": "Fuchs et al./2024",
+  "title": "Using Large Language Models for the Interpretation of Building Regulations",
+  "year": 2024,
+  "category": "规范与合规检查",
+  "task": "规范解释",
+  "phase": "规划与设计",
+  "inputData": "建筑规范文本",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "LLM通过少样本学习将建筑规范转换为LegalRuleML表示，支持自动化合规检查",
+  "abstract": "Compliance checking is an essential part of a construction project. The recent rapid uptake of building information models (BIM) in the construction industry has created more opportunities for automated compliance checking (ACC). BIM enable sharing of digital building design data that can be used to check compliance with legal requirements, which are conventionally conveyed in natural language and not intended for machine processing. Creating a computable representation of legal requirements suitable for ACC is complex, costly, and time-consuming. Large language models (LLMs) such as the generative pre-trained transformers (GPT), GPT-3.5 and GPT-4, powering OpenAI's ChatGPT, can generate logically coherent text and source code responding to user prompts. This capability could be used to automate the conversion of building regulations into a semantic and computable representation. This paper evaluates the performance of LLMs in translating building regulations into LegalRuleML in a few-shot learning setup. By providing GPT-3.5 with only a few example translations, it can learn the basic structure of the format. Using a system prompt, we further specify the LegalRuleML representation and explore the existence of expert domain knowledge in the model. Such domain knowledge might be ingrained in GPT-3.5 through the broad pre-training but needs to be brought forth by careful contextualisation. Finally, we investigate whether strategies such as chain-of-thought reasoning and self-consistency could apply to this use case. As LLMs become more sophisticated, the increased common sense, logical coherence and means to domain adaptation can significantly support ACC, leading to more efficient and effective checking processes.",
+  "journal": "Journal of Engineering, Project, and Production Management",
+  "llmModels": [
+    "GPT-3.5-turbo",
+    "T5"
+  ],
+  "keywords": [
+    "Large language models",
+    "GPT",
+    "building codes",
+    "semantic parsing",
+    "automated compliance checking"
+  ],
+  "methodology": "The study evaluates GPT-3.5-turbo's ability to translate New Zealand Building Code clauses into LegalRuleML (LRML) formal representations through in-context learning. Five prompting strategies are investigated: (1) Sampling — testing random, hand-picked, diversity-based (semantic clustering via S-BERT), and representative sampling (per-clause n-gram retrieval) strategies for selecting exemplars; (2) Contextualisation — providing task descriptions, format specifications, reference examples, and common LRML terms as additional prompt context; (3) Chain-of-thought prompting — using step-by-step reasoning exemplars and alignment-based decomposition; (4) Self-consistency — generating multiple predictions via different sampling strategies and using the LLM to select or interpolate the best translation; (5) GPT as teacher model — using GPT-3.5-generated LRML translations as synthetic training data for a supervised T5 model. All experiments use GPT-3.5-turbo via the OpenAI API with decoding temperature 0. Evaluation is conducted on a corpus of New Zealand Building Code clauses, using F1-Score for partial entity/relation matching and BLEU for n-gram overlap on the intermediate LRML representation.",
+  "results": "The best-performing sampling strategy is representative sampling per clause using n-gram-based retrieval in reverse order, achieving 70.3% F1-Score and 59.3% BLEU, outperforming the supervised T5 baseline (68.4% F1-Score). Self-consistency with the three best predictions and best-option selection further improves the F1-Score to 72.0%, surpassing previous supervised methods. Chain-of-thought prompting consistently underperforms direct prediction (best CoT: 55.3% F1-Score vs. 57.8% direct). Contextualisation with a short task introduction improves scores, but detailed format specifications are counterproductive. Using GPT as a teacher model to recreate training data achieves 58.3% F1-Score on the test set (vs. 66.4% baseline), while generating 855 additional training samples improves the T5 model to 67.6% F1-Score on the test set. Oracle F1-Score (best of multiple predictions) reaches 75.4%, indicating room for improvement in prediction selection.",
+  "url": "https://doi.org/10.32738/jeppm-2024-0035",
+  "pdfFile": "Fuchs, S. etal - 2024 - Using Large Language Models for the Interpretation of Building Regulations.pdf",
+  "markdownFile": "Fuchs, S. etal - 2024 - Using Large Language Models for the Interpretation of Building Regulations.md",
+  "taskEn": "Regulation interpretation",
+  "inputDataEn": "Building regulation texts"
+}

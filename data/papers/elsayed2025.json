@@ -1,0 +1,36 @@
+{
+  "id": "elsayed2025",
+  "citation": "ElSayed et al./2025",
+  "title": "User-friendly AI-driven automation for rapid building energy model generation",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "能耗建模",
+  "phase": "规划与设计",
+  "inputData": "自然语言描述/图像",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "AI框架通过预条件化LLM实现快速建筑能耗模型生成，100%收敛率，支持图像和文本输入",
+  "pdfFile": "ElSayed, M. etal - 2025 - User-friendly AI-driven automation for rapid building energy model generation.pdf",
+  "markdownFile": "ElSayed, M. etal - 2025 - User-friendly AI-driven automation for rapid building energy model generation.md",
+  "abstract": "With the ever-increasing energy efficiency and decarbonization targets mandated by building energy codes, the frequent use of building energy models (BEMs) has become essential. These models must iterate in parallel with the design development process, analyzing various variables to inform decisions and achieve optimal results and meet project goals. However, the complexity, expertise, and time-intensive nature of traditional BEMs often fail to match the fast pace of design development, which is often supercharged by computational design tools and value engineering. This study proposes an innovative framework that leverages artificial intelligence (AI) to automate EnergyPlus and Radiance energy and daylight modeling tasks, seamlessly integrating them with existing parametric design workflows. This integration enables rapid iteration without incurring time penalties. The framework introduces precise preconditioning of an affordable general use pre-trained large language model (LLM) to translate natural language descriptions or images (text-to-text and image-to-text) of buildings into corresponding model parameters—such as geometry, function, loads, and materials, etc.—leveraging ASHRAE 90.1/IECC libraries. These models are then processed using the Honeybee/Ladybug open-source tools. The framework's robustness is validated through a series of tests involving various prompts and images, achieving a 100% convergence rate. It reduces the time spent by expert energy modelers and helps address key challenges in AI integration, such as data quality, interpretability, code compliance, and scalability by realizing rapid batch processing and urban-scale building energy modeling.",
+  "journal": "Energy & Buildings",
+  "llmModels": [
+    "GPT-3.5-turbo-0125",
+    "GPT-4o-mini",
+    "GPT Vision",
+    "Point-E"
+  ],
+  "keywords": [
+    "Building performance simulation",
+    "Fast simulation",
+    "Data-driven",
+    "AI",
+    "Parametric design",
+    "Decarbonization"
+  ],
+  "methodology": "The framework preconditions affordable pre-trained LLMs via in-context and few-shot prompt engineering to translate natural language descriptions or reference images into structured JSON parameters, which are then fed into a Grasshopper parametric model to auto-generate EnergyPlus and Radiance simulation files through Honeybee/Ladybug open-source tools.",
+  "results": "The framework achieved a 100% convergence rate across over 200 validation instances with diverse building typologies, using gpt-3.5-turbo-0125 for text-to-model (avg. 7.2s convergence) and gpt-4o-mini for image-to-model (avg. 13.4s convergence), producing EnergyPlus and Radiance models that yielded accurate energy use intensity (EUI), peak loads, and spatial daylight autonomy (sDA) results.",
+  "url": "https://doi.org/10.1016/j.enbuild.2025.116092",
+  "taskEn": "Energy modeling",
+  "inputDataEn": "Natural language descriptions / images"
+}

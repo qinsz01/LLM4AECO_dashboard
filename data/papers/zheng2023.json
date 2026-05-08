@@ -1,0 +1,37 @@
+{
+  "id": "zheng2023",
+  "citation": "Zheng and Fischer/2023",
+  "title": "Dynamic prompt-based virtual assistant framework for BIM information search",
+  "year": 2023,
+  "category": "BIM检索与管理",
+  "task": "信息检索",
+  "phase": "全生命周期",
+  "inputData": "文本（自然语言查询）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "开发了基于动态提示的BIM虚拟助手，支持自然语言查询BIM模型信息，",
+  "pdfFile": "Zheng and Fischer - 2023 - Dynamic prompt-based virtual assistant framework for BIM information search.pdf",
+  "markdownFile": "Zheng and Fischer - 2023 - Dynamic prompt-based virtual assistant framework for BIM information search.md",
+  "abstract": "Efficient information search from building information models (BIMs) requires deep BIM knowledge or extensive engineering efforts for building natural language (NL)-based interfaces. To address this challenge, this paper introduces a dynamic prompt-based virtual assistant framework dubbed \"BIMS-GPT\" that integrates generative pre-trained transformer (GPT) technologies, supporting NL-based BIM search. To understand users' NL queries, extract relevant information from BIM databases, and deliver NL responses along with 3D visualizations, a dynamic prompt-based process was developed. In a case study, BIMS-GPT's functionality is demonstrated through a virtual assistant prototype for a hospital building. When evaluated with a BIM query dataset, the approach achieves accuracy rates of 99.5% for classifying NL queries with incorporating 2% of the data in prompts. This paper contributes to the advancement of effective and versatile virtual assistants for BIMs in the construction industry as it significantly enhances BIM accessibility while reducing the engineering and training data prerequisites for processing NL queries.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "gpt-3.5-turbo-0301"
+  ],
+  "keywords": [
+    "building information modeling",
+    "generative pre-trained transformer",
+    "virtual assistant",
+    "information search",
+    "natural language processing",
+    "artificial intelligence",
+    "BIMS-GPT",
+    "prompt engineering",
+    "large language model",
+    "information retrieval"
+  ],
+  "methodology": "The paper proposes BIMS-GPT, a prompt-based virtual assistant framework integrating GPT technologies for NL-based BIM information search. The framework consists of three modules: a web-based UI module, a data management (DM) module, and an NLP module. The NLP module employs a dynamic prompt generator with a shared template containing five components (Role, Relevant Information, Instruction, Example, User's Input) to dynamically create prompts for a chained process that decomposes NLU into intent classification, parameter identification, and value recognition steps. A query manager controls the chained process by updating states, parsing GPT outputs, and constructing structured MongoDB queries. The framework was implemented as a virtual assistant prototype for a hospital building using gpt-3.5-turbo-0301 via the OpenAI API and evaluated on the augmented BINLQ dataset (2065 NL queries) under zero-shot and few-shot (2% data) scenarios, compared against a RoBERTa-based ML approach, with an ablation study on prompt component contributions.",
+  "results": "The framework achieved accuracy rates of 83.5% (zero-shot) and 99.5% (few-shot) for classifying predefined labels, 98.6% and 99.5% for object category classification, 92.1% and 97.8% for filter parameter identification, 90.1% and 98.2% for projection parameter identification, 78.3% and 88.9% for identified value prediction, and 62.0% and 81.7% for extracted value recognition. The few-shot approach with only 2% of data achieved comparable F1 scores to the RoBERTa model trained on 80% of the same dataset. The ablation study revealed that the Instruction component is the most critical for NLU performance, while the Relevant Information component is particularly beneficial in zero-shot scenarios.",
+  "url": "https://doi.org/10.1016/j.autcon.2023.105067",
+  "taskEn": "Information retrieval",
+  "inputDataEn": "Text (natural language queries)"
+}

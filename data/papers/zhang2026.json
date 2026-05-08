@@ -1,0 +1,35 @@
+{
+  "id": "zhang2026",
+  "citation": "Zhang et al./2026",
+  "title": "BIMVLM: A Vision-Language Model for Iterative Generation of Component BIM Models",
+  "year": 2026,
+  "abstract": "Building information modeling (BIM) plays a crucial role in the lifecycle management of buildings and transportation infrastructure. However, existing BIM model generation methods suffer from limitations in efficiency and flexibility. The multimodal understanding and generation capabilities of multimodal large language models provide new ideas for the generation of BIM models, but how to bridge the modality gap between multimodal inputs and structured BIM representations remains a key challenge. To address this issue, a vision-language model for iterative generation of component BIM models (BIMVLM) is proposed. First, the BIM model generation process is regarded as a combination of modeling action sequences driven by natural language descriptions. Then, natural language descriptions are combined with multi-view image inputs, and the vision-language model is used to automatically plan the modeling action sequences. Finally, the planned modeling actions are transformed into executable code through prompt engineering to generate the corresponding BIM model, and iterative optimization is carried out according to the generated results. Experimental results indicate that the proposed method achieves satisfactory modeling performance for BIM models of varying complexity. In addition, a prototype system has been developed to demonstrate the engineering feasibility of the proposed approach.",
+  "journal": "Expert Systems with Applications",
+  "pdfFile": "Zhang et al. - 2026 - BIMVLM A vision-language model for iterative generation of component BIM models",
+  "markdownFile": "Zhang et al. - 2026 - BIMVLM A vision-language model for iterative generation of component BIM models",
+  "url": "https://doi.org/10.1016/j.eswa.2026.131765",
+  "category": "设计优化与生成",
+  "task": "BIM构件模型自动生成",
+  "taskEn": "Automated generation of component BIM models",
+  "phase": "规划与设计",
+  "inputData": "自然语言描述与多视图图像",
+  "inputDataEn": "Natural language descriptions and multi-view images",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "llmModels": [
+    "Qwen2.5-0.5B",
+    "Qwen2.5-1.5B",
+    "Qwen2.5-3B",
+    "SigLIP",
+    "Doubao"
+  ],
+  "keywords": [
+    "Building information modeling",
+    "Component model generation",
+    "Vision-language models",
+    "Prompt engineering"
+  ],
+  "contribution": "提出了BIMVLM视觉语言模型，通过将BIM模型生成过程形式化为建模动作序列规划问题，实现从自然语言描述和多视图图像到可执行Revit代码的端到端构件BIM模型生成。",
+  "methodology": "基于LLaVA架构构建视觉语言模型，使用SigLIP作为视觉编码器，通过LoRA微调Qwen2.5系列语言模型，将多模态输入映射为建模动作序列，再通过提示工程转换为Revit API可执行代码，支持迭代优化。",
+  "results": "Qwen2.5-3B在步骤一致性（87.23%）、操作类型准确率（80.89%）、对象类型准确率（87.25%）和方向准确率（63.22%）上取得最佳性能，生成的Revit API代码100%可成功执行。"
+}

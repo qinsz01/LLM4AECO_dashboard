@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM4AECO - Systematic Literature Review</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+</head>
+<body>
+    <!-- Header with logo, subtitle, search input, lang toggle, clear-filters button -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="header-left">
+                <h1 class="logo">LLM4AECO</h1>
+                <span class="subtitle" id="subtitle-text" data-i18n="subtitle">系统性文献综述 · <span id="subtitle-count">–</span>篇论文 · 2023–2026</span>
+            </div>
+            <div class="header-right">
+                <input type="text" id="search-input" class="search-input" placeholder="搜索论文..." data-i18n-placeholder="searchPlaceholder">
+                <button id="lang-toggle" class="btn-lang">EN</button>
+                <button id="clear-filters" class="btn-clear" data-i18n="resetBtn">✕ 重置</button>
+            </div>
+        </div>
+        <div class="filter-bar" id="filter-bar"></div>
+    </header>
+
+    <!-- 5 stat cards in a row: Papers, Categories, Phases, Time Span, Showing -->
+    <section class="stats-row" id="stats-row">
+        <div class="stat-card"><div class="stat-number" id="stat-total">–</div><div class="stat-label" data-i18n="statPapers">论文</div></div>
+        <div class="stat-card"><div class="stat-number" id="stat-categories">9</div><div class="stat-label" data-i18n="statCategories">分类</div></div>
+        <div class="stat-card"><div class="stat-number" id="stat-phases">5</div><div class="stat-label" data-i18n="statPhases">阶段</div></div>
+        <div class="stat-card"><div class="stat-number" id="stat-years">2023–2026</div><div class="stat-label" data-i18n="statTimeSpan">时间跨度</div></div>
+        <div class="stat-card"><div class="stat-number" id="stat-filtered">–</div><div class="stat-label" data-i18n="statShowing">显示中</div></div>
+    </section>
+
+    <!-- 6 charts in 3x2 grid -->
+    <section class="charts-section">
+        <h2 class="section-title" data-i18n="vizDashboard">可视化仪表板</h2>
+        <div class="charts-grid">
+            <div class="chart-card"><h3 class="chart-title" data-i18n="chartPhase">阶段分布</h3><div class="chart-container" id="chart-phase"></div></div>
+            <div class="chart-card"><h3 class="chart-title" data-i18n="chartMethod">LLM方法分布</h3><div class="chart-container" id="chart-method"></div></div>
+            <div class="chart-card"><h3 class="chart-title" data-i18n="chartTrend">发表趋势</h3><div class="chart-container" id="chart-trend"></div></div>
+            <div class="chart-card"><h3 class="chart-title" data-i18n="chartHeatmap">表示形式 × 分类</h3><div class="chart-container" id="chart-heatmap"></div></div>
+            <div class="chart-card"><h3 class="chart-title" data-i18n="chartStacked">阶段 × 任务分类</h3><div class="chart-container" id="chart-stacked"></div></div>
+            <div class="chart-card"><h3 class="chart-title" data-i18n="chartSunburst">LLM方法旭日图</h3><div class="chart-container" id="chart-sunburst"></div></div>
+        </div>
+    </section>
+
+    <!-- Paper cards list with pagination -->
+    <section class="papers-section">
+        <h2 class="section-title"><span id="papers-section-title" data-i18n="papersSection">论文</span> <span class="count" id="papers-count">–</span></h2>
+        <div class="papers-grid" id="papers-grid"></div>
+        <div class="pagination" id="pagination"></div>
+    </section>
+
+    <!-- Modal overlay for paper summary -->
+    <div class="modal-overlay" id="modal-overlay">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-content" id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="js/i18n.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "id": "zhong2025",
+  "citation": "Zhong et al./2025",
+  "title": "EnergAI: A Large Language Model-Driven Generative Design Method for Early-Stage Building Energy Optimization",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "建筑设计优化",
+  "phase": "规划与设计",
+  "inputData": "文本/设计参数",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "开发了EnergAI框架，使用LLM和分层提示策略生成低能耗建筑设计方案，性能导向提示下平均EUI降低50%以上，GPT-4o达63.3%",
+  "abstract": "This paper proposes EnergAI, a generative design framework that incorporates energy optimization objectives directly into the scheme generation process through large language models (e.g., GPT-4o, DeepSeek-V3.1-Think, Qwen-Max, and Gemini-2.5 pro). A dedicated dataset, LowEnergy-FormNet, comprising 2160 cases with site parameters, massing descriptors, and simulation outputs, was constructed to model site, form, and energy relationships. Geometry-oriented and fuzzy-goal prompts achieve average annual reductions of approximately 16–17% in energy use intensity and 3–4% in energy cost compared with human designs, while performance-oriented structured prompts eliminate high-energy outliers and yield an average EUI-saving rate above 50%. In cross-model comparisons, GPT-4o achieved 63.3% mean EUI savings, nearly 13% higher than DeepSeek-V3.1-Think, Qwen-Max, and Gemini-2.5 baselines.",
+  "journal": "Energies",
+  "llmModels": [
+    "GPT-4o",
+    "DeepSeek-V3.1-Think",
+    "Qwen-Max",
+    "Gemini-2.5 pro"
+  ],
+  "keywords": [
+    "Early-stage architectural design",
+    "Building energy optimization",
+    "Large language models",
+    "Performance-driven design"
+  ],
+  "methodology": "Builds the LowEnergy-FormNet dataset of 2160 cases and encodes building massing into parametric vectors, then employs a hierarchical prompt strategy framework (geometry-oriented, fuzzy-goal, and performance-oriented prompts) to drive LLM-based form generation within a closed-loop workflow coupled with ClimateStudio energy simulation.",
+  "results": "Geometry-oriented and fuzzy-goal prompts achieve average annual reductions of approximately 16–17% in EUI and 3–4% in energy cost compared to human designs. Performance-oriented structured prompts eliminate high-energy outliers and yield an average EUI reduction above 50%. GPT-4o achieves 63.3% mean EUI savings, outperforming DeepSeek-V3.1-Think (~50.5%), Qwen-Max (~50.7%), and Gemini-2.5 pro (~49.9%) under identical conditions.",
+  "pdfFile": "Zhong et al. - 2025 - EnergAI A Large Language Model-Driven Generative Design Method for Early-Stage Building Energy Opti.pdf",
+  "markdownFile": "Zhong et al. - 2025 - EnergAI A Large Language Model-Driven Generative Design Method for Early-Stage Building Energy Opti.md",
+  "url": "https://doi.org/10.3390/en18225921",
+  "taskEn": "Architectural design optimization",
+  "inputDataEn": "Text / design parameters"
+}

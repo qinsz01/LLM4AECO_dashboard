@@ -1,0 +1,36 @@
+{
+  "id": "cai2025",
+  "citation": "Cai et al./2025",
+  "title": "Automatic Identification of Integrated Construction Elements Using Open-Set Object Detection Based on Image and Text Modality Fusion",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "施工现场多元素开放集目标检测",
+  "taskEn": "Open-set object detection of integrated construction elements",
+  "phase": "施工",
+  "inputData": "施工现场图像与文本提示",
+  "inputDataEn": "Construction site images and text prompts",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "abstract": "The application of object detection technology in the field of construction safety contributes significantly to on-site safety management and has already shown considerable progress. However, current research primarily focuses on detecting pre-defined classes annotated within single datasets. In-depth research in construction safety requires the detection of all influencing factors related to construction safety. The emergence of large language models offers new possibilities, and multimodal models that combine these with computer vision technology could break through the existing limitations. Therefore, this paper proposes the Grounding DINO multimodal model for the automatic detection of integrated construction elements, enhancing construction safety. First, this study reviews the literature to collect relevant datasets, summarizes their characteristics, and processes the data, including the processing of annotation files and the integration of classes. Subsequently, the Grounding DINO model is constructed, encompassing image and text feature extraction and enhancement, and a cross-modal decoder that fuses image and text features. Multiple dataset experimental strategies are designed to validate Grounding DINO's capabilities in continuous learning, with a unified class system created based on integrated classes for model detection input text prompts. Finally, experiments involving zero-shot and fine-tuning evaluations, continuous learning validation, and effectiveness testing are conducted. The experimental results demonstrate the generalization capability and potential for continuous learning of the multimodal model.",
+  "journal": "Advanced Engineering Informatics",
+  "pdfFile": "Cai et al. - 2025 - Automatic identification of integrated construction elements using open-set object detection based o",
+  "markdownFile": "Cai et al. - 2025 - Automatic identification of integrated construction elements using open-set object detection based o",
+  "url": "https://doi.org/10.1016/j.aei.2024.103075",
+  "llmModels": [
+    "Grounding DINO",
+    "BERT",
+    "Swin Transformer"
+  ],
+  "keywords": [
+    "Computer vision",
+    "Object detection",
+    "Construction safety",
+    "Multimodal model",
+    "Grounding DINO",
+    "Open-set detection",
+    "Image-text fusion"
+  ],
+  "contribution": "提出基于Grounding DINO多模态模型的施工现场集成元素开放集检测方法，融合图像与文本模态实现对已知和未知类别的灵活检测，并整合多个施工安全数据集建立统一类别体系",
+  "methodology": "收集并整合多个施工安全相关数据集（涵盖工人、个人防护装备、施工设备等），统一标注类别体系，构建Grounding DINO多模态模型，该模型包含图像-文本特征提取增强模块和跨模态解码器，通过文本提示实现开放集目标检测，并设计多数据集连续学习策略验证模型的泛化能力",
+  "results": "Grounding DINO在零样本检测中展现出强大的泛化能力，能够检测未在训练中标注的施工元素类别；微调后在集成数据集上性能显著提升；多数据集连续学习验证表明模型可有效积累新知识，为施工安全监控提供了灵活且可扩展的基准模型"
+}

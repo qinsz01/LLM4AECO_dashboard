@@ -1,0 +1,38 @@
+{
+  "id": "fernandes2024",
+  "citation": "Fernandes et al./2024",
+  "title": "A GPT-Powered Assistant for Real-Time Interaction with Building Information Models",
+  "year": 2024,
+  "category": "BIM检索与管理",
+  "task": "BIM模型交互与管理",
+  "phase": "全生命周期",
+  "inputData": "自然语言（文本/语音）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "GPT驱动的数字助手DAVE实现实时多模态BIM交互，通过语音或文本完成模型更新和查询，单功能命令成功率94%",
+  "pdfFile": "Fernandes et al. - 2024 - A GPT-Powered Assistant for Real-Time Interaction with Building Information Models 1.pdf",
+  "markdownFile": "Fernandes et al. - 2024 - A GPT-Powered Assistant for Real-Time Interaction with Building Information Models 1.md",
+  "abstract": "This study introduces DAVE (Digital Assistant for Virtual Engineering), a Generative Pre-trained Transformer (GPT)-powered digital assistant prototype, designed to enable real-time, multimodal interactions within Building Information Modeling (BIM) environments for updating and querying BIM models using text or voice commands. DAVE integrates directly with Autodesk Revit through Python scripts, the Revit API, and the OpenAI API and utilizes Natural Language Processing (NLP). This study presents (1) the development of a practical AI chatbot application that leverages conversational AI and BIM for dynamic actions within BIM models (e.g., updates and queries) at any stage of a construction project and (2) the demonstration of real-time, multimodal BIM model management through voice or text, which aims to reduce the complexity and technical barriers typically associated with BIM processes. The details of DAVE's development and system architecture are outlined in this paper. Additionally, the comprehensive process of prototype testing and evaluation including the response time analysis and error analysis, which investigated the issues encountered during system validation, are detailed. The prototype demonstrated 94% success in accurately processing and executing single-function user queries. By enabling conversational interactions with BIM models, DAVE represents a significant contribution to the current body of knowledge.",
+  "journal": "Buildings",
+  "llmModels": [
+    "GPT-4 Turbo (GPT-4-1106-preview)",
+    "GPT-3.5 Turbo (GPT-3.5-turbo-1106)",
+    "Whisper-1",
+    "TTS-1"
+  ],
+  "keywords": [
+    "Building Information Modeling",
+    "BIM",
+    "Artificial Intelligence",
+    "conversational AI",
+    "natural language processing",
+    "Generative Pre-trained Transformer",
+    "GPT",
+    "virtual assistant"
+  ],
+  "methodology": "DAVE的系统架构由三个核心组件构成：（1）数据提取组件，通过APS API从Revit文件(.rvt)中提取元数据，转换为JSON再转CSV格式供GPT助手查询；（2）Python组件，包含GUI界面、OpenAI Assistant类（使用GPT-4-1106-preview模型处理用户查询并调用函数）、语音识别（使用Whisper-1模型）和语音合成（使用TTS-1模型），其中GPT-3.5-turbo-1106用于查询预分类以优化token消耗；（3）C# Revit API组件（File Watcher），通过bridge.json文件实现Python与Revit之间的实时双向通信，监控文件变更并执行Revit操作。系统支持12种BIM操作函数（改变透明度、隔离、隐藏、着色、标记、删除、元素信息查询、房间信息更新、创建视图、复制视图、重命名、撤销），通过JSON Schema定义函数接口供GPT助手调用，采用few-shot learning优化响应分类。",
+  "results": "自动化测试中使用200条单功能查询（Type 1）和200条复合查询（Type 2）进行验证。Type 1（单功能命令）成功率达94%，Type 2（多功能命令）成功率为49.5%。Type 1平均响应时间16.25秒（标准差25.46秒），Type 2平均响应时间14.63秒（标准差29.74秒），响应时间变异性主要源于需要查询外部CSV文件时产生的延迟。语音模式额外增加3-5秒延迟。当系统正确解释函数及其参数时，Revit环境中的变更实现几乎是瞬时完成的。主要错误类型包括函数误标、参数值不准确、Revit视图兼容性问题、链接模型功能限制等。",
+  "url": "https://doi.org/10.3390/buildings14082499",
+  "taskEn": "BIM model interaction and management",
+  "inputDataEn": "Natural language (text/speech)"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "parketal2025",
+  "citation": "Park et al. / 2025",
+  "title": "Integrating Large Language Models with Multimodal Virtual Reality Interfaces to Support Collaborative Human-Robot Construction Work",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "人机协作交互",
+  "phase": "施工",
+  "inputData": "语音指令与VR控制器输入",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "提出一种融合语音与VR控制器多模态交互的人机协作系统，集成BIM、ROS和GPT-4实现施工场景下工人与机器人的双向自然语言通信，并通过干墙安装案例验证了系统的低工作负荷和高可用性",
+  "abstract": "In the construction industry, where work environments are complex, unstructured and often dangerous, the implementation of human-robot collaboration (HRC) is emerging as a promising advancement. This underlines the critical need for intuitive communication interfaces that enable construction workers to collaborate seamlessly with robotic assistants. This study introduces a conversational virtual reality (VR) interface integrating multimodal interaction to enhance intuitive communication between construction workers and robots. By integrating voice and controller inputs with the robot operating system (ROS), building information modeling (BIM), and a game engine featuring a chat interface powered by a large language model (LLM), the proposed system enables intuitive and precise interaction within a VR setting. Evaluated by 12 construction workers through a drywall installation case study, the proposed system demonstrated its low workload and high intuitiveness and ease of use with succinct command inputs. The proposed multimodal interaction system suggests that such technological integration can substantially advance the integration of robotic assistants in the construction industry.",
+  "journal": "Journal of Computing in Civil Engineering (ASCE)",
+  "llmModels": [
+    "GPT-4",
+    "Whisper"
+  ],
+  "keywords": [
+    "Human-robot collaboration (HRC)",
+    "Human-robot interaction (HRI)",
+    "Virtual reality (VR)",
+    "Multimodal interaction"
+  ],
+  "methodology": "本研究提出了一种面向施工人机协作的多模态VR交互系统，核心方法包括：（1）多模态输入集成：利用Whisper语音识别模型将VR头显麦克风采集的语音指令转换为文本，同时通过VR控制器的射线交互器实现对象选择，并将选中对象的BIM ID信息自动嵌入指令文本中，形成融合语音与控制器输入的复合指令；（2）基于GPT-4的双向对话系统：设计了包含角色定义、任务对象信息和四类协作指令（任务理解验证、歧义澄清、历史任务记忆、空白指令处理）的提示工程方案，实现工人与机器人之间的双向确认式通信流程；（3）系统集成架构：通过Unity游戏引擎集成Rhinoceros/Grasshopper的BIM数据（几何与语义信息）、ROS机器人操作系统（运动规划与控制）以及OpenAI API（GPT-4对话），在VR环境中实现完整的人机协作闭环。系统使用温度参数设为0以保证GPT-4响应的一致性。",
+  "results": "12名施工工人参与的干墙安装实验结果表明：（1）工作负荷：NASA-TLX量表评估显示语音与多模态两种交互方式在各维度上评分差异均不超过0.5分，整体工作负荷较低且两种方式感知相当；（2）可用性：两种交互方式的直觉性和易用性评分均在4分以上（满分5分），具有高可用性；（3）用户偏好：66.7%的参与者（8/12）偏好多模态交互，理由包括效率、准确性、易用性、参与感和多功能性；33.3%偏好语音交互，主要理由为速度和精确性；（4）指令简洁性：多模态交互的平均指令长度为6.65词，短于语音交互的8.27词，最短指令仅3词（\"install this here\"）；（5）错误检测：GPT-4驱动的对话系统在55条故意发出的错误指令中成功识别51条，准确率达92.73%，其中语音交互阶段准确率97.43%（27/28），多模态交互阶段准确率88.89%（24/27）。",
+  "url": "https://doi.org/10.1061/JCCEE5.CPENG-6106",
+  "markdownFile": "Park et al. - 2025 - Integrating Large Language Models with Multimodal Virtual Reality Interfaces to Support Collaborativ.md",
+  "pdfFile": "Park et al. - 2025 - Integrating Large Language Models with Multimodal Virtual Reality Interfaces to Support Collaborativ.pdf",
+  "taskEn": "Human-robot collaborative interaction",
+  "inputDataEn": "Voice commands & VR controller inputs"
+}

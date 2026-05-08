@@ -1,0 +1,32 @@
+{
+  "id": "zhangetal2025",
+  "citation": "Zhang et al. / 2025",
+  "title": "Multi-condition building decarbonization using deep reinforcement learning and large language model",
+  "year": 2025,
+  "category": "运维管理",
+  "task": "建筑碳排放优化、HVAC控制策略生成、人机交互",
+  "phase": "运维",
+  "inputData": "BIM模拟数据、气象数据、建筑运行参数",
+  "representation": "结构化",
+  "llmMethod": "RAG",
+  "contribution": "提出了一种基于BIM和LLM的多条件建筑运行脱碳优化框架，通过BIM构建多条件数据集，利用随机森林代理模型和DDQN深度强化学习优化HVAC控制策略，并开发基于LLM的人机交互界面为 practitioners提供自然语言驱动的脱碳策略推荐，三种工况下优化率分别达47.28%、17.75%和13.58%",
+  "abstract": "The subjectivity of building management and the lack of human–machine interaction make building operation decarbonization challenging. This work designs a building control-oriented optimization framework to reduce carbon emissions and automatically produce the strategies. Firstly, building information modeling is constructed by referring to on-site data and weather conditions to create a multi-condition dataset. Secondly, the surrogate models regarding carbon emissions and thermal comforts correspond to 22℃, 30–35℃, and above 35℃ during the hot season. Thirdly, the optimal decarbonization strategy under different weather conditions is identified by deep reinforcement learning. Finally, a human–machine interactive interface is developed to display the results and provide valuable suggestions. The proposed decarbonization framework has been validated in a green building in China, and the results reveal that: (1) The building information model can accurately simulate actual carbon emissions with an error of 0.1%. (2) The surrogate models show excellent prediction for carbon emissions and thermal comforts with an R2 of 0.93 in the testing sets. (3) The optimization rates corresponding to 22℃, 30–35℃, and above 35℃ are 47.28%, 17.75%, and 13.58%, respectively, and the decarbonization-based LLM can provide practical strategy according to outdoor temperature and user preferences. The work contributes to weather-based building control optimization and the development of a building decarbonization large language interaction model.",
+  "journal": "Energy & Buildings",
+  "llmModels": [
+    "GPT-3.5 Turbo"
+  ],
+  "keywords": [
+    "Building decarbonization",
+    "Building information modeling",
+    "Machine learning",
+    "Deep reinforcement learning",
+    "Large language model"
+  ],
+  "methodology": "该研究提出了一套多条件建筑运行脱碳优化框架，包含四个主要步骤：(1) 基于Revit和DesignBuilder构建BIM模型，结合现场数据和气象条件生成多条件数据集，涵盖三种温度工况（22-30℃、30-35℃、>35℃）；(2) 采用随机森林（RF）算法构建代理模型，通过RandomizedSearchCV进行超参数优化，预测各楼层碳排放和热舒适度（PPD）；(3) 利用Double Deep Q-Network（DDQN）深度强化学习算法，以各楼层HVAC温度设定值为状态空间（11维），以碳排放和PPD的加权和为奖励函数，搜索最优HVAC控制策略；(4) 基于LangChain框架集成GPT-3.5 Turbo和本地SQL数据库，开发LLM驱动的人机交互界面，通过RAG技术检索代理模型和优化结果，以自然语言方式为用户提供脱碳策略推荐。以中国西安一栋12层绿色建筑为案例进行验证。",
+  "results": "BIM模型模拟碳排放误差仅0.1%；RF代理模型在三种工况下测试集R2均超过0.93，优于XGBoost、SVM和KNN；DDQN优化策略在三种工况下分别实现47.28%、17.75%和13.58%的优化率，PPD值均保持在20%以下（可接受舒适范围）；经天气分类后碳排放从996.96吨降至839.07吨（优化15.84%），结合优化策略后进一步降至661.25吨（总优化33.67%）；DDQN在Conditions (2)和(3)中分别比MOPSO和NSGA-II平均提升13.7%和10.2%；LLM交互系统能根据室外温度和用户偏好自动生成HVAC运行策略并提供数据分析和历史记忆功能。",
+  "markdownFile": "Zhang et al. - 2025 - Multi-condition building decarbonization using deep reinforcement learning and large language model.md",
+  "pdfFile": "Zhang et al. - 2025 - Multi-condition building decarbonization using deep reinforcement learning and large language model.pdf",
+  "url": "https://doi.org/10.1016/j.enbuild.2025.115810",
+  "taskEn": "Building carbon emission optimization, HVAC control strategy generation, human-computer interaction",
+  "inputDataEn": "BIM simulation data, weather data, building operational parameters"
+}

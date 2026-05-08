@@ -1,0 +1,37 @@
+{
+  "id": "wang2025",
+  "citation": "Wang et al., 2025",
+  "title": "Entropy-Optimized Dynamic Text Segmentation and RAG-Enhanced LLMs for Construction Engineering Knowledge Base",
+  "year": 2025,
+  "category": "规范与合规检查",
+  "task": "规范检查/知识库问答",
+  "phase": "规划与设计",
+  "inputData": "规范文档",
+  "representation": "结构化",
+  "llmMethod": "RAG",
+  "contribution": "提出熵优化动态文本分割（EDTS）方法，在建筑规范问答任务中达到76%准确率，揭示模型规模、准确率和执行时间的关系",
+  "abstract": "In the field of construction engineering, there exists a dynamic evolution of extensive technical standards and specifications (e.g., GB/T and ISO series) that permeate the entire lifecycle of design, construction, and operation-maintenance. These standards require continuous version iteration to adapt to technological innovations. Engineers require specialized knowledge bases to assist in understanding and updating these standards. The advancement of large language models (LLMs) and Retrieval-Augmented Generation (RAG) technologies provides robust technical support for constructing domain-specific knowledge bases. This study developed and tested a vertical domain knowledge base construction scheme based on RAG architecture and LLMs, comprising three critical components: entropy-optimized dynamic text segmentation (EDTS), vector correlation-based chunk ranking, and iterative optimization of prompt engineering. This study employs an EDTS method to ensure information clarity and predictability within limited chunk lengths, followed by selecting 10 relevant chunks to form prompts for input into LLMs, thereby enabling efficient retrieval of vertical domain knowledge. Experimental validation using Qwen-series LLMs with a test set of 101 expert-verified questions from Chinese construction industry standard demonstrates that the overall test accuracy reaches 76%. The comparative experiments across model scales (1.5B, 3B, 7B, 14B, 32B, and 72B) quantitatively reveal the relationship between model size, answer accuracy, and execution time, providing decision-making guidance for computational resource-accuracy tradeoffs in engineering practice.",
+  "journal": "Applied Sciences (MDPI)",
+  "llmModels": [
+    "Qwen 2.5 (1.5B)",
+    "Qwen 2.5 (3B)",
+    "Qwen 2.5 (7B)",
+    "Qwen 2.5 (14B)",
+    "Qwen 2.5 (32B)",
+    "Qwen 2.5 (72B)",
+    "nomic-embed-text"
+  ],
+  "keywords": [
+    "large language model",
+    "prompt engineering",
+    "retrieval-augmented generation",
+    "conditional entropy"
+  ],
+  "methodology": "Proposes a RAG-based domain knowledge base framework for construction engineering standards with three core components: (1) Entropy-Optimized Dynamic Text Segmentation (EDTS) -- uses sentences as core semantic units, bidirectionally expands context windows, and determines optimal segmentation boundaries by minimizing conditional information entropy (H(W|c_i)) within each window, ensuring each chunk has semantic completeness and high predictability; (2) Vector correlation-based chunk ranking -- encodes text chunks and user queries into a shared high-dimensional vector space using the nomic-embed-text model, retrieves the top-10 most relevant chunks via cosine similarity; (3) Iterative prompt engineering optimization -- a three-step progressive approach from basic prompts to context-integrated prompts with weight markers and instruction tuning. The framework was evaluated on the Chinese construction standard JGJ/T 23-2011 (Technical Specification for Inspecting of Concrete Compressive Strength by Rebound Method) with 101 expert-verified questions covering three types: factual (71.2%), descriptive (24.8%), and hybrid (4.0%).",
+  "results": "The EDTS method achieves approximately 77% accuracy on Type I and Type II questions and 76% overall accuracy with the Qwen2.5:7B model, outperforming fixed-size chunking (FSC-128, FSC-512), sliding window chunking (SWC), paragraph-based chunking (PBC), and sentence-based chunking (SBC). Across model scales, accuracy improves with increasing parameters: the 7B model provides an optimal balance between accuracy and execution latency. The 72B model achieves the highest accuracy but with significantly higher computational cost. FSC-512 shows no accuracy advantage over FSC-128 for standardized engineering texts. Type III (hybrid) questions exhibit a local accuracy maximum at the 7B scale with slight reduction at larger scales. The study recommends the 7B parameter model as the cost-effective choice for practical deployment, with on-demand invocation of larger models for more complex problems.",
+  "url": "https://doi.org/10.3390/app15063134",
+  "pdfFile": "Wang et al. - 2025 - Entropy-Optimized Dynamic Text Segmentation and RAG-Enhanced LLMs for Construction Engineering Knowl.pdf",
+  "markdownFile": "Wang et al. - 2025 - Entropy-Optimized Dynamic Text Segmentation and RAG-Enhanced LLMs for Construction Engineering Knowl.md",
+  "taskEn": "Code compliance checking / knowledge base Q&A",
+  "inputDataEn": "Regulatory documents"
+}

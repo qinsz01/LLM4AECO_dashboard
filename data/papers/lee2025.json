@@ -1,0 +1,33 @@
+{
+  "id": "lee2025",
+  "citation": "Lee et al./2025",
+  "title": "From design to operation: Multi-agent AI for virtual in-situ modeling of digital twins in BIM",
+  "year": 2025,
+  "category": "其他",
+  "task": "虚拟建筑模型自动构建",
+  "phase": "规划与设计",
+  "inputData": "BIM模型+本体数据+运行数据",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "提出基于多智能体AI系统的虚拟建筑模型(VBM)自动构建方法，实现从设计阶段到运维阶段全生命周期的虚拟原位建模(VIM)，包括物理模型自动生成、贝叶斯推理校准和本体管理",
+  "abstract": "A virtual building model (VBM) is a mathematical representation that describes the behavior of a physical building. Accurate VBMs provide insightful information about the physical building within the digital twin (DT) framework. However, there is limited research on the autonomous construction of VBMs. To address this gap, this paper proposes a multi-agent artificial intelligence (AI) system that autonomously constructs VBM. The proposed system autonomously develops, calibrates, and manages virtual models that constitute the VBM by leveraging data and information generated throughout the building lifecycle within a BIM environment. The proposed method is validated on a real operating heating, ventilation, and air-conditioning (HVAC) system, autonomously developing a chilled water flow rate model (MAPE 2.27%) and an evaporator inlet temperature model (RMSE 0.33°C). These results suggest the feasibility of autonomously constructing VBMs and contribute to shifting the DT paradigm from physical construction automation to the autonomous construction of VBM.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "AI agent",
+    "Large language model",
+    "Digital twin",
+    "Building information modeling",
+    "Virtual in-situ modeling",
+    "Ontology"
+  ],
+  "methodology": "Proposes a multi-agent AI system (MAS) for autonomous virtual building model (VBM) construction within a BIM environment, consisting of four specialized agents: (1) Building metadata extraction agent extracts modeling sources from BIM using IFC and Brick schemas; (2) Physics-based modeling agent develops virtual design models using affinity laws and energy balance equations guided by expert prompts; (3) Calibration agent calibrates pre-built design models using Bayesian inference with MCMC and Metropolis-Hastings algorithms via few-shot learning; (4) Ontology generation agent creates TTL-format ontologies based on the VB schema to manage semantic relationships between virtual models. The system is implemented in Autodesk Revit via Dynamo using GPT-4o, with knowledge engineering applied through expert-side system messages and building information provision. Validated on a real HVAC system developing chilled water flow rate and evaporator inlet temperature models.",
+  "results": "The calibrated virtual chilled water flow rate model achieved MAPE of 2.27% (improved from 141.39% of the uncalibrated design model). The calibrated virtual evaporator inlet temperature model achieved RMSE of 0.33°C (improved from 2.48°C of the design model). Agent coordination strategies significantly impacted accuracy: structured task scheduling achieved RMSE of 0.33°C versus 7.46°C without scheduling. Knowledge engineering intensity also affected results, with detailed expert prompts enabling condenser-side heat consideration for improved accuracy.",
+  "pdfFile": "Lee et al. - 2025 - From design to operation Multi-agent AI for virtual in-situ modeling of digital twins in BIM.pdf",
+  "markdownFile": "Lee et al. - 2025 - From design to operation Multi-agent AI for virtual in-situ modeling of digital twins in BIM.md",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106477",
+  "taskEn": "Automated virtual building model construction",
+  "inputDataEn": "BIM models + ontology data + operational data"
+}

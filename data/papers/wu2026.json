@@ -1,0 +1,32 @@
+{
+  "id": "wu2026",
+  "citation": "Wu et al./2026",
+  "title": "Evaluation of Tunnel Rock Mass Integrity Using Multi-Modal Data and Generative Large Language Model: TunnelRIP-GPT",
+  "year": 2026,
+  "category": "施工管理与安全",
+  "task": "隧道围岩完整性评估",
+  "phase": "施工",
+  "inputData": "多模态地质数据",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "提出TunnelRIP-GPT框架，结合增强计算机视觉模型和交互式生成式大语言模型（GPT-4），利用Stable Diffusion进行图像增强，构建七组参数集集成地质素描、探地雷达和钻孔报告等多模态数据，克服传统Transformer和CNN方法无法直接集成多模态数据的局限",
+  "pdfFile": "Wu et al. - 2026 - Evaluation of tunnel rock mass integrity using multi-modal data and Generative Large Language Model.pdf",
+  "markdownFile": "Wu et al. - 2026 - Evaluation of tunnel rock mass integrity using multi-modal data and Generative Large Language Model.md",
+  "abstract": "The prediction of tunnel rock mass integrity is critical for ensuring construction safety. Tunnel rock mass offers a vast amount of multimodal data, yet accurately integrating these multimodal to predict rock mass integrity remains challenging. This study proposes a novel framework combining an Enhanced Computer Vision (CV) model and interactive Generative Large Language Models (LLMs) to address this gap. First, the Stable Diffusion method is employed to augment fracture image datasets, mitigating data imbalance issues. An improved CV method achieves 83% test accuracy in rock fracture segmentation. Subsequently, seven parameter sets-encompassing apparent, internal, physico-mechanical, and design characteristics are constructed from geological sketches, ground-penetrating radar, and drilling reports. A Tunnel rock integrity prediction GPT method is developed, which achieves a higher prediction accuracy of 92% and overcomes the limitation of conventional Transformer and CNN methods, which cannot directly integrate these multi-modal data (including images, numerical values, and texts). Finally, generalizability is confirmed through validation on untrained datasets. The study further evaluates the predictive efficacy of individual parameter sets, enabling tailored solutions for diverse tunnel conditions, and demonstrates the potential of generative LLMs to replace traditional CV and digital image processing in geotechnical applications.",
+  "journal": "Tunnelling and Underground Space Technology",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "tunnel rock mass integrity",
+    "generative large language model",
+    "multi-modal data",
+    "Stable Diffusion",
+    "rock fracture segmentation"
+  ],
+  "methodology": "提出TunnelRIP-GPT框架：(1) 使用Stable Diffusion方法进行裂隙图像数据增强，解决数据不平衡问题，改进的CV方法在岩石裂隙分割中达到83%测试准确率；(2) 从地质素描、探地雷达（GPR）和钻孔报告中构建七组参数集，涵盖表观特征、内部特征、物理力学特性和设计特征；(3) 开发隧道围岩完整性预测GPT方法，利用GPT-4的交互式能力直接集成多模态数据（包括图像、数值和文本），通过Prompt工程实现多模态输入融合；(4) 在三个隧道项目的未训练数据集上验证泛化能力。",
+  "results": "TunnelRIP-GPT方法达到92%的预测准确率，克服了传统Transformer和CNN方法无法直接集成多模态数据的局限。在三个隧道项目数据集上验证了泛化能力。通过评估各参数集的预测效能，为不同隧道条件提供定制化解决方案。展示了生成式LLM替代传统CV和数字图像处理在岩土工程应用中的潜力。",
+  "url": "https://doi.org/10.1016/j.tust.2025.107291",
+  "taskEn": "Tunnel rock mass integrity evaluation",
+  "inputDataEn": "Multimodal geological data"
+}

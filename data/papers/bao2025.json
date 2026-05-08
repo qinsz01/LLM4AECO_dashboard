@@ -1,0 +1,32 @@
+{
+  "id": "bao2025",
+  "citation": "Bao and Bu/2025",
+  "title": "Defining and generating operation and maintenance management requirements in digital twin applications using the DT-GPT framework",
+  "year": 2025,
+  "category": "运维管理",
+  "task": "运维管理需求定义",
+  "phase": "运维",
+  "inputData": "设计图纸+COBie文档+文本需求",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "contribution": "DT-GPT通过三个模块（功能/组件/数据）辅助业主创建数字孪生运维指南，语义相似度达87.28%，组件提取准确率92.76%",
+  "abstract": "Implementing Digital Twin (DT) technology in Operation and Maintenance (O&M) heavily relies on the continuous availability of information regarding asset conditions and performances. Therefore, this study aims to establish comprehensive guidelines for defining information requirements for various O&M tasks during the design phase. To achieve this objective, data collection, interviews, and investigations were conducted to develop an O&M requirements system, including model requirements, function requirements, and nongeometric data requirements. The importance and attributes of requirement factors were analyzed through the Kano-QFD model. Based on the O&M requirements system, a virtual assistant framework named \"DT-GPT\" that utilizes the Generative Pre-trained Transformer (GPT) was developed to assist owners in creating guidelines according to their requirements. Evaluations and a case study were introduced to validate the potential of DT-GPT. Results illustrated that DT-GPT had a mean semantic similarity of 87.28% in generating function lists, a mean accuracy of 92.76% in extracting components from design drawings, and a mean semantic similarity of 96.34% in generating nongeometric data lists. The case study further demonstrated the effectiveness of the proposed framework in assisting owners with the creation of O&M guidelines. This study provides valuable insights for identifying O&M management requirements and advancing the practical application of DT in O&M processes.",
+  "journal": "Journal of Building Engineering",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "Digital twin",
+    "Operation and maintenance",
+    "Generative pre-trained transformer",
+    "Virtual assistant",
+    "Large language model"
+  ],
+  "methodology": "本研究提出DT-GPT框架，基于微调的GPT-4模型构建虚拟助手，包含三个核心模块：（1）功能模块——根据业主自然语言查询生成基础/高级/智能版本的运维功能列表；（2）组件模块——从多专业设计图纸中提取与运维相关的建筑组件；（3）数据模块——为提取的组件生成资产详情、运行历史和实时指标等非几何数据列表。研究首先通过三个实际项目的数据收集、访谈和调研建立运维需求体系（模型需求、功能需求、非几何数据需求），然后利用Kano-QFD模型对需求因子进行重要性和属性分析，最后基于需求体系开发DT-GPT助手，并通过评估实验和浙江大学国际医学院校园管理案例进行验证。",
+  "results": "功能模块：生成功能列表的平均语义相似度为87.28%（基础版88.72%，高级版87.67%，智能版85.44%）；组件模块：从设计图纸提取组件的平均准确率为92.76%（大部分类别超过90%，HVAC图纸略低）；数据模块：生成非几何数据列表的平均语义相似度为96.34%，Sorensen-Dice系数为83.72%。案例研究在浙江大学国际医学院成功应用，集成13个子系统和9638台设备，验证了DT-GPT在实际项目中的有效性。",
+  "url": "https://doi.org/10.1016/j.jobe.2025.112356",
+  "pdfFile": "Bao and Bu - 2025 - Defining and generating operation and maintenance management requirements in digital twin applicatio.pdf",
+  "markdownFile": "Bao and Bu - 2025 - Defining and generating operation and maintenance management requirements in digital twin applicatio.md",
+  "taskEn": "O&M management requirement definition",
+  "inputDataEn": "Design drawings + COBie documents + textual requirements"
+}

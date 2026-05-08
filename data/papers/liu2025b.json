@@ -1,0 +1,34 @@
+{
+  "id": "liu2025b",
+  "citation": "Liu et al./2025",
+  "title": "Large Language Models for Building Energy Applications: Opportunities and Challenges",
+  "year": 2025,
+  "abstract": "Large language models (LLMs) are gaining attention due to their potential to enhance efficiency and sustainability in the building domain, a critical area for reducing global carbon emissions. Built on transformer architectures, LLMs excel at text generation and data analysis, enabling applications such as automated energy model generation, energy management optimization, and fault detection and diagnosis. These models can potentially streamline complex workflows, enhance decision-making, and improve energy efficiency. However, integrating LLMs into building energy systems poses challenges, including high computational demands, data preparation costs, and the need for domain-specific customization. This perspective paper explores the role of LLMs in the building energy system sector, highlighting their potential applications and limitations. We propose a development roadmap built on in-context learning, domain-specific fine-tuning, retrieval augmented generation, and multimodal integration to enhance LLMs' customization and practical use in this field. This paper aims to spark ideas for bridging the gap between LLMs capabilities and practical building applications, offering insights into the future of LLM-driven methods in building energy applications.",
+  "journal": "Building Simulation",
+  "pdfFile": "Liu et al. - 2025 - Large language models for building energy applications Opportunities and challenges",
+  "markdownFile": "Liu et al. - 2025 - Large language models for building energy applications Opportunities and challenges",
+  "url": "https://doi.org/10.1007/s12273-025-1235-9",
+  "category": "能耗管理与优化",
+  "task": "建筑能源应用综述与发展路径",
+  "taskEn": "Review and development roadmap for LLMs in building energy applications",
+  "phase": "全生命周期",
+  "inputData": "建筑能耗系统数据与文献",
+  "inputDataEn": "Building energy system data and literature",
+  "representation": "文本",
+  "llmMethod": "其他",
+  "llmModels": [
+    "GPT-4",
+    "GPT-3.5",
+    "T5"
+  ],
+  "keywords": [
+    "large language models",
+    "building energy applications",
+    "artificial intelligence",
+    "energy management optimization",
+    "LLM-as-agent workflows"
+  ],
+  "contribution": "系统探讨了LLM在建筑能源领域的应用潜力与挑战，提出了涵盖上下文学习、领域微调、检索增强生成和多模态集成的LLM发展路线图，为建筑能源领域的LLM应用提供了前瞻性指导。",
+  "methodology": "作为前瞻性综述论文，通过文献调研分析了LLM在建筑能源系统中作为前端交互界面和后端分析引擎的双重角色，识别了六个高潜力应用领域（自动建模、数据标注、能源管理、故障检测、预测分析和改造设计支持），并系统梳理了七项关键挑战。",
+  "results": "提出了面向建筑能源应用的LLM发展框架，包括提示工程与上下文学习、领域定制微调与RAG、LLM代理工作流以及多模态集成四个方向，指出了LLM在数学计算可靠性、幻觉问题、领域专业知识缺失、计算成本和数据隐私等方面的关键挑战。"
+}

@@ -1,0 +1,39 @@
+{
+  "id": "liu2026",
+  "json_id": "liu2026",
+  "citation": "Liu et al./2026",
+  "title": "Large Language Model--Driven Building Energy Model Generation",
+  "year": 2026,
+  "abstract": "Building energy modeling (BEM) is essential for sustainable design, but traditionally relies on manual processes, which are time-consuming and error-prone. Large language models (LLMs) offer potential for automating model generation from natural language descriptions. This study aims to develop an LLM-driven approach to generate simulation-ready EnergyPlus IDF files from free-form text, improving efficiency and accuracy in building energy simulations. We fine-tune Gemma-3-4B-IT on a dataset of paired natural-language descriptions and IDF models for single-, two-, and three-zone rectilinear buildings. The post-training pipeline has two stages: first, supervised fine-tuning (SFT) on a 2,100-sample dataset to align the schema and text--IDF mapping; second, group relative preference optimization (GRPO) on an additional 300-sample dataset to improve geometric accuracy and constraint adherence further, using low-rank adaptation (LoRA) for parameter-efficient tuning. On a 300-sample test set, Stage-1 SFT achieved 98.33% parse-pass rate and 96.00% boundary consistency but only 31.00% window geometry agreement and 24.67% end-to-end validity. Stage-2 GRPO improved these to 85.00% window agreement and 78.00% end-to-end validity.",
+  "journal": "Energy and Buildings",
+  "doi": "10.1016/j.enbuild.2026.117255",
+  "pdfFile": "Liu et al. - 2026 - Large language model–driven building energy model generation",
+  "markdownFile": "Liu et al. - 2026 - Large language model–driven building energy model generation",
+  "url": "https://doi.org/10.1016/j.enbuild.2026.117255",
+  "category": "能耗管理与优化",
+  "task": "自然语言驱动的建筑能耗模型自动生成",
+  "taskEn": "Natural language-driven automated building energy model generation",
+  "phase": "规划与设计",
+  "inputData": "自然语言建筑描述文本",
+  "inputDataEn": "Natural language building description text",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "llmModels": [
+    "Gemma-3-4B-IT",
+    "ChatGPT 5.2",
+    "Gemini 3 Pro",
+    "DeepSeek-V3.2"
+  ],
+  "keywords": [
+    "building energy modeling",
+    "EnergyPlus IDF",
+    "fine-tuning",
+    "GRPO",
+    "LoRA",
+    "SFT",
+    "natural language to model"
+  ],
+  "contribution": "提出两阶段后训练方法（SFT+GRPO）微调Gemma-3-4B-IT，实现从自由文本自动生成可仿真的EnergyPlus IDF文件，端到端有效率达78%，减少建筑能耗建模中的专家干预。",
+  "methodology": "两阶段后训练流程：第一阶段对2100样本数据集进行监督微调（SFT），对齐文本- IDF模式映射；第二阶段对300样本数据集进行组相对偏好优化（GRPO），提升几何精度与约束满足。采用LoRA进行参数高效微调。数据集覆盖单区、双区和三区矩形建筑。",
+  "results": "第一阶段SFT：解析通过率98.33%，边界一致性96.00%，但窗口几何一致率仅31.00%，端到端有效率24.67%。第二阶段GRPO：窗口几何一致率提升至85.00%，端到端有效率提升至78.00%，解析通过率97.67%。显著优于ChatGPT 5.2、Gemini 3 Pro和DeepSeek-V3.2等通用大模型。"
+}

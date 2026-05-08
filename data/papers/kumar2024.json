@@ -1,0 +1,43 @@
+{
+  "id": "kumar2024",
+  "citation": "Kumar / 2024",
+  "title": "Geotechnical Parrot Tales (GPT) Harnessing Large Language Models in Geotechnical Engineering",
+  "year": 2024,
+  "category": "其他",
+  "task": "岩土工程分析、代码生成与工程工作流自动化",
+  "phase": "规划与设计",
+  "inputData": "文本（自然语言描述）、工程报告、领域知识库（DIGGS Schema）",
+  "representation": "文本",
+  "llmMethod": "Agent",
+  "contribution": "探索ChatGPT在岩土工程中的多种应用（Prompt Engineering、语义搜索引擎、思维链推理、ReAct工程工作流），提出结合短期/长期记忆的LLM Action-Observation-Thought框架，解决复杂工程计算中的幻觉问题",
+  "pdfFile": "Kumar - 2024 - Geotechnical Parrot Tales (GPT) Harnessing Large Language Models in Geotechnical Engineering.pdf",
+  "markdownFile": "Kumar - 2024 - Geotechnical Parrot Tales (GPT) Harnessing Large Language Models in Geotechnical Engineering.md",
+  "abstract": "The rise of large language models (LLMs) has generated widespread interest due to their ability to answer questions, generate text/code, and summarize. Despite their impressive capabilities, ChatGPT can produce plausible-sounding but false outputs, blurring the line between facts and hallucinations. Prompt engineering is crucial to mitigate these risks and harness the full potential of ChatGPT in geotechnical engineering. This article explores ChatGPT and its applications in geotechnical engineering, discussing the challenges and pitfalls associated with these models and highlighting the importance of prompt engineering. The paper demonstrates several advanced use cases: (1) prompt engineering for soil classification code generation with proper context, (2) a context-specific semantic search engine using vector databases and latent space embeddings to provide domain knowledge to GPT, (3) chain-of-thought prompting for reasoning about geotechnical problems such as soil classification and retaining wall safety assessment, and (4) a novel extension to the ReAct framework that incorporates both short-term and long-term memory through a database, enabling GPT to solve complex engineering workflows by chaining engineering tools (e.g., SoilReportTool, BearingCapacityTool) through an Action-Observation-Thought loop.",
+  "journal": "Journal of Geotechnical and Geoenvironmental Engineering (ASCE)",
+  "llmModels": [
+    "GPT-3",
+    "GPT-3.5",
+    "GPT-3.5-turbo",
+    "text-davinci-003",
+    "GPT-4",
+    "LlaMA",
+    "Alpaca"
+  ],
+  "keywords": [
+    "large language models",
+    "ChatGPT",
+    "geotechnical engineering",
+    "prompt engineering",
+    "hallucination",
+    "chain-of-thought",
+    "ReAct framework",
+    "semantic search",
+    "bearing capacity",
+    "soil classification"
+  ],
+  "methodology": "The paper presents four progressively advanced approaches for applying LLMs to geotechnical engineering: (1) Prompt Engineering: Demonstrates how providing domain-specific context in prompts eliminates hallucinations in code generation tasks (e.g., USCS soil classification Python code). Shows that without context, ChatGPT fabricates incorrect code claiming to follow ASTM D2487-17. (2) Context-Specific Semantic Search Engine: Built using OpenAI's text embedding model to convert a domain knowledge base (DIGGS schema) into context vectors stored in a FAISS vector database. User queries are converted to vectors and compared via cosine similarity to retrieve the top-5 matching contexts, which are then fed to the GPT API (text-davinci-003) to generate deterministic answers, preventing hallucinations. (3) Chain-of-Thought Prompting: Applied few-shot in-context learning by providing intermediate reasoning steps as examples (e.g., fine-grained soil classification using LL, PL, and A-line equation), enabling GPT to correctly classify soils through step-by-step reasoning. Also demonstrated for retaining wall safety assessment (sliding, overturning, bearing checks). (4) ReAct Framework with Memory: Proposed a novel extension to the LLM ReAct (Reasoning + Acting) framework that adds a database for long-term memory alongside the existing short-term memory. Engineering tools (SoilReportTool, BearingCapacityTool, ShapeFactorTool, MaxLoadTool) are provided as action tools that GPT can invoke. GPT chains these tools through an Action-Observation-Thought loop, storing intermediate results in both short-term and long-term memory, enabling accurate complex engineering workflow calculations (e.g., maximum load for the Leaning Tower of Pisa foundation).",
+  "results": "The paper demonstrates both the limitations and capabilities of LLMs in geotechnical engineering through qualitative examples: (1) Without context, GPT-3 hallucinated a USCS soil classification code that incorrectly omitted Atterberg limits while claiming compliance with ASTM D2487-17. (2) The context-specific semantic search engine successfully identified the correct DIGGS XML tag for plastic limit (<diggs:waterContent> within <diggs:plasticLimitTrial>), whereas without context GPT fabricated an incorrect generic tag. (3) Chain-of-thought prompting enabled GPT to correctly classify a fine-grained soil with LL=30 and PL=10 as 'CL' (low-plasticity clay), whereas without reasoning examples it incorrectly classified it as 'CH' or 'MH'. (4) For the Leaning Tower of Pisa bearing capacity problem, naive GPT-3 produced an incorrect result of 6,037 MN (61x overestimate) due to hallucinated equations, incorrect bearing capacity factors, arithmetic errors, and wrong geometric assumptions. Using the proposed ReAct framework with engineering tools, GPT correctly computed the maximum allowable load as 98.022 MN, matching the ground truth calculated from the soil report (Su=35 kPa).",
+  "url": "https://doi.org/10.1061/JGGEFK.GTENG-11828",
+  "taskEn": "Geotechnical analysis, code generation and engineering workflow automation",
+  "inputDataEn": "Text (natural language descriptions), engineering reports, domain knowledge bases (DIGGS Schema)"
+}

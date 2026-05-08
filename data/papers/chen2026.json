@@ -1,0 +1,35 @@
+{
+  "id": "chen2026",
+  "citation": "Chen et al./2026",
+  "title": "Multi-Agent Coordination of Data-Driven and Physics-Based Models for Automated Design of Ultra-High-Performance Concrete Beams",
+  "year": 2026,
+  "category": "结构设计与分析",
+  "task": "超高性能混凝土梁自动化优化设计",
+  "taskEn": "Automated design optimization of UHPC beams",
+  "phase": "规划与设计",
+  "inputData": "自然语言设计需求与有限元分析数据",
+  "inputDataEn": "Natural language design queries and finite element analysis data",
+  "representation": "文本",
+  "llmMethod": "Agent",
+  "abstract": "Efficient and effective design of structures plays essential roles in the construction industry. Advancements in information technologies and data science have improved efficiency, while the reliability of data-driven models remains limited. To overcome the challenges, this paper presents a data-physics hybrid framework integrating data-driven and physics-based models for automated structural design. The data component comprises a large language model and a genetic optimizer, and the physics component is a finite element model. The large language model coordinates the framework, supports human-computer interactions, and integrates finite element modelling that provides reliable predictions of structural behavior. The optimizer then explores the optimal design solutions via an evolutionary process. The framework has been implemented into the design of ultra-high-performance concrete beams, reducing human effort by 88% versus manual design and 75% versus traditional optimization methods. Results demonstrate effective coordination between data-driven and physics-based models for combined efficiency and reliability.",
+  "journal": "Advanced Engineering Informatics",
+  "pdfFile": "Chen and Bao - 2026 - Multi-agent coordination of data-driven and physics-based models for automated design of ultra-high-",
+  "markdownFile": "Chen and Bao - 2026 - Multi-agent coordination of data-driven and physics-based models for automated design of ultra-high-",
+  "url": "https://doi.org/10.1016/j.aei.2025.104297",
+  "llmModels": [
+    "Gemini-2.5-Flash"
+  ],
+  "keywords": [
+    "Automated structural design",
+    "Data-physics hybrid framework",
+    "Finite element analysis",
+    "Genetic optimization",
+    "Large language model",
+    "Multi-agent system",
+    "UHPC beam design",
+    "NSGA-II"
+  ],
+  "contribution": "提出数据-物理混合框架，利用LLM多Agent协调遗传优化算法与有限元分析，实现超高性能混凝土梁的自动化结构优化设计，将人工工作量减少88%",
+  "methodology": "构建包含规划、实施和评估三个模块的多Agent框架：规划模块通过Agentic RAG系统从自然语言查询中提取设计参数；实施模块使用NSGA-II多目标遗传算法结合ABAQUS有限元分析进行优化搜索，并由LLM精炼Agent自适应调整优化参数；评估模块提供对话式分析接口，支持工程师通过自然语言交互验证设计方案",
+  "results": "框架在UHPC梁设计案例中生成27个Pareto最优解（成本$1,340-$6,405，挠度1.67-73.21mm），人工工作量降至0.5小时（比手动设计减少88%，比传统优化减少75%），计算时间减少53.4%，查询处理器在30个测试查询中达到F1=1.0的完美精度"
+}

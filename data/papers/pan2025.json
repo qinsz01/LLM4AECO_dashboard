@@ -1,0 +1,40 @@
+{
+  "id": "pan2025",
+  "citation": "Pan et al. (2025)",
+  "title": "Application of LMM-Derived Prompt-Based AIGC in Low-Altitude Drone-Based Concrete Crack Monitoring",
+  "year": 2025,
+  "category": "运维管理",
+  "task": "结构健康监测（裂缝检测与分割）",
+  "phase": "运维",
+  "inputData": "无人机图像+AIGC合成图像+公开裂缝数据集",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "提出利用LMM（DeepSeek R1）通过Prompt Engineering生成系统化提示词，驱动Stable Diffusion生成AIGC合成裂缝图像数据集，用于训练YOLOv8-seg模型，在低空无人机裂缝监测中实现>80%分类准确率，为缺乏真实无人机视角数据的场景提供了可行的数据增强方案",
+  "abstract": "In recent years, large multimodal models (LMMs), such as ChatGPT 4o and DeepSeek R1—artificial intelligence systems capable of multimodal (e.g., image and text) human–computer interaction—have gained traction in industrial and civil engineering applications. Concurrently, insufficient real-world drone-view data (specifically close-distance, high-resolution imagery) for civil engineering scenarios has heightened the importance of artificially generated content (AIGC) or synthetic data as supplementary inputs. AIGC is typically produced via text-to-image generative models (e.g., Stable Diffusion, DALL-E) guided by user-defined prompts. This study leverages LMMs to interpret key parameters for drone-based image generation (e.g., color, texture, scene composition, photographic style) and applies prompt engineering to systematize these parameters. The resulting LMM-generated prompts were used to synthesize training data for a You Only Look Once version 8 segmentation model (YOLOv8-seg). To address the need for detailed crack-distribution mapping in low-altitude drone-based monitoring, the trained YOLOv8-seg model was evaluated on close-distance crack benchmark datasets. The experimental results confirm that LMM-prompted AIGC is a viable supplement for low-altitude drone crack monitoring, achieving >80% classification accuracy (images with/without cracks) at a confidence threshold of 0.5.",
+  "journal": "Drones",
+  "llmModels": [
+    "DeepSeek R1 (via Tencent YuanBao)",
+    "ChatGPT 4o (mentioned)",
+    "Stable Diffusion v1.4",
+    "YOLOv8x-seg",
+    "YOLOv8l-seg"
+  ],
+  "keywords": [
+    "artificial intelligence",
+    "large multimodal model",
+    "unmanned aerial vehicle",
+    "crack detection",
+    "AIGC",
+    "prompt engineering",
+    "synthetic data",
+    "YOLOv8",
+    "Stable Diffusion"
+  ],
+  "methodology": "研究采用三阶段方法：(1) 使用Visible Crack Dataset训练YOLOv8x-seg模型（Trained Model-1）作为自动标注生成器，在RTX 3090上训练500轮，图像尺寸640像素，batch size 16，获得mAP50=0.6、mAP50-95=0.3；(2) 利用LMM（Tencent YuanBao接口的DeepSeek R1）分析无人机视角图像的颜色、纹理、场景和摄影风格等属性，通过Prompt Engineering系统化提取提示词（包括object、texture、color、summary四个维度），使用这些提示词驱动Stable Diffusion v1.4生成800张AIGC合成裂缝图像（512×512像素），并使用Trained Model-1自动标注；(3) 使用AIGC数据集训练YOLOv8l-seg模型（Trained Model-2），在CCI4CD（40000张227×227图像）和CCSD（458张4032×3024图像）两个公开基准数据集上评估分类和分割性能。",
+  "results": "Trained Model-2（AIGC训练）在CCI4CD分类任务中：置信度0.25时正样本准确率99.5%、负样本准确率93.5%；置信度0.5时正样本准确率82.2%、负样本准确率97.7%，均维持>80%准确率。Trained Model-1（真实数据训练）在相同任务中：置信度0.5时正样本准确率97.7%、负样本准确率98.9%，全部>95%。在CCSD分割任务中，Trained Model-2在部分样本（No.19和No.30）上Recall值（0.976和0.946）高于Trained Model-1（0.915和0.810），两个模型均达到>0.8的Recall值。研究表明AIGC合成数据作为真实数据的补充具有可行性，其数量优势（>70000个实例vs约1400个实例）可在一定程度上弥补多样性不足。",
+  "pdfFile": "Pan et al. - 2025 - Application of LMM-Derived Prompt-Based AIGC in Low-Altitude Drone-Based Concrete Crack Monitoring.pdf",
+  "markdownFile": "Pan et al. - 2025 - Application of LMM-Derived Prompt-Based AIGC in Low-Altitude Drone-Based Concrete Crack Monitoring.md",
+  "url": "https://doi.org/10.3390/drones9090660",
+  "taskEn": "Structural health monitoring (crack detection and segmentation)",
+  "inputDataEn": "Drone images + AIGC synthetic images + public crack datasets"
+}

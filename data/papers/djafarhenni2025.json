@@ -1,0 +1,35 @@
+{
+  "id": "djafarhenni2025",
+  "citation": "Djafar-Henni, N. etal / 2025",
+  "title": "SAP2000 API Expert a custom generative pre-trained transformer (GPT) for converting narrative struct...",
+  "year": 2025,
+  "category": "结构设计与分析",
+  "task": "结构分析",
+  "phase": "规划与设计",
+  "inputData": "文本（自然语言描述）+图像（结构示意图）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "开发了基于ChatGPT的自定义GPT（SAP2000 API Expert），可将自然语言描述的结构工程问题自动转换为SAP2000 API Python代码，支持双路径错误修复（自调试和自然语言交互），并通过基准算例验证了生成代码的准确性",
+  "abstract": "This study introduces SAP2000 API Expert, a custom Generative Pre-Trained Transformer (GPT) based on ChatGPT, for converting narrative structural engineering problems to SAP2000 API Python codes. Unlike conventional methodologies that necessitate users to possess foundational programming or structural engineering competencies, the SAP2000 API Expert provides dual error resolution pathways: a self-debugging approach designed for users with a programming background, or a natural language interface that allows users to describe errors in conversational terms and receive appropriate solutions. Experimental examples, including two benchmarks from CSI SAP2000 technical documentation, were selected to evaluate the GPT's ability to translate narrative engineering descriptions into executable Python scripts. The strong agreement between the GPT-generated outputs and benchmark results confirms its computational effectiveness. The innovation is further validated through comparative testing against standard ChatGPT, demonstrating the latter's inability to generate executable SAP2000 API code, highlighting the significant practical advantages of the domain-specific approach.",
+  "journal": "Asian Journal of Civil Engineering",
+  "llmModels": [
+    "ChatGPT (Custom GPT)"
+  ],
+  "keywords": [
+    "AI-driven tools",
+    "Generative Pre-trained Transformer",
+    "Structural problems",
+    "API Expert",
+    "Structural design and analysis",
+    "SAP2000 API",
+    "Code generation",
+    "Natural language processing"
+  ],
+  "methodology": "The study develops SAP2000 API Expert, a custom GPT built on ChatGPT's Custom GPT platform, designed to convert natural language structural engineering problem descriptions into executable SAP2000 API Python scripts. The system's knowledge base architecture consists of three components: (1) two CSV files containing comprehensive SAP2000 API documentation structured with fields (FunctionName, Syntax, Parameters, ParametersDataStructure, Description, UsageExample), (2) a standardized code template governing the structural organization of generated implementations, and (3) additional instructions that prevent hallucination by restricting function recommendations to documented API capabilities. The system provides dual error resolution pathways: self-debugging for programming-savvy users and an interactive natural language interface for non-programmers. Validation was conducted using two benchmark problems from CSI SAP2000 technical documentation (a three-element frame and a braced frame) plus a third example involving a 3D bridge truss with image processing capability and genetic algorithm optimization.",
+  "results": "For Benchmark 1 (three-element frame), the GPT-generated code produced displacement values at the designated joint that matched the CSI SAP2000 reference solution exactly. For Benchmark 2 (braced frame), the lateral displacement at joint 2 and reaction forces at support nodes showed precise numerical correspondence with the reference solution, confirming correct implementation of pinned-end connections and non-interacting diagonal braces. For Example 3 (3D bridge truss), the GPT successfully extracted geometric information from an image, iteratively refined the model through multi-turn prompting, extended a 2D truss to 3D with lateral bracing, and generated a genetic algorithm optimization script for minimizing vertical displacement. Comparative analysis demonstrated that standard ChatGPT consistently failed to generate executable SAP2000 API scripts, exhibiting incorrect API initialization, misunderstanding of structural modeling parameters, incompatible data types, and non-executable code sequences.",
+  "url": "https://doi.org/10.1007/s42107-025-01431-7",
+  "markdownFile": "Djafar-Henni, N. etal - 2025 - SAP2000 API Expert a custom generative pre-trained transformer (GPT) for converting narrative struct....md",
+  "pdfFile": "Djafar-Henni, N. etal - 2025 - SAP2000 API Expert a custom generative pre-trained transformer (GPT) for converting narrative struct....pdf",
+  "taskEn": "Structural analysis",
+  "inputDataEn": "Text (natural language descriptions) + images (structural diagrams)"
+}

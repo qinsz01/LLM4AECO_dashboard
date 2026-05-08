@@ -1,0 +1,36 @@
+{
+  "id": "maceika2024",
+  "citation": "Maceika et al./2024",
+  "title": "Evaluating Modular House Construction Projects: A Delphi Method Enhanced by Conversational AI",
+  "year": 2024,
+  "category": "施工管理与安全",
+  "task": "文本",
+  "phase": "规划与设计",
+  "inputData": "文本化",
+  "representation": "其他",
+  "llmMethod": "Prompt",
+  "contribution": "LLM生成的评估标准描述质量与专家相当",
+  "abstract": "This study proposes a methodology for evaluating modular house construction projects by combining the Delphi method with ChatGPT to generate detailed evaluation scales across multiple criteria. The authors identify key factors influencing customer selection of modular buildings through iterative expert surveys, then use ChatGPT with one-shot learning to produce Likert-scale descriptions for each criterion. Applied to a real-world 60-square-meter modular house project in Lithuania, the methodology demonstrates that ChatGPT-generated evaluation scales are of comparable quality to those produced by human experts, requiring only minor corrections upon expert verification.",
+  "journal": "Buildings",
+  "llmModels": [
+    "ChatGPT-4"
+  ],
+  "keywords": [
+    "modular building",
+    "project evaluation",
+    "ChatGPT",
+    "conversational AI",
+    "generative AI",
+    "artificial intelligence",
+    "Delphi method",
+    "MCDM",
+    "sustainability"
+  ],
+  "methodology": "The authors employ a two-round Delphi method with 30 respondents to identify and rank 36 evaluation factors for modular house projects, then use ChatGPT-4 with one-shot learning to generate detailed 5-point Likert scale descriptions for each quantifiable criterion, which are subsequently verified by a domain expert.",
+  "results": "ChatGPT-generated evaluation scale descriptions were confirmed by an expert without major modifications, with only minor inconsistencies in overlapping parameter ranges identified and corrected. The case study on a Lithuanian modular house achieved a total weighted project score of 403, demonstrating the practical applicability of the AI-enhanced Delphi methodology.",
+  "pdfFile": "Maceika et al. - 2024 - Evaluating Modular House Construction Projects A Delphi Method Enhanced by Conversational AI.pdf",
+  "url": "https://doi.org/10.3390/buildings14061696",
+  "markdownFile": "Maceika et al. - 2024 - Evaluating Modular House Construction Projects A Delphi Method Enhanced by Conversational AI.md",
+  "taskEn": "Text",
+  "inputDataEn": "Textualized data"
+}

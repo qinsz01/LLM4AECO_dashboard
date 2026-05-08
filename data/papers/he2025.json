@@ -1,0 +1,33 @@
+{
+  "id": "he2025",
+  "citation": "He et al., 2025",
+  "title": "Enriched Construction Regulation Inquiry Responses: A Hybrid Search Approach for Large Language Models",
+  "year": 2025,
+  "category": "规范与合规检查",
+  "task": "施工质量合规检查",
+  "phase": "施工",
+  "inputData": "规范文档+自然语言查询",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "contribution": "提出改进的RAG框架，结合TF-IDF稀疏嵌入与密集文本嵌入的混合检索引擎，用于施工质量合规检查的问答系统，显著提高了领域知识检索的准确性和相关性。",
+  "abstract": "The applicability of existing automated compliance check tools in construction is limited, as they are insufficient to provide end-to-end responses given the fragmented and unstructured compliance checking requirements in practice. We explored the potential of large language models (LLMs) to fill the gap by proposing an improved retrieval-augmented generation (RAG) framework to conduct question-answering (QA)-based construction quality checks. The framework contains a novel hybrid search engine that integrates term frequency-inverse document frequency (TF-IDF)-based keyword search with text-embedding search to facilitate domain semantic-aware regulation information extraction. Subsequently, we established a RAG-based chatbot that enables construction managers to obtain construction quality check results and justification directly and precisely via conversations. The framework was tested using 110 real-world QA scenarios covering three concrete structure regulations of 148,170 words. Results show that the enhanced system has improved 15.1% and 11.2% in hit rate and mean reciprocal rank (MRR) compared with naive RAG. The natural language responses demonstrate more precise and faithful results than conventional LLMs. Our research will contribute to the body of knowledge by proposing an improved RAG system to enhance the practicability of automated compliance checks. It also will push the boundary of LLM applications in construction by revealing how domain-specific terminologies facilitate knowledge extraction in LLM systems.",
+  "journal": "Journal of Management in Engineering (ASCE)",
+  "llmModels": [
+    "GPT-4-turbo",
+    "text-embedding-3-small"
+  ],
+  "keywords": [
+    "Construction regulation",
+    "Quality compliance check",
+    "Retrieval-augmented generation (RAG)",
+    "Term frequency-inverse document frequency (TF-IDF)",
+    "Large language model (LLM)"
+  ],
+  "methodology": "Proposes an improved RAG framework with a hybrid search engine for construction quality compliance checking via QA. The framework consists of three phases: (1) Knowledge base preparation -- collecting concrete structure regulation texts (GB 50164-2011, GB 50204-2015, JGJ 52-2006 totaling 148,170 words), segmenting them into subsection-level chunks (463 chunks), converting tables to plain text, and embedding chunks using OpenAI text-embedding-3-small (1,536-dim dense vectors); (2) Hybrid search -- developing a novel retriever that synthesizes dense text-embedding vectors with TF-IDF sparse vectors using two fusion algorithms (relative score fusion RSF and distribution-based score fusion DBSF), with an optional customized domain keyword vocabulary (120 terms) for TF-IDF to emphasize domain-specific terminologies like 'prefabricated' vs 'cast-in-place'; (3) LLM-based answer generation -- feeding retrieved chunks with user queries to GPT-4-turbo via LlamaIndex for compliance judgments and justifications. The system was evaluated on 110 QA pairs (34 retrieval, 73 inference, 3 multihop inference) developed with construction professionals, using two-stage evaluation: knowledge retrieval (hit rate and MRR) and end-to-end QA (correctness on 1-5 scale and faithfulness as binary).",
+  "results": "The enhanced RAG model (Model 3 with customized TF-IDF vocabulary) achieved a hit rate of 0.9000 and MRR of 0.7121 under optimal configuration (alpha=0.3-0.5 with RSF fusion), representing improvements of 15.1% in hit rate and 11.2% in MRR compared with the naive RAG baseline (Model 1). The shift from full TF-IDF (Model 2) to customized vocabulary TF-IDF (Model 3) yielded an additional 7.6% improvement in hit rate and 4.4% in MRR. In end-to-end QA evaluation, Model 3 achieved a correctness score of 4.39/5 and faithfulness of 0.95, outperforming both the baseline RAG (correctness 3.49, faithfulness 0.78) and the original GPT-4 model without RAG. Sensitivity analysis showed that reducing the vocabulary by 17% (from 120 to 100 terms) decreased performance by only 2.02% in hit rate and 0.85% in MRR, indicating robust reliability. Framework validation by 17 third-party professionals (11 valid responses, average 9.0 years of experience) showed generally positive assessments across representation, effectiveness, conciseness, consistency, and applicability criteria.",
+  "url": "https://doi.org/10.1061/JMENEA.MEENG-6444",
+  "pdfFile": "He et al. - 2025 - Enriched Construction Regulation Inquiry Responses A Hybrid Search Approach for Large Language Mode.pdf",
+  "markdownFile": "He et al. - 2025 - Enriched Construction Regulation Inquiry Responses A Hybrid Search Approach for Large Language Mode.md",
+  "taskEn": "Construction quality compliance checking",
+  "inputDataEn": "Regulatory documents + natural language queries"
+}

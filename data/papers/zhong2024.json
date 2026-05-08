@@ -1,0 +1,36 @@
+{
+  "id": "zhong2024",
+  "citation": "Zhong and Goodfellow/2024",
+  "title": "Domain-specific language models pre-trained on construction management systems corpora",
+  "year": 2024,
+  "category": "施工管理与安全",
+  "task": "文本分类/命名实体识别",
+  "phase": "全生命周期",
+  "inputData": "文本（施工文档）",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "contribution": "开发了首个CMS领域专用语料库，预训练BERT/RoBERTa模型，在文本分类和NER任务上F1分数分别提升5.9%和8.5%",
+  "pdfFile": "Zhong and Goodfellow - 2024 - Domain-specific language models pre-trained on construction management systems corpora.pdf",
+  "markdownFile": "Zhong and Goodfellow - 2024 - Domain-specific language models pre-trained on construction management systems corpora.md",
+  "abstract": "This paper presents the first domain-specific corpus for Construction Management Systems (CMS), built from academic publications, and introduces an end-to-end pipeline for pre-training and fine-tuning domain-specific pre-trained language models. Four corpora with varying data cleaning strategies were constructed, and transfer learning was applied to pre-train BERT and RoBERTa models on these corpora, followed by fine-tuning on text classification and named entity recognition tasks.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "BERT-base",
+    "RoBERTa-base"
+  ],
+  "keywords": [
+    "Construction management",
+    "Domain-specific large language models",
+    "Pre-training",
+    "Transfer learning",
+    "Text classification",
+    "Named entity recognition",
+    "Corpus development",
+    "Natural language processing"
+  ],
+  "methodology": "The authors developed four CMS domain corpora from academic papers and pre-trained BERT and RoBERTa models using dynamic masked language modeling with transfer learning, then fine-tuned the best-performing models on downstream text classification and named entity recognition datasets.",
+  "results": "Domain-specific pre-training improved F1 scores by 5.9% for text classification (best F1=0.754 with RoBERTa) and 8.5% for named entity recognition (best F1=0.956 with RoBERTa) compared to models pre-trained on general corpora. All transformer-based models significantly outperformed baseline models (Logistic Regression and BiGRU).",
+  "url": "https://doi.org/10.1016/j.autcon.2024.105316",
+  "taskEn": "Text classification / named entity recognition",
+  "inputDataEn": "Text (construction documents)"
+}

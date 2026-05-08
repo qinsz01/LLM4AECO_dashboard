@@ -1,0 +1,32 @@
+{
+  "id": "kang2024",
+  "citation": "Kang et al. / 2024",
+  "title": "Earthwork Network Architecture (ENA): Research for Earthwork Quantity Estimation Method Improvement with Large Language Model",
+  "year": 2024,
+  "category": "其他",
+  "task": "土方工程量估算",
+  "phase": "施工",
+  "inputData": "CAD",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "contribution": "提出ENA架构结合LLM和Transformer自动化土方量估算，QTC分类准确率达97.17%",
+  "abstract": "Accurate earthwork quantity estimation is essential for effective project planning and cost management in the Architecture, Engineering, and Construction (AEC) industry. Traditional methods for quantity takeoff are often time-consuming and susceptible to human error, particularly when working with unstructured datasets such as CAD drawings. This study introduces the Earthwork Network Architecture (ENA), a novel deep learning framework that incorporates Large Language Models (LLMs), Multi-Layer Perceptron (MLP), Long Short-Term Memory (LSTM) networks, and Transformers to automate and enhance the accuracy of earthwork quantity estimation. Among the architectures tested, the LLM-based ENA demonstrated superior performance, achieving faster convergence, greater loss reduction, and higher classification accuracy, with a Quantity Takeoff Classification accuracy of 97.17%. However, the LLMs required significantly more computational resources compared with other models. These findings suggest that LLMs, typically used in natural language processing, can be effectively adapted for complex AEC datasets.",
+  "journal": "Applied Sciences",
+  "llmModels": [
+    "BERT-base-uncased"
+  ],
+  "keywords": [
+    "earthwork quantity estimation",
+    "large language models (LLMs)",
+    "deep learning in construction",
+    "transformer-based models",
+    "automated quantity takeoff"
+  ],
+  "methodology": "The proposed ENA framework comprises three modules: (1) Topological Feature Collector extracts earthwork features (cut/fill areas, slopes, subgrade conditions) from road cross-sectional CAD drawings using Half-Edge Topology Structure to create closed polylines, then tokenizes features into sequences; (2) ENA Model Development trains four model architectures - M1 (MLP-based), M2 (LSTM-based), M3 (Transformer-based), and M4 (LLM-based using pre-trained BERT-base-uncased with fine-tuning) - using tokenized feature sequences; (3) Performance Evaluation compares models on loss, accuracy, and QTCacc metrics. A case study of a 5.46 km national road project in South Korea with 237 cross-sections and 4051 entities was used for training and evaluation.",
+  "results": "The LLM-based ENA model (M4.1) achieved the best QTCacc of 97.17%, followed by M4.2 at 96.74%, M2.2 (LSTM) at 82.10%, and M1.3 (MLP) at 81.61%. The LLM-based models showed the fastest convergence (loss of 0.074 at epoch 10 for M4.1 vs. 0.1685 for M1.1 MLP). The best training loss was M4.2 (0.0534). However, LLM models required significantly more GPU resources (M4 model size = 427,783 KB vs. 84 KB for MLP; M4 training time averaged 5h 35min vs. ~2.5 min for MLP). Transformer-based models (M3) without pre-training performed poorly (QTCacc 11.22-30.59%).",
+  "url": "https://doi.org/10.3390/app142210517",
+  "pdfFile": "Kang et al. - 2024 - Earthwork Network Architecture (ENA) Research for Earthwork Quantity Estimation Method Improvement.pdf",
+  "markdownFile": "Kang et al. - 2024 - Earthwork Network Architecture (ENA) Research for Earthwork Quantity Estimation Method Improvement.md",
+  "taskEn": "Earthwork quantity estimation",
+  "inputDataEn": "CAD"
+}

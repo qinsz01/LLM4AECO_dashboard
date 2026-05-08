@@ -1,0 +1,40 @@
+{
+  "id": "liang2026",
+  "citation": "Liang et al./2026",
+  "title": "AECBench: A Hierarchical Benchmark for Knowledge Evaluation of Large Language Models in the AEC Field",
+  "year": 2026,
+  "abstract": "Large language models (LLMs), as a novel information technology, are seeing increasing adoption in the Architecture, Engineering, and Construction (AEC) field. They have shown their potential to streamline processes throughout the building lifecycle. However, the robustness and reliability of LLMs in such a specialized and safety-critical domain remain to be evaluated. To address this challenge, this paper establishes AECBench, a comprehensive benchmark designed to quantify the strengths and limitations of current LLMs in the AEC domain. The benchmark features a five-level, cognition-oriented evaluation framework (i.e., Knowledge Memorization, Knowledge Understanding, Knowledge Reasoning, Knowledge Calculation, and Knowledge Application). Based on the framework, 23 representative evaluation tasks were defined. These tasks were derived from authentic AEC practice, with scope ranging from codes retrieval to specialized documents generation. Subsequently, a 4800-question dataset encompassing diverse formats, including openended questions, was crafted primarily by engineers and validated through a two-round expert review. Furthermore, an \"LLM-as-a-Judge\" approach was introduced to provide a scalable and consistent methodology for evaluating complex, long-form responses leveraging expert-derived rubrics. Through the evaluation of nine LLMs, a clear performance decline across five cognitive levels was revealed. Despite demonstrating proficiency in foundational tasks at the Knowledge Memorization and Understanding levels, the models showed significant performance deficits, particularly in interpreting knowledge from tables in building codes, executing complex reasoning and calculation, and generating domain-specific documents. Consequently, this study lays the groundwork for future research and development aimed at the robust and reliable integration of LLMs into safety-critical engineering practices.",
+  "journal": "ADVANCED ENGINEERING INFORMATICS",
+  "pdfFile": "Liang et al. - 2026 - AECBench A hierarchical benchmark for knowledge evaluation of large language models in the AEC fiel",
+  "markdownFile": "Liang et al. - 2026 - AECBench A hierarchical benchmark for knowledge evaluation of large language models in the AEC fiel",
+  "url": "https://doi.org/10.1016/j.aei.2026.104314",
+  "category": "其他",
+  "task": "AEC领域LLM知识能力评测",
+  "taskEn": "LLM knowledge evaluation benchmarking in the AEC domain",
+  "phase": "全生命周期",
+  "inputData": "建筑规范、专业术语及考试题目数据",
+  "inputDataEn": "Building codes, professional terminology, and licensure examination questions",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "llmModels": [
+    "GPT-4",
+    "GPT-4o",
+    "Claude-3.5-Sonnet",
+    "DeepSeek-V3",
+    "Qwen-2.5-72B",
+    "GLM-4-Plus",
+    "Llama-3.1-70B",
+    "Gemini-1.5-Pro",
+    "Step-2"
+  ],
+  "keywords": [
+    "Large Language Models",
+    "Domain-specific Benchmark",
+    "AEC Industry",
+    "Knowledge Evaluation",
+    "Automated Evaluation"
+  ],
+  "contribution": "提出了AECBench，一个面向AEC领域的层级化LLM知识评测基准，包含五级认知框架和23个评测任务，构建了4800题的高质量数据集，并引入LLM-as-a-Judge方法实现开放式回答的自动评测。",
+  "methodology": "基于布鲁姆分类法设计五级认知评估框架，由领域工程师从真实AEC实践中设计23个评测任务，构建4800题数据集经两轮专家审核，采用LLM-as-a-Judge方法对九个主流LLM进行系统评测。",
+  "results": "评测九个LLM后发现，模型在知识记忆和理解层面表现较好，但在建筑规范表格解读、复杂推理与计算以及专业文档生成等高层认知任务上表现显著下降，揭示了当前LLM在AEC安全关键领域的不足。"
+}

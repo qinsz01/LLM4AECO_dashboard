@@ -1,0 +1,35 @@
+{
+  "id": "tang2026",
+  "citation": "Tang et al./2026",
+  "title": "A Knowledge-Driven and Interpretable Fine-Tuning LLMs Framework for Energy Retrofit Decision Support in Commercial Buildings",
+  "year": 2026,
+  "category": "能耗管理与优化",
+  "task": "建筑节能改造决策支持",
+  "phase": "运维",
+  "inputData": "建筑能耗与设备运行数据",
+  "representation": "结构化",
+  "llmMethod": "微调",
+  "contribution": "建立知识驱动的节能改造决策支持框架，将国家标准、行业规范和专家知识形式化为结构化规则库，通过LoRA微调LLM结合思维链提示和自一致性机制，实现快速识别关键改造目标并生成可解释的改造行动计划",
+  "pdfFile": "Tang et al. - 2026 - A knowledge-driven and interpretable fine-tuning LLMs framework for energy retrofit decision support.pdf",
+  "markdownFile": "Tang et al. - 2026 - A knowledge-driven and interpretable fine-tuning LLMs framework for energy retrofit decision support.md",
+  "abstract": "Accurately identifying critical energy retrofit targets serves as the prerequisite for formulating effective commercial building conservation schemes, yet this diagnostic process necessitates the integration of multi-dimensional technical analyses across building envelope performance and building energy system performance with regulatory compliance requirements and expert experiential judgment, historically depending on labor-intensive engineering audits. Large language models (LLMs) offer transformative potential to automate such knowledge-intensive decision workflows through advanced natural language reasoning; however, their operational reliability in retrofit applications remains constrained by limitations in embedding formalized domain-specific knowledge and generating transparent, rule-compliant reasoning pathways. To address these challenges, this study established a knowledge-driven retrofit decision support framework by first formalizing diagnostic criteria from national standards, industry codes, and expert knowledge into a structured rule base covering three core dimensions: building envelope heat transfer coefficients, equipment selection parameters, and operating strategy designs. These engineering rules were then converted into machine-executable training corpora with compliance verification labels. Through Low-Rank Adaptation (LoRA) fine-tuning of multiple LLMs combined with chain-of-thought prompting and self-consistency mechanisms, the framework enabled rapid identification of critical retrofit targets in existing buildings and generation of interpretable retrofit action plans with explicit decision rationales. Performance evaluation on the test set demonstrated that the FT-GPT-4o model, fine-tuned at a cost of $2.65, achieved 100% rule application accuracy and 84.21% classification accuracy. Subsequent testing with comprehensive data from three real commercial buildings confirmed that the system produced decisions consistent with expert judgments while reducing decision-making time from minutes to seconds compared to manual evaluations.",
+  "journal": "Energy and Buildings",
+  "llmModels": [
+    "GPT-4o",
+    "GPT-3.5-turbo",
+    "Qwen-3-32B"
+  ],
+  "keywords": [
+    "energy retrofit",
+    "large language model",
+    "LoRA fine-tuning",
+    "chain-of-thought",
+    "commercial buildings",
+    "knowledge-driven"
+  ],
+  "methodology": "建立知识驱动的节能改造决策支持框架：(1) 从国家标准、行业规范和专家知识中形式化诊断标准，构建覆盖三个核心维度（建筑围护结构传热系数、设备选型参数、运行策略设计）的结构化规则库，共31项指标形成规则链；(2) 将工程规则转化为带有合规性验证标签的机器可执行训练语料；(3) 通过LoRA（低秩适应）微调多个LLM（GPT-4o、GPT-3.5-turbo、Qwen-3-32B），结合思维链（Chain-of-Thought）提示和自一致性（Self-Consistency）机制；(4) 在三个真实商业建筑的综合数据上进行验证。",
+  "results": "FT-GPT-4o模型在测试集上达到100%规则应用准确率和84.21%分类准确率，微调成本仅2.65美元。三个真实商业建筑测试确认系统生成的决策与专家判断一致，将决策时间从人工评估的数分钟缩短至数秒。框架成功将劳动密集型商业建筑节能改造审计转化为AI增强的工作流。",
+  "url": "https://doi.org/10.1016/j.enbuild.2026.117486",
+  "taskEn": "Building energy retrofit decision support",
+  "inputDataEn": "Building energy and equipment operational data"
+}

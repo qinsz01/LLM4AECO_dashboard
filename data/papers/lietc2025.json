@@ -1,0 +1,34 @@
+{
+  "id": "lietc2025",
+  "citation": "Li et al. / 2025",
+  "title": "An LLM-assisted decision-making framework of rule-based control strategy for photovoltaic driven air conditioning systems",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "PVAC系统控制参数优化",
+  "phase": "运维",
+  "inputData": "传感器数据（温度、太阳辐射、PV功率）+仿真运行指标（PPD、PMV、成本）",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "提出LLM辅助的PVAC系统规则控制参数自适应决策框架，LLM作为专家决策代理，通过迭代反馈循环优化温度设定点、舒适范围和滞后带宽，实现热舒适与运行成本的多目标平衡",
+  "abstract": "Photovoltaic driven air conditioning (PVAC) systems provide significant opportunities for sustainable building energy management, but optimizing their operational parameters remains challenging. Current control methods often lack flexibility in adapting to dynamic environmental conditions and occupancy requirements. This study introduces a novel optimization framework integrating a large language model (LLM) with a rule-based adaptive control strategy for PVAC systems. A comprehensive simulation model, coupling detailed building thermal dynamics and air conditioning behavior, is developed and experimentally validated. The LLM is requested to determine optimal operational parameters. The LLM is systematically evaluated across varying scenarios, including initial settings for temperature setpoints, comfort ranges, hysteresis bands, and communication intervals. Results indicated that the LLM consistently converged on optimal control configurations, notably temperature setpoints around 24-25 degrees C, comfort ranges of approximately 1-2 degrees C, and hysteresis bands of about 0.3-0.5 degrees C, achieving high thermal comfort satisfaction and substantial energy cost savings. Furthermore, the model demonstrated excellent repeatability and operational stability across diverse climatic conditions. This research confirms the viability of integrating LLM-assisted adaptive control into PVAC systems. The LLM provides a promising opportunity for enhanced building energy efficiency and occupant comfort in practical applications.",
+  "journal": "Energy",
+  "llmModels": [
+    "DeepSeek-R1",
+    "DeepSeek-V3"
+  ],
+  "keywords": [
+    "photovoltaic driven air conditioner",
+    "large language model",
+    "artificial intelligence",
+    "rule-based control",
+    "simulation",
+    "adaptive control"
+  ],
+  "methodology": "The framework integrates an LLM (DeepSeek-R1 reasoner model and DeepSeek-V3 chat model) with a rule-based adaptive control strategy for PVAC systems. A coupled building thermal dynamics (RC model) and air conditioning simulation model is developed and experimentally validated (MAE of indoor temperature 0.38 degrees C). The LLM acts as an expert decision agent in an iterative tuning loop: (1) the PVAC simulation runs with current control parameters (T_setpoint, T_range, T_band) for a fixed period (1-10 days per round); (2) operational metrics including PPD, PMV, cost savings, and indoor temperatures are formatted into structured JSON prompts; (3) the LLM analyzes the feedback and recommends new control parameters via API; (4) updated parameters are applied in the next simulation round. Both reasoner and chat models are tested across diverse initial settings, communication intervals, LLM temperature parameters, and repeatability scenarios over a 30-day June period and the full 196-day cooling season.",
+  "results": "The LLM consistently converged on optimal control parameters (T_setpoint=24-25 degrees C, T_range=1-2 degrees C, T_band=0.3-0.5 degrees C) regardless of initial settings (22, 26, or 30 degrees C). Daily cost savings reached 4-6 CNY/day with PPD around 20-50%. The reasoner model (DeepSeek-R1) provided detailed numerical justifications with engineering-grade logic, while the chat model (DeepSeek-V3) offered faster responses (6s vs 190.8s) with more intuitive explanations. LLM temperature parameter had limited effect on performance (savings varied only 3%). The framework demonstrated good repeatability and successfully managed the full 196-day cooling season with weekly LLM communication, converging to stable parameters (setpoint 26 degrees C, range 1.5 degrees C, band 0.5 degrees C). Total LLM API costs were orders of magnitude lower than operational energy costs.",
+  "markdownFile": "Li et al. - 2025 - An LLM-assisted decision-making framework of rule-based control strategy for photovoltaic driven air",
+  "url": "https://doi.org/10.1016/j.energy.2025.139328",
+  "taskEn": "PVAC system control parameter optimization",
+  "inputDataEn": "Sensor data (temperature, solar radiation, PV power) + simulation metrics (PPD, PMV, cost)",
+  "pdfFile": "Li et al. - 2025 - An LLM-assisted decision-making framework of rule-based control strategy for photovoltaic driven air"
+}

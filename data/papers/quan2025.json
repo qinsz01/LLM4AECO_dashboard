@@ -1,0 +1,31 @@
+{
+  "id": "quan2025",
+  "citation": "Quan et al./2025",
+  "title": "AutoBEE: A hierarchical multi-agent approach for energy and environmental parameter analysis",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "能耗与环境参数分析",
+  "phase": "规划与设计",
+  "inputData": "IDF文件（EnergyPlus模型）+文本（自然语言指令）",
+  "representation": "多模态",
+  "llmMethod": "其他",
+  "contribution": "分层多智能体系统（AutoBEE）高效处理建筑能耗和环境参数分析，显著提升设计决策质量",
+  "pdfFile": "Quan et al. - 2025 - AutoBEE A hierarchical multi-agent approach for energy and environmental parameter analysis.pdf",
+  "markdownFile": "Quan et al. - 2025 - AutoBEE A hierarchical multi-agent approach for energy and environmental parameter analysis.md",
+  "abstract": "This study develops AutoBEE, an automated analysis framework for building energy consumption and environmental parameters based on a hierarchical multi-agent system integrated with large language models. The framework achieves fully autonomous operation from natural language input to structured building performance report output through a multi-level team-based architecture, a lightweight communication protocol, and a comprehensive agent tool library covering IDF file modification, EnergyPlus simulation, and data analysis.",
+  "journal": "Energy & Buildings",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Large Language Model (LLM)",
+    "Multi-Agent System (MAS)",
+    "Building energy consumption analysis",
+    "Building environmental parameters"
+  ],
+  "methodology": "A hierarchical multi-agent system (AutoBEE) built on the LangGraph framework with GPT-4o, organizing specialized agents into planning, supervision, modification, simulation, and reporting teams, enhanced by Chain-of-Thought prompting, RAG for standards compliance, and a lightweight information-hiding communication protocol.",
+  "results": "Validated across 54 typical building performance analysis scenarios, AutoBEE achieved 100% accuracy, 10-20x speed improvement over manual methods (processing in 50-99 seconds), superior content richness and rationality compared to human experts, and controlled token costs (mostly $0.069-$0.098 per task) through the information-hiding strategy.",
+  "url": "https://doi.org/10.1016/j.enbuild.2025.116516",
+  "taskEn": "Energy and environmental parameter analysis",
+  "inputDataEn": "IDF files (EnergyPlus models) + text (natural language instructions)"
+}

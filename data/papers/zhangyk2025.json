@@ -1,0 +1,37 @@
+{
+  "id": "zhangyk2025",
+  "citation": "Zhang, YK etal / 2025",
+  "title": "SDIGLM leveraging large language models and multimodal chain of thought for structural damage identification",
+  "year": 2025,
+  "category": "运维管理",
+  "task": "结构损伤识别与描述",
+  "phase": "运维",
+  "inputData": "结构损伤图像+文本描述",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "contribution": "提出SDIGLM，基于VisualGLM-6B架构的多模态大语言模型，集成U-Net语义分割模块作为视觉CoT和多轮对话微调数据集作为语言CoT，在结构损伤识别中达到95.24%准确率，并能用自然语言描述损伤特征",
+  "abstract": "Existing computer vision-based structural damage identification models demonstrate notable accuracy in categorizing and localizing damage. However, these models present several critical limitations that hinder their practical application in structural health monitoring, including constrained damage type recognition and lack of linguistic capabilities. This study introduces SDIGLM (Structural Damage Identification General Language Model), an innovative multimodal large language model (MLLM) for structural damage identification, developed based on the open-source VisualGLM-6B architecture. To address the challenge of adapting MLLMs to the intricate and varied operating conditions in civil engineering, this work integrates a U-Net-based semantic segmentation module to generate defect segmentation maps as visual chain of thought (CoT). Additionally, a multiround dialogue fine-tuning dataset is constructed to enhance logical reasoning, complemented by a language CoT formed through prompt engineering. By leveraging this multimodal CoT, SDIGLM surpasses general-purpose MLLMs in structural damage identification, achieving an accuracy of 95.24% across various infrastructure types. Moreover, the model effectively describes damage characteristics such as hole size, crack direction, and corrosion severity.",
+  "journal": "Structural Health Monitoring",
+  "llmModels": [
+    "VisualGLM-6B",
+    "ChatGLM2-6B",
+    "ViT-G",
+    "Q-Former",
+    "U-Net"
+  ],
+  "keywords": [
+    "Large language model",
+    "Multimodal large language model",
+    "Multimodal chain of thought",
+    "Structural damage identification",
+    "Image description",
+    "Structural health monitoring"
+  ],
+  "methodology": "提出SDIGLM框架，基于VisualGLM-6B架构，集成四个核心模块：(1) U-Net语义分割模块——对结构损伤图像进行像素级分割，生成语义分割图作为视觉CoT，消除复杂背景干扰；(2) ViT-G图像编码器——采用双通道输入机制，同时接收原始损伤图像和U-Net生成的语义分割图，通过Transformer编码器提取空间-语义双重特征；(3) Q-Former多模态对齐模块——通过交叉注意力机制实现图像特征与文本语义的精确对齐，将图像编码转换为文本兼容的嵌入空间；(4) ChatGLM2-6B语言模型——接收用户文本查询，结合Q-Former提供的图像编码进行跨模态推理，通过自回归生成输出损伤类别分类和特征描述。构建了包含11,722组匹配图像-文本对的多模态结构损伤数据集（涵盖裂缝、孔洞、剥落、钢筋外露、腐蚀等七类损伤），使用LoRA低秩适配策略在NVIDIA A10 GPU上微调20个epoch（17小时），并通过多模态CoT推理（视觉推理+文本推理）实现逐步损伤识别和描述。",
+  "results": "SDIGLM在210张涵盖七类结构损伤的测试图像上达到95.24%的分类准确率，超越o4-mini（90.95%）、Gemini-2.5-Pro（88.10%）和GLM-4V（75.24%）等通用大模型。消融实验表明：微调使基础模型VisualGLM-6B准确率从53.81%提升至84.29%，加入多模态CoT后进一步提升至95.24%。SDIGLM能有效识别道路坑洞、混凝土裂缝/孔洞/剥落、钢筋外露、钢构件裂缝/腐蚀等多种损伤类型，并通过多轮对话以自然语言详细描述损伤特征（如孔洞尺寸、裂缝方向、腐蚀严重程度），而传统CV模型缺乏语言描述能力且通常局限于特定结构类型。",
+  "url": "https://doi.org/10.1177/14759217251348275",
+  "markdownFile": "Zhang, YK etal - 2025 - SDIGLM leveraging large language models and multimodal chain of thought for structural damage identi...",
+  "taskEn": "Structural damage identification and description",
+  "inputDataEn": "Structural damage images + text descriptions",
+  "pdfFile": "Zhang, YK etal - 2025 - SDIGLM leveraging large language models and multimodal chain of thought for structural damage identi..."
+}

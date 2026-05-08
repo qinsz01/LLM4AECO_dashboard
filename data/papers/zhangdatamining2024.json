@@ -1,0 +1,34 @@
+{
+  "id": "zhangdatamining2024",
+  "citation": "Zhang et al. / 2024",
+  "title": "Automated data mining framework for building energy conservation aided by generative pre-trained transformers (GPT)",
+  "year": 2024,
+  "category": "能耗管理与优化",
+  "task": "能耗异常检测",
+  "phase": "运维",
+  "inputData": "传感器数据/文本",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "abstract": "Data mining technologies have showed promising capabilities in extracting building operation patterns from massive amounts of building operational data for energy conservation. However, the number of the extracted operation patterns is always large. It is time-consuming and tedious for users to find valuable operation patterns among them. To overcome this barrier, this study proposes an automated data mining framework based on maximal frequent itemset mining and generative pre-trained transformers (GPT). An improved maximal frequent itemset mining-based data mining method is developed to extract non-redundant operation patterns from numerous building operational data for reducing the number of the extracted operation patterns. A template-based prompt generation method is proposed to transform the extracted operation patterns into prompts. The prompts are inputted into GPT to determine whether there are energy waste patterns hidden in the extracted operation patterns. It liberates humans from the tedious work on analyzing the extracted operation patterns. The framework is applied to analyze the one-year operational data from a real-world building chiller plant system for verifying its performance. Most of the energy waste patterns in this system are detected successfully, such as valve faults, low chilled water outlet temperature, small chilled and cooling water temperature differences, and improper coordinated control among devices. The detection accuracy of GPT is 89.17% for energy waste patterns and 99.48% for normal operation patterns.",
+  "journal": "Energy and Buildings",
+  "llmModels": [
+    "GPT-4",
+    "GPT-3.5"
+  ],
+  "keywords": [
+    "ChatGPT",
+    "GPT-4",
+    "Artificial general intelligence",
+    "Automated data mining",
+    "Building energy conservation",
+    "Maximal frequent itemset mining"
+  ],
+  "methodology": "本研究提出了一个基于最大频繁项集挖掘和GPT的自动化数据挖掘框架，用于建筑节能。框架包含四个步骤：（1）数据预处理：使用核密度估计进行异常值检测和数据清洗，并将连续变量离散化为文本描述形式；（2）特征选择：利用GPT根据建筑能源系统组件、系统类型、组件关系、可用变量、用户感兴趣的能耗浪费模式以及目标设备/子系统等六要素自动生成提示词，为不同数据挖掘任务选择合适的变量；（3）知识发现：采用改进的FP-Max最大频繁项集挖掘算法提取非冗余高维知识，仅保留项数排名前三的最大频繁项集，将知识数量从38,302减少到313；（4）知识解释：通过模板化提示词生成方法将挖掘结果转化为GPT提示词，利用GPT-4判断操作模式中是否存在能耗浪费模式，并采用自底向上层次化文本合并策略将GPT的多个回答合并为一份简洁报告。使用GPT-3.5进行设备级任务特征选择，GPT-4用于子系统级任务特征选择和知识解释。以深圳某公共建筑冷水机组系统一年的运行数据进行验证。",
+  "results": "在冷水机组系统案例中，改进的知识发现方法将挖掘出的知识数量从传统方法（41,704条双变量关联规则和38,302条最大频繁项集）大幅减少至313条。GPT-4在知识解释方面表现优异，对能耗浪费模式的检测准确率（Recall）为89.17%，对正常运行模式的检测准确率（Specificity）为99.48%，总体准确率为95.53%。GPT-3.5在知识解释方面表现较差，准确率仅66.45%，召回率仅12.50%。GPT完成特征选择和知识解释的总响应时间为6747.60秒，总成本为17.68美元，远快于人工分析所需的1-2天。成功检测出阀门故障、冷水出水温度过低、冷水和冷却水温差偏小、设备间协调控制不当等多种能耗浪费模式。",
+  "contribution": "提出基于最大频繁项集挖掘和GPT的自动化数据挖掘框架，通过改进的知识发现方法大幅减少冗余知识，利用模板化提示词生成方法实现GPT自动解释数据挖掘结果，替代人工分析建筑运行数据中的能耗浪费模式",
+  "markdownFile": "Zhang et al. - 2024 - Automated data mining framework for building energy conservation aided by generative pre-trained tra",
+  "url": "https://doi.org/10.1016/j.enbuild.2023.113877",
+  "taskEn": "Energy anomaly detection",
+  "inputDataEn": "Sensor data / text",
+  "pdfFile": "Zhang et al. - 2024 - Automated data mining framework for building energy conservation aided by generative pre-trained tra"
+}

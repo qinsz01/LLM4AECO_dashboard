@@ -1,0 +1,35 @@
+{
+  "id": "almeida2025",
+  "citation": "Almeida et al./2025",
+  "title": "Smart energy strategies: Leveraging LSTM and LLMs for advanced energy management",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "建筑能耗预测与优化",
+  "phase": "运维",
+  "inputData": "时间序列数据",
+  "representation": "其他",
+  "llmMethod": "Prompt",
+  "contribution": "开发了基于LSTM的建筑能耗预测推荐系统，并集成GPT-4作为事后可解释性模块，将预测结果转化为上下文相关的能耗管理建议",
+  "abstract": "Accurately predicting and optimizing heating and cooling demands in building energy management is crucial for enhancing efficiency and reducing energy consumption. Traditional methods often struggle with building energy usage patterns' nonlinear and variable nature. With the advent of advanced data collection through smart sensors, there is a growing need for intelligent systems to leverage this data to provide actionable insights. This study addresses the gap by developing a recommendation system using three machine and deep learning models, Long Short-Term Memory (LSTM), Gated Recurrent Unit (GRU), and XGBoost to predict and optimize the efficiency levels of space heating, ceiling cooling, and free cooling systems. Our proposed solution harnesses the power of these models, with LSTM performing best overall, to forecast energy consumption across hourly and daily timescales, enabling precise adjustments and efficient energy management. The methodology involves extensive data preprocessing, including hierarchical imputation of missing values and label encoding of categorical variables, followed by the transformation of raw data into efficiency levels. The deep learning model architecture, consisting of sequential layers, captures long-term dependencies in the data, while grid search-based hyperparameter tuning optimizes model performance. Results indicate high predictive accuracy, with R-squared values demonstrating the model's ability to explain up to 97.2% of the variance in hourly space heating, 95.2% in daily ceiling cooling, and 93% in daily free cooling energy consumption. Additionally, we interpret graphs using OpenAI's GPT-4 model to enhance understanding and facilitate actionable insights. This interpretation enhances the clarity of the predictive results, supporting more informed decision-making in energy management. The significance of this work lies in its potential to transform energy management practices in building environments, providing a robust tool for optimizing heating and cooling operations and contributing to overall energy efficiency.",
+  "journal": "Energy and AI, 22, 100642",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "Energy prediction",
+    "LSTM",
+    "HVAC optimization",
+    "Smart buildings",
+    "Deep learning",
+    "Recommendation system",
+    "GPT-4",
+    "Building energy management"
+  ],
+  "methodology": "基于欧洲央行(ECB)大厦气象站和楼宇自动化系统(BAS)的时间序列数据(包含气温、湿度、风速及供暖、制冷、自由冷却能耗数据)，开发LSTM序列模型预测空间供暖(SH)、天花板冷却(CC)和自由冷却(FC)的效率水平。数据预处理包括分层缺失值填补、标签编码及将原始数据转换为0-100%效率水平。模型采用两层LSTM结构(150个单元，ReLU激活，Adam优化器，学习率0.001)，通过GridSearchCV进行超参数调优，并与GRU和XGBoost模型进行对比。训练采用3折时间序列交叉验证，评估1小时、24小时、1天和7天四种预测场景。GPT-4作为事后可解释性模块集成，通过计算各HVAC系统的激活阈值(基于百分位数)和运行强度带(基于四分位距IQR)，将统计摘要和图形输出转化为自然语言的上下文相关能耗管理建议。",
+  "results": "LSTM在大多数预测场景中表现最优：小时级空间供暖预测R²达0.969(1小时)和0.938(24小时平均)；日级空间供暖R²达0.969(1天)和0.930(7天平均)；日级天花板冷却R²达0.947(1天)和0.904(7天平均)；日级自由冷却R²达0.905(1天)和0.836(7天平均)。LSTM在长期预测中优势更明显，尤其在24小时和7天预测场景中持续优于GRU和XGBoost。GPT-4成功将预测结果转化为季节性和占用类型相关的可操作建议，识别了供暖与制冷阈值重叠等低效问题。",
+  "url": "https://doi.org/10.1016/j.egyai.2025.100642",
+  "pdfFile": "Almeida, F. etal - 2025 - Smart energy strategies Leveraging LSTM and LLMs for advanced energy management.pdf",
+  "markdownFile": "Almeida, F. etal - 2025 - Smart energy strategies Leveraging LSTM and LLMs for advanced energy management.md",
+  "taskEn": "Building energy prediction and optimization",
+  "inputDataEn": "Time series data"
+}

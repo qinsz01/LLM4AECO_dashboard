@@ -1,0 +1,36 @@
+{
+  "id": "liu2025",
+  "citation": "Liu et al./2025",
+  "title": "An integrated method for BIM data retrieval using large language model",
+  "year": 2025,
+  "category": "BIM检索与管理",
+  "task": "数据检索",
+  "phase": "全生命周期",
+  "inputData": "BIM模型+自然语言查询",
+  "representation": "其他",
+  "llmMethod": "微调",
+  "contribution": "通过向量数据库和反思机制提高SQL生成准确性",
+  "abstract": "Data retrieval in Building Information Modelling (BIM) is essential for effective project management, yet existing methods remain limited by manual processes, keyword-based searches, and poor handling of complex queries. To address this gap, we propose an intelligent BIM data retrieval system that integrates large language models (LLMs) with vector search in a multi-agent framework using LangChain. BIM data from Revit models are exported to an SQL database via Dynamo. Natural language queries are transformed into SQL using LLMs guided by relevant prompt documents. To overcome LLM token limitations, prompts are embedded into a vector database for semantic retrieval. A reflection mechanism corrects errors in SQL generation, and a fine-tuned LLM enhances accuracy. This work advances current BIM research by enabling automated, context-aware, and accurate data access – bridging the gap between human queries and structured BIM data through agentive flow.",
+  "journal": "Architectural Science Review",
+  "llmModels": [
+    "Llama3-8B",
+    "Mistral-7B",
+    "Gemma2-9B",
+    "MiniLM-L6-v2"
+  ],
+  "keywords": [
+    "Building Information Modeling (BIM)",
+    "Data retrieval",
+    "SQL",
+    "Natural Language Processing (NLP)",
+    "Large Language Models (LLM)",
+    "Fine-tuning"
+  ],
+  "methodology": "提出三步骤BIM数据智能检索方法：(1)使用Dynamo从Revit模型中自动提取BIM数据（Levels、Rooms、Walls、Windows、Doors）至SQL数据库；(2)基于LangChain构建多Agent系统，将自然语言查询转换为SQL查询——系统使用SentenceTransformer（MiniLM-L6-v2）将专业文档提示向量化存储，通过最近邻搜索检索相关提示指导Agent生成SQL，并引入反思机制捕获SQL执行错误后重新生成修正查询；(3)使用LoRA技术和4-bit量化对Gemma2-9B模型进行微调，基于300条自定义text-to-SQL数据集训练，通过unsloth框架在Colab L4 GPU上完成微调，集成到多Agent系统中进一步提升查询准确性和效率。",
+  "results": "使用50道不同难度的问题进行测试。Gemma2:9b模型在不同方案下的准确率：零样本38%、零样本+反思46%、提示+反思72%。三个模型在提示+反思条件下的准确率对比：Mistral:7b为54%、Llama3:8b为58%、Gemma2:9b为72%。对Gemma2:9b进行微调后，准确率从72%提升至76%，50个问题的总响应时间从1286秒缩短至415秒。在嵌入模型比较中，MiniLM-L6-v2在相似度得分（0.9739）接近BERT（0.9727）和RoBERTa（0.9956）的情况下，处理时间仅0.0171秒，远快于BERT（0.2525秒）和RoBERTa（0.2711秒）。",
+  "url": "https://doi.org/10.1080/00038628.2025.2538505",
+  "pdfFile": "Liu et al. - 2025 - An integrated method for BIM data retrieval using large language model.pdf",
+  "markdownFile": "Liu et al. - 2025 - An integrated method for BIM data retrieval using large language model.md",
+  "taskEn": "Data retrieval",
+  "inputDataEn": "BIM models + natural language queries"
+}

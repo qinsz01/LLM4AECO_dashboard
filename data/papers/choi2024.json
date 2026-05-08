@@ -1,0 +1,35 @@
+{
+  "id": "choi2024",
+  "citation": "Choi & Yoon/2024",
+  "title": "GPT-based data-driven urban building energy modeling (GPT-UBEM): Concept, methodology, and case studies",
+  "year": 2024,
+  "category": "能耗管理与优化",
+  "task": "能耗预测",
+  "phase": "运维",
+  "inputData": "城市建筑数据（多源数据）",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "GPT-UBEM框架利用GPT-4o通过提示工程实现城市建筑能耗建模，涵盖数据分析、能耗预测、特征工程和能效特征分析，但部分任务仍需专家知识介入",
+  "abstract": "This paper introduces GPT-UBEM, a novel approach that leverages GPT-4o's natural language processing capabilities to perform urban building energy modeling through prompt engineering. Four case studies demonstrate GPT-UBEM's effectiveness in basic data analytics, energy prediction modeling, building feature engineering and optimization, and energy signature analysis, applied to 2,000 buildings in Seoul and 31 buildings in Gangwon-do, South Korea.",
+  "journal": "Energy & Buildings",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Urban building energy modeling (UBEM)",
+    "Urban informatics",
+    "Top-down",
+    "Large language model (LLM)",
+    "GPT",
+    "Technical exploration",
+    "Prompt engineering",
+    "Energy prediction"
+  ],
+  "methodology": "A top-down, data-driven UBEM approach using GPT-4o through prompt engineering, conducting four case studies covering basic analytics, energy prediction with Random Forest/Linear Regression/MLP, heating-cooling area ratio feature engineering and optimization, and energy signature-based retrofit evaluation with both user-guided and reference-based prompts.",
+  "results": "GPT-UBEM achieved energy prediction R2 values of 0.912 (Random Forest) and 0.939 (Linear Regression) for Seoul buildings; feature optimization of the heating and cooling area ratio improved MLP model CVRMSE by 7.92% (median) to 20.05% (mode) compared to pre-optimized features, with the reference-based prompt approach proving more robust than user-guided prompts for energy signature classification.",
+  "url": "https://doi.org/10.1016/j.enbuild.2024.115042",
+  "pdfFile": "Choi and Yoon - 2024 - GPT-based data-driven urban building energy modeling (GPT-UBEM) Concept, methodology, and case stud.pdf",
+  "markdownFile": "Choi and Yoon - 2024 - GPT-based data-driven urban building energy modeling (GPT-UBEM) Concept, methodology, and case stud.md",
+  "taskEn": "Energy consumption prediction",
+  "inputDataEn": "Urban building data (multi-source data)"
+}

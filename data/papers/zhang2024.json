@@ -1,0 +1,35 @@
+{
+  "id": "zhang2024",
+  "citation": "Zhang et al./2024",
+  "title": "Advancing building energy modeling with large language models: Exploration and case studies",
+  "year": 2024,
+  "category": "能耗管理与优化",
+  "task": "能耗模型开发",
+  "phase": "全生命周期",
+  "inputData": "文本/能耗数据",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "contribution": "探索LLM在建筑能源建模中的应用，通过prompt工程、多智能体系统和RAG创建、调试和分析EnergyPlus模型，验证LLM在BEM任务中的有效性",
+  "abstract": "The rapid progression in artificial intelligence has facilitated the emergence of large language models like ChatGPT, offering potential applications extending into specialized engineering modeling, especially physics-based building energy modeling. This paper investigates the innovative integration of large language models with building energy modeling software, focusing specifically on the fusion of ChatGPT with EnergyPlus. A literature review is first conducted to reveal a growing trend of incorporating large language models in engineering modeling, albeit limited research on their application in building energy modeling. We underscore the potential of large language models in addressing building energy modeling challenges and outline potential applications including simulation input generation, simulation output analysis and visualization, conducting error analysis, co-simulation, simulation knowledge extraction and training, and simulation optimization. Three case studies reveal the transformative potential of large language models in automating and optimizing building energy modeling tasks, underscoring the pivotal role of artificial intelligence in advancing sustainable building practices and energy efficiency. The case studies demonstrate that selecting the right large language model techniques is essential to enhance performance and reduce engineering efforts. The findings advocate a multi-disciplinary approach in future artificial intelligence research, with implications extending beyond building energy modeling to other specialized engineering modeling.",
+  "journal": "Energy & Buildings",
+  "llmModels": [
+    "ChatGPT-4 (July 6, 2023 Version)",
+    "GPT-4 Advanced Data Analysis (September 25, 2023 Version)",
+    "GPT-4 (gpt-4-0613)",
+    "ChatGPT (September 25, 2023 Version)"
+  ],
+  "keywords": [
+    "Building energy modeling",
+    "Large language models",
+    "Prompt engineering",
+    "Multi-agent systems",
+    "Self-consistency"
+  ],
+  "methodology": "Three case studies are conducted using prompt engineering for single IDF object generation, multi-agent LLMs coordinated via the AutoGen framework for whole IDF file creation and modification, and RAG for knowledge extraction from BEMcyclopedia, all evaluated against human baselines.",
+  "results": "The multi-agent LLM workflow achieved a 100% success rate across 10 trials for generating error-free IDF files, completing the iUnit model in 6 minutes compared to 2 weeks for a student modeler and 1 day for an experienced modeler. Visualization tasks were reduced from over 15 minutes of manual Python coding to under 1 minute of prompt writing, and the RAG system produced more comprehensive answers than direct ChatGPT or manual Google search.",
+  "pdfFile": "Zhang et al. - 2024 - Advancing building energy modeling with large language models Exploration and case studies.pdf",
+  "markdownFile": "Zhang et al. - 2024 - Advancing building energy modeling with large language models Exploration and case studies.md",
+  "url": "https://doi.org/10.1016/j.enbuild.2024.114788",
+  "taskEn": "Energy model development",
+  "inputDataEn": "Text / energy consumption data"
+}

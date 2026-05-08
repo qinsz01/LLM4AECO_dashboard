@@ -1,0 +1,34 @@
+{
+  "id": "jiang2026",
+  "citation": "Jiang et al. / 2026",
+  "title": "Building regulation question-answering system using retrieval-augmented generation with dual-stage fine-tuned large language model",
+  "year": 2026,
+  "category": "BIM检索与管理",
+  "task": "建筑规范问答",
+  "phase": "规划与设计",
+  "inputData": "规范文档",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "contribution": "提出双阶段RAG系统实现建筑规范问答，提高检索准确性和答案质量",
+  "abstract": "Building regulations are complex and interrelated, causing engineers to face a 'Document Skipping' problem when referring to multiple regulations, which increases information processing costs. Traditional question answering (QA) systems have limitations including insufficient specialized domain knowledge and lack of logical coherence. While combining Large Language Models (LLMs) with Retrieval-Augmented Generation (RAG) can reduce model hallucinations, the final generation process remains a black box lacking interpretability. This paper proposes an improved end-to-end building regulation RAG system combined with a specialized domain LLM trained through supervised fine-tuning capability distillation using the Open-Book Exam (OBE) framework. The system decomposes the retrieval task into multiple stages, with each stage generating results using a domain-specific LLM trained for a specific task within the OBE framework. The output of the previous stage serves as the input and reasoning basis for the subsequent stage, forming a complete process content tracking mechanism. This design provides interpretability and credibility for foundation models in construction engineering. Experimental results show that ROUGE-L reaches 91.05%, a 27.57% improvement over the baseline, and Reasoning EM Accuracy of 98.6%. User evaluations show an overall score of 8.6/10, outperforming both GPT-4o and traditional RAG systems. The system effectively addresses recall difficulties, 'Document Skipping', and noisy document interference, improving the accuracy, logical coherence, and user-friendliness of building regulation QA tasks.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "DeepSeek-V3 (671B, teacher model for data generation)",
+    "Qwen2.5-7B-Instruct (student model, fine-tuned via LoRA)"
+  ],
+  "keywords": [
+    "Large Language Model (LLM)",
+    "Question Answering (QA) System",
+    "Retrieval-Augmented Generation (RAG)",
+    "Low-Rank Adaptation (LoRA)",
+    "Supervised Fine-Tuning (SFT)",
+    "Open-Book Exam (OBE) Framework"
+  ],
+  "methodology": "The paper proposes an SFT-CD-RAG (Supervised Fine-Tuning with Capability Distillation RAG) system built on the OBE (Open-Book Exam) framework. A large teacher model (DeepSeek-V3, 671B) distills capabilities into a smaller student model (Qwen2.5-7B-Instruct) through two-stage LoRA fine-tuning: (1) 1st-LoRA trains the student model to summarize relevant content from original regulation text and filter noise, using Question-Original_Content-Summary triplets (6,565 samples); (2) 2nd-LoRA trains the student model to generate complete answers with logical reasoning from multiple summaries, addressing the 'Document Skipping' problem, using Question-Source-Summary-Answer quadruplets (5,000 samples). The RAG system uses a dual-database retrieval mechanism (document block vector database + question vector database) with BGE-Large-1.5 embeddings and Milvus vector database. Each stage loads corresponding LoRA checkpoints: the first for summarization/noise-filtering, the second for final answer generation with logical reasoning about cross-regulation references.",
+  "results": "For the 1st-LoRA (summarization stage): ROUGE-1 91.47%, ROUGE-2 90.21%, ROUGE-L 89.35% (approximately 22% higher than the base model); content recall improved from 66.42% to 99.25%. For the 2nd-LoRA (answer generation stage): ROUGE-1 94.07%, ROUGE-2 88.78%, ROUGE-L 91.05% (27.57% improvement over baseline); BLEU-4 78.69%, METEOR 90.19%, Reasoning EM Accuracy 98.6% (38.4% improvement over baseline). User evaluation by 10 experts across 100 questions: the SFT-CD-RAG system scored 8.6/10 for answer quality, 8.4/10 for friendliness, and 8.4/10 for overall performance, significantly outperforming GPT-4o (overall 7.6/10), traditional RAG (4.2/10), and Qwen2.5 base model (2.2/10). The system can be deployed on consumer-grade GPUs (NVIDIA RTX 3090) with only a 7B-parameter model.",
+  "url": "https://doi.org/10.1016/j.aei.2025.104089",
+  "pdfFile": "Jiang et al. - 2026 - Building regulation question-answering system using retrieval-augmented generation with dual-stage f.pdf",
+  "markdownFile": "Jiang et al. - 2026 - Building regulation question-answering system using retrieval-augmented generation with dual-stage f.md",
+  "taskEn": "Building regulation Q&A",
+  "inputDataEn": "Regulatory documents"
+}

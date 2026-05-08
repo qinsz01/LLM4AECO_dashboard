@@ -1,0 +1,33 @@
+{
+  "id": "arslan2025",
+  "citation": "Arslan et al./2025",
+  "title": "Monitoring indoor environmental conditions in office buildings using a sustainable Agentic RAG-LLM system",
+  "year": 2025,
+  "category": "环境与碳评估",
+  "task": "热舒适度监测",
+  "phase": "运维",
+  "inputData": "BIM模型+传感器数据+外部数据",
+  "representation": "多模态",
+  "llmMethod": "RAG",
+  "contribution": "提出ThermalComfortBot，首个基于Agentic RAG-LLM的集成信息系统，融合BIM、传感器数据、天气数据和HSE指南等多源异构数据，通过自然语言交互实现建筑热舒适度智能监测，在案例研究中准确率达94%、精确率92%、召回率89%",
+  "abstract": "Indoor Environmental Conditions (IEC) play a crucial role in determining the health, productivity, and overall building performance of employees, as well as their energy consumption. Key parameters, such as temperature and humidity, are not only vital for thermal comfort but also offer opportunities to enhance energy efficiency when effectively monitored and managed. Accurate Thermal Comfort Monitoring (TCM) remains challenging to achieve because it requires the integration of diverse data sources and intelligent analysis, particularly in light of evolving global energy and sustainability standards. Although Building Information Modeling (BIM) is increasingly being adopted to manage complex building data, its integration with real-time sensor inputs remains vastly underutilized. Existing thermal monitoring systems are often development-intensive, require significant domain expertise, lack Natural Language (NL) interaction capabilities, and are not inherently adaptable, necessitating frequent technical upgrades. These limitations give rise to pressing concerns about long-term scalability, usability, and sustainability. To address these limitations, this study introduces ThermalComfortBot, an integrated Information System (IS) powered by Generative Artificial Intelligence (GenAI). ThermalComfortBot utilizes open-source technologies, including Large Language Models (LLMs) and Agentic Retrieval-Augmented Generation (RAG), to enhance thermal comfort and support energy optimization in buildings. The system integrates Building Information Modeling (BIM), sensor data, and external datasets to generate actionable insights, delivered through both textual explanations and graphical visualizations. This system utilizes flexible and adjustable LLMs that are guided by principles of sustainability, thereby making them cost-efficient, scalable, and practical for a diverse range of organizational environments. In a real-world case study, ThermalComfortBot outperforms traditional RAG-LLM, achieving 94% accuracy, 92% precision, and 89% recall, enhancing comfort and efficiency.",
+  "journal": "Energy & Buildings, Vol. 347, 2025, Article 116276",
+  "llmModels": [
+    "LLaMA 3.1",
+    "GPT-4-turbo"
+  ],
+  "url": "https://doi.org/10.1016/j.enbuild.2025.116276",
+  "keywords": [
+    "Thermal Comfort Monitoring (TCM)",
+    "Building Information Modeling (BIM)",
+    "Sensors",
+    "Large Language Models (LLMs)",
+    "Sustainable Building Management"
+  ],
+  "methodology": "ThermalComfortBot采用七阶段系统架构：(1)安装数据处理库（Langchain、Sentence-Transformers、FAISS等）；(2)加载和准备多源异构数据，包括结构化数据（BIM/IFC文件）、半结构化数据（传感器CSV日志）和非结构化数据（天气报告、HSE指南PDF等），使用CharacterTextSplitter进行文本分块；(3)使用Hugging Face嵌入模型（GPU加速）将数据块转化为向量表示；(4)使用FAISS向量数据库存储嵌入索引用于快速相似性搜索；(5)通过Langchain-Ollama部署LLaMA 3.1作为核心LLM；(6)配置Agent和提示逻辑，组织RetrievalQA Chain实现查询路由和上下文精炼；(7)处理用户自然语言查询，Agent自主规划、检索和推理多源数据，生成文本和图形双模态输出。系统采用Agentic RAG架构，超越传统被动信息检索，实现目标导向的自主推理。",
+  "results": "ThermalComfortBot（LLaMA 3.1 + Agentic RAG）在50个查询的评估中达到94%准确率、92%精确率和89%召回率，显著优于使用相同LLaMA 3.1模型的标准RAG-LLM（准确率82%、精确率85%、召回率81%）。Agentic RAG在多步推理、跨数据源比较分析和时空对齐等复杂查询上表现尤为突出，而标准RAG在涉及多源异构数据融合的复合查询中表现不佳。系统能够自动生成时间序列图表、异常检测结果和相关性分析等可视化输出。",
+  "pdfFile": "Arslan et al. - 2025 - Monitoring indoor environmental conditions in office buildings using a sustainable Agentic RAG-LLM s.pdf",
+  "markdownFile": "Arslan et al. - 2025 - Monitoring indoor environmental conditions in office buildings using a sustainable Agentic RAG-LLM s.md",
+  "taskEn": "Thermal comfort monitoring",
+  "inputDataEn": "BIM models + sensor data + external data"
+}

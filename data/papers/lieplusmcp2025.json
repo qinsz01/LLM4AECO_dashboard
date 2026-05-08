@@ -1,0 +1,34 @@
+{
+  "id": "lieplusmcp2025",
+  "citation": "Li et al. / 2025",
+  "title": "EnergyPlus-MCP: A model-context-protocol server for ai-driven building energy modeling",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "建筑性能模拟",
+  "phase": "全生命周期",
+  "inputData": "模拟模型（IDF文件）+气象数据（EPW）+自然语言",
+  "representation": "结构化",
+  "llmMethod": "Agent",
+  "contribution": "提出EnergyPlus-MCP，首个面向EnergyPlus建筑能耗模拟的开源MCP服务器，通过35个专业工具实现LLM与EnergyPlus的自然语言交互，显著降低建筑能耗建模的技术门槛",
+  "abstract": "Traditional building energy modeling with the EnergyPlus building performance simulation engine requires domain expertise, programming skills, and intensive manual efforts limiting its effective adoption. This paper introduces EnergyPlus-MCP, the first open-source Model Context Protocol (MCP) server specifically designed for EnergyPlus simulation workflows, establishing a new foundational infrastructure for AI-driven building energy modeling. The MCP server implements a layered architecture with 35 specialized tools spanning model management, editing and analysis, HVAC and other systems configuration inspection, and simulation execution, enabling Large Language Models to interact with EnergyPlus through conversational interfaces. The server addresses critical workflow barriers by automating model validation, streamlining energy efficiency measures modification, and providing intelligent output management with interactive visualization. Through practical demonstrations using a multi-zone building retrofit analysis, we show how the EnergyPlus-MCP server significantly reduces manual efforts while maintaining full simulation rigor. By providing accessible natural language interfaces to sophisticated building energy analysis, this approach enables scalable deployment of simulation expertise across public and private organizations, educational institutions, and research teams, fundamentally transforming traditional building energy modeling practices.",
+  "journal": "SoftwareX",
+  "llmModels": [
+    "GitHub Copilot",
+    "MCP兼容LLM（模型无关）"
+  ],
+  "keywords": [
+    "Model context protocol",
+    "EnergyPlus",
+    "MCP server",
+    "AI",
+    "Building simulation",
+    "LLM"
+  ],
+  "methodology": "基于Python 3.12开发，采用FastMCP框架实现JSON-RPC协议通信，通过eppy库进行EnergyPlus IDF文件的对象化操作与模拟执行。系统采用五层分层架构：MCP协议层（处理标准化通信）、编排层（请求转换与错误处理）、工具层（35个专业工具覆盖五大功能域：服务器管理、模型配置与加载、模型检查、模型修改、模拟与结果）、EnergyPlus集成层（模拟引擎交互与文件操作）、容器化部署层（Docker集成EnergyPlus 25.1.0）。利用NetworkX实现HVAC系统图论拓扑分析，Graphviz生成交互式系统图，pandas处理模拟输出数据，Plotly生成交互式HTML可视化。通过多区域建筑节能改造分析案例演示完整工作流：场景设置、模型检查与分析、能效措施实施、对比模拟与结果可视化。",
+  "results": "通过五区域空调冷却建筑（5ZoneAirCooled.idf）的节能改造演示，验证了EnergyPlus-MCP能够通过自然语言对话完成完整的建筑能耗模拟工作流，包括：自动发现并选择示例模型与气象文件、提取建筑特性和HVAC系统拓扑并生成可视化图表、实施照明效率提升和外窗贴膜等节能措施、执行基线与改造方案的对比模拟并生成交互式可视化结果。系统成功将传统需要专业编程技能的EnergyPlus操作转化为自然语言交互，在不牺牲模拟严谨性的前提下显著降低了手动操作工作量。工具集覆盖了从模型验证到节能改造再到模拟管理的完整工作流。",
+  "markdownFile": "Li et al. - 2025 - EnergyPlus-MCP A model-context-protocol server for ai-driven building energy modeling",
+  "url": "https://doi.org/10.1016/j.softx.2025.102367",
+  "taskEn": "Building performance simulation",
+  "inputDataEn": "Simulation models (IDF files) + weather data (EPW) + natural language",
+  "pdfFile": "Li et al. - 2025 - EnergyPlus-MCP A model-context-protocol server for ai-driven building energy modeling"
+}

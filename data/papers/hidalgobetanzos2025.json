@@ -1,0 +1,34 @@
+{
+  "id": "hidalgobetanzos2025",
+  "citation": "Hidalgo-Betanzos et al., 2025",
+  "title": "Can ChatGPT AI Replace or Contribute to Experts' Diagnosis for Renovation Measures Identification?",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "翻新措施诊断",
+  "phase": "翻新与拆除",
+  "inputData": "建筑信息+文本（现状描述）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "评估ChatGPT在建筑翻新措施诊断中的能力，与专家诊断对比，发现ChatGPT可提供有价值的初步诊断建议，但不能完全替代专家判断",
+  "abstract": "Building energy renovations demand expertise from professionals to guide processes, including diagnostics, project planning, interventions, and maintenance. The emergence of open-access AI, like ChatGPT in November 2022, offers new possibilities for improving these processes by assisting or potentially replacing human experts. This study explores the effectiveness of ChatGPT in diagnosing energy renovation measures. Initial assessments involve basic queries to the AI, followed by the inclusion of additional data and secondary questions to gauge its full diagnostic potential. An existing building case from the literature is given to the AI to define the best energy renovation measures. Expert evaluations and comparisons with research-backed solutions assess the AI's performance using different degrees of questioning details over 60 repetitions. The results indicate that ChatGPT can provide valuable insights and generate comprehensive lists of feasible measures and preliminary cost calculations and payback, but, in general, it lacks depth and quality without specialized input and preparation. A significant quality improvement was found between the tests with 2023 and 2024 AI versions. Open-access AI proves capable of enhancing renovation diagnostics but remains a complement rather than a replacement for building renovation expert judgment.",
+  "journal": "Buildings (MDPI)",
+  "llmModels": [
+    "ChatGPT (GPT-3.5, free version, July 2023)",
+    "ChatGPT (free version, December 2024)",
+    "Google Gemini 1.5 Flash"
+  ],
+  "keywords": [
+    "artificial intelligence",
+    "building energy renovation",
+    "decarbonization",
+    "ChatGPT",
+    "renovation measures"
+  ],
+  "methodology": "Two-stage experiment using free-access ChatGPT to diagnose energy renovation measures for a reference building (a wooden terraced house in Oslo built in 1997, from published literature). Each stage consisted of 10 iterations x 3 questions (Q1: basic building description without technical details; Q2: adds building envelope U-values and Norwegian TEK 87 regulations; Q3: requests LCC methodology application). Stage 1 used ChatGPT July 2023 version, Stage 2 used the December 2024 version. Each of the 60 responses was evaluated using five parameters: number of ambition levels, number of renovation measures, number and type of references, types of assessment (qualitative/quantitative/mixed), and quality of answer (rated Low to High). A supplementary test with Google Gemini 1.5 Flash was also conducted.",
+  "results": "Stage 1 (2023 version): Q1 averaged 3.5 ambition levels, 9.7 renovation measures, with 60% Low-Medium and 30% Medium quality. Q2 improved to 80% Medium quality. Q3 showed 50% Low-Medium and 30% Medium-High quality. Most responses were qualitative (90%). Stage 2 (2024 version) showed significant improvement: Q1 averaged 10.5 measures with partly quantitative assessments; Q2 averaged 12.2 measures with 80% partly quantitative; Q3 averaged 11.4 measures with 30% Medium-High quality including LCC calculations and payback estimations. Overall, ChatGPT cannot replace building renovation experts but provides valuable preliminary insights, especially with more detailed prompts. The 2024 version demonstrated substantial quality gains over the 2023 version.",
+  "pdfFile": "Hidalgo-Betanzos et al. - 2025 - Can ChatGPT AI Replace or Contribute to Experts' Diagnosis for Renovation Measures Identification.pdf",
+  "markdownFile": "Hidalgo-Betanzos et al. - 2025 - Can ChatGPT AI Replace or Contribute to Experts’ Diagnosis for Renovation Measures Identification.md",
+  "url": "https://doi.org/10.3390/buildings15030421",
+  "taskEn": "Renovation measure diagnosis",
+  "inputDataEn": "Building information + text (current condition descriptions)"
+}

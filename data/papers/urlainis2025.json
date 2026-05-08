@@ -1,0 +1,37 @@
+{
+  "id": "urlainis2025",
+  "citation": "Urlainis et al./2025",
+  "title": "Harnessing Large Language Models for Digital Building Logbook Implementation",
+  "year": 2025,
+  "category": "BIM检索与管理",
+  "task": "信息管理/数据标准化",
+  "phase": "全生命周期",
+  "inputData": "建筑检查报告（非结构化文本）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "LLM能高效处理非标准化建筑检查报告，实现后标准化，比人工审查快100倍，为数字建筑日志大规模知识库建设提供可行方案",
+  "abstract": "Digital Building Logbooks (DBLs) have been proposed to preserve lifecycle data across the design, construction, operation, and renovation phases of buildings. Yet, implementation has been hindered by the absence of standardized data models across jurisdictions and stakeholder practices. This paper argues that Large Language Models (LLMs) offer a solution that reduces reliance on rigid standardization. To test this approach, we first draw on parallels from the healthcare sector, where LLMs have extracted structured information from unstructured electronic health records. Second, we present an LLM-based workflow for processing unstructured building inspection reports. The workflow encompassed three tasks: (1) qualitative summary, (2) quantitative summary, and (3) risk level assessment. Sixteen inspection reports were processed through GPT-4o across 320 runs via a Python script. Results showed perfect consistency for categorical fields and Boolean indicators, minimal variability for ordinal severity ratings (sigma <= 0.6), and stable risk assessments with 87.5% of reports showing low standard deviations. Each report was processed in under 10 s, representing up to a 100-fold speed improvement over manual review. These findings demonstrate the feasibility of post hoc standardization, positioning DBLs to evolve into large-scale knowledge bases that can substantially advance research on the built environment.",
+  "journal": "Buildings",
+  "llmModels": [
+    "GPT-4o",
+    "o3",
+    "Gemini 2.5 Pro",
+    "Grok 4",
+    "DeepSeek-R1",
+    "Opus 4.1"
+  ],
+  "keywords": [
+    "digital building logbook (DBLs)",
+    "large language models (LLMs)",
+    "data standardization in construction",
+    "building lifecycle management",
+    "building passports"
+  ],
+  "methodology": "A proof-of-concept three-stage LLM pipeline implemented in Python 3.10 using the GPT-4o API. The pipeline processes unstructured building inspection reports through: (1) Descriptive Summary Generation (temperature=0.5) extracting key information into Building Overview, Observations, Structural Analysis, and Recommendations; (2) Structured Attribute Extraction (temperature=0.0) converting qualitative descriptions into quantitative database-ready fields including building characteristics and binary presence/severity ratings (1-5 scale) for corrosion, cracking, and moisture; (3) Risk Level Assessment (temperature=0.3) synthesizing multi-stage findings into a 1-10 risk score. The evaluation used 16 inspection reports (8 original + 8 manually reworded variants), each processed 20 times for a total of 320 runs, assessing consistency across repeated runs and between paired original-rewritten reports. Six additional LLMs (GPT-4o, o3, Gemini 2.5 Pro, Grok 4, DeepSeek-R1, Opus 4.1) were used to evaluate summary stability.",
+  "results": "Categorical fields (Building Use, Foundation Type, Soil Type) and Boolean indicators (Corrosion, Cracking, Moisture presence) achieved perfect consistency across all 20 runs per report. Ordinal severity ratings showed minimal variability (sigma <= 0.6), typically confined to adjacent values. Risk assessments exhibited strong stability: 14 of 16 reports had standard deviations below 0.6, and over 90% of scores deviated by no more than one point between runs. Paired analysis of real and reworded reports revealed exact match rates above 90% for most severity fields and a mean absolute error below 0.5 for risk scores. Computationally, the pipeline processed each report in under 10 seconds on average (overall average 8.7s), representing more than a 100-fold speed improvement over manual review (15-30 minutes), with low variance in token usage and runtime.",
+  "pdfFile": "Urlainis et al. - 2025 - Harnessing Large Language Models for Digital Building Logbook Implementation.pdf",
+  "markdownFile": "Urlainis et al. - 2025 - Harnessing Large Language Models for Digital Building Logbook Implementation.md",
+  "url": "https://doi.org/10.3390/buildings15183399",
+  "taskEn": "Information management / data standardization",
+  "inputDataEn": "Building inspection reports (unstructured text)"
+}

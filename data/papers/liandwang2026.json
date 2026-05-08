@@ -1,0 +1,35 @@
+{
+  "id": "liandwang2026",
+  "citation": "Li and Wang / 2026",
+  "title": "BuildingGPT: Query building semantic data using large language models and vector-graph retrieval-augmented generation",
+  "year": 2026,
+  "category": "BIM检索与管理",
+  "task": "语义数据查询（NL2SPARQL）",
+  "phase": "运维",
+  "inputData": "Brick Schema语义模型（TTL格式）+自然语言问题",
+  "representation": "图结构",
+  "llmMethod": "RAG",
+  "abstract": "Semantic web technologies offer a promising avenue for integrating heterogeneous building data across the entire Architecture, Engineering, Construction, and Operation (AECO) lifecycle. Yet querying such ontology-based data remains challenging, as it typically demands expertise in formal query languages like SPARQL. To address this, we present BuildingGPT, a novel framework that harnesses Large Language Models (LLMs) and a vector-graph retrieval-augmented generation (VG-RAG) pipeline. This approach empowers users to intuitively query building data grounded in semantic ontologies (e.g., the Brick Schema) using natural language. Evaluations on synthetic question types derived from 45 Brick Schema-based real building models—covering four complexities and six question types (18,555 samples)—demonstrate that VG-RAG outperforms baselines by 20–40%, surpassing 90% accuracy on four question types. By seamlessly integrating vector-based and graph-based retrieval to produce SPARQL queries, BuildingGPT simplifies data access for non-experts and enhances both reliability and responsiveness for complex, domain-specific inquiries. As a scalable, training-free solution compatible with diverse building ontologies, BuildingGPT significantly improves the accessibility and interoperability of semantic building data.",
+  "journal": "Building and Environment",
+  "llmModels": [
+    "GPT-4o",
+    "LLaMA 3.1-70B",
+    "LLaMA 3.1-8B"
+  ],
+  "keywords": [
+    "Large language models",
+    "Brick schema",
+    "Ontology",
+    "Retrieval-Augmented generation",
+    "Knowledge graphs",
+    "Semantic model"
+  ],
+  "methodology": "本研究提出BuildingGPT框架，核心为向量-图检索增强生成（VG-RAG）方法，包含四个步骤：（1）图数据初始化——将Brick Schema模型（TTL格式）同时加载到向量数据库（Chroma，使用HNSW索引）和图数据库（rdflib），分别用Sentence-BERT模型'multi-qa-mpnet-base-dot-v1'和'all-mpnet-base-v2'对实体/本体类和关系进行嵌入；（2）相似性搜索——基于HNSW算法从向量数据库中检索与输入问题最相关的Top-K（K=5）实体、本体类和关系，同时从图数据库获取完整的本体前缀信息；（3）提示词增强——将检索到的实体、关系、本体类和前缀信息注入预设提示模板，引导LLM生成结构正确的SPARQL查询；（4）自然语言响应生成——将SPARQL查询结果与原始问题结合，通过LLM生成用户可理解的回答。评估方面，基于45个真实Brick模型构建合成基准数据集，覆盖6种问题类型（本体查询、实例计数、实体类型查询、单跳关系、双跳关系、关系+类型约束）和4个复杂度等级，共18,555个有效样本，以Exact Match Accuracy（Hits@1）为主要指标。",
+  "results": "VG-RAG在三种LLM上均显著优于无RAG和LangChain-RAG基线：GPT-4o+VG-RAG平均准确率77.57%（比无RAG提升21.99%），LLaMA 3.1-70B+VG-RAG达74.32%（提升24.57%），LLaMA 3.1-8B+VG-RAG达57.21%（提升39.36%）。在中等复杂度问题上，GPT-4o+VG-RAG在Question Type 3和4分别达到91.81%和89.43%的准确率，超过90%。在高复杂度问题上，GPT-4o+VG-RAG在Question Type 5和6分别达到54.13%和30.43%，远高于LangChain-RAG的40.64%和7.50%。案例研究（bldg4.ttl HVAC系统）表明VG-RAG在5个实际问题中全部答对，而LangChain-RAG仅答对1个。LLaMA 3.1-70B（70B参数）在VG-RAG加持下仅比GPT-4o低约3%，展示了开源模型的潜力。",
+  "contribution": "提出BuildingGPT框架和VG-RAG方法，实现自然语言查询Brick Schema建筑语义数据，无需训练即可将准确率提升20-40%，最高达77.57%，显著降低AECO领域语义数据访问门槛",
+  "markdownFile": "Li and Wang - 2026 - BuildingGPT Query building semantic data using large language models and vector-graph retrieval-aug.md",
+  "pdfFile": "Li and Wang - 2026 - BuildingGPT Query building semantic data using large language models and vector-graph retrieval-aug.pdf",
+  "url": "https://doi.org/10.1016/j.buildenv.2025.113855",
+  "taskEn": "Semantic data query (NL2SPARQL)",
+  "inputDataEn": "Brick Schema semantic models (TTL format) + natural language questions"
+}

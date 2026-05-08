@@ -1,0 +1,38 @@
+{
+  "id": "du2025",
+  "citation": "Du, C. etal / 2025",
+  "title": "Predictive modeling BIM command recommendation based on large-scale usage logs",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "BIM命令推荐",
+  "phase": "规划与设计",
+  "inputData": "BIM软件使用日志（Vectorworks大规模交互日志）",
+  "representation": "其他",
+  "llmMethod": "微调",
+  "contribution": "提出端到端BIM命令推荐框架，基于大规模（320亿行）真实BIM日志数据，采用SOTA Transformer架构（BERT/Llama3.2/Mixtral/T5）实现实时命令推荐，Recall@10达约84%；提出多阶段日志过滤与增强方法（含LLM+RAG数据增强、BPE工作流生成），无需定制日志器即可直接处理原始日志；开发软件原型集成BIM建模流程实现实时推荐",
+  "abstract": "The adoption of Building Information Modeling (BIM) and model-based design within the Architecture, Engineering, and Construction (AEC) industry has been hindered by the perception that using BIM authoring tools demands more effort than conventional 2D drafting. To enhance design efficiency, this paper proposes a BIM command recommendation framework that predicts the optimal next actions in real-time based on users' historical interactions. We propose a comprehensive filtering and enhancement method for large-scale raw BIM log data and introduce a novel command recommendation model. Our model builds upon the state-of-the-art Transformer backbones originally developed for large language models (LLMs), incorporating a custom feature fusion module, dedicated loss function, and targeted learning strategy. In a case study, the proposed method is applied to over 32 billion rows of real-world log data collected globally from the BIM authoring software Vectorworks. Experimental results demonstrate that our method can learn universal and generalizable modeling patterns from anonymous user interaction sequences across different countries, disciplines, and projects. When generating recommendations for the next command, our approach achieves a Recall@10 of approximately 84%.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "BERT (encoder-only)",
+    "Llama3.2 (decoder-only)",
+    "Mixtral-MoE (decoder-only with MoE)",
+    "T5 (encoder-decoder)",
+    "GPT-4o-mini (RAG数据增强)",
+    "text-embedding-3-large (OpenAI嵌入模型)"
+  ],
+  "keywords": [
+    "Building Information Modeling (BIM)",
+    "Sequential recommendation",
+    "BIM logs processing",
+    "Transformer",
+    "Large language model (LLM)",
+    "Machine learning"
+  ],
+  "methodology": "提出端到端BIM命令推荐框架，包含四个核心模块：(1) 数据过滤与增强：多阶段处理大规模原始BIM日志，包括实际建模流跟踪（过滤无关条目、处理Undo/Redo）、多语言对齐（翻译API+文本嵌入+DBSCAN聚类统一命令表示）、冗余命令识别与移除（关联规则挖掘ARM建立高低层命令映射）、命令增强与工作流生成（RAG+GPT-4o-mini从软件文档生成命令描述/类型/目标，BPE算法生成多命令工作流）；(2) 模型架构：基于Transformer4Rec框架，采用注意力机制融合命令级多源特征（ID、类型、目标、连续特征、语义嵌入），系统比较四种Transformer骨干（BERT、Llama3.2、Mixtral-MoE、T5），采用多任务学习（命令ID+类型+目标三任务）和Focal Loss应对类别不平衡；(3) 实验设置：使用Vectorworks 6个月全球匿名用户日志（324亿行），处理后得到3.75亿行、4939种命令（含工作流）、685万会话，序列长度5-110，85/15训练验证划分；(4) 部署集成：开发Vue.js+FastAPI应用实时监控Vectorworks日志，Nvidia Triton推理服务器部署模型，GRPC/HTTP通信实现实时推荐。",
+  "results": "Mixtral-MoE骨干取得最佳性能：Recall@3=61.25%，Recall@5=71.71%，Recall@10=83.31%，NDCG@10=59.71%。Llama3.2骨干紧随其后：Recall@10=83.23%。所有提出模型均显著优于基线（仅命令ID输入的Transformer），统计显著性检验p值<0.0001。消融实验表明注意力融合、多任务学习和Focal Loss各模块的累积效果有效。BERT-base（113M参数）进一步扩展到12层后Recall@10达83.66%，但BERT-large（335M）出现过拟合。注意力权重可视化显示特征融合模块能学习不同命令的独特特征交互模式，且不同Transformer骨干关注的特征侧重不同（BERT侧重语义描述，Mixtral侧重ID和类型）。",
+  "markdownFile": "Du, C. etal - 2025 - Predictive modeling BIM command recommendation based on large-scale usage logs.md",
+  "pdfFile": "Du, C. etal - 2025 - Predictive modeling BIM command recommendation based on large-scale usage logs.pdf",
+  "url": "https://doi.org/10.1016/j.aei.2025.103574",
+  "taskEn": "BIM command recommendation",
+  "inputDataEn": "BIM software usage logs (large-scale Vectorworks interaction logs)"
+}

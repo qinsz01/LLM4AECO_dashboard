@@ -1,0 +1,35 @@
+{
+  "id": "xiao2024",
+  "citation": "Xiao and Xu/2024",
+  "title": "Exploring automated energy optimization with unstructured building data: A multi-agent based framework leveraging large language models",
+  "year": 2024,
+  "category": "能耗管理与优化",
+  "task": "能耗管理/能效诊断",
+  "phase": "运维",
+  "inputData": "混合数据（非结构化建筑数据）",
+  "representation": "文本",
+  "llmMethod": "Agent",
+  "contribution": "基于LLM的多智能体框架能以低成本（$5.15）自动处理非结构化建筑数据，完成建筑信息处理、性能诊断和改造推荐三个阶段",
+  "pdfFile": "Xiao and Xu - 2024 - Exploring automated energy optimization with unstructured building data A multi-agent based framewo.pdf",
+  "markdownFile": "Xiao and Xu - 2024 - Exploring automated energy optimization with unstructured building data A multi-agent based framewo.md",
+  "abstract": "This paper proposes an LLM-based multi-agent framework for automating energy optimization tasks using unstructured building data from energy audit reports. The framework consists of three stages—building information processing, performance diagnosis, and retrofit recommendation—where LLMs injected with domain expertise via RAG act as agents with planner, researcher, and advisor roles. Case studies demonstrate the framework delivers reliable results at a cost of only $5.15, showing robustness across diverse inputs and heterogeneous tasks.",
+  "journal": "Energy & Buildings",
+  "llmModels": [
+    "GPT 4-Turbo",
+    "GPT 3.5-Turbo",
+    "ChatGLM-std",
+    "text-embedding-ada-002"
+  ],
+  "keywords": [
+    "automated energy optimization",
+    "unstructured data",
+    "generative artificial intelligence",
+    "energy audit",
+    "energy efficiency diagnosis"
+  ],
+  "methodology": "A multi-agent framework using RAG-based knowledge injection where LLMs act as cognitive agents with planner, researcher, and advisor roles to process unstructured energy audit reports through building information extraction, EPI-based performance diagnosis, and knowledge-driven retrofit recommendation stages.",
+  "results": "The framework achieved 0.94 average precision and 0.96 average recall in building information extraction, a 0.93 average performance diagnosis score, and up to 0.82 retrofit recommendation coverage at a total cost of $5.15 per case, demonstrating robustness across four diverse building audit reports.",
+  "url": "https://doi.org/10.1016/j.enbuild.2024.114691",
+  "taskEn": "Energy management / energy efficiency diagnosis",
+  "inputDataEn": "Mixed data (unstructured building data)"
+}

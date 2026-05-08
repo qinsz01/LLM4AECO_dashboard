@@ -1,0 +1,41 @@
+{
+  "id": "shu2025",
+  "citation": "Shu et al./2025",
+  "title": "Large Language Models for Building Energy Retrofit Decision-Making: Technical and Sociotechnical Evaluations",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "能耗改造决策",
+  "phase": "翻新与拆除",
+  "inputData": "住宅建筑参数+能耗模拟数据+改造成本数据",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "LLM在建筑能耗改造决策中技术任务表现优异（Top-5准确率92.8%），但在社会技术任务上存在局限",
+  "pdfFile": "Shu et al. - 2025 - Large Language Models for Building Energy Retrofit Decision-Making Technical and Sociotechnical Eva.pdf",
+  "markdownFile": "Shu et al. - 2025 - Large Language Models for Building Energy Retrofit Decision-Making Technical and Sociotechnical Eva.md",
+  "abstract": "This study evaluates six leading LLMs on building energy retrofit decision-making across two objectives: maximizing CO2 reduction (a technical task) and minimizing payback period (a sociotechnical task). Using 400 residential buildings from the NREL ResStock dataset, the evaluation assesses accuracy, consistency, sensitivity, and reasoning quality. Results show LLMs perform well on the technical task (Top-5 accuracy up to 92.8%) but struggle with sociotechnical trade-offs (Top-5 accuracy up to 52.5%), suggesting they are promising as technical advisory tools but not yet reliable for standalone economic decision-making.",
+  "journal": "Buildings (MDPI)",
+  "llmModels": [
+    "ChatGPT o3",
+    "DeepSeek R1",
+    "Grok 3",
+    "Gemini 2.0",
+    "Llama 3.2",
+    "Claude 3.7"
+  ],
+  "keywords": [
+    "smart and connected communities",
+    "smart buildings",
+    "smart construction",
+    "energy efficiency",
+    "artificial intelligence",
+    "generative AI",
+    "LLM",
+    "ChatGPT",
+    "DeepSeek"
+  ],
+  "methodology": "Six LLMs were evaluated using standardized prompts containing 28 household parameters from 400 ResStock residential buildings, with EnergyPlus simulation baselines for 16 retrofit packages, assessed across accuracy (Top-k), consistency (Fleiss' and Cohen's Kappa), sensitivity (random forest feature importance), and reasoning quality.",
+  "results": "For CO2 reduction, top LLMs achieve Top-1 accuracy up to 54.5% and Top-5 accuracy up to 92.8%; for payback period minimization, Top-1 accuracy peaks at 14.3% and Top-5 at 52.5%. Models correctly prioritize location and architectural features but exhibit oversimplified reasoning and low inter-model consistency.",
+  "url": "https://doi.org/10.3390/buildings15224081",
+  "taskEn": "Energy retrofit decision-making",
+  "inputDataEn": "Residential building parameters + energy simulation data + retrofit cost data"
+}

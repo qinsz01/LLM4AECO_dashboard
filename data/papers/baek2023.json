@@ -1,0 +1,33 @@
+{
+  "id": "baek2023",
+  "citation": "Baek et al./2023",
+  "title": "Automated Detection of Social Conflict Drivers in Civil Infrastructure Projects Using Natural Language Processing",
+  "year": 2023,
+  "category": "其他",
+  "task": "冲突管理",
+  "phase": "施工",
+  "inputData": "新闻报道",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "利用ChatGPT自动识别土木工程项目中的社会冲突驱动因素，通过关键词提取和分类实现数据驱动的冲突管理",
+  "pdfFile": "Baek et al. - 2023 - Automated Detection of Social Conflict Drivers in Civil Infrastructure Projects Using Natural Langua.pdf",
+  "markdownFile": "Baek et al. - 2023 - Automated Detection of Social Conflict Drivers in Civil Infrastructure Projects Using Natural Langua.md",
+  "abstract": "Early detection and mitigation of social conflict in civil infrastructure projects is essential due to its significant impact on project performance and social governance. Nevertheless, there is no scientific system for monitoring conflict drivers in a timely manner in practice. Furthermore, previous studies of social conflict in the civil engineering and management domains have relied on manual literature reviews and case studies. Although these qualitative approaches have provided context-specific insights, they are limited in their generalizability and broad perspectives. Against this backdrop, this study presents an automated process for detecting conflict drivers from news articles using ChatGPT. The authors collected news articles related to civil infrastructure projects implemented in the Republic of Korea using web crawling. Then, ChatGPT was used to extract conflict-related keyphrases from the article collections and classify the keyphrases into predefined conflict drivers. The result showed a notable performance with a micro average F1-score of 85.7%. Moreover, the authors confirmed the validity of the keyphrase extraction and classification results through two illustrative case studies. The proposed process and methods contribute to facilitating data-driven conflict management. Although this study focused on conflict drivers of public infrastructure projects, other types of information extraction tasks can benefit from the presented framework.",
+  "journal": "Applied Sciences",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "civil infrastructure project",
+    "conflict driver",
+    "keyphrase extraction",
+    "keyphrase classification",
+    "natural language processing",
+    "ChatGPT"
+  ],
+  "methodology": "本研究提出了一个基于ChatGPT的自动化冲突驱动因素检测流程。首先，通过自主开发的网络爬虫从韩国门户网站Naver收集与土木基础设施项目相关的新闻文章，共收集了5个代表性基础设施项目的50,801篇新闻报道（2001-2022年）。然后利用ChatGPT进行两个阶段的NLP任务：（1）关键词提取（KPE）：使用系统提示让ChatGPT判断文章是否与社会冲突相关，若相关则提取最多5个冲突相关关键词；（2）关键词分类（KPC）：将提取的关键词分类到预定义的18个冲突驱动因素和3个其他因素中。研究基于文献综述确定了18个冲突驱动因素类别，并构建了2000个人工标注的关键词作为金标准数据集。ChatGPT API使用温度参数设为0以确保结果一致性。",
+  "results": "关键词分类（KPC）性能评估显示：微平均F1值为85.7%，宏平均F1值为83.6%，加权平均F1值为84.7%。在18个冲突驱动因素中，15个的召回率超过90%，生态问题（D-03, F1=94.0%）、反对运动与回应（D-07, F1=92.3%）、感知与情感问题（D-08, F1=92.5%）、专业调查问题（D-09, F1=94.9%）、项目组织问题（D-11, F1=92.5%）和公私合作问题（D-12, F1=100.0%）表现优异。赔偿问题（D-02, F1=69.9%）、项目目标问题（D-10, F1=77.2%）和技术问题（D-17, F1=65.6%）的F1值低于80%。两个案例研究（天城山隧道和加德岛新机场）验证了关键词提取结果与实际冲突情况高度吻合。与建筑领域其他文本分类模型相比，该方法在无需额外训练的情况下取得了具有竞争力的性能。",
+  "url": "https://doi.org/10.3390/app132011171",
+  "taskEn": "Conflict management",
+  "inputDataEn": "News articles"
+}

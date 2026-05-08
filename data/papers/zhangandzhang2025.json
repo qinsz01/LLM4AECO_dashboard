@@ -1,0 +1,32 @@
+{
+  "id": "zhangandzhang2025",
+  "citation": "Zhang and Zhang / 2025",
+  "title": "Few-shot learning with large foundation models for automated segmentation and accessibility analysis in architectural floor plans",
+  "year": 2025,
+  "category": "规范与合规检查",
+  "task": "建筑平面图语义分割与无障碍分析",
+  "phase": "规划与设计",
+  "inputData": "2D栅格建筑平面图",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "提出GMFS方法，整合SAM与GPT-4实现仅需5个参考样本即可对2D栅格建筑平面图进行多目标（房间和门）语义分割与分类，并基于分割结果自动计算无障碍通行路径和轮椅净空空间，填补了从栅格格式平面图提取无障碍特征的研究空白",
+  "abstract": "This paper presents a novel approach for extracting accessibility features from 2D raster floor plans by integrating few-shot learning techniques with the Segment Anything Model (SAM) and GPT-4. The proposed method addresses the limitations of existing deep learning-based floor plan analysis, which often require extensive annotated datasets and struggle with the variability of raster floor plans. The approach, GPT-integrated Multi-object Few-shot SAM (GMFS), leverages similarity maps and cluster-based point sampling to generate accurate visual prompts for SAM, enabling the segmentation of rooms and doors using only five reference samples. The segmented masks are then classified using GPT-4, enhancing the semantic richness of the floor plan analysis. Validation using the CubiCasa and Rent3D datasets demonstrated impressive performance in segmentation and classification. A case study showcased the practical application in calculating accessible means of egress and wheelchair clear space, critical features for accessibility compliance.",
+  "journal": "Journal of Infrastructure Intelligence and Resilience",
+  "llmModels": [
+    "SAM (Segment Anything Model)",
+    "GPT-4"
+  ],
+  "keywords": [
+    "Large foundation models",
+    "Accessible buildings",
+    "Automatic floor plan analysis",
+    "Semantic segmentation"
+  ],
+  "methodology": "提出GPT-integrated Multi-object Few-shot SAM (GMFS)方法，包含五个步骤：(1)相似度图生成与尺度参数训练——计算测试平面图与5个参考样本之间的余弦相似度图，识别目标区域，并微调SAM的尺度参数；(2)基于聚类的点采样创建视觉提示——对相似度图进行阈值过滤（阈值0.9）后使用k-means聚类，在每个聚类中采样最高相似度点作为SAM的视觉提示；(3)迭代SAM掩膜预测——将视觉提示和尺度参数输入SAM，迭代预测并精炼房间和门的分割掩膜，计算掩膜质量分数；(4)掩膜后处理——通过非极大值抑制、小组件去除、间隙填充和基于长宽比的门掩膜过滤来精炼分割结果；(5)GPT-4对象分类——利用GPT-4的多模态理解能力，将分割掩膜分类为公共/私有空间和入口/室内门。基于分割和分类结果，结合A*算法计算无障碍疏散路径，通过向量化的墙体轮廓测量轮椅净空空间。",
+  "results": "在CubiCasa 5K数据集上，GMFS（5个参考样本+后处理）的房间分割F1值为0.69（精度0.70，召回0.68），门分割F1值为0.70（精度0.67，召回0.72），相比DeepLabv3+基线在F1上平均提升7.3倍。在Rent3D数据集上，房间分割F1值为0.62，门分割F1值为0.58。GPT-4分类任务中，房间分类平均F1为0.865，门分类平均F1为0.86。案例研究成功计算了8个私有空间的无障碍疏散路径和5个公共空间的轮椅净空宽度（1.18m-2.36m），均满足ADA标准要求的0.76m最小宽度。方法对参考样本选择具有鲁棒性，不同参考样本集的标准偏差均在0.04以内。",
+  "pdfFile": "Zhang and Zhang - 2025 - Few-shot learning with large foundation models for automated segmentation and accessibility analysis.pdf",
+  "markdownFile": "Zhang and Zhang - 2025 - Few-shot learning with large foundation models for automated segmentation and accessibility analysis.md",
+  "url": "https://doi.org/10.1016/j.iintel.2024.100137",
+  "taskEn": "Architectural floor plan semantic segmentation and accessibility analysis",
+  "inputDataEn": "2D raster architectural floor plans"
+}

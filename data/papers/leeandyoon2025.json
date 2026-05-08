@@ -1,0 +1,36 @@
+{
+  "id": "leeandyoon2025",
+  "citation": "Lee and Yoon / 2025",
+  "title": "Metadata schema for virtual building models in digital twins: VB schema implemented in GPT-based applications",
+  "year": 2025,
+  "category": "其他",
+  "task": "基于智能数字孪生的运维服务（虚拟建模与校准、虚拟传感、传感器校准、本体解读、知识提取）",
+  "phase": "运维",
+  "inputData": "传感器数据 + 本体（RDF/Brick Schema） + 运行数据",
+  "representation": "图结构",
+  "llmMethod": "Prompt",
+  "abstract": "A virtual building model (VBM) is a virtual entity that represents the physical behavior of a target building mathematically within a digital twin environment. This study proposes a novel metadata schema, termed the virtual building model metadata schema (VB schema), to represent and manage VBMs in DT-built environments. The VB schema is established according to the mathematical and semantic ontology of the in-situ modeling and calibration approach for constructing and correcting virtual models during building operations, and it is linked to physical entities, data, and applications within DTs. The VB schema was utilized for implementing GPT-based DT applications, which highlights its benefits in enhancing ontology comprehension of DTs in the context of VBMs, improving autonomous problem-solving capabilities in real building systems, and providing better interpretation of application results compared to cases where only the Brick schema was used.",
+  "journal": "Energy & Buildings",
+  "llmModels": [
+    "GPT"
+  ],
+  "keywords": [
+    "GPT",
+    "Virtual models",
+    "Virtual buildings",
+    "Ontology",
+    "HVAC",
+    "Digital twins",
+    "Model metadata",
+    "Operation and maintenance (O&M)",
+    "Built environments"
+  ],
+  "methodology": "提出了虚拟建筑模型元数据模式（VB schema），基于虚拟原位建模（VIM）和虚拟原位校准（VIC）的数学与语义本体，定义了数据类别（现场数据、场外数据、虚拟数据）和虚拟模型类别（行为模型、修正模型、距离模型），以及模型-模型、模型-数据、模型-物理实体、模型-应用四类关系。VB schema扩展并集成到现有的Brick schema中。通过区域供热系统中的虚拟供压力模型作为案例进行验证。在应用层面，构建了集成VB schema与GPT的系统架构，通过专家侧Prompt工程配置工具调用（VIM、VIC、虚拟传感、传感器校准、本体解读、图表分析），实现三个案例对比评估：（1）本体驱动的虚拟模型解读；（2）本体驱动的知识提取（换热器清洗后传感器性能变化）；（3）基于本体的传感器再校准与结果分析。",
+  "results": "虚拟供压力行为模型通过VIM初始构建后CVRMSE为4.33%，经VIC校准后降至0.27%。GPT应用对比评估显示：（1）仅使用Brick schema时，GPT对虚拟传感器仅给出部分描述（partial），而集成VB schema后能准确描述虚拟供压力行为模型（yes）；（2）在系统变化场景下，Brick-only给出通用性回答（generic），VB+Brick集成方案能正确推荐模型再校准操作（yes）；（3）在再校准结果分析中，Brick-only无法关联修正模型解释性能变化（no），VB+Brick集成方案实现了数值评估和因果解释（yes）。VB schema证明了其在支持持续数字孪生（如虚拟传感和传感器校准）方面的必要性。",
+  "contribution": "提出首个面向虚拟建筑模型（VBM）的元数据模式VB schema，扩展了Brick schema对虚拟实体的管理能力，并通过GPT应用验证了该schema在增强DT本体理解、提升自主问题解决能力和改进应用结果解读方面的优势",
+  "markdownFile": "Lee and Yoon - 2025 - Metadata schema for virtual building models in digital twins VB schema implemented in GPT-based app.md",
+  "pdfFile": "Lee and Yoon - 2025 - Metadata schema for virtual building models in digital twins VB schema implemented in GPT-based app.pdf",
+  "url": "https://doi.org/10.1016/j.enbuild.2024.115039",
+  "taskEn": "Intelligent digital twin-based O&M services (virtual modeling & calibration, virtual sensing, sensor calibration, ontology interpretation, knowledge extraction)",
+  "inputDataEn": "Sensor data + ontology (RDF/Brick Schema) + operational data"
+}

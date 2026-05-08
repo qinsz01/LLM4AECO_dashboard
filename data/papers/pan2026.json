@@ -1,0 +1,35 @@
+{
+  "id": "pan2026",
+  "citation": "Pan et al./2026",
+  "title": "LLM-enabled Multi-Agent Framework for Natural Language Interaction with Graph-Based Digital Twins",
+  "year": 2026,
+  "category": "BIM检索与管理",
+  "task": "数字孪生信息检索",
+  "phase": "运维",
+  "inputData": "图数据库数字孪生数据",
+  "representation": "图结构",
+  "llmMethod": "Agent",
+  "contribution": "提出Graph-DT-GPT多智能体框架，集成LLM与基于图的数字孪生，通过模块化Agent（决策、查询生成、答案提取）实现自然语言交互，将LLM输出基于结构化图数据以提高响应可靠性并减少幻觉",
+  "pdfFile": "Pan et al. - 2026 - LLM-enabled multi-agent framework for natural language interaction with graph-based digital twins.pdf",
+  "markdownFile": "Pan et al. - 2026 - LLM-enabled multi-agent framework for natural language interaction with graph-based digital twins.md",
+  "abstract": "Digital twins are increasingly used in the Architecture, Engineering, and Construction (AEC) industry, but their adoption is often hindered by the need for specialised knowledge, such as database querying. This paper presents Graph-DT-GPT, a multi-agent framework that integrates Large Language Models (LLMs) with graph-based digital twins to enable natural language interaction. The framework is designed with modular agents, including decision, query generation, and answer extraction, and grounds all LLMs' outputs in structured graph data to improve response reliability and reduce hallucinations. The framework is evaluated on two use cases: a city-level graph with over 40,000 building nodes and room-level apartment layout graphs. Graph-DT-GPT achieves 100% and 95.5% answer correctness using Claude Sonnet 4.5 and GPT-4o, respectively, in the city-scale case, and 100% correctness in the room-level case, significantly outperforming baseline methods including LangChain Neo4j pipelines by approximately 40% and 10%, respectively. These results demonstrate its scalability and potential to enhance accessible, accurate information retrieval in AEC digital twin applications.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "GPT-4o",
+    "GPT-4o-mini",
+    "Claude Sonnet 4.5"
+  ],
+  "keywords": [
+    "digital twin",
+    "large language model",
+    "multi-agent framework",
+    "graph database",
+    "natural language interaction",
+    "AEC"
+  ],
+  "methodology": "提出Graph-DT-GPT多智能体框架，包含三个核心模块化Agent：(1) 决策Agent（Decision Agent）负责解析用户自然语言查询并确定查询意图和目标节点类型；(2) 查询生成Agent（Query Generation Agent）将解析后的意图转化为图数据库查询语句（如Cypher）；(3) 答案提取Agent（Answer Extraction Agent）将图查询结果转化为自然语言回答。框架将所有LLM输出锚定在结构化图数据上以减少幻觉。在两个用例上进行评估：城市级图数据库（超过40,000个建筑节点）和房间级公寓布局图。对比基线包括LangChain Neo4j管道。",
+  "results": "在城市级用例中，使用Claude Sonnet 4.5和GPT-4o分别达到100%和95.5%的回答正确率；在房间级用例中达到100%正确率。相比LangChain Neo4j基线方法分别提高约40%和10%。框架在不同规模的图数据库上均展现出良好的可扩展性和可靠性，验证了多Agent架构在减少LLM幻觉方面的有效性。",
+  "url": "https://doi.org/10.1016/j.autcon.2026.106791",
+  "taskEn": "Digital twin information retrieval",
+  "inputDataEn": "Graph-based digital twin data"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "zhangetal2024",
+  "citation": "Zhang et al. / 2024",
+  "title": "Generative pre-trained transformers (GPT)-based automated data mining for building energy management: Advantages, limitations and the future",
+  "year": 2024,
+  "category": "能耗管理与优化",
+  "task": "能耗预测/故障诊断/异常检测",
+  "phase": "运维",
+  "inputData": "时序运行数据/故障数据/关联规则",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "提出GPT在建筑能源管理中三大数据挖掘场景（能耗预测、故障诊断、异常检测）的性能评估框架，系统验证GPT-4自动生成预测代码、诊断设备故障和检测异常运行模式的能力，全面总结GPT在该领域的优势和局限性，并提出未来研究方向",
+  "abstract": "Advanced data mining methods have shown a promising capacity in building energy management. However, in the past decade, such methods are rarely applied in practice, since they highly rely on users to customize solutions according to the characteristics of target building energy systems. Hence, the major barrier is that the practical applications of such methods remain laborious. It is necessary to enable computers to have the human-like ability to solve data mining tasks. Generative pre-trained transformers (GPT) might be capable of addressing this issue, as some GPT models such as GPT-3.5 and GPT-4 have shown powerful abilities on interaction with humans, code generation, and inference with common sense and domain knowledge. This study explores the potential of the most advanced GPT model (GPT-4) in three data mining scenarios of building energy management, i.e., energy load prediction, fault diagnosis, and anomaly detection. A performance evaluation framework is proposed to verify the capabilities of GPT-4 on generating energy load prediction codes, diagnosing device faults, and detecting abnormal system operation patterns. It is demonstrated that GPT-4 can automatically solve most of the data mining tasks in this domain, which overcomes the barrier of practical applications of data mining methods in this domain. In the exploration of GPT-4, its advantages and limitations are also discussed comprehensively for revealing future research directions in this domain.",
+  "journal": "Energy and Built Environment",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "ChatGPT",
+    "GPT-4",
+    "Artificial general intelligence",
+    "Data mining",
+    "Building energy management"
+  ],
+  "methodology": "The study proposes a performance evaluation framework to assess GPT-4 in three data mining scenarios of building energy management: (1) energy load prediction—evaluating code generation correctness, prediction accuracy (MAE, MSE, RMSE, MAPE, R2, CV-RMSE), and consistency across six steps of predictive modeling (data preprocessing, feature engineering, model training, model evaluation, result visualization, model interpretation) and in real simple/complex prediction tasks using one-year operational data from an office building in Shenzhen, China; (2) fault diagnosis—evaluating diagnosis accuracy, inference correctness, and consistency for 14 AHU faults from the ASHARE RP-1312 dataset under various input conditions (data vs. symptoms, with vs. without fault labels), plus chiller and VRF faults; (3) anomaly detection—evaluating detection accuracy, inference correctness, and consistency for 8 anomalies in a chiller plant using both time series data and association rules as inputs. Five independent chats with the same initial prompt are conducted in each evaluation to quantify stability.",
+  "results": "In energy load prediction, GPT-4 generates correct codes without modifications in most predictive modeling steps (code correctness = 1.0 for 11 of 14 sub-tasks) and achieves R2 of approximately 0.95 for cooling load prediction of a real office building. In fault diagnosis, GPT-4 achieves 100% diagnosis accuracy for several common AHU faults when given both fault data and normal data, with performance improving significantly when normal data is provided alongside fault data. In anomaly detection, GPT-4 detects five out of eight anomalies with high accuracy using data inputs, and using association rules instead of raw time series data improves inference correctness by 80%. Key limitations include low output stability, unfamiliarity with some domain-specific tasks (e.g., domain knowledge-based feature selection, LIME/SHAP model interpretation), need for manually crafted prompts, and poor mathematical abilities for calculating statistical characteristics of time series data.",
+  "markdownFile": "Zhang et al. - 2024 - Generative pre-trained transformers (GPT)-based automated data mining for building energy management.md",
+  "pdfFile": "Zhang et al. - 2024 - Generative pre-trained transformers (GPT)-based automated data mining for building energy management.pdf",
+  "url": "https://doi.org/10.1016/j.enbenv.2023.06.005",
+  "taskEn": "Energy prediction / fault diagnosis / anomaly detection",
+  "inputDataEn": "Time series operational data / fault data / association rules"
+}

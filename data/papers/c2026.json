@@ -1,0 +1,31 @@
+{
+  "id": "c2026",
+  "citation": "Zeng et al./2026",
+  "title": "Ontology-based prompting with large language models for inferring construction activities from construction images",
+  "year": 2026,
+  "category": "施工管理与安全",
+  "task": "活动识别/进度监测",
+  "phase": "施工",
+  "inputData": "现场图像 + 本体",
+  "representation": "图结构",
+  "llmMethod": "Prompt",
+  "contribution": "结合本体和LLM的提示方法，从施工图像推断施工活动，准确率达73.68%，共同识别活动和实体时达50.00%，证明了本体引导的提示方法在施工视觉理解中的有效性",
+  "url": "https://doi.org/10.1016/j.aei.2025.103869",
+  "pdfFile": "Zeng, C. etal - 2026 - Ontology-based prompting with large language models for inferring construction activities from const....pdf",
+  "markdownFile": "Zeng, C. etal - 2026 - Ontology-based prompting with large language models for inferring construction activities from const....md",
+  "abstract": "Recognizing construction activities from images enhances decision-making by providing context-aware insights into project progress, resource allocation, and productivity. However, conventional approaches, such as supervised learning and knowledge-based approach, struggle to generalize to the dynamic nature of construction sites due to limited annotated data and rigid knowledge patterns. To address these limitations, we propose a novel method that integrates Large Language Models (LLMs) with structured domain knowledge via ontology-based prompting. In our approach, visual features such as entities, spatial arrangements, and actions are mapped to predefined concepts in a construction-specific ontology, resulting in symbolic scene representations. In-context learning is employed by constructing prompts that include multiple structured examples, each describing a scenario with its associated activities. By analyzing these ontology-grounded examples, the LLM learns patterns that connect symbolic representations to construction activity labels, enabling generalization to new, unseen scenes. We evaluated the method using GPT-based models on a dataset covering 29 construction activity types. The model achieved an activity recognition accuracy of 73.68%, and 50.00% when jointly identifying the activity and its associated entities. Ablation studies confirmed the positive effects of including Chain-of-Thought reasoning, diverse visual concepts, and richer context examples. These results demonstrate the potential of ontology-informed prompting to support scalable and adaptive visual understanding in construction domains.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "GPT-3.5 Turbo (gpt-3.5-turbo-0613)"
+  ],
+  "keywords": [
+    "Construction activity recognition",
+    "Large language models",
+    "Ontology",
+    "Construction management"
+  ],
+  "methodology": "The proposed approach integrates LLMs with a construction-domain ontology (ConSE) through ontology-based prompting. Visual features (entities, attributes, attentional cues, relative relationships, spatial information) are extracted from construction images using computer vision algorithms and mapped to predefined ontology concepts, forming structured triples as symbolic scene representations. Three prompt engineering strategies are employed: (1) task instruction prompting with role, context, and task components to define the inference objective; (2) in-context learning with structured examples containing ontology-guided <Context> and <Inference> pairs; and (3) Chain-of-Thought (CoT) prompting using interaction as an intermediary semantic layer between visual information and activity labels. The method was evaluated on a dataset of 53 manually annotated construction images covering 29 activity types from the ConSE ontology, using 3 images as in-context examples.",
+  "results": "The base experiment achieved Activity Accuracy of 73.68%, Activity + Elements Accuracy of 50.00%, Redundancy Rate of 20.78%, and Miss Rate of 3.91%. Ablation studies showed: removing CoT reduced Activity Accuracy to 65.78% and Activity + Elements Accuracy to 44.73%; using only entity information dropped Activity Accuracy to 64.47% and Activity + Elements Accuracy to 22.37%; moderate randomness (temperature=1.0, top_p=0.6) improved Activity Accuracy to 77.63% and Activity + Elements Accuracy to 53.95%. The approach demonstrates moderate performance compared to supervised learning (80.17%) and outperforms knowledge-based methods (57.19%).",
+  "taskEn": "Activity recognition / progress monitoring",
+  "inputDataEn": "On-site images + ontology"
+}

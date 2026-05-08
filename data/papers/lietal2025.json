@@ -1,0 +1,38 @@
+{
+  "id": "lietal2025",
+  "citation": "Li et al. / 2025",
+  "title": "A large language model-based building operation and maintenance information query",
+  "year": 2025,
+  "category": "运维管理",
+  "task": "建筑运维信息查询",
+  "phase": "运维",
+  "inputData": "传感器数据+查询文本",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "contribution": "提出基于知识增强LLM的建筑运维信息查询范式，通过数据清洗与重构、LLM微调（Text2SQL）、知识图谱增强检索（RAG）和人类反馈对齐微调四步流程，实现运维工程师用自然语言查询建筑数据库，执行准确率达95.5%，与GPT-4相当且优于Llama-70B和CodeLlama-70B等大模型",
+  "abstract": "In smart buildings, operation and maintenance (O&M) are critical for achieving energy optimization and ensuring comfort. However, as smart buildings incorporate more systems and generate increasingly complex data, efficiently querying this information has become a major challenge for O&M tasks. Traditional methods require complex queries, considering data standards and building structure information, which is demanding, while current artificial intelligence (AI) querying technologies lack accuracy and interactivity. To address this, this paper proposes a large language model (LLM)-based information query paradigm for building O&M. Under this paradigm, the first step is data processing, which adopts the isolation forest and the prompt-guided data structure reconstruction methods. The second step is O&M LLM fine-tuning, which fine-tunes the Qwen-32B LLM by a constructed O&M hybrid dataset. The third step is knowledge enhancement for the fine-tuned LLM by constructing an external O&M knowledge base and connecting it to the model using the retrieval-augmented generation (RAG) technique. Additionally, a search algorithm is proposed to integrate the O&M knowledge graph (KG), enabling the retrieval of pertinent O&M information. The fourth step is alignment fine-tuning for the knowledge enhanced-LLM which utilizes human feedback to further promote its interactive effectiveness. Experiments show that the proposed paradigm achieved execution accuracy rates of 95.5% in the O&M information query evaluation and it outperforms state-of-the-art (SOTA) LLMs including GPT-4, Llama-70B, CodeLlama-70B. Feedback from practical use and surveys by twenty O&M engineers and senior management confirm the interactivity and practicality of this paradigm in real-world smart building scenarios.",
+  "journal": "Energy and Buildings",
+  "url": "https://doi.org/10.1016/j.enbuild.2025.115515",
+  "llmModels": [
+    "Qwen-32B",
+    "Qwen-14B",
+    "GPT-4",
+    "Llama2-70B",
+    "CodeLlama-70B",
+    "Wizardcoder-33B",
+    "Yi-34B"
+  ],
+  "keywords": [
+    "building operation and maintenance",
+    "information query",
+    "large language model",
+    "knowledge graph",
+    "retrieval-augmented generation"
+  ],
+  "methodology": "A four-step paradigm is proposed: (1) Data processing using isolation forest for outlier detection and GPT-based prompt-guided data structural reconstruction to consolidate 156 sensor data tables into 4 structured tables; (2) O&M LLM fine-tuning using QLoRA on Qwen-32B with a hybrid dataset combining 1,300 O&M query-SQL pairs and the CSpider Text2SQL dataset (10,181 samples) to enhance Text2SQL capability; (3) Knowledge enhancement by constructing an O&M knowledge graph based on building hierarchy (extending Brick Schema) and an example set, connected via RAG using OpenAI text-embedding-3-large for vectorization and faiss for storage, with a beam search algorithm incorporating category-based pruning for KG retrieval and L2 distance-based example matching; (4) Alignment fine-tuning using reinforcement learning from human feedback (RLHF) with PPO algorithm, where O&M engineers rate model outputs to train a reward model, with KL divergence penalty to maintain coherence. The final model is called OpsMaintGPT.",
+  "results": "On the O&M query evaluation set (466 questions), the knowledge-enhanced O&M LLM achieved 95.5% execution accuracy, comparable to GPT-4 (95.493%) and surpassing CodeLlama-70B (70.2%), Qwen-32B baseline (67.5%), and Llama2-70B (48.7%). The original O&M LLM (after fine-tuning only) achieved 92.7% on O&M evaluation. On the CSpider general Text2SQL evaluation set, the original O&M LLM achieved 74.9% accuracy, approaching GPT-4 (76.1%). User survey with 20 O&M engineers showed 95% satisfaction with accuracy, 90% with response speed, 85% with the aligned model, and 95% overall satisfaction. The system can provide answers within 30 seconds for general O&M issues.",
+  "markdownFile": "Li et al. - 2025 - A large language model-based building operation and maintenance information query",
+  "taskEn": "Building O&M information query",
+  "inputDataEn": "Sensor data + query text",
+  "pdfFile": "Li et al. - 2025 - A large language model-based building operation and maintenance information query"
+}

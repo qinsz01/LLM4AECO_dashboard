@@ -1,0 +1,32 @@
+{
+  "id": "teclaw2025",
+  "citation": "Teclaw et al./2025",
+  "title": "Building information model and schema cross-validation using semantics – conceptual framework",
+  "year": 2025,
+  "category": "规范与合规检查",
+  "task": "规范检查/设计验证",
+  "phase": "规划与设计",
+  "inputData": "混合数据（MEP原理图图像 + BIM）",
+  "representation": "图结构",
+  "llmMethod": "Prompt",
+  "contribution": "通过LLM多模态处理和语义本体（Brick），实现MEP原理图和BIM模型的自动交叉验证，提高设计一致性检查效率",
+  "abstract": "Ensuring consistency between Mechanical, Electrical, and Plumbing (MEP) schema drawings and Building Information Models (BIM) is essential for design accuracy and minimizing data discrepancies in construction projects. While BIM provides detailed 3D visualizations of building components, schematic drawings remain crucial for capturing the logical and functional relationships within early-stage designs. However, discrepancies between these two representations often arise, necessitating extensive manual verification. This study introduces a conceptual framework for automated cross-validation between MEP schema drawings and BIM models by leveraging semantic representations. The framework utilizes AI-driven technologies, particularly Large Language Models (LLMs), to extract structured knowledge from both schematics and BIM data, translating this information into machine-readable formats based on the Brick ontology. By integrating semantic web technologies and multimodal processing, the proposed framework effectively identifies inconsistencies in airflow distribution, system connectivity, and performance parameters. This approach significantly enhances the efficiency and accuracy of design validation, minimizes data discrepancies, and fosters interoperability among heterogeneous data sources. Initial findings demonstrate the scalability and effectiveness of semantic-based validation, suggesting substantial benefits for MEP-BIM integration. Future research will extend the framework to additional MEP domains, including electrical and plumbing systems, and further refine AI-based recognition methods.",
+  "journal": "International Journal of Architectural Computing",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "BIM",
+    "LLM",
+    "MEP",
+    "validation",
+    "semantics"
+  ],
+  "methodology": "Proposes a conceptual framework for automated cross-validation between MEP schematic drawings and BIM models using semantic representations. The framework consists of three main stages: (1) MEP schema processing -- uploading MEP schematic images (PNG/JPEG) to GPT-4 for multimodal extraction of space information (rooms, airflow setpoints), AHU parameters (supply/return/exhaust/outside air flows), connections between spaces and AHUs, and adjustments for exhaust-type spaces, with all data structured as RDF triples following the Brick ontology; (2) BIM model data extraction -- using Autodesk Revit's visual programming interface (Dynamo) to extract room data, AHU connector-level airflow parameters, and physical connectivity between components (ducts, pipes, fittings) into RDF/Turtle format compatible with the Brick ontology; (3) Cross-validation -- applying SPARQL queries on both semantic graphs to systematically compare room airflow values, AHU parameters, and space-AHU connectivity, identifying discrepancies between schematic assumptions and BIM representations. The Brick ontology was chosen over alternatives (FSO, TSO, ifcOWL, BOT) for its rich classification of HVAC components and setpoint subclasses.",
+  "results": "This is a conceptual framework paper presenting a proof-of-concept rather than large-scale quantitative evaluation. Initial testing on a sample ventilation MEP schema demonstrated that the framework can correctly identify rooms, AHU parameters, and their connections using GPT-4 multimodal processing. In tests with the sample MEP schema, processing the image 88 times using GPT-4 resulted in a cost of $1.97. Key limitations identified include: (1) GPT-4 image processing is constrained to a maximum resolution of 768x2000 pixels, which is insufficient for complex MEP schemas and can cause confusion between visually similar digits (e.g., 0, 8, 6); (2) reliance on proprietary BIM software (Revit/Dynamo) rather than open standards (IFC), due to IFC's inability to represent per-port airflow values on AHU components; (3) lack of MEP schema standardization across national/regional standards (BG 6/2018, DIN 1946, ASHRAE) complicates automated extraction. The framework demonstrates scalability potential and the effectiveness of semantic-based validation for MEP-BIM integration.",
+  "pdfFile": "Teclaw et al. - 2025 - Building information model and schema cross-validation using semantics – conceptual framework.pdf",
+  "markdownFile": "Teclaw et al. - 2025 - Building information model and schema cross-validation using semantics – conceptual framework.md",
+  "url": "https://doi.org/10.1177/14780771251352954",
+  "taskEn": "Code compliance checking / design verification",
+  "inputDataEn": "Mixed data (MEP schematic images + BIM)"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "guo2025",
+  "citation": "Guo et al./2025",
+  "title": "Advancing BIM information retrieval with an LLM-based query-domain-specific language and library code function alignment system",
+  "year": 2025,
+  "category": "BIM检索与管理",
+  "task": "信息检索",
+  "phase": "全生命周期",
+  "inputData": "自然语言查询+BIM模型",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "contribution": "LLM框架实现查询与BIM域代码函数的自动对齐，准确率78.75%，错误率降低85%",
+  "abstract": "The complexity of BIM data calls for efficient automatic information retrieval methods, yet aligning queries with BIM information, especially domain code packages, remains challenging due to intricate data structures, naming conventions, and varying query complexities. Existing techniques require manual training and merely solve the IFC format, while recent exploration of LLMs remains preliminary in BIM automation. This paper introduces Synergistic BIM Aligners, a framework leveraging LLMs to automatically align human queries with BIM domain code functions, thereby assisting subsequent retrieval code generation stages. The framework features eight agents based on hierarchical alignment, hybrid search, and complementary routing strategies. The framework was evaluated using 80 queries from the Revit C# API of varying complexity. The results demonstrated high accuracy (78.75%) and significantly reduced errors, with the system's 0.30 errors per query on average compared to Standalone Agent's 2.03 errors. These findings highlight the potential of LLM-assisted methods for BIM information retrieval.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "GPT-4o",
+    "text-embedding-ada-003"
+  ],
+  "keywords": [
+    "Building information modelling (BIM)",
+    "Automatic information retrieval",
+    "Query understanding",
+    "Large language model (LLM)",
+    "Domain specific language and library code",
+    "Retrieval-augmented generation (RAG)",
+    "Revit C# API"
+  ],
+  "methodology": "Proposes Synergistic BIM Aligners, an eight-agent LLM framework that automatically aligns natural language queries with BIM domain code functions through three synergistic strategies: (1) hierarchical alignment, which decomposes the element-constraint structure into element-level and constraint-level stages to handle hidden BIM elements; (2) root-semantics hybrid search, combining BM25-based root matching with OpenAI embedding-based semantic retrieval for robust document retrieval from domain code documentation; and (3) keyword-task complementary routing, processing queries through two parallel paths (keyword-focused and task-focused) with Alignment Judge and Planning Judge agents for verification. The system outputs a Logic Chain of Code Writing (LCCW) that guides subsequent code generation. Evaluated on 80 queries of varying complexity against the Revit C# API using GPT-4o as the backbone model.",
+  "results": "The Synergistic BIM Aligners achieved 78.75% accuracy (63/80 queries perfectly aligned) with an average of 0.30 errors per query, compared to 11.25% accuracy (AEN 2.03) for the Standalone Agent and 27.50% accuracy (AEN 1.50) for the Basic Reference Agent. The system achieved TBA@1 of 91.25% and TBA@2 of 100%. For simple queries (1 Element 1 Property), accuracy reached 95.24%. The Code Generator, guided by LCCW, maintained consistent alignment accuracy (78.75%) with 72.50% logical correctness in final code. The system consumed approximately 55,000 tokens and 90 seconds per query, costing about USD 0.17 per query.",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106374",
+  "pdfFile": "Guo et al. - 2025 - Advancing BIM information retrieval with an LLM-based query-domain-specific language and library cod.pdf",
+  "markdownFile": "Guo et al. - 2025 - Advancing BIM information retrieval with an LLM-based query-domain-specific language and library cod.md",
+  "taskEn": "Information retrieval",
+  "inputDataEn": "Natural language queries + BIM models"
+}

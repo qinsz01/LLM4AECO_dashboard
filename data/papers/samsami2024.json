@@ -1,0 +1,33 @@
+{
+  "id": "samsami2024",
+  "citation": "Samsami/2024",
+  "title": "Optimizing the Utilization of Generative Artificial Intelligence (AI) in the AEC Industry ChatGPT Pr...",
+  "year": 2024,
+  "category": "施工管理与安全",
+  "task": "综述+方法论验证",
+  "phase": "施工",
+  "inputData": "施工进度数据+OSHA安全隐患图像",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "系统性研究ChatGPT在AEC行业的优化应用策略，提出基于提示工程的施工进度预测和安全隐患识别方法论，通过5个进度案例和5个安全隐患案例验证有效性",
+  "abstract": "Generative Artificial Intelligence (AI) holds significant potential for revolutionizing the Architecture, Engineering, and Construction (AEC) industry by automating complex tasks such as construction scheduling, hazard recognition, resource leveling, information retrieval from BIM, etc. However, realizing this potential requires a strategic approach to ensure effective utilization and maximum benefit. This paper presents guidelines for prompt design and engineering to elicit desired responses from ChatGPT, a Generative AI tool, in AEC applications. Key steps include understanding user intent, leveraging model capabilities, and optimizing prompt structures. By following these guidelines, stakeholders in the AEC industry can harness the power of Generative AI to improve construction scheduling processes, increase project efficiency, and ultimately drive innovation and growth in the industry. Several illustrative examples on construction scheduling and hazard recognition are provided to demonstrate the methodology proposed in this research. It is concluded that Generative AI, when effectively utilized, significantly enhances project scheduling and hazard recognition capability in the AEC industry with minimal error.",
+  "journal": "CivilEng",
+  "llmModels": [
+    "ChatGPT-4"
+  ],
+  "keywords": [
+    "generative AI",
+    "ChatGPT",
+    "prompt design and engineering",
+    "construction scheduling",
+    "hazard recognition",
+    "AEC"
+  ],
+  "methodology": "提出系统性的提示工程方法论：(1)文献综述筛选有效的提示工程技术，包括零样本/少样本提示、指令提示、约束提示、示例提示、上下文提示、引导提示和提示重写等七种优化技术，以及OpenAI官方的六种策略（精确指令编写、利用参考资料、分解复杂任务、预留思考时间、使用外部工具、系统性测试修改）；(2)设计受控实验，将ChatGPT输出与案例研究参考数据进行比较，使用'Relative Error'作为评估指标；(3)分析并迭代优化提示设计。在两个应用领域进行验证：施工进度预测（5个案例，涵盖住宅建筑、多功能建筑、办公楼改造、商业园区和豪华别墅）和安全隐患识别（5个案例，来自OSHA预防视频）。进度预测任务包括工期估算、甘特图生成和蒙特卡洛风险分析；安全隐患识别任务包括隐患辨识、OSHA安全规程、安全实施图像生成和安全检查清单生成。",
+  "results": "施工进度预测方面：提示工程使ChatGPT的相对误差大幅降低，5个案例的相对误差分别为0.07、0.03、0.05、0.06和0.02（提示组），而对照组误差分别为0.43、1.00、0.11、1.05和2.51。例如，多功能建筑的相对误差从1.00降至0.03，商业园区从1.05降至0.06。安全隐患识别方面：提示工程后4个案例的相对误差降至0.00，仅开挖作业案例误差为0.20（对照组分别为0.25、0.25、0.17、0.20和0.00）。结果表明提示工程显著提升了ChatGPT在施工进度预测和安全隐患识别方面的精度。",
+  "pdfFile": "Samsami etal - 2024 - Optimizing the Utilization of Generative Artificial Intelligence (AI) in the AEC Industry ChatGPT Pr....pdf",
+  "markdownFile": "Samsami etal - 2024 - Optimizing the Utilization of Generative Artificial Intelligence (AI) in the AEC Industry ChatGPT Pr....md",
+  "url": "https://doi.org/10.3390/civileng5040049",
+  "taskEn": "Review + methodology validation",
+  "inputDataEn": "Construction schedule data + OSHA safety hazard images"
+}

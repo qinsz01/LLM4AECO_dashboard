@@ -1,0 +1,32 @@
+{
+  "id": "petrosa2025",
+  "citation": "Petrosa et al./2025",
+  "title": "Development of a BIM-based AI-driven matching tool for LCA datasets",
+  "year": 2025,
+  "category": "环境与碳评估",
+  "task": "环境影响评估",
+  "phase": "规划与设计",
+  "inputData": "混合数据（BIM、LCA数据库）",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "基于GPT-4o mini的开源工具实现了BIM元素与LCA数据集的半自动匹配，提高了环境影响评估效率",
+  "pdfFile": "Petrosa et al. - 2025 - Development of a BIM-based AI-driven matching tool for LCA datasets.pdf",
+  "markdownFile": "Petrosa et al. - 2025 - Development of a BIM-based AI-driven matching tool for LCA datasets.md",
+  "abstract": "The construction sector significantly contributes to environmental issues and often relies on Life Cycle Assessment (LCA) for the quantification and optimization of its environmental impacts. One of the most time- and labour-intensive tasks in LCA is matching real elements (e.g., construction elements and materials) to suitable environmental datasets to get an idea of the element's sustainability performance (emissions). In this regard, this study presents an open-access software tool that leverages artificial intelligence (AI) to support the matching process between construction elements in Building Information Modelling (BIM) with corresponding environmental datasets in a semi-automatic manner. Developed in Python and using the GPT-4o mini model from OpenAI for its matching mechanism, the tool demonstrates how AI-driven digital innovation can improve efficiency, reduce manual effort, and enhance early-stage environmental assessment in construction planning, while integrating sustainability data into BIM workflows. Through a series of use cases, the software's ability to address key challenges in the integration of BIM and LCA tools is demonstrated, showcasing a high degree of automation and interoperability. Moreover, the accessible design of the tool allows use without extensive technical knowledge. The conducted validation tests confirmed the tool's potential for accurate LCA matching, highlighting opportunities for AI to enhance sustainability workflows while offering BIM experts a better understanding of the challenges in sustainability assessment.",
+  "journal": "Discover Sustainability (2025) 6:1237 (Springer)",
+  "llmModels": [
+    "GPT-4o mini"
+  ],
+  "keywords": [
+    "Building Information Modelling (BIM)",
+    "Life Cycle Assessment (LCA)",
+    "Artificial Intelligence (AI)",
+    "Machine Learning (ML)",
+    "Sustainable construction"
+  ],
+  "methodology": "A three-step BIM-based AI-driven LCA dataset matching framework implemented in Python: (1) Data Acquisition: extracting building element data from IFC-format BIM models (created in Autodesk Revit 2022, exported as IFC 4) using the ifcopenshell library, combined with LCA dataset parameters (name, category, country) from the OKOBAUDAT German database (CSV export); (2) Data Input: querying IFC type, name, and property sets (material associations, quantities, standardized common Psets) for each construction element, performing pre-matching consistency checks (unit verification, coverage checking, unique fingerprint generation for deduplication); (3) Data Analysis: matching via the GPT-4o mini model through OpenAI API calls, offering two modes -- an interactive matching process where a user validates and iteratively refines each match, and an automatic matching process using element fingerprinting to batch-match unique elements with confidence scores. The tool stores matching results as additional property sets in the IFC file.",
+  "results": "Validation was conducted through two approaches: (1) Testing with seven hypothetical IFC elements (five walls, one door, one window) against shortened OKOBAUDAT databases, repeated ten times each, confirming the AI model's ability to decompose semantic terms and correctly prioritize concrete types, with user-provided element descriptions enabling precise dataset selection; (2) A case study on the Duplex_A IFC example building (296 individual elements, 55 unique fingerprinted requests) comparing automatic vs. manual matching. The automatic matching achieved 66% accuracy as evaluated by an expert, with a confidence-correctness correlation of 0.4125. Processing time was reduced from approximately 3 hours (manual) to 11 minutes (automatic), at a cost of approximately $0.06 USD per full pass (~538,000 tokens). The automatic matching estimated total GWP at 28.0 t CO2 eq. compared to 36.6 t CO2 eq. from manual matching. The results support the interactive approach as more suitable at the current development stage given limited input information.",
+  "url": "https://doi.org/10.1007/s43621-025-02203-8",
+  "taskEn": "Environmental impact assessment",
+  "inputDataEn": "Mixed data (BIM, LCA database)"
+}

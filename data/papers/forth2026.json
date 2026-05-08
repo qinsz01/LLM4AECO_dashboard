@@ -1,0 +1,36 @@
+{
+  "id": "forth2026",
+  "citation": "Forth et al./2026",
+  "title": "Semantic Property Enrichment for Circularity Assessments Using BIM and Labeled Property Graphs",
+  "year": 2026,
+  "category": "环境与碳评估",
+  "task": "BIM模型循环性评估语义富化",
+  "taskEn": "Semantic property enrichment for BIM-based circularity assessments",
+  "phase": "规划与设计",
+  "inputData": "BIM/IFC模型数据与建筑构件原型数据库",
+  "inputDataEn": "BIM/IFC model data and element archetype database",
+  "representation": "图结构",
+  "llmMethod": "微调",
+  "abstract": "Integrating circularity assessments into early-stage building design supports informed decisions that advance a circular economy by evaluating, among other aspects, how easily building components can be separated and reused without damage. This study investigates how building information models (BIM) can be semantically enriched to automatically calculate disassembly potential and the building circularity indicator (BCI), two types of circularity assessment. The study presents a method combining semantic textual similarity (STS), matching of IFC elements to archetypal elements using fine-tuned large language models (LLM), with labeled property graphs (LPG). The IFC models are enriched with disassembly knowledge of the matched archetypes, encoding connection types, accessibility, and assembly logic. Across three architectural-model case studies and two LLMs, the fully automated pipeline yielded BCI values within <1.5% of manual benchmarks, but the low archetype-matching accuracy necessitated manual verification. Four competency questions validate the circularity graph, and manual recomputation of BCI confirms the calculation consistency. This approach contributes to reducing manual modeling effort and supports architects and engineers in evaluating design for disassembly principles during the early design phase. The work lays a foundation for future design decision-making, enabling circular building designs by combining AI- and graph-based reasoning systems.",
+  "journal": "Journal of Building Engineering",
+  "pdfFile": "Forth and De Wolf - 2026 - Semantic property enrichment for circularity assessments using BIM and labeled property graphs",
+  "markdownFile": "Forth and De Wolf - 2026 - Semantic property enrichment for circularity assessments using BIM and labeled property graphs",
+  "url": "https://doi.org/10.1016/j.jobe.2026.115417",
+  "llmModels": [
+    "IfcMaterial2MP",
+    "text-embedding-3-small"
+  ],
+  "keywords": [
+    "BIM",
+    "Circularity assessment",
+    "Disassembly potential",
+    "Semantic enrichment",
+    "LLM",
+    "Labeled property graphs",
+    "Neo4j",
+    "Knowledge graph"
+  ],
+  "contribution": "提出结合微调LLM语义相似度匹配与标记属性图(LPG)的BIM语义富化方法，实现建筑构件拆卸潜力和建筑循环性指标(BCI)的自动计算，在三个案例中BCI偏差低于1.5%",
+  "methodology": "构建包含四个步骤的工作流：(1)使用微调LLM通过语义文本相似度(STS)将IFC元素与建筑构件原型数据库匹配；(2)将IFC模型和原型数据转换为标记属性图并融合为统一循环性图；(3)富化连接类型、可达性和装配逻辑等拆卸相关属性；(4)基于循环性图计算构件级拆卸潜力和建筑级BCI指标",
+  "results": "三个建筑案例研究中，全自动流水线计算的BCI值与手动基准偏差在1.5%以内（平均2.2%）；微调LLM的偏差更低（平均1.5% vs 预训练模型2.9%）；但元素匹配准确率低于70%，建议采用半自动化工作流进行人工验证；开发了交互式IFC-循环性图查看器"
+}

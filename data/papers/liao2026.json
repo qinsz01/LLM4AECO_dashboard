@@ -1,0 +1,35 @@
+{
+  "id": "liao2026",
+  "json_id": "liao2026",
+  "citation": "Liao et al./2026",
+  "title": "Semi-Automated Reconstruction and Editing of Building Energy Models from Vector Floor Plans",
+  "year": 2026,
+  "abstract": "AbstractThe extensive repositories of 2D as-built floor plans hold significant potential for building information model (BIM) and building energy modeling (BEM). This paper proposes VECTOR2BEM, a semi-automated framework for efficiently reconstructing and editing 3D models from 2D as-built floor plans to support BEM. It utilizes in-depth vector data processing to accurately extract geometric information. Rule-based algorithms include wall extension and space enclosure, automatically establishing structured middleware with complete 2D topology, while manual input of vertical dimensions enables the generation of gbXML file based on BEM. Furthermore, the framework integrates large language model (LLM) with a structured data foundation, allowing precise editing of geometric attributes and operational parameters via natural language commands. This paper significantly reduces expert operation dependency, demonstrates strong adaptability across diverse floor plans, and provides an efficient solution for rapid modeling and retrofitting analysis using historical floor plans.",
+  "journal": "Automation in Construction",
+  "doi": "10.1016/j.autcon.2026.106882",
+  "pdfFile": "Liao et al. - 2026 - Semi-automated reconstruction and editing of building energy models from vector floor plans",
+  "markdownFile": "Liao et al. - 2026 - Semi-automated reconstruction and editing of building energy models from vector floor plans",
+  "url": "https://doi.org/10.1016/j.autcon.2026.106882",
+  "category": "能耗管理与优化",
+  "task": "基于矢量平面图的建筑能耗模型半自动重建与编辑",
+  "taskEn": "Semi-automated reconstruction and editing of building energy models from vector floor plans",
+  "phase": "翻新与拆除",
+  "inputData": "2D矢量竣工平面图、手动输入的垂直尺寸数据",
+  "inputDataEn": "2D vector as-built floor plans, manually input vertical dimension data",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "llmModels": [
+    "Qwen-Plus"
+  ],
+  "keywords": [
+    "building energy modeling",
+    "vector floor plans",
+    "gbXML",
+    "natural language editing",
+    "semi-automated framework",
+    "BIM"
+  ],
+  "contribution": "提出VECTOR2BEM框架，实现从2D矢量平面图半自动重建3D建筑能耗模型，集成LLM支持自然语言编辑几何属性与运行参数，显著降低专家操作依赖。",
+  "methodology": "四模块框架：(1)数据预处理模块解析DXF格式矢量平面图；(2)基于规则的处理模块（墙体延伸、空间围合）自动建立结构化中间件；(3)gbXML生成模块结合手动垂直尺寸输入生成能耗模型文件；(4)LLM交互编辑模块（Qwen-Plus）支持自然语言编辑几何属性与运行参数。",
+  "results": "开口精度达99.4%，墙体精度达99.9%，空间围合率>99%，在多种平面图类型上展现强适应性，支持通过自然语言命令精确编辑建筑能耗模型参数。"
+}

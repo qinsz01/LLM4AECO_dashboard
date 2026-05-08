@@ -1,0 +1,32 @@
+{
+  "id": "uhm2025",
+  "citation": "Uhm et al./2025",
+  "title": "Automated Analysis of Construction Safety Accident Videos Using a Large Multimodal Model and Graph Retrieval-Augmented Generation",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "安全事故视频分析",
+  "phase": "施工",
+  "inputData": "施工安全事故视频与法规文本",
+  "representation": "多模态",
+  "llmMethod": "RAG",
+  "contribution": "提出AcciVid框架，集成大 Multimodal 模型与Graph RAG自动化分析施工安全事故视频，将视频内容和安全法规转换为RDF三元组并存储为图结构，实现基于法规的视频分析，检测比人类安全调查员多90%p的潜在违规行为",
+  "pdfFile": "Uhm et al. - 2025 - Automated analysis of construction safety accident videos using a large multimodal model and graph r.pdf",
+  "markdownFile": "Uhm et al. - 2025 - Automated analysis of construction safety accident videos using a large multimodal model and graph r.md",
+  "abstract": "Safety investigators are challenged by the manual task of analyzing large volumes of accident videos through the repetitive process of reviewing them frame by frame, which is both tedious and labor-intensive. This paper proposes the Accident Video Analysis framework (AcciVid), which automates this process using a large multimodal model (LMM) integrated with Graph Retrieval Augmented Generation (Graph RAG). Accident video content and regulations are converted into Resource Description Framework (RDF) triples and stored as graphs, enabling regulation-based analysis through Graph RAG. AcciVid detected 90 %p more potential safety violations than human safety investigators, achieving an F2 Score of 82.4 % compared to their F2 Score of 54.8 %. Furthermore, AcciVid required only an average of 42 s to generate a draft report, whereas human safety investigators needed an average of 4.6 h. This demonstrates AcciVid's potential as an assistant to safety investigators in reducing manual workloads while maintaining high accuracy and efficiency.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "construction accident video",
+    "large multimodal model",
+    "graph retrieval augmented generation",
+    "RDF triples",
+    "safety violation detection"
+  ],
+  "methodology": "提出AcciVid框架，包含六个步骤：(1) 准备视频剪辑，将帧调整为768x768像素并以base64编码；(2) 使用LMM（GPT-4o）从帧中生成文本描述，识别工人行为、设备使用和周围环境中的潜在违规；(3) 从KOSHA标准中提取安全法规条款，使用LMM将复合条款拆分为独立法规；(4) 使用LangChain的GraphIndexCreator模块将安全法规转换为RDF三元组（主语-谓语-宾语），以GML格式存储，并通过TF-IDF计算边权重；(5) 通过Graph QA Chain集成RDF三元组和视频数据，执行探索、匹配、排序与过滤三步操作，使用Chroma DB和text-embedding-ada-002进行语义嵌入和余弦相似度计算；(6) 进行安全违规分析，生成文本报告。使用10个韩国施工现场跌落事故视频（约20秒）进行评估。",
+  "results": "AcciVid检测到的潜在安全违规比人类安全调查员多90%p，F2分数为82.4%（人类为54.8%）。AcciVid平均仅需42秒生成报告草稿，而人类调查员平均需要4.6小时。在召回率（83.3%）、准确率、F1分数和F2分数上均优于人类专家。通过Delphi方法验证，10名建筑安全专家中18/22项候选违规达到60%以上一致性。",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106363",
+  "taskEn": "Construction safety accident video analysis",
+  "inputDataEn": "Construction safety accident videos and regulation texts"
+}

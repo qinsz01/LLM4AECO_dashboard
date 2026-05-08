@@ -1,0 +1,40 @@
+{
+  "id": "lin2026",
+  "json_id": "lin2026",
+  "citation": "Lin et al./2026",
+  "title": "Empowering Building Emergency Response with Large Language Models and BIM-Based Knowledge Graphs",
+  "year": 2026,
+  "abstract": "This paper presents a locally deployable emergency response system that empowers building-level decision-making by integrating large language models (LLM) with BIM-based knowledge graphs. To address hallucinations and the absence of localized context in LLM, the system combines expert knowledge retrieval and spatial reasoning through two modules. An expert module generates context-aware emergency guidance through vector-based retrieval and task-oriented prompting, while a spatial reasoning module uses BIM-based encoding of building topology and equipment metadata into a knowledge graph to support routing and equipment localization. The improved DeBERTa model identifies query keywords and matches them with knowledge graph, achieving an F1NER of 86.4% in emergency term recognition. Results demonstrate the system's superiority over baseline agents, with RAG-based agent achieving broader response coverage and an F1SC of 78.6%.",
+  "journal": "Advanced Engineering Informatics",
+  "doi": "10.1016/j.aei.2026.104703",
+  "pdfFile": "Lin et al. - 2026 - Empowering building emergency response with large language models and BIM-Based knowledge graphs",
+  "markdownFile": "Lin et al. - 2026 - Empowering building emergency response with large language models and BIM-Based knowledge graphs",
+  "url": "https://doi.org/10.1016/j.aei.2026.104703",
+  "category": "运维管理",
+  "task": "建筑应急响应决策支持",
+  "taskEn": "Building emergency response decision support",
+  "phase": "运维",
+  "inputData": "用户自然语言查询、BIM模型数据、应急专家知识库",
+  "inputDataEn": "User natural language queries, BIM model data, emergency expert knowledge base",
+  "representation": "图结构",
+  "llmMethod": "RAG",
+  "llmModels": [
+    "ChatGLM-4-9B",
+    "DeBERTa (improved)",
+    "M3E embeddings",
+    "DeepSeek-R1-7B",
+    "GPT-4o-mini"
+  ],
+  "keywords": [
+    "emergency response",
+    "knowledge graph",
+    "BIM",
+    "RAG",
+    "named entity recognition",
+    "DeBERTa",
+    "evacuation routing"
+  ],
+  "contribution": "提出基于知识驱动的本地化部署建筑应急响应系统，集成RAG-LLM代理与BIM知识图谱，通过改进的DeBERTa模型实现应急术语命名实体识别（F1_NER=86.4%），RAG代理在语义一致性上达到F1_SC=78.6%，支持疏散路径规划与应急设备定位。",
+  "methodology": "三模块系统：(1)RAG-LLM代理模块——基于M3E嵌入与FAISS向量检索的专业知识检索，结合任务导向提示策略的ChatGLM生成模块；(2)改进DeBERTa NER模块——双通道特征提取（BiGRU+RGCNN）、FGM对抗训练、CRF结构化解码，用于提取查询中的设备与位置实体；(3)知识图谱模块——从Revit BIM模型自动提取三元组（links/has关系），构建Neo4j轻量级应急知识图谱，支持语义相似度匹配与最短路径查询。",
+  "results": "改进DeBERTa在NER任务上达到P=86.9%、R=85.8%、F1=86.4%，优于BERT/XLNet/RoBERTa/原始DeBERTa。RAG代理在语义一致性评估中达到P_SC=74.1%、R_SC=83.7%、F1_SC=78.6%，显著优于ChatGLM/DeepSeek/ChatGPT基线，幻觉更少、冗余更低。"
+}

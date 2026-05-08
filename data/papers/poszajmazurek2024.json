@@ -1,0 +1,33 @@
+{
+  "id": "poszajmazurek2024",
+  "citation": "Płoszaj-Mazurek et al./2024",
+  "title": "Artificial Intelligence and Digital Tools for Assisting Low-Carbon Architectural Design: Merging the Use of Machine Learning, Large Language Models, and Building Information Modeling for Life Cycle Assessment Tool Development",
+  "year": 2024,
+  "category": "能耗管理与优化",
+  "task": "低碳建筑设计",
+  "phase": "规划与设计",
+  "inputData": "混合数据（BIM、LCA数据库、设计参数）",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "集成ML（CNN预测碳足迹）、LLM（ChatGPT设计助手）和BIM的工具支持建筑师在设计阶段做出低碳决策",
+  "pdfFile": "Płoszaj-Mazurek et al. - 2024 - Artificial Intelligence and Digital Tools for Assisting Low-Carbon Architectural Design Merging the.pdf",
+  "markdownFile": "Płoszaj-Mazurek et al. - 2024 - Artificial Intelligence and Digital Tools for Assisting Low-Carbon Architectural Design Merging the.md",
+  "abstract": "This paper presents an integrated approach combining machine learning, large language models (LLMs), and building information modeling (BIM) to support low-carbon architectural design through Life Cycle Assessment (LCA) tool development. Three case studies are presented: a CNN-based carbon footprint estimation tool for early design stages, an LLM-powered web carbon calculator providing material optimization suggestions, and a 3D web application merging BIM/IFC models with AI-driven carbon analysis. The study demonstrates that AI-assisted tools can meaningfully reduce building carbon footprints during the design phase.",
+  "journal": "Energies (MDPI)",
+  "llmModels": [
+    "gpt-3.5-turbo-instruct"
+  ],
+  "keywords": [
+    "carbon footprint",
+    "architectural design",
+    "architecture",
+    "building information modeling",
+    "machine learning",
+    "large language models"
+  ],
+  "methodology": "The study develops three progressive prototype tools: (1) a CNN trained on a simulated dataset of 3300 multifamily buildings to predict carbon footprints from design parameters and grayscale urban-layout images, (2) a web-based carbon calculator integrated with the ChatGPT gpt-3.5-turbo-instruct API for material substitution suggestions, and (3) a web-based 3D application that parses IFC BIM files for automated quantity takeoff and combines LCA calculation with LLM-driven design optimization recommendations.",
+  "results": "The CNN-based tool achieved a 25% total carbon footprint reduction (from 15.18 to 11.29 kgCO2eq/m2) in a test building by optimizing shape and construction technology. The LLM-assisted tools successfully suggested lower-carbon material replacements (e.g., straw insulation at 12.31 vs. mineral wool at 33.58 kgCO2eq/m3), though some suggestions were architecturally infeasible, highlighting the need for domain-specific AI models. The BIM-integrated 3D application calculated an embodied carbon footprint of 64,120 kgCO2eq for a test building and provided actionable AI-driven optimization suggestions.",
+  "url": "https://doi.org/10.3390/en17122997",
+  "taskEn": "Low-carbon building design",
+  "inputDataEn": "Mixed data (BIM, LCA database, design parameters)"
+}

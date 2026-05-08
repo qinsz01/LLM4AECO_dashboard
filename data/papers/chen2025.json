@@ -1,0 +1,38 @@
+{
+  "id": "chen2025",
+  "citation": "Chen et al./2025",
+  "title": "Can large language models replace human experts? Effectiveness and limitations in building energy retrofit challenges assessment",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "改造决策",
+  "phase": "翻新与拆除",
+  "inputData": "建筑节能改造案例",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "LLM在识别建筑节能改造挑战方面表现良好，但在排序方面可靠性不足，无法完全替代专家判断",
+  "pdfFile": "Chen et al. - 2025 - Can large language models replace human experts Effectiveness and limitations in building energy re.pdf",
+  "markdownFile": "Chen et al. - 2025 - Can large language models replace human experts Effectiveness and limitations in building energy re.md",
+  "abstract": "This paper investigates whether large language models (LLMs) can replace human experts in assessing building energy retrofit challenges by evaluating four mainstream LLM chatbots against a human expert benchmark. Using prompt engineering techniques including zero-shot and chain-of-thought (CoT) prompting, the study finds that LLMs perform well in identifying challenges (average similarity 0.825) but are less reliable in ranking them (average correlation 0.557), concluding that LLMs can streamline challenge identification but cannot fully replace expert judgment.",
+  "journal": "Building and Environment",
+  "llmModels": [
+    "GPT-4",
+    "GPT-4o",
+    "Gemini",
+    "Claude"
+  ],
+  "keywords": [
+    "large language model",
+    "building energy retrofit",
+    "challenges assessment",
+    "prompt engineering",
+    "generative artificial intelligence",
+    "chain-of-thought",
+    "semantic similarity",
+    "human expert comparison"
+  ],
+  "methodology": "Four mainstream LLMs (GPT-4, GPT-4o, Gemini, Claude) were evaluated using eight prompts combining zero-shot and chain-of-thought techniques with varying components (task, pre-knowledge, role, CoT), comparing their responses against a human expert benchmark from a Hong Kong office building retrofit study using GloVe-based semantic similarity and Kendall's Tau correlation metrics.",
+  "results": "LLMs achieved an average semantic similarity of 0.825 in identifying challenges and a correlation of 0.557 in ranking them compared to human experts; prompts with pre-knowledge boosted performance above average, CoT prompting improved ranking but not identification, and no significant performance gap existed among the four LLMs or their advanced versions.",
+  "url": "https://doi.org/10.1016/j.buildenv.2025.112891",
+  "taskEn": "Retrofit decision-making",
+  "inputDataEn": "Building energy retrofit cases"
+}

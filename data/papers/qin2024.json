@@ -1,0 +1,33 @@
+{
+  "id": "qin2024",
+  "citation": "Qin et al./2024",
+  "title": "Intelligent design and optimization system for shear wall structures based on large language models and generative artificial intelligence",
+  "year": 2024,
+  "category": "结构设计与分析",
+  "task": "结构设计优化",
+  "phase": "规划与设计",
+  "inputData": "文本（设计要求）+建筑CAD图纸",
+  "representation": "结构化",
+  "llmMethod": "Agent",
+  "contribution": "LLM驱动的剪力墙结构智能设计优化系统，通过自然语言接口实现设计参数自动优化",
+  "pdfFile": "Qin et al. - 2024 - Intelligent design and optimization system for shear wall structures based on large language models.pdf",
+  "markdownFile": "Qin et al. - 2024 - Intelligent design and optimization system for shear wall structures based on large language models.md",
+  "abstract": "Intelligent design technology for shear wall structures has great potential for enhancing design efficiency and addressing the challenges of tedious and repetitive design tasks. Recently, there has been a surge in the development of this technology. However, existing deep learning-based design methods for shear wall structures suffer from poor quality and usability issues. To address these challenges, this study proposes an intelligent design and optimization system for shear wall structures based on large language models (LLMs) and generative artificial intelligence (AI). The system employs an LLM as the core controller, which interacts with engineers to interpret their language descriptions and translate them into executable computer code. Subsequently, the system utilizes the corresponding structural generation and optimization methods to accomplish intelligent design tasks automatically. Furthermore, the system incorporates such critical factors as the empirical rules, mechanical performance, and material consumption into the structural optimization process. A unique three-level, two-stage optimization method is constructed based on topology, pattern, and size to enhance the overall design quality. Being able to complete the entire workflow of architectural drawing processing, structural scheme generation, and analysis model establishment, the proposed system enables automated and efficient design of shear wall structures. Through the analysis and validation of multiple cases, it was demonstrated that this system can significantly speed up the design by approximately 30 times compared to that of traditional methods whilst ensuring the safety and cost-effectiveness of the design schemes. Consequently, this study provides valuable insights for the advancement of automated structural design undertakings.",
+  "journal": "Journal of Building Engineering 95 (2024) 109996 (Elsevier)",
+  "llmModels": [
+    "GPT-3.5",
+    "ChatGPT"
+  ],
+  "keywords": [
+    "Intelligent design",
+    "Structural optimization",
+    "Shear wall structure",
+    "Large language model",
+    "Generative artificial intelligence"
+  ],
+  "methodology": "The system consists of three layers: (1) Data Layer: stores architectural CAD drawings (converted to JSON) and design requirement texts input by users; (2) Control Layer: an LLM-based controller (inspired by HuggingGPT/AutoGPT) that uses prompt engineering to parse user requirements, plan tasks via chain-of-thought, perform self-reflection, and invoke corresponding methods—generating JSON-formatted responses to call structural generation or optimization functions. The prompt framework includes 9 steps: Role, Goals, Constraints, Commands, Resources, Performance Evaluation, Response Format, Notes, and Dialogues; (3) Output Layer: presents design results as CAD drawings and parametric structural analysis models. For structural generation, two algorithms are available: GAN-based (pix2pixHD with U-Net generator and PatchGAN discriminator, trained on ~250 architectural-structural design pairs) and GNN-based (graph edge representation for predicting shear wall attributes). For structural optimization, a novel three-level, two-stage method is proposed: Stage 1 performs 'topology + pattern' optimization using a strengthened elitist genetic algorithm with empirical rule metrics (shear wall shape, corner support, wall ratio) and IoU similarity, employing k-means clustering and entropy weight method for variable reduction; Stage 2 performs 'pattern + size' optimization based on mechanical performance (story drift ratio, axial compression ratio, shear compression ratio penalty functions) and material cost minimization using parametric modeling via YJK-GAMA software.",
+  "results": "The intelligent design system achieved approximately 30x speedup compared to traditional manual design (73 minutes vs. 35 hours for an 8-story, 552 m² shear wall structure case study). Stage 1 optimization (459 s) improved empirical rule scores from AI-generated baseline (Sshape=0.45, Scorner=1.00) to near-engineer quality (Sshape=0.82, Scorner=1.00). Stage 2 optimization (59 min) further reduced total material cost from 925.49 k CNY (AI-generated) to 832.90 k CNY, which is 47.04 k CNY less than engineer-designed (879.94 k CNY) and 45.88 k CNY less than traditional optimization (878.78 k CNY). Steel reinforcement consumption decreased from 129.74 t (engineer) to 119.25 t (after Stage 2), and concrete from 1203.28 m³ to 1186.32 m³. The LLM controller accurately interpreted natural language design requirements and invoked correct functions with appropriate parameters, including seeking clarification when essential parameters were missing.",
+  "url": "https://doi.org/10.1016/j.jobe.2024.109996",
+  "taskEn": "Structural design optimization",
+  "inputDataEn": "Text (design requirements) + architectural CAD drawings"
+}

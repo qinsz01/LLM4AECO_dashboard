@@ -1,0 +1,32 @@
+{
+  "id": "qiu2025",
+  "citation": "Qiu et al./2025",
+  "title": "LLM-based framework for automated and customized floor plan design",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "平面图生成",
+  "phase": "规划与设计",
+  "inputData": "文本（用户需求）",
+  "representation": "结构化",
+  "llmMethod": "微调",
+  "contribution": "基于LLM的自动平面图设计框架，支持个性化定制和多样化生成",
+  "pdfFile": "Qiu et al. - 2025 - LLM-based framework for automated and customized floor plan design 2.pdf",
+  "markdownFile": "Qiu et al. - 2025 - LLM-based framework for automated and customized floor plan design 2.md",
+  "abstract": "Interpreting diverse and ambiguous natural language (NL) user requirements into precise floor plans poses significant challenges for design automation. This paper presents a large language model (LLM)-based framework to automate and customize vectorized floor plan design. This framework utilizes a syntax tree for NL parsing and automated dataset enrichment. A dual LLM approach involves using a recognition model for automated dataset augmentation, while a generation model interprets user inputs to create diverse, geometrically precise vectorized floor plans that align with complex semantic preferences. Experimental results demonstrate the proposed LLM-based models' effectiveness, achieving high accuracy in interpreting user requirements and high quality in generating corresponding vectorized floor plans. Additionally, a large-scale NL-based dataset is generated through the automatic recognition of existing floor plans. The proposed method can advance automated and user-centric floor plan design by enabling direct NL interaction and generating readily usable vectorized outputs.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "LLAMA 3.1-8b",
+    "BERT"
+  ],
+  "keywords": [
+    "Floor plan generation",
+    "Large language model",
+    "Vectorized design",
+    "NLP"
+  ],
+  "methodology": "A two-stage LLM-based framework is proposed. Stage 1: A syntax tree structure is defined to formalize natural language design requirements (semantic and structural) into a computable format, enabling rule-based NLP for automated dataset enrichment from the RPLAN dataset. Stage 2: Dual LLM models fine-tuned via LoRA on LLAMA 3.1-8b — FP-Interpreter recognizes floor plan images and generates NL descriptions, and FP-Generator produces vectorized floor plans (JSON-format polygons) from NL inputs. Both models use Chain-of-Thought prompting and are trained on an NVIDIA A100 40GB server. BERT is used for embedding-based evaluation metrics.",
+  "results": "FP-Interpreter significantly outperforms the base LLAMA model in floor plan recognition: BLEU improved by 250%, ROUGE-1 by 38%, ROUGE-2 by 119%, ROUGE-L by 92%, Cosine Similarity from 0.81 to 0.87, and Euclidean Distance reduced by 20%. FP-Generator achieves over 90% F1 score for room quantity accuracy, ~70% F1 for binary classification tasks (alignment, function layout), and 56% F1 for twelve-category quiet zone partitioning. Compared to House Diffusion, FP-Generator achieves higher IoU (0.88 vs 0.84) and better Chamfer Distance (7.24 vs 10.16), though with higher GED (9.36 vs 5.64). A large-scale Tell2Floorplan dataset of ~20,000 samples was automatically generated.",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106512",
+  "taskEn": "Floor plan generation",
+  "inputDataEn": "Text (user requirements)"
+}

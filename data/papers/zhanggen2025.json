@@ -1,0 +1,32 @@
+{
+  "id": "zhanggen2025",
+  "citation": "Zhang et al. / 2025",
+  "title": "Leveraging Large Language Model for Generalization in Building Energy Management",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "建筑能源管理与控制策略泛化",
+  "phase": "运维",
+  "inputData": "传感器数据（时间序列）/天气数据/建筑设备参数",
+  "representation": "结构化",
+  "llmMethod": "微调",
+  "contribution": "提出基于LLM的建筑能源管理框架SeqBECMF和BADT方法，将BEMS控制建模为序列决策任务，利用GPT-2骨干网络和建筑适配模块实现跨建筑零样本泛化控制，在CityLearn数据集上显著优于DRL基准方法",
+  "abstract": "Buildings are major contributors to global electricity consumption and emission, making the development of effective Building Energy Management Systems (BEMS) essential for improving energy efficiency, ensuring thermal comfort. Artificial Intelligence (AI)-based methods, particularly Deep Reinforcement Learning (DRL), have recently garnered significant attention in the BEMS. However, AI-based methods often face challenges related to generalization across diverse building environments. This paper introduces a novel approach for BEMS control, namely Sequence-Based Building Energy Modeling Framework (SeqBECMF), which models the energy management problem as a sequence modeling task. SeqBECMF leverages the power of large language model (LLM) to model long-term dependencies in building energy data. To further enhance adaptability across varying building environments, based on SeqBECMF, we propose the Building Adaptation Decision Transformer (BADT), which incorporates a building adapter module to scale actions based on specific environmental needs. BADT uses a generative pre-trained transformer (GPT) backbone to improve temporal modeling and represent diverse building conditions effectively. We evaluate the performance of the BADT framework on the CityLearn dataset and compare it to state-of-the-art DRL algorithms. Experimental results show that BADT consistently outperforms these DRL methods by minimizing key adverse metrics, including thermal discomfort hours, grid ramping, and electricity consumption. Moreover, BADT demonstrates strong generalization to unseen buildings, setting a new standard for scalable and adaptable BEMS solutions.",
+  "journal": "IEEE Transactions on Smart Grid",
+  "llmModels": [
+    "GPT-2 Small (124M, downscaled to 1.26M trainable parameters)"
+  ],
+  "keywords": [
+    "Building energy management system",
+    "large language model",
+    "generative pre-trained transformer",
+    "sequence modeling",
+    "generalization"
+  ],
+  "methodology": "The paper proposes SeqBECMF, which formulates BEMS control across different buildings as a unified sequence decision-making framework. In SeqBECMF, trajectories are redefined as sequences of (return-to-go, state, action) triplets, enabling the LLM to treat control as a trajectory modeling problem via next-token prediction rather than step-by-step decision rules. Building on this framework, BADT integrates three key components: (1) a State Expansion module with an Observation Forecaster that provides one-hour-ahead predictions of key variables (weather, solar generation, energy demands) using K-step historical observations; (2) an LLM Backbone based on GPT-2 Small (downscaled to 1,258,910 trainable parameters) with embedding layers, layer normalization, Transformer blocks (MHA + FFN), and a linear decoder for action generation; and (3) a Building Adapter (BA) module that adjusts latent actions to building-specific control commands using metadata (storage capacities, nominal power ratings). BADT is trained via supervised learning on expert trajectory data collected from pre-trained DRL agents (DDPG, PPO, TD3, SAC) across four training buildings, using MSE loss. The framework is evaluated on the CityLearn dataset with six buildings (four for training, two for unseen testing) over 2,207 hourly time steps.",
+  "results": "BADT consistently outperforms four traditional DRL algorithms (DDPG, TD3, PPO, SAC) and three generalization baselines (Meta-RL RL2, Federated RL FedRL, Behaviour Cloning) across all key metrics on both training and unseen testing buildings. BADT achieves superior thermal comfort (fewer discomfort hours), smoother ramping profiles, and competitive electricity consumption. In temperature control, BADT significantly outperforms SAC by maintaining indoor temperatures consistently within the setpoint range. During power outage scenarios, BADT demonstrates resilience through preemptive ESS charging, restoring comfort within one timestep. Under extreme conditions (high-frequency outages SAIFI=48, and resource-constrained buildings without PV/storage), BADT maintains relatively stable performance. Ablation studies confirm that the GPT-2 backbone outperforms LSTM and standard Transformer alternatives, and the BA module significantly reduces thermal discomfort hours (0.082 vs 0.202 on training, 0.186 vs 0.496 on testing). BADT converges in 1.83 hours with 4.54ms per-step inference latency, suitable for real-time BEMS deployment.",
+  "markdownFile": "Zhang et al. - 2025 - Leveraging Large Language Model for Generalization in Building Energy Management",
+  "url": "https://doi.org/10.1109/TSG.2025.3589202",
+  "taskEn": "Building energy management and control strategy generalization",
+  "inputDataEn": "Sensor data (time series) / weather data / building equipment parameters",
+  "pdfFile": "Zhang et al. - 2025 - Leveraging Large Language Model for Generalization in Building Energy Management"
+}

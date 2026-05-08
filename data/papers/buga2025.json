@@ -1,0 +1,42 @@
+{
+  "id": "buga2025",
+  "citation": "Buga et al./2025",
+  "title": "Large Language Models for Structured Information Processing in Construction and Facility Management",
+  "year": 2025,
+  "category": "BIM检索与管理",
+  "task": "信息管理",
+  "phase": "运维",
+  "inputData": "结构化数据库",
+  "representation": "结构化",
+  "llmMethod": "其他",
+  "contribution": "通过Function Calling和数据库schema信息，LLM在FM场景中的SQL执行有效性提高至67%",
+  "url": "https://doi.org/10.3390/electronics14204106",
+  "pdfFile": "Buga et al. - 2025 - Large Language Models for Structured Information Processing in Construction and Facility Management.pdf",
+  "markdownFile": "Buga et al. - 2025 - Large Language Models for Structured Information Processing in Construction and Facility Management.md",
+  "abstract": "This study examines how the integration of structured information affects the performance of large language models (LLMs) in the context of facility management. The aim is to determine to what extent structured data such as maintenance schedules, room information, and asset inventories can improve the accuracy, correctness, and contextual relevance of LLM-generated responses. We focused on scenarios involving function calling of a database with building information. Three use cases were developed to reflect different combinations of structured and unstructured input and output. The research follows a design science methodology and includes the implementation of a modular testing prototype, incorporating empirical experiments using various LLMs (Gemini, Llama, Qwen, and Mistral). The evaluation pipeline consists of three steps: user query translation (natural language into SQL), query execution, and final response (translating the SQL query results into natural language). The evaluation was based on defined criteria such as SQL execution validity, semantic correctness, contextual relevance, and hallucination rate. The study found that the use cases involving function calling are mostly successful. The execution validity improved up to 67% when schema information is provided.",
+  "journal": "Electronics 2025, 14, 4106 (MDPI)",
+  "llmModels": [
+    "gemini-1.5-flash",
+    "gemini-2.0-flash",
+    "gemini-2.5-flash-preview-04-17",
+    "gemini-2.5-flash-preview-05-20",
+    "llama-3.1-8b",
+    "llama-3.3-70b",
+    "llama-4-scout-17b-16e-instruct",
+    "llama-4-maverick-17b-128e-instruct",
+    "qwen-3-32b",
+    "mistral-saba-24b"
+  ],
+  "keywords": [
+    "large language models",
+    "LLMs",
+    "function calling",
+    "construction",
+    "facility management",
+    "building information modeling"
+  ],
+  "methodology": "Design science research (DSR) methodology with a text-to-SQL-to-text pipeline comprising three steps: (1) write_query (natural language to SQL), (2) execute_query (PostgreSQL execution), (3) generate_answer (SQL results to natural language). 120 experimental runs (6 questions x 10 models x 2 setups with/without database schema) evaluated on execution validity, correctness, contextual relevance, and hallucination rate.",
+  "results": "Providing database schema context is decisive for performance. Execution validity improved from 0% without schema to 35% on average (top 67%) with schema. Correctness rose from 38% to 58%. Hallucination rate dropped from 65% to 50% with schema. Qwen-3-32b achieved the highest correctness (1.00) and execution validity (0.33). LLaMA-4-Scout-17b achieved the best contextual relevance (0.75) and lowest hallucination rate (0.25). LLaMA-3.3-70b reached 0.92 correctness but only 0.08 execution validity. Execution validity and hallucination rate are not necessarily correlated.",
+  "taskEn": "Information management",
+  "inputDataEn": "Structured databases"
+}

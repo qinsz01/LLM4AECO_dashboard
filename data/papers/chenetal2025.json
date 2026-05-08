@@ -1,0 +1,36 @@
+{
+  "id": "chenetal2025",
+  "citation": "Chen et al. / 2025",
+  "title": "Customized large-scale model for human-AI collaborative operation and maintenance management of building energy systems",
+  "year": 2025,
+  "category": "运维管理",
+  "task": "故障诊断、运维问答、能耗预测",
+  "phase": "运维",
+  "inputData": "自然语言查询、物理参数时序数据、领域知识文档",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "contribution": "提出了一种定制化大模型用于建筑能源系统的人机协作运维管理，通过少样本学习的任务路由、递归聚类的RAG知识集成、自监督重构辅助的数据结构化变换实现知识问答与专业工具调用，故障诊断准确率达96.3%",
+  "abstract": "This paper proposes a customized large-scale model for human-AI collaborative operation and maintenance (O&M) management in building energy systems, where humans provide domain knowledge and specialized tools to guide AI while AI performs tasks to serve human needs. The model uses few-shot learning in prompt engineering for task routing (accuracy improved from 73.7% to 90.3%), recursive clustering-based retrieval-augmented generation for integrating multi-level energy-specific domain knowledge (outperforms ChatGPT-4o in 84% of survey questions), and self-supervised reconstruction-assisted data structuring transformation for invoking specialized tools to handle complex O&M tasks requiring modeling and computation (fault diagnosis accuracy of 96.3%, outperforming general large-scale models by over 50%).",
+  "journal": "Applied Energy",
+  "llmModels": [
+    "GLM-4-9B",
+    "ChatGPT-4o",
+    "ChatGPT-3.5"
+  ],
+  "keywords": [
+    "large-scale model",
+    "human-AI collaboration",
+    "operation and maintenance",
+    "building energy systems",
+    "domain knowledge",
+    "retrieval-augmented generation",
+    "fault diagnosis"
+  ],
+  "methodology": "基于开源可本地部署的GLM-4-9B构建定制化大模型，设计了三层框架：(1) 利用Prompt Engineering中的Few-shot Learning实现任务路由，将运维查询分配至直接响应、知识检索或工具调用三条路径；(2) 通过高斯混合模型递归聚类提取多语义层级的领域知识，结合RAG技术集成到定制化模型中；(3) 采用自监督掩码自编码器重构缺失物理参数，辅助数据结构化变换以调用深度学习专业工具完成故障诊断、能耗预测等复杂任务。以数据中心为研究对象，收集约4639份文档（1580万汉字）构建知识库。",
+  "results": "任务路由准确率从73.7%提升至90.3%（Few-shot Learning）；专家问卷评估中定制化模型在84%的问卷问题上优于ChatGPT-4o，整体得分83分；故障诊断准确率达96.3%，分别比GLM-4-9B、ChatGPT-3.5和ChatGPT-4o高出77.9%、66.9%和58.3%；能耗预测R-squared达0.959，RMSE比GLM-4-9B低42.2%；自监督重构在缺失1-3个参数时使诊断准确率分别提升51.5%、58.2%和57.1%。",
+  "url": "https://doi.org/10.1016/j.apenergy.2025.126169",
+  "markdownFile": "Chen et al. - 2025 - Customized large-scale model for human-AI collaborative operation and maintenance management of buil",
+  "taskEn": "Fault diagnosis, O&M Q&A, energy prediction",
+  "inputDataEn": "Natural language queries, physical parameter time series data, domain knowledge documents",
+  "pdfFile": "Chen et al. - 2025 - Customized large-scale model for human-AI collaborative operation and maintenance management of buil"
+}

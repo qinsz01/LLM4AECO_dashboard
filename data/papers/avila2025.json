@@ -1,0 +1,32 @@
+{
+  "id": "avila2025",
+  "citation": "Avila et al./2025",
+  "title": "Toward Responsible AI in High-Stakes Domains: A Dataset for Building Static Analysis with LLMs in Structural Engineering",
+  "year": 2025,
+  "category": "结构设计与分析",
+  "task": "结构分析",
+  "phase": "规划与设计",
+  "inputData": "建筑结构数据",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "创建了建筑结构静态分析的高质量数据集，为LLM在高风险领域的负责任应用提供基准",
+  "pdfFile": "Avila, C etal - 2025 - Toward Responsible AI in High-Stakes Domains A Dataset for Building Static Analysis with LLMs in Str....pdf",
+  "markdownFile": "Avila, C etal - 2025 - Toward Responsible AI in High-Stakes Domains A Dataset for Building Static Analysis with LLMs in Str....md",
+  "abstract": "Modern engineering increasingly operates within socio-technical networks, where decisions must be reliable and transparent. Large language models (LLMs) such as GPT promise efficiency by interpreting domain-specific queries and generating outputs, yet their predictive nature can introduce biases or fabricated values—risks that are unacceptable in structural engineering. This work presents a dataset that embeds generative AI into validated computational workflows through the Model Context Protocol (MCP). MCP enables API-based integration between ChatGPT (GPT-4o) and numerical solvers by converting natural-language prompts into structured solver commands. This creates context-aware exchanges—for example, transforming a query on seismic drift limits into an OpenSees analysis—whose results are benchmarked against manually generated ETABS models. The dataset contains prompts, GPT outputs, solver-based analyses, and comparative error metrics for four reinforced concrete frame models designed under Ecuadorian (NEC-15) and U.S. (ASCE 7-22) codes. The end-to-end runtime for these scenarios, including LLM prompting, MCP orchestration, and solver execution, ranged between 6 and 12 s, demonstrating feasibility for design and verification workflows.",
+  "journal": "Data (MDPI)",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "generative AI-assisted structural analysis",
+    "model context protocol",
+    "human-machine interaction",
+    "computational efficiency",
+    "LLM-FEM integration"
+  ],
+  "methodology": "The study employs a modular client-server workflow structured under the Model Context Protocol (MCP) with three functional layers: (1) a Client Layer processing user prompts through GPT-4o and translating them into structured JSON schemas specifying geometry, materials, and load conditions; (2) a Server Layer implemented with FastAPI that validates inputs, orchestrates tool invocation, and manages execution order; (3) an External Application Layer integrating OpenSeesPy for seismic analyses including inter-storey drift evaluation, shear force distribution, and modal response. CIDI-style (Context-Instruction-Details-Intent) natural language prompts were used to generate four reinforced concrete frame models (Cases A–D) with varying geometry (symmetric/asymmetric, low-rise/mid-rise). Four computational groups were compared: standalone GPT, GPT+MCP, manual OpenSees, and manual ETABS (benchmark). Validation was performed by benchmarking GPT+MCP results against ETABS models using relative error analysis across storey drift, maximum displacement, base shear, and building period.",
+  "results": "The GPT+MCP framework produced results consistent with conventional structural analysis software (ETABS), with relative errors below 1.43% for maximum displacement. In contrast, standalone GPT exhibited high relative errors of 230–270% with large dispersion. GPT+MCP and manual OpenSees maintained near-identical outputs. The end-to-end runtime was reduced from approximately 12–15 min (manual ETABS integration) to only 6–12 seconds with the GPT+MCP pipeline, demonstrating significant computational efficiency. The dataset covers four study cases with four modelling groups each (16 total analyses), reporting inter-storey drifts, maximum displacements (m), base shear (kN), and fundamental periods (s) with relative error analyses.",
+  "url": "https://doi.org/10.3390/data10110169",
+  "taskEn": "Structural analysis",
+  "inputDataEn": "Building structural data"
+}

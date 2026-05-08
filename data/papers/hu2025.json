@@ -1,0 +1,33 @@
+{
+  "id": "hu2025",
+  "citation": "Hu et al., 2025",
+  "title": "AutoControl: An end-to-end fully automated workflow for control design of building energy systems",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "建筑能源系统控制设计",
+  "phase": "运维",
+  "inputData": "语义模型（Brick）",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "提出AutoControl框架，使用双智能体（语义解释器+控制专家）自动生成建筑HVAC系统的PI控制器代码，通过PSO进行参数优化",
+  "pdfFile": "Hu et al. - 2025 - AutoControl An end-to-end fully automated workflow for control design of building energy systems.pdf",
+  "markdownFile": "Hu et al. - 2025 - AutoControl An end-to-end fully automated workflow for control design of building energy systems.md",
+  "abstract": "This paper proposes AutoControl, an end-to-end fully automated workflow based on Large Language Models (LLMs) for designing control systems of building HVAC equipment. It employs two LLM-based agents — a semantic interpreter that extracts building system configuration from Brick models, and a control expert that generates Proportional-Integral (PI) controller code — followed by Particle Swarm Optimization (PSO) for parameter fine-tuning.",
+  "journal": "Energy",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Automated building control",
+    "Large language models",
+    "Heating",
+    "Ventilation and air conditioning systems",
+    "Brick schema",
+    "Particle swarm optimization"
+  ],
+  "methodology": "A dual-agent LLM framework where the first agent (semantic interpreter) parses Brick semantic models via SPARQL queries to extract measurement and control variables, and the second agent (control expert) uses prompt engineering to generate PI controller Python code, with PSO optimizing the proportional and integral gains in a virtual testbed (BOPTEST).",
+  "results": "Evaluated on three HVAC test cases (single-zone FCU, single-zone hydronic radiator, multi-zone hydronic heat pump) using BOPTEST, AutoControl achieved an average MAE of 0.323 deg C and an average RMSE of 0.766 deg C in temperature control over a one-week period, outperforming both baseline controllers and MPC in most metrics. The average API cost per design was US $0.029 using GPT-4o.",
+  "url": "https://doi.org/10.1016/j.energy.2025.138329",
+  "taskEn": "Building energy system control design",
+  "inputDataEn": "Semantic models (Brick)"
+}

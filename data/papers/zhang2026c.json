@@ -1,0 +1,35 @@
+{
+  "id": "zhang2026c",
+  "citation": "Zhang et al./2026",
+  "title": "Sketch-to-Energy Model Automation with Multimodal LLMs and Retrieval-Augmented Generation",
+  "year": 2026,
+  "abstract": "Building Energy Modeling (BEM) is critical for improving building energy efficiency. However, modeling in the early architectural design stages is often hindered by challenges such as extracting geometric information from sketches and configuring complex parameters. To address these challenges and enable efficient energy analysis in the early design phases, we propose an automated BEM method. Users only need to provide preliminary architectural floor plan sketches and modeling requirements in natural language, after which our method can automatically generate complete simulation models. The proposed method features two major innovations. First, we leverage multimodal large language models (multimodal LLMs) and computer vision techniques to generate structured 3D building geometry from hand-drawn sketches. The multimodal LLM denoises errors in sketches and extracts room functions and dimensions, while computer vision methods generate wall and window coordinates. Second, we employ a retrieval-augmented generation (RAG) technique to retrieve similar cases within the same ASHRAE climate zone from an EnergyPlus model database. The BEM parameters of these similar cases are used as prompts to guide the LLM in generating thermal parameters and operational schedules that align with real-world scenarios. The effectiveness of the method was validated through four test cases with diverse morphologies across three ASHRAE climate zones. Quantitative results demonstrate robust geometric reconstruction capabilities, achieving a mean wall length error of 0.05 m and a room function classification accuracy of 91.2%. The thermal and operational parameters generated are empirically grounded, resulting in simulation models that exhibit high consistency with expert-built benchmarks (average R2 > 0.995 for annual hourly loads). The average total modeling time was 8 min.",
+  "journal": "Energy and Buildings",
+  "pdfFile": "Zhang et al. - 2026 - Sketch-to-Energy model automation with multimodal LLMs and retrieval-augmented generation",
+  "markdownFile": "Zhang et al. - 2026 - Sketch-to-Energy model automation with multimodal LLMs and retrieval-augmented generation",
+  "url": "https://doi.org/10.1016/j.enbuild.2026.117387",
+  "category": "能耗管理与优化",
+  "task": "草图到建筑能耗模型自动化生成",
+  "taskEn": "Automated sketch-to-energy model generation",
+  "phase": "规划与设计",
+  "inputData": "建筑平面草图与自然语言建模需求",
+  "inputDataEn": "Architectural floor plan sketches and natural language modeling requirements",
+  "representation": "多模态",
+  "llmMethod": "RAG",
+  "llmModels": [
+    "GPT-4o",
+    "Gemini-2.5-Pro",
+    "Llama-3-8B-Instruct"
+  ],
+  "keywords": [
+    "Building energy modeling",
+    "Multimodal large language model",
+    "Retrieval-augmented generation",
+    "Computer vision",
+    "Automated sketch-to-energy",
+    "Early-stage energy analysis"
+  ],
+  "contribution": "提出了一种从手绘建筑草图和自然语言描述自动生成完整EnergyPlus仿真模型的方法，结合多模态大语言模型与计算机视觉技术实现几何重建，利用RAG技术从历史模型库检索相似案例指导热工参数生成。",
+  "methodology": "方法分为五个核心模块：需求解析器、建筑几何生成器（使用GPT-4o去噪草图并提取房间功能和尺寸，Gemini-2.5-Pro进行OCR和尺寸推断，计算机视觉方法生成墙体和窗户坐标）、热工参数生成器（基于RAG从EnergyPlus模型库检索相似案例）、运行参数生成器和IDF生成器。",
+  "results": "在四个不同形态和气候区的建筑案例上验证，墙体长度平均误差0.05 m，房间功能分类准确率91.2%，生成模型与专家基准的年小时负荷平均R2超过0.995，平均建模时间仅8分钟。"
+}

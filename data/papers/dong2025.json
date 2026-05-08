@@ -1,0 +1,37 @@
+{
+  "id": "dong2025",
+  "citation": "Dong et al./2025",
+  "title": "AI BIM coordinator for non-expert interaction in building design using LLM-driven multi-agent systems",
+  "year": 2025,
+  "category": "BIM检索与管理",
+  "task": "设计协调",
+  "phase": "规划与设计",
+  "inputData": "用户需求",
+  "representation": "文本",
+  "llmMethod": "Agent",
+  "contribution": "LLM驱动的多智能体系统使非专业用户能够通过自然语言与BIM工具交互，完成空间推理、元素创建、碰撞检测等任务",
+  "abstract": "The building construction domain relies heavily on human experts for specialized tasks, often leading to excessive workload and inefficiency. For example, building design coordination typically requires BIM coordinators to operate BIM tools on participants' behalf, with limited ability to capture procedural knowledge. To address this gap, this paper introduces AI-based BIM coordinators to enable non-BIM experts to seamlessly interact with BIM tools while automatically documenting valuable procedural information. The approach customizes five LLM-based agents equipped with fundamental building knowledge and skills. Through user prompts, the collaboration of 'bim_assistant' and 'checker' agents ensures the accuracy and consistency of generated code, while the 'sender' and 'executor' agents facilitate direct execution in BIM tools beyond text-based responses, with the 'terminator' ending the process. An AutoGen-Revit prototype demonstrates feasibility, flexibility, robustness, and time-cost effectiveness for common BIM-based design coordination tasks, including space reasoning, 3D element creation, clash detection, informative 3D view saving, documentation, and retrieval. This paper enables specialist-free workflows and generates procedural logs and images that serve as datasets for future analysis.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "OpenAI o1-mini",
+    "GPT-4-1106-preview",
+    "Claude Sonnet 4",
+    "Gemini 2.5 Flash",
+    "Mistral Medium",
+    "Codestral"
+  ],
+  "keywords": [
+    "Building information modeling (BIM)",
+    "Design coordination",
+    "Large language model-based multi-agent system",
+    "AutoGen",
+    "Agentic workflow"
+  ],
+  "methodology": "Proposes an AI BIM Coordination Workflow built on the AutoGen multi-agent framework integrated with Autodesk Revit via RabbitMQ messaging. Five specialized LLM-based agents are designed: (1) 'bim_assistant' generates Revit API Python code based on user natural language prompts, equipped with essential building knowledge and skillset functions; (2) 'checker' reviews generated code for correctness, IronPython compatibility, and Revit API compliance; (3) 'sender' packages verified code for transmission via RabbitMQ; (4) 'executor' runs the code in the Revit environment and reports success or failure; (5) 'terminator' ends the session upon successful execution. The GroupChat collaboration pattern is used with a hierarchical topology. A Revit External Application with embedded WPF window (WebView2) provides the user interface. The system is validated on a campus dormitory BIM model for tasks including 3D space reasoning, building element creation, clash detection, and procedural knowledge capturing.",
+  "results": "For 3D building element creation tasks (30 tests), the AI BIM Coordination Workflow achieves an execution success rate of 93.3% and an accuracy of 86.7%, with average time of 87.3s and cost of $0.017 per task. For clash detection and procedural knowledge capturing tasks (30 tests), both execution success rate and accuracy reach 93.3%, with average time of 131.8s and cost of $0.03 per task. Compared with the Default Agent Workflow, the proposed workflow demonstrates superior consistency and correctness in semantic, geometric, and topological information queries. Among compared models, OpenAI o1-mini provides the best overall balance of accuracy, cost-effectiveness, and robustness across both task types, outperforming Claude Sonnet 4, Gemini 2.5 Flash, and Mistral models.",
+  "pdfFile": "Dong et al. - 2025 - AI BIM coordinator for non-expert interaction in building design using LLM-driven multi-agent system.pdf",
+  "markdownFile": "Dong et al. - 2025 - AI BIM coordinator for non-expert interaction in building design using LLM-driven multi-agent system.md",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106563",
+  "taskEn": "Design coordination",
+  "inputDataEn": "User requirements"
+}

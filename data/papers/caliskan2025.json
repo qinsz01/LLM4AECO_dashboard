@@ -1,0 +1,32 @@
+{
+  "id": "caliskan2025",
+  "citation": "Caliskan/2025",
+  "title": "Exploring possibilities and limits of ChatGPT: Usage in building design studies",
+  "year": 2025,
+  "category": "其他",
+  "task": "能力评估",
+  "phase": "规划与设计",
+  "inputData": "建筑设计文档与图像（DWG/DXF/PDF/JPEG/IFC/TXT/SKP）",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "ChatGPT在建筑设计中展现出内容分析和比较能力，但存在文件格式读取限制和过于泛化的评论",
+  "abstract": "This study investigates the integration of ChatGPT into architectural project workflows, focusing on its potential to support analysis and content creation. A semi-structured interview was defined to test ChatGPT's possibilities and limits during the design stage of a building project. The interview involved preparing project files of a case study and evaluating ChatGPT's ability to analyze data and generate new insights. The findings highlight ChatGPT's strengths in comparison and content analysis while identifying its limitations, such as difficulties reading certain file formats (DWG, DXF, IFC, SKP) and providing overly general critiques. The study concludes that while ChatGPT shows promise in enhancing architectural workflows, understanding its capabilities and limitations is essential for future research and practical application.",
+  "journal": "Turkish Journal of Engineering",
+  "llmModels": [
+    "ChatGPT-4o"
+  ],
+  "keywords": [
+    "Architectural Design",
+    "Artificial Intelligence",
+    "ChatGPT",
+    "Content Generation",
+    "Collaboration"
+  ],
+  "methodology": "A semi-structured interview was conducted with ChatGPT-4o using 14 prepared project files (DWG, DXF, PDF, JPEG, IFC, TXT, SKP) from a completed residential project (individual house with service facilities in Cameroon). The interview lasted approximately 4 hours and involved 45 queries with 13 file uploads across two evaluation dimensions: analysis capability (receive data, understand query, interpret data, analyze) and knowledge creation capability (process data, create knowledge). Responses were evaluated for accuracy, specificity, and utility in architectural design support.",
+  "results": "ChatGPT cannot read DWG, DXF, IFC, or SKP files. PDF-based drawings can be read and interpreted to a limited extent, while text information in PDFs is well-computed. JPEG images are analyzed better than technical drawings. Comparison and verification across multiple files are successful but require clear and detailed queries. Generated visuals do not originate from uploaded files and ChatGPT cannot revise or improve existing visuals. Critiques and recommendations tend to be overly general, requiring multiple iterations for content-specific responses. Quantitative outputs such as cost estimates and schedules are supportive. Text-based meeting records are processed well and cross-file comparison is effective. Elevation drawing versus render comparison was successful. ChatGPT cannot read dimensions or understand drawing scales.",
+  "pdfFile": "Caliskan - 2025 - Exploring possibilities and limits of ChatGPT Usage in building design studies.pdf",
+  "url": "https://doi.org/10.31127/tuje.1591495",
+  "markdownFile": "Caliskan - 2025 - Exploring possibilities and limits of ChatGPT Usage in building design studies.md",
+  "taskEn": "Capability assessment",
+  "inputDataEn": "Architectural design documents & images (DWG/DXF/PDF/JPEG/IFC/TXT/SKP)"
+}

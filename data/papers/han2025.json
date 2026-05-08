@@ -1,0 +1,35 @@
+{
+  "id": "han2025",
+  "citation": "Han et al., 2025",
+  "title": "Large language models driven BIM-based DfMA method for free-form prefabricated buildings: framework and a usefulness case study",
+  "year": 2025,
+  "category": "BIM检索与管理",
+  "task": "面向制造与装配的设计（DfMA）",
+  "phase": "规划与设计",
+  "inputData": "BIM模型+参数化设计+文本（设计规则）",
+  "representation": "其他",
+  "llmMethod": "Prompt",
+  "contribution": "建立了基于GPT-4的BIM-based DfMA框架，通过多轮对话实现自由形式预制建筑的设计、制造、物流和装配的整合，在692个对话场景中获得了91.1%的用户认可度",
+  "abstract": "The escalating demand for free-form buildings presents a formidable technological hurdle in the realm of prefabrication manufacturing and assembly. This research draws inspiration from recent advancements in large language models (LLMs) and seeks to harness their transformative potential in tandem with Building Information Modeling (BIM) to advance the Design for Manufacture and Assembly (DfMA) method. The ultimate aim is to catapult the prefabrication industry into an era characterized by unparalleled design freedom and heightened efficiency. The research includes contributions from the following four areas: (1) A review of the literature on DfMA theories, specifically fabrication and construction. (2) The development of a BIM-based DfMA method framework, including the methodological basis, Design for Manufacturing (DfM), and Design for Assembly (DfA). (3) A pipeline for LLMs driven BIM-based DfMA method framework and a validation using the Decathlon Solar Team design-build practice at the University of Washington's Lotus House. (4) An evaluation of 692 conversation scenarios to verify the feasibility of our proposal. We get a 91.1% user agreement on average based on GPT4. The research results could guide the workflow in building a lifecycle for DfMA practices in the future smart manufacturing era.",
+  "journal": "Journal of Asian Architecture and Building Engineering",
+  "llmModels": [
+    "GPT-4",
+    "ChatGPT",
+    "Llama 2",
+    "Chat-Yuan"
+  ],
+  "keywords": [
+    "Free-form",
+    "Large language models (LLMs)",
+    "Prefabrication",
+    "Design for manufacturing and assembly (DfMA)",
+    "Building information modeling (BIM)"
+  ],
+  "methodology": "Adopts an interrelated three-step research process: (1) Theoretical analysis reviewing DfMA literature on fabrication and construction processes and the rise of LLMs. (2) Framework development establishing an LLMs driven BIM-based DfMA method framework comprising three components: Methodological Foundation (BIM-based workflow with IPD principles and parametric design), Design for Manufacturing (DfM, covering prefabrication system design, panel and modular prefabrication, and manufacturing process design), and Design for Assembly (DfA, covering logistics and supply chain management, assembly process planning, and error control). (3) Experimental verification using the Lotus House free-form prefabricated building project, validating the framework through 692 conversation scenarios evaluated by 20 participants (designers, workers, and architecture students) across four LLM models.",
+  "results": "GPT-4 achieved the highest user agreement rate of 91.1% across all three user categories (designer: 91.7%, worker: 86.3%, student: 95.3%), followed by ChatGPT at 83.5%, Llama 2 at 73.8%, and Chat-Yuan at 69.1%. A user bias was observed with students more likely to agree with LLM outputs compared to workers. The evaluation of 692 conversation scenarios confirmed the feasibility and practical applicability of the proposed LLM-driven BIM-based DfMA framework for free-form prefabricated buildings.",
+  "url": "https://doi.org/10.1080/13467581.2024.2329351",
+  "pdfFile": "Han et al. - 2025 - Large language models driven BIM-based DfMA method for free-form prefabricated buildings framework.pdf",
+  "markdownFile": "Han et al. - 2025 - Large language models driven BIM-based DfMA method for free-form prefabricated buildings framework.md",
+  "taskEn": "Design for manufacture and assembly (DfMA)",
+  "inputDataEn": "BIM models + parametric design + text (design rules)"
+}

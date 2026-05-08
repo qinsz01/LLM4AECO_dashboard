@@ -1,0 +1,33 @@
+{
+  "id": "shao2025",
+  "citation": "Shao et al./2025",
+  "title": "Advancing crack detection with generative AI for structural health monitoring",
+  "year": 2025,
+  "category": "运维管理",
+  "task": "裂缝检测与图像分类",
+  "phase": "运维",
+  "inputData": "合成图像+现场图像",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "提出结合文本到图像扩散模型与GPT-4的合成裂缝图像生成框架，通过提示工程方法生成大规模多样化训练数据，显著提升裂缝分类和目标检测精度",
+  "abstract": "Monitoring structural integrity through accurate crack detection is fundamental to ensuring the safety and longevity of civil engineering infrastructure. Vision-based methods, supported by advancements in deep learning, have gained prominence in structural health monitoring (SHM). However, these methods often suffer from limited performance due to insufficient diversity and scale in crack image datasets, which are costly and challenging to acquire. This study introduces a novel framework that integrates a text-to-image generative model with large language models to synthesize realistic crack images for training deep neural networks. A prompt engineering approach is utilized to generate high-quality textual descriptions, guiding the creation of a large-scale, diverse dataset that simulates a wide range of crack scenarios. The synthesized dataset significantly enhances model training, as demonstrated in two key SHM tasks: crack classification and crack object detection. Neural networks trained with the augmented dataset show up to a 60% improvement in precision over baseline models trained on real-world data alone. These results highlight the potential of generative models to address data scarcity in SHM, enabling more robust and accurate crack detection. This research provides a scalable and efficient solution for improving machine learning-based SHM applications and paves the way for further exploration of generative methods in structural monitoring tasks.",
+  "journal": "Structural Health Monitoring",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "Crack detection",
+    "structural health monitoring",
+    "synthesized image generation",
+    "ChatGPT",
+    "computer vision",
+    "deep learning"
+  ],
+  "methodology": "The proposed framework integrates a text-to-image Rectified Flow Model (RFM, based on Stable Diffusion 3 architecture) with GPT-4 for synthesized crack image generation. The workflow consists of three stages: (1) GPT-4 generates a pool of raw text prompts describing various crack scenarios (e.g., cracks on concrete, asphalt, bridges under different conditions); (2) A prompt engineering process selects RFM-preferred prompts by generating test images from each raw prompt and manually evaluating image quality, retaining only prompts that consistently produce high-quality, realistic crack images; (3) Each selected prompt produces multiple images by varying the RFM seed value while keeping all other hyperparameters fixed. This yields 4000 synthesized images (2000 positive crack images and 2000 negative undamaged structure images). The RFM uses CLIP-L and CLIP-G encoders for text conditioning and T5-v1.1-XXL for context representation, with a Multimodal Diffusion Transformer architecture for image reconstruction. The framework was validated through two experiments: crack classification using VGG-16 on the CCLA dataset augmented with synthesized data, and crack object detection using YOLOv5 on the CCDD dataset augmented with synthesized data, both tested against the web-sourced WCED dataset.",
+  "results": "Crack classification (VGG-16): Precision improved from 0.336 (baseline, CCLA only) to 0.9396 (CCLA + 2000 synthesized positive + 2000 negative images), with F1-score rising from 0.347 to 0.932. Crack object detection (YOLOv5): Precision improved from 0.2425 (baseline, CCDD only) to 0.8382 (CCDD + 1200 synthesized positive images), mAP-0.5 from 0.2983 to 0.8374, and mAP-0.5:0.95 from 0.0762 to 0.6797. The synthesized dataset also demonstrated better structural similarity (SSIM 0.0427 vs 0.0244) and t-SNE clustering alignment with real-world test data compared to the original training dataset.",
+  "url": "https://doi.org/10.1177/14759217251369000",
+  "pdfFile": "Shao et al. - 2025 - Advancing crack detection with generative AI for structural health monitoring.pdf",
+  "markdownFile": "Shao et al. - 2025 - Advancing crack detection with generative AI for structural health monitoring.md",
+  "taskEn": "Crack detection and image classification",
+  "inputDataEn": "Synthetic images + on-site images"
+}

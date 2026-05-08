@@ -1,0 +1,34 @@
+{
+  "id": "zhangautoem2025",
+  "citation": "Zhang et al. / 2025",
+  "title": "Automatic building energy model development and debugging using large language models agentic workflow",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "能耗模型开发与调试",
+  "phase": "规划与设计",
+  "inputData": "文本（自然语言描述）+IDF文件（EnergyPlus模型）",
+  "representation": "文本",
+  "llmMethod": "Agent",
+  "abstract": "Building energy modeling (BEM) is a complex process that demands significant time and expertise, limiting its broader application in building design and operations. This paper investigates the feasibility of automating BEM using LLM agentic workflow. A generic LLM-planning-based workflow was developed that takes a building description as input and generates an error-free EnergyPlus building energy model. The workflow includes four core agents: 1) Building Description Pre-Processing, 2) IDF Object Information Extraction, 3) Single IDF Object Generator Suite, and 4) IDF Debugging Agent. The case study demonstrates successful translation of a building description into an error-free EnergyPlus model for the iUnit modular building at the National Renewable Energy Laboratory, with 100% success rate across 10 trials.",
+  "journal": "Energy & Buildings",
+  "llmModels": [
+    "GPT-4 (gpt-4-0613)",
+    "GPT-4 Turbo (gpt-4-turbo-2024-04-09)",
+    "Gemini 1.0 Pro"
+  ],
+  "keywords": [
+    "Building energy modeling",
+    "Complex system modeling",
+    "Large language model",
+    "Generative artificial intelligence",
+    "Agentic workflow"
+  ],
+  "methodology": "Developed a multi-agent LLM-planning-based workflow using LangChain to automate EnergyPlus IDF file generation and debugging from natural language building descriptions. The workflow decomposes the complex BEM process into four sequential agents: (1) Building Description Pre-Processing Agent standardizes units and cleans input data; (2) IDF Object Information Extraction Agent (with sub-agents for materials/construction, internal loads, and HVAC) identifies and categorizes all IDF objects; (3) Single IDF Object Generator Suite (923 sub-agents) generates individual IDF objects using templates with IDD file rules for default values; (4) Debugging Agent iteratively runs EnergyPlus simulations, analyzes error files, and corrects faulty IDF objects through feedback loops. Temperature was set to 0 for consistency. The workflow was validated on the iUnit modular building at NREL.",
+  "results": "The developed agentic workflow achieved a 100% success rate across 10 trials in generating error-free and accurate EnergyPlus IDF files. The workflow outperformed naive single-prompt engineering (which produced 33 errors including severe syntax and reference errors), the Gemini 1.0 Pro model (which failed to generate syntactically correct IDF objects), and manual modeling in time efficiency: completing the model in 9 minutes versus 4 hours for an experienced modeler and 2 weeks for a student. The Debugging Agent successfully resolved all pre-debugging errors including zero door thickness, HVAC template setpoint reference errors, construction-material reference errors, and missing schedule objects.",
+  "contribution": "提出首个面向建筑能耗建模全流程的LLM多智能体工作流，实现了从自然语言建筑描述到无错误EnergyPlus模型的端到端自动化生成与调试，显著提升了建模效率与可及性",
+  "url": "https://doi.org/10.1016/j.enbuild.2024.115116",
+  "markdownFile": "Zhang et al. - 2025 - Automatic building energy model development and debugging using large language models agentic workfl",
+  "taskEn": "Energy model development and debugging",
+  "inputDataEn": "Text (natural language descriptions) + IDF files (EnergyPlus models)",
+  "pdfFile": "Zhang et al. - 2025 - Automatic building energy model development and debugging using large language models agentic workfl"
+}

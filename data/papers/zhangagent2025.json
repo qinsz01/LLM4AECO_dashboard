@@ -1,0 +1,32 @@
+{
+  "id": "zhangagent2025",
+  "citation": "Zhang et al. / 2025",
+  "title": "Large language model-based agent Schema and library for automated building energy analysis and modeling",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "建筑能耗分析与建模Agent框架",
+  "phase": "全生命周期",
+  "inputData": "文本描述+CSV数据+PDF文档",
+  "representation": "文本",
+  "llmMethod": "Agent",
+  "contribution": "提出首个面向建筑能耗分析与建模的JSON格式LLM Agent Schema和开源Agent库，支持反射(ReAct)、顺序、层次、RAG四种Agent结构，在LangGraph、AutoGen、CrewAI三个平台上验证了平台无关性，数据驱动建模Agent平均完成率60%、CV-RMSE 11.4%",
+  "abstract": "Large language models (LLMs) agents can function as autonomous, interactive, goal-oriented systems, but in the building energy sector, there is currently no structured paradigm that researchers and engineers can follow to create, access, and share effective LLM agents without starting from scratch. This paper introduces a JSON-based agent schema designed to structure the description of LLM agents. Additionally, the paper introduces an open-source library on GitHub that serves as a centralized repository for LLM agents designed for building energy analysis and modeling, all structured according to this schema. This library is publicly accessible, allowing users to utilize and upload agents, thereby enhancing the accessibility of LLM agents. The case studies demonstrate the schema's effectiveness with four example agents developed across different platforms. These applications, developed on diverse platforms, successfully execute and seamlessly align with the proposed schema and can be reproduced without additional information beyond the schema.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Building energy analysis",
+    "Building energy modeling",
+    "Large language model",
+    "Agentic workflow",
+    "Agent schema and library"
+  ],
+  "methodology": "本研究提出一种平台无关的JSON格式LLM Agent Schema，灵感来源于LangGraph的图结构，定义了Agent工作流的核心组件：节点（agent node和action node）、边（simple/conditional/optional edge）、工具（tools）和记忆（memory）。Schema包含7个顶层键（id、description、model、nodes、edges、tools、long_term_memory），每个节点字典包含id、description、system_message、type、agent_tools、short_term_memory、human_input等子键。基于此Schema构建开源Agent库（GitHub），包含代码模板文件夹（支持LangGraph、CrewAI、AutoGen三种平台）和Agent工作流文件夹（每个Agent包含JSON schema文件、运行脚本、工具子文件夹、评估子文件夹和数据子文件夹）。通过四个案例研究验证Schema的有效性：(1)基于LangGraph的ReAct结构实现数据驱动建筑能耗建模自动化；(2)基于LangGraph的顺序结构实现物理建筑能耗建模（EnergyPlus IDF生成）自动化；(3)基于AutoGen的层次（Supervisor）结构实现建筑传感器/仿真数据可视化分析；(4)基于CrewAI的顺序结构+RAG实现技术文档知识提取。四个案例分别覆盖反射型、顺序型、层次型和RAG型Agent结构，展示了Schema的平台无关性和结构适应性。",
+  "results": "四个案例研究均成功运行并验证了Schema的平台无关性。案例1（数据驱动建模）：Agent自动生成无错误的Python代码完成机器学习建模，在两个数据集上平均完成率60%（参考建筑数据集70%，NREL真实建筑数据集50%），平均测试误差CV-RMSE为11.4%（分别为8.3%和14.5%），符合ASHRAE 15%的CV-RMSE阈值。案例2（物理建模）：Agent成功将自然语言建筑描述转换为EnergyPlus IDF对象，包含材料/构造、内部负荷、渗透和HVAC系统等对象，但存在一些精度问题（缺失schedule对象、部分字段留空、对象引用错误），生成的IDF适合作为参考草稿而非直接执行的最终版本。案例3（数据可视化）：Agent成功生成建筑能耗终端使用的饼图可视化，正确识别了大部分终端使用类别，但将'Electricity:Facility'总量错误识别为终端使用。案例4（RAG）：Agent成功从EnergyPlus工程参考文档中检索并回答'What is Baffle Heat Balance?'等技术问题，Re-Writer Agent将专业内容重写为非专业人员可理解的解释。研究还比较了LangGraph（高度可定制但设置复杂）、AutoGen（简化多Agent协作）和CrewAI（简洁但缺乏定制性）三个平台的特点。",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106244",
+  "markdownFile": "Zhang et al. - 2025 - Large language model-based agent Schema and library for automated building energy analysis and model",
+  "taskEn": "Building energy analysis and modeling agent framework",
+  "inputDataEn": "Text descriptions + CSV data + PDF documents",
+  "pdfFile": "Zhang et al. - 2025 - Large language model-based agent Schema and library for automated building energy analysis and model"
+}

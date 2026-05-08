@@ -1,0 +1,35 @@
+{
+  "id": "s2025",
+  "citation": "Yoon et al./2025",
+  "title": "Ontology-enabled AI agent-driven intelligent digital twins for building operations and maintenance",
+  "year": 2025,
+  "category": "运维管理",
+  "task": "基于智能数字孪生的运维服务（虚拟建模、故障检测与诊断、信息检索、本体更新）",
+  "phase": "运维",
+  "inputData": "传感器数据 + 本体（RDF/Brick Schema） + 运行数据",
+  "representation": "图结构",
+  "llmMethod": "RAG",
+  "contribution": "提出基于本体的AI智能体驱动的智能数字孪生框架，通过本体环境使AI智能体能够执行高层推理，完成建筑运维任务",
+  "abstract": "Building digital twins (DTs) are essential for enhancing operational efficiency, optimizing energy consumption, and reducing costs in buildings. However, the inherent complexity of buildings, their long operational lifespans, and the specific nature of the construction industry pose significant challenges in creating digital twins for buildings. Intelligent digital twins (IDTs) address these challenges by integrating existing digital twin models with AI, enabling a comprehensive representation of the building lifecycle while incorporating expert input. This study proposes an AI agent-based IDT framework using an ontological approach, where AI agents are engineered by DT administrators with building operations and maintenance (O&M) data, information, and applications within an ontological DT environment. Data and information generated within this environment are expressed in the DT ontology, enabling AI agents to gain a holistic understanding of the target system. Applications are integrated as a tool, thereby enabling AI agents to expand their actions and gain additional information from results. To validate this framework, virtual in-situ modeling (VIM) and fault detection and diagnosis (FDD) algorithms were implemented as DT applications to demonstrate the operation of the IDT system. Four case studies were conducted to demonstrate IDT-enabled O&M services, and LangSmith was used to visualize the AI agents' reasoning process as part of the result validation. It shows that AI agents have capabilities of performing building O&M tasks with high-level reasoning. The significance of this study lies in demonstrating the feasibility of implementing IDT models in building O&M by enabling AI agents to provide comprehensive, domain-specific knowledge and perform operational tasks, thereby serving as an assistant for both users and operators.",
+  "journal": "Journal of Building Engineering",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Digital twin",
+    "Intelligent digital twin",
+    "Operation and maintenance",
+    "Built environments",
+    "AI agent",
+    "Large language model",
+    "Ontology",
+    "Building informatics"
+  ],
+  "methodology": "Proposes an AI agent-based intelligent digital twin (IDT) framework built on a five-dimensional DT model extended with AI agent interactions and an ontological approach. The system uses LangGraph (LangChain SDK) with the ReAct algorithm for runtime agent logic, integrating three key elements: (1) System message for prompt engineering (SystemMessage/HumanMessage), (2) DT ontology constructed using RDF with Brick schema for semantic representation of the HVAC system, and (3) DT toolkits including VIM tool (virtual in-situ modeling via MLP), FDD tool (fault detection and diagnosis via residual analysis), RAG tool (retrieval augmented generation for ontology/data extraction), ontology file generator (OFG), and code interpreter. The target system is an HVAC system in a single-story building in China with 92 operational data points collected over June-August 2022. Four case studies validate the framework: virtual modeling, O&M information retrieval, building operator activities (FDD + report generation), and ontological O&M information updates. LangSmith is used to trace and validate AI agent reasoning processes.",
+  "results": "Case 1 (Virtual Modeling): AI agent autonomously created a virtual model for predicting return chilled water temperature with RMSE of 0.258 and R2 of 0.997, and automatically updated the ontology file. Case 2 (Information Retrieval): AI agent successfully navigated ontology entities to retrieve sensor/equipment specifications via RAG tool, and performed statistical analysis (skewness, kurtosis, median, mean, standard deviation) on temperature sensor data using code interpreter. Case 3 (FDD): AI agent detected errors (random error with std=0.2, bias=0.5 C, drift=1.1 C) on return chilled water temperature sensor with accuracy of 0.911, precision of 1.0, correct alarm rate of 0.898, and F1 score of 0.946, detecting fault at 67 min delay. AI agent also autonomously generated a comprehensive Word report with analysis, visualizations, and conclusions. Case 4 (Ontology Updates): AI agent successfully added new properties to existing entities and created new entities in the ontology, though exhibited limitations in property naming consistency and schema compliance (e.g., labeling new pump as 'Pump' instead of 'Chilled_Water_Pump1' per Brick schema).",
+  "url": "https://doi.org/10.1016/j.jobe.2025.112802",
+  "pdfFile": "Yoon, S. etal - 2025 - Ontology-enabled AI agent-driven intelligent digital twins for building operations and maintenance.pdf",
+  "markdownFile": "Yoon, S. etal - 2025 - Ontology-enabled AI agent-driven intelligent digital twins for building operations and maintenance.md",
+  "taskEn": "Intelligent digital twin-based O&M services (virtual modeling, fault detection & diagnosis, information retrieval, ontology update)",
+  "inputDataEn": "Sensor data + ontology (RDF/Brick Schema) + operational data"
+}

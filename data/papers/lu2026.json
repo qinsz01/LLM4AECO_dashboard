@@ -1,0 +1,33 @@
+{
+  "id": "lu2026",
+  "citation": "Lu et al./2026",
+  "title": "Human-AI interactive framework for smart evacuation safety analysis in large infrastructures",
+  "year": 2026,
+  "category": "施工管理与安全",
+  "task": "疏散安全设计评估",
+  "phase": "规划与设计",
+  "inputData": "CAD建筑平面图",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "实现智能化疏散安全评估和优化指导",
+  "url": "https://doi.org/10.1016/j.ress.2025.111695",
+  "pdfFile": "Lu et al. - 2026 - Human-AI interactive framework for smart evacuation safety analysis in large infrastructures.pdf",
+  "markdownFile": "Lu et al. - 2026 - Human-AI interactive framework for smart evacuation safety analysis in large infrastructures.md",
+  "abstract": "This study develops an Intelligent Evacuation Prediction Tool (IEPTool) that integrates deep learning (CNN, LSTM-Attention, Pix2Pix GAN) with a large language model for interactive evacuation prediction and safety assessment in large infrastructures. Trained on a simulation database of 66 real architectural floor plans across six infrastructure types, the tool predicts evacuation time, exit flow rates, and dynamic pedestrian density with over 90% accuracy, while the integrated LLM provides intelligent risk analysis and optimization guidance through natural language interaction.",
+  "journal": "Reliability Engineering and System Safety",
+  "llmModels": [
+    "LLM (unspecified)"
+  ],
+  "keywords": [
+    "automatic design",
+    "deep learning",
+    "pedestrian evacuation",
+    "building safety",
+    "smart resilience",
+    "large language model"
+  ],
+  "methodology": "The framework integrates CNN-based feature extraction, LSTM-Attention networks for exit flow sequence prediction, and Pix2Pix GAN for dynamic density heatmap generation, trained on a Pathfinder simulation database of 66 real floor plans from six large infrastructure types with rotational data augmentation; an LLM is incorporated via system prompts for interactive risk analysis and optimization guidance through a seven-step GUI workflow.",
+  "results": "The CNN module achieved R-squared of 99% for evacuation time prediction with testing tolerance of [-2.34%, +2.57%]; the LSTM-Attention module reached R-squared of 98% for flow sequences with tolerance of [-4.48%, +4.66%]; and the GAN-based density module achieved prediction error of [-10.24%, +9.76%], all substantially outperforming prior methods whose errors range from 6.5% to over 36%.",
+  "taskEn": "Evacuation safety design assessment",
+  "inputDataEn": "CAD architectural floor plans"
+}

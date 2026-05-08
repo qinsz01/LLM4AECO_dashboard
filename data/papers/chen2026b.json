@@ -1,0 +1,42 @@
+{
+  "id": "chen2026b",
+  "citation": "Chen et al./2026",
+  "title": "Personalized Safety Training for Construction Workers: A Large Language Model-Driven Multi-Agent Framework Integrated with Knowledge Graph Reasoning",
+  "year": 2026,
+  "category": "施工管理与安全",
+  "task": "建筑工人个性化安全培训",
+  "taskEn": "Personalized safety training for construction workers",
+  "phase": "施工",
+  "inputData": "建筑施工安全文档与事故报告",
+  "inputDataEn": "Construction safety training documents and accident reports",
+  "representation": "文本",
+  "llmMethod": "Agent",
+  "abstract": "Construction sites are inherently high-risk environments, making safety training for workers crucial to enhancing operational skills, reinforcing safety awareness, and reducing accident risks. Traditional centralized training often fails to engage workers due to monotonous nature and lack of relevance, leading to low efficiency. Moreover, critical resources such as operating instructions, safety guidelines, and accident reports are frequently mismanaged or underutilized. Therefore, this study proposes ConSTRAG, an innovative personalized construction safety training framework. By integrating large language model-empowered agents with knowledge graph reasoning, ConSTRAG generates tailored training materials, significantly improving the relevance and effectiveness of safety training. Validation tests conducted on a dataset of 11,020 questions achieved an average score of 81.25, exceeding the benchmark by 6.94. The generated personalized training materials were evaluated through an expert questionnaire survey, with an average score of 4.16 out of 5 across five dimensions. This research contributes to overcoming individual heterogeneity in construction safety training, enhances training efficiency and effectiveness, and holds potential for extension to other personnel training industries.",
+  "journal": "Computers in Industry",
+  "pdfFile": "Chen et al. - 2026 - Personalized safety training for construction workers A large language model-driven multi-agent fra",
+  "markdownFile": "Chen et al. - 2026 - Personalized safety training for construction workers A large language model-driven multi-agent fra",
+  "url": "https://doi.org/10.1016/j.compind.2025.104399",
+  "llmModels": [
+    "Qwen2.5-32B",
+    "Qwen2.5-14B",
+    "Qwen2.5-7B",
+    "Qwen2.5-3B",
+    "Qwen2.5-1.5B",
+    "Qwen2.5-0.5B",
+    "Llama3-8B",
+    "Phi3-3.8B",
+    "bge-m3"
+  ],
+  "keywords": [
+    "Construction safety",
+    "Safety training",
+    "Personalized knowledge generation",
+    "Knowledge graph",
+    "Large language model-based agent",
+    "Retrieval-augmented generation",
+    "Multi-agent framework"
+  ],
+  "contribution": "提出ConSTRAG框架，集成LLM驱动的多Agent与知识图谱推理，实现面向建筑工人的个性化安全培训材料自动生成，并开发了配套移动应用",
+  "methodology": "构建三个核心组件：(1)施工安全培训文档数据库，通过LLM Agent自动构建领域知识图谱(CRKG)和向量数据库；(2)施工事故报告数据库，通过网络爬虫收集事故报告，经LLM Agent过滤和关键信息提取构建事故知识图谱(CAKG)；(3)个性化知识检索与生成模块，根据工人画像提取直接关键词和关联关键词，结合图谱推理和向量检索生成个性化培训内容和测试题",
+  "results": "在11,020题的施工管理题库上，ConSTRAG使用Qwen2.5-32B取得平均分81.25，比NaiveRAG基准高6.94分；专家问卷评估五个维度平均得分4.16/5，其中事故案例相关性得分最高4.28；框架在填空题等细粒度知识检索任务上优势尤为显著"
+}

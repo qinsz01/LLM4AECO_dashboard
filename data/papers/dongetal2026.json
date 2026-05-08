@@ -1,0 +1,36 @@
+{
+  "id": "dongetal2026",
+  "citation": "Dong et al. / 2026",
+  "title": "A KG-LLM-Enabled Inspection Work Packaging Approach in Module Prefabrication",
+  "year": 2026,
+  "category": "施工管理与安全",
+  "task": "检验工作包自动生成",
+  "phase": "施工",
+  "inputData": "知识图谱+文本（检验计划、规范文档）",
+  "representation": "图结构",
+  "llmMethod": "Prompt",
+  "contribution": "提出KG-LLM驱动的模块化预制质量检验工作包自动生成方法，利用知识图谱丰富LLM在产品-检验任务映射中的领域知识，结合PSO优化聚类特征权重，实现检验任务的高效组织与资源分配",
+  "abstract": "This study develops a knowledge graph-large language model (KG-LLM)-enabled inspection work packaging approach for modular construction (MC) production. A KG is constructed to represent inspection knowledge encompassing tasks, products, inspectors, tools, frequencies, and production processes. A prompt-based product2inspection mapping approach leveraging LLM is developed, followed by inspection2package clustering through hierarchical agglomerative clustering with feature weights optimized by particle swarm optimization (PSO). The approach is validated on the HKU Wong Chu Hung student residence project with 526 inspection task-product pairs.",
+  "journal": "Journal of Computing in Civil Engineering (ASCE)",
+  "llmModels": [
+    "GPT-3.5 Turbo-0125",
+    "GPT-4 Turbo-2024-04-09",
+    "Claude 3.5 Sonnet",
+    "Llama 3-70B"
+  ],
+  "keywords": [
+    "Work package generation",
+    "Quality inspection",
+    "Module prefabrication",
+    "Knowledge graph",
+    "Large language models",
+    "Particle swarm optimization"
+  ],
+  "methodology": "Three-stage pipeline: (1) Semi-automatic KG construction from real-world MC project documents and codes/guidelines using GPT-3.5 Turbo for entity extraction with manual review; (2) Product2inspection mapping via LLM prompt engineering with semantic enrichment from KG, employing role-play, sequential task decomposition, and few-shot learning; (3) Inspection2package clustering using hierarchical agglomerative clustering (HAC) with PSO-optimized feature weights (inspection task, target product, production task, tools, frequency, inspector) and number of clusters. Ablation study across semantics enrichment, prompt engineering, and few-shot settings; comparison with BERT/DeBERTa/ALBERT deep learning models and rule-based methods.",
+  "results": "Claude 3.5 Sonnet achieved the best product2inspection mapping F1 score of 0.869, followed by GPT-4 Turbo (0.823), GPT-3.5 Turbo (0.748), and Llama 3-70B (0.665). LLM-based mapping significantly outperformed deep learning methods (BERT/DeBERTa/ALBERT F1: 0.10-0.66) and rule-based methods (best F1: 0.597). Semantic enrichment had the strongest positive impact on mapping accuracy. PSO-based feature weighting improved clustering metrics (silhouette score, Davies-Bouldin index, Calinski-Harabasz index) across all production phases. Expert evaluation (15 experts) gave average scores of 3.80-4.13 on a 5-point Likert scale for practicality, efficiency, and professional relevance of generated work packages.",
+  "markdownFile": "Dong et al. - 2026 - A KG-LLM-Enabled Inspection Work Packaging Approach in Module Prefabrication.md",
+  "pdfFile": "Dong et al. - 2026 - A KG-LLM-Enabled Inspection Work Packaging Approach in Module Prefabrication.pdf",
+  "url": "https://ascelibrary.com/doi/full/10.1061/JCCEE5.CPENG-6595",
+  "taskEn": "Automated inspection work package generation",
+  "inputDataEn": "Knowledge graphs + text (inspection plans, regulatory documents)"
+}

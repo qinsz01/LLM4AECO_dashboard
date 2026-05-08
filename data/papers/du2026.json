@@ -1,0 +1,38 @@
+{
+  "id": "du2026",
+  "citation": "Du et al./2026",
+  "title": "Text2BIM: Generating Building Models Using a Large Language Model-Based Multiagent Framework",
+  "year": 2026,
+  "category": "BIM检索与管理",
+  "task": "自然语言生成BIM模型",
+  "phase": "规划与设计",
+  "inputData": "自然语言描述",
+  "representation": "文本",
+  "llmMethod": "Agent",
+  "contribution": "提出Text2BIM多智能体框架，将自然语言转换为可编辑的BIM模型，集成基于规则的模型检查器实现迭代质量优化，实现建模-聊天工作流",
+  "abstract": "This paper proposes Text2BIM, an LLM-based multiagent framework that generates 3D building models from natural language instructions. The framework orchestrates four LLM agents (Instruction Enhancer, Architect, Programmer, and Reviewer) to collaborate and reason, transforming textual user input into imperative code that invokes BIM authoring tool APIs, thereby generating editable BIM models with internal layouts, external envelopes, and semantic information directly in the software. A rule-based model checker is integrated into the agentic workflow to guide LLM agents in resolving issues within generated models and iteratively improving model quality. Extensive experiments comparing three LLMs demonstrate that the approach can effectively generate high-quality, structurally rational building models aligned with user-specified abstract concepts. An interactive software prototype integrating the framework into Vectorworks showcases the potential of modeling-by-chatting.",
+  "journal": "Journal of Computing in Civil Engineering (ASCE)",
+  "llmModels": [
+    "o4-mini-high",
+    "Claude-sonnet-4",
+    "Gemini-2.5-Pro"
+  ],
+  "keywords": [
+    "BIM model generation",
+    "large language model",
+    "multiagent framework",
+    "natural language processing",
+    "prompt engineering",
+    "rule-based model checking",
+    "building information modeling",
+    "code generation",
+    "modeling-by-chatting"
+  ],
+  "methodology": "Proposes a multiagent framework with four specialized LLM agents: (1) Instruction Enhancer refines user instructions using CoT reasoning and function-calling to optionally consult the Architect; (2) Architect generates structured text-based building designs with coordinates and dimensions guided by architectural rules and few-shot learning; (3) Programmer writes Python code invoking 26 custom high-level tool functions that encapsulate BIM authoring software APIs, with self-reflection loops for error correction; (4) Reviewer interprets BCF issue reports from a rule-based model checker (Solibri, 30 rules) and provides code patches. A triple-loop architecture (human-in-the-loop, self-reflection loop, quality-optimization loop) iteratively improves model quality without fine-tuning. The framework is integrated into Vectorworks via a web palette plugin with Vue.js frontend.",
+  "results": "Across 25 test prompts with three repeated runs per LLM (534 IFC models total, including intermediate optimization results), most final BIM models achieved average pass rates exceeding 0.95 on 30 domain-specific rule checks. Claude-sonnet-4 showed the most consistent results with perfect accuracy and zero variance on the majority of prompts. The quality optimization loop reduced issue counts by approximately 70% for Claude-sonnet-4 and Gemini-2.5-Pro. CodeBERTScore F1 scores ranged from approximately 81% to 96% across all LLMs. Human expert evaluation confirmed good prompt adherence but identified gaps in real-world design feasibility, particularly regarding stairs, columns, structural beams, and building code compliance. Gemini-2.5-Pro demonstrated the best prompt adherence, while o4-mini-high occasionally exhibited hallucinations in opening placement.",
+  "url": "https://ascelibrary.org/doi/10.1061/JCCEE5.CPENG-6386",
+  "pdfFile": "Du, C. etal - 2026 - Text2BIM Generating Building Models Using a Large Language Model-Based Multiagent Framework.pdf",
+  "markdownFile": "Du, C. etal - 2026 - Text2BIM Generating Building Models Using a Large Language Model-Based Multiagent Framework.md",
+  "taskEn": "Natural language to BIM model generation",
+  "inputDataEn": "Natural language descriptions"
+}

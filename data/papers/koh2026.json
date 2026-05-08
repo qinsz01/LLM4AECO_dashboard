@@ -1,0 +1,34 @@
+{
+  "id": "koh2026",
+  "citation": "Koh et al. / 2026",
+  "title": "Cost-effective and minimal-intervention BIM information retrieval via condensed multi-LLM agent code generation",
+  "year": 2026,
+  "category": "BIM检索与管理",
+  "task": "BIM信息检索",
+  "phase": "全生命周期",
+  "inputData": "BIM+文本（自然语言查询）",
+  "representation": "文本",
+  "llmMethod": "Agent",
+  "contribution": "开发ARCBIM系统通过多智能体生成BIM检索代码，平均错误数降至1.26，80%代码在三次细化内可用",
+  "abstract": "The Architecture, Engineering, and Construction (AEC) industry increasingly relies on Building Information Modelling (BIM) to manage complex data. However, manual information retrieval remains inefficient and widespread. Existing automatic approaches focus on Industry Foundation Classes (IFC) format with template-based support, while the potential of large language models (LLMs) to generate retrieval code across diverse domain-specific languages and libraries remains underexplored. This paper introduces Alignment-Refinement Coder for BIM (ARCBIM), an LLM-based system with a 'prefix' function alignment module, a 'suffix' code refinement module, and an 'inflexion' condensed agent-design to improve cost-effectiveness. Evaluation on 80 diverse queries with the Revit C# API showed that ARCBIM reduced the average error count to 1.26 per query, compared with 5.75 for the baseline Standalone Agent. Moreover, 80% of generated code became usable within three local refinements. This system enhanced flexible BIM data retrieval with limited intervention across multiple complexities, providing a more user-centric automatic retrieval solution.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "GPT-4o",
+    "GPT-4o-mini"
+  ],
+  "keywords": [
+    "Building information modelling (BIM)",
+    "Large language model (LLM)",
+    "Domain specific language and library code",
+    "Multi-agent collaboration",
+    "Code generation",
+    "Agent design optimisation"
+  ],
+  "methodology": "Proposes the ARCBIM (Alignment-Refinement Coder for BIM) system with a word-formation-inspired architecture comprising three components: (1) 'Prefix' Synergistic BIM Aligners that align natural language queries to BIM elements, constraints, and domain code functions via hierarchical processing, hybrid search (root-semantics retrieval), and complementary routing through Keyword Aligners and Task Aligners validated by Judges; (2) 'Suffix' Versatile Code Checkers Conference that refines generated code through multiple specialised checker agents (Function Checker, Syntax Checker, Logic Checker, Output Checker) using a potential-marking method for error identification and correction; (3) 'Inflexion' Condensed Agent Design that optimises cost-effectiveness via role-based memory filtering, dynamic illustrative and contrasting few-shot learning, and task-sensitive language model optimisation (using GPT-4o-mini where performance is comparable to GPT-4o). The system is implemented using LangGraph for multi-agent orchestration with RAG-based hybrid retrieval, evaluated on 80 queries of varying complexity for Revit C# API code generation.",
+  "results": "ARCBIM reduced the average error count (AEN) to 1.26 per query compared with 5.75 for the Standalone Agent baseline, achieving a syntactic accuracy (SynAcc) of 58.75% and semantic accuracy (SemAcc) of 37.50%. The system's tolerance-based metrics showed 61.25% of code required at most 1 minor refinement (TBA@m1), 72.50% at most 2 (TBA@m2), and 76.25% at most 3 (TBA@m3), meaning approximately 80% of generated code became usable within three minor refinements. The condensed agent design reduced total token counts by 53.49% and licence fee costs by 53.78%. Parallel route averaged approximately 2 minutes per query while series route averaged approximately 3 minutes 10 seconds. Using the system reduced total coding time to approximately 35-40% of manual coding time.",
+  "pdfFile": "Koh et al. - 2026 - Cost-effective and minimal-intervention BIM information retrieval via condensed multi-LLM agent code.pdf",
+  "markdownFile": "Koh et al. - 2026 - Cost-effective and minimal-intervention BIM information retrieval via condensed multi-LLM agent code.md",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106585",
+  "taskEn": "BIM information retrieval",
+  "inputDataEn": "BIM + text (natural language queries)"
+}

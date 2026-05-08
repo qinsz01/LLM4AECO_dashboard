@@ -1,0 +1,36 @@
+{
+  "id": "deng2026",
+  "citation": "Deng et al./2026",
+  "title": "Graph-constrained association rule mining-based energy efficiency diagnosis method for HVAC systems with knowledge-enhanced large language model",
+  "year": 2026,
+  "category": "运维管理",
+  "task": "故障诊断",
+  "phase": "运维",
+  "inputData": "HVAC系统运行数据",
+  "representation": "结构化",
+  "llmMethod": "RAG",
+  "contribution": "图约束的关联规则挖掘结合知识增强LLM，实现了无标签、可解释的HVAC能效诊断，准确率达89.1%",
+  "url": "https://doi.org/10.1016/j.buildenv.2025.114056",
+  "pdfFile": "Deng et al. - 2026 - Graph-constrained association rule mining-based energy efficiency diagnosis method for HVAC systems.pdf",
+  "markdownFile": "Deng et al. - 2026 - Graph-constrained association rule mining-based energy efficiency diagnosis method for HVAC systems.md",
+  "abstract": "Heating, ventilation, and air-conditioning (HVAC) systems consume a large share of building energy and directly affect occupant comfort. Current energy-efficiency diagnostics depend mainly on expert-defined rule sets or large-scale data-driven models, which face limited scalability, heavy reliance on labeled data, and opaque decision-making. To this end, this paper proposes a novel graph-constrained association rule mining-based energy efficiency diagnosis method for HVAC systems with knowledge-enhanced large language model (LLM). First, an association graph encoding system topology, thermodynamic couplings, and control dependencies is constructed. It imposes neighborhood constraints in the association rule mining process, sharply reducing the search space and computational cost. Subsequently, through the retrieval-augmented generation mechanism, domain knowledge such as design parameters, domain expertise, and maintenance records is input into the LLM to automatically evaluate the effectiveness of each candidate rule and classify them, providing interpretable diagnostics. The experimental verification of the HVAC system operation data of a large occupied office building shows that the proposed method reduces the number of candidate rules by more than 95.10%, and the energy efficiency diagnosis accuracy reaches 89.08%.",
+  "journal": "Building and Environment",
+  "llmModels": [
+    "ChatGPT-4o",
+    "DeepSeek-R1",
+    "DeepSeek-V3",
+    "Qwen-3",
+    "LLaMA-4"
+  ],
+  "keywords": [
+    "HVAC systems",
+    "Energy efficiency diagnosis",
+    "Association rule mining",
+    "Knowledge-enhanced",
+    "Large language model"
+  ],
+  "methodology": "提出一种基于图约束关联规则挖掘与知识增强LLM的HVAC系统能效诊断方法。该方法包含三个模块：(1) 关联图构建：将原始传感器测量值、衍生能效指标和环境控制变量构建为多模态节点，有向边编码物理连接、热力学耦合和控制依赖关系，形成有向无权关联图；(2) 图约束关联规则挖掘(GC-ARM)：对监测数据进行离群值去除和区间离散化预处理，将候选项集限制在图的k跳邻域内，搜索具有高支持度和强局部物理相关性的关联规则，大幅缩减搜索空间；(3) 知识增强LLM能效诊断：通过RAG机制将设计参数、领域专业知识和维护记录等外部领域知识注入LLM，LLM对每条候选规则进行有效性评估和分类（无效规则、设计异常、运行异常、性能退化），并提供自然语言因果解释。实验采用深圳某大型办公建筑HVAC系统2024年全年运行数据，30个变量，758032条有效数据，k=2跳邻域约束，最小支持度0.02，最小置信度0.30。",
+  "results": "在真实HVAC系统运行数据上的实验结果表明：(1) 图约束将候选规则从6044条缩减至296条，减少95.10%以上，计算复杂度显著降低；(2) 知识增强后ChatGPT-4o诊断准确率最高达89.08%±1.70%，误报率7.13%±2.74%，漏报率12.63%±8.35%，一致性82.43%；(3) 所有五个LLM在知识增强后准确率均有提升，DeepSeek-R1提升最大（54.73%→76.13%，+21.4个百分点）；(4) 与传统阈值检测方法（准确率72.97%，误报率31.34%）相比，LLM方法显著优于工程方法且具有可诊断性；(5) 在ASHRAE RP-1043跨数据集验证中，ChatGPT-4o准确率达91.59%，验证了方法的跨系统泛化能力；(6) 传统无监督基线方法(EIF, DBSCAN, GNN-VAE, SAE)准确率仅49%-59%，漏报率高达40%-50%。",
+  "taskEn": "Fault diagnosis",
+  "inputDataEn": "HVAC system operational data"
+}

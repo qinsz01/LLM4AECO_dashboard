@@ -1,0 +1,31 @@
+{
+  "id": "oral2025",
+  "citation": "Oral et al./2025",
+  "title": "Usability of large language models for building construction safety risk assessment",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "安全风险评估",
+  "phase": "施工",
+  "inputData": "文本（风险描述）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "ChatGPT在建筑施工安全风险评估中提供了与专家相似的答案，在风险评分和预防措施选择上表现出色",
+  "abstract": "This study evaluates the usability of ChatGPT as a decision-support tool for occupational health and safety risk assessment in building construction by comparing its responses with those of ten human experts across 71 risks in 12 work items. Using a Modified Manhattan Distance similarity metric and statistical testing, the results show no significant difference between expert and ChatGPT risk scores, with ChatGPT demonstrating higher inter-session consistency than human experts.",
+  "journal": "Engineering, Construction and Architectural Management",
+  "llmModels": [
+    "ChatGPT 4.5 (Plus)"
+  ],
+  "keywords": [
+    "Safety risk assessment",
+    "Artificial intelligence",
+    "ChatGPT",
+    "Large language models (LLMs)"
+  ],
+  "methodology": "Ten experts and ten independent ChatGPT sessions rated 71 risks across 12 building construction work items using a 5-point Likert scale covering probability and multiple severity dimensions, with response similarity quantified via a Modified Manhattan Distance metric and risk score differences tested using two-sample Student's t-tests.",
+  "results": "No statistically significant difference was found between expert and ChatGPT risk scores under both TRS (p=0.54) and TotRS (p=0.80) methods. ChatGPT inter-session similarity ranged from 0.90 to 0.99, compared to 0.34 to 0.98 among human experts, and precaution selection disagreement was only 7.04% across 71 risks.",
+  "pdfFile": "Oral, M. etal - 2025 - Usability of large language models for building construction safety risk assessment.pdf",
+  "markdownFile": "Oral, M. etal - 2025 - Usability of large language models for building construction safety risk assessment.md",
+  "url": "https://doi.org/10.1108/ECAM-08-2024-1143",
+  "taskEn": "Safety risk assessment",
+  "inputDataEn": "Text (risk descriptions)"
+}

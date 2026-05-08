@@ -1,0 +1,37 @@
+{
+  "id": "holtgen2025",
+  "citation": "Höltgen et al., 2025",
+  "title": "Utilizing large language models for semantic enrichment of infrastructure condition data: a comparative study of GPT and Llama models",
+  "year": 2025,
+  "category": "BIM检索与管理",
+  "task": "基础设施状况数据语义增强",
+  "phase": "运维",
+  "inputData": "关系数据库（桥梁检测数据）+本体文件",
+  "representation": "图结构",
+  "llmMethod": "Prompt",
+  "contribution": "通过对比研究评估LLM在基础设施状况数据语义增强中的应用，发现LLM能有效提取和结构化状况信息，提高数据可用性",
+  "abstract": "Relational databases containing construction-related data are widely used in the Architecture, Engineering, and Construction (AEC) industry to manage diverse datasets, including project management and building-specific information. This study explores the use of large language models (LLMs) to convert construction data from relational databases into formal semantic representations, such as the resource description framework (RDF). Transforming this data into RDF-encoded knowledge graphs enhances interoperability and enables advanced querying capabilities. However, existing methods like R2RML and Direct Mapping face significant challenges, including the need for domain expertise and scalability issues. LLMs, with their advanced natural language processing capabilities, offer a promising solution by automating the conversion process, reducing the reliance on expert knowledge, and semantically enriching data through appropriate ontologies. This paper evaluates the potential of four LLMs (two versions of GPT and Llama) to enhance data enrichment workflows in the construction industry and examines the limitations of applying these models to large-scale datasets.",
+  "journal": "AI in Civil Engineering",
+  "llmModels": [
+    "GPT-4-turbo",
+    "GPT-4o",
+    "Llama-3-70b-instruct",
+    "Llama-3.1-405b-instruct"
+  ],
+  "keywords": [
+    "Architecture, Engineering, and Construction (AEC)",
+    "Large language models",
+    "Relational databases",
+    "Semantic enrichment",
+    "R2RML",
+    "Llama",
+    "GPT"
+  ],
+  "methodology": "A four-step pipeline is implemented: (1) SQL query generation from natural language input using LLMs with database schema context; (2) SQL-Ontology mapping generation using a JSON template to align SQL tables/columns with ontology classes/properties; (3) R2RML mapping generation based on the SQL-Ontology alignment; (4) RDF conversion using external R2RML processors (Morph-KGC). A self-correction mechanism retries once upon error detection. The system uses the Bridge Inspection Support System (BISS) relational database with BOT (Building Topology Ontology) and DOT (Damage Topology Ontology). Four prompting strategies are compared: zero-brief, zero-detailed, few-brief, and few-detailed. Three experiments of increasing complexity are conducted with 20 runs per configuration: simple SELECT-WHERE queries, aggregate functions with joins, and multi-table joins (one-to-many and many-to-many).",
+  "results": "GPT-4o performed best overall, achieving 100% syntax correctness in Experiment 1 across all prompting techniques and producing the most semantically accurate mappings. Llama-3.1-405b-instruct was the second best. Llama-3-70b-instruct struggled the most, failing entirely in Experiment 3 zero-brief. Few-shot prompting consistently improved results across all models. Detailed prompts sometimes hindered performance compared to brief ones, particularly in R2RML mapping generation. In Experiment 1, GPT-4o and Llama-3.1-405b-instruct achieved 100% valid mappings in all scenarios. In Experiment 2, only GPT-4o consistently produced valid mappings, while gpt-4-turbo and llama-3-70b-instruct failed in zero-shot settings. In Experiment 3 (most complex), only GPT-4o and Llama-3.1-405b-instruct produced valid mappings across all techniques. Common errors included incorrect R2RML mapping rules, wrong join IDs, overinclusive/underinclusive data, and hallucinated ontology properties. Self-correction improved results in some cases, e.g., Llama models in Experiment 3 surpassed first-try valid mappings after correction. The authors conclude LLMs are not yet reliable enough for real-world deployment but recommend a hybrid human-in-the-loop approach.",
+  "pdfFile": "Höltgen, L. etal - 2025 - Utilizing large language models for semantic enrichment of infrastructure condition data a comparati....pdf",
+  "markdownFile": "Höltgen, L. etal - 2025 - Utilizing large language models for semantic enrichment of infrastructure condition data a comparati....md",
+  "url": "https://doi.org/10.1007/s43503-025-00055-9",
+  "taskEn": "Infrastructure condition data semantic enrichment",
+  "inputDataEn": "Relational databases (bridge inspection data) + ontology files"
+}

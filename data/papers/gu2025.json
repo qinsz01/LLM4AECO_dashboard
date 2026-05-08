@@ -1,0 +1,34 @@
+{
+  "id": "gu2025",
+  "citation": "Gu et al./2025",
+  "title": "CECA: An intelligent large-language-model-enabled method for accounting embodied carbon in buildings",
+  "year": 2025,
+  "category": "环境与碳评估",
+  "task": "隐含碳评估",
+  "phase": "规划与设计",
+  "inputData": "BIM模型+材料设备清单",
+  "representation": "结构化",
+  "llmMethod": "微调",
+  "contribution": "LLM支持的CECA方法实现建筑隐含碳快速核算，准确率0.8412，计算效率提升216倍",
+  "pdfFile": "Gu et al. - 2025 - CECA An intelligent large-language-model-enabled method for accounting embodied carbon in buildings.pdf",
+  "markdownFile": "Gu et al. - 2025 - CECA An intelligent large-language-model-enabled method for accounting embodied carbon in buildings.md",
+  "abstract": "This paper proposes CECA (Construction Embodied Carbon Assessment), a method that leverages fine-tuned large language models to automatically parse material and equipment information from BIM models and match them with corresponding carbon emission factors for rapid embodied carbon accounting in buildings. Validated across 18 real-world building projects, CECA with Claude-3.5 achieves a matching accuracy of 0.8412, a mean absolute percentage error of 12.5% compared to traditional LCA, and a 216-fold improvement in computational efficiency.",
+  "journal": "Building and Environment",
+  "llmModels": [
+    "Claude-3.5",
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Embodied carbon",
+    "Large language model",
+    "Machine learning",
+    "Artificial intelligence",
+    "Life cycle assessment",
+    "Building"
+  ],
+  "methodology": "The CECA method fine-tunes LLMs (Claude-3.5 and GPT-4o) via LoRA on a construction engineering corpus to perform semantic parsing of material and equipment names from BIM models, automatically matching them with carbon emission factors from databases (CLCD and Climatiq) to estimate building embodied carbon.",
+  "results": "The fine-tuned Claude-3.5 model achieves the best matching accuracy of 0.8412 (F1-score: 0.6930), outperforming GPT-4o (accuracy: 0.6912) and traditional ML algorithms. Across 18 real-world building cases, CECA produces embodied carbon estimates with an average MAPE of 12.5% compared to LCA, while reducing computation time from 3.6 hours to approximately 60 seconds per building.",
+  "url": "https://doi.org/10.1016/j.buildenv.2025.112694",
+  "taskEn": "Embodied carbon assessment",
+  "inputDataEn": "BIM models + material & equipment lists"
+}

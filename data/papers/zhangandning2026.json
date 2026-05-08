@@ -1,0 +1,36 @@
+{
+  "id": "zhangandning2026",
+  "citation": "Zhang and Ning / 2026",
+  "title": "Improving construction contract question answering through embedding optimization and semantic chunking in large language models",
+  "year": 2026,
+  "category": "施工管理与安全",
+  "task": "合同问答与知识检索",
+  "phase": "施工",
+  "inputData": "建筑合同文件+法律法规+国家规范",
+  "representation": "其他",
+  "llmMethod": "微调",
+  "abstract": "Construction contract question answering (QA) is a knowledge-intensive task that requires timely responses to inquiries from multiple parties, but faces challenges in both accuracy and efficiency. Large Language Models (LLMs) excel at general-domain QA, but often show biases and hallucinations in specific domains. Although Retrieval-Augmented Generation (RAG) improves LLMs' performance with external knowledge, its effectiveness is limited due to the scarcity of domain-specific data and the poor segmentation and organization of documents. This research proposes a domain-adapted RAG strategy for construction contracts (CC-RAG) to enhance QA performance. The core improvements include: (1) a hierarchical approach to transform normative construction contract documents into structured basic knowledge units, with high-quality 'question-knowledge' pairs automatically generated using online LLMs to fine-tune the embedding model for domain adaptation; (2) automatic semantic similarity-based chunking with domain-adaptive embeddings and hierarchical clustering via HDBSCAN to form coherent chunk structures. CC-RAG achieves performance gains of 0.5% to 20% over base LLMs and traditional RAG strategies, and a local 7B-parameter model with CC-RAG outperforms a 671B-parameter online model by 4 percentage points.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "GPT-4o",
+    "Gemma-3 (1B/4B/12B)",
+    "Qwen-2.5 (0.5B/3B/7B)",
+    "Qwen-3 (14B/32B)",
+    "DeepSeek-V3 (671B)",
+    "sbert-base-chinese-nli"
+  ],
+  "keywords": [
+    "Large language model",
+    "Retrieval-augmented generation",
+    "Question answering",
+    "Construction contracts"
+  ],
+  "methodology": "The proposed CC-RAG framework consists of five steps: (1) Hierarchical knowledge base construction — 82 official Chinese construction contract documents are collected, cleaned, and segmented into 11,908 basic knowledge units based on their structural hierarchy (title/chapter/section/clause/sub-clause/item level). (2) Embedding model training — GPT-4o generates questions for each knowledge unit to form positive/negative sample pairs, and the sbert-base-chinese-nli model (0.11B parameters) is fine-tuned using CoSENT loss for domain-adapted semantic matching. (3) Chunking model training — an automatic chunking model segments knowledge units based on semantic similarity thresholds using the fine-tuned embeddings, and a clustered chunking model uses HDBSCAN for multi-level hierarchical clustering across sections/documents. (4) Dual vector database construction — document-level databases for document-specific questions and clustered vector databases for cross-sectional questions. (5) Bifurcated retrieval mechanism — routes questions to the appropriate vector database based on whether the question specifies a reference document. Evaluation is conducted on a test set of 537 real exam questions from Chinese professional construction qualification examinations across six LLMs (Gemma-3 1B/4B/12B, Qwen-2.5 0.5B/3B/7B) plus Qwen-3 14B/32B and DeepSeek-V3.",
+  "results": "CC-RAG achieves accuracy improvements of 0.5% to 20% across all tested LLMs compared to original LLMs. The largest gains are observed on bigger models: Gemma-3-12B improves by 15.46% and Qwen-2.5-7B by 7.45%. CC-RAG with Qwen-2.5-7B (76.72%) outperforms the original DeepSeek-V3-671B (72.07%) by 4 percentage points. Fixed-size chunking RAG often degrades performance. Ablation studies confirm all three modules contribute positively, with embedding fine-tuning showing the highest impact (removal causes 2%-20% accuracy drop). CC-RAG also outperforms conventional top-k retrieval by up to 9 percentage points on cross-sectional questions. The method generalizes across three different embedding models and demonstrates local deployment feasibility with an RTX 4090 GPU.",
+  "contribution": "提出面向建筑工程合同问答的领域自适应RAG策略（CC-RAG），通过嵌入模型微调、语义相似度自动分块和HDBSCAN层次聚类分块三方面优化，显著提升LLM在合同问答任务上的准确性，使本地部署的7B参数模型超越671B在线模型4个百分点",
+  "markdownFile": "Zhang and Ning - 2026 - Improving construction contract question answering through embedding optimization and semantic chunk",
+  "url": "https://doi.org/10.1016/j.aei.2025.104027",
+  "taskEn": "Contract Q&A and knowledge retrieval",
+  "inputDataEn": "Building contract documents + laws & regulations + national codes",
+  "pdfFile": "Zhang and Ning - 2026 - Improving construction contract question answering through embedding optimization and semantic chunk"
+}

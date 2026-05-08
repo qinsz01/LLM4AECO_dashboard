@@ -1,0 +1,32 @@
+{
+  "id": "pu2024",
+  "citation": "Pu et al./2024",
+  "title": "AutoRepo: A general framework for multimodal LLM-based automated construction reporting",
+  "year": 2024,
+  "category": "施工管理与安全",
+  "task": "自动报告生成",
+  "phase": "施工",
+  "inputData": "现场图像",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "contribution": "提出AutoRepo框架，结合无人车辆图像采集与多模态大语言模型，自动生成施工检查报告，显著提升检查效率",
+  "abstract": "Ensuring the safety, quality, and timely completion of construction projects is critical, and construction inspections play an important role in achieving these objectives. Nevertheless, the predominantly manual approach to inspections frequently results in inefficiencies and inadequate information management. These methods often fail to provide a comprehensive and detailed assessment, resulting in regulatory oversight and potential safety hazards. To address this issue, this paper presents a novel framework named AutoRepo for automated generation of construction inspection reports. In AutoRepo, the unmanned vehicles efficiently perform construction inspections and collect scene information, while the multimodal large language model (LLM) is used to automatically generate the inspection reports. The framework was applied and tested on a real-world construction site, demonstrating its potential to speed up the inspection process, significantly reduce waste of resource, and generate high-quality inspection reports that meet regulatory standards.",
+  "journal": "Expert Systems With Applications",
+  "url": "https://doi.org/10.1016/j.eswa.2024.124601",
+  "llmModels": [
+    "MiniGPT4-7B",
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Construction inspection",
+    "Large language models",
+    "Unmanned vehicles",
+    "Automated report generation"
+  ],
+  "methodology": "The AutoRepo framework combines unmanned vehicle-based image acquisition (Unitree AlienGo robotic dog) with image-based 3D reconstruction for checkpoint identification and A*-based path planning, followed by LoRA/QLoRA fine-tuning of the MiniGPT4-7B multimodal LLM on paired construction inspection image-report datasets to automatically generate standardized inspection reports.",
+  "results": "In a real-world case study on an under-construction building in Pingshan District, Shenzhen, AutoRepo reduced inspection time from 3 hours (manual) to 1 hour (automated). Three review teams (A, B, C) with experience-based weighting (45%, 35%, 20%) evaluated the reports, yielding weighted quality scores of 81.61, 82.26, and 82.84 for three inspection reports (construction standardization, progress, and quality), all exceeding the 80% passing threshold.",
+  "pdfFile": "Pu et al. - 2024 - AutoRepo A general framework for multimodal LLM-based automated construction reporting.pdf",
+  "markdownFile": "Pu et al. - 2024 - AutoRepo A general framework for multimodal LLM-based automated construction reporting.md",
+  "taskEn": "Automated report generation",
+  "inputDataEn": "On-site images"
+}

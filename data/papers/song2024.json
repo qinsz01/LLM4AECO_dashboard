@@ -1,0 +1,35 @@
+{
+  "id": "song2024",
+  "citation": "Song et al./2024",
+  "title": "Ontology-assisted GPT-based building performance simulation and assessment: Implementation of multizone airflow simulation",
+  "year": 2024,
+  "category": "其他",
+  "task": "建筑性能模拟",
+  "phase": "规划与设计",
+  "inputData": "文本（自然语言/建筑参数描述）",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "本体辅助的GPT-BPS系统实现多区域气流模拟和不确定性量化，显著提升模拟效率和可解释性",
+  "abstract": "Building performance simulation (BPS) is crucial for building performance assessments across its lifecycle. However, the complexity of buildings and the iterative nature of simulation poses challenges, leading to high costs and low values. Previous studies focused on simplification, but did not fully utilize advanced simulation engines. Despite recent advancements, there is a lack of research on leveraging artificial intelligence (AI), specifically generative pre-trained transformer (GPT), for BPS. Therefore, this study proposes a GPT-based BPS system, enhancing simulation efficiency and value by integrating simulation engines and advanced data analytics in the GPT environment. The ontology for GPT-based BPS is also developed to enable comprehensive, reliable, informative BPS environments. Based on this framework, case studies were conducted for GPT-based multizone airflow network simulation in a high-rise residential building using CONTAM software. They demonstrate GPT's capabilities in retrieving simulation data, visualizing results with data mining, answering questions based on building knowledge, checking compliance with design guidelines, and proposing design alternatives. Finally, this study emphasizes expert interventions with ontological engineering informatics to utilize strictly structured BPS engines.",
+  "journal": "Energy and Buildings",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "GPT",
+    "ChatGPT",
+    "Large language model (LLM)",
+    "Building performance simulation (BPS)",
+    "Building performance",
+    "Digital twins",
+    "Artificial intelligence",
+    "CONTAM"
+  ],
+  "methodology": "A GPT-based BPS system is proposed integrating four key elements: (1) prompt engineering by users, (2) GPT agents (GPT-4o via API), (3) BPS toolkit (IFG input file generator, OFG ontology file generator, CONTAM engine, and expert tools), and (4) engineering informatics by experts. The system uses Langchain SDK with SystemMessage for parameter extraction and SimpleJsonOutputParser for structured output. An ontology metadata schema based on RDF is developed to map relationships between building/system elements, simulation inputs, and outputs. Case studies implement GPT-based multizone airflow network simulation for high-rise residential buildings using CONTAM, with three test cases varying building configurations (units, shafts, floors). Performance assessment is evaluated through six questions of increasing difficulty covering result retrieval, visualization, data mining (clustering), physics-based analysis (NPL calculation), compliance checking, and design alternative generation, compared with and without ontology assistance.",
+  "results": "The GPT-based IFG successfully generated valid CONTAM input files for all three test cases (10-floor/4-unit, 10-floor/3-unit, 40-floor/4-unit buildings). With ontology assistance, GPT accurately retrieved specific airflow rates and pressure differences for individual building elements, while without ontology it could not provide correct answers due to inability to map simulation data to building locations. GPT with ontology produced effective visualizations of stack-driven pressure distributions and heatmaps; without ontology, it failed to generate meaningful visualizations. Clustering analysis of pressure distributions was correctly performed with ontology (3 clusters via elbow method) but produced incorrect results and hallucinations without ontology. GPT-4o demonstrated pre-trained knowledge of neutral pressure level (NPL) concepts in building physics. For compliance checking, GPT with ontology identified all dwelling unit entrance doors exceeding 40 Pa pressure difference at the top floor. For design optimization, GPT with ontology iteratively ran simulations adjusting envelope leakage area to achieve the target pressure difference below 40 Pa, demonstrating goal-seeking decision-making capabilities.",
+  "url": "https://doi.org/10.1016/j.enbuild.2024.114983",
+  "pdfFile": "Song, J etal - 2024 - Ontology-assisted GPT-based building performance simulation and assessment Implementation of multizo....pdf",
+  "markdownFile": "Song, J etal - 2024 - Ontology-assisted GPT-based building performance simulation and assessment Implementation of multizo....md",
+  "taskEn": "Building performance simulation",
+  "inputDataEn": "Text (natural language / building parameter descriptions)"
+}

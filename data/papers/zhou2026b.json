@@ -1,0 +1,34 @@
+{
+  "id": "zhou2026b",
+  "citation": "Zhou et al./2026",
+  "title": "Large Language Model Orchestrated Workflow Integrating Retrieval-Augmented Generation and Model Context Protocol Tools for Urban-Scale Simulation-Based Resilience Assessment",
+  "year": 2026,
+  "abstract": "Cities face growing risks from compound heatwaves and electricity outages, yet applying resilience-oriented urban building energy modelling (UBEM) at urban-scale remains methodologically complex and labour-intensive. This study investigates how large language models (LLMs), combined with retrieval-augmented generation (RAG) and a custom Model Context Protocol (MCP) toolchain developed in this work, can support transparent, reproducible and scalable workflows for urban-scale building resilience assessment. A literature-grounded RAG layer is constructed from journal articles on UBEM and city resilience and queried through structured templates so that an LLM orchestrates the distillation of scenario settings, resilience metrics and aggregation strategies into machine-readable guidance. These outputs drive an MCP-enabled EnergyPlus toolchain that reconfigures and simulates an existing archetype-based UBEM for Shanghai, comprising 113 archetypes representing 311,612 buildings, under a three-day extreme heat event followed by a prolonged cooling outage. The workflow produces resilience indicators, including comfort-band occupancy and threshold exceedance statistics. At urban scale, the share of occupied hours within 20-26 degrees C falls from 42.5% to 20.9%, while hours above 35 degrees C increase from 0% to 26.7% under the outage scenario, with industrial and transport archetypes showing the largest additional warming. The results demonstrate that the proposed workflow can complete a LLM orchestrated scenario-to-indicator urban resilience assessment pipeline and reorganise expert effort from manual scripting towards governance of scenarios, thresholds and indicators, while clarifying methodological limitations and pathways for extending similar workflows to other cities, hazard configurations and UBEM applications.",
+  "journal": "Building and Environment",
+  "pdfFile": "Zhou et al. - 2026 - Large language model orchestrated workflow integrating retrieval-augmented generation and model cont",
+  "markdownFile": "Zhou et al. - 2026 - Large language model orchestrated workflow integrating retrieval-augmented generation and model cont",
+  "url": "https://doi.org/10.1016/j.buildenv.2026.114553",
+  "category": "能耗管理与优化",
+  "task": "城市尺度建筑韧性评估",
+  "taskEn": "Urban-scale building resilience assessment",
+  "phase": "运维",
+  "inputData": "城市建筑模型数据与气象数据",
+  "inputDataEn": "Urban building model data and weather data",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "llmModels": [
+    "Gemini",
+    "Claude"
+  ],
+  "keywords": [
+    "Large language model",
+    "Retrieval-augmented generation",
+    "Model context protocol",
+    "City resilience",
+    "Urban-scale simulation",
+    "Urban building energy modelling"
+  ],
+  "contribution": "提出了一个LLM协调的工作流，结合RAG和自定义MCP工具链，实现了从文献检索到场景配置再到城市尺度建筑韧性评估的透明、可复现和可扩展的自动化流程。",
+  "methodology": "构建四步工作流：基于506篇文献构建RAG知识库（使用sentence-transformers和FAISS），通过结构化模板查询获取建模指导；使用Gemini模型从文献中提取场景设置和韧性指标；开发MCP工具链封装EnergyPlus仿真引擎；以上海为案例，涵盖113个建筑原型代表311,612栋建筑进行热浪停电场景仿真。",
+  "results": "在城市尺度上，停电场景下20-26摄氏度舒适区间的占用时间占比从42.5%降至20.9%，35摄氏度以上小时数从0%增至26.7%，工业和交通建筑类型升温最显著，验证了LLM协调的场景到指标城市韧性评估流程的可行性。"
+}

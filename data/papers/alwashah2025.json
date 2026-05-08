@@ -1,0 +1,42 @@
+{
+  "id": "alwashah2025",
+  "citation": "Alwashah et al./2025",
+  "title": "Generative artificial intelligence for construction: Use cases, trends, challenges, and opportunities",
+  "year": 2025,
+  "category": "其他",
+  "task": "综述",
+  "phase": "全生命周期",
+  "inputData": "文献数据（Scopus与Google Scholar）",
+  "representation": "文本",
+  "llmMethod": "其他",
+  "contribution": "通过混合方法综述（文献计量分析+定性系统综述），系统梳理了生成式AI在建筑行业中的五大应用领域、六大挑战和四级未来研究路线图",
+  "abstract": "This paper conducts a mixed-method review combining bibliometric analysis with qualitative thematic synthesis to examine generative AI applications in the Architecture, Engineering, and Construction (AEC) industry. A total of 148 publications from Scopus and Google Scholar (2014-2024) were analyzed. The bibliometric analysis identified 49 high-frequency keywords grouped into six thematic clusters. The qualitative synthesis examined five dominant application domains: (1) proactive safety monitoring and risk prevention, (2) generative AI for sustainable construction, (3) automating design through generative intelligence, (4) construction education, and (5) construction management. Six recurring challenges were identified: data availability and quality, computational complexity and costs, integration with existing workflows, ethical and regulatory concerns, workforce skill gaps, and reliability and trust. The study proposes a four-level research roadmap spanning industry-level considerations, organizational and stakeholder perspectives, project-level perspectives, and technological integration.",
+  "journal": "Journal of Building Engineering, Volume 112, 2025, 113802",
+  "llmModels": [
+    "GPT-4",
+    "ChatGPT",
+    "GPT",
+    "MiniGPT-4",
+    "DALL-E",
+    "RoboGPT"
+  ],
+  "keywords": [
+    "Generative AI",
+    "Construction management",
+    "Construction education",
+    "Mixed review",
+    "Smart construction",
+    "GANs",
+    "Large language models",
+    "BIM",
+    "Generative design",
+    "Diffusion models"
+  ],
+  "methodology": "Mixed-method review combining quantitative bibliometric analysis with qualitative systematic synthesis. 148 publications were retrieved from Scopus and Google Scholar (2014-2024), filtered using PRISMA criteria. VOSviewer was used for keyword co-occurrence network mapping and citation analysis, identifying 6 bibliometric clusters from 49 high-frequency keywords. Full-text qualitative review reclassified articles into 5 overarching thematic areas through inductive coding, followed by development of a forward-looking four-level research roadmap.",
+  "results": "Publication output grew rapidly from 1 paper in 2018 to 82 by September 2024. The largest thematic area was automating design through generative intelligence (33% of papers), followed by proactive safety monitoring (23%), construction management (20%), construction education (13%), and sustainable construction (11%). Six keyword clusters were identified: construction safety and monitoring, BIM and generative design, architectural and structural design, LLM in the AEC industry, AI in education, and GPT-driven automation in project management. The study identified six major adoption challenges and proposed a structured research roadmap across industry, organizational, project, and technological levels.",
+  "pdfFile": "Alwashah et al. - 2025 - Generative artificial intelligence for construction Use cases, trends, challenges, and opportunitie.pdf",
+  "markdownFile": "Alwashah et al. - 2025 - Generative artificial intelligence for construction Use cases, trends, challenges, and opportunitie.md",
+  "url": "https://doi.org/10.1016/j.jobe.2025.113802",
+  "taskEn": "Review/Survey",
+  "inputDataEn": "Literature data (Scopus & Google Scholar)"
+}

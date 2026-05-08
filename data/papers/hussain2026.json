@@ -1,0 +1,34 @@
+{
+  "id": "hussain2026",
+  "citation": "Hussain et al./2026",
+  "title": "Vision-Language Model-Based Intelligent Assistant for Onsite Construction Safety Inspection",
+  "year": 2026,
+  "abstract": "Construction site inspection demands a contextual understanding of dynamic job-site conditions, traditionally relying on inspectors' expertise combined with adherence to predefined safety regulations and industry standards to identify hazards. While vision-language models can detect and describe hazards, they struggle to correlate observations with regulations due to limitations in geometric reasoning. Recent studies show progress in compliance checking, but these models are still challenged by dynamic scenarios. This paper introduces a hybrid framework that combines geometric reasoning with LLM-powered interpretation to improve regulation-aware hazard detection. The system achieved high detection accuracy: 97% for ladder use, 94.6% for mobile scaffolding, and 99% for fire-related work. Captioning performance evaluated through BLEU, ROUGE, METEOR, and BERT Score showed strong semantic alignment. User feedback confirmed its efficiency and ease of use, even under dynamic conditions. By integrating visual data with regulatory reasoning, the proposed system offers a practical, domain-adapted solution for enhancing construction safety inspections.",
+  "journal": "Automation in Construction",
+  "pdfFile": "Hussain et al. - 2026 - Vision-language model-based intelligent assistant for onsite construction safety inspection",
+  "markdownFile": "Hussain et al. - 2026 - Vision-language model-based intelligent assistant for onsite construction safety inspection",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106728",
+  "category": "施工管理与安全",
+  "task": "施工现场安全检查与隐患识别",
+  "taskEn": "Onsite construction safety inspection and hazard identification",
+  "phase": "施工",
+  "inputData": "施工现场图像",
+  "inputDataEn": "Construction site images",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "llmModels": [
+    "YOLOv12",
+    "ChatGPT"
+  ],
+  "keywords": [
+    "safety management",
+    "hazard identification",
+    "computer vision",
+    "large language model",
+    "image captioning",
+    "mobile application"
+  ],
+  "contribution": "提出了一个混合推理框架，将计算机视觉的几何推理能力与大语言模型的语义理解相结合，开发了移动端智能助手用于施工现场安全检查和隐患识别。",
+  "methodology": "使用YOLOv12进行目标检测，通过基于规则的后处理算法评估安全合规性，再利用ChatGPT生成描述性安全字幕并支持交互式问答，部署为Android移动应用。",
+  "results": "在梯子使用、移动脚手架和动火作业三个场景中，检测准确率分别达到97%、94.6%和99%。用户评估显示系统在时间效率和易用性方面得分较高，BERTScore语义对齐良好。"
+}

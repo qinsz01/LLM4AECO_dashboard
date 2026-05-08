@@ -1,0 +1,38 @@
+{
+  "id": "c2025",
+  "citation": "Wu et al./2025",
+  "title": "Retrieval augmented generation-driven information retrieval and question answering in construction management",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "信息检索/问答支持",
+  "phase": "施工",
+  "inputData": "混合数据（项目文档：标准、施工方案、合同、会议纪要等）",
+  "representation": "结构化",
+  "llmMethod": "RAG",
+  "contribution": "提出RAG4CM框架，通过层次化知识池构建、新颖的检索算法（语义评估+分组+投票）和用户偏好学习机制，在施工管理问答任务中实现0.924 Top-3准确率和0.898答案准确率，超越开源框架和商业产品",
+  "abstract": "Construction management is a communication-intensive field, requiring prompt responses to queries from various stakeholders to ensure project continuity. However, retrieving accurate information from project documents is hampered by the mismatch in granularity between queries and vast contents and by inherent ambiguities in information. Large language models (LLMs) and retrieval-augmented generation (RAG) offer new opportunities to address the challenges. However, their effectiveness is limited by the segmentation of documents and insufficient consideration of engineers' preferences. Therefore, we propose a novel paradigm: RAG for Construction Management (RAG4CM). It includes three components: 1) a pipeline that parses project documents into hierarchical structures to establish a knowledge pool; 2) novel RAG search algorithms; and 3) a user preference learning mechanism. The first two components enhance granularity alignment and RAG results by integrating document-level hierarchical features with raw contents. The preference learning realizes continuously improved responses along with user-system interactions. We developed a prototype system and conducted extensive experiments, demonstrating that the knowledge pool efficiently accommodates texts, tables, and images. RAG4CM realized a 0.924 Top-3 and 0.898 answer accuracy, surpassing both open-source frameworks and commercial products. In addition, preference learning further increases answer accuracy by 1.3% to 9.5%.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "GPT-4",
+    "GPT-3.5",
+    "Qwen 2.0-instruct (72B)",
+    "Zidong Taichu 3.0",
+    "ERNIE 4.0",
+    "BGE-m3"
+  ],
+  "keywords": [
+    "Large language model",
+    "Retrieval augmented generation",
+    "Construction management",
+    "Information retrieval",
+    "Question answering",
+    "User preference learning"
+  ],
+  "methodology": "Proposes RAG4CM framework with three components: (1) A document processing pipeline that combines heuristic rules with GPT-4 to parse construction documents into hierarchical knowledge pool structures accommodating texts, tables, and images, using BGE-m3 for semantic embedding of both content and hierarchical path features; (2) A novel RAG search algorithm integrating semantic evaluation, information grouping by source nodes, and a relevance voting strategy that weighs each information piece's contribution to node-level relevance; (3) A local preference learning mechanism that records user-system interaction histories (queries, Top-K retrievals, user selections) and fine-tunes the BGE encoder using triplet loss to align retrieval with individual engineer preferences.",
+  "results": "RAG4CM achieves 0.924 Top-3 retrieval accuracy and 0.898 answer accuracy, outperforming fuzzy search (0.645), Langchain (0.693), Baidu App-builder (0.682), CAS-Zidong (0.662), Ali ModelScope (0.592), and MS-Azure with GPT-4 (0.817). The knowledge pool successfully parses 97.88% of documents and vectorizes 99.82% of contents. The relevance voting strategy improves Top-1 by up to 22.8%. Path features boost Top-3 and Top-6 by 9% and 12.4% respectively. Preference learning increases answer accuracy by 1.3% to 9.5%, with notable improvements in table data retrieval (Top-1 +15%) and business information search (Top-1 +9%).",
+  "url": "https://doi.org/10.1016/j.aei.2025.103158",
+  "pdfFile": "Wu, C. etal - 2025 - Retrieval augmented generation-driven information retrieval and question answering in construction m....pdf",
+  "markdownFile": "Wu, C. etal - 2025 - Retrieval augmented generation-driven information retrieval and question answering in construction m....md",
+  "taskEn": "Information retrieval / Q&A support",
+  "inputDataEn": "Mixed data (project documents: standards, construction plans, contracts, meeting minutes, etc.)"
+}

@@ -1,0 +1,34 @@
+{
+  "id": "guo2025b",
+  "citation": "Guo et al./2025",
+  "title": "Enhancing Visual-LLM for Construction Site Safety Compliance via Prompt Engineering and Bi-stage Retrieval-Augmented Generation",
+  "year": 2025,
+  "abstract": "The escalating frequency of safety incidents on construction sites requires an effective safety management framework. Traditional computer vision systems are constrained by their static nature, limited generalization, and inadequate semantic comprehension. This paper integrates a multi-modal Visual Language Model (VLM) with our proposed Bi-stage Retrieval-Augmented Generation (BiRAG) framework, which enhances safety compliance monitoring based on construction site images, with high scalability and adaptiveness to evolving safety standards without tedious model fine-tuning. A TriPhased prompt (TPP) and a decision-tree-based compliance judgment prompt are designed to enhance the VLM's ability to interpret worker behaviors and safety compliance from site images. A context-aware chunking strategy and hybrid retrieval algorithm are developed to improve the analysis against relevant safety regulations. Experiments with images collected from a real construction site in Hong Kong demonstrated a 7.73% increase in retrieval accuracy and an 11.66% improvement in compliance analysis accuracy, offering a holistic construction safety management solution.",
+  "journal": "Automation in Construction",
+  "pdfFile": "Guo et al. - 2025 - Enhancing visual-LLM for construction site safety compliance via prompt engineering and Bi-stage ret",
+  "markdownFile": "Guo et al. - 2025 - Enhancing visual-LLM for construction site safety compliance via prompt engineering and Bi-stage ret",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106490",
+  "category": "施工管理与安全",
+  "task": "施工现场安全合规检查",
+  "taskEn": "Construction site safety compliance checking",
+  "phase": "施工",
+  "inputData": "施工现场图像与安全法规文本",
+  "inputDataEn": "Construction site images and safety regulation texts",
+  "representation": "多模态",
+  "llmMethod": "RAG",
+  "llmModels": [
+    "GPT-4V",
+    "ChatGPT"
+  ],
+  "keywords": [
+    "safety compliance",
+    "visual language model",
+    "retrieval-augmented generation",
+    "prompt engineering",
+    "construction safety",
+    "BiRAG"
+  ],
+  "contribution": "提出了BiRAG框架，将多模态视觉语言模型与两阶段检索增强生成相结合，实现了基于施工现场图像的安全合规监控，无需繁琐的模型微调即可适应不断变化的安全标准。",
+  "methodology": "设计了三阶段提示(TPP)和决策树式合规判断提示来增强VLM解释工人行为的能力，并开发了上下文感知分块策略和混合检索算法来提升对安全法规的分析效果。",
+  "results": "在香港真实施工现场的实验中，检索准确率提高了7.73%，合规分析准确率提高了11.66%，验证了该框架在施工安全管理中的有效性。"
+}

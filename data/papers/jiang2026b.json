@@ -1,0 +1,37 @@
+{
+  "id": "jiang2026b",
+  "citation": "Jiang et al./2026",
+  "title": "An Agentic AI-enabled Physics-Informed Machine Learning Framework for Grid-Interactive, Decarbonized Building Operations",
+  "year": 2026,
+  "abstract": "The urgent need for building decarbonization calls for a fundamental paradigm shift in future autonomous building energy operation, from human-intensive engineering workflows toward intelligence agents that can interact with physics-grounded digital environments. To support this transition, this study proposes an agentic AI-enabled Physics-Informed Machine Learning (PIML) environment for scalable building energy modeling, simulation, control and automation. The proposed framework consists of: (1) a modular and physics-consistent PIML digital environment spanning building, Heating, Ventilation, and Air Conditioning (HVAC), distributed energy resources (DER) to support grid-interactive energy management; and (2) an agentic AI layer implemented with 11 specialist agents and 72 Model Context Protocol (MCP) tools to enable end-to-end execution of multi-step energy analytics. A representative case study demonstrates multi-domain, multi-agent coordination in assessing how system retrofits and control upgrades affect energy use, operation cost, thermal comfort, and flexibility in a 20-building residential cluster. Furthermore, a large-scale benchmark (6156 runs) is conducted to systematically evaluate workflow performance in terms of accuracy (planning, agent selection, tool selection, and parameter extraction), token consumption, execution time, and inference cost. The benchmark results quantify the impacts of intelligence mode design, model-size configuration, task complexity, and orchestrator-specialist coordination on overall performance. Four key lessons learned and six limitations with corresponding future research directions are identified to inform the development of reliable agentic AI systems for real-world building energy applications. This work establishes a scalable, physics-grounded foundation for deploying agentic AI in decarbonized and grid-interactive building energy operations, and highlights key research directions toward adaptive self-driving building intelligences.",
+  "journal": "Advances in Applied Energy",
+  "pdfFile": "Jiang et al. - 2026 - An agentic AI-enabled physics-informed machine learning framework for grid-interactive, decarbonized",
+  "markdownFile": "Jiang et al. - 2026 - An agentic AI-enabled physics-informed machine learning framework for grid-interactive, decarbonized",
+  "url": "https://doi.org/10.1016/j.adapen.2026.100273",
+  "category": "能耗管理与优化",
+  "task": "建筑能耗建模与控制优化",
+  "taskEn": "Building energy modeling and control optimization",
+  "phase": "运维",
+  "inputData": "建筑能耗模型与HVAC系统数据",
+  "inputDataEn": "Building energy models and HVAC system data",
+  "representation": "其他",
+  "llmMethod": "Agent",
+  "llmModels": [
+    "GPT-4o",
+    "GPT-4o-mini",
+    "Claude 3.5 Sonnet",
+    "DeepSeek-V3"
+  ],
+  "keywords": [
+    "agentic AI",
+    "large language model",
+    "physics-informed machine learning",
+    "building energy operation",
+    "benchmark evaluation",
+    "grid-interactive buildings",
+    "decarbonization"
+  ],
+  "contribution": "提出了一个基于多智能体AI和物理信息机器学习的框架，包含11个专业智能体和72个MCP工具，实现了建筑集群能耗建模、仿真、控制和自动化的端到端智能执行。",
+  "methodology": "采用分层多智能体架构，包括协调智能体、11个领域专用智能体和72个MCP工具接口，在BESTOpt物理信息运行环境中进行建筑-暖通空调-分布式能源的联合优化。",
+  "results": "在20栋住宅建筑集群案例中展示了多领域多智能体协调能力。大规模基准测试(6156次运行)系统评估了规划准确性、智能体选择、工具选择和参数提取等性能指标，为智能体AI系统设计提供了实证依据。"
+}

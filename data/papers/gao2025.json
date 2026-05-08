@@ -1,0 +1,39 @@
+{
+  "id": "gao2025",
+  "citation": "Gao et al./2025",
+  "title": "Lifecycle framework for AI-driven parametric generative design in industrialized construction",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "综合设计框架",
+  "phase": "全生命周期",
+  "inputData": "设计需求",
+  "representation": "多模态",
+  "llmMethod": "其他",
+  "contribution": "AI驱动参数化生成设计框架整合建筑/结构/MEP设计，实现生命周期成本降低15.8%，能耗降低21.2%",
+  "abstract": "In the Architecture, Engineering, and Construction (AEC) industry, design processes remain fragmented across architectural, structural, and mechanical domains, limiting integration and optimization opportunities throughout building lifecycles. This paper investigates how artificial intelligence can be leveraged to create a comprehensive framework for parametric generative design in industrialized construction that integrates multiple design disciplines and optimization criteria. The methodology employs knowledge graph question answering (KGQA) enabled by large language models (LLMs) to acquire design requirements and constraints, implements multi-objective optimization algorithms to balance competing criteria, and establishes a three-tier priority hierarchy to resolve conflicts in cross-domain design processes. The framework demonstrates significant improvements in a real-world case study, achieving 15.8% reduction in lifecycle costs, 21.2% decrease in energy consumption, and significantly reducing preliminary design modelling time. These findings provide valuable insights for AEC practitioners seeking to implement human-AI collaborative design workflows and illustrate pathways for integrating domain-specific knowledge with advanced AI systems.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "Ollama",
+    "LangChain",
+    "Sentence Transformer",
+    "Random Forest Regressor"
+  ],
+  "keywords": [
+    "Industrialized construction",
+    "Generative design",
+    "Design integration",
+    "Building information modelling (BIM)",
+    "Design optimization",
+    "Knowledge graphs",
+    "KGQA",
+    "Multi-objective optimization",
+    "Lifecycle assessment"
+  ],
+  "methodology": "Develops a comprehensive AI-driven generative design framework that integrates architectural, structural, and MEP design for industrialized construction. The framework employs Knowledge Graph Question Answering (KGQA) enabled by LLMs (Ollama with LangChain) to extract design requirements and constraints from domain knowledge graphs extended from the Supply Chain Reference Ontology (SCRO). A three-tier priority hierarchy (Compulsory Requirements, Performance Requirements, Optimization Objectives) governs cross-domain conflict resolution. Multi-objective optimization algorithms (NSGA-II, SPEA2, MOEA/D) balance competing criteria. A Random Forest Regressor (100 decision trees) evaluates 1000 building variants to identify optimal configurations. Lifecycle assessment over a 50-year period integrates construction costs, operational energy, embodied carbon, daylighting analysis, and thermal performance.",
+  "results": "In a real-world two-floor office building case study (1200 sqm gross floor area), the framework achieves 15.8% reduction in lifecycle costs and 21.2% decrease in energy consumption compared to baseline designs. Preliminary design modelling time is reduced from 3-4 hours to approximately 5 minutes. Structural optimization yields 15.7% reduction in material costs and carbon emissions. The optimal building configuration identified comprises two floors with dimensions of 24.64m x 24.35m and a window-to-wall ratio of 0.20.",
+  "pdfFile": "Gao et al. - 2025 - Lifecycle framework for AI-driven parametric generative design in industrialized construction.pdf",
+  "markdownFile": "Gao et al. - 2025 - Lifecycle framework for AI-driven parametric generative design in industrialized construction.md",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106146",
+  "taskEn": "Integrated design framework",
+  "inputDataEn": "Design requirements"
+}

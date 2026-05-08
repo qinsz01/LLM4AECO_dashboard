@@ -1,0 +1,38 @@
+{
+  "id": "postle2025",
+  "citation": "Postle and Salingaros/2025",
+  "title": "LLM and Pattern Language Synthesis: A Hybrid Tool for Human-Centered Architectural Design",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "建筑设计支持",
+  "phase": "规划与设计",
+  "inputData": "文本（模式语言描述）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "将Alexander模式语言与LLM结合创建人本主义建筑设计工具，支持非专业用户参与设计",
+  "abstract": "This paper combines Christopher Alexander's pattern language with generative AI into a hybrid design framework. The result is a narrative synthesis that can be useful for informed project design. Advanced large language models (LLMs) enable the real-time synthesis of design patterns, making complex architectural choices accessible and comprehensible to stakeholders without specialized architectural knowledge. A lightweight, web-based tool lets project teams rapidly assemble context-specific subsets of Alexander's 253 patterns, reducing a traditionally unwieldy 1166-page corpus to a concise, shareable list. Demonstrated through a case study of a university department building, this method results in environments that are psychologically welcoming, fostering health, productivity, and emotional well-being. LLMs translate these curated patterns into vivid experiential narratives complete with neuroscientifically informed ornamentation. LLMs produce representative images from the verbal narrative, revealing a surprisingly traditional design that was never input as a prompt. Two separate LLMs (for cross-checking) then predict the pattern-generated design to catalyze improved productivity as compared to a standard campus building. By bridging abstract design principles and concrete human experience, this approach democratizes architectural planning grounded on Alexander's human-centered, participatory ethos.",
+  "journal": "Buildings",
+  "llmModels": [
+    "Claude 3.7",
+    "ChatGPT o4-mini-high",
+    "ChatGPT-4o",
+    "ChatGPT o3",
+    "Gemini 2.5 Pro"
+  ],
+  "keywords": [
+    "adaptive design",
+    "AI-driven architecture",
+    "Christopher Alexander",
+    "evidence-based design",
+    "human-centered architecture",
+    "large language model",
+    "pattern language"
+  ],
+  "methodology": "A two-component hybrid method: (1) A web-based application (APL-Companion) enables interactive creation of project-specific subsets from Alexander's 253 design patterns, with collapsible HTML interface and URL fragment-based state persistence. Users manually select relevant patterns, which are compiled into a PDF prompt. (2) The compiled pattern subset is fed to an LLM (Claude 3.7) along with a structured prompt to generate vivid experiential narratives describing the anticipated user experience. Iterative validation flags LLM hallucinations and regenerates narratives until they align with the selected patterns. The resulting narrative is then evaluated by two independent LLMs (ChatGPT o4-mini-high and ChatGPT-4o) for comparative analysis against standard architectural typologies. ChatGPT o3 generates representative images from the narrative. Gemini 2.5 Pro provides additional cross-validation.",
+  "results": "The hybrid pattern-language-plus-LLM method successfully transforms Alexander's 1166-page pattern corpus into manageable, project-specific subsets and generates coherent experiential narratives that communicate architectural qualities to non-experts. Applied to a university Computer Science and AI department building case study, the LLM-generated narrative described human-centered spaces with warm materials, natural lighting, alcoves, courtyards, and ornamentation. ChatGPT o3 images generated from the narrative revealed surprisingly traditional designs without any traditional style prompt. Three independent LLMs (ChatGPT o4-mini-high, ChatGPT-4o, Gemini 2.5 Pro) all predicted that the pattern-generated building would foster higher interdisciplinary collaboration, ideational fluency, and creative productivity compared to standard industrial or fashionable campus buildings, with the fashionable buildings' stress-inducing geometries predicted to lead to lower publication rates and fewer patent applications.",
+  "pdfFile": "Postle and Salingaros - 2025 - LLM and Pattern Language Synthesis A Hybrid Tool for Human-Centered Architectural Design.pdf",
+  "markdownFile": "Postle and Salingaros - 2025 - LLM and Pattern Language Synthesis A Hybrid Tool for Human-Centered Architectural Design.md",
+  "url": "https://doi.org/10.3390/buildings15142400",
+  "taskEn": "Architectural design support",
+  "inputDataEn": "Text (pattern language descriptions)"
+}

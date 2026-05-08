@@ -1,0 +1,33 @@
+{
+  "id": "jiang2024",
+  "citation": "Jiang et al. / 2024",
+  "title": "EPlus-LLM: A large language model-based computing platform for automated building energy modeling",
+  "year": 2024,
+  "category": "设计优化与生成",
+  "task": "自动化建筑能耗建模",
+  "phase": "规划与设计",
+  "inputData": "文本（自然语言描述）",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "contribution": "提出基于LLM的计算平台实现自动化建筑能耗建模，支持复杂建筑案例",
+  "abstract": "This paper proposes Eplus-LLM, a fine-tuned large language model-based platform that automatically translates natural language building descriptions into EnergyPlus simulation files, enabling automated building energy modeling without requiring expertise in simulation software. The platform achieves 100% accuracy across 152 validation instances and reduces modeling effort by over 95%, demonstrating robustness to various input noises including misspellings, tone variations, and omissions.",
+  "journal": "Applied Energy",
+  "llmModels": [
+    "Flan-T5",
+    "T5"
+  ],
+  "keywords": [
+    "Large language models",
+    "Artificial intelligence",
+    "Machine learning",
+    "Building energy modeling",
+    "Automated simulation"
+  ],
+  "methodology": "The authors fine-tune Flan-T5 on 70,000 prompt-IDF file pairs generated via Latin hypercube sampling of building parameters, using four designed prompt formats to train the model to convert natural language building descriptions into valid EnergyPlus IDF simulation files.",
+  "results": "Eplus-LLM achieves 100% accuracy in auto-generating building models across 152 validation instances (80 standard + 32 noise + 40 unseen prompts), reduces modeling time by over 95% (from 35-56 minutes to 40-74 seconds compared to manual EnergyPlus modeling), and maintains robustness under four types of input noise (tone changes, spelling mistakes, omitted words, and extra words).",
+  "pdfFile": "Jiang et al. - 2024 - EPlus-LLM A large language model-based computing platform for automated building energy modeling.pdf",
+  "markdownFile": "Jiang et al. - 2024 - EPlus-LLM A large language model-based computing platform for automated building energy modeling.md",
+  "url": "https://doi.org/10.1016/j.apenergy.2024.123431",
+  "taskEn": "Automated building energy modeling",
+  "inputDataEn": "Text (natural language descriptions)"
+}

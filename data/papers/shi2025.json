@@ -1,0 +1,30 @@
+{
+  "id": "shi2025",
+  "citation": "Shi et al./2025",
+  "title": "Fine-tuning a large language model for automated code compliance of building regulations",
+  "year": 2025,
+  "category": "规范与合规检查",
+  "task": "规范合规检查",
+  "phase": "规划与设计",
+  "inputData": "规范文本+计算规则脚本",
+  "representation": "结构化",
+  "llmMethod": "微调",
+  "contribution": "提出BuildThemis框架，通过QLoRA微调Mistral 7B结合RAG机制，实现建筑规范文本到可计算规则的自动转换，CodeBERTScore F3分数在第10个epoch达到最优，RAG显著提升了代码生成的准确性和完整性",
+  "pdfFile": "Shi et al. - 2025 - Fine-tuning a large language model for automated code compliance of building regulations.pdf",
+  "url": "https://doi.org/10.1016/j.aei.2025.103676",
+  "markdownFile": "Shi et al. - 2025 - Fine-tuning a large language model for automated code compliance of building regulations.md",
+  "abstract": "In the Architecture, Engineering, and Construction (AEC) industry, the interpretation and conversion of building rules into a computer-processable format for automated compliance checking systems are crucial for improving the design process. Yet, current systems and research on rule interpretation either demand extensive and time-consuming expert-induced intervention, or rely on hard-coded pattern matching with limited applicability. To address these limitations, this paper introduces BuildThemis, a framework integrating a large language model fine-tuned on a real-world rule interpretation dataset with a Retrieval-Augmented Generation (RAG) mechanism. BuildThemis serves as a code-assistance tool that delivers structured draft scripts that experts can readily refine. The RAG technique grounds the fine-tuned LLM using an external code knowledge base, achieving a higher CodeBERTScore compared to non-RAG code generation approaches. Results demonstrate that the BuildThemis framework enhances the rule interpretation process by capturing latent concepts within rule-script pairs across various codes of practice and generating semantically similar scripts compared to the reference scripts. This approach to automating rule interpretation emphasizes generalization and reusability of rules, enabling the efficient conversion of textual regulatory documents into computable formats.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "Mistral 7B Instruct v0.3"
+  ],
+  "keywords": [
+    "Automated code compliance",
+    "Large language models",
+    "Retrieval-augmented generation"
+  ],
+  "methodology": "BuildThemis框架包含两个核心组件：(1) 使用QLoRA方法对Mistral 7B Instruct v0.3进行参数高效微调，基于新加坡真实规则解释项目的735对规则-脚本数据集（656对训练、79对测试），涵盖多个建筑规范的定量和定性规则，rank设为256、alpha为512，在4块Nvidia A100 40GB GPU上训练最多15个epoch（第7-14个epoch保存检查点进行评估），最佳模型出现在第10个epoch；(2) 集成RAG机制，将训练集656个脚本通过voyage-code-2嵌入模型向量化后存入代码文档向量数据库，通过最近邻搜索为新规则查询检索最相关脚本作为上下文，增强代码生成的准确性和完整性。使用CodeBERTScore作为主要评估指标，特别关注F3分数（更侧重召回率），采用layer 10的CodeBERT嵌入。",
+  "results": "微调后的LLM在第10个epoch达到最佳F3分数，能有效捕获规则与脚本之间的潜在概念。RAG提示在512、1024和2048 token上下文窗口下，F3分数相比标准提示均有统计学显著提升（Wilcoxon p-value ≤ 3.01×10⁻³）。即使仅有512 token的部分代码上下文，RAG也能显著改善代码生成质量。模型在定量和定性规则上的表现差异极小（±0.003），表明方法具有良好的泛化能力。该方法适用于多种建筑规范，不限于特定国家的规范或特定编程语言。",
+  "taskEn": "Code compliance checking",
+  "inputDataEn": "Regulatory texts + calculation rule scripts"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "yang2024",
+  "citation": "Yang et al./2024",
+  "title": "Prompt-Based Automation of Building Code Information Transformation for Compliance Checking",
+  "year": 2024,
+  "abstract": "Transforming building code information into a machine-processable format is essential for automated compliance checking, yet it presents significant challenges. A prompt-based framework was developed to automate the conversion into a logic programming language. Its effectiveness was assessed by testing the framework on 51 requirements from the International Building Code (IBC) 2015, achieving 97.37% precision and 95.88% recall at the logic clause level, with only 2% of the data used for training. Further testing on crash report transformation enhanced efficiency, reducing the average code generation time to approximately 60.8 s, thereby achieving a 27.8% time savings compared to existing rule-based methods. This paper contributes to the body of knowledge by introducing an effective, versatile, and user-friendly approach to automated building code information transformation, markedly decreasing the reliance on training data, time, and manual efforts.",
+  "journal": "Automation in Construction",
+  "pdfFile": "Yang and Zhang - 2024 - Prompt-based automation of building code information transformation for compliance checking",
+  "markdownFile": "Yang and Zhang - 2024 - Prompt-based automation of building code information transformation for compliance checking",
+  "url": "https://doi.org/10.1016/j.autcon.2024.105817",
+  "category": "规范与合规检查",
+  "task": "建筑规范信息自动化转换",
+  "taskEn": "Automated building code information transformation",
+  "phase": "规划与设计",
+  "inputData": "建筑规范文本",
+  "inputDataEn": "Building code text",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "Building code",
+    "Information transformation",
+    "Automated compliance checking",
+    "Prompt engineering",
+    "Natural language processing",
+    "Large language models"
+  ],
+  "contribution": "提出了一种基于提示工程的框架，利用GPT模型自动将建筑规范信息转换为逻辑编程语言，仅需2%的训练数据即可实现高精度的规范信息转换。",
+  "methodology": "采用ChatGPT-4模型通过API构建翻译器，结合提示工程将国际建筑规范（IBC 2015）中的需求自动转换为Picat逻辑编程语言，包含前端用户交互模块和后端信息转换模块。",
+  "results": "在51条IBC 2015需求上实现97.37%的精确率和95.88%的召回率，代码生成时间约60.8秒，比现有基于规则的方法节省27.8%的时间。"
+}

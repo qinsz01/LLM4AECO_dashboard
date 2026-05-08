@@ -1,0 +1,37 @@
+{
+  "id": "jang2025",
+  "citation": "Jang et al. / 2025",
+  "title": "Multimodal Large Language Models as Built Environment Auditing Tools",
+  "year": 2025,
+  "category": "其他",
+  "task": "建成环境审计",
+  "phase": "运维",
+  "inputData": "现场图像视频（街景图像）",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "验证多模态LLM（ChatGPT-4o和Gemini-1.5-Pro）可用于街景图像的建成环境审计，与深度学习方法（DeepLabv3+）的平均一致性达90%以上，为非技术用户提供了直观易用的审计工具",
+  "abstract": "This research showcases the transformative potential of LLMs for built environment auditing from street-view images. By empirically testing the performances of two multimodal LLMs, ChatGPT and Gemini, we confirmed that LLM-based audits strongly agree with virtual audits processed by a conventional deep learning-based method (DeepLabv3+), which has been widely adopted by existing studies on urban visual analytics. Unlike conventional field or virtual audits that require labor-intensive manual inspection or technical expertise to run computer vision algorithms, our results show that LLMs can offer an intuitive tool despite the user's level of technical proficiency. This would allow a broader range of policy and planning stakeholders to employ LLM-based built environment auditing instruments for smart urban infrastructure management.",
+  "journal": "The Professional Geographer",
+  "llmModels": [
+    "GPT-4o",
+    "Gemini-1.5-Pro",
+    "DeepLabv3+"
+  ],
+  "keywords": [
+    "Built environment auditing",
+    "Street-view images",
+    "Multimodal LLM",
+    "ChatGPT",
+    "Gemini",
+    "Computer vision",
+    "Urban visual analytics",
+    "Smart city"
+  ],
+  "methodology": "A cross-sectional study comparing two commercial multimodal LLMs (GPT-4o and Gemini-1.5-Pro) with a conventional deep learning method (DeepLabv3+ trained on ADE20K) for detecting ten built environment features from Google Street View images. 2,000 random sampling points at 100-m intervals were selected in Columbus, Ohio (Franklin County). After excluding invalid images, 1,902 street-view images (640x640 pixels) were used. A structured prompt was sent via each LLM's API to detect the presence or absence of vegetation, tree, vehicle, bicycle, road, sidewalk, bench, trash bin, streetlight, and traffic signal. Agreement scores between LLM and DL-based results were computed and spatial analysis (Moran's I) and population density analysis were performed.",
+  "results": "LLM-based audits achieved approximately 90% average agreement with the conventional DeepLabv3+ method across ten built environment features. ChatGPT (GPT-4o) significantly outperformed Gemini (p<0.001) overall. High agreement (>95%) was observed for trees, bicycles, roads, and vegetation. The lowest agreement items were streetlights (73.7% ChatGPT, 77.7% Gemini) and sidewalks (78.8% ChatGPT, 78.7% Gemini). ChatGPT showed random spatial distribution of agreement scores across urban and rural areas, while Gemini exhibited geographic disparity with significantly lower performance in low-density rural areas compared to dense urban areas (p<0.01).",
+  "pdfFile": "Jang, KM etal - 2025 - Multimodal Large Language Models as Built Environment Auditing Tools.pdf",
+  "markdownFile": "Jang, KM etal - 2025 - Multimodal Large Language Models as Built Environment Auditing Tools.md",
+  "url": "https://doi.org/10.1080/00330124.2024.2404894",
+  "taskEn": "Built environment auditing",
+  "inputDataEn": "On-site images & videos (street view imagery)"
+}

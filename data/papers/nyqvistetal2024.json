@@ -1,0 +1,35 @@
+{
+  "id": "nyqvistetal2024",
+  "citation": "Nyqvist et al. / 2024",
+  "title": "Can ChatGPT exceed humans in construction project risk management?",
+  "year": 2024,
+  "category": "施工管理与安全",
+  "task": "风险评估与管理",
+  "phase": "规划与设计",
+  "inputData": "文本（项目案例描述）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "首次通过匿名盲审实验比较ChatGPT GPT-4与16位人类专家在施工项目风险管理中的能力，发现ChatGPT在定量评分上显著超越人类平均水平（8.6 vs 5.7），但在策略的实用性和项目特异性方面仍不及人类专家",
+  "abstract": "This research investigates the capabilities of the ChatGPT GPT-4 model in comparison to human experts in construction project risk management (CPRM). Employing a mixed-methods approach, the study draws a qualitative and quantitative comparison between 16 human risk management experts from Finnish construction companies and the ChatGPT AI model utilizing anonymous peer reviews. It focuses primarily on the areas of risk identification, risk analysis, and risk control. ChatGPT demonstrated a superior ability to generate comprehensive risk management plans, with its quantitative scores significantly surpassing the human average. Nonetheless, the AI model's strategies are found to lack practicality and specificity, areas where human expertise excels.",
+  "journal": "Engineering, Construction and Architectural Management",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "Artificial intelligence",
+    "Large language models",
+    "ChatGPT",
+    "GPT-4",
+    "Risk management",
+    "Construction management",
+    "Project management",
+    "Risk analysis"
+  ],
+  "methodology": "采用混合方法设计，通过模拟案例项目（赫尔辛基中世纪健康中心翻新项目）对ChatGPT GPT-4和16位芬兰建筑行业风险管理专家进行能力比较测试。研究分三个阶段：(1)Phase 1：选择16位来自不同芬兰建筑公司的人类专家（涵盖项目经理、安全经理、风险经理等角色，经验4-39年）和ChatGPT GPT-4作为参与者；(2)Phase 2：所有参与者基于相同的案例项目描述，回答关于风险识别、风险分析和风险控制三个关键步骤的系列问题，所有输入和输出均使用芬兰语。收集后对所有回答进行匿名化处理，并随机分配给19位人类专家评审员和ChatGPT进行同行评审，评审员不知道哪些回答来自AI、哪些来自人类。每位评审员提供1-10分的定量评分和定性反馈；(3)Phase 3：定量分析计算平均分和标准差，定性分析将反馈分为正面和负面并进行主题分类（全面性、特异性和实用性、实施可行性、信息丰富度）。此外，作者还对GPT-4在2023年4月和12月的回答进行了纵向比较分析。",
+  "results": "定量结果：在人类评审中，ChatGPT平均得分8.6（标准差1.2），人类专家平均得分5.7（标准差1.9），没有任何人类受访者的平均总分超过ChatGPT。ChatGPT在风险识别（8.2 vs 6.1）、风险分析（8.4 vs 5.3）和风险控制（8.6 vs 5.8）三个维度均显著优于人类平均水平。ChatGPT自我评审时评分更高（9.0），对人类回答的评分（7.6）也比人类评审更宽容。定性结果：ChatGPT的风险管理计划因全面性和详细程度受到高度评价，但被批评缺乏实用性和项目特异性，策略过于泛化，难以在实际中直接实施。人类专家虽然全面性不足，但在具体性和可操作性方面表现更好。GPT-4在2023年4月和12月的版本比较显示回答质量变化较小，主要差异在于细节表述和策略呈现方式的微调。",
+  "markdownFile": "Nyqvist et al. - 2024 - Can ChatGPT exceed humans in construction project risk management",
+  "url": "https://doi.org/10.1108/ECAM-08-2023-0819",
+  "taskEn": "Risk assessment and management",
+  "inputDataEn": "Text (project case descriptions)",
+  "pdfFile": "Nyqvist et al. - 2024 - Can ChatGPT exceed humans in construction project risk management"
+}

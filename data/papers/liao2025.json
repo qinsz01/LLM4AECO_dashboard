@@ -1,0 +1,35 @@
+{
+  "id": "liao2025",
+  "citation": "Liao, L. etal / 2025",
+  "title": "Safety Consultation for Prefabricated Construction A Localized Retrieval-Augmented Generative Questi...",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "安全知识问答",
+  "phase": "施工",
+  "inputData": "安全规范文本+专业书籍+考试题库",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "contribution": "提出面向装配式施工安全管理的RAG问答系统，结合LoRA微调与知识库检索，支持本地离线部署，在专家评估中整体得分3.90/5，自动评估准确率达78.01%",
+  "abstract": "This study develops a retrieval-augmented generative (RAG) question-answering system leveraging large language models to bolster safety management in prefabricated construction, offering real-time safety knowledge consultation for construction personnel. The methodology synergizes knowledge-base retrieval with LLMs, augmenting answer generation with retrieved safety knowledge to provide more accurate responses. Through LoRA instruction tuning of ChatGLM3-6B and vector-based knowledge retrieval using bge-large-zh-v1.5 embeddings and FAISS, the system enables effective natural language interaction. Empirical testing via expert evaluation and automated CSE examination assessment validates the approach, with the system supporting local offline deployment for construction site environments.",
+  "journal": "Journal of Computing in Civil Engineering (ASCE)",
+  "llmModels": [
+    "ChatGLM3-6B",
+    "GPT-4",
+    "GPT-4o",
+    "bge-large-zh-v1.5"
+  ],
+  "keywords": [
+    "prefabricated construction",
+    "safety management",
+    "question-answering system",
+    "large language model",
+    "chatbot"
+  ],
+  "methodology": "The proposed methodology comprises four phases: (1) data preprocessing—collecting unstructured safety knowledge from professional books, examination papers, and journal articles via web crawling and OCR, followed by cleaning, OCR error correction, and synonym normalization; (2) dataset creation—generating 3,480 question-answering pairs through crowdsourcing and GPT-4-assisted generation from knowledge sources; (3) knowledge database retrieval—splitting preprocessed texts into chunks, encoding them with the bge-large-zh-v1.5 embedding model, and using FAISS with cosine similarity to retrieve the top-k most relevant chunks for a user query; (4) LLM fine-tuning and testing—applying LoRA (rank=8, alpha=16) to ChatGLM3-6B on the QA dataset, then integrating the fine-tuned model (ChatGLM3-PCSM) with the RAG module to generate contextually enriched responses via a Streamlit-based WebUI chatbot.",
+  "results": "Human evaluation by 21 PCSM experts across six metrics (accuracy, completeness, understandability, concentration, coherence, helpfulness) showed the PCSM Expert Chatbot (fine-tuned model + RAG) significantly outperformed both the baseline ChatGLM3-6B and the fine-tuned-only ChatGLM3-PCSM, achieving an overall average score of 3.90/5. MANOVA confirmed significant differences across systems (p<0.001). Automated evaluation on 332 CSE multiple-choice questions showed the PCSM Expert Chatbot achieved 78.01% accuracy versus 34.94% (baseline), 35.84% (fine-tuned only), and 49.10% (GPT-4o). C-EVAL benchmark testing confirmed no catastrophic forgetting after fine-tuning, with slight improvements in STEM and social sciences domains.",
+  "markdownFile": "Liao, L. etal - 2025 - Safety Consultation for Prefabricated Construction A Localized Retrieval-Augmented Generative Questi....md",
+  "pdfFile": "Liao, L. etal - 2025 - Safety Consultation for Prefabricated Construction A Localized Retrieval-Augmented Generative Questi....pdf",
+  "url": "https://doi.org/10.1061/JCCEE5.CPENG-6315",
+  "taskEn": "Safety knowledge Q&A",
+  "inputDataEn": "Safety regulation texts + professional books + exam question banks"
+}

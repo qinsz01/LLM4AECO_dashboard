@@ -1,0 +1,33 @@
+{
+  "id": "vyas2026",
+  "citation": "Vyas et al./2026",
+  "title": "How Does Contextual Fidelity Impact How We Think, Talk, and Act in AI-assisted Engineering Design?",
+  "year": 2026,
+  "abstract": "In this work, we investigate the role of generative AI agents as reflective partners in engineering design. While such models are increasingly used to generate design solutions, concerns remain about their potential to diminish designers' critical thinking and reasoning skills. To address this, we develop a mixed-initiative conversational framework that positions large language and vision--language models as reflective thinking partners rather than solution providers. The framework is structured around five contextual information channels, namely task--role context, design representations, historical context, evaluation signals, and target references, that enable AI agents to ask reflective questions and provide explanations and suggestions. To study this framework within a concrete design context, we develop an interactive tool that embodies the notion of contextual fidelity of 2D structure design tasks. We implement varying levels of contextual fidelity, defined by the extent of contextual information available to the agent. We evaluate these levels through a between-subjects study with forty-six participants, comparing a high-fidelity and a low-fidelity agent against a control group without AI support. We examine the impact of the agents on how users think, talk and act, using a comprehensive set of metrics, including coarse-level design objectives (deformation and material usage), solution quality metrics (structural and geometric analysis), process-oriented measures (design space exploration patterns and trajectories, design strategy shifts), conversational dynamics (thematic and temporal analysis), and subjective surveys (NASA-TLX, Cognitive Load Theory, Trust in AI). Our analyses show that while conversational agents do not immediately help improve coarse-level design objectives, they significantly shape nuanced aspects of design processes and outcomes. Interaction with the agents critically influences how users explore the design space, where agent-supported groups exhibited more focused exploration patterns compared to the control group's broader trial-and-error approaches. Furthermore, interactions with the high-fidelity agent led to solutions with higher symmetry and topological alignment with optimal designs, fostered deeper reflection, reduced mental demand, and supported more deliberate design decisions. Building on these findings, we discuss broader implications of AI agents for problem-solving processes and outline guidelines for designing adaptive and generalizable frameworks for different domains.",
+  "journal": "Advanced Engineering Informatics",
+  "pdfFile": "Vyas et al. - 2026 - How does contextual fidelity impact how we think, talk, and act in AI-assisted engineering design",
+  "markdownFile": "Vyas et al. - 2026 - How does contextual fidelity impact how we think, talk, and act in AI-assisted engineering design",
+  "url": "https://doi.org/10.1016/j.aei.2026.104456",
+  "category": "设计优化与生成",
+  "task": "AI辅助结构设计反思对话",
+  "taskEn": "AI-assisted reflective conversation in structural design",
+  "phase": "规划与设计",
+  "inputData": "二维结构设计任务数据与有限元分析结果",
+  "inputDataEn": "2D structural design task data and finite element analysis results",
+  "representation": "多模态",
+  "llmMethod": "Agent",
+  "llmModels": [
+    "GPT-4o",
+    "GPT-4o-mini"
+  ],
+  "keywords": [
+    "Human-AI collaboration",
+    "Large language models",
+    "Vision language models",
+    "Structure design",
+    "Reflective thinking"
+  ],
+  "contribution": "提出了一种混合主导的对话框架，将LLM和VLM定位为工程设计的反思伙伴而非解决方案提供者，定义了五个上下文信息通道和上下文保真度概念，通过46人用户研究揭示了不同保真度对设计思维、对话和行为的差异化影响。",
+  "methodology": "开发了集成实时FEA仿真的交互式2D结构设计工具，基于五个上下文通道（任务角色、设计状态、历史、评估信号、目标参考）设计高保真和低保真两种AI代理，通过46人组间对照实验从设计目标、解质量、探索模式、对话动态和认知负荷等维度进行系统评估。",
+  "results": "对话代理虽未直接改善粗粒度设计目标，但显著影响了设计过程的细微方面。高保真代理促使用户产生更具对称性和拓扑一致性的设计方案，激发更深层反思，降低精神负荷，支持更审慎的设计决策；代理支持组表现出更聚焦的探索模式，而对照组倾向于更广的试错策略。"
+}

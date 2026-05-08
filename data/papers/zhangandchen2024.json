@@ -1,0 +1,32 @@
+{
+  "id": "zhangandchen2024",
+  "citation": "Zhang and Chen / 2024",
+  "title": "Large language model-based interpretable machine learning control in building energy systems",
+  "year": 2024,
+  "category": "能耗管理与优化",
+  "task": "建筑控制可解释性",
+  "phase": "运维",
+  "inputData": "建筑运行时序数据（温度、能耗、气象、occupancy）",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "提出结合Shapley值与LLM的IML框架，增强建筑机器学习控制（MLC）的可解释性，帮助运维人员理解MPC控制决策逻辑，弥合算法开发者与建筑运维人员之间的信任差距",
+  "abstract": "The potential of Machine Learning Control (MLC) in HVAC systems is hindered by its opaque nature and inference mechanisms, which is challenging for users and modelers to fully comprehend, ultimately leading to a lack of trust in MLC-based decision-making. To address this challenge, this paper investigates and explores Interpretable Machine Learning (IML), a branch of Machine Learning (ML) that enhances transparency and understanding of models and their inferences, to improve the credibility of MLC and its industrial application in HVAC systems. Specifically, we developed an innovative framework that combines the principles of Shapley values and the in-context learning feature of Large Language Models (LLMs). While the Shapley values are instrumental in dissecting the contributions of various features in ML models, LLM provides an in-depth understanding of the non-data-driven or rule-based elements in MLC; combining them, LLM further packages these insights into a coherent, human-understandable narrative. The paper presents a case study to demonstrate the feasibility of the developed IML framework for model predictive control-based precooling under demand response events in a virtual testbed. The results indicate that the developed framework generates and explains the control signals in accordance with the rule-based rationale.",
+  "journal": "Energy and Buildings",
+  "llmModels": [
+    "gpt-3.5-turbo-0301"
+  ],
+  "keywords": [
+    "Building control",
+    "Machine learning control",
+    "Interpretable machine learning",
+    "Shapley value",
+    "Large language model"
+  ],
+  "methodology": "A novel IML framework integrating Shapley value theory (SHAP) with LLM in-context learning is developed for ML-based MPC in buildings. The framework operates in three steps: (1) LLM is prompted to understand non-data-driven MPC elements (cost functions, constraints); (2) SHAP is applied to generate feature importance explanations for each ML prediction model (zone temperature prediction and cooling energy prediction), and LLM interprets the Shapley values into descriptive narratives; (3) Non-data-driven and ML-based elements are consolidated into a comprehensive explanatory document with a scenario-based prompt template. The case study uses a DOE reference small office building simulated in EnergyPlus via Py-CoSim co-simulation platform, with deep feedforward neural networks for thermal dynamics modeling and brute-force optimization for MPC precooling under demand response events.",
+  "results": "The IML framework achieved a 100% success rate in scenario identification across all 744 timesteps (Scenario 1: 16/16, Scenario 2: 654/654, Scenario 3: 74/74). The LLM (GPT-3.5-turbo) successfully generated descriptive explanations of SHAP results, accurately interpreting feature contributions to cooling energy and temperature predictions in building physics context. The Q&A module correctly answered what-if questions from building operators based on the generated explanation documents and building physics knowledge, demonstrating the framework's ability to bridge the trust gap between algorithm developers and building operators.",
+  "url": "https://doi.org/10.1016/j.enbuild.2024.114278",
+  "markdownFile": "Zhang and Chen - 2024 - Large language model-based interpretable machine learning control in building energy systems.md",
+  "pdfFile": "Zhang and Chen - 2024 - Large language model-based interpretable machine learning control in building energy systems.pdf",
+  "taskEn": "Building control interpretability",
+  "inputDataEn": "Building operational time series data (temperature, energy, weather, occupancy)"
+}

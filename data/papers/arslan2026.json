@@ -1,0 +1,33 @@
+{
+  "id": "arslan2026",
+  "citation": "Arslan et al./2026",
+  "title": "Integrated Environmental Information System for Damp and Mould Prevention",
+  "year": 2026,
+  "abstract": "Damp and mould in buildings present persistent challenges for public health and building management, contributing to respiratory illnesses, degraded indoor air quality, and increased maintenance costs. A key challenge is the reliance on traditional detection approaches, such as manual inspections, occupant questionnaires, and short-term environmental measurements, which are often subjective, time-consuming, and reactive. For example, isolated temperature and relative humidity (RH) readings frequently fail to capture seasonal moisture fluctuations, while inspections typically identify problems only after visible mould growth has occurred, limiting opportunities for early intervention. In addition, existing monitoring systems rarely integrate environmental data with building-specific contextual information, such as construction details or historical diagnostic records, reducing their ability to identify the root causes of dampness. To address these challenges, this study proposes the Integrated Environmental Information System for Dampness and Mould Prevention (IEIS-DMP), a scalable and sustainable Artificial Intelligence (AI)-driven framework for proactive damp and mould risk management. The system integrates Large Language Models (LLMs) with an Agentic Retrieval-Augmented Generation (Agentic RAG) architecture, enabling autonomous planning, multimodal data retrieval, and contextual reasoning. IEIS-DMP combines high-resolution sensor data, Building Information Modelling (BIM), and unstructured diagnostic documents to continuously assess indoor environmental conditions. Through a Natural Language (NL) interface, users can obtain timely, evidence-based insights and targeted recommendations. Validation using real-world datasets demonstrates strong system performance, achieving 95.2% completeness and 94.6% accuracy. These outcomes show that IEIS-DMP supports early risk identification, informed decision-making, reduced remediation costs, and healthier indoor environments, while its modular design enables scalability and adaptation to other environmental monitoring domains.",
+  "journal": "Developments in the Built Environment",
+  "pdfFile": "Arslan et al. - 2026 - Integrated environmental information system for damp and mould prevention",
+  "markdownFile": "Arslan et al. - 2026 - Integrated environmental information system for damp and mould prevention",
+  "url": "https://doi.org/10.1016/j.dibe.2026.100893",
+  "category": "运维管理",
+  "task": "建筑潮湿与霉菌风险智能诊断",
+  "taskEn": "Intelligent diagnosis of building damp and mould risk",
+  "phase": "运维",
+  "inputData": "环境传感器数据、BIM模型和诊断文档",
+  "inputDataEn": "Environmental sensor data, BIM models, and diagnostic documents",
+  "representation": "多模态",
+  "llmMethod": "Agent",
+  "llmModels": [
+    "Gemma-3-4B",
+    "GPT-4-turbo"
+  ],
+  "keywords": [
+    "Building Information Modelling (BIM)",
+    "Damp and mould prevention",
+    "Environmental monitoring",
+    "Large Language Models (LLMs)",
+    "Retrieval-Augmented Generation (RAG)"
+  ],
+  "contribution": "提出了IEIS-DMP系统，一个集成LLM与Agentic RAG架构的AI驱动框架，通过融合高分辨率传感器数据、BIM模型和非结构化诊断文档，实现建筑潮湿与霉菌风险的主动管理和智能诊断，并通过自然语言接口提供及时、基于证据的洞察和建议。",
+  "methodology": "部署Zigbee无线传感器网络采集5个月的温度和湿度时序数据，集成BIM空间信息和专家诊断文档构建多模态数据集；基于Agentic RAG架构设计Agent工作流，包含问题解析、子目标分解、工具调用、执行记忆和LLM综合等步骤；使用Gemma-3-4B模型实现系统。",
+  "results": "在50个诊断问题的评测中，IEIS-DMP系统实现95.2%的完整性和94.6%的准确率，显著优于标准RAG基线（82.4%和80.1%）；系统能有效分析温湿度趋势、识别风险阈值、提供房间级评估和潮湿风险预测，并给出建筑改造和维护的针对性建议。"
+}

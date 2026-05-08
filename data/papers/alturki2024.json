@@ -1,0 +1,33 @@
+{
+  "id": "alturki2024",
+  "citation": "Al-Turki et al./2024",
+  "title": "2024 - Human-in-the-Loop Learning With LLMs for Efficient RASE Tagging in Building Compliance Regulations",
+  "year": 2024,
+  "category": "规范与合规检查",
+  "task": "RASE标注与规范文本结构化",
+  "phase": "规划与设计",
+  "inputData": "建筑法规文档文本（M2, L2A, BB100）",
+  "representation": "结构化",
+  "llmMethod": "微调",
+  "contribution": "提出基于GPT-4o的人机协同渐进式主动学习方法，将建筑法规文本自动转换为RASE标注的YAML格式，用于自动化合规检查",
+  "pdfFile": "Al-Turki et al. - 2024 - Human-in-the-Loop Learning With LLMs for Efficient RASE Tagging in Building Compliance Regulations.pdf",
+  "markdownFile": "Al-Turki et al. - 2024 - Human-in-the-Loop Learning With LLMs for Efficient RASE Tagging in Building Compliance Regulations.md",
+  "abstract": "Automated compliance checking (ACC) in the Architecture, Engineering, and Construction (AEC) sector represents a pivotal task which is traditionally executed manually, demanding significant time and labor. This work investigates the automation of the Requirement, Applicability, Selection, and Exception (RASE) methodology for building regulatory compliance through the utilization of Large Language Models (LLMs) and active learning techniques. Specifically, we focus on the development and assessment of a system using the OpenAI GPT-4o model to transmute building regulation texts into structured YAML formats conducive to ACC processes. The study encompasses three experimental paradigms: few-shot learning, fine-tuning learning, and progressive active learning. Initial results from the few-shot learning experiment illustrate the model's preliminary ability to interpret and process regulatory texts with limited examples. Fine-tuning enhances model performance by training it on a specialized dataset, thereby improving structural and textual accuracy. Progressive active learning, by iteratively incorporating expert feedback, further refines the accuracy of the model. The findings demonstrate substantial enhancements in both structural and semantic accuracies of the generated YAML files, underscoring the potential of integrating LLMs with active learning to streamline regulatory compliance automation. The methodologies and results presented here offer a comprehensive framework for advancing future research and practical applications in the domain of automated regulatory compliance.",
+  "journal": "IEEE Access, vol. 12, pp. 185291-185306, 2024",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Automated compliance checking",
+    "RASE",
+    "Large language models",
+    "Active learning",
+    "Human-in-the-loop",
+    "BCRL"
+  ],
+  "methodology": "该研究使用OpenAI GPT-4o将建筑法规文本自动转换为RASE标注的YAML（BCRL格式）。探索了三种实验范式：(1) Few-shot学习，使用3个示例对作为提示，在22个样本上进行测试；(2) 微调，使用15个训练对、5个验证对和5个测试对，格式化为JSONL文件上传至OpenAI API；(3) 渐进式主动学习，从5个训练对和2个验证对开始，迭代预测剩余样本，将预测结果按准确率>=70%分为高置信度和低置信度池，专家审核高置信度输出后将其修正结果重新纳入训练数据，经过三轮迭代直到所有23个样本对全部被纳入训练集。所有实验均采用增量预测策略以克服GPT模型4096 token输出限制，将法规文本分段处理。评估采用两种指标：结构相似性（通过SimGNN图相似度与图编辑距离）和文本相似性（词重叠准确率与块惩罚调整）。数据集包含来自ACCORD项目的3份英国建筑法规文档（M2、L2A、BB100）中共25个标注段落。",
+  "results": "Few-shot学习在22个测试样本上取得平均结构相似度0.69和平均文本相似度0.76。微调（15个训练对）相比Few-shot学习有明显改进，特别是在结构相似性方面，表明模型更好地学习了YAML层级结构。渐进式主动学习在三轮迭代后表现最优，高置信度样本数量逐步增加，在结构和文本相似性两个指标上均达到最高分数。主动学习方法在所有样本中表现最为稳健一致，尤其在文本相似性方面表现突出。所有25个测试文件的最终评估结果表明，主动学习显著优于Few-shot学习和普通微调方法。",
+  "url": "https://ieeexplore.ieee.org/document/10778545",
+  "taskEn": "RASE tagging and regulatory text structuring",
+  "inputDataEn": "Building regulation documents (M2, L2A, BB100)"
+}

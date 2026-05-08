@@ -1,0 +1,32 @@
+{
+  "id": "xu2025",
+  "citation": "Xu et al./2025",
+  "title": "A large language model-based platform for real-time building monitoring and occupant interaction",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "环境监测/能耗管理",
+  "phase": "运维",
+  "inputData": "混合数据（传感器数据 + BIM + IoT）",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "集成IoT-BIM和GPT的实时建筑监控平台，通过对话式说服系统鼓励用户采用可持续实践，健康改善建议采纳率95.59%，热舒适调整建议采纳率79.90%",
+  "abstract": "Effective management of indoor environments requires a comprehensive evaluation of health, energy consumption, and thermal comfort. However, real-time assessment of these factors is challenging due to the lack of integrated applications that combine IoT technology, real-time simulation, and user-friendly interfaces for communication. To address these challenges, this research introduces a novel platform specifically designed to manage health, energy consumption, and thermal comfort in smart buildings, leveraging IoT-based building information modeling (BIM), cloud computing, and an AI-powered conversational suggestion system based on the large language model (GPT). The platform integrates real-time monitoring, simulation, alerting, and persuasion capabilities to manage health, energy consumption, and thermal comfort, enabling responsive building environment controls by assessing tradeoffs among these dimensions and providing timely recommendations. Additionally, it employs persuasive techniques to encourage occupants to adopt environmentally-friendly practices. A case study in a university building demonstrated the platform's functionality and visualization capability. A survey assessing the persuasive system revealed high adoption rates—95.59% for switching rooms to improve indoor air quality and health, and 79.90% for adjusting clothing to enhance thermal comfort—indicating strong participant willingness to adopt sustainable practices through the platform's strategies. The key contribution of this research is the development of a comprehensive, real-time platform that enhances indoor environmental quality and sustainability through advanced monitoring, analysis, and social interaction.",
+  "journal": "Journal of Building Engineering",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "Building management",
+    "Health",
+    "Energy",
+    "Thermal comfort",
+    "Conversational persuading system"
+  ],
+  "methodology": "The platform integrates IoT sensor data with BIM and cloud computing (AWS) to run real-time EnergyPlus energy simulations and Wells-Riley infection risk models, while using GPT-4 with predefined decision-tree-based training phrases to generate persuasive conversational suggestions for building occupants.",
+  "results": "A survey of 68 participants showed a 95.59% adoption rate for suggestions to switch rooms to improve indoor air quality and health, and a 79.90% adoption rate for suggestions to adjust clothing to enhance thermal comfort, demonstrating strong occupant willingness to adopt sustainable practices through the platform's persuasive strategies.",
+  "url": "https://doi.org/10.1016/j.jobe.2024.111488",
+  "pdfFile": "Xu et al. - 2025 - A large language model-based platform for real-time building monitoring and occupant interaction.pdf",
+  "markdownFile": "Xu et al. - 2025 - A large language model-based platform for real-time building monitoring and occupant interaction.md",
+  "taskEn": "Environmental monitoring / energy management",
+  "inputDataEn": "Mixed data (sensor data + BIM + IoT)"
+}

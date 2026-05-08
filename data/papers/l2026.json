@@ -1,0 +1,43 @@
+{
+  "id": "l2026",
+  "citation": "L. etal/2026",
+  "title": "VS-BIM: A cognitive map-driven framework enhancing MLLM for automatic safety inspection in construction",
+  "year": 2026,
+  "category": "BIM检索与管理",
+  "task": "安全监测",
+  "phase": "施工",
+  "inputData": "现场图像视频 + BIM",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "通过认知地图增强多模态LLM的3D空间理解能力，实现零样本自动施工安全检查，在空间推理任务上接近人类水平",
+  "abstract": "The rise of Multimodal Large Language Models (MLLMs) offers new potential for automated construction safety inspection. However, current discriminative vision-language alignment approaches struggle with spatial understanding and complex reasoning, limiting proactive risk detection. To address this, we propose VS-BIM, a generative zero-shot framework driven by cognitive maps. We reconstruct 3D scenes from panoramic video and Building Information Models (BIM), and align visual and semantic information into a queryable 3D cognitive map that serves as the spatial working memory for MLLMs. VS-BIM includes three modules: (1) panoramic video and BIM-based 3D reconstruction; (2) pixel-level semantic embedding using segmentation and pretrained vision-language models; and (3) cognitive map generation via multi-view consistency constraints. We evaluate VS-BIM using public datasets and custom construction environments. In addition, we introduce the CER-QA benchmark to test its performance in configuration recognition, spatial reasoning, spatiotemporal inference, and risk assessment. Results demonstrate VS-BIM excels in 3D object detection, achieves near-human spatial reasoning, and surpasses human averages in spatial estimation. Overall, the cognitive-map-based zero-shot paradigm endows MLLMs with stronger spatial reasoning while greatly reducing the need for large-scale annotation and retraining. By adapting seamlessly to complex, dynamic sites, it shifts safety inspection from passive checks to proactive risk prediction, enabling more efficient construction-site management.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "Gemini 2.0 Flash",
+    "GPT-4o",
+    "Llama 3.2 Vision-90B",
+    "LLaVA-OneVision",
+    "LLaVA-NeXT-Video",
+    "Llama 3.2 Vision-11B",
+    "Janus-Pro"
+  ],
+  "keywords": [
+    "Computer vision",
+    "Construction site safety",
+    "3D realistic geospatial scene",
+    "Object detection",
+    "Spatial temporal relationship",
+    "Cognitive map",
+    "3D Gaussian Splatting",
+    "Multimodal Large Language Model",
+    "BIM",
+    "Zero-shot"
+  ],
+  "methodology": "VS-BIM is a zero-shot generative framework comprising three modules: (1) Panoramic Semantic Segmentation and Alignment Model (PSSAM) - uses SAM2 for multi-level mask segmentation on cube projections of 360-degree panoramas, combined with CLIP-KD for pixel-level semantic embedding and cross-view alignment; (2) Spatially-Guided Gaussian Optimization Model (SGGOM) - performs 3D Gaussian Splatting reconstruction with a dual-projection fusion of equirectangular and cube projections, initialized with BIM-derived geometric priors, and regularized via layout, panoptic, and color losses; (3) Cognitive Map Construction Model (CMCM) - generates structured 3D cognitive maps by fusing point cloud clustering with semantic mask alignment, producing instance-level bounding volumes with spatial descriptors. The cognitive map encodes global layout, subspace partitioning, instance sets, and textual semantics as a machine-readable and human-interpretable intermediate representation for MLLM reasoning.",
+  "results": "On 3D reconstruction and object detection, VS-BIM achieves 79.83% 2D-IoU, 78.82% 3D-IoU, and 66.93% mAP on ReplicaPano, and 80.43% 2D-IoU, 82.02% 3D-IoU, and 78.84% mAP on virtual construction scenes, outperforming all baselines. On the CER-QA benchmark, cognitive-map-augmented MLLMs achieved near-human performance: human benchmark averaged 80.67%, while the best w/ CM model (Gemini 2.0 Flash) reached 74.67% on the tiny subset and 75.37% on the full benchmark. With cognitive maps, models surpassed human baselines in spatial measurement tasks. The w/ CM condition improved accuracy by 10-20% over w/o CM across all tasks. Smaller models (Llama 3.2 V-11B) with cognitive maps matched proprietary models without cognitive maps.",
+  "pdfFile": "Wang, L. etal - 2026 - VS-BIM A cognitive map-driven framework enhancing MLLM for automatic safety inspection in constructi....pdf",
+  "markdownFile": "Wang, L. etal - 2026 - VS-BIM A cognitive map-driven framework enhancing MLLM for automatic safety inspection in constructi....md",
+  "url": "https://doi.org/10.1016/j.aei.2025.103985",
+  "taskEn": "Safety monitoring",
+  "inputDataEn": "On-site images & videos + BIM"
+}

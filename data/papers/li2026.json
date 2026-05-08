@@ -1,0 +1,34 @@
+{
+  "id": "li2026",
+  "citation": "Li et al./2026",
+  "title": "Early-Stage Architecture Design Assistance by LLMs and Knowledge Graphs",
+  "year": 2026,
+  "abstract": "Early-stage architectural design relies heavily on precedent cases and domain knowledge, yet existing assistance methods struggle with the dominance of visual data and the linguistic diversity of design descriptions. In this paper, a retrieval-augmented generation framework with a custom knowledge graph tailored to architecture is proposed. The approach features: (1) a lightweight graph structure representing design logic; (2) a knowledge extraction pipeline for visual and textual data; and (3) aggregation and question answering methods that consolidate precedent knowledge for design support. Experiments show improved retrieval accuracy, more comprehensive precedent recommendations, and enhanced user experience, advancing precedent-based assistance for early design.",
+  "journal": "Automation in Construction",
+  "pdfFile": "Li et al. - 2026 - Early-stage architecture design assistance by LLMs and knowledge graphs",
+  "markdownFile": "Li et al. - 2026 - Early-stage architecture design assistance by LLMs and knowledge graphs",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106756",
+  "category": "设计优化与生成",
+  "task": "建筑先例案例检索与设计问答",
+  "taskEn": "Architectural precedent case retrieval and design question answering",
+  "phase": "规划与设计",
+  "inputData": "建筑设计案例图像与文本描述",
+  "inputDataEn": "Architectural design case images and text descriptions",
+  "representation": "多模态",
+  "llmMethod": "RAG",
+  "llmModels": [
+    "GPT-4o",
+    "text-embedding-3-large",
+    "ImageBind"
+  ],
+  "keywords": [
+    "Architecture design assistance",
+    "Large language model",
+    "Retrieval-augmented generation",
+    "Knowledge graph",
+    "Information retrieval"
+  ],
+  "contribution": "提出了一个结合定制化知识图谱的RAG框架，针对建筑设计先例案例中的视觉数据主导和语言多样性挑战，通过轻量级图结构表示设计逻辑、多模态知识抽取管道以及知识聚合与问答方法，实现了更准确的先例检索和设计支持。",
+  "methodology": "利用GPT-4o从建筑案例的图像和文本中抽取设计策略-目标关系元组构建轻量级知识图谱，采用UMAP降维和GMM聚类进行跨案例知识聚合，基于RRF算法融合多种检索方法（文本匹配、分析语句匹配、图像嵌入匹配），并设计多步问答管道和对话式界面。",
+  "results": "在WikiArch数据集上，检索准确率aNDCG@20达到0.35，优于基线方法；参考适配度提升约20%，参考多样性提升约30%；用户体验评估中在全面性、多样性、赋能感和直接性四个维度上均大幅超越GPT-4o直接回答，同时有效减少了幻觉问题。"
+}

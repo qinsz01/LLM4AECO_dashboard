@@ -1,0 +1,40 @@
+{
+  "id": "mok2025",
+  "citation": "Mok et al./2025",
+  "title": "Data-efficient classification of road inspection texts with a semantic similarity criterion",
+  "year": 2025,
+  "category": "其他",
+  "task": "道路检查文本分类",
+  "phase": "运维",
+  "inputData": "文本（道路检查评论）",
+  "representation": "其他",
+  "llmMethod": "微调",
+  "contribution": "基于SBERT语义相似度的分类器仅需1个样本/类即可达到f1=0.46，在数据稀缺的AEC领域表现优异",
+  "abstract": "Road maintenance involves manually classifying a large volume of textual data necessary for downstream applications such as raising a maintenance job order. Automation can not only bring significant time and cost savings, but it can also facilitate digitalization efforts like the Road Digital Twin (DT). However, as is the case with many Architecture, Engineering and Construction (AEC) applications, annotated data availability is low, which demands exploration of specialized techniques for resource-constrained settings that have not been focused on in engineering. This work bridges this gap by proposing a data-efficient similarity-based text classifier that aims at effectively utilizing existing domain knowledge and pre-training knowledge of Large Language Models (LLMs) to enable rapid domain adaptation. It reformulates text classification as a similarity comparison task, using semantics directly as a classification criterion. Through a case study on classifying road inspection comments, the proposed classifier outperformed both traditionally fine-tuned and few-shot learning approaches. It attained an f1 score of 0.46 with just one example per class, equivalent to the value for Sentence Transformer Fine-Tuning (SetFit) with 4 examples and Llama3 with 10. Additionally, it is able to keep up with traditional fine-tuning methods when trained with more than 300,000 total examples, achieving an accuracy of more than 95% and f1 of around 0.9. These results indicate that the proposal is competitive against traditionally fine-tuned and few-shot models across all levels of data availability. This versatility significantly elevates the feasibility of deploying an automated text classification pipeline in a complex engineering field like road maintenance.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "all-mpnet-base-v2 (SBERT, ~109M)",
+    "quora-roberta-base (SBERT Cross Encoder)",
+    "bert-base-uncased (~110M)",
+    "roberta-base (~125M)",
+    "xlnet-base-cased (~110M)",
+    "paraphrase-multilingual-mpnet-base-v2 (SetFit)",
+    "Llama-2-7b (~6.74B)",
+    "Mistral-7B-v0.1 (~7.24B)",
+    "Meta-Llama-3-8B (~8.03B)"
+  ],
+  "keywords": [
+    "Natural language processing",
+    "Large language model",
+    "Text classification",
+    "Few-shot learning",
+    "Semantic similarity"
+  ],
+  "methodology": "The paper proposes a similarity-based text classifier using SBERT that reformulates text classification as a similarity comparison task. Two classifier architectures are proposed: (1) Bi-Encoder Only classifier, which encodes both input text and descriptive class definitions independently using SBERT and selects the class with the highest cosine similarity; (2) Reranked Cross Encoder classifier, which uses the Bi-Encoder to retrieve top-k candidates and reranks them with a Cross Encoder. Two fine-tuning strategies are introduced: Contrastive Learning (adapted from SBERT's pairwise training to single-text classification) and Cross Entropy (replacing traditional class logits with similarity scores). The classifier leverages existing domain knowledge through descriptive class definitions taken from inspection manuals. A case study was conducted on the NYC Open Data dataset of 408,080 road inspection entries across 83 road code classes, testing in few-shot (1-10 examples per class), zero-shot, and full-data settings.",
+  "results": "The Bi-Encoder Only classifier trained with Cross Entropy was the best performing model. In 1-shot setting, it achieved f1=0.46 and accuracy=0.578, outperforming SetFit (f1=0.254) by 80%+ and traditional BERT fine-tuning (f1=0.039-0.074) by 5-10x. In 10-shot setting, it achieved f1=0.608 and accuracy=0.739, maintaining ~2/3 of its maximum performance versus ~50-60% for traditional models. With all data (>300K examples), it achieved accuracy>95% and f1~0.9, comparable to traditionally fine-tuned models. It outperformed all ~7B parameter baselines (Llama2, Llama3, Mistral) despite having 70x fewer parameters, with 7x the f1 score of Llama3 in 1-shot setting. Zero-shot performance (f1=0.254) matched SetFit with 1 example per class. Cross Entropy training consistently outperformed Contrastive Learning. Bi-Encoder Only architecture outperformed Reranked Cross Encoder. ICL was found unsuitable due to context window constraints with 83 classes.",
+  "url": "https://doi.org/10.1016/j.aei.2025.103509",
+  "pdfFile": "Mok et al. - 2025 - Data-efficient classification of road inspection texts with a semantic similarity criterion.pdf",
+  "markdownFile": "Mok et al. - 2025 - Data-efficient classification of road inspection texts with a semantic similarity criterion.md",
+  "taskEn": "Road inspection text classification",
+  "inputDataEn": "Text (road inspection comments)"
+}

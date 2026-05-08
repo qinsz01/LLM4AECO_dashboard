@@ -1,0 +1,35 @@
+{
+  "id": "zhang2025",
+  "citation": "Zhang et al./2025",
+  "title": "PV-GPT: query the PV data using natural language",
+  "year": 2025,
+  "category": "其他",
+  "task": "数据查询与分析",
+  "phase": "运维",
+  "inputData": "时序数据/语义模型",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "提出PV-GPT，一种基于LLM代理的框架，集成Brick本体与结构化提示和模块化原语函数，实现自然语言查询建筑光伏数据，在1000+QA对上达到98.14%的任务完成准确率",
+  "pdfFile": "Zhang, D. etal - 2025 - PV-GPT query the PV data using natural language.pdf",
+  "markdownFile": "Zhang, D. etal - 2025 - PV-GPT query the PV data using natural language.md",
+  "abstract": "PV-GPT is an LLM agent framework that integrates the Brick ontology with structured prompting and modular primitive functions to enable natural language querying of building photovoltaic (PV) data across semantic, API, and time-series databases. Evaluated on a real-world dataset from 60 rooftop PV systems at HKUST with over 1000 synthetic QA pairs, PV-GPT achieves a task-solving accuracy of 98.14% using GPT-4o, significantly outperforming baseline prompting approaches.",
+  "journal": "Journal of Building Engineering",
+  "llmModels": [
+    "GPT-4o-2024-08-06",
+    "LLaMA-2-13B-Chat",
+    "DeepSeek-R1-7B"
+  ],
+  "keywords": [
+    "Large language model",
+    "Time-series data",
+    "Brick model",
+    "Building energy system",
+    "Semantic model",
+    "PV"
+  ],
+  "methodology": "PV-GPT employs a three-layer modular architecture comprising an LLM reasoning module, a function-calling layer with domain-specific primitive functions, and an execution layer, forming a closed-loop retrieval-generation-execution pipeline that translates natural language queries into executable Python code via structured prompting and SPARQL-enabled Brick semantic queries.",
+  "results": "PV-GPT with GPT-4o achieves a task completion rate of 98.14% and 100% code executability on over 1000 QA pairs, compared to 13.29% for the baseline GPT-4o few-shot prompting approach. Average end-to-end response latency is 2-6 seconds, with PV-GPT(GPT-4o) averaging 3.26s.",
+  "url": "https://doi.org/10.1016/j.jobe.2025.114535",
+  "taskEn": "Data query and analysis",
+  "inputDataEn": "Time series data / semantic models"
+}

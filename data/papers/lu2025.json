@@ -1,0 +1,34 @@
+{
+  "id": "lu2025",
+  "citation": "Lu et al./2025",
+  "title": "Automated building energy modeling for energy retrofits using a large language model-based multi-agent framework",
+  "year": 2025,
+  "category": "能耗管理与优化",
+  "task": "自动化建筑能耗建模",
+  "phase": "翻新与拆除",
+  "inputData": "混合数据（CAD图纸+设计文档+传感器数据）",
+  "representation": "其他",
+  "llmMethod": "Agent",
+  "contribution": "将建模时间减少90%以上(48分钟对比8-32小时)",
+  "abstract": "This paper presents Data2BEM, a GPT-4-based multi-agent framework that automates end-to-end building energy modeling by parsing architectural drawings, specifications, and sensor data to generate and calibrate building energy simulations. Applied to a University of Cambridge office building, the system achieves ASHRAE Guideline 14-level calibration accuracy while reducing total modeling time by over 90% compared to professional manual practice, and demonstrates retrofit evaluation through gas boiler-to-heat pump electrification scenarios.",
+  "journal": "iScience",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "building energy modeling",
+    "large language model",
+    "multi-agent system",
+    "energy retrofit",
+    "model calibration",
+    "building simulation",
+    "automated modeling"
+  ],
+  "methodology": "A multi-agent LLM framework (Data2BEM) with four specialized GPT-4-based agents (Information Retriever, Programmer, Result Analyzer, and Reviewer) that collaboratively decompose the building energy modeling workflow into 4 stages, 14 tasks, and 32 subtasks, parsing heterogeneous data sources (CAD drawings, design documents, sensor data) to generate, calibrate, and evaluate OpenStudio/EnergyPlus simulation models.",
+  "results": "Data2BEM reduced total modeling time by over 90% (48 minutes versus 8-32 hours for human modelers) and achieved ASHRAE Guideline 14-level calibration accuracy with NMBE of 2.91%, CV-RMSE of 0.139, and R-squared of 0.972. The electrification retrofit scenario (replacing gas boilers with air-source heat pumps) reduced annual energy costs by 44% and carbon tax obligations approximately 5-fold.",
+  "pdfFile": "Lu et al. - 2025 - Automated building energy modeling for energy retrofits using a large language model-based multi-age.pdf",
+  "markdownFile": "Lu et al. - 2025 - Automated building energy modeling for energy retrofits using a large language model-based multi-age.md",
+  "url": "https://doi.org/10.1016/j.isci.2025.113867",
+  "taskEn": "Automated building energy modeling",
+  "inputDataEn": "Mixed data (CAD drawings + design documents + sensor data)"
+}

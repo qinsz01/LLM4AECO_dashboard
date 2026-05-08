@@ -1,0 +1,34 @@
+{
+  "id": "jangs2025",
+  "citation": "Jang, S. etal / 2025",
+  "title": "Semantic elaboration of low-LOD BIMs: Inferring functional requirements using graph neural networks",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "BIM语义增强（构件功能需求推断）",
+  "phase": "规划与设计",
+  "inputData": "BIM模型（低LOD）",
+  "representation": "图结构",
+  "llmMethod": "其他",
+  "contribution": "提出基于GNN和LLM嵌入的低LOD BIM语义增强方法，利用构件拓扑关系自动推断42种功能子类型，加权F1达0.8766",
+  "abstract": "This study proposes a method to automatically subcategorize early object types in low levels of development (LODs) into detailed types (i.e., subtypes) with distinct functional requirements, such as insulation, waterproofing, and load-bearing. The approach leverages functional requirements inferred from object connections and placement in early BIMs using a graph neural network (GNN). A novel threshold-enhanced triangle intersection (TETI) algorithm is introduced to convert BIMs into graphs, overcoming inaccuracies in existing methods. Two GNN-based approaches are explored: node property prediction (14 categories) and node subtype classification (42 subtypes). The best results are achieved using semantically rich embeddings from a large language model (LLM) and GraphSAGE with three SAGE convolution layers, three hops, and 1,024 dimensions, yielding a weighted F1-score of 0.8766.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "OpenAI text-embedding-3-small",
+    "OpenAI text-embedding-3-large"
+  ],
+  "keywords": [
+    "Semantic elaboration",
+    "Building information model (BIM)",
+    "Threshold-enhanced triangle intersection (TETI)",
+    "Graph neural network (GNN)",
+    "Large language model (LLM) embedding",
+    "Level of development (LOD)"
+  ],
+  "methodology": "本研究提出了一种基于图神经网络（GNN）和LLM嵌入的低LOD BIM语义增强方法。方法分为三个步骤：（1）利用新型TETI（Threshold-Enhanced Triangle Intersection）算法从BIM中自动提取建筑构件及其几何连接关系，该算法基于分离轴定理（SAT）并通过阈值处理解决了传统包围盒碰撞检测和IFC关系提取的局限性；（2）将提取的BIM数据转换为图结构，构件实例作为节点（属性包括ID、通用类型、子类型），连接关系作为边，并采用标签编码、独热编码和LLM编码（OpenAI text-embedding-3-small/large）三种方式对节点语义进行编码；（3）使用GraphSAGE模型推断BIM构件的功能需求。验证使用了5个高层住宅项目的BIM数据，涵盖6种通用构件类型（墙、柱、梁、板、楼梯、基础）的42个子类型。通过四组实验分别评估了功能属性预测能力、最优超参数配置（3跳、1024维度）、不同编码方法的性能差异以及与其他AI模型（SVM、XGBoost、MLP）的对比。",
+  "results": "实验结果表明：（1）功能属性预测方面，保温、防水、承重三个属性的平均F1值分别为0.9153、0.9323和0.8504，总体均值0.8933；（2）最优GraphSAGE配置为3个SAGE卷积层、1024维度，测试精度达0.7904；（3）LLM编码（text-embedding-3-large）取得最高加权F1值0.8766，优于标签编码（0.8026）和独热编码（0.8475），且与text-embedding-3-small（0.7398）差异具有统计显著性（p=0.000005）；（4）GraphSAGE在子类型分类中加权F1为0.8766，显著优于SVM（0.4587）、XGBoost（0.7543）和MLP（0.7369）。GraphSAGE在具有明确拓扑上下文的子类型（如核心墙、核心梁、周边墙、内过梁等）上表现尤为突出，但在训练数据稀缺的子类型上仍有改进空间。",
+  "markdownFile": "Jang, S. etal - 2025 - Semantic elaboration of Low-LOD BIMs Inferring functional requirements using graph neural networks",
+  "url": "https://doi.org/10.1016/j.aei.2024.103100",
+  "taskEn": "BIM semantic enrichment (component functional requirement inference)",
+  "inputDataEn": "BIM models (low LOD)",
+  "pdfFile": "Jang, S. etal - 2025 - Semantic elaboration of Low-LOD BIMs Inferring functional requirements using graph neural networks"
+}

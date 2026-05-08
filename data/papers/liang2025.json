@@ -1,0 +1,37 @@
+{
+  "id": "liang2025",
+  "citation": "Liang, X. etal / 2025",
+  "title": "OpenFACADES: An open framework for architectural caption and attribute data enrichment via street view imagery",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "建筑属性识别与描述生成",
+  "phase": "规划与设计",
+  "inputData": "街景图像+建筑几何数据",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "abstract": "This paper introduces OpenFACADES, an open framework that leverages multimodal crowdsourced data (Mapillary street view imagery and OpenStreetMap building geometries) to enrich building profiles with both objective attributes (type, material, age, floors) and semantic descriptors through multimodal large language models. The framework integrates isovist analysis for image-building alignment, automated building detection with panoramic-to-perspective reprojection, and fine-tuned vision-language models for multi-attribute prediction and open-vocabulary captioning. Using a global dataset of 31,180 labeled images from seven cities across three continents, the study shows that fine-tuned InternVL3 outperforms single-attribute computer vision models and zero-shot ChatGPT-4o, demonstrating strong generalization and robustness. The model is applied at scale to annotate 1.2 million images covering half a million buildings.",
+  "journal": "ISPRS Journal of Photogrammetry and Remote Sensing",
+  "llmModels": [
+    "InternVL3-1B",
+    "InternVL3-2B",
+    "InternVL2.5-4B",
+    "ChatGPT-4o",
+    "GroundingDINO-B"
+  ],
+  "keywords": [
+    "Building exteriors",
+    "Street-level imagery",
+    "Volunteered geographic information",
+    "ChatGPT",
+    "Multi-task learning",
+    "SDI"
+  ],
+  "methodology": "The framework consists of three main steps: (1) Integrating multimodal crowdsourced data by collecting Mapillary street view imagery metadata and OpenStreetMap building geometries, performing isovist analysis to compute theoretical angles of view and identify candidate images with optimal building visibility. (2) Retrieving building image data by detecting buildings in panoramic imagery using GroundingDINO, then reprojecting detected regions from equirectangular panoramic to perspective views via a virtual pinhole camera model to correct distortions, followed by quality-based filtering. (3) Establishing a multi-task dataset with four label types (single-attribute, single-attribute Q&A, multi-attribute Q&A, captioning) and fine-tuning InternVL3 vision-language models for simultaneous multi-attribute prediction and open-vocabulary captioning. The dataset contains 31,180 labeled building images from seven cities, with ChatGPT-4o used to generate multi-attribute Q&A and captioning labels for training.",
+  "results": "Fine-tuned InternVL3-2B achieves the best overall multi-attribute performance, reaching 61.27% accuracy on building type classification (vs. 57.69% for zero-shot ChatGPT-4o and 56.11% for best CV model Swin_b), 68.05% on surface material (comparable to Swin_b's 69.17%), R-squared of 0.789 on floor prediction (vs. 0.777 for best CV model ResNet101), and R-squared of 0.710 on building age. The VLM demonstrates superior cross-city generalization on unseen data from Brussels (63.80% type accuracy vs. ~32% for CV models) and greater robustness to image corruptions (lowest mean Relative mCE of 0.44-0.59 across attributes). Full fine-tuning outperforms LoRA, with optimal settings of 3 epochs and learning rate 8e-6. At scale, the pipeline annotates 1.2 million images for 503,353 buildings across seven cities.",
+  "contribution": "提出OpenFACADES开放框架，整合众源街景图像与建筑数据，通过等视域分析、目标检测和全景重投影获取完整建筑图像，并首次利用开源视觉-语言模型（InternVL3）实现建筑多属性联合预测与开放词汇描述生成，在精度、泛化性和鲁棒性上超越传统CV模型和零样本ChatGPT-4o",
+  "markdownFile": "Liang, X. etal - 2025 - OpenFACADES An open framework for architectural caption and attribute data enrichment via street vie....md",
+  "pdfFile": "Liang, X. etal - 2025 - OpenFACADES An open framework for architectural caption and attribute data enrichment via street vie....pdf",
+  "url": "https://doi.org/10.1016/j.isprsjprs.2025.10.014",
+  "taskEn": "Building attribute recognition and caption generation",
+  "inputDataEn": "Street view imagery + building geometric data"
+}

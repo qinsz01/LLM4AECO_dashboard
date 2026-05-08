@@ -1,0 +1,39 @@
+{
+  "id": "madireddy2025",
+  "citation": "Madireddy et al./2025",
+  "title": "Large Language Model-Driven Code Compliance Checking in Building Information Modeling",
+  "year": 2025,
+  "category": "规范与合规检查",
+  "task": "规范合规检查",
+  "phase": "规划与设计",
+  "inputData": "BIM模型+规范文档",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "LLM生成的Python脚本集成Revit实现半自动化BIM规范合规检查，通过优化Prompt结构使LLM生成可在Revit中直接执行的合规检查脚本",
+  "abstract": "This research addresses the time-consuming and error-prone nature of manual code compliance checking in Building Information Modeling (BIM) by introducing a Large Language Model (LLM)-driven approach to semi-automate this critical process. The developed system integrates LLMs such as ChatGPT, Claude, Gemini, and Llama, with Revit software to interpret building codes, generate Python scripts, and perform semi-automated compliance checks within the BIM environment. Case studies on a single-family residential project and an office building project demonstrated the system's ability to reduce the time and effort required for compliance checks while improving accuracy. It streamlined the identification of violations, such as non-compliant room dimensions, material usage, and object placements, by automatically assessing relationships and generating actionable reports. Compared to manual methods, the system eliminated repetitive tasks, simplified complex regulations, and ensured reliable adherence to standards.",
+  "journal": "Electronics 2025, 14, 2146 (MDPI)",
+  "llmModels": [
+    "ChatGPT 4.0",
+    "Claude Sonnet 3.5",
+    "Meta LLaMA 3.1-405B",
+    "Microsoft Copilot",
+    "Gemini",
+    "Perplexity.AI",
+    "Grok",
+    "Deepseek"
+  ],
+  "keywords": [
+    "BIM",
+    "semi-automated compliance checking",
+    "code compliance checking",
+    "AI",
+    "LLM"
+  ],
+  "methodology": "A four-component semi-automated framework for LLM-driven code compliance checking in BIM: (1) Input data phase integrating BIM models (Revit 2024) with regulatory documents (IRC 2021, IMC 2021); (2) AI-based interpretation phase where LLMs analyze regulatory documents and generate Python scripts (IronPython 3.4.1) for automated rule-checking, with an error feedback loop that returns script errors back to the LLM for refinement; (3) Rule-checking algorithm phase executing the generated Python scripts within Revit's PythonShell to evaluate BIM model compliance; (4) Output phase generating compliance/non-compliance reports with actionable recommendations. An optimized prompt engineering structure was developed consisting of four components: persona, basic prompt with rule description, general instructions (specifying IronPython/Revit versions, prohibiting f-strings), and rule-specific instructions (targeting relevant Revit element categories). 12 rules from IRC and IMC were tested across two case studies (single-family residential and office building). Eight LLMs were systematically compared using processing time, correction attempts, status, and success rate metrics.",
+  "results": "Among eight LLMs evaluated, Grok achieved the highest success rate at 76.7% with only 0.6 average correction attempts. ChatGPT 4.0 and Claude Sonnet 3.5 were the only models to successfully complete all rule checks; Claude required fewer correction iterations (3.4 vs 6.8) and achieved a higher success rate (23.7% vs 13.2%) at roughly one-tenth of ChatGPT's token cost. Meta LLaMA 3.1-405B and Microsoft Copilot failed to generate any functional scripts. Gemini and Perplexity.AI had success rates below 15%. Deepseek achieved a moderate 33% success rate at the lowest cost. The framework successfully identified non-compliant elements including doors with insufficient dimensions, missing kitchen sinks, and non-compliant guardrail heights in both case studies.",
+  "pdfFile": "Madireddy et al. - 2025 - Large Language Model-Driven Code Compliance Checking in Building Information Modeling.pdf",
+  "markdownFile": "Madireddy et al. - 2025 - Large Language Model-Driven Code Compliance Checking in Building Information Modeling.md",
+  "url": "https://doi.org/10.3390/electronics14112146",
+  "taskEn": "Code compliance checking",
+  "inputDataEn": "BIM models + regulatory documents"
+}

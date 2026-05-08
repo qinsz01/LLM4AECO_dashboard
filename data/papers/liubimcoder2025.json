@@ -1,0 +1,32 @@
+{
+  "id": "liubimcoder2025",
+  "citation": "Liu et al./2025",
+  "title": "BIMCoder: A Comprehensive Large Language Model Fusion Framework for Natural Language-Based BIM Information Retrieval",
+  "year": 2025,
+  "category": "BIM检索与管理",
+  "task": "自然语言到BIM结构化查询转换",
+  "phase": "运维",
+  "inputData": "自然语言查询+BIM结构化查询语句对",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "contribution": "提出BIMCoder融合框架，结合ERNIE 3.0的语义理解能力和SQLCoder的结构化查询生成能力，实现自然语言到BIM结构化查询语句的转换，精确匹配率87.16%，执行准确率88.75%；构建了包含1680个自然语言-结构化查询对的BIM信息查询数据集",
+  "abstract": "This paper presents BIMCoder, a model designed to translate natural language queries into structured query statements compatible with professional BIM software (e.g., BIMserver v1.5). It serves as an intermediary component between users and various BIM platforms, facilitating access for users without specialized BIM knowledge. A dedicated BIM information query dataset was constructed, comprising 1680 natural language query and structured BIM query string pairs, categorized into 12 groups. Three classical pre-trained LLMs (ERNIE 3.0, Llama-13B, and SQLCoder) were evaluated on this dataset. A fine-tuned model based on SQLCoder was then trained. Subsequently, a fusion model (BIMCoder) integrating ERNIE and SQLCoder was designed. Test results demonstrate that the proposed BIMCoder model achieves an outstanding accurate matching rate of 87.16% and an Execution Accuracy rate of 88.75% for natural language-based BIM information retrieval.",
+  "journal": "Applied Sciences",
+  "llmModels": [
+    "ERNIE 3.0",
+    "Llama-13B",
+    "SQLCoder"
+  ],
+  "keywords": [
+    "BIM information retrieval",
+    "large language model",
+    "natural language based BIM operation"
+  ],
+  "methodology": "本研究提出BIMCoder融合框架，采用三阶段架构：(1) Wrapper模型——使用ERNIE 3.0作为预处理模块，通过精心设计的提示将模糊或不规范的自然语言查询转化为标准化、结构化的精确查询；(2) Expert模型——基于Mistral架构的SQLCoder模型，使用监督微调（SFT）在构建的BIM查询数据集上进行训练，将标准化查询转换为IFCQL格式的JSON结构化BIM查询语句；(3) Validator——验证生成的查询语句是否符合IFCQL语法并可在BIMserver上成功执行。研究构建了包含1680个样本的BIM查询数据集（1200训练+240精确测试+240模糊测试），涵盖12种标准化查询类型（T1-T12），分为精确查询和模糊查询两类。三个基准模型（ERNIE 3.0、Llama-13B、SQLCoder）分别进行微调后在精确查询和模糊查询测试集上评估精确匹配率（EM）和执行准确率（EX）。",
+  "results": "在精确查询测试集上：ERNIE 3.0在12类查询中10类达到100%精确匹配，但在T4（50%）和T8（78%）表现较弱；SQLCoder同样在10类达到100%，但T6（13%）和T7（53%）表现不佳；Llama-13B表现不稳定，多个类别匹配率为0%。在模糊查询测试集上：BIMCoder融合模型整体表现最优，精确匹配率87.16%，执行准确率88.75%，在T5（85%）、T6（100%）、T8（100%）等类别显著超越单一模型。ERNIE在语义理解方面表现突出但结构化生成有局限，SQLCoder擅长结构化生成但对模糊输入鲁棒性不足，BIMCoder通过融合两者优势在大多数类别上取得最佳或接近最佳的表现。",
+  "markdownFile": "Liu et al. - 2025 - BIMCoder A Comprehensive Large Language Model Fusion Framework for Natural Language-Based BIM Infor",
+  "url": "https://doi.org/10.3390/app15147647",
+  "taskEn": "Natural language to BIM structured query conversion",
+  "inputDataEn": "Natural language queries + BIM structured query statement pairs",
+  "pdfFile": "Liu et al. - 2025 - BIMCoder A Comprehensive Large Language Model Fusion Framework for Natural Language-Based BIM Infor"
+}
