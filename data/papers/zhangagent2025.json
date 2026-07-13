@@ -3,7 +3,7 @@
   "citation": "Zhang et al. / 2025",
   "title": "Large language model-based agent Schema and library for automated building energy analysis and modeling",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "建筑能耗建模",
   "task": "建筑能耗分析与建模Agent框架",
   "phase": "全生命周期",
   "inputData": "文本描述+CSV数据+PDF文档",

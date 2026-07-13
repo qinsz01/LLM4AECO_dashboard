@@ -3,7 +3,7 @@
   "citation": "Chen et al. / 2025",
   "title": "Customized large-scale model for human-AI collaborative operation and maintenance management of building energy systems",
   "year": 2025,
-  "category": "运维管理",
+  "category": "管理",
   "task": "故障诊断、运维问答、能耗预测",
   "phase": "运维",
   "inputData": "自然语言查询、物理参数时序数据、领域知识文档",

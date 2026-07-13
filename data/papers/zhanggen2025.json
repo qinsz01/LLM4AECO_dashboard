@@ -3,7 +3,7 @@
   "citation": "Zhang et al. / 2025",
   "title": "Leveraging Large Language Model for Generalization in Building Energy Management",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "建筑能源管理与控制策略泛化",
   "phase": "运维",
   "inputData": "传感器数据（时间序列）/天气数据/建筑设备参数",

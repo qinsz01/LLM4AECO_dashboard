@@ -8,7 +8,7 @@
   "pdfFile": "Zhang et al. - 2026 - Sketch-to-Energy model automation with multimodal LLMs and retrieval-augmented generation",
   "markdownFile": "Zhang et al. - 2026 - Sketch-to-Energy model automation with multimodal LLMs and retrieval-augmented generation",
   "url": "https://doi.org/10.1016/j.enbuild.2026.117387",
-  "category": "能耗管理与优化",
+  "category": "建筑能耗建模",
   "task": "草图到建筑能耗模型自动化生成",
   "taskEn": "Automated sketch-to-energy model generation",
   "phase": "规划与设计",

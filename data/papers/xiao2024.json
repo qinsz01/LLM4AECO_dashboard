@@ -3,7 +3,7 @@
   "citation": "Xiao and Xu/2024",
   "title": "Exploring automated energy optimization with unstructured building data: A multi-agent based framework leveraging large language models",
   "year": 2024,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "能耗管理/能效诊断",
   "phase": "运维",
   "inputData": "混合数据（非结构化建筑数据）",

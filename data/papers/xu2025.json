@@ -3,7 +3,7 @@
   "citation": "Xu et al./2025",
   "title": "A large language model-based platform for real-time building monitoring and occupant interaction",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "环境监测/能耗管理",
   "phase": "运维",
   "inputData": "混合数据（传感器数据 + BIM + IoT）",

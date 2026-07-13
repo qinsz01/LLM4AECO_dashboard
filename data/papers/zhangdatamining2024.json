@@ -3,7 +3,7 @@
   "citation": "Zhang et al. / 2024",
   "title": "Automated data mining framework for building energy conservation aided by generative pre-trained transformers (GPT)",
   "year": 2024,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "能耗异常检测",
   "phase": "运维",
   "inputData": "传感器数据/文本",

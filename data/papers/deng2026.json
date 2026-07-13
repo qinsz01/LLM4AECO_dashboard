@@ -3,7 +3,7 @@
   "citation": "Deng et al./2026",
   "title": "Graph-constrained association rule mining-based energy efficiency diagnosis method for HVAC systems with knowledge-enhanced large language model",
   "year": 2026,
-  "category": "运维管理",
+  "category": "管理",
   "task": "故障诊断",
   "phase": "运维",
   "inputData": "HVAC系统运行数据",

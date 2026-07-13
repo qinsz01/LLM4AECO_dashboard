@@ -8,7 +8,7 @@
   "pdfFile": "Zhang et al. - 2025 - Data-driven building load prediction and large language models Comprehensive overview",
   "markdownFile": "Zhang et al. - 2025 - Data-driven building load prediction and large language models Comprehensive overview",
   "url": "https://doi.org/10.1016/j.enbuild.2024.115001",
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "建筑负荷预测综述与EnergyPlus模型生成",
   "taskEn": "Building load prediction review and EnergyPlus model generation",
   "phase": "全生命周期",

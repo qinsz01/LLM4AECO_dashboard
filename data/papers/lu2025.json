@@ -3,7 +3,7 @@
   "citation": "Lu et al./2025",
   "title": "Automated building energy modeling for energy retrofits using a large language model-based multi-agent framework",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "建筑能耗建模",
   "task": "自动化建筑能耗建模",
   "phase": "翻新与拆除",
   "inputData": "混合数据（CAD图纸+设计文档+传感器数据）",

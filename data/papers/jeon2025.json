@@ -3,7 +3,7 @@
   "citation": "Jeon and Lee / 2025",
   "title": "Hybrid large language model approach for prompt and sensitive defect management: A comparative analysis of hybrid, non-hybrid, and GraphRAG approaches",
   "year": 2025,
-  "category": "BIM检索与管理",
+  "category": "管理",
   "task": "缺陷管理问答",
   "phase": "运维",
   "inputData": "文本（缺陷报告）",

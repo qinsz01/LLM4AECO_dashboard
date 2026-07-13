@@ -3,7 +3,7 @@
   "citation": "Bao and Bu/2025",
   "title": "Defining and generating operation and maintenance management requirements in digital twin applications using the DT-GPT framework",
   "year": 2025,
-  "category": "运维管理",
+  "category": "管理",
   "task": "运维管理需求定义",
   "phase": "运维",
   "inputData": "设计图纸+COBie文档+文本需求",

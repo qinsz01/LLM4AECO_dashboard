@@ -3,7 +3,7 @@
   "citation": "Tang et al. / 2024",
   "title": "Artificial Intelligence-Powered Digital Twins for Sustainable and Resilient Engineering Structures",
   "year": 2024,
-  "category": "运维管理",
+  "category": "管理",
   "task": "结构健康监测与退化预测",
   "phase": "运维",
   "inputData": "传感器数据+仿真数据+材料试验数据",

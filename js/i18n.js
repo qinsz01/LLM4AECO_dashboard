@@ -101,10 +101,10 @@
             '\u65BD\u5DE5\u7BA1\u7406\u4E0E\u5B89\u5168': { zh: '\u65BD\u5DE5\u7BA1\u7406\u4E0E\u5B89\u5168', en: 'Construction & Safety' },
             '\u73AF\u5883\u4E0E\u78B3\u8BC4\u4F30': { zh: '\u73AF\u5883\u4E0E\u78B3\u8BC4\u4F30', en: 'Environment & Carbon' },
             '\u7ED3\u6784\u8BBE\u8BA1\u4E0E\u5206\u6790': { zh: '\u7ED3\u6784\u8BBE\u8BA1\u4E0E\u5206\u6790', en: 'Structural Design' },
-            '\u80FD\u8017\u7BA1\u7406\u4E0E\u4F18\u5316': { zh: '\u80FD\u8017\u7BA1\u7406\u4E0E\u4F18\u5316', en: 'Energy Management' },
+            '\u5EFA\u7B51\u80FD\u8017\u5EFA\u6A21': { zh: '\u5EFA\u7B51\u80FD\u8017\u5EFA\u6A21', en: 'Building Energy Modelling' },
             '\u89C4\u8303\u4E0E\u5408\u89C4\u68C0\u67E5': { zh: '\u89C4\u8303\u4E0E\u5408\u89C4\u68C0\u67E5', en: 'Code Compliance' },
             '\u8BBE\u8BA1\u4F18\u5316\u4E0E\u751F\u6210': { zh: '\u8BBE\u8BA1\u4F18\u5316\u4E0E\u751F\u6210', en: 'Design Optimization' },
-            '\u8FD0\u7EF4\u7BA1\u7406': { zh: '\u8FD0\u7EF4\u7BA1\u7406', en: 'Operations & Maint.' }
+            '\u7BA1\u7406': { zh: '\u7BA1\u7406', en: 'Management' }
         },
         phase: {
             '\u5168\u751F\u547D\u5468\u671F': { zh: '\u5168\u751F\u547D\u5468\u671F', en: 'Full Lifecycle' },

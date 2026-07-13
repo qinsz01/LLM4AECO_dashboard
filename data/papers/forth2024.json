@@ -3,7 +3,7 @@
   "citation": "Forth & Borrmann/2024",
   "title": "Semantic enrichment for BIM-based building energy performance simulations using semantic textual similarity and fine-tuning multilingual LLM",
   "year": 2024,
-  "category": "BIM检索与管理",
+  "category": "建筑能耗建模",
   "task": "BIM-to-BEM语义增强",
   "phase": "规划与设计",
   "inputData": "BIM模型",

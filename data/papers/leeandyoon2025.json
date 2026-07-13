@@ -3,7 +3,7 @@
   "citation": "Lee and Yoon / 2025",
   "title": "Metadata schema for virtual building models in digital twins: VB schema implemented in GPT-based applications",
   "year": 2025,
-  "category": "其他",
+  "category": "管理",
   "task": "基于智能数字孪生的运维服务（虚拟建模与校准、虚拟传感、传感器校准、本体解读、知识提取）",
   "phase": "运维",
   "inputData": "传感器数据 + 本体（RDF/Brick Schema） + 运行数据",

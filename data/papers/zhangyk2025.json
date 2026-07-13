@@ -3,7 +3,7 @@
   "citation": "Zhang, YK etal / 2025",
   "title": "SDIGLM leveraging large language models and multimodal chain of thought for structural damage identification",
   "year": 2025,
-  "category": "运维管理",
+  "category": "结构设计与分析",
   "task": "结构损伤识别与描述",
   "phase": "运维",
   "inputData": "结构损伤图像+文本描述",

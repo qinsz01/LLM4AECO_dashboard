@@ -3,7 +3,7 @@
   "citation": "Yoon et al./2025",
   "title": "Ontology-enabled AI agent-driven intelligent digital twins for building operations and maintenance",
   "year": 2025,
-  "category": "运维管理",
+  "category": "管理",
   "task": "基于智能数字孪生的运维服务（虚拟建模、故障检测与诊断、信息检索、本体更新）",
   "phase": "运维",
   "inputData": "传感器数据 + 本体（RDF/Brick Schema） + 运行数据",

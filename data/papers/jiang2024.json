@@ -3,7 +3,7 @@
   "citation": "Jiang et al. / 2024",
   "title": "EPlus-LLM: A large language model-based computing platform for automated building energy modeling",
   "year": 2024,
-  "category": "设计优化与生成",
+  "category": "建筑能耗建模",
   "task": "自动化建筑能耗建模",
   "phase": "规划与设计",
   "inputData": "文本（自然语言描述）",
