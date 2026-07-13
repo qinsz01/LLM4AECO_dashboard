@@ -7,8 +7,8 @@
   "task": "合同问答与知识检索",
   "phase": "施工",
   "inputData": "建筑合同文件+法律法规+国家规范",
-  "representation": "其他",
-  "llmMethod": "微调",
+  "representation": "文本",
+  "llmMethod": "RAG",
   "abstract": "Construction contract question answering (QA) is a knowledge-intensive task that requires timely responses to inquiries from multiple parties, but faces challenges in both accuracy and efficiency. Large Language Models (LLMs) excel at general-domain QA, but often show biases and hallucinations in specific domains. Although Retrieval-Augmented Generation (RAG) improves LLMs' performance with external knowledge, its effectiveness is limited due to the scarcity of domain-specific data and the poor segmentation and organization of documents. This research proposes a domain-adapted RAG strategy for construction contracts (CC-RAG) to enhance QA performance. The core improvements include: (1) a hierarchical approach to transform normative construction contract documents into structured basic knowledge units, with high-quality 'question-knowledge' pairs automatically generated using online LLMs to fine-tune the embedding model for domain adaptation; (2) automatic semantic similarity-based chunking with domain-adaptive embeddings and hierarchical clustering via HDBSCAN to form coherent chunk structures. CC-RAG achieves performance gains of 0.5% to 20% over base LLMs and traditional RAG strategies, and a local 7B-parameter model with CC-RAG outperforms a 671B-parameter online model by 4 percentage points.",
   "journal": "Advanced Engineering Informatics",
   "llmModels": [

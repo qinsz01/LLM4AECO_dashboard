@@ -8,7 +8,7 @@
   "phase": "运维",
   "inputData": "时序数据/语义模型",
   "representation": "文本",
-  "llmMethod": "Prompt",
+  "llmMethod": "Agent",
   "contribution": "提出PV-GPT，一种基于LLM代理的框架，集成Brick本体与结构化提示和模块化原语函数，实现自然语言查询建筑光伏数据，在1000+QA对上达到98.14%的任务完成准确率",
   "pdfFile": "Zhang, D. etal - 2025 - PV-GPT query the PV data using natural language.pdf",
   "markdownFile": "Zhang, D. etal - 2025 - PV-GPT query the PV data using natural language.md",

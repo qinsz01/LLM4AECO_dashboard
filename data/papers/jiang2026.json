@@ -3,7 +3,7 @@
   "citation": "Jiang et al. / 2026",
   "title": "Building regulation question-answering system using retrieval-augmented generation with dual-stage fine-tuned large language model",
   "year": 2026,
-  "category": "BIM检索与管理",
+  "category": "规范与合规检查",
   "task": "建筑规范问答",
   "phase": "规划与设计",
   "inputData": "规范文档",

@@ -3,7 +3,7 @@
   "citation": "Han et al., 2025",
   "title": "Large language models driven BIM-based DfMA method for free-form prefabricated buildings: framework and a usefulness case study",
   "year": 2025,
-  "category": "BIM检索与管理",
+  "category": "设计优化与生成",
   "task": "面向制造与装配的设计（DfMA）",
   "phase": "规划与设计",
   "inputData": "BIM模型+参数化设计+文本（设计规则）",

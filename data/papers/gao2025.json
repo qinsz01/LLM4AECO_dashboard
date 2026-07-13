@@ -13,10 +13,7 @@
   "abstract": "In the Architecture, Engineering, and Construction (AEC) industry, design processes remain fragmented across architectural, structural, and mechanical domains, limiting integration and optimization opportunities throughout building lifecycles. This paper investigates how artificial intelligence can be leveraged to create a comprehensive framework for parametric generative design in industrialized construction that integrates multiple design disciplines and optimization criteria. The methodology employs knowledge graph question answering (KGQA) enabled by large language models (LLMs) to acquire design requirements and constraints, implements multi-objective optimization algorithms to balance competing criteria, and establishes a three-tier priority hierarchy to resolve conflicts in cross-domain design processes. The framework demonstrates significant improvements in a real-world case study, achieving 15.8% reduction in lifecycle costs, 21.2% decrease in energy consumption, and significantly reducing preliminary design modelling time. These findings provide valuable insights for AEC practitioners seeking to implement human-AI collaborative design workflows and illustrate pathways for integrating domain-specific knowledge with advanced AI systems.",
   "journal": "Automation in Construction",
   "llmModels": [
-    "Ollama",
-    "LangChain",
-    "Sentence Transformer",
-    "Random Forest Regressor"
+    "Ollama-hosted LLM (model unspecified)"
   ],
   "keywords": [
     "Industrialized construction",

@@ -1,9 +1,9 @@
 {
   "id": "kang2024",
-  "citation": "Kang et al. / 2024",
+  "citation": "Kang and Kang/2024",
   "title": "Earthwork Network Architecture (ENA): Research for Earthwork Quantity Estimation Method Improvement with Large Language Model",
   "year": 2024,
-  "category": "其他",
+  "category": "施工管理与安全",
   "task": "土方工程量估算",
   "phase": "施工",
   "inputData": "CAD",

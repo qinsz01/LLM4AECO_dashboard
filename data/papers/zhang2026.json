@@ -8,7 +8,7 @@
   "pdfFile": "Zhang et al. - 2026 - BIMVLM A vision-language model for iterative generation of component BIM models",
   "markdownFile": "Zhang et al. - 2026 - BIMVLM A vision-language model for iterative generation of component BIM models",
   "url": "https://doi.org/10.1016/j.eswa.2026.131765",
-  "category": "设计优化与生成",
+  "category": "BIM检索与管理",
   "task": "BIM构件模型自动生成",
   "taskEn": "Automated generation of component BIM models",
   "phase": "规划与设计",

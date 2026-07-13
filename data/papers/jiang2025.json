@@ -9,7 +9,7 @@
   "inputData": "图像（结构损伤图片）+ 文本（自然语言问答）",
   "representation": "多模态",
   "llmMethod": "微调",
-  "contribution": "提出SDA-Chat多模态视觉问答模型，通过三阶段训练策略和跨模态高效投影层，实现震后结构损伤的自动文本化评估，最高准确率达83.04%",
+  "contribution": "提出SDA-Chat多模态视觉问答模型，通过三阶段训练策略和跨模态高效投影层，实现震后结构损伤的自动文本化评估；问答实验最高准确率83.04%，七项联合评估总体准确率76.11%",
   "abstract": "This paper develops SDA-Chat, a multimodal vision question-answering model that automatically generates professional textual interpretations of post-earthquake structural damage images through multi-round VQA interactions. A three-stage training strategy with QLoRA fine-tuning and a novel cross-modality efficient projector are proposed to enhance VQA accuracy and inference speed across seven distinct damage assessment tasks using a dataset of 8195 image-text pairs.",
   "journal": "Computer-Aided Civil and Infrastructure Engineering",
   "llmModels": [
@@ -31,7 +31,7 @@
     "building damage"
   ],
   "methodology": "SDA-Chat integrates a vision transformer (ViT) encoder, Q-former, a proposed cross-modality efficient projector (CEP), and an LLM decoder fine-tuned via QLoRA, trained through a three-stage strategy: instruction fine-tuning, image-text alignment, and domain-specific expertise learning on 8195 seismic damage image-text pairs.",
-  "results": "The best-performing model (LLaMA3 8B with CEP) achieved 76.11% total accuracy across seven concurrent assessment tasks, with the highest single-task accuracy of 96.43% for structural material identification and the highest inference speed of 435.31 tokens/s using Phi-2.7B.",
+  "results": "The question-answering experiments reached a highest accuracy of 83.04%. Across seven concurrent assessment tasks, the best-performing model (LLaMA3 8B with CEP) achieved 76.11% total accuracy, with the highest single-task accuracy of 96.43% for structural material identification and the highest inference speed of 435.31 tokens/s using Phi-2.7B.",
   "pdfFile": "Jiang et al. - 2025 - Large language model for post-earthquake structural damage assessment of buildings.pdf",
   "markdownFile": "Jiang et al. - 2025 - Large language model for post-earthquake structural damage assessment of buildings.md",
   "url": "https://doi.org/10.1111/mice.70010",

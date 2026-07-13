@@ -4,10 +4,10 @@
   "title": "Evaluating Modular House Construction Projects: A Delphi Method Enhanced by Conversational AI",
   "year": 2024,
   "category": "施工管理与安全",
-  "task": "文本",
+  "task": "模块化住宅建造项目评价标准构建",
   "phase": "规划与设计",
-  "inputData": "文本化",
-  "representation": "其他",
+  "inputData": "Delphi专家调查获得的36项评价因素及量表描述要求",
+  "representation": "文本",
   "llmMethod": "Prompt",
   "contribution": "LLM生成的评估标准描述质量与专家相当",
   "abstract": "This study proposes a methodology for evaluating modular house construction projects by combining the Delphi method with ChatGPT to generate detailed evaluation scales across multiple criteria. The authors identify key factors influencing customer selection of modular buildings through iterative expert surveys, then use ChatGPT with one-shot learning to produce Likert-scale descriptions for each criterion. Applied to a real-world 60-square-meter modular house project in Lithuania, the methodology demonstrates that ChatGPT-generated evaluation scales are of comparable quality to those produced by human experts, requiring only minor corrections upon expert verification.",
@@ -31,6 +31,6 @@
   "pdfFile": "Maceika et al. - 2024 - Evaluating Modular House Construction Projects A Delphi Method Enhanced by Conversational AI.pdf",
   "url": "https://doi.org/10.3390/buildings14061696",
   "markdownFile": "Maceika et al. - 2024 - Evaluating Modular House Construction Projects A Delphi Method Enhanced by Conversational AI.md",
-  "taskEn": "Text",
-  "inputDataEn": "Textualized data"
+  "taskEn": "Evaluation criteria development for modular housing construction projects",
+  "inputDataEn": "Thirty-six evaluation factors from the Delphi expert survey and scale-description requirements"
 }

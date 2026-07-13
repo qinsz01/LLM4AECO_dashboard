@@ -22,7 +22,7 @@
   {
     "id": "alturki2024",
     "file": "papers/alturki2024.json",
-    "title": "2024 - Human-in-the-Loop Learning With LLMs for Efficient RASE Tagging in Building Compliance Regulations",
+    "title": "Human-in-the-Loop Learning with LLMs for Efficient RASE Tagging in Building Compliance Regulations",
     "year": 2024,
     "category": "规范与合规检查",
     "phase": "规划与设计",
@@ -74,7 +74,7 @@
     "file": "papers/baek2023.json",
     "title": "Automated Detection of Social Conflict Drivers in Civil Infrastructure Projects Using Natural Language Processing",
     "year": 2023,
-    "category": "其他",
+    "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -116,7 +116,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "其他",
+    "llmMethod": "Prompt",
     "representation": "结构化"
   },
   {
@@ -140,16 +140,6 @@
     "representation": "图结构"
   },
   {
-    "id": "cai2025",
-    "file": "papers/cai2025.json",
-    "title": "Automatic Identification of Integrated Construction Elements Using Open-Set Object Detection Based on Image and Text Modality Fusion",
-    "year": 2025,
-    "category": "施工管理与安全",
-    "phase": "施工",
-    "llmMethod": "微调",
-    "representation": "多模态"
-  },
-  {
     "id": "caliskan2025",
     "file": "papers/caliskan2025.json",
     "title": "Exploring possibilities and limits of ChatGPT: Usage in building design studies",
@@ -164,9 +154,9 @@
     "file": "papers/chen2024.json",
     "title": "Automated Building Information Modeling Compliance Check through a Large Language Model Combined with Deep Learning and Ontology",
     "year": 2024,
-    "category": "BIM检索与管理",
+    "category": "规范与合规检查",
     "phase": "规划与设计",
-    "llmMethod": "其他",
+    "llmMethod": "Prompt",
     "representation": "结构化"
   },
   {
@@ -240,21 +230,11 @@
     "representation": "文本"
   },
   {
-    "id": "chienandchien2025",
-    "file": "papers/chienandchien2025.json",
-    "title": "Hybrid AI-Driven Computer-Aided Engineering Optimization: Large Language Models Versus Regression-Based Models Validated Through Finite-Element Analysis",
-    "year": 2025,
-    "category": "结构设计与分析",
-    "phase": "规划与设计",
-    "llmMethod": "Prompt",
-    "representation": "结构化"
-  },
-  {
     "id": "choi2024",
     "file": "papers/choi2024.json",
     "title": "GPT-based data-driven urban building energy modeling (GPT-UBEM): Concept, methodology, and case studies",
     "year": 2024,
-    "category": "管理",
+    "category": "建筑能耗建模",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "结构化"
@@ -292,7 +272,7 @@
   {
     "id": "djafarhenni2025",
     "file": "papers/djafarhenni2025.json",
-    "title": "SAP2000 API Expert a custom generative pre-trained transformer (GPT) for converting narrative struct...",
+    "title": "SAP2000 API Expert: a custom generative pre-trained transformer (GPT) for converting narrative structural engineering problems to SAP2000 API codes",
     "year": 2025,
     "category": "结构设计与分析",
     "phase": "规划与设计",
@@ -324,7 +304,7 @@
     "file": "papers/du2025.json",
     "title": "Predictive modeling BIM command recommendation based on large-scale usage logs",
     "year": 2025,
-    "category": "设计优化与生成",
+    "category": "BIM检索与管理",
     "phase": "规划与设计",
     "llmMethod": "微调",
     "representation": "其他"
@@ -446,7 +426,7 @@
     "year": 2025,
     "category": "BIM检索与管理",
     "phase": "全生命周期",
-    "llmMethod": "RAG",
+    "llmMethod": "Agent",
     "representation": "文本"
   },
   {
@@ -464,7 +444,7 @@
     "file": "papers/han2025.json",
     "title": "Large language models driven BIM-based DfMA method for free-form prefabricated buildings: framework and a usefulness case study",
     "year": 2025,
-    "category": "BIM检索与管理",
+    "category": "设计优化与生成",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
     "representation": "其他"
@@ -488,16 +468,6 @@
     "phase": "施工",
     "llmMethod": "RAG",
     "representation": "图结构"
-  },
-  {
-    "id": "hettiarachchi2025",
-    "file": "papers/hettiarachchi2025.json",
-    "title": "CODE-ACCORD: A Corpus of building regulatory data for rule generation towards automatic compliance checking",
-    "year": 2025,
-    "category": "规范与合规检查",
-    "phase": "规划与设计",
-    "llmMethod": "其他",
-    "representation": "文本"
   },
   {
     "id": "hidalgobetanzos2025",
@@ -526,7 +496,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "Prompt",
+    "llmMethod": "Agent",
     "representation": "结构化"
   },
   {
@@ -564,7 +534,7 @@
     "file": "papers/jang2025.json",
     "title": "Multimodal Large Language Models as Built Environment Auditing Tools",
     "year": 2025,
-    "category": "其他",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "多模态"
@@ -574,7 +544,7 @@
     "file": "papers/jangs2025.json",
     "title": "Semantic elaboration of low-LOD BIMs: Inferring functional requirements using graph neural networks",
     "year": 2025,
-    "category": "设计优化与生成",
+    "category": "BIM检索与管理",
     "phase": "规划与设计",
     "llmMethod": "其他",
     "representation": "图结构"
@@ -586,7 +556,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "其他",
+    "llmMethod": "微调",
     "representation": "文本"
   },
   {
@@ -614,7 +584,7 @@
     "file": "papers/jiang2026.json",
     "title": "Building regulation question-answering system using retrieval-augmented generation with dual-stage fine-tuned large language model",
     "year": 2026,
-    "category": "BIM检索与管理",
+    "category": "规范与合规检查",
     "phase": "规划与设计",
     "llmMethod": "RAG",
     "representation": "文本"
@@ -674,7 +644,7 @@
     "file": "papers/kang2024.json",
     "title": "Earthwork Network Architecture (ENA): Research for Earthwork Quantity Estimation Method Improvement with Large Language Model",
     "year": 2024,
-    "category": "其他",
+    "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "微调",
     "representation": "文本"
@@ -734,7 +704,7 @@
     "file": "papers/l2026.json",
     "title": "VS-BIM: A cognitive map-driven framework enhancing MLLM for automatic safety inspection in construction",
     "year": 2026,
-    "category": "BIM检索与管理",
+    "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "Prompt",
     "representation": "多模态"
@@ -745,8 +715,8 @@
     "title": "From design to operation: Multi-agent AI for virtual in-situ modeling of digital twins in BIM",
     "year": 2025,
     "category": "管理",
-    "phase": "规划与设计",
-    "llmMethod": "Prompt",
+    "phase": "全生命周期",
+    "llmMethod": "Agent",
     "representation": "结构化"
   },
   {
@@ -784,20 +754,10 @@
     "file": "papers/leeetal2025.json",
     "title": "A study on the advancement of building energy simulations: Utilizing ChatGPT to enhance occupancy rate predictions and sustainability outcomes",
     "year": 2025,
-    "category": "管理",
+    "category": "建筑能耗建模",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "文本"
-  },
-  {
-    "id": "li2025",
-    "file": "papers/li2025.json",
-    "title": "Ontology-Driven Mixture-of-Domain Documentation: A Backbone Approach Enabling Question Answering for Additive Construction",
-    "year": 2025,
-    "category": "其他",
-    "phase": "规划与设计",
-    "llmMethod": "Prompt",
-    "representation": "图结构"
   },
   {
     "id": "li2026",
@@ -824,7 +784,7 @@
     "file": "papers/liang2025.json",
     "title": "OpenFACADES: An open framework for architectural caption and attribute data enrichment via street view imagery",
     "year": 2025,
-    "category": "设计优化与生成",
+    "category": "其他",
     "phase": "规划与设计",
     "llmMethod": "微调",
     "representation": "多模态"
@@ -842,11 +802,11 @@
   {
     "id": "liao2025",
     "file": "papers/liao2025.json",
-    "title": "Safety Consultation for Prefabricated Construction A Localized Retrieval-Augmented Generative Questi...",
+    "title": "Safety Consultation for Prefabricated Construction: A Localized Retrieval-Augmented Generative Question-Answering System",
     "year": 2025,
     "category": "施工管理与安全",
     "phase": "施工",
-    "llmMethod": "微调",
+    "llmMethod": "RAG",
     "representation": "文本"
   },
   {
@@ -884,7 +844,7 @@
     "file": "papers/lietal2025b.json",
     "title": "Estimating demolition waste from residential interior photos: A Large Language Model solution",
     "year": 2025,
-    "category": "其他",
+    "category": "环境与碳评估",
     "phase": "翻新与拆除",
     "llmMethod": "Prompt",
     "representation": "多模态"
@@ -896,7 +856,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "Prompt",
+    "llmMethod": "Agent",
     "representation": "结构化"
   },
   {
@@ -1004,7 +964,7 @@
     "file": "papers/lu2026.json",
     "title": "Human-AI interactive framework for smart evacuation safety analysis in large infrastructures",
     "year": 2026,
-    "category": "施工管理与安全",
+    "category": "设计优化与生成",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
     "representation": "多模态"
@@ -1017,7 +977,7 @@
     "category": "施工管理与安全",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
-    "representation": "其他"
+    "representation": "文本"
   },
   {
     "id": "madireddy2025",
@@ -1044,7 +1004,7 @@
     "file": "papers/mehrishal2025.json",
     "title": "Tunnel Rapid AI Classification (TRaiC): An Open-Source Code for 360° Tunnel Face Mapping, Discontinuity Analysis, and RAG-LLM Powered Geo-Engineering Reporting",
     "year": 2025,
-    "category": "施工管理与安全",
+    "category": "结构设计与分析",
     "phase": "施工",
     "llmMethod": "RAG",
     "representation": "多模态"
@@ -1054,10 +1014,10 @@
     "file": "papers/mok2025.json",
     "title": "Data-efficient classification of road inspection texts with a semantic similarity criterion",
     "year": 2025,
-    "category": "其他",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "微调",
-    "representation": "其他"
+    "representation": "文本"
   },
   {
     "id": "nyqvistetal2024",
@@ -1112,11 +1072,11 @@
   {
     "id": "park2024",
     "file": "papers/park2024.json",
-    "title": "Evaluation orthotics design using finite elements analysis (FEA) and generative AI models",
+    "title": "Structural analysis and design using generative AI",
     "year": 2024,
     "category": "结构设计与分析",
     "phase": "规划与设计",
-    "llmMethod": "其他",
+    "llmMethod": "Prompt",
     "representation": "结构化"
   },
   {
@@ -1194,9 +1154,9 @@
     "file": "papers/quan2025.json",
     "title": "AutoBEE: A hierarchical multi-agent approach for energy and environmental parameter analysis",
     "year": 2025,
-    "category": "管理",
+    "category": "建筑能耗建模",
     "phase": "规划与设计",
-    "llmMethod": "其他",
+    "llmMethod": "Agent",
     "representation": "多模态"
   },
   {
@@ -1206,7 +1166,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "RAG",
+    "llmMethod": "Agent",
     "representation": "图结构"
   },
   {
@@ -1222,7 +1182,7 @@
   {
     "id": "samsami2024",
     "file": "papers/samsami2024.json",
-    "title": "Optimizing the Utilization of Generative Artificial Intelligence (AI) in the AEC Industry ChatGPT Pr...",
+    "title": "Optimizing the Utilization of Generative Artificial Intelligence (AI) in the AEC Industry: ChatGPT Prompt Engineering and Design",
     "year": 2024,
     "category": "施工管理与安全",
     "phase": "施工",
@@ -1234,7 +1194,7 @@
     "file": "papers/saparamadu2025.json",
     "title": "Optimising Contract Interpretations with Large Language Models: A Comparative Evaluation of a Vector Database-Powered Chatbot vs. ChatGPT",
     "year": 2025,
-    "category": "其他",
+    "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "RAG",
     "representation": "文本"
@@ -1294,9 +1254,9 @@
     "file": "papers/smetana2025.json",
     "title": "Evaluating Expertise of Concrete Pavement Construction in Modern Large Language Models",
     "year": 2025,
-    "category": "施工管理与安全",
+    "category": "其他",
     "phase": "施工",
-    "llmMethod": "Prompt",
+    "llmMethod": "RAG",
     "representation": "文本"
   },
   {
@@ -1330,21 +1290,11 @@
     "representation": "结构化"
   },
   {
-    "id": "tangetal2024",
-    "file": "papers/tangetal2024.json",
-    "title": "Artificial Intelligence-Powered Digital Twins for Sustainable and Resilient Engineering Structures",
-    "year": 2024,
-    "category": "管理",
-    "phase": "运维",
-    "llmMethod": "其他",
-    "representation": "其他"
-  },
-  {
     "id": "teclaw2025",
     "file": "papers/teclaw2025.json",
     "title": "Building information model and schema cross-validation using semantics – conceptual framework",
     "year": 2025,
-    "category": "规范与合规检查",
+    "category": "BIM检索与管理",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
     "representation": "图结构"
@@ -1415,16 +1365,16 @@
     "title": "Entropy-Optimized Dynamic Text Segmentation and RAG-Enhanced LLMs for Construction Engineering Knowledge Base",
     "year": 2025,
     "category": "规范与合规检查",
-    "phase": "规划与设计",
+    "phase": "施工",
     "llmMethod": "RAG",
-    "representation": "结构化"
+    "representation": "文本"
   },
   {
     "id": "wu2026",
     "file": "papers/wu2026.json",
     "title": "Evaluation of Tunnel Rock Mass Integrity Using Multi-Modal Data and Generative Large Language Model: TunnelRIP-GPT",
     "year": 2026,
-    "category": "施工管理与安全",
+    "category": "结构设计与分析",
     "phase": "施工",
     "llmMethod": "Prompt",
     "representation": "多模态"
@@ -1526,7 +1476,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "Prompt",
+    "llmMethod": "Agent",
     "representation": "文本"
   },
   {
@@ -1544,7 +1494,7 @@
     "file": "papers/zhang2026.json",
     "title": "BIMVLM: A Vision-Language Model for Iterative Generation of Component BIM Models",
     "year": 2026,
-    "category": "设计优化与生成",
+    "category": "BIM检索与管理",
     "phase": "规划与设计",
     "llmMethod": "微调",
     "representation": "多模态"
@@ -1554,7 +1504,7 @@
     "file": "papers/zhang2026b.json",
     "title": "Bridging Dual Knowledge Graphs for Multi-Hop Question Answering in Construction Safety",
     "year": 2026,
-    "category": "施工管理与安全",
+    "category": "规范与合规检查",
     "phase": "施工",
     "llmMethod": "RAG",
     "representation": "图结构"
@@ -1596,8 +1546,8 @@
     "year": 2026,
     "category": "施工管理与安全",
     "phase": "施工",
-    "llmMethod": "微调",
-    "representation": "其他"
+    "llmMethod": "RAG",
+    "representation": "文本"
   },
   {
     "id": "zhangandzhang2025",
@@ -1672,7 +1622,7 @@
   {
     "id": "zhangyk2025",
     "file": "papers/zhangyk2025.json",
-    "title": "SDIGLM leveraging large language models and multimodal chain of thought for structural damage identification",
+    "title": "SDIGLM: leveraging large language models and multimodal chain of thought for structural damage identification",
     "year": 2025,
     "category": "结构设计与分析",
     "phase": "运维",
@@ -1704,7 +1654,7 @@
     "file": "papers/zhong2024.json",
     "title": "Domain-specific language models pre-trained on construction management systems corpora",
     "year": 2024,
-    "category": "施工管理与安全",
+    "category": "其他",
     "phase": "全生命周期",
     "llmMethod": "微调",
     "representation": "文本"
@@ -1734,7 +1684,7 @@
     "file": "papers/zhou2026b.json",
     "title": "Large Language Model Orchestrated Workflow Integrating Retrieval-Augmented Generation and Model Context Protocol Tools for Urban-Scale Simulation-Based Resilience Assessment",
     "year": 2026,
-    "category": "管理",
+    "category": "建筑能耗建模",
     "phase": "运维",
     "llmMethod": "RAG",
     "representation": "文本"
