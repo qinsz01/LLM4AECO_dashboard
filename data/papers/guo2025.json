@@ -8,7 +8,7 @@
   "phase": "全生命周期",
   "inputData": "自然语言查询+BIM模型",
   "representation": "文本",
-  "llmMethod": "RAG",
+  "llmMethod": "Agent",
   "contribution": "LLM框架实现查询与BIM域代码函数的自动对齐，准确率78.75%，错误率降低85%",
   "abstract": "The complexity of BIM data calls for efficient automatic information retrieval methods, yet aligning queries with BIM information, especially domain code packages, remains challenging due to intricate data structures, naming conventions, and varying query complexities. Existing techniques require manual training and merely solve the IFC format, while recent exploration of LLMs remains preliminary in BIM automation. This paper introduces Synergistic BIM Aligners, a framework leveraging LLMs to automatically align human queries with BIM domain code functions, thereby assisting subsequent retrieval code generation stages. The framework features eight agents based on hierarchical alignment, hybrid search, and complementary routing strategies. The framework was evaluated using 80 queries from the Revit C# API of varying complexity. The results demonstrated high accuracy (78.75%) and significantly reduced errors, with the system's 0.30 errors per query on average compared to Standalone Agent's 2.03 errors. These findings highlight the potential of LLM-assisted methods for BIM information retrieval.",
   "journal": "Automation in Construction",

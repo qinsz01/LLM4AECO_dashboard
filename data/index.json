@@ -22,7 +22,7 @@
   {
     "id": "alturki2024",
     "file": "papers/alturki2024.json",
-    "title": "2024 - Human-in-the-Loop Learning With LLMs for Efficient RASE Tagging in Building Compliance Regulations",
+    "title": "Human-in-the-Loop Learning with LLMs for Efficient RASE Tagging in Building Compliance Regulations",
     "year": 2024,
     "category": "规范与合规检查",
     "phase": "规划与设计",
@@ -116,7 +116,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "其他",
+    "llmMethod": "Prompt",
     "representation": "结构化"
   },
   {
@@ -140,16 +140,6 @@
     "representation": "图结构"
   },
   {
-    "id": "cai2025",
-    "file": "papers/cai2025.json",
-    "title": "Automatic Identification of Integrated Construction Elements Using Open-Set Object Detection Based on Image and Text Modality Fusion",
-    "year": 2025,
-    "category": "施工管理与安全",
-    "phase": "施工",
-    "llmMethod": "微调",
-    "representation": "多模态"
-  },
-  {
     "id": "caliskan2025",
     "file": "papers/caliskan2025.json",
     "title": "Exploring possibilities and limits of ChatGPT: Usage in building design studies",
@@ -166,7 +156,7 @@
     "year": 2024,
     "category": "规范与合规检查",
     "phase": "规划与设计",
-    "llmMethod": "其他",
+    "llmMethod": "Prompt",
     "representation": "结构化"
   },
   {
@@ -240,16 +230,6 @@
     "representation": "文本"
   },
   {
-    "id": "chienandchien2025",
-    "file": "papers/chienandchien2025.json",
-    "title": "Hybrid AI-Driven Computer-Aided Engineering Optimization: Large Language Models Versus Regression-Based Models Validated Through Finite-Element Analysis",
-    "year": 2025,
-    "category": "结构设计与分析",
-    "phase": "规划与设计",
-    "llmMethod": "Prompt",
-    "representation": "结构化"
-  },
-  {
     "id": "choi2024",
     "file": "papers/choi2024.json",
     "title": "GPT-based data-driven urban building energy modeling (GPT-UBEM): Concept, methodology, and case studies",
@@ -292,7 +272,7 @@
   {
     "id": "djafarhenni2025",
     "file": "papers/djafarhenni2025.json",
-    "title": "SAP2000 API Expert a custom generative pre-trained transformer (GPT) for converting narrative struct...",
+    "title": "SAP2000 API Expert: a custom generative pre-trained transformer (GPT) for converting narrative structural engineering problems to SAP2000 API codes",
     "year": 2025,
     "category": "结构设计与分析",
     "phase": "规划与设计",
@@ -446,7 +426,7 @@
     "year": 2025,
     "category": "BIM检索与管理",
     "phase": "全生命周期",
-    "llmMethod": "RAG",
+    "llmMethod": "Agent",
     "representation": "文本"
   },
   {
@@ -490,16 +470,6 @@
     "representation": "图结构"
   },
   {
-    "id": "hettiarachchi2025",
-    "file": "papers/hettiarachchi2025.json",
-    "title": "CODE-ACCORD: A Corpus of building regulatory data for rule generation towards automatic compliance checking",
-    "year": 2025,
-    "category": "规范与合规检查",
-    "phase": "规划与设计",
-    "llmMethod": "其他",
-    "representation": "文本"
-  },
-  {
     "id": "hidalgobetanzos2025",
     "file": "papers/hidalgobetanzos2025.json",
     "title": "Can ChatGPT AI Replace or Contribute to Experts' Diagnosis for Renovation Measures Identification?",
@@ -526,7 +496,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "Prompt",
+    "llmMethod": "Agent",
     "representation": "结构化"
   },
   {
@@ -586,7 +556,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "其他",
+    "llmMethod": "微调",
     "representation": "文本"
   },
   {
@@ -745,8 +715,8 @@
     "title": "From design to operation: Multi-agent AI for virtual in-situ modeling of digital twins in BIM",
     "year": 2025,
     "category": "管理",
-    "phase": "规划与设计",
-    "llmMethod": "Prompt",
+    "phase": "全生命周期",
+    "llmMethod": "Agent",
     "representation": "结构化"
   },
   {
@@ -788,16 +758,6 @@
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "文本"
-  },
-  {
-    "id": "li2025",
-    "file": "papers/li2025.json",
-    "title": "Ontology-Driven Mixture-of-Domain Documentation: A Backbone Approach Enabling Question Answering for Additive Construction",
-    "year": 2025,
-    "category": "BIM检索与管理",
-    "phase": "规划与设计",
-    "llmMethod": "Prompt",
-    "representation": "图结构"
   },
   {
     "id": "li2026",
@@ -842,11 +802,11 @@
   {
     "id": "liao2025",
     "file": "papers/liao2025.json",
-    "title": "Safety Consultation for Prefabricated Construction A Localized Retrieval-Augmented Generative Questi...",
+    "title": "Safety Consultation for Prefabricated Construction: A Localized Retrieval-Augmented Generative Question-Answering System",
     "year": 2025,
     "category": "施工管理与安全",
     "phase": "施工",
-    "llmMethod": "微调",
+    "llmMethod": "RAG",
     "representation": "文本"
   },
   {
@@ -896,7 +856,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "Prompt",
+    "llmMethod": "Agent",
     "representation": "结构化"
   },
   {
@@ -1017,7 +977,7 @@
     "category": "施工管理与安全",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
-    "representation": "其他"
+    "representation": "文本"
   },
   {
     "id": "madireddy2025",
@@ -1057,7 +1017,7 @@
     "category": "管理",
     "phase": "运维",
     "llmMethod": "微调",
-    "representation": "其他"
+    "representation": "文本"
   },
   {
     "id": "nyqvistetal2024",
@@ -1196,7 +1156,7 @@
     "year": 2025,
     "category": "建筑能耗建模",
     "phase": "规划与设计",
-    "llmMethod": "其他",
+    "llmMethod": "Agent",
     "representation": "多模态"
   },
   {
@@ -1206,7 +1166,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "RAG",
+    "llmMethod": "Agent",
     "representation": "图结构"
   },
   {
@@ -1222,7 +1182,7 @@
   {
     "id": "samsami2024",
     "file": "papers/samsami2024.json",
-    "title": "Optimizing the Utilization of Generative Artificial Intelligence (AI) in the AEC Industry ChatGPT Pr...",
+    "title": "Optimizing the Utilization of Generative Artificial Intelligence (AI) in the AEC Industry: ChatGPT Prompt Engineering and Design",
     "year": 2024,
     "category": "施工管理与安全",
     "phase": "施工",
@@ -1296,7 +1256,7 @@
     "year": 2025,
     "category": "其他",
     "phase": "施工",
-    "llmMethod": "Prompt",
+    "llmMethod": "RAG",
     "representation": "文本"
   },
   {
@@ -1405,9 +1365,9 @@
     "title": "Entropy-Optimized Dynamic Text Segmentation and RAG-Enhanced LLMs for Construction Engineering Knowledge Base",
     "year": 2025,
     "category": "规范与合规检查",
-    "phase": "规划与设计",
+    "phase": "施工",
     "llmMethod": "RAG",
-    "representation": "结构化"
+    "representation": "文本"
   },
   {
     "id": "wu2026",
@@ -1516,7 +1476,7 @@
     "year": 2025,
     "category": "管理",
     "phase": "运维",
-    "llmMethod": "Prompt",
+    "llmMethod": "Agent",
     "representation": "文本"
   },
   {
@@ -1586,8 +1546,8 @@
     "year": 2026,
     "category": "施工管理与安全",
     "phase": "施工",
-    "llmMethod": "微调",
-    "representation": "其他"
+    "llmMethod": "RAG",
+    "representation": "文本"
   },
   {
     "id": "zhangandzhang2025",
@@ -1662,7 +1622,7 @@
   {
     "id": "zhangyk2025",
     "file": "papers/zhangyk2025.json",
-    "title": "SDIGLM leveraging large language models and multimodal chain of thought for structural damage identification",
+    "title": "SDIGLM: leveraging large language models and multimodal chain of thought for structural damage identification",
     "year": 2025,
     "category": "结构设计与分析",
     "phase": "运维",

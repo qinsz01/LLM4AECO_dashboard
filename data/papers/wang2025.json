@@ -4,10 +4,10 @@
   "title": "Entropy-Optimized Dynamic Text Segmentation and RAG-Enhanced LLMs for Construction Engineering Knowledge Base",
   "year": 2025,
   "category": "规范与合规检查",
-  "task": "规范检查/知识库问答",
-  "phase": "规划与设计",
+  "task": "施工规范知识库问答",
+  "phase": "施工",
   "inputData": "规范文档",
-  "representation": "结构化",
+  "representation": "文本",
   "llmMethod": "RAG",
   "contribution": "提出熵优化动态文本分割（EDTS）方法，在建筑规范问答任务中达到76%准确率，揭示模型规模、准确率和执行时间的关系",
   "abstract": "In the field of construction engineering, there exists a dynamic evolution of extensive technical standards and specifications (e.g., GB/T and ISO series) that permeate the entire lifecycle of design, construction, and operation-maintenance. These standards require continuous version iteration to adapt to technological innovations. Engineers require specialized knowledge bases to assist in understanding and updating these standards. The advancement of large language models (LLMs) and Retrieval-Augmented Generation (RAG) technologies provides robust technical support for constructing domain-specific knowledge bases. This study developed and tested a vertical domain knowledge base construction scheme based on RAG architecture and LLMs, comprising three critical components: entropy-optimized dynamic text segmentation (EDTS), vector correlation-based chunk ranking, and iterative optimization of prompt engineering. This study employs an EDTS method to ensure information clarity and predictability within limited chunk lengths, followed by selecting 10 relevant chunks to form prompts for input into LLMs, thereby enabling efficient retrieval of vertical domain knowledge. Experimental validation using Qwen-series LLMs with a test set of 101 expert-verified questions from Chinese construction industry standard demonstrates that the overall test accuracy reaches 76%. The comparative experiments across model scales (1.5B, 3B, 7B, 14B, 32B, and 72B) quantitatively reveal the relationship between model size, answer accuracy, and execution time, providing decision-making guidance for computational resource-accuracy tradeoffs in engineering practice.",
@@ -32,6 +32,6 @@
   "url": "https://doi.org/10.3390/app15063134",
   "pdfFile": "Wang et al. - 2025 - Entropy-Optimized Dynamic Text Segmentation and RAG-Enhanced LLMs for Construction Engineering Knowl.pdf",
   "markdownFile": "Wang et al. - 2025 - Entropy-Optimized Dynamic Text Segmentation and RAG-Enhanced LLMs for Construction Engineering Knowl.md",
-  "taskEn": "Code compliance checking / knowledge base Q&A",
+  "taskEn": "Construction standards knowledge-base Q&A",
   "inputDataEn": "Regulatory documents"
 }

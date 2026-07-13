@@ -8,7 +8,7 @@
   "phase": "施工",
   "inputData": "规范文档+施工手册",
   "representation": "文本",
-  "llmMethod": "Prompt",
+  "llmMethod": "RAG",
   "contribution": "评估26个LLM在混凝土路面施工领域的知识水平，提出三阶段评估框架（自动题目生成、模型评测、RAG域适应），RAG技术使所有五个选定的小/中型开源模型准确率超过75%，Phi-3 3.8B IT（量化）超过90%",
   "abstract": "This paper evaluates twenty-six large language models on their expertise in concrete pavement construction using over 100 automatically generated multiple-choice questions across five topics including subgrade preparation, base preparation, joint sawing/sealing, finishing and placement, and surface smoothness. The study proposes a three-stage framework combining automated question generation with GPT-3.5-Turbo, model evaluation, and domain adaptation via retrieval augmented generation (RAG), demonstrating that open-source small and medium models enhanced with RAG can achieve accuracy comparable to proprietary models while running locally on consumer hardware.",
   "journal": "Transportation Research Record",

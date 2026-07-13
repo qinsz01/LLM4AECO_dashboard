@@ -8,7 +8,7 @@
   "phase": "规划与设计",
   "inputData": "建筑设计规范文本",
   "representation": "结构化",
-  "llmMethod": "其他",
+  "llmMethod": "Prompt",
   "contribution": "结合LLM、深度学习和本体知识模型实现自动化BIM合规检查，显著减少手动干预和标注需求",
   "pdfFile": "Chen et al. - 2024 - Automated Building Information Modeling Compliance Check through a Large Language Model Combined wit.pdf",
   "markdownFile": "Chen et al. - 2024 - Automated Building Information Modeling Compliance Check through a Large Language Model Combined wit.md",

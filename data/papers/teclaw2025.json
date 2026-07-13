@@ -4,7 +4,7 @@
   "title": "Building information model and schema cross-validation using semantics – conceptual framework",
   "year": 2025,
   "category": "BIM检索与管理",
-  "task": "规范检查/设计验证",
+  "task": "MEP原理图–BIM交叉验证",
   "phase": "规划与设计",
   "inputData": "混合数据（MEP原理图图像 + BIM）",
   "representation": "图结构",
@@ -27,6 +27,6 @@
   "pdfFile": "Teclaw et al. - 2025 - Building information model and schema cross-validation using semantics – conceptual framework.pdf",
   "markdownFile": "Teclaw et al. - 2025 - Building information model and schema cross-validation using semantics – conceptual framework.md",
   "url": "https://doi.org/10.1177/14780771251352954",
-  "taskEn": "Code compliance checking / design verification",
+  "taskEn": "MEP schematic–BIM cross-validation",
   "inputDataEn": "Mixed data (MEP schematic images + BIM)"
 }

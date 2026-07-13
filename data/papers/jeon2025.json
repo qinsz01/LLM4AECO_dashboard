@@ -8,7 +8,7 @@
   "phase": "运维",
   "inputData": "文本（缺陷报告）",
   "representation": "文本",
-  "llmMethod": "其他",
+  "llmMethod": "微调",
   "contribution": "提出混合LLM方法在保护数据隐私的同时实现高质量缺陷问答，ROUGE得分81.6%",
   "abstract": "This study proposes a hybrid LLM-enhanced defect question-answering (QA) method that secures private and sensitive data while yielding high performance. Prompt responses to residents' complaints are crucial for preventing recurring defects. However, traditional defect analysis relies on the expertise of a few skilled workers. LLMs offer a potential solution, but many companies prohibit closed-source LLM services like ChatGPT due to data breach concerns. Open-source LLMs can be locally deployed but typically perform worse. This study proposes a hybrid method that deploys an open-source LLM (Llama 3) for defect management to secure sensitive information and a closed-source LLM (GPT-4o) for generating synthetic training datasets. The method is compared to GPT-4o, Llama 3, and GraphRAG-based QA systems. The hybrid LLM-based QA method achieved the highest ROUGE score of 81.6%.",
   "journal": "Advanced Engineering Informatics",

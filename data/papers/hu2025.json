@@ -8,7 +8,7 @@
   "phase": "运维",
   "inputData": "语义模型（Brick）",
   "representation": "结构化",
-  "llmMethod": "Prompt",
+  "llmMethod": "Agent",
   "contribution": "提出AutoControl框架，使用双智能体（语义解释器+控制专家）自动生成建筑HVAC系统的PI控制器代码，通过PSO进行参数优化",
   "pdfFile": "Hu et al. - 2025 - AutoControl An end-to-end fully automated workflow for control design of building energy systems.pdf",
   "markdownFile": "Hu et al. - 2025 - AutoControl An end-to-end fully automated workflow for control design of building energy systems.md",

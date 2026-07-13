@@ -1,7 +1,7 @@
 {
   "id": "maharjan2026",
   "json_id": "maharjan2026",
-  "citation": "Maharjan et al./2026",
+  "citation": "Maharjan and Chun/2026",
   "title": "A Large Language Model-Driven Framework for Automated Bridge Specification Generation and Simulation Validation",
   "year": 2026,
   "abstract": "Many bridges have incomplete or fragmented specification records in legacy practitioner documents, which hinders building analysis-ready digital models. Reality capture and scan-to-BrIM workflows can recover external geometry but typically miss specification parameters needed for simulation, such as materials, supports, and representative loads. This study proposes BrDSL, a bridge domain-specific framework that generates validated, analysis-ready specification data from minimal user inputs within a defined bridge class and analysis setting. BrDSL is demonstrated for simply supported steel girder bridges with reinforced concrete deck slabs, using standardized practitioner design dossiers and linear static serviceability verification under representative loads. An LLM-based extraction pipeline converts design dossiers into a canonical JSON schema to build a reference database. A constrained generation module uses retrieval over this database to synthesize full specifications from sparse inputs (e.g., span and deck width), while multi-level validation and bounded iterative repair enforce schema consistency, engineering rule checks, and statistical plausibility. Finally, an automated JSON-to-Abaqus pipeline constructs FE models and verifies stress and deflection criteria.",

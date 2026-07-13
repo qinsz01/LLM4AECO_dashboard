@@ -8,7 +8,7 @@
   "phase": "规划与设计",
   "inputData": "IDF文件（EnergyPlus模型）+文本（自然语言指令）",
   "representation": "多模态",
-  "llmMethod": "其他",
+  "llmMethod": "Agent",
   "contribution": "分层多智能体系统（AutoBEE）高效处理建筑能耗和环境参数分析，显著提升设计决策质量",
   "pdfFile": "Quan et al. - 2025 - AutoBEE A hierarchical multi-agent approach for energy and environmental parameter analysis.pdf",
   "markdownFile": "Quan et al. - 2025 - AutoBEE A hierarchical multi-agent approach for energy and environmental parameter analysis.md",

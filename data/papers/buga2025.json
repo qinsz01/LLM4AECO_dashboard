@@ -8,7 +8,7 @@
   "phase": "运维",
   "inputData": "结构化数据库",
   "representation": "结构化",
-  "llmMethod": "其他",
+  "llmMethod": "Prompt",
   "contribution": "通过Function Calling和数据库schema信息，LLM在FM场景中的SQL执行有效性提高至67%",
   "url": "https://doi.org/10.3390/electronics14204106",
   "pdfFile": "Buga et al. - 2025 - Large Language Models for Structured Information Processing in Construction and Facility Management.pdf",

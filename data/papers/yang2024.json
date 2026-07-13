@@ -1,6 +1,6 @@
 {
   "id": "yang2024",
-  "citation": "Yang et al./2024",
+  "citation": "Yang and Zhang/2024",
   "title": "Prompt-Based Automation of Building Code Information Transformation for Compliance Checking",
   "year": 2024,
   "abstract": "Transforming building code information into a machine-processable format is essential for automated compliance checking, yet it presents significant challenges. A prompt-based framework was developed to automate the conversion into a logic programming language. Its effectiveness was assessed by testing the framework on 51 requirements from the International Building Code (IBC) 2015, achieving 97.37% precision and 95.88% recall at the logic clause level, with only 2% of the data used for training. Further testing on crash report transformation enhanced efficiency, reducing the average code generation time to approximately 60.8 s, thereby achieving a 27.8% time savings compared to existing rule-based methods. This paper contributes to the body of knowledge by introducing an effective, versatile, and user-friendly approach to automated building code information transformation, markedly decreasing the reliance on training data, time, and manual efforts.",
