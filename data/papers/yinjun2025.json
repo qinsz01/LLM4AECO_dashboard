@@ -1,0 +1,34 @@
+{
+  "id": "yinjun2025",
+  "citation": "Yin et al./2025",
+  "title": "FloorPlan-LLaMa: Aligning Architects’ Feedback and Domain Knowledge in Architectural Floor Plan Generation",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "建筑平面图生成与专业合理性评价",
+  "phase": "规划与设计",
+  "inputData": "住宅平面图、房间类别与自然语言设计描述，以及建筑师对功能性、流线和总体质量的评分与文本评语",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "contribution": "构建含建筑师多维评分和文字分析的ArchiMetricsNet数据集，训练FloorPlan-MPS专业偏好奖励模型，并通过PPO-RLHF对齐自回归平面图生成模型FP-LLaMa，使方案更符合建筑师对功能、比例、邻接和流线的判断。",
+  "pdfFile": "",
+  "markdownFile": "",
+  "abstract": "Conventional image metrics do not adequately capture the functional quality of architectural floor plans. This study introduces ArchiMetricsNet, which pairs residential plans with expert scores and written critiques, trains FloorPlan-MPS as a multidimensional reward model, and develops the autoregressive FP-LLaMa generator. PPO-based reinforcement learning from human feedback aligns generated layouts with architects’ preferences. Class- and text-conditioned experiments and an independent professional evaluation show stronger architectural reasonableness and human preference after alignment, although conventional image-similarity metrics decline modestly.",
+  "journal": "Proceedings of the 63rd Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
+  "llmModels": [
+    "FP-LLaMa",
+    "Llama-3.2-11B-Vision-Instruct"
+  ],
+  "keywords": [
+    "architectural floor plan generation",
+    "reinforcement learning from human feedback",
+    "architectural design evaluation",
+    "human preference alignment",
+    "autoregressive generation",
+    "multimodal reward model"
+  ],
+  "methodology": "ArchiMetricsNet starts from 24,000 professional ratings and textual analyses—14,000 RPLAN layouts and 2,000 outputs from each of House-GAN, HouseGAN++, HouseDiffusion, Tell2Design and FP-LLaMa—and expands them into 120,000 evaluation pairs spanning 165 room classes. Twenty-nine architectural experts participated in annotation and quality control, with five independent evaluations per plan. FloorPlan-MPS combines pretrained CLIP visual and text encoders with a preference-condition mask and cross-attention. FP-LLaMa uses a VQ-VAE to convert plans into discrete tokens, then performs class-conditioned or text-conditioned autoregressive next-token generation with classifier-free guidance; the text-conditioned model uses Llama-3.2-11B-Vision-Instruct. FloorPlan-MPS supplies the reward for PPO-based Floor Plan Autoregressive Optimization during RLHF.",
+  "results": "For class-conditioned generation, RLHF raised functionality, circulation and overall Architectural Reasonableness Scores from 6.27/5.91/6.31 to 7.18/6.53/6.62; the paper reports an 8.54% average architectural-reasonableness advantage over the second-best method. For text-conditioned generation, the aligned model scored 7.30/7.15/7.25, above the unaligned model and the Qwen2.5-7B-Instruct and ChatGLM4V baselines. Alignment modestly reduced conventional similarity metrics: class-conditioned FID/PSNR/SSIM changed from 15.92/62.23/0.907 to 16.72/60.03/0.892. Thirteen independent architectural evaluators reviewing 150 image sets gave the aligned model the highest average score and preference rate, with the lowest score standard deviation (1.895). The study remains residential-focused and does not yet guarantee code compliance, structural feasibility or energy performance.",
+  "url": "https://doi.org/10.18653/v1/2025.acl-long.331",
+  "taskEn": "Architectural floor plan generation and professional reasonableness evaluation",
+  "inputDataEn": "Residential floor plans, room-class and natural-language design conditions, and architects’ functionality, circulation, overall-quality scores and textual critiques"
+}

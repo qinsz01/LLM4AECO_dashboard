@@ -1140,6 +1140,16 @@
     "representation": "结构化"
   },
   {
+    "id": "qin2026",
+    "file": "papers/qin2026.json",
+    "title": "Tokenization Allows Multimodal Large Language Models to Understand, Generate and Edit Architectural Floor Plans",
+    "year": 2026,
+    "category": "设计优化与生成",
+    "phase": "规划与设计",
+    "llmMethod": "微调",
+    "representation": "多模态"
+  },
+  {
     "id": "qiu2025",
     "file": "papers/qiu2025.json",
     "title": "LLM-based framework for automated and customized floor plan design",
@@ -1268,6 +1278,16 @@
     "phase": "规划与设计",
     "llmMethod": "Prompt",
     "representation": "结构化"
+  },
+  {
+    "id": "sun2025",
+    "file": "papers/sun2025.json",
+    "title": "Automated Visualization for Structural Form-Finding using Orchestrated Multimodal Machine Learning Agents",
+    "year": 2025,
+    "category": "设计优化与生成",
+    "phase": "规划与设计",
+    "llmMethod": "Agent",
+    "representation": "多模态"
   },
   {
     "id": "taiwo2025",
@@ -1458,6 +1478,16 @@
     "phase": "施工",
     "llmMethod": "其他",
     "representation": "结构化"
+  },
+  {
+    "id": "yinjun2025",
+    "file": "papers/yinjun2025.json",
+    "title": "FloorPlan-LLaMa: Aligning Architects’ Feedback and Domain Knowledge in Architectural Floor Plan Generation",
+    "year": 2025,
+    "category": "设计优化与生成",
+    "phase": "规划与设计",
+    "llmMethod": "微调",
+    "representation": "多模态"
   },
   {
     "id": "zhang2024",

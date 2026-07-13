@@ -1,0 +1,33 @@
+{
+  "id": "qin2026",
+  "citation": "Qin et al./2026",
+  "title": "Tokenization Allows Multimodal Large Language Models to Understand, Generate and Edit Architectural Floor Plans",
+  "year": 2026,
+  "category": "设计优化与生成",
+  "task": "建筑平面图理解、生成与局部编辑",
+  "phase": "规划与设计",
+  "inputData": "RPLAN住宅平面图、建筑轮廓、自然语言空间描述与编辑指令",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "contribution": "提出HouseMind，将建筑轮廓和房间实例分别离散为可与语言共同建模的空间token，并在一个轻量多模态大语言模型中统一完成平面图理解、条件生成和指令编辑。",
+  "pdfFile": "",
+  "markdownFile": "",
+  "abstract": "Architectural floor plan design demands joint reasoning over geometry, semantics, and spatial hierarchy, which remains a major challenge for current AI systems. Although recent diffusion and language models improve visual fidelity, they still struggle with coherent spatial reasoning and controllable generation. HouseMind is a multimodal large language model that unifies floor plan understanding, generation, and editing in one framework. It introduces discrete room-instance tokens to construct a unified vocabulary that bridges layouts and symbolic reasoning. With multimodal alignment and instruction tuning, the model synthesizes coherent, controllable layouts from text instructions while remaining efficient and locally deployable.",
+  "journal": "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR 2026)",
+  "llmModels": [
+    "Qwen3-0.6B"
+  ],
+  "keywords": [
+    "architectural floor plans",
+    "multimodal large language model",
+    "spatial tokenization",
+    "floor plan generation",
+    "floor plan editing",
+    "VQ-VAE"
+  ],
+  "methodology": "HouseMind uses two lightweight VQ-VAE branches to tokenize the global building outline and each room instance conditioned on that outline. The resulting outline, room-label and room-geometry tokens are appended to the vocabulary of a Qwen3-0.6B backbone. Training has three full-parameter stages: spatial-token embedding initialization, autoregressive multimodal pre-training on interleaved text and spatial tokens, and supervised instruction tuning for layout understanding, text-and-outline-conditioned generation, and natural-language editing. Based on RPLAN, Qwen3-30B-A3B produces simple and detailed descriptions from canonical JSON records; the resulting benchmark contains 76,122 training, 2,308 validation and 2,308 shared test samples.",
+  "results": "On the 2,308-sample test set, the task-specific understanding model achieved a room match rate of 0.998, location accuracy of 0.969, adjacency accuracy of 0.990 and relation accuracy of 0.808 in about 3 seconds per sample. The unified HouseMind-O generator reached Micro/Macro IoU of 0.710/0.654, FID 1.89, Node F1 0.994 and edge overlap 0.880 in about 2 seconds, compared with 0.589/0.521 IoU and FID 11.3 for ChatHouseDiffusion. The task-specific editor achieved change IoU 0.608, GED 0.467 and Node F1 0.998 in about 3 seconds. Current editing is limited mainly to room addition and deletion; doors, windows and furniture are not modeled, and outputs are not yet fully aligned with professional design preferences.",
+  "url": "https://arxiv.org/abs/2603.11640",
+  "taskEn": "Architectural floor plan understanding, generation, and localized editing",
+  "inputDataEn": "RPLAN residential floor plans, building outlines, natural-language spatial descriptions, and editing instructions"
+}

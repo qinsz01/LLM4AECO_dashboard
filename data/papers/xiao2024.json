@@ -4,19 +4,21 @@
   "title": "Exploring automated energy optimization with unstructured building data: A multi-agent based framework leveraging large language models",
   "year": 2024,
   "category": "管理",
-  "task": "能耗管理/能效诊断",
+  "task": "能源审计信息抽取、能效诊断与节能改造推荐",
   "phase": "运维",
-  "inputData": "混合数据（非结构化建筑数据）",
+  "inputData": "异构中文建筑能源审计报告，以及ASHRAE手册、建筑节能规范和工程经验报告；报告中的表格、公式和图像预处理为Markdown文本",
   "representation": "文本",
   "llmMethod": "Agent",
   "contribution": "基于LLM的多智能体框架能以低成本（$5.15）自动处理非结构化建筑数据，完成建筑信息处理、性能诊断和改造推荐三个阶段",
   "pdfFile": "Xiao and Xu - 2024 - Exploring automated energy optimization with unstructured building data A multi-agent based framewo.pdf",
   "markdownFile": "Xiao and Xu - 2024 - Exploring automated energy optimization with unstructured building data A multi-agent based framewo.md",
   "abstract": "This paper proposes an LLM-based multi-agent framework for automating energy optimization tasks using unstructured building data from energy audit reports. The framework consists of three stages—building information processing, performance diagnosis, and retrofit recommendation—where LLMs injected with domain expertise via RAG act as agents with planner, researcher, and advisor roles. Case studies demonstrate the framework delivers reliable results at a cost of only $5.15, showing robustness across diverse inputs and heterogeneous tasks.",
-  "journal": "Energy & Buildings",
+  "journal": "Energy and Buildings 322 (2024) 114691",
   "llmModels": [
-    "GPT 4-Turbo",
-    "GPT 3.5-Turbo",
+    "GPT-4 Turbo",
+    "GPT-4 Vision",
+    "GPT-3.5-Turbo",
+    "GPT-3.5-Turbo-16k",
     "ChatGLM-std",
     "text-embedding-ada-002"
   ],
@@ -27,9 +29,12 @@
     "energy audit",
     "energy efficiency diagnosis"
   ],
-  "methodology": "A multi-agent framework using RAG-based knowledge injection where LLMs act as cognitive agents with planner, researcher, and advisor roles to process unstructured energy audit reports through building information extraction, EPI-based performance diagnosis, and knowledge-driven retrofit recommendation stages.",
-  "results": "The framework achieved 0.94 average precision and 0.96 average recall in building information extraction, a 0.93 average performance diagnosis score, and up to 0.82 retrofit recommendation coverage at a total cost of $5.15 per case, demonstrating robustness across four diverse building audit reports.",
+  "methodology": "The CrewAI/LangChain framework assigns planner, researcher and advisor roles to LLM agents and combines chain-of-thought planning, ReAct tool use, Python execution and RAG. It processes heterogeneous Chinese energy-audit reports in three stages: schema-constrained building-information extraction, multi-level EPI-based performance diagnosis, and knowledge-grounded retrofit recommendation. GPT-4 Vision converts complex tables, formulas, flowcharts and images to Markdown; Chroma retrieval with cosine similarity and text-embedding-ada-002 injects knowledge from ASHRAE guidance, energy codes and engineering reports. GPT-4 Turbo performs the first two agent stages, while GPT-3.5 variants support retrieval, recommendation and evaluation; ChatGLM-std is included in the knowledge-injection comparison.",
+  "results": "For case #0, the three-run averages were 0.9373 precision and 0.9627 recall for information extraction, 0.9250 diagnosis accuracy and 0.6667 recommendation coverage; 0.8182 was the best single-run coverage rather than the mean. The stage costs were $1.16 for extraction, $2.91 for diagnosis and $1.08 for recommendation, totaling $5.15. Across three additional heterogeneous reports, average precision ranged from 0.8355 to 0.8908, recall from 0.8992 to 0.9624, diagnosis accuracy from 0.8345 to 0.9121 and recommendation coverage from 0.9444 to 1.0000, with lower-quality source reports reducing reliability. On 7,549 knowledge statements, RAG-GPT-3.5 achieved balanced accuracy of 0.8607 and RAG-GLM 0.8485, both above GPT-4 Turbo without retrieval at 0.8145.",
   "url": "https://doi.org/10.1016/j.enbuild.2024.114691",
-  "taskEn": "Energy management / energy efficiency diagnosis",
-  "inputDataEn": "Mixed data (unstructured building data)"
+  "sourceUrl": "https://www.sciencedirect.com/science/article/abs/pii/S0378778824008077",
+  "doi": "10.1016/j.enbuild.2024.114691",
+  "pii": "S0378778824008077",
+  "taskEn": "Energy-audit information extraction, performance diagnosis, and retrofit recommendation",
+  "inputDataEn": "Heterogeneous Chinese building energy-audit reports plus ASHRAE guidance, energy codes, and engineering reports; tables, formulas, and images are preprocessed into Markdown text"
 }
