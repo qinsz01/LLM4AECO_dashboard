@@ -50,9 +50,15 @@
 
             if (searchLower) {
                 var haystack = [
-                    p.title, p.citation, p.category, p.task,
-                    p.phase, p.llmMethod, p.contribution
-                ].filter(Boolean).join(' ').toLowerCase();
+                    p.title, p.citation, p.category, p.task, p.taskEn,
+                    p.phase, p.llmMethod, p.representation,
+                    p.contribution, p.abstract, p.journal, p.url, p.sourceUrl,
+                    p.doi, p.pii, p.inputData, p.inputDataEn,
+                    p.methodology, p.results
+                ].concat(
+                    p.llmModels || [],
+                    p.keywords || []
+                ).filter(Boolean).join(' ').toLowerCase();
                 if (haystack.indexOf(searchLower) === -1) return false;
             }
 
