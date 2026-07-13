@@ -3,7 +3,7 @@
   "citation": "Li et al. / 2025",
   "title": "Estimating demolition waste from residential interior photos: A Large Language Model solution",
   "year": 2025,
-  "category": "其他",
+  "category": "环境与碳评估",
   "task": "拆除废弃物预测、室内设计类型分类、平面图分割",
   "phase": "翻新与拆除",
   "inputData": "住宅室内照片、建筑平面图",

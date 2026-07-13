@@ -6,7 +6,7 @@
     var UI = {
         zh: {
             htmlLang: 'zh-CN',
-            subtitle: '系统性文献综述 \u00B7 135篇论文 \u00B7 2023\u20132026',
+            subtitle: '系统性文献综述 \u00B7 {count}篇论文 \u00B7 2023\u20132026',
             searchPlaceholder: '搜索论文...',
             resetBtn: '\u2715 重置',
             langToggle: 'EN',
@@ -50,7 +50,7 @@
         },
         en: {
             htmlLang: 'en',
-            subtitle: 'Systematic Literature Review \u00B7 135 Papers \u00B7 2023\u20132026',
+            subtitle: 'Systematic Literature Review \u00B7 {count} Papers \u00B7 2023\u20132026',
             searchPlaceholder: 'Search papers...',
             resetBtn: '\u2715 Reset',
             langToggle: '\u4E2D\u6587',
@@ -150,7 +150,15 @@
         applyToDOM: function () {
             document.documentElement.lang = UI[lang].htmlLang;
             document.querySelectorAll('[data-i18n]').forEach(function (el) {
-                el.textContent = I18n.ui(el.getAttribute('data-i18n'));
+                var key = el.getAttribute('data-i18n');
+                var text = I18n.ui(key);
+                if (key === 'subtitle') {
+                    var count = window.appState && window.appState.allPapers
+                        ? window.appState.allPapers.length
+                        : '\u2013';
+                    text = text.replace('{count}', count);
+                }
+                el.textContent = text;
             });
             document.querySelectorAll('[data-i18n-placeholder]').forEach(function (el) {
                 el.placeholder = I18n.ui(el.getAttribute('data-i18n-placeholder'));

@@ -3,7 +3,7 @@
   "citation": "Mehrishal et al./2025",
   "title": "Tunnel Rapid AI Classification (TRaiC): An Open-Source Code for 360° Tunnel Face Mapping, Discontinuity Analysis, and RAG-LLM Powered Geo-Engineering Reporting",
   "year": 2025,
-  "category": "施工管理与安全",
+  "category": "结构设计与分析",
   "task": "隧道掌子面映射与岩体分类",
   "phase": "施工",
   "inputData": "现场图像（360°全景图像）",

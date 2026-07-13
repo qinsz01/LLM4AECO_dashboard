@@ -3,7 +3,7 @@
   "citation": "Mok et al./2025",
   "title": "Data-efficient classification of road inspection texts with a semantic similarity criterion",
   "year": 2025,
-  "category": "其他",
+  "category": "管理",
   "task": "道路检查文本分类",
   "phase": "运维",
   "inputData": "文本（道路检查评论）",

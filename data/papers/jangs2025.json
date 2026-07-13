@@ -3,7 +3,7 @@
   "citation": "Jang, S. etal / 2025",
   "title": "Semantic elaboration of low-LOD BIMs: Inferring functional requirements using graph neural networks",
   "year": 2025,
-  "category": "设计优化与生成",
+  "category": "BIM检索与管理",
   "task": "BIM语义增强（构件功能需求推断）",
   "phase": "规划与设计",
   "inputData": "BIM模型（低LOD）",

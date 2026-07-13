@@ -3,7 +3,7 @@
   "citation": "Zhong and Goodfellow/2024",
   "title": "Domain-specific language models pre-trained on construction management systems corpora",
   "year": 2024,
-  "category": "施工管理与安全",
+  "category": "其他",
   "task": "文本分类/命名实体识别",
   "phase": "全生命周期",
   "inputData": "文本（施工文档）",

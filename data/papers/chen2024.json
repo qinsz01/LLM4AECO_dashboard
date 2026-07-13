@@ -3,7 +3,7 @@
   "citation": "Chen et al./2024",
   "title": "Automated Building Information Modeling Compliance Check through a Large Language Model Combined with Deep Learning and Ontology",
   "year": 2024,
-  "category": "BIM检索与管理",
+  "category": "规范与合规检查",
   "task": "规范检查",
   "phase": "规划与设计",
   "inputData": "建筑设计规范文本",

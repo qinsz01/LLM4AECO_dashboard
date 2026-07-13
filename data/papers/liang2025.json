@@ -3,7 +3,7 @@
   "citation": "Liang, X. etal / 2025",
   "title": "OpenFACADES: An open framework for architectural caption and attribute data enrichment via street view imagery",
   "year": 2025,
-  "category": "设计优化与生成",
+  "category": "其他",
   "task": "建筑属性识别与描述生成",
   "phase": "规划与设计",
   "inputData": "街景图像+建筑几何数据",

@@ -3,7 +3,7 @@
   "citation": "Du, C. etal / 2025",
   "title": "Predictive modeling BIM command recommendation based on large-scale usage logs",
   "year": 2025,
-  "category": "设计优化与生成",
+  "category": "BIM检索与管理",
   "task": "BIM命令推荐",
   "phase": "规划与设计",
   "inputData": "BIM软件使用日志（Vectorworks大规模交互日志）",

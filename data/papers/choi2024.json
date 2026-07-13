@@ -3,7 +3,7 @@
   "citation": "Choi & Yoon/2024",
   "title": "GPT-based data-driven urban building energy modeling (GPT-UBEM): Concept, methodology, and case studies",
   "year": 2024,
-  "category": "管理",
+  "category": "建筑能耗建模",
   "task": "能耗预测",
   "phase": "运维",
   "inputData": "城市建筑数据（多源数据）",
