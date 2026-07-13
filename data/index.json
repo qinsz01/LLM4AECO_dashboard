@@ -14,7 +14,7 @@
     "file": "papers/almeida2025.json",
     "title": "Smart energy strategies: Leveraging LSTM and LLMs for advanced energy management",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "其他"
@@ -44,7 +44,7 @@
     "file": "papers/arslan2025.json",
     "title": "Monitoring indoor environmental conditions in office buildings using a sustainable Agentic RAG-LLM system",
     "year": 2025,
-    "category": "环境与碳评估",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "RAG",
     "representation": "多模态"
@@ -54,7 +54,7 @@
     "file": "papers/arslan2026.json",
     "title": "Integrated Environmental Information System for Damp and Mould Prevention",
     "year": 2026,
-    "category": "运维管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Agent",
     "representation": "多模态"
@@ -94,7 +94,7 @@
     "file": "papers/bao2025.json",
     "title": "Defining and generating operation and maintenance management requirements in digital twin applications using the DT-GPT framework",
     "year": 2025,
-    "category": "运维管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "微调",
     "representation": "多模态"
@@ -114,7 +114,7 @@
     "file": "papers/buga2025.json",
     "title": "Large Language Models for Structured Information Processing in Construction and Facility Management",
     "year": 2025,
-    "category": "BIM检索与管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "其他",
     "representation": "结构化"
@@ -174,7 +174,7 @@
     "file": "papers/chen2025.json",
     "title": "Can large language models replace human experts? Effectiveness and limitations in building energy retrofit challenges assessment",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "翻新与拆除",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -224,7 +224,7 @@
     "file": "papers/chenetal2025.json",
     "title": "Customized large-scale model for human-AI collaborative operation and maintenance management of building energy systems",
     "year": 2025,
-    "category": "运维管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "RAG",
     "representation": "文本"
@@ -254,7 +254,7 @@
     "file": "papers/choi2024.json",
     "title": "GPT-based data-driven urban building energy modeling (GPT-UBEM): Concept, methodology, and case studies",
     "year": 2024,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "结构化"
@@ -274,7 +274,7 @@
     "file": "papers/deng2026.json",
     "title": "Graph-constrained association rule mining-based energy efficiency diagnosis method for HVAC systems with knowledge-enhanced large language model",
     "year": 2026,
-    "category": "运维管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "RAG",
     "representation": "结构化"
@@ -344,7 +344,7 @@
     "file": "papers/elsayed2025.json",
     "title": "User-friendly AI-driven automation for rapid building energy model generation",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "建筑能耗建模",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
     "representation": "多模态"
@@ -364,7 +364,7 @@
     "file": "papers/forth2024.json",
     "title": "Semantic enrichment for BIM-based building energy performance simulations using semantic textual similarity and fine-tuning multilingual LLM",
     "year": 2024,
-    "category": "BIM检索与管理",
+    "category": "建筑能耗建模",
     "phase": "规划与设计",
     "llmMethod": "微调",
     "representation": "结构化"
@@ -504,7 +504,7 @@
     "file": "papers/hidalgobetanzos2025.json",
     "title": "Can ChatGPT AI Replace or Contribute to Experts' Diagnosis for Renovation Measures Identification?",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "翻新与拆除",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -524,7 +524,7 @@
     "file": "papers/hu2025.json",
     "title": "AutoControl: An end-to-end fully automated workflow for control design of building energy systems",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "结构化"
@@ -584,7 +584,7 @@
     "file": "papers/jeon2025.json",
     "title": "Hybrid large language model approach for prompt and sensitive defect management: A comparative analysis of hybrid, non-hybrid, and GraphRAG approaches",
     "year": 2025,
-    "category": "BIM检索与管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "其他",
     "representation": "文本"
@@ -594,7 +594,7 @@
     "file": "papers/jiang2024.json",
     "title": "EPlus-LLM: A large language model-based computing platform for automated building energy modeling",
     "year": 2024,
-    "category": "设计优化与生成",
+    "category": "建筑能耗建模",
     "phase": "规划与设计",
     "llmMethod": "微调",
     "representation": "文本"
@@ -624,7 +624,7 @@
     "file": "papers/jiang2026b.json",
     "title": "An Agentic AI-enabled Physics-Informed Machine Learning Framework for Grid-Interactive, Decarbonized Building Operations",
     "year": 2026,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Agent",
     "representation": "其他"
@@ -634,7 +634,7 @@
     "file": "papers/jiangandchen2025.json",
     "title": "Efficient fine-tuning of large language models for automated building energy modeling in complex cases",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "建筑能耗建模",
     "phase": "规划与设计",
     "llmMethod": "微调",
     "representation": "文本"
@@ -644,7 +644,7 @@
     "file": "papers/jiangg2025.json",
     "title": "Prompt engineering to inform large language model in automated building energy modeling",
     "year": 2025,
-    "category": "设计优化与生成",
+    "category": "建筑能耗建模",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -714,7 +714,7 @@
     "file": "papers/krutli2025.json",
     "title": "Augmenting LLMs to Securely Retrieve Information for Construction and Facility Management",
     "year": 2025,
-    "category": "BIM检索与管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "RAG",
     "representation": "文本"
@@ -744,7 +744,7 @@
     "file": "papers/lee2025.json",
     "title": "From design to operation: Multi-agent AI for virtual in-situ modeling of digital twins in BIM",
     "year": 2025,
-    "category": "其他",
+    "category": "管理",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
     "representation": "结构化"
@@ -774,7 +774,7 @@
     "file": "papers/leeandyoon2025.json",
     "title": "Metadata schema for virtual building models in digital twins: VB schema implemented in GPT-based applications",
     "year": 2025,
-    "category": "其他",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "图结构"
@@ -784,7 +784,7 @@
     "file": "papers/leeetal2025.json",
     "title": "A study on the advancement of building energy simulations: Utilizing ChatGPT to enhance occupancy rate predictions and sustainability outcomes",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -854,7 +854,7 @@
     "file": "papers/liao2026.json",
     "title": "Semi-Automated Reconstruction and Editing of Building Energy Models from Vector Floor Plans",
     "year": 2026,
-    "category": "能耗管理与优化",
+    "category": "建筑能耗建模",
     "phase": "翻新与拆除",
     "llmMethod": "Prompt",
     "representation": "结构化"
@@ -864,7 +864,7 @@
     "file": "papers/lieplusmcp2025.json",
     "title": "EnergyPlus-MCP: A model-context-protocol server for ai-driven building energy modeling",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "建筑能耗建模",
     "phase": "全生命周期",
     "llmMethod": "Agent",
     "representation": "结构化"
@@ -874,7 +874,7 @@
     "file": "papers/lietal2025.json",
     "title": "A large language model-based building operation and maintenance information query",
     "year": 2025,
-    "category": "运维管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "微调",
     "representation": "文本"
@@ -894,7 +894,7 @@
     "file": "papers/lietc2025.json",
     "title": "An LLM-assisted decision-making framework of rule-based control strategy for photovoltaic driven air conditioning systems",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "结构化"
@@ -904,7 +904,7 @@
     "file": "papers/lin2026.json",
     "title": "Empowering Building Emergency Response with Large Language Models and BIM-Based Knowledge Graphs",
     "year": 2026,
-    "category": "运维管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "RAG",
     "representation": "图结构"
@@ -934,7 +934,7 @@
     "file": "papers/liu2025b.json",
     "title": "Large Language Models for Building Energy Applications: Opportunities and Challenges",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "全生命周期",
     "llmMethod": "其他",
     "representation": "文本"
@@ -944,7 +944,7 @@
     "file": "papers/liu2026.json",
     "title": "Large Language Model--Driven Building Energy Model Generation",
     "year": 2026,
-    "category": "能耗管理与优化",
+    "category": "建筑能耗建模",
     "phase": "规划与设计",
     "llmMethod": "微调",
     "representation": "文本"
@@ -974,7 +974,7 @@
     "file": "papers/liudrone2025.json",
     "title": "A LLM-informed multi-agent AI system for drone-based visual inspection for infrastructure",
     "year": 2025,
-    "category": "运维管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Agent",
     "representation": "图结构"
@@ -994,7 +994,7 @@
     "file": "papers/lu2025.json",
     "title": "Automated building energy modeling for energy retrofits using a large language model-based multi-agent framework",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "建筑能耗建模",
     "phase": "翻新与拆除",
     "llmMethod": "Agent",
     "representation": "其他"
@@ -1094,7 +1094,7 @@
     "file": "papers/pan2025.json",
     "title": "Application of LMM-Derived Prompt-Based AIGC in Low-Altitude Drone-Based Concrete Crack Monitoring",
     "year": 2025,
-    "category": "运维管理",
+    "category": "结构设计与分析",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "多模态"
@@ -1154,7 +1154,7 @@
     "file": "papers/poszajmazurek2024.json",
     "title": "Artificial Intelligence and Digital Tools for Assisting Low-Carbon Architectural Design: Merging the Use of Machine Learning, Large Language Models, and Building Information Modeling for Life Cycle Assessment Tool Development",
     "year": 2024,
-    "category": "能耗管理与优化",
+    "category": "环境与碳评估",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
     "representation": "结构化"
@@ -1194,7 +1194,7 @@
     "file": "papers/quan2025.json",
     "title": "AutoBEE: A hierarchical multi-agent approach for energy and environmental parameter analysis",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "规划与设计",
     "llmMethod": "其他",
     "representation": "多模态"
@@ -1204,7 +1204,7 @@
     "file": "papers/s2025.json",
     "title": "Ontology-enabled AI agent-driven intelligent digital twins for building operations and maintenance",
     "year": 2025,
-    "category": "运维管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "RAG",
     "representation": "图结构"
@@ -1254,7 +1254,7 @@
     "file": "papers/shao2025.json",
     "title": "Advancing crack detection with generative AI for structural health monitoring",
     "year": 2025,
-    "category": "运维管理",
+    "category": "结构设计与分析",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "多模态"
@@ -1274,7 +1274,7 @@
     "file": "papers/shu2025.json",
     "title": "Large Language Models for Building Energy Retrofit Decision-Making: Technical and Sociotechnical Evaluations",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "翻新与拆除",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -1324,7 +1324,7 @@
     "file": "papers/tang2026.json",
     "title": "A Knowledge-Driven and Interpretable Fine-Tuning LLMs Framework for Energy Retrofit Decision Support in Commercial Buildings",
     "year": 2026,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "微调",
     "representation": "结构化"
@@ -1334,7 +1334,7 @@
     "file": "papers/tangetal2024.json",
     "title": "Artificial Intelligence-Powered Digital Twins for Sustainable and Resilient Engineering Structures",
     "year": 2024,
-    "category": "运维管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "其他",
     "representation": "其他"
@@ -1434,7 +1434,7 @@
     "file": "papers/xiao2024.json",
     "title": "Exploring automated energy optimization with unstructured building data: A multi-agent based framework leveraging large language models",
     "year": 2024,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Agent",
     "representation": "文本"
@@ -1454,7 +1454,7 @@
     "file": "papers/xu2025.json",
     "title": "A large language model-based platform for real-time building monitoring and occupant interaction",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "结构化"
@@ -1514,7 +1514,7 @@
     "file": "papers/zhang2024.json",
     "title": "Advancing building energy modeling with large language models: Exploration and case studies",
     "year": 2024,
-    "category": "能耗管理与优化",
+    "category": "建筑能耗建模",
     "phase": "全生命周期",
     "llmMethod": "RAG",
     "representation": "文本"
@@ -1524,7 +1524,7 @@
     "file": "papers/zhang2025.json",
     "title": "PV-GPT: query the PV data using natural language",
     "year": 2025,
-    "category": "其他",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -1534,7 +1534,7 @@
     "file": "papers/zhang2025b.json",
     "title": "Data-Driven Building Load Prediction and Large Language Models: Comprehensive Overview",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "全生命周期",
     "llmMethod": "RAG",
     "representation": "文本"
@@ -1564,7 +1564,7 @@
     "file": "papers/zhang2026c.json",
     "title": "Sketch-to-Energy Model Automation with Multimodal LLMs and Retrieval-Augmented Generation",
     "year": 2026,
-    "category": "能耗管理与优化",
+    "category": "建筑能耗建模",
     "phase": "规划与设计",
     "llmMethod": "RAG",
     "representation": "多模态"
@@ -1574,7 +1574,7 @@
     "file": "papers/zhangagent2025.json",
     "title": "Large language model-based agent Schema and library for automated building energy analysis and modeling",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "建筑能耗建模",
     "phase": "全生命周期",
     "llmMethod": "Agent",
     "representation": "文本"
@@ -1584,7 +1584,7 @@
     "file": "papers/zhangandchen2024.json",
     "title": "Large language model-based interpretable machine learning control in building energy systems",
     "year": 2024,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "结构化"
@@ -1614,7 +1614,7 @@
     "file": "papers/zhangautoem2025.json",
     "title": "Automatic building energy model development and debugging using large language models agentic workflow",
     "year": 2025,
-    "category": "设计优化与生成",
+    "category": "建筑能耗建模",
     "phase": "规划与设计",
     "llmMethod": "Agent",
     "representation": "文本"
@@ -1624,7 +1624,7 @@
     "file": "papers/zhangdatamining2024.json",
     "title": "Automated data mining framework for building energy conservation aided by generative pre-trained transformers (GPT)",
     "year": 2024,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -1634,7 +1634,7 @@
     "file": "papers/zhangetal2024.json",
     "title": "Generative pre-trained transformers (GPT)-based automated data mining for building energy management: Advantages, limitations and the future",
     "year": 2024,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -1644,7 +1644,7 @@
     "file": "papers/zhangetal2025.json",
     "title": "Multi-condition building decarbonization using deep reinforcement learning and large language model",
     "year": 2025,
-    "category": "运维管理",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "RAG",
     "representation": "结构化"
@@ -1654,7 +1654,7 @@
     "file": "papers/zhanggen2025.json",
     "title": "Leveraging Large Language Model for Generalization in Building Energy Management",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "微调",
     "representation": "结构化"
@@ -1664,7 +1664,7 @@
     "file": "papers/zhangload2025.json",
     "title": "Automated data-driven building energy load prediction method based on generative pre-trained transformers (GPT)",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -1674,7 +1674,7 @@
     "file": "papers/zhangyk2025.json",
     "title": "SDIGLM leveraging large language models and multimodal chain of thought for structural damage identification",
     "year": 2025,
-    "category": "运维管理",
+    "category": "结构设计与分析",
     "phase": "运维",
     "llmMethod": "微调",
     "representation": "多模态"
@@ -1714,7 +1714,7 @@
     "file": "papers/zhong2025.json",
     "title": "EnergAI: A Large Language Model-Driven Generative Design Method for Early-Stage Building Energy Optimization",
     "year": 2025,
-    "category": "能耗管理与优化",
+    "category": "设计优化与生成",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
     "representation": "文本"
@@ -1734,7 +1734,7 @@
     "file": "papers/zhou2026b.json",
     "title": "Large Language Model Orchestrated Workflow Integrating Retrieval-Augmented Generation and Model Context Protocol Tools for Urban-Scale Simulation-Based Resilience Assessment",
     "year": 2026,
-    "category": "能耗管理与优化",
+    "category": "管理",
     "phase": "运维",
     "llmMethod": "RAG",
     "representation": "文本"

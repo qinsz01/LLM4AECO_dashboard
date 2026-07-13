@@ -3,7 +3,7 @@
   "citation": "Zhang et al. / 2025",
   "title": "Multi-condition building decarbonization using deep reinforcement learning and large language model",
   "year": 2025,
-  "category": "运维管理",
+  "category": "管理",
   "task": "建筑碳排放优化、HVAC控制策略生成、人机交互",
   "phase": "运维",
   "inputData": "BIM模拟数据、气象数据、建筑运行参数",

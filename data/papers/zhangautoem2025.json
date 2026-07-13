@@ -3,7 +3,7 @@
   "citation": "Zhang et al. / 2025",
   "title": "Automatic building energy model development and debugging using large language models agentic workflow",
   "year": 2025,
-  "category": "设计优化与生成",
+  "category": "建筑能耗建模",
   "task": "能耗模型开发与调试",
   "phase": "规划与设计",
   "inputData": "文本（自然语言描述）+IDF文件（EnergyPlus模型）",

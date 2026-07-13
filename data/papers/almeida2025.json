@@ -3,7 +3,7 @@
   "citation": "Almeida et al./2025",
   "title": "Smart energy strategies: Leveraging LSTM and LLMs for advanced energy management",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "建筑能耗预测与优化",
   "phase": "运维",
   "inputData": "时间序列数据",

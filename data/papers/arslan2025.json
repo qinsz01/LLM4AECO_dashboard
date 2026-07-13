@@ -3,7 +3,7 @@
   "citation": "Arslan et al./2025",
   "title": "Monitoring indoor environmental conditions in office buildings using a sustainable Agentic RAG-LLM system",
   "year": 2025,
-  "category": "环境与碳评估",
+  "category": "管理",
   "task": "热舒适度监测",
   "phase": "运维",
   "inputData": "BIM模型+传感器数据+外部数据",

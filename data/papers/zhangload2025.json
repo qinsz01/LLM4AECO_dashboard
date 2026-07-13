@@ -3,7 +3,7 @@
   "citation": "Zhang et al./2025",
   "title": "Automated data-driven building energy load prediction method based on generative pre-trained transformers (GPT)",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "能耗预测",
   "phase": "运维",
   "inputData": "时间序列数据+文本",

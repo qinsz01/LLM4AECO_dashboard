@@ -3,7 +3,7 @@
   "citation": "Li et al. / 2025",
   "title": "An LLM-assisted decision-making framework of rule-based control strategy for photovoltaic driven air conditioning systems",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "PVAC系统控制参数优化",
   "phase": "运维",
   "inputData": "传感器数据（温度、太阳辐射、PV功率）+仿真运行指标（PPD、PMV、成本）",

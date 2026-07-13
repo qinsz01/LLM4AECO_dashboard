@@ -3,7 +3,7 @@
   "citation": "Zhong et al./2025",
   "title": "EnergAI: A Large Language Model-Driven Generative Design Method for Early-Stage Building Energy Optimization",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "设计优化与生成",
   "task": "建筑设计优化",
   "phase": "规划与设计",
   "inputData": "文本/设计参数",

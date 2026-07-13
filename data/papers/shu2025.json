@@ -3,7 +3,7 @@
   "citation": "Shu et al./2025",
   "title": "Large Language Models for Building Energy Retrofit Decision-Making: Technical and Sociotechnical Evaluations",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "能耗改造决策",
   "phase": "翻新与拆除",
   "inputData": "住宅建筑参数+能耗模拟数据+改造成本数据",

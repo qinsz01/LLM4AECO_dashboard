@@ -3,7 +3,7 @@
   "citation": "Pan et al. (2025)",
   "title": "Application of LMM-Derived Prompt-Based AIGC in Low-Altitude Drone-Based Concrete Crack Monitoring",
   "year": 2025,
-  "category": "运维管理",
+  "category": "结构设计与分析",
   "task": "结构健康监测（裂缝检测与分割）",
   "phase": "运维",
   "inputData": "无人机图像+AIGC合成图像+公开裂缝数据集",

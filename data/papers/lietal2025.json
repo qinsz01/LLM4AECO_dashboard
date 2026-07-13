@@ -3,7 +3,7 @@
   "citation": "Li et al. / 2025",
   "title": "A large language model-based building operation and maintenance information query",
   "year": 2025,
-  "category": "运维管理",
+  "category": "管理",
   "task": "建筑运维信息查询",
   "phase": "运维",
   "inputData": "传感器数据+查询文本",

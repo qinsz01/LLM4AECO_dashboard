@@ -3,7 +3,7 @@
   "citation": "Lee et al. / 2025",
   "title": "A study on the advancement of building energy simulations: Utilizing ChatGPT to enhance occupancy rate predictions and sustainability outcomes",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "建筑使用率预测",
   "phase": "运维",
   "inputData": "文本（职业类型+时间表描述）",

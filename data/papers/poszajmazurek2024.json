@@ -3,7 +3,7 @@
   "citation": "Płoszaj-Mazurek et al./2024",
   "title": "Artificial Intelligence and Digital Tools for Assisting Low-Carbon Architectural Design: Merging the Use of Machine Learning, Large Language Models, and Building Information Modeling for Life Cycle Assessment Tool Development",
   "year": 2024,
-  "category": "能耗管理与优化",
+  "category": "环境与碳评估",
   "task": "低碳建筑设计",
   "phase": "规划与设计",
   "inputData": "混合数据（BIM、LCA数据库、设计参数）",

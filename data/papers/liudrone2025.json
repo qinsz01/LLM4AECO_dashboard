@@ -3,7 +3,7 @@
   "citation": "Liu et al. / 2025",
   "title": "A LLM-informed multi-agent AI system for drone-based visual inspection for infrastructure",
   "year": 2025,
-  "category": "运维管理",
+  "category": "管理",
   "task": "现场检测与分析",
   "phase": "运维",
   "inputData": "现场图像视频+点云",

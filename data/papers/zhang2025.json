@@ -3,7 +3,7 @@
   "citation": "Zhang et al./2025",
   "title": "PV-GPT: query the PV data using natural language",
   "year": 2025,
-  "category": "其他",
+  "category": "管理",
   "task": "数据查询与分析",
   "phase": "运维",
   "inputData": "时序数据/语义模型",

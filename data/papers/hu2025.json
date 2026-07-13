@@ -3,7 +3,7 @@
   "citation": "Hu et al., 2025",
   "title": "AutoControl: An end-to-end fully automated workflow for control design of building energy systems",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "建筑能源系统控制设计",
   "phase": "运维",
   "inputData": "语义模型（Brick）",

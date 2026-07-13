@@ -3,7 +3,7 @@
   "citation": "Tang et al./2026",
   "title": "A Knowledge-Driven and Interpretable Fine-Tuning LLMs Framework for Energy Retrofit Decision Support in Commercial Buildings",
   "year": 2026,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "建筑节能改造决策支持",
   "phase": "运维",
   "inputData": "建筑能耗与设备运行数据",

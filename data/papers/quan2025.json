@@ -3,7 +3,7 @@
   "citation": "Quan et al./2025",
   "title": "AutoBEE: A hierarchical multi-agent approach for energy and environmental parameter analysis",
   "year": 2025,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "能耗与环境参数分析",
   "phase": "规划与设计",
   "inputData": "IDF文件（EnergyPlus模型）+文本（自然语言指令）",

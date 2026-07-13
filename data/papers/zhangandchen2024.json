@@ -3,7 +3,7 @@
   "citation": "Zhang and Chen / 2024",
   "title": "Large language model-based interpretable machine learning control in building energy systems",
   "year": 2024,
-  "category": "能耗管理与优化",
+  "category": "管理",
   "task": "建筑控制可解释性",
   "phase": "运维",
   "inputData": "建筑运行时序数据（温度、能耗、气象、occupancy）",

@@ -3,7 +3,7 @@
   "citation": "Shao et al./2025",
   "title": "Advancing crack detection with generative AI for structural health monitoring",
   "year": 2025,
-  "category": "运维管理",
+  "category": "结构设计与分析",
   "task": "裂缝检测与图像分类",
   "phase": "运维",
   "inputData": "合成图像+现场图像",
