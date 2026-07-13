@@ -1110,6 +1110,16 @@
     "representation": "图结构"
   },
   {
+    "id": "park2024",
+    "file": "papers/park2024.json",
+    "title": "Structural analysis and design using generative AI",
+    "year": 2024,
+    "category": "结构设计与分析",
+    "phase": "规划与设计",
+    "llmMethod": "Prompt",
+    "representation": "结构化"
+  },
+  {
     "id": "parketal2025",
     "file": "papers/parketal2025.json",
     "title": "Integrating Large Language Models with Multimodal Virtual Reality Interfaces to Support Collaborative Human-Robot Construction Work",
