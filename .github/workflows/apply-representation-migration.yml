@@ -1,0 +1,34 @@
+name: Apply representation migration
+
+on:
+  push:
+    branches:
+      - agent/learned-engineered-codes
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    if: github.actor != 'github-actions[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/learned-engineered-codes
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Apply and validate migration
+        run: python scripts/migrate_learned_engineered_codes.py
+      - name: Commit synchronized data
+        run: |
+          if git diff --quiet; then
+            echo "No generated changes"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/index.json data/papers js/i18n.js js/charts.js
+          git commit -m "Reclassify learned and engineered codes"
+          git push origin HEAD:agent/learned-engineered-codes
