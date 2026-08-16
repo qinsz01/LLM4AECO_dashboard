@@ -7,7 +7,7 @@
   "task": "建筑平面图生成与专业合理性评价",
   "phase": "规划与设计",
   "inputData": "住宅平面图、房间类别与自然语言设计描述，以及建筑师对功能性、流线和总体质量的评分与文本评语",
-  "representation": "多模态",
+  "representation": "学习/工程化编码",
   "llmMethod": "微调",
   "contribution": "构建含建筑师多维评分和文字分析的ArchiMetricsNet数据集，训练FloorPlan-MPS专业偏好奖励模型，并通过PPO-RLHF对齐自回归平面图生成模型FP-LLaMa，使方案更符合建筑师对功能、比例、邻接和流线的判断。",
   "pdfFile": "",

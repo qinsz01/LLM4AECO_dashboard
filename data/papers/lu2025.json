@@ -7,7 +7,7 @@
   "task": "自动化建筑能耗建模",
   "phase": "翻新与拆除",
   "inputData": "混合数据（CAD图纸+设计文档+传感器数据）",
-  "representation": "其他",
+  "representation": "多模态",
   "llmMethod": "Agent",
   "contribution": "将建模时间减少90%以上(48分钟对比8-32小时)",
   "abstract": "This paper presents Data2BEM, a GPT-4-based multi-agent framework that automates end-to-end building energy modeling by parsing architectural drawings, specifications, and sensor data to generate and calibrate building energy simulations. Applied to a University of Cambridge office building, the system achieves ASHRAE Guideline 14-level calibration accuracy while reducing total modeling time by over 90% compared to professional manual practice, and demonstrates retrofit evaluation through gas boiler-to-heat pump electrification scenarios.",

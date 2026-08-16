@@ -7,7 +7,7 @@
   "task": "土方工程量估算",
   "phase": "施工",
   "inputData": "CAD",
-  "representation": "文本",
+  "representation": "学习/工程化编码",
   "llmMethod": "微调",
   "contribution": "提出ENA架构结合LLM和Transformer自动化土方量估算，QTC分类准确率达97.17%",
   "abstract": "Accurate earthwork quantity estimation is essential for effective project planning and cost management in the Architecture, Engineering, and Construction (AEC) industry. Traditional methods for quantity takeoff are often time-consuming and susceptible to human error, particularly when working with unstructured datasets such as CAD drawings. This study introduces the Earthwork Network Architecture (ENA), a novel deep learning framework that incorporates Large Language Models (LLMs), Multi-Layer Perceptron (MLP), Long Short-Term Memory (LSTM) networks, and Transformers to automate and enhance the accuracy of earthwork quantity estimation. Among the architectures tested, the LLM-based ENA demonstrated superior performance, achieving faster convergence, greater loss reduction, and higher classification accuracy, with a Quantity Takeoff Classification accuracy of 97.17%. However, the LLMs required significantly more computational resources compared with other models. These findings suggest that LLMs, typically used in natural language processing, can be effectively adapted for complex AEC datasets.",

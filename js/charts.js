@@ -14,7 +14,7 @@
 
     var REPR_MAP = {
         '文本': '文本', '结构化': '结构化', '多模态': '多模态',
-        '图结构': '图结构', '其他': '其他'
+        '图结构': '图结构', '学习/工程化编码': '学习/工程化编码'
     };
 
     // Dark theme axis / label colors
@@ -36,7 +36,7 @@
     }
 
     function normalizeRepr(val) {
-        return REPR_MAP[val] || '其他';
+        return REPR_MAP[val] || val;
     }
 
     function sortedKeys(countMap) {
@@ -285,7 +285,7 @@
 
         // Build cross-count: normalized repr x category
         var categories = [];
-        var reprs = ['文本', '结构化', '多模态', '图结构', '其他'];
+        var reprs = ['文本', '结构化', '多模态', '图结构', '学习/工程化编码'];
 
         // Collect unique categories in stable order
         var catSet = {};
@@ -325,7 +325,7 @@
                 borderColor: SPLIT_LINE,
                 textStyle: { color: '#e2e8f0', fontSize: 12 }
             },
-            grid: { left: 70, right: 30, top: 10, bottom: 70 },
+            grid: { left: 20, right: 30, top: 10, bottom: 70, containLabel: true },
             xAxis: {
                 type: 'category',
                 data: categories,
@@ -715,7 +715,7 @@
         // --- Heatmap: update counts from filtered ---
         if (heatmapChart) {
             var categories = [];
-            var reprs = ['文本', '结构化', '多模态', '图结构', '其他'];
+            var reprs = ['文本', '结构化', '多模态', '图结构', '学习/工程化编码'];
             var catSet = {};
             state.allPapers.forEach(function (p) {
                 if (p.category) catSet[p.category] = true;

@@ -121,7 +121,7 @@
             '\u5FAE\u8C03': { zh: '\u5FAE\u8C03', en: 'Fine-tuning' }
         },
         representation: {
-            '\u5176\u4ED6': { zh: '\u5176\u4ED6', en: 'Others' },
+            '学习/工程化编码': { zh: '学习/工程化编码', en: 'Learned/engineered codes' },
             '\u56FE\u7ED3\u6784': { zh: '\u56FE\u7ED3\u6784', en: 'Graph' },
             '\u591A\u6A21\u6001': { zh: '\u591A\u6A21\u6001', en: 'Multimodal' },
             '\u6587\u672C': { zh: '\u6587\u672C', en: 'Text' },

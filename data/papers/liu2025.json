@@ -7,7 +7,7 @@
   "task": "数据检索",
   "phase": "全生命周期",
   "inputData": "BIM模型+自然语言查询",
-  "representation": "其他",
+  "representation": "结构化",
   "llmMethod": "微调",
   "contribution": "通过向量数据库和反思机制提高SQL生成准确性",
   "abstract": "Data retrieval in Building Information Modelling (BIM) is essential for effective project management, yet existing methods remain limited by manual processes, keyword-based searches, and poor handling of complex queries. To address this gap, we propose an intelligent BIM data retrieval system that integrates large language models (LLMs) with vector search in a multi-agent framework using LangChain. BIM data from Revit models are exported to an SQL database via Dynamo. Natural language queries are transformed into SQL using LLMs guided by relevant prompt documents. To overcome LLM token limitations, prompts are embedded into a vector database for semantic retrieval. A reflection mechanism corrects errors in SQL generation, and a fine-tuned LLM enhances accuracy. This work advances current BIM research by enabling automated, context-aware, and accurate data access – bridging the gap between human queries and structured BIM data through agentive flow.",

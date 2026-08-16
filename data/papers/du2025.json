@@ -7,7 +7,7 @@
   "task": "BIM命令推荐",
   "phase": "规划与设计",
   "inputData": "BIM软件使用日志（Vectorworks大规模交互日志）",
-  "representation": "其他",
+  "representation": "学习/工程化编码",
   "llmMethod": "微调",
   "contribution": "提出端到端BIM命令推荐框架，基于大规模（320亿行）真实BIM日志数据，采用SOTA Transformer架构（BERT/Llama3.2/Mixtral/T5）实现实时命令推荐，Recall@10达约84%；提出多阶段日志过滤与增强方法（含LLM+RAG数据增强、BPE工作流生成），无需定制日志器即可直接处理原始日志；开发软件原型集成BIM建模流程实现实时推荐",
   "abstract": "The adoption of Building Information Modeling (BIM) and model-based design within the Architecture, Engineering, and Construction (AEC) industry has been hindered by the perception that using BIM authoring tools demands more effort than conventional 2D drafting. To enhance design efficiency, this paper proposes a BIM command recommendation framework that predicts the optimal next actions in real-time based on users' historical interactions. We propose a comprehensive filtering and enhancement method for large-scale raw BIM log data and introduce a novel command recommendation model. Our model builds upon the state-of-the-art Transformer backbones originally developed for large language models (LLMs), incorporating a custom feature fusion module, dedicated loss function, and targeted learning strategy. In a case study, the proposed method is applied to over 32 billion rows of real-world log data collected globally from the BIM authoring software Vectorworks. Experimental results demonstrate that our method can learn universal and generalizable modeling patterns from anonymous user interaction sequences across different countries, disciplines, and projects. When generating recommendations for the next command, our approach achieves a Recall@10 of approximately 84%.",
