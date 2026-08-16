@@ -36,7 +36,7 @@
     }
 
     function normalizeRepr(val) {
-        return REPR_MAP[val] || '其他';
+        return REPR_MAP[val] || val;
     }
 
     function sortedKeys(countMap) {
@@ -325,7 +325,7 @@
                 borderColor: SPLIT_LINE,
                 textStyle: { color: '#e2e8f0', fontSize: 12 }
             },
-            grid: { left: 70, right: 30, top: 10, bottom: 70 },
+            grid: { left: 20, right: 30, top: 10, bottom: 70, containLabel: true },
             xAxis: {
                 type: 'category',
                 data: categories,
