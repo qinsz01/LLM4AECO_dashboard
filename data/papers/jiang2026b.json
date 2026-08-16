@@ -14,7 +14,7 @@
   "phase": "运维",
   "inputData": "建筑能耗模型与HVAC系统数据",
   "inputDataEn": "Building energy models and HVAC system data",
-  "representation": "其他",
+  "representation": "结构化",
   "llmMethod": "Agent",
   "llmModels": [
     "GPT-4o",

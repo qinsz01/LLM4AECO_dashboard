@@ -7,7 +7,7 @@
   "task": "面向制造与装配的设计（DfMA）",
   "phase": "规划与设计",
   "inputData": "BIM模型+参数化设计+文本（设计规则）",
-  "representation": "其他",
+  "representation": "文本",
   "llmMethod": "Prompt",
   "contribution": "建立了基于GPT-4的BIM-based DfMA框架，通过多轮对话实现自由形式预制建筑的设计、制造、物流和装配的整合，在692个对话场景中获得了91.1%的用户认可度",
   "abstract": "The escalating demand for free-form buildings presents a formidable technological hurdle in the realm of prefabrication manufacturing and assembly. This research draws inspiration from recent advancements in large language models (LLMs) and seeks to harness their transformative potential in tandem with Building Information Modeling (BIM) to advance the Design for Manufacture and Assembly (DfMA) method. The ultimate aim is to catapult the prefabrication industry into an era characterized by unparalleled design freedom and heightened efficiency. The research includes contributions from the following four areas: (1) A review of the literature on DfMA theories, specifically fabrication and construction. (2) The development of a BIM-based DfMA method framework, including the methodological basis, Design for Manufacturing (DfM), and Design for Assembly (DfA). (3) A pipeline for LLMs driven BIM-based DfMA method framework and a validation using the Decathlon Solar Team design-build practice at the University of Washington's Lotus House. (4) An evaluation of 692 conversation scenarios to verify the feasibility of our proposal. We get a 91.1% user agreement on average based on GPT4. The research results could guide the workflow in building a lifecycle for DfMA practices in the future smart manufacturing era.",

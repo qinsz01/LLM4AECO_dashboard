@@ -7,7 +7,7 @@
   "task": "建筑平面图理解、生成与局部编辑",
   "phase": "规划与设计",
   "inputData": "RPLAN住宅平面图、建筑轮廓、自然语言空间描述与编辑指令",
-  "representation": "多模态",
+  "representation": "学习/工程化编码",
   "llmMethod": "微调",
   "contribution": "提出HouseMind，将建筑轮廓和房间实例分别离散为可与语言共同建模的空间token，并在一个轻量多模态大语言模型中统一完成平面图理解、条件生成和指令编辑。",
   "pdfFile": "",
