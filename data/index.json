@@ -427,7 +427,7 @@
     "category": "BIM检索与管理",
     "phase": "全生命周期",
     "llmMethod": "Agent",
-    "representation": "文本"
+    "representation": "结构化"
   },
   {
     "id": "guo2025b",
@@ -927,7 +927,7 @@
     "category": "BIM检索与管理",
     "phase": "运维",
     "llmMethod": "微调",
-    "representation": "文本"
+    "representation": "结构化"
   },
   {
     "id": "liudrone2025",
