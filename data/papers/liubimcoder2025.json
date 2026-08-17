@@ -7,7 +7,7 @@
   "task": "自然语言到BIM结构化查询转换",
   "phase": "运维",
   "inputData": "自然语言查询+BIM结构化查询语句对",
-  "representation": "文本",
+  "representation": "结构化",
   "llmMethod": "微调",
   "contribution": "提出BIMCoder融合框架，结合ERNIE 3.0的语义理解能力和SQLCoder的结构化查询生成能力，实现自然语言到BIM结构化查询语句的转换，精确匹配率87.16%，执行准确率88.75%；构建了包含1680个自然语言-结构化查询对的BIM信息查询数据集",
   "abstract": "This paper presents BIMCoder, a model designed to translate natural language queries into structured query statements compatible with professional BIM software (e.g., BIMserver v1.5). It serves as an intermediary component between users and various BIM platforms, facilitating access for users without specialized BIM knowledge. A dedicated BIM information query dataset was constructed, comprising 1680 natural language query and structured BIM query string pairs, categorized into 12 groups. Three classical pre-trained LLMs (ERNIE 3.0, Llama-13B, and SQLCoder) were evaluated on this dataset. A fine-tuned model based on SQLCoder was then trained. Subsequently, a fusion model (BIMCoder) integrating ERNIE and SQLCoder was designed. Test results demonstrate that the proposed BIMCoder model achieves an outstanding accurate matching rate of 87.16% and an Execution Accuracy rate of 88.75% for natural language-based BIM information retrieval.",
