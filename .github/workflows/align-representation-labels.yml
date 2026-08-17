@@ -1,0 +1,62 @@
+name: Align representation labels
+
+on:
+  push:
+    branches:
+      - agent/align-representation-labels-20260817
+    paths:
+      - .github/workflows/align-representation-labels.yml
+
+permissions:
+  contents: write
+
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/align-representation-labels-20260817
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Reclassify structured BIM interfaces
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          targets = {'guo2025', 'liubimcoder2025'}
+          index_path = Path('data/index.json')
+          rows = json.loads(index_path.read_text(encoding='utf-8'))
+          found = set()
+          for row in rows:
+              if row['id'] in targets:
+                  row['representation'] = '结构化'
+                  found.add(row['id'])
+          assert found == targets, (found, targets)
+          index_path.write_text(json.dumps(rows, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          for pid in sorted(targets):
+              path = Path('data/papers') / f'{pid}.json'
+              obj = json.loads(path.read_text(encoding='utf-8'))
+              obj['representation'] = '结构化'
+              path.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+
+          from collections import Counter
+          counts = Counter(r['representation'] for r in rows)
+          expected = {'文本': 70, '结构化': 41, '多模态': 41, '图结构': 16, '学习/工程化编码': 4}
+          assert counts == expected, (counts, expected)
+          for pid in targets:
+              detail = json.loads((Path('data/papers') / f'{pid}.json').read_text(encoding='utf-8'))
+              idx = next(r for r in rows if r['id'] == pid)
+              assert detail['representation'] == idx['representation'] == '结构化'
+          print(counts)
+          PY
+      - name: Commit migrated labels
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/index.json data/papers/guo2025.json data/papers/liubimcoder2025.json
+          git diff --cached --check
+          git commit -m 'Align structured BIM representation labels'
+          git push
