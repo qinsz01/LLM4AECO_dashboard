@@ -1,0 +1,32 @@
+{
+  "id": "park2024",
+  "citation": "Park et al./2024",
+  "title": "Structural analysis and design using generative AI",
+  "year": 2024,
+  "category": "结构设计与分析",
+  "task": "有限元结构分析与参数化设计",
+  "phase": "规划与设计",
+  "inputData": "桁架节点、构件、截面、材料、边界条件与荷载数据，以及Python FEM源代码",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "以二维桁架为例，验证GPT-4o在有无既有FEM源代码两种条件下辅助完成有限元分析的可行性，并探索其在结构模型修改、约束驱动方案生成和参数敏感性研究中的应用",
+  "abstract": "This study explores the integration of the generative AI, specifically ChatGPT (GPT-4o), into the field of structural analysis and design using the finite element method (FEM). The research is conducted in two main parts: structural analysis and structural design. For structural analysis, two scenarios are examined: one where the FEM source code is provided to ChatGPT and one where it is not. The AI's ability to understand, process, and accurately perform finite element analysis in both scenarios is evaluated. Additionally, the application of ChatGPT in structural design is investigated, including design modifications and parameter sensitivity analysis. The results demonstrate the potential of the generative AI to assist in complex engineering tasks, suggesting a future where AI significantly enhances efficiency and innovation in structural engineering. However, the study also highlights the importance of ensuring the accuracy and reliability of AI-generated results, particularly in safety-critical applications.",
+  "journal": "Structural Engineering and Mechanics",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "artificial intelligence",
+    "ChatGPT",
+    "finite element analysis",
+    "generative AI",
+    "structural engineering"
+  ],
+  "methodology": "以4杆二维线弹性桁架为算例，比较两种GPT-4o使用方式：（1）提供包含输入、刚度组装、求解及后处理的Python FEM源代码；（2）仅提供节点、单元、边界条件、荷载、截面面积和弹性模量。要求GPT-4o可视化模型，计算节点位移、变形、杆件应力和整体刚度矩阵，并与Python程序结果比较。设计部分通过自然语言增删节点和构件、移动节点并施加构件力约束；参数研究令4个构件的截面面积A∈{0.01, 0.02}、弹性模量E∈{1×10^8, 2×10^8}，形成256种组合并按应力优先级和重量筛选方案。",
+  "results": "在单个四构件桁架算例中，两种输入方式下GPT-4o给出的节点位移和整体刚度矩阵与Python结果一致，并生成了结构图、变形图和应力图；其能够按明确指令修改节点、构件和几何，并对256种参数组合进行筛选。约束驱动的自由方案生成需要多次使用regeneration，且论文未进行多算例、重复性或规范验算验证，因此结果应视为概念验证。",
+  "url": "https://doi.org/10.12989/sem.2024.91.4.393",
+  "pdfFile": "Park, M. etal - 2024 - Structural analysis and design using generative AI.pdf",
+  "markdownFile": "Park, M. etal - 2024 - Structural analysis and design using generative AI.md",
+  "taskEn": "Finite element structural analysis and parametric design",
+  "inputDataEn": "Truss nodes, members, sections, material properties, boundary conditions and loads, plus Python FEM source code"
+}

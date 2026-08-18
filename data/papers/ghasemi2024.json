@@ -1,0 +1,35 @@
+{
+  "id": "ghasemi2024",
+  "citation": "Ghasemi and Dai, 2024",
+  "title": "Can ChatGPT assist in cost analysis and bid pricing in construction estimating? A pilot study using a bridge rehabilitation project",
+  "year": 2024,
+  "category": "施工管理与安全",
+  "task": "成本估算与投标定价",
+  "phase": "施工",
+  "inputData": "文本（项目描述+专家知识）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "首次评估ChatGPT-4在建设成本估算和投标定价中的应用潜力，通过Prompt Engineering方法初步验证LLM在施工成本分析中的可行性",
+  "abstract": "This study evaluates the efficacy of ChatGPT-4 in analyzing construction work item costs and estimating bid prices, using the rehabilitation of the Beaver Dam Road Bridge in Pennsylvania, USA as a case study. A custom GPT was developed with a knowledge base of production rates, labor wages, equipment rates, and material costs to estimate bid prices for five construction items across ten repeated trials. The results show that ChatGPT-4 achieved an overall Total Bid Package accuracy of 99.84% compared to ground truth, though individual item MAPE varied from 0.17% to 17.48%, highlighting both the potential and consistency limitations of LLMs in construction cost estimating.",
+  "journal": "Smart Construction (ELSP)",
+  "llmModels": [
+    "ChatGPT-4"
+  ],
+  "keywords": [
+    "construction management",
+    "cost analysis",
+    "ChatGPT",
+    "bid pricing",
+    "cost estimating",
+    "prompt engineering",
+    "knowledge base",
+    "bridge rehabilitation"
+  ],
+  "methodology": "A custom GPT was configured with a knowledge base containing production rates, hourly labor wages, equipment rates, and material costs for five construction items from a bridge rehabilitation project, and step-by-step prompting instructions guided ChatGPT-4 through cost estimation calculations. The model was evaluated over ten repeated trials per item, with outputs compared against ground truth manual calculations and real bid data from three PennDOT bidders.",
+  "results": "ChatGPT-4 achieved a Total Bid Package accuracy of 99.84% against ground truth ($61,009.68 vs. $60,910.14), with individual item MAPE ranging from 0.17% (reinforcement labor) to 17.48% (membrane waterproofing unit bid price). The model occasionally produced N/A outputs instead of numerical estimates (6 out of 50 trials, approximately 12%), indicating consistency and reliability issues that require further investigation.",
+  "pdfFile": "Ghasemi and Dai - 2024 - Can ChatGPT assist in cost analysis and bid pricing in construction estimating A pilot study using.pdf",
+  "markdownFile": "Ghasemi and Dai - 2024 - Can ChatGPT assist in cost analysis and bid pricing in construction estimating A pilot study using.md",
+  "url": "https://doi.org/10.55092/sc20240009",
+  "taskEn": "Cost estimation and bid pricing",
+  "inputDataEn": "Text (project descriptions + expert knowledge)"
+}

@@ -1,0 +1,33 @@
+{
+  "id": "yang2025",
+  "citation": "Yang et al./2025",
+  "title": "Automated Checking of Highway Bridge BIM Models Based on Large Language Models",
+  "year": 2025,
+  "category": "规范与合规检查",
+  "task": "规范检查",
+  "phase": "规划与设计",
+  "inputData": "混合数据（规范文档 + BIM）",
+  "representation": "图结构",
+  "llmMethod": "Prompt",
+  "contribution": "使用LLM从高速公路桥梁设计规范中自动提取结构化规则（准确率79.5%），存储到知识图谱，并与IFC格式的BIM模型属性进行自动合规检查，精确率达84.4%",
+  "abstract": "Building Information Modeling (BIM) is widely used in highway bridge engineering, making compliance with complex design specifications crucial. Existing checks rely heavily on manual review, which is time-consuming and inefficient. This study proposes an automated framework using large language models (LLMs) to parse unstructured design specifications and extract structured rules with 79.5% accuracy, stored in a knowledge graph. IFC-formatted BIM component attributes are then compared with these rules to check structural completeness and compliance, achieving 84.4% precision. The results indicate that the framework offers an effective solution for automated rule extraction and has the potential to improve compliance-checking efficiency and accuracy in engineering practice.",
+  "journal": "Buildings",
+  "llmModels": [
+    "ChatGPT-4.1",
+    "DeepSeek-V3"
+  ],
+  "keywords": [
+    "Building information modeling",
+    "Large language model",
+    "Highway bridge",
+    "Knowledge graph",
+    "Automated model checking"
+  ],
+  "methodology": "Proposes a four-stage automated checking framework: (1) structured transformation of design specifications using LLMs with a structured prompt design method (Role-playing–Thought-Chain–Requirements–Example) and iterative prompt optimization across five iterations; (2) BIM model data extraction from IFC files using IfcOpenShell to identify components and extract attributes; (3) knowledge graph construction in Neo4j storing component nodes, value nodes, and HAS_CONSTRAINT relationships; (4) compliance checking via Cypher queries that match BIM model attributes against graph database rules, covering both structural completeness checking and regulatory compliance checking (single-component attribute compliance and inter-component relational compliance).",
+  "results": "LLM-based rule extraction from highway bridge design specifications achieved 79.5% accuracy (769 out of 967 entries correct) in a single working day. For structural completeness checking of the BIM model, the system achieved accuracy of 65.2%, precision of 84.4%, recall of 70.7%, and F1 score of 76.9%. The structural completeness check also identified 2 absent components (transition section and expansion joints) out of 11 checked component types. ChatGPT-4.1 showed slightly higher speed and accuracy than DeepSeek-V3 but produced more hallucinations.",
+  "url": "https://doi.org/10.3390/buildings15193465",
+  "pdfFile": "Yang et al. - 2025 - Automated Checking of Highway Bridge BIM Models Based on Large Language Models.pdf",
+  "markdownFile": "Yang et al. - 2025 - Automated Checking of Highway Bridge BIM Models Based on Large Language Models.md",
+  "taskEn": "Code compliance checking",
+  "inputDataEn": "Mixed data (regulatory documents + BIM)"
+}

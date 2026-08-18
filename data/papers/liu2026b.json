@@ -1,0 +1,37 @@
+{
+  "id": "liu2026b",
+  "json_id": "liu2026b",
+  "citation": "Liu et al./2026",
+  "title": "A Large Language Model-Empowered Agent for Reliable and Robust Structural Analysis",
+  "year": 2026,
+  "abstract": "Large language models (LLMs) have exhibited remarkable capabilities across diverse open-domain tasks, yet their application in specialised domains such as civil engineering remains largely unexplored. This paper starts bridging this gap by evaluating and enhancing the reliability and robustness of LLMs in structural analysis of beams. Reliability is assessed through the accuracy of correct outputs under repetitive runs of the same analysis problem, whereas robustness is evaluated based on the performance across varying load and boundary conditions. A benchmark dataset, comprising eight beam structural analysis problems, is created to test the Llama-3.3 70B Instruct model. Results show that, despite an apparent qualitative understanding of structural mechanics, the LLM lacks the quantitative reliability and robustness required for engineering applications. To address these limitations, a shift is proposed that reframes the structural analysis as a code generation task. Accordingly, an LLM-empowered agent is developed that (a) integrates chain-of-thought and few-shot prompting to generate accurate OpenSeesPy code, and (b) automatically executes the code to produce structural analysis results. Experimental results demonstrate that the agent achieves accuracy exceeding 99.0% on the benchmark dataset, exhibiting reliable and robust performance across diverse conditions.",
+  "journal": "Structure and Infrastructure Engineering",
+  "doi": "10.1080/15732479.2026.2630123",
+  "pdfFile": "Liu et al. - 2026 - A large language model-empowered agent for reliable and robust structural analysis",
+  "markdownFile": "Liu et al. - 2026 - A large language model-empowered agent for reliable and robust structural analysis",
+  "url": "https://doi.org/10.1080/15732479.2026.2630123",
+  "category": "结构设计与分析",
+  "task": "梁结构自动化分析",
+  "taskEn": "Automated beam structural analysis",
+  "phase": "规划与设计",
+  "inputData": "梁结构分析问题描述（荷载与边界条件）",
+  "inputDataEn": "Beam structural analysis problem descriptions (loads and boundary conditions)",
+  "representation": "文本",
+  "llmMethod": "Agent",
+  "llmModels": [
+    "Llama-3.3 70B Instruct",
+    "OpenSeesPy"
+  ],
+  "keywords": [
+    "structural analysis",
+    "beam analysis",
+    "code generation",
+    "OpenSeesPy",
+    "chain-of-thought",
+    "few-shot prompting",
+    "LLM agent"
+  ],
+  "contribution": "将梁结构分析重新定义为代码生成任务，开发基于LLM的Agent，结合思维链与少样本提示生成OpenSeesPy代码并自动执行，在基准数据集上实现超过99%的准确率，解决了LLM直接数值推理可靠性不足的问题。",
+  "methodology": "两阶段方法：(1)评估阶段——直接使用Llama-3.3 70B Instruct进行梁结构分析，测试其定量可靠性与鲁棒性；(2)Agent开发阶段——将结构分析重构为代码生成任务，Agent集成思维链（CoT）和少样本提示策略，生成OpenSeesPy代码，自动执行获取分析结果。基准数据集包含8个梁结构分析问题，覆盖不同荷载与边界条件。",
+  "results": "直接LLM推理：定性理解结构力学但定量可靠性不足（可靠性和鲁棒性均低于工程应用要求）。LLM Agent：准确率超过99.0%，可靠性>0.990，鲁棒性>0.996。消融实验表明完整示例和函数使用示例是Agent性能提升的主要贡献因素。"
+}

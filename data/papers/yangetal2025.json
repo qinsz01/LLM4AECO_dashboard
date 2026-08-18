@@ -1,0 +1,43 @@
+{
+  "id": "yangetal2025",
+  "citation": "Yang et al./2025",
+  "title": "Boosting expertise and efficiency in LLM: A knowledge-enhanced framework for construction support",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "知识问答与决策支持",
+  "phase": "施工",
+  "inputData": "建筑工程问答数据集+施工规范文档",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "contribution": "提出知识增强框架，结合协作专家模块(CEM)和知识注入(KI)训练策略，在仅2.7B激活参数下超越GPT-4 Turbo和DeepSeek V3等大模型，为建筑施工领域问答提供高效可靠的解决方案",
+  "abstract": "Current research on question answering in construction management faces multiple challenges, including insufficient construction knowledge in general large language models (LLMs) and the challenge for traditional LLM-based Q&A systems to balance response accuracy with computational cost. To address these issues, this study proposes a knowledge-enhanced framework that incorporates two key components: (i) a Collaborative Expert Module (CEM), which enhances generation reliability while preserving efficiency through coordinated learning in a sparse network, and (ii) a Knowledge-Injected (KI) training strategy that dynamically augments model training with relevant domain knowledge. Experimental evaluations demonstrate that the proposed method not only outperforms the baseline Qwen1.5-MoE by 8.2% in ROUGE-L and 9.0% in semantic similarity, but also surpasses state-of-the-art models such as GPT-4 Turbo and DeepSeek V3, while operating with only 2.7B activated parameters.",
+  "journal": "Alexandria Engineering Journal",
+  "llmModels": [
+    "Qwen1.5-MoE (baseline)",
+    "Qwen1.5-7B-chat",
+    "Qwen1.5-1.8B-chat",
+    "Qwen2.5-7B-Instruct",
+    "GPT-4 Turbo",
+    "GPT-o1",
+    "DeepSeek V3",
+    "Llama3-8B-Instruct",
+    "Llama3.1-8B-Instruct",
+    "Mixtral-7B-Instruct",
+    "GLM4-9B-chat",
+    "RetroLLM"
+  ],
+  "keywords": [
+    "Construction support",
+    "Large language model (LLM)",
+    "Collaborative expert system",
+    "Retrieval-augmented generation (RAG)",
+    "Knowledge injection"
+  ],
+  "methodology": "The proposed framework integrates three key components: (1) Construction-specific data resources: a local knowledge base of 617,215 sentences from 41 Chinese construction documents, a Construction Question-Answering (CQA) dataset of 10,387 QA pairs across six categories, and a Construction Engineering Objective Benchmark (CEOB) of 600 multiple-choice questions. (2) A Collaborative Expert Module (CEM) that replaces conventional MLPs in the decoder with sparse-aware chunks combining routed experts (dynamically selected per input) and shared experts (always active), fused via a learnable collaborative parameter mechanism using 1D convolution and shifted tanh activation. (3) A Knowledge-Injected (KI) training strategy employing a Hybrid Retrieval Strategy (HRS) that integrates sentence-level semantic retrieval (via jina-embedding-based-zh and Faiss) with key information retrieval (via Jieba segmentation and BM25) to dynamically inject relevant knowledge into training queries, followed by LoRA-based instruction tuning.",
+  "results": "On the CQA test set, the proposed framework achieved ROUGE-L of 43.9%, Cosine Similarity of 82.4%, and BERTScore of 80.3%, outperforming GPT-4 Turbo (34.4%/78.2%/73.4%) and DeepSeek V3 (32.3%/74.4%/72.0%) with only 2.7B activated parameters and an inference speed of 1706.8 TPS. On the CEOB benchmark, it achieved 80.9% average accuracy versus 74.3% for GPT-4 Turbo and 72.7% for DeepSeek V3. Compared to the baseline Qwen1.5-MoE, improvements were 8.2% in ROUGE, 9.0% in Cosine similarity, 7.4% in BERTScore, and 8.3% in objective question accuracy. Human evaluation by 20 experts yielded an average score of 7.9/10, closely matching annotated reference answers.",
+  "markdownFile": "Yang et al. - 2025 - Boosting expertise and efficiency in LLM A knowledge-enhanced framework for construction support.md",
+  "pdfFile": "Yang et al. - 2025 - Boosting expertise and efficiency in LLM A knowledge-enhanced framework for construction support.pdf",
+  "url": "https://doi.org/10.1016/j.aej.2025.09.029",
+  "taskEn": "Knowledge Q&A and decision support",
+  "inputDataEn": "Construction engineering Q&A datasets + construction regulatory documents"
+}

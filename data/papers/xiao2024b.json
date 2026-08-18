@@ -1,0 +1,32 @@
+{
+  "id": "xiao2024b",
+  "citation": "Xiao et al./2024",
+  "title": "Automated daily report generation from construction videos using ChatGPT and computer vision",
+  "year": 2024,
+  "category": "施工管理与安全",
+  "task": "进度管理/文档生成",
+  "phase": "施工",
+  "inputData": "现场图像视频",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "提出集成计算机视觉和ChatGPT的自动化框架，能从施工现场视频自动生成日报，在香港某工地一个月测试中表现良好，平均生产率分析精度达91.13%，显著减少文档编写工作量",
+  "pdfFile": "Xiao et al. - 2024 - Automated daily report generation from construction videos using ChatGPT and computer vision.pdf",
+  "markdownFile": "Xiao et al. - 2024 - Automated daily report generation from construction videos using ChatGPT and computer vision.md",
+  "abstract": "Daily reports are important in construction management, informing project teams about status, enabling timely resolutions of delays and budget issues, and serving as official records for disputes and litigation. However, current practices are manual and time-consuming, requiring engineers to physically visit sites for observations. To fill this gap, this paper proposes an automated framework to generate daily construction reports from on-site videos by integrating ChatGPT and computer vision (CV)-based methods. The framework utilizes CV methods to analyze video footage and extract relevant productivity and activity information, which is then fed into ChatGPT using proper prompts to generate daily reports. A web application is developed to implement and validate the framework on a real construction site in Hong Kong, generating daily reports over a month. This research enhances construction management by significantly reducing documentation efforts through generative artificial intelligence, with potential applications in jobsite safety management, quality reporting, and stakeholder communication.",
+  "journal": "Automation in Construction",
+  "url": "https://doi.org/10.1016/j.autcon.2024.105874",
+  "llmModels": [
+    "GPT-3.5"
+  ],
+  "keywords": [
+    "Construction daily report generation",
+    "Computer vision",
+    "ChatGPT",
+    "Construction management",
+    "Project documentation"
+  ],
+  "methodology": "A framework integrating computer vision and ChatGPT for automated daily report generation from construction videos. CV methods (YOLO-v5 worker detection, SORT tracking, 3D ResNet activity recognition) extract productivity information from on-site video footage. Extracted data (activity types, productivity metrics, worker times) are formalized via prompt engineering and fed to GPT-3.5 through the OpenAI API to generate structured daily reports in markdown format. A web application was developed for video management, productivity visualization, and report management.",
+  "results": "The vision-based productivity analysis achieved an average accuracy of 91.13% across three activities (rebar 91.76%, formwork 89.88%, concrete 91.74%). User experience evaluation with 10 participants showed the system scored 4.24 out of 5 overall, with satisfaction scoring 4.60 and report clarity scoring 4.64. ChatGPT report quality evaluation showed 1.0 response relevance, 0.8 factual accuracy, and 1.0 response completeness on average. The framework was validated over one month on a real construction site in Hong Kong.",
+  "taskEn": "Schedule management / document generation",
+  "inputDataEn": "On-site images & videos"
+}

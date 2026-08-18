@@ -1,0 +1,36 @@
+{
+  "id": "gong2026b",
+  "citation": "Gong et al./2026",
+  "title": "Automated Environmental Assessment of Construction Sites Using Multimodal Large Language Model (MLLM)-Based Point Cloud Segmentation and Instance-Level Scan-vs-BIM",
+  "year": 2026,
+  "category": "环境与碳评估",
+  "task": "施工现场环境影响自动评估",
+  "taskEn": "Automated environmental assessment of construction sites",
+  "phase": "施工",
+  "inputData": "BIM模型与LiDAR点云数据",
+  "inputDataEn": "BIM models and LiDAR point cloud data",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "abstract": "Amid rising sustainability demands, Environmental, Social, and Governance (ESG) management is gaining traction in construction. Accurate, dynamic spatial information on construction progress is vital for quantifying environmental performance. However, dynamic environmental performance evaluation during construction remains underexplored. LiDAR enables accurate spatial data acquisition yet linking it to actionable environmental metrics poses challenges. This paper introduces a BIM-LiDAR integration framework featuring three contributions: (1) proposing a semantic knowledge graph for construction data and environmental performance metrics; (2) developing a BIM enrichment mechanism via multimodal large language model (MLLM) -based point cloud segmentation; and (3) establishing unified framework leveraging enriched BIM to quantify construction progress and environmental impacts. Tested on a construction project, it achieved 96.54% segmentation accuracy. Through precise geometric verification, it enabled the measurement and validation of a 5.77% improvement in the project's environmental performance across key milestones, transforming manual reporting into a credible, data-driven foundation for environmental management.",
+  "journal": "Automation in Construction",
+  "pdfFile": "Gong et al. - 2026 - Automated environmental assessment of construction sites using multimodal large language model (MLLM",
+  "markdownFile": "Gong et al. - 2026 - Automated environmental assessment of construction sites using multimodal large language model (MLLM",
+  "url": "https://doi.org/10.1016/j.autcon.2026.106949",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "BIM",
+    "Construction progress",
+    "ESG",
+    "Scan-vs-BIM",
+    "Sustainability",
+    "MLLM",
+    "Point cloud segmentation",
+    "Environmental assessment",
+    "Knowledge graph"
+  ],
+  "contribution": "提出基于MLLM点云分割和实例级Scan-vs-BIM的BIM-LiDAR集成框架，实现施工过程环境影响自动评估，将手动报告转化为可信的数据驱动环境管理基础",
+  "methodology": "构建包含三个核心组件的框架：(1)连接施工数据与环境绩效指标的语义知识图谱；(2)基于多模态大语言模型(MLLM)的点云分割实现BIM富化机制，无需训练即可完成施工场景点云分割；(3)利用富化BIM统一框架量化施工进度和环境影响，通过实例级Scan-vs-BIM几何验证进行精确的环境绩效评估",
+  "results": "在施工项目测试中达到96.54%的点云分割准确率；通过精确的几何验证，测量并验证了项目在关键里程碑处5.77%的环境绩效改善；框架成功将手动环境报告转化为基于数据的可信环境管理基础"
+}

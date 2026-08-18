@@ -1,0 +1,37 @@
+{
+  "id": "lee2026",
+  "citation": "Lee et al./2026",
+  "title": "Automated Conversion and Semantic Gap Filling of Material Layer Annotations from CAD Drawings to Semantically Rich BIM Objects",
+  "year": 2026,
+  "abstract": "This study proposes a method for semantically enriching a building information model (BIM) by converting and supplementing material layer information in computer-aided-design (CAD) drawings into semantically rich BIM objects. Despite the widespread adoption of BIMs, practices relying on CAD drawings are still prevalent and fully automated conversion from CAD-to-BIM remains challenging. Previous studies on automatically converting 2D drawings into a BIM have primarily focused on geometric reconstruction, often overlooking textual data such as material layer annotations, which contain essential BIM object details. However, the recognition and conversion of material layer annotations to BIM objects pose several challenges, including inconsistent annotation formats, vague associations between annotations and objects, and missing material function and property information. To address these challenges, this paper introduces a four-step method: (1) semantic clustering of material layer annotations into groups corresponding to individual objects; (2) material layer function assignment using a newly proposed mistake-driven prompting technique, which incorporates feedback from common mistaken cases; (3) object type classification using a large language model based solely on material layer texts; and (4) automated generation of BIM objects semantically enriched with material property information in single-directional composite or light-framed structures. Validation on 90 real-world cases demonstrated a 99.9% weighted average adjusted Rand index for semantic clustering, a 99.5% weighted F1-score for layer function assignment, a 92.7% weighted F1-score for object type classification, and 100% accuracy in BIM object generation. This method is expected to enable a more complete 2D-to-BIM conversion by complementing geometric reconstruction with semantically rich material layer information.",
+  "journal": "Advanced Engineering Informatics",
+  "pdfFile": "Lee et al. - 2026 - Automated conversion and semantic gap filling of material layer annotations from CAD drawings to sem",
+  "markdownFile": "Lee et al. - 2026 - Automated conversion and semantic gap filling of material layer annotations from CAD drawings to sem",
+  "url": "https://doi.org/10.1016/j.aei.2025.104199",
+  "category": "BIM检索与管理",
+  "task": "CAD图纸材料层标注到BIM对象的自动转换",
+  "taskEn": "Automated conversion of material layer annotations from CAD drawings to BIM objects",
+  "phase": "规划与设计",
+  "inputData": "CAD图纸材料层标注文本",
+  "inputDataEn": "CAD drawing material layer annotation texts",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "llmModels": [
+    "GPT-4 Turbo",
+    "GPT-4 Omni",
+    "GPT-o1",
+    "GPT-4.1",
+    "LLaMA 3.1 8B",
+    "DeepSeek-r1 8B"
+  ],
+  "keywords": [
+    "2D-to-BIM conversion",
+    "semantic enrichment",
+    "CAD material layer annotation",
+    "BIM object generation",
+    "mistake-driven prompting"
+  ],
+  "contribution": "提出了一种四步方法将CAD图纸中的材料层标注自动转换为语义丰富的BIM对象，包括新提出的错误驱动提示技术和基于LLM的少样本对象类型分类方法。",
+  "methodology": "通过语义聚类将材料层标注按对象分组，使用错误驱动提示技术为材料层分配功能，利用LLM少样本提示进行对象类型分类，最后通过Revit API自动生成含材料属性的BIM对象。",
+  "results": "在90个真实案例验证中，语义聚类加权平均ARI达99.9%，材料层功能分配加权F1分数达99.5%，对象类型分类加权F1分数达92.7%，BIM对象生成准确率达100%。"
+}

@@ -1,0 +1,35 @@
+{
+  "id": "xu2026",
+  "citation": "Xu et al./2026",
+  "title": "Generative AI-driven Data Augmentation and Object-Guided Vision-Language Reasoning for PPE Compliance Analysis in Work-at-Height",
+  "year": 2026,
+  "category": "施工管理与安全",
+  "task": "高处作业PPE合规性分析",
+  "phase": "施工",
+  "inputData": "施工现场图像与PPE标准数据",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "提出生成式AI驱动的数据增强与目标引导的视觉语言模型（VLM）框架，用于高处作业PPE合规性分析。通过DALL-E 3生成合成数据集缓解数据稀缺，结合YOLOv11目标检测与Qwen2.5-VL-7B视觉语言推理，实现PPE合规性的自动化判定",
+  "pdfFile": "Xu et al. - 2026 - Generative AI-driven data augmentation and object-guided vision-language reasoning for PPE complianc.pdf",
+  "markdownFile": "Xu et al. - 2026 - Generative AI-driven data augmentation and object-guided vision-language reasoning for PPE complianc.md",
+  "abstract": "PPE compliance is a fundamental prerequisite for ensuring safety in work-at-height. Although computer vision has advanced PPE detection, challenges remain in dataset scarcity that limits generalization and in weak semantic reasoning that hinders reliable compliance verification. To address these limitations, this paper presents a generative AI-driven data augmentation and an object-guided vision-language model (VLM) to analyze PPE compliance in work-at-height. Safety standards on work-at-height and PPE (e.g., GB 80-2016, GB 2811-2019) are formalized via ChatGPT 4o into a variable pool and structured prompts, which are used as inputs to text-to-image (T2I) generation model for generating a synthetic dataset. Object detection model is employed to detect PPE elements, and the structured outputs of object detection model are integrated with VLM, enabling vision-language reasoning that combines object detection with natural language understanding. Experimental results demonstrate that DALL-E 3 produces a more realistic synthetic dataset than other image generation models, with the hybrid dataset significantly improving detection performance (mAP@0.5=88.5%, Small Object mAP@0.5=75.8%). Using YOLOv11 detections as structured inputs, Qwen2.5-VL-7B achieves reliable compliance reasoning (CRA=87.6%, SC=0.83, EQ=4.2), and these advances are consolidated in an integrated platform supporting automated reporting and interactive analysis.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "Qwen2.5-VL-7B",
+    "ChatGPT-4o",
+    "DALL-E 3",
+    "YOLOv11"
+  ],
+  "keywords": [
+    "PPE compliance",
+    "generative AI",
+    "data augmentation",
+    "vision-language model",
+    "work-at-height safety"
+  ],
+  "methodology": "提出两阶段框架：(1) 生成式AI驱动数据增强：通过ChatGPT-4o将高处作业和PPE安全标准（GB 80-2016、GB 2811-2019）形式化为变量池和结构化提示，输入DALL-E 3文本到图像生成模型创建合成数据集；(2) 目标引导的视觉语言推理：使用YOLOv11检测PPE元素，将结构化检测结果作为Qwen2.5-VL-7B视觉语言模型的输入，结合目标检测与自然语言理解进行合规性推理。混合数据集（真实+合成）用于训练检测模型。",
+  "results": "DALL-E 3生成的合成数据集比其他图像生成模型更真实，混合数据集显著提升检测性能（mAP@0.5=88.5%，小目标mAP@0.5=75.8%）。使用YOLOv11检测结果作为结构化输入，Qwen2.5-VL-7B实现可靠的合规性推理（CRA=87.6%，SC=0.83，EQ=4.2）。整合平台支持自动化报告生成和交互式分析。",
+  "url": "https://doi.org/10.1016/j.aei.2026.104364",
+  "taskEn": "PPE compliance analysis in work-at-height",
+  "inputDataEn": "Construction site images and PPE standard data"
+}

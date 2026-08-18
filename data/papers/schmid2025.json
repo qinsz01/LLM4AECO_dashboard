@@ -1,0 +1,33 @@
+{
+  "id": "schmid2025",
+  "citation": "Schmid et al./2025",
+  "title": "Spatiotemporal mapping of Swiss exterior wall material stock using a large language model and architectural history",
+  "year": 2025,
+  "category": "环境与碳评估",
+  "task": "建筑存量材料信息提取与预测",
+  "phase": "运维",
+  "inputData": "建筑能效证书（EPC）文本+建筑登记数据",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "LLM结合建筑档案数据生成瑞士外墙材料时空分布图，支持建筑存量分析",
+  "abstract": "Building material stock studies are essential for advancing the circular economy in construction. However, existing models often lack both accuracy and scalability. While machine learning has demonstrated significant potential to enhance predictive accuracy, its adoption has been hindered by a shortage of high-quality training data. In this study, we introduce a novel methodology leveraging a large language model to extract previously untapped building material data from building energy performance certificates with a focus on exterior walls. This approach enabled us to create a dataset of over 20,000 buildings—significantly larger than those used in previous studies. Leveraging this dataset, we developed a machine learning model to predict material composition based on building characteristics such as construction year, use, and location. Furthermore, we integrated knowledge of construction history to estimate the material stock of walls in terms of volume, mass, and associated CO2 emissions for each building in the dataset. Our analysis revealed significant regional variations in material use patterns, emphasizing the critical role of location—a parameter often overlooked in existing building material stock models. These findings provide valuable insights for improving building stock modeling and highlight the importance of regionally tailored policies in advancing the circular economy in the construction sector.",
+  "journal": "Journal of Industrial Ecology",
+  "llmModels": [
+    "Qwen2.5:7b"
+  ],
+  "keywords": [
+    "building material",
+    "building material stock model",
+    "circular economy",
+    "construction history",
+    "industrial ecology",
+    "large language model"
+  ],
+  "methodology": "The authors use few-shot prompting with the open-source LLM Qwen2.5:7b (run locally via Ollama) to extract exterior wall material type (masonry, concrete, wood), thickness, and insulation information from unstructured free-text descriptions in Swiss building energy performance certificates (GEAK/EPC dataset). The extracted dataset of over 20,000 buildings is then used to train ML classification models (logistic regression, decision tree, SVM, MLP, random forest, XGBoost) to predict wall material type from building characteristics (construction year, use type, location). The pipeline includes random undersampling for class imbalance, 5-fold cross-validation with grid search, and SHAP analysis for model interpretation. Finally, construction history knowledge is integrated to estimate material stock in terms of volume, mass, and embodied CO2 emissions per building.",
+  "results": "The LLM-based extraction yielded material type data for 27,944 buildings, insulation thickness for 22,544 buildings, and wall thickness for 16,141 buildings. The best ML classifier (XGBoost) achieved an ROC-AUC macro of 0.86 and F1 macro score of 0.68 for predicting exterior wall material type (masonry, wood, concrete). SHAP analysis revealed that building location and construction year are the most important predictive features, with location being a critically underexplored parameter in existing literature. The analysis identified significant regional variations: wooden walls prevalent in mountainous regions (up to 70% in Bern), concrete dominant in Geneva (30%-50%), and masonry overwhelmingly dominant in Ticino (>95%). Wall thickness of masonry decreased from ~45 cm (pre-1920) to ~15 cm (post-1980), while insulation thickness increased from 4-6 cm (pre-1970) to 15-20 cm (post-2010). Embodied emissions of walls built today were found to be higher than those built in 1900 due to increasing wall layout complexity.",
+  "pdfFile": "Schmid, C. etal - 2025 - Spatiotemporal mapping of Swiss exterior wall material stock using a large language model and archit....pdf",
+  "markdownFile": "Schmid, C. etal - 2025 - Spatiotemporal mapping of Swiss exterior wall material stock using a large language model and archit....md",
+  "url": "https://doi.org/10.1111/jiec.70058",
+  "taskEn": "Building stock material information extraction and prediction",
+  "inputDataEn": "Building energy performance certificate (EPC) texts + building registry data"
+}

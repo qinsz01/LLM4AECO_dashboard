@@ -1,0 +1,36 @@
+{
+  "id": "bagasi2025",
+  "citation": "Bagasi et al./2025",
+  "title": "BIM and AI in Early Design Stage Advancing Architect–Client Communication",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "设计沟通",
+  "phase": "规划与设计",
+  "inputData": "客户需求+BIM模型",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "提出AI-BIM集成框架，结合LLM自然语言处理、生成式AI可视化和参数化BIM建模，改善早期设计阶段建筑师与客户之间的沟通效率与设计一致性",
+  "abstract": "The integration of Building Information Modeling (BIM) and Artificial Intelligence (AI) is reshaping the architecture, engineering, and construction (AEC) industry, particularly by bridging two critical phases: the early design stage and architect–client communication. This paper proposes a new AI-BIM framework that aims to enhance architect–client communication and streamline feedback during early design stages. Traditional methods often fail to convey complex design ideas clearly, leading to misinterpretations and inefficiencies. The proposed framework combines real-time BIM visualization with AI-driven generative design and large language models (LLMs) to facilitate better understanding and collaboration. Observations from case studies suggest improvements in iterative feedback processes, greater alignment between client needs and design outputs, and enhanced early decision-making. In addition to exploring the challenges of AI-BIM integration, including technical and ethical considerations, this research highlights strategies to support its practical application. The framework contributes to advancing design practices in the evolving AEC industry.",
+  "journal": "Buildings 2025, 15, 1977",
+  "llmModels": [
+    "ChatGPT-4",
+    "Midjourney v6",
+    "Krea (Flux)"
+  ],
+  "keywords": [
+    "artificial intelligence (AI)",
+    "building information modeling (BIM)",
+    "early design stage",
+    "communication",
+    "architect",
+    "large language model (LLM)",
+    "generative design"
+  ],
+  "methodology": "采用设计科学研究（DSR）方法，分为三个阶段：（1）系统映射综述，从Web of Science数据库中筛选534篇同行评审文献（2016-2024），建立知识基础；（2）构建AI-BIM概念框架，集成ChatGPT-4用于自然语言客户需求处理、Midjourney v6和Krea（Flux）用于生成式概念可视化、Autodesk Revit结合Dynamo插件用于参数化BIM集成；（3）通过两个案例研究（9000平方英尺商业办公空间和新古典主义风格住宅别墅）进行迭代验证，评估沟通效率和设计一致性。",
+  "results": "案例研究表明，AI-BIM框架改善了建筑师与客户之间的迭代反馈流程，减少了设计修订周期，并提高了客户需求与设计输出之间的一致性。框架支持基于自然语言客户输入的实时设计可视化，加速利益相关方达成共识。Midjourney v6可在数秒内生成1024x1024概念可视化图像。研究同时识别了AI-BIM集成面临的挑战，包括小型事务所的技术采纳障碍、AI生成设计偏见的伦理问题，以及BIM与AI工具之间的集成兼容性问题。",
+  "pdfFile": "Bagasi et al. - 2025 - BIM and AI in Early Design Stage Advancing Architect–Client Communication.pdf",
+  "markdownFile": "Bagasi et al. - 2025 - BIM and AI in Early Design Stage Advancing Architect–Client Communication.md",
+  "url": "https://doi.org/10.3390/buildings15121977",
+  "taskEn": "Design communication",
+  "inputDataEn": "Client requirements + BIM models"
+}

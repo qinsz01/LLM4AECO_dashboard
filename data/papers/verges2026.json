@@ -1,0 +1,32 @@
+{
+  "id": "verges2026",
+  "citation": "Vergés et al./2026",
+  "title": "Large-scale analysis of environmental and circularity metrics in construction products through automated data extraction using large language models",
+  "year": 2026,
+  "category": "环境与碳评估",
+  "task": "环境影响评估/循环经济评估",
+  "phase": "全生命周期",
+  "inputData": "文本（EPD文档PDF）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "LLM从8463个建筑产品环境产品声明（EPD）中可靠提取和标准化数据，揭示制造商忽视循环性路径、环境影响因材料而异、存在\"循环性悖论\"",
+  "abstract": "This study introduces a novel LLM-based approach for the reliable extraction and standardization of data from 8,463 Environmental Product Declarations (EPDs) in the construction sector. The analysis reveals that manufacturers deprioritize circular end-of-life pathways, environmental impacts vary substantially by material composition, and a \"circularity paradox\" persists where products sourced circularly often end up in landfills.",
+  "journal": "Environmental Impact Assessment Review",
+  "llmModels": [
+    "gpt-4o-2024-08-06"
+  ],
+  "keywords": [
+    "Large language model (LLM)",
+    "Built environment",
+    "Environmental product declaration (EPD)",
+    "Circular economy",
+    "Sustainability"
+  ],
+  "methodology": "Uses GPT-4o via the OpenAI API with a carefully designed system prompt to extract and structure circularity metrics, material composition, and environmental impact indicators from plain text parsed from EPD PDFs, followed by statistical validation via Cochran sampling (368 products verified with zero errors at 95% confidence) and Spearman correlation analysis.",
+  "results": "Analyzes 8,463 construction products across 11 categories with validated extraction accuracy (zero errors in a 368-product sample at 95% confidence). The product stage (A1-A3) contributes 80%-98% of total lifecycle impacts; landfilling dominates end-of-life at 48.9%, followed by recycling at 36.8% and incineration at 8.5%, while reuse, valorisation, and reconditioning remain negligible.",
+  "url": "https://doi.org/10.1016/j.eiar.2025.108243",
+  "pdfFile": "Vergés et al. - 2026 - Large-scale analysis of environmental and circularity metrics in construction products through autom.pdf",
+  "markdownFile": "Vergés et al. - 2026 - Large-scale analysis of environmental and circularity metrics in construction products through autom.md",
+  "taskEn": "Environmental impact assessment / circular economy assessment",
+  "inputDataEn": "Text (EPD documents in PDF)"
+}

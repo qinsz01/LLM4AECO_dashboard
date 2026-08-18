@@ -1,0 +1,38 @@
+{
+  "id": "taiwo2025",
+  "citation": "Taiwo et al./2025",
+  "title": "Generative artificial intelligence in construction: A Delphi approach, framework, and case study",
+  "year": 2025,
+  "category": "其他",
+  "task": "综述+框架+案例验证",
+  "phase": "全生命周期",
+  "inputData": "建筑合同文件+行业文献",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "contribution": "通过Delphi研究识别76个GenAI在建筑领域的应用机会和18项关键挑战，提出建筑行业定制化GenAI框架，并通过案例验证RAG提升GPT-4质量5.2%、相关性9.4%和可重复性4.8%",
+  "pdfFile": "Taiwo et al. - 2025 - Generative artificial intelligence in construction A Delphi approach, framework, and case study.pdf",
+  "markdownFile": "Taiwo et al. - 2025 - Generative artificial intelligence in construction A Delphi approach, framework, and case study.md",
+  "abstract": "The construction industry plays a crucial role in the global economy, contributing approximately $10 trillion and employing over 220 million workers worldwide, but encounters numerous productivity challenges with only 1% annual growth compared to 2.8% for the global economy. These challenges span various processes, including design, planning, procurement, inspection, and maintenance. Generative artificial intelligence (GenAI), capable of producing new and realistic data or content such as text, images, videos, or code from given inputs or existing knowledge, presents innovative solutions to these challenges. While there is an increasing interest in the applications of GenAI in construction, a detailed analysis of its practical uses, advantages, and areas ripe for development is still evolving. This study contributes to this emerging area by offering an insightful analysis of the current state of generative AI in construction. It has three objectives: (1) to identify and categorize the existing and emerging generative AI opportunities and challenges in the construction industry via a Delphi study; (2) to propose a framework enabling construction firms to build customized GenAI solutions; and (3) to illustrate this framework through a case study that employs GenAI model for querying contract documents. Through systematic review and expert consultation, the study identified 76 potential GenAI applications across construction phases and 18 key challenges distributed across domain-specific, technological, adoption, and ethical categories. The case study's findings show that retrieval augmented generation (RAG) improves the baseline large language model (LLM), GPT-4, by 5.2, 9.4, and 4.8% in terms of quality, relevance, and reproducibility. The study recommends a structured approach to GenAI implementation, emphasizing the need for domain-specific customization, robust validation protocols, and careful consideration of ethical implications.",
+  "journal": "Alexandria Engineering Journal",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "Generative artificial intelligence",
+    "Generative pre-trained transformer",
+    "Large language model",
+    "Multimodal AI",
+    "Retrieval augmented generation",
+    "Construction industry",
+    "GenAI",
+    "RAG",
+    "LLM",
+    "GPT",
+    "ChatGPT"
+  ],
+  "methodology": "A four-phase research approach was adopted: (1) Systematic literature retrieval and review using Scopus, Web of Science, and ScienceDirect databases, identifying 6 relevant original research articles at the intersection of GenAI and construction; (2) Expert discussion and review via a three-round Delphi study with 11 experts from academia and AI industry (73% response rate) to identify 76 GenAI opportunities and 18 challenges across construction phases; (3) Framework development for building custom GenAI models in construction, covering data collection, dataset preprocessing, model training/RAG implementation, evaluation, and deployment; (4) Case study validating the framework by developing a RAG-enhanced GPT-4 system for querying construction contract documents, using LangChain library, OpenAI embeddings, Cassandra vector database, and Pinecone for semantic search, with a Streamlit-based GUI, evaluated by 3 domain experts on 20 validated questions across four metrics (answer, quality, relevance, reproducibility).",
+  "results": "The systematic review found only 6 peer-reviewed articles on LLM applications in construction, indicating very early-stage adoption. The Delphi study with 11 experts identified 76 potential GenAI applications across text-to-text, text-to-image, text-to-video, image-to-text, image-to-image, image-to-video, video-to-text, video-to-image, and video-to-video modalities, and 18 key challenges in domain-specific, technological, adoption, and ethical categories. In the case study, the baseline GPT-4 achieved 100% answer rate, quality score of 3.87/5 (77.4%), relevance of 4.01/5 (80.2%), and reproducibility of 4.53/5 (90.6%). The RAG-enhanced GPT-4 achieved 90% answer rate but improved quality to 4.13/5 (82.6%, +5.2%), relevance to 4.48/5 (89.6%, +9.4%), and reproducibility to 4.77/5 (95.4%, +4.8%). RAG reduced hallucination by grounding outputs in retrieved contract passages but defaulted to non-answers for 2 questions due to chunking and retrieval limitations.",
+  "url": "https://doi.org/10.1016/j.aej.2024.12.079",
+  "taskEn": "Review + framework + case validation",
+  "inputDataEn": "Building contract documents + industry literature"
+}

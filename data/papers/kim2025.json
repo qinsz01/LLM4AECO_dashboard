@@ -1,0 +1,36 @@
+{
+  "id": "kim2025",
+  "citation": "Kim et al. / 2025",
+  "title": "Framework for LLM-Enabled Construction Robot Task Planning: Knowledge Base Preparation and Robot–LLM Dialogue for Interior Wall Painting",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "建筑机器人任务规划",
+  "phase": "施工",
+  "inputData": "文本（自然语言任务描述）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "构建基于LLM的建筑机器人任务规划框架，通过知识库准备和提示工程实现自然语言到机器人指令的转换",
+  "pdfFile": "Kim et al. - 2025 - Framework for LLM-Enabled Construction Robot Task Planning Knowledge Base Preparation and Robot–LLM.pdf",
+  "markdownFile": "Kim et al. - 2025 - Framework for LLM-Enabled Construction Robot Task Planning Knowledge Base Preparation and Robot–LLM.md",
+  "abstract": "This paper presents a novel framework that uses an LLM (ChatGPT-4) as the cognitive core for autonomous construction robot task planning, encompassing both a data preparation phase that structures BIM data, robot profiles, and task specifications into a knowledge base, and a real-time robot-LLM communication phase for adaptive task execution. A prototype painting robot (Husky UGV with UR5 arm) was tested in Gazebo simulation, successfully executing interior wall painting tasks through dynamic dialogue with ChatGPT-4 and responding to superintendent input for plan modifications and motion parameter adjustments.",
+  "journal": "Robotics (MDPI)",
+  "llmModels": [
+    "GPT-4",
+    "ChatGPT-4"
+  ],
+  "keywords": [
+    "construction robotics",
+    "large language models",
+    "building information modeling",
+    "robot task planning",
+    "robot-LLM communication",
+    "ChatGPT",
+    "BIM",
+    "autonomous robots"
+  ],
+  "methodology": "The framework operates in two phases: (1) a knowledge base preparation phase that extracts and formats structured BIM data, natural language task specifications, robot profiles, and interaction guidelines, and (2) a real-time robot-LLM dialogue phase where the robot submits prompts to ChatGPT-4 and receives JSON-formatted instructions to execute skills, implemented as a ROS-based prototype with Autodesk Revit BIM integration and Gazebo simulation.",
+  "results": "In a simulated interior wall painting case study with a Husky UGV and UR5 arm, the robot successfully completed painting across 9 locations through 43 prompt-response exchanges (average response time 4.32s) in the standard scenario, and 32 exchanges (average response time 4.86s) in the superintendent-input scenario, with 10/10 successful trial completions in each phase; the system demonstrated adaptive replanning and motion parameter adjustment capabilities without hardcoded logic.",
+  "url": "https://doi.org/10.3390/robotics14090117",
+  "taskEn": "Construction robot task planning",
+  "inputDataEn": "Text (natural language task descriptions)"
+}

@@ -1,0 +1,37 @@
+{
+  "id": "lispatial2025",
+  "citation": "Li et al. / 2025",
+  "title": "An interactive system for 3D spatial relationship query by integrating tree-based element indexing and LLM-based agent",
+  "year": 2025,
+  "category": "BIM检索与管理",
+  "task": "BIM空间关系查询",
+  "phase": "全生命周期",
+  "inputData": "自然语言查询+BIM模型",
+  "representation": "结构化",
+  "llmMethod": "Agent",
+  "contribution": "提出基于openBIM标准的几何信息提取算法、两级空间索引结构和LLM多智能体协作框架，实现BIM三维空间关系的自然语言交互式查询，查询效率提升70%，查询理解准确率达92.1%",
+  "abstract": "This paper develops an interactive natural language spatial query system for BIM elements based on an LLM-based multi-agent framework, addressing three challenges: error-prone extraction of complex spatial geometric information, low efficiency in processing large numbers of elements, and inadequate integration of LLM with BIM spatial query tasks. The system features three contributions: (1) an openBIM standards-based algorithm to extract complex geometric information from IFC files; (2) a two-level spatial index (adjacency graph for spaces plus AABB tree for elements) to improve search efficiency; (3) an LLM-based multi-agent collaboration framework with four specialized agents to decompose and execute spatial query tasks. Validated on three BIM models, the system achieves 92.1% correctness in query understanding and reduces average total query time by 70%.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "GPT-4",
+    "GPT-3.5 Turbo",
+    "Kimi-8k",
+    "Gemini 1.5 Flash",
+    "Mistral 7B"
+  ],
+  "keywords": [
+    "Large Language Model",
+    "openBIM Standards",
+    "Prompt Engineering",
+    "3D Spatial Relationship Query",
+    "Tree-based Geometric Information Indexing",
+    "Multi-Agent System"
+  ],
+  "methodology": "The methodology consists of three steps: (1) IFC geometric information extraction based on openBIM MVD standards, using IfcOpenShell and FreeCAD to parse IFC files and convert various geometric representations into triangulated B-rep; (2) a two-level spatial index that first indexes building spaces using an adjacency graph (1st level) and then indexes building elements within each space using AABB trees (2nd level); (3) an LLM-based multi-agent interactive query system built with AutoGen Studio, comprising four GPT-4 agents (Group_chat_manage, Understand_assistant, Spatial_index_assistant, Calculate_assistant) with a bSDD-aided prompt strategy for query understanding and embedded Python skills for spatial relationship calculation using the 9-Intersection Model.",
+  "results": "The system successfully extracts geometric information from three complex BIM models (CYT Building with 7,718 elements, Shaw Auditorium with 34,214 elements, Shopping Mall with 23,383 elements). The two-level spatial index reduces average query time by over 70% compared to brute-force search without indexing. The bSDD-aided prompt achieves 92.1% correctness in query understanding, outperforming common prompts by approximately 20%. GPT-4 shows the highest understanding capability among tested LLMs. The multi-agent framework successfully decomposes spatial query tasks and provides user-friendly natural language answers.",
+  "markdownFile": "Li et al. - 2025 - An interactive system for 3D spatial relationship query by integrating tree-based element indexing a",
+  "url": "https://doi.org/10.1016/j.aei.2025.103375",
+  "taskEn": "BIM spatial relationship query",
+  "inputDataEn": "Natural language queries + BIM models",
+  "pdfFile": "Li et al. - 2025 - An interactive system for 3D spatial relationship query by integrating tree-based element indexing a"
+}

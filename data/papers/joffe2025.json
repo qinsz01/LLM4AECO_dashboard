@@ -1,0 +1,43 @@
+{
+  "id": "joffe2025",
+  "citation": "Joffe et al./2025",
+  "title": "The Framework and Implementation of Using Large Language Models to Answer Questions about Building Codes and Standards",
+  "year": 2025,
+  "category": "规范与合规检查",
+  "task": "建筑规范问答",
+  "phase": "规划与设计",
+  "inputData": "规范文档",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "contribution": "提出基于RAG的开源框架用于建筑规范问答，结合BM25/doc2vec检索与LLM生成，实现带引用的自然语言问答聊天机器人",
+  "abstract": "This work presents a novel open-source and scalable framework to build an LLM-based application allowing engineers to quickly receive accurate answers to their codes-and-standards-related questions alongside corresponding citations simply by interacting in natural language with a ChatGPT-style chatbot. The framework employs a retrieval-augmented generation (RAG) pipeline consisting of a data engineering pipeline that converts codes into searchable knowledge databases and a chatbot application that integrates retrieved context with LLM responses. A preliminary implementation using the National Building Code of Canada 2020 (NBCC) achieves promising results, indicating the framework may be a useful tool to assist design engineers.",
+  "journal": "Journal of Computing in Civil Engineering (ASCE), 2025, 39(4): 05025004",
+  "llmModels": [
+    "Falcon-7B",
+    "Falcon-40B",
+    "LLaMA-2-7B",
+    "LLaMA-2-13B",
+    "LLaMA-2-70B",
+    "GPT-3.5 Turbo",
+    "GPT-4 Turbo",
+    "doc2vec"
+  ],
+  "keywords": [
+    "Building codes",
+    "Standards",
+    "Question answering",
+    "Retrieval-augmented generation",
+    "RAG",
+    "LLM",
+    "BM25",
+    "Chatbot",
+    "National Building Code of Canada"
+  ],
+  "methodology": "Proposes a two-part RAG framework: (1) a data engineering pipeline that parses the code/standard PDF, cleans and partitions text into provision-level documents with citations, and builds searchable databases using BM25 (lexical) and doc2vec (semantic) embeddings; (2) a chatbot application that retrieves relevant context documents via search, constructs prompts with system directive, conversation history, context, and user question, and generates natural language responses with source citations. Evaluated on 1,285 auto-generated multiple-choice questions from the NBCC using three metrics: log-likelihood, semantic similarity, and lexical similarity.",
+  "results": "BM25 lexical search achieves 59.0% top-1 and 85.5% top-10 retrieval accuracy, significantly outperforming doc2vec semantic search (32.7% top-1, 60.0% top-10). Among LLMs, LLaMA-2-70B achieves the highest log-likelihood accuracy (82.0%) and lexical similarity accuracy (77.5%), while GPT-3.5 Turbo achieves the best lexical similarity (80.2%) and semantic similarity (53.6%). Performance generally scales with model size. The complete system can answer questions approximately 10 times faster than human engineers (average 3 min 31 s), with citation traceability for verification.",
+  "url": "https://doi.org/10.1061/JCCEE5.CPENG-6037",
+  "pdfFile": "Joffe, I. etal - 2025 - The Framework and Implementation of Using Large Language Models to Answer Questions about Building C....pdf",
+  "markdownFile": "Joffe, I. etal - 2025 - The Framework and Implementation of Using Large Language Models to Answer Questions about Building C....md",
+  "taskEn": "Building regulation Q&A",
+  "inputDataEn": "Regulatory documents"
+}

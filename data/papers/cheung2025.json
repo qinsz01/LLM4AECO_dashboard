@@ -1,0 +1,35 @@
+{
+  "id": "cheung2025",
+  "citation": "Cheung & Di Marco/2025",
+  "title": "Composing Conversational Architecture by Integrating Large Language Model: From Reactive to Suggestive Architecture through Exploring the Mathematical Nature of the Transformer Model",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "设计理论",
+  "phase": "规划与设计",
+  "inputData": "文本+用户交互",
+  "representation": "文本",
+  "llmMethod": "其他",
+  "contribution": "提出了将Transformer模型与对话式建筑集成的定性框架，通过对注意力模型、Softmax函数和嵌入等算法组件的数学分析，将其属性映射到对话式建筑设计参数，并通过剧场声学设计实验验证可行性",
+  "abstract": "First proposed in the 1960s, Conversational Architecture enhances human and computer-integrated built environment interaction. Nowadays, most interactive designs are based on reaction and automation, rarely on conversation. Despite Natural Language Processing, including Large Language Model (LLM), being considered a candidate for Human-Computer Interaction (HCI), LLM applications are limited to verbal communication. The syntactic relationship between LLM, and architectural composition is underexplored. The paper proposes a qualitative framework to integrate the theoretical research of LLM and HCI in Conversational Architecture design. Through a mathematical and algorithmic analysis of a transformer model, the key component of LLM, its attributes are mapped onto Conversational Architecture parameters. With the identified design implications, a theatre hall design experiment is conducted. Through observation, the feasibility and challenges of the proposed framework are analysed.",
+  "journal": "Nexus Network Journal",
+  "llmModels": [
+    "Gemma 2 9B",
+    "Nomic Embed Text",
+    "GPT-4o (discussed)",
+    "FunASR (discussed)"
+  ],
+  "keywords": [
+    "Conversational architecture",
+    "Large language model",
+    "Transformer model",
+    "Performative optimisation",
+    "Computational design"
+  ],
+  "methodology": "A two-part qualitative approach: (1) mathematical and algorithmic analysis of the transformer model's key components (attention mechanism with Q/K/V parameters, Softmax probability function, multi-head attention for parallel processing, and embedding for latent space representation), mapping each to Conversational Architecture design parameters; (2) a theatre hall design experiment implemented in Grasshopper with Python3 components integrating Gemma 2 9B (LLM) and Nomic Embed Text (embedding model). The LLM processes plot scripts and simulated audience responses via a prompt template, producing intention, audience reaction, and benchmark summaries. Embedding distances between outputs define human-boredom and computer-boredom levels, which drive kinetic ceiling panel deviation and stage lighting adjustment in a loop-feedback cycle.",
+  "results": "Demonstrates the feasibility of mapping transformer model attributes onto Conversational Architecture parameters, enabling real-time conversational interaction between users and architectural elements. The embedding-based boredom measurement provides numeric references for decision-making. Key challenges identified include: limited text-only inputs (excluding facial expressions and other modalities), subjectively decided boredom thresholds, and potential contradiction between acoustic optimization and conversational spatial quality. Suggests future improvements using multimodal AI, cognitive sensors (EEG), and explicit user intervention mechanisms for dynamic threshold adjustment.",
+  "pdfFile": "Cheung和Di Marco - 2025 - Composing conversational architecture by integrating large language model From reactive to suggesti.pdf",
+  "markdownFile": "Cheung和Di Marco - 2025 - Composing conversational architecture by integrating large language model From reactive to suggesti.md",
+  "url": "https://doi.org/10.1007/s00004-024-00805-9",
+  "taskEn": "Design theory",
+  "inputDataEn": "Text + user interaction"
+}

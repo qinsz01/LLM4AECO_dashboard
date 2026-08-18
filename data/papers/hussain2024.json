@@ -1,0 +1,35 @@
+{
+  "id": "hussain2024",
+  "citation": "Hussain et al./2024",
+  "title": "Conversational AI-based VR System to Improve Construction Safety Training of Migrant Workers",
+  "year": 2024,
+  "abstract": "Inadequate communication during construction safety training can hinder knowledge transfer to workers, particularly migrant workers who face linguistic and literacy barriers, resulting in higher rates of fatal injuries. Additionally, limited abilities of trainers can further exacerbate this problem. To overcome these gaps, this paper presents a virtual reality-based knowledge delivery approach by integrating artificial Intelligence (AI) agent using ChatGPT as a live instructor. The system's effectiveness is assessed with participants from five countries. Results show a significant increase of 23% in scores between pre- and post-tests, indicating improved knowledge. The system performs uniformly across diverse language and educational backgrounds particularly benefiting those with prior experience. This research significantly contributes to the global construction community by improving safety training, promotes safer practices, and ultimately reduces accidents in diversified construction sites. It also opens avenues for research in immersive technologies and AI techniques, advancing in training methodologies and enhancing safety outcomes.",
+  "journal": "Automation in Construction",
+  "pdfFile": "Hussain et al. - 2024 - Conversational AI-based VR system to improve construction safety training of migrant workers",
+  "markdownFile": "Hussain et al. - 2024 - Conversational AI-based VR system to improve construction safety training of migrant workers",
+  "url": "https://doi.org/10.1016/j.autcon.2024.105315",
+  "category": "施工管理与安全",
+  "task": "施工安全培训",
+  "taskEn": "Construction safety training",
+  "phase": "施工",
+  "inputData": "虚拟现实场景与语音交互数据",
+  "inputDataEn": "Virtual reality scenarios and voice interaction data",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "llmModels": [
+    "ChatGPT",
+    "Whisper",
+    "Amazon Polly"
+  ],
+  "keywords": [
+    "safety training",
+    "virtual reality",
+    "conversational AI",
+    "migrant workers",
+    "knowledge transfer",
+    "ChatGPT"
+  ],
+  "contribution": "开发了iSafeCom系统，首次将VR模拟与基于ChatGPT的对话式AI虚拟讲师集成，为面临语言和读写障碍的移民工人提供个性化安全培训。",
+  "methodology": "利用Whisper进行语音识别与翻译，ChatGPT通过提示工程作为虚拟安全讲师生成上下文相关回答，Amazon Polly将文本转为语音，集成于Unity VR环境中实现沉浸式培训。",
+  "results": "52名来自五个国家的参与者实验显示，培训前后测试分数平均提高23%，Cohen's d效应量为1.925，系统在不同语言和教育背景的参与者中表现一致，有经验的工人受益更多。"
+}

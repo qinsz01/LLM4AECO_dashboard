@@ -1,0 +1,33 @@
+{
+  "id": "bazrafshan2025",
+  "citation": "Bazrafshan et al./2025",
+  "title": "Semantic and lexical analysis of pre-trained vision language artificial intelligence models for automated image descriptions in civil engineering",
+  "year": 2025,
+  "category": "其他",
+  "task": "图像描述",
+  "phase": "施工",
+  "inputData": "土木工程和建筑现场图像",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "预训练VLM（ChatGPT-4V）在土木工程图像描述任务中达到76%的语义相似度，无需微调即可应用于专业领域",
+  "abstract": "This paper investigates the application of pre-trained Vision-Language Models (VLMs) for describing images from civil engineering materials and construction sites, with a focus on construction components, structural elements, and materials. The novelty of this study lies in the investigation of VLMs for this specialized domain, which has not been previously addressed. As a case study, the paper evaluates ChatGPT-4v's ability to serve as a descriptor tool by comparing its performance with three human descriptions (a civil engineer and two engineering interns). The contributions of this work include adapting a pre-trained VLM to civil engineering applications without additional fine-tuning and benchmarking its performance using both semantic similarity analysis (SentenceTransformers) and lexical similarity methods. Utilizing two datasets—one from a publicly available online repository and another manually collected by the authors—the study employs whole-text and sentence pair-wise similarity analyses to assess the model's alignment with human descriptions. Results demonstrate that the best-performing model achieved an average similarity of 76% (4% standard deviation) when compared to human-generated descriptions. The analysis also reveals better performance on the publicly available dataset.",
+  "journal": "AI in Civil Engineering (Springer)",
+  "llmModels": [
+    "ChatGPT-4V (GPT-4V)"
+  ],
+  "keywords": [
+    "Vision language models",
+    "Artificial intelligence",
+    "Image description",
+    "Pre-Trained Transformers",
+    "Civil engineering",
+    "Digital twin"
+  ],
+  "methodology": "The study evaluates ChatGPT-4v's ability to describe civil engineering images without fine-tuning. Two datasets are used: (1) an online dataset of 70 publicly available images from Roboflow covering 10 material/object categories (brick, concrete, electric, rebar, scaffolding, site work, stairs, stone, structural, wood), and (2) a private dataset of 82 images captured by the authors from construction sites across eastern Pennsylvania, USA. Each image is described by three human annotators (a civil engineer/project manager and two engineering interns) and by ChatGPT-4v accessed via Bing Chat. The evaluation framework comprises: (a) benchmarking 19 similarity models (15 SentenceTransformers models + BLEU, ROUGE, METEOR, IoU) against 12 curated sentence pairs (6 similar, 6 irrelevant) to select the best-performing models; (b) inter-annotator agreement analysis to establish human baseline similarity; (c) whole-text similarity analysis comparing entire VLM-generated descriptions against human descriptions; and (d) sentence pair-wise analysis comparing individual sentences within descriptions, reporting maximum similarity scores. Semantic similarity is measured via cosine similarity of sentence embeddings from SentenceTransformers, while lexical similarity uses IoU (custom-developed), BLEU, ROUGE, and METEOR. Experiments were run on a desktop with NVIDIA GeForce RTX 3060 Ti GPU.",
+  "results": "The best-performing semantic model (bert-base-uncased, Model 3) achieved an average whole-text similarity score of 76% with a standard deviation of 4% compared to human-generated descriptions in the private dataset. For the online dataset, Model 3 achieved similarity scores above 80% and Model 2 (distilbert-base-nli-mean-tokens) above 70%. For the private dataset, Model 3 achieved scores above 79% and Model 2 above 68%. Sentence pair-wise analysis showed improved scores over whole-text analysis, with Model 3 exceeding 78% on the online dataset and 76% on the private dataset. All 15 semantic models outperformed lexical methods (BLEU, ROUGE, METEOR, IoU) in distinguishing semantically similar from irrelevant benchmark sentences. Inter-annotator agreement ranged from 0.77 to 0.81 across both datasets, providing a human-level reference benchmark. The VLM performed slightly better on the publicly available dataset than the private dataset, suggesting robustness in general tasks but a marginal decline on less common domain-specific images. Low similarity instances were attributed to VLM generating more detailed descriptions with additional contextual elements while humans focused on the most significant features.",
+  "url": "https://link.springer.com/article/10.1007/s43503-025-00063-9",
+  "pdfFile": "Bazrafshan, P. etal - 2025 - Semantic and lexical analysis of pre-trained vision language artificial intelligence models for auto....pdf",
+  "markdownFile": "Bazrafshan, P. etal - 2025 - Semantic and lexical analysis of pre-trained vision language artificial intelligence models for auto....md",
+  "taskEn": "Image captioning",
+  "inputDataEn": "Civil engineering and construction site images"
+}

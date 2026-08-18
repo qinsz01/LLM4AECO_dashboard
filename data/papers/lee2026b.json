@@ -1,0 +1,38 @@
+{
+  "id": "lee2026b",
+  "json_id": "lee2026b",
+  "citation": "Lee et al./2026",
+  "title": "Large Language Model-Based Construction Site Management for Severe Weather Preparedness",
+  "year": 2026,
+  "abstract": "Severe weather events pose significant risks to construction sites, impacting materials, equipment, and temporary structures. Current preparedness resources from federal and state agencies primarily offer general emergency guidelines, leaving construction practitioners with limited tools for site-specific severe weather preparedness. This study addresses this gap by proposing a large language model (LLM) framework tailored for construction site management, designed to provide proactive recommendations for securing construction materials and incomplete or temporary structures against severe weather impacts. The framework includes three core modules: (1) comprehensive search, (2) data preparation, and (3) LLM development. In the comprehensive search, this study investigated best management practices through an extensive literature review. Next, for data preparation, we augmented text-based raw data using ChatGPT to enhance the diversity of the data set and improve the model's ability to provide tailored proactive recommendations. Lastly, this study fine-tuned existing LLMs on the customized data set to develop tailored LLMs. A case study demonstrates the fine-tuned models' effectiveness in generating proactive recommendations, and the performance evaluation results show that the fine-tuned models - particularly the construction material and incomplete and temporary structure 3-30E model (CMITS3-30E Model) - achieved a Bidirectional Encoder Representations from Transformers (BERT) score (BERTScore) F1 of 0.852, delivering optimized proactive actions while balancing computational efficiency. The developed LLM will guide practitioners with precise proactive actions, helping reduce property damage, financial losses, and safety hazards. Overall, this framework not only contributes to severe weather preparedness but also enhances construction safety management by offering tailored, on-demand guidance for construction site resilience.",
+  "journal": "Journal of Construction Engineering and Management",
+  "doi": "10.1061/JCEMD4.COENG-17168",
+  "pdfFile": "Lee et al. - 2026 - Large Language Model–Based Construction Site Management for Severe Weather Preparedness",
+  "markdownFile": "Lee et al. - 2026 - Large Language Model–Based Construction Site Management for Severe Weather Preparedness",
+  "url": "https://doi.org/10.1061/JCEMD4.COENG-17168",
+  "category": "施工管理与安全",
+  "task": "施工现场极端天气防护管理",
+  "taskEn": "Construction site severe weather preparedness management",
+  "phase": "施工",
+  "inputData": "施工现场材料与临时结构文本数据、极端天气最佳管理实践文献",
+  "inputDataEn": "Text data on construction site materials and temporary structures, best management practice literature for severe weather",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "llmModels": [
+    "LLaMA1-7B",
+    "LLaMA2-7B-Chat",
+    "LLaMA3-8B-Instruct",
+    "ChatGPT (data augmentation)"
+  ],
+  "keywords": [
+    "severe weather preparedness",
+    "construction site management",
+    "fine-tuning",
+    "LLaMA",
+    "BERTScore",
+    "proactive recommendations"
+  ],
+  "contribution": "提出面向施工现场极端天气防护的LLM框架，通过文献综述、数据增强和微调三个核心模块，开发定制化LLM模型（CMITS3-30E），为施工从业者提供施工现场材料与临时结构的安全防护建议，BERTScore F1达0.852。",
+  "methodology": "三模块框架：(1)综合检索模块通过文献综述收集最佳管理实践；(2)数据准备模块利用ChatGPT增强文本数据多样性，构建CMITS数据集；(3)LLM开发模块对LLaMA系列模型进行微调。采用Alpaca数据集与领域专用CMITS数据集进行训练。",
+  "results": "CMITS3-30E模型取得BERTScore F1=0.852的最佳性能，在生成主动防护建议方面优于其他模型配置，在计算效率与建议质量之间取得平衡。"
+}

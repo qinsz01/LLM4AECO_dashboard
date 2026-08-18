@@ -1,0 +1,32 @@
+{
+  "id": "heetal2025",
+  "citation": "He et al. / 2025",
+  "title": "Addressing the information silo of construction planning constraints - a graph retrieval augmented generation approach",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "施工计划约束信息问答",
+  "phase": "施工",
+  "inputData": "BIM模型+会议记录+施工日志+进度计划",
+  "representation": "图结构",
+  "llmMethod": "RAG",
+  "contribution": "首次将知识图谱用于组织施工计划约束属性与BIM对象，提出Graph RAG框架实现自然语言约束问答，正确回答率100%，正确性评分提升40.6%，ROUGE评分提升28.3%",
+  "abstract": "Removing planning constraints is crucial for ensuring a reliable construction plan and workflow. However, essential information related to these constraints is often scattered and fragmented, leading to the creation of information silos that hinder efficient decision-making. This research develops a constraint knowledge graph to organize and integrate constraint attributes with BIM objects. A knowledge graph-enhanced retrieval-augmented generation (Graph RAG) framework was developed to enrich LLMs' knowledge in responding to project constraint-related queries. The framework's effectiveness was validated using a real-world building project with 1,122 BIM objects and 37 planning constraints. Evaluation results demonstrate that the Graph RAG framework correctly answered all 16 testing queries, significantly outperforming traditional RAG with a 40.6% improvement in correctness score and a 28.3% improvement in ROUGE score.",
+  "journal": "Engineering, Construction and Architectural Management",
+  "llmModels": [
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Construction planning",
+    "Constraint",
+    "Knowledge graph",
+    "Large language model (LLM)",
+    "Retrieval-augmented generation (RAG)"
+  ],
+  "methodology": "本研究采用设计科学研究方法，提出三阶段Graph RAG框架：（1）数据准备阶段——通过Dynamo脚本从Revit BIM模型中提取1,122个结构元素的几何属性（元素ID、类别、楼层、名称），同时从会议记录、施工日志、进度计划等多源文件中整理37条计划约束属性；（2）知识库构建阶段——基于BOT和BEO本体设计约束知识数据模式，利用Neo4j图数据库和Cypher查询语言将BIM几何属性与约束属性通过语义丰富构建约束知识图谱（1,148条几何Cypher语句+357条约束语句）；（3）LLM问答阶段——利用LangChain的GraphCypherQAChain，以GPT-4o为核心模型，通过少样本提示将用户自然语言查询转换为Cypher语句，在知识图谱上执行检索后由LLM生成自然语言回答。以中国青岛某高层办公建筑项目（地上33层，13-17标准层，5个工种，17项关键路径活动）为案例进行验证，设计了16个涵盖中、高难度的测试查询进行端到端评估，采用正确性评分（1-5分LLM评估）和ROUGE-1指标对比Graph RAG与基线朴素RAG的性能差异。",
+  "results": "Graph RAG在全部16个测试查询中均回答正确，而基线朴素RAG有9个回答得分在1-2分之间（错误回答）。Graph RAG的正确性评分为4.78分（满分5分），较基线的2.75分提升40.6%；ROUGE-1得分为0.5091，较基线的0.2266提升28.3%。在中等难度查询中，Graph RAG能准确识别所有约束并通过Cypher语句精确定位，而朴素RAG因缺乏数据模式导致信息检索不完整。在高等难度查询中，Graph RAG通过Cypher语句执行数据过滤和百分比计算，克服了LLM数学推理能力不足的局限，成功处理多跳推理任务。",
+  "pdfFile": "He et al. - 2025 - Addressing the information silo of construction planning constraints - a graph retrieval augmented g.pdf",
+  "markdownFile": "He et al. - 2025 - Addressing the information silo of construction planning constraints - a graph retrieval augmented g.md",
+  "url": "https://doi.org/10.1108/ECAM-08-2024-1066",
+  "taskEn": "Construction planning constraint Q&A",
+  "inputDataEn": "BIM models + meeting minutes + construction logs + schedules"
+}

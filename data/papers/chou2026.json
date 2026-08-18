@@ -1,0 +1,36 @@
+{
+  "id": "chou2026",
+  "citation": "Chou et al./2026",
+  "title": "AI-driven Decision Support System for Construction Cost Forecasting and Consultation Using Optimized Deep Learning and Language Models",
+  "year": 2026,
+  "category": "施工管理与安全",
+  "task": "建筑工程造价指数预测与咨询",
+  "taskEn": "Construction cost index forecasting and consultation",
+  "phase": "施工",
+  "inputData": "历史造价数据、宏观经济指标与中文建筑新闻",
+  "inputDataEn": "Historical cost data, macroeconomic indicators, and Traditional Chinese construction news",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "abstract": "Fluctuations in construction material prices significantly affect project budgets and bidding strategies via the Construction Cost Index (CCI). This paper develops an AI-driven decision-support system for construction cost forecasting and consultation, integrating deep learning and Large Language Models (LLMs) to enable intelligent CCI prediction. A multi-source data framework combines historical CCI records, macroeconomic indicators, and sentiment extracted from Traditional Chinese construction news. Time-series forecasting employs an Extended Long Short-Term Memory (xLSTM) network, while sentiment models are fine-tuned using Quantized Low-Rank Adaptation (QLoRA). Model hyperparameters for both the QLoRA-fine-tuned LLMs and the xLSTM forecasting models are optimized via the Pilgrimage Walk Optimization (PWO) algorithm, yielding two horizon-specific configurations for short- and medium-term forecasting. Experimental results demonstrate that integrating sentiment features and PWO-based tuning consistently improves forecasting accuracy relative to baseline models. The deployed platform integrates CCI forecasting, sentiment analytics, and retrieval-augmented consultation to provide interpretable forecasts that enhance cost control and decision-making in construction management.",
+  "journal": "Automation in Construction",
+  "pdfFile": "Chou et al. - 2026 - AI-driven decision support system for construction cost forecasting and consultation using optimized",
+  "markdownFile": "Chou et al. - 2026 - AI-driven decision support system for construction cost forecasting and consultation using optimized",
+  "url": "https://doi.org/10.1016/j.autcon.2026.106797",
+  "llmModels": [
+    "Llama-3.1-8B",
+    "xLSTM"
+  ],
+  "keywords": [
+    "Construction cost index (CCI)",
+    "Large language models (LLMs)",
+    "Sentiment analysis",
+    "Deep learning (DL)",
+    "Time-series forecasting",
+    "Pilgrimage walk optimization (PWO)",
+    "Decision support system",
+    "QLoRA"
+  ],
+  "contribution": "开发了集成深度学习与LLM的AI驱动造价指数预测与咨询决策支持系统，结合xLSTM时序预测、QLoRA情感分析和RAG咨询功能，通过PWO算法优化模型超参数",
+  "methodology": "构建多源数据框架整合历史CCI记录、宏观经济指标和繁体中文建筑新闻情感信息；使用QLoRA微调LLM进行施工新闻情感分类；采用xLSTM网络进行时序预测；通过PWO算法同时优化LLM和xLSTM的超参数，生成短期和中期两种预测配置；集成RAG技术提供可解释的咨询功能",
+  "results": "集成情感特征和PWO优化后，预测精度相对于基准模型持续改善；系统在短期和中期预测中均表现优异；部署的平台整合了CCI预测、情感分析和检索增强咨询，为建筑管理中的成本控制和决策提供可解释的预测支持"
+}

@@ -1,0 +1,32 @@
+{
+  "id": "jang2024",
+  "citation": "Jang et al., 2024",
+  "title": "Automated detailing of exterior walls using NADIA: Natural-language-based architectural detailing through interaction with AI",
+  "year": 2024,
+  "category": "设计优化与生成",
+  "task": "建筑细部设计",
+  "phase": "规划与设计",
+  "inputData": "BIM模型+自然语言描述",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "提出NADIA框架，通过自然语言交互实现BIM环境下的建筑细部设计，作为设计助手实现83.33%准确率满足设计要求，作为设计顾问实现98.65%准确率满足热工工程标准",
+  "abstract": "Learning building information modeling (BIM) systems has always been a challenge for BIM adoption. Although groundbreaking performances of large language models (LLMs) have inspired many researchers to consider an LLM as a potential BIM control method using natural language, a specific method of utilizing LLMs for automated BIM model detailing has not yet been proposed. This paper proposes an LLM-BIM chaining framework to enable architectural design detailing using natural language, instead of using menu-based user interfaces, named \"Natural-language-based Architectural Detailing through Interaction with AI (NADIA)\". The NADIA framework is based on three main approaches: 1) separating the specification of the wall layers from the creation of the wall layers; 2) appropriate instruction prompting to guide the LLM to minimize irrational responses and produce engineering rational details; and 3) LLM-BIM chaining to seamlessly link a BIM authoring tool and an LLM. The effectiveness of NADIA was validated based on two main aspects: its accuracy in generating details that adhere to specified design requirements from users -- as a design assistant -- and its compliance with general engineering requirements -- as a design consultant. The validation was achieved through tasks that involved generating 240 and 1,920 exterior wall details, respectively. NADIA achieved an average accuracy of 83.33% in generating logically coherent details in line with the required design conditions. For thermal performance requirements, it demonstrated a mean accuracy of 98.54% in complying with the ASHRAE 90.1-2019 standard.",
+  "journal": "Advanced Engineering Informatics (Elsevier)",
+  "llmModels": [
+    "GPT-3.5-turbo-0301"
+  ],
+  "keywords": [
+    "Building information modeling (BIM)",
+    "Large language model (LLM)",
+    "Artificial intelligence (AI)",
+    "Human-computer interaction",
+    "Design automation"
+  ],
+  "methodology": "Proposes the NADIA (Natural-language-based Architectural Detailing through Interaction with AI) framework that integrates LLM and BIM authoring software (Autodesk Revit 2024) for automated exterior wall detailing via natural language. The framework comprises three modules: (1) Interface module -- a Revit add-on panel accepting textual task prompts from architects; (2) Task execution module -- uses LLM chaining with instruction prompting to first classify the task type (activity type, component type, target level) and then generate design details in JSON format with properties (layer name, thickness, material, thermal conductivity, type); (3) Design implementation module -- preprocesses and normalizes the LLM-generated JSON data, creates detail class instances in the BIM environment. The framework supports three interaction modes: detail generation, iterative detail modification, and object replacement. Implementation uses GPT-3.5-turbo-0301 as the LLM with hard-coded chaining via Revit C# API on the .NET framework. Validation covers two roles: (a) as a design assistant -- 8 unique task prompts combining structural frame materials (reinforced concrete/timber), insulation methods (exterior/interior), and minimum structural thicknesses, each executed 30 times (240 total wall details); (b) as a design consultant -- 64 distinct prompts across structural types, building occupancy, and climate zones at 4 levels of engineering reference specificity, each executed 30 times (1,920 total wall details), evaluated against ASHRAE 90.1-2019 thermal performance requirements.",
+  "results": "As a design assistant, NADIA achieved 83.33% mean accuracy (SD 11.18%) in satisfying specified design conditions across structural frame material, insulation method, and minimum structural thickness. Performance was higher for reinforced concrete (96.67% for frame material, 97.25% for thickness) than timber frames (88.33% and 87.5%), and higher for exterior insulation (97.50%) than interior insulation (85.83%). As a design consultant, NADIA achieved 98.65% mean accuracy in complying with ASHRAE 90.1-2019 U-value requirements across 1,920 generated wall details. Accuracy ranged from 86.67% to 100% across different specification levels: no reference (98.54%), reference name only (98.96%), reference name and number (98.33%), and specific engineering values (98.75%). Out of 1,920 details, 1,894 met the thermal requirements, with only 4 out of 64 box-and-whisker sets exceeding U-value limits. NADIA showed a tendency to over-insulate (adopting double insulation when single was requested and producing U-values significantly below ASHRAE maximums), reflecting an LLM inclination toward conservative/safe answers.",
+  "pdfFile": "Jang et al. - 2024 - Automated detailing of exterior walls using NADIA Natural-language-based architectural detailing th.pdf",
+  "markdownFile": "Jang et al. - 2024 - Automated detailing of exterior walls using NADIA Natural-language-based architectural detailing th.md",
+  "url": "https://doi.org/10.1016/j.aei.2024.102532",
+  "taskEn": "Architectural detailing",
+  "inputDataEn": "BIM models + natural language descriptions"
+}

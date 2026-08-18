@@ -1,0 +1,39 @@
+{
+  "id": "ahmadi2025",
+  "citation": "Ahmadi et al./2025",
+  "title": "Automatic Construction Accident Report Analysis Using Large Language Models (LLMs)",
+  "year": 2025,
+  "abstract": "Construction site safety is a paramount concern, given the high rate of accidents and fatalities in the sector. This study introduces a novel approach to analyzing construction accident reports by employing advanced large language models (LLMs), specifically generative pre-trained transformer (GPT)-3.5, GPT-4.0, Gemini Pro, and large language model Meta artificial intelligence (AI) (LLaMA) 3.1. Our research focuses on the classification of key attributes in accident reports: root cause, injury cause, affected body part, severity, and accident time. The results reveal that GPT-4.0 achieves significantly higher accuracy across most attributes. Gemini Pro demonstrates superior performance in the \"injury cause\" classification, while LLaMA 3.1 excels in classifying \"severity\" and \"root cause\". GPT-3.5, although lagging behind GPT-4.0, exhibits commendable accuracy. The insights gained from this study are vital for the construction industry, as they indicate the potential for developing more precise and effective safety measures. These findings could lead to a reduction in the frequency and severity of accidents, thereby enhancing worker safety.",
+  "journal": "Journal of Intelligent Construction",
+  "pdfFile": "Ahmadi et al. - 2025 - Automatic Construction Accident Report Analysis Using Large Language Models (LLMs)",
+  "markdownFile": "Ahmadi et al. - 2025 - Automatic Construction Accident Report Analysis Using Large Language Models (LLMs)",
+  "url": "https://doi.org/10.26599/JIC.2024.9180039",
+  "category": "施工管理与安全",
+  "task": "施工事故报告属性分类",
+  "taskEn": "Construction accident report attribute classification",
+  "phase": "施工",
+  "inputData": "施工事故报告文本数据",
+  "inputDataEn": "Construction accident report text data",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "llmModels": [
+    "GPT-3.5",
+    "GPT-4",
+    "Gemini Pro",
+    "LLaMA-3.1-70B",
+    "BERT",
+    "RoBERTa",
+    "DeBERTa"
+  ],
+  "keywords": [
+    "construction safety",
+    "accident report analysis",
+    "large language models",
+    "GPT",
+    "Gemini",
+    "LLaMA"
+  ],
+  "contribution": "首次将多种先进LLM应用于施工事故报告的多属性分类，系统比较了GPT-3.5、GPT-4.0、Gemini Pro和LLaMA 3.1在根本原因、伤害原因、受伤部位、严重程度和事故时间五个属性上的分类性能。",
+  "methodology": "从OSHA数据库提取2002-2023年事故报告，采用零样本学习策略设计统一提示词，利用GPT-3.5、GPT-4.0、Gemini Pro和LLaMA 3.1进行五类属性分类，并以BERT及其变体作为微调基线进行对比。",
+  "results": "GPT-4.0在大多数属性分类中准确率最高，事故时间分类达到100%准确率；Gemini Pro在伤害原因分类上表现最优（96.74%）；LLaMA 3.1在严重程度（99.46%）和根本原因分类上表现突出。研究揭示了不同模型在处理复杂事故描述时的误分类模式。"
+}

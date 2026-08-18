@@ -1,0 +1,30 @@
+{
+  "id": "tolnai2025",
+  "citation": "Tolnai et al./2025",
+  "title": "An Automated Domain-Agnostic and Explainable Data Quality Assurance Framework for Energy Analytics and Beyond",
+  "year": 2025,
+  "category": "其他",
+  "task": "数据质量评估/能耗管理",
+  "phase": "运维",
+  "inputData": "传感器数据（时间序列）",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "结合SHAP可解释性和LLM叙述能力，将建筑能耗数据质量指标转化为可操作的诊断报告，提升数据治理决策效率",
+  "pdfFile": "Tolnai et al. - 2025 - An Automated Domain-Agnostic and Explainable Data Quality Assurance Framework for Energy Analytics a.pdf",
+  "markdownFile": "Tolnai et al. - 2025 - An Automated Domain-Agnostic and Explainable Data Quality Assurance Framework for Energy Analytics a.md",
+  "abstract": "This paper presents a fully automated, explainable data quality assurance pipeline for time-series building energy datasets that computes standardized quality metrics and aggregates them into an interpretable Building Quality Score (BQS) predictive of NILM model performance. Explainability is provided through SHAP-based sensitivity analysis and a lightweight LLM (GPT-o4-mini) that converts diagnostic visualizations into concise, actionable narratives. Evaluated on the ADRENALIN corpus of nine buildings, the framework demonstrates that simple NaN handling reduces average NMAE from 0.82 to 0.76 (Bayesian), 0.71 to 0.64 (BI-LSTM), and 0.59 to 0.53 (TFM).",
+  "journal": "Information (MDPI)",
+  "llmModels": [
+    "GPT-o4-mini"
+  ],
+  "keywords": [
+    "data quality assessment",
+    "smart building analytics",
+    "non-intrusive load monitoring"
+  ],
+  "methodology": "A seven-step modular pipeline performs dataset profiling, metric computation, threshold-based flagging, Building Quality Score (BQS) aggregation, SHAP-based interpretation, LLM-powered narrative generation via zero-shot prompting, and cross-dataset ranking, validated on nine buildings from the ADRENALIN dataset at four temporal resolutions.",
+  "results": "BQS shows a strong inverse correlation with NILM error across models; a 0.1 increase in BQS corresponds to approximately 0.06-0.36 NMAE reduction. Simple forward-fill with mean-fallback imputation reduced average NMAE from 0.82 to 0.76 (Bayesian), 0.71 to 0.64 (BI-LSTM), and 0.59 to 0.53 (TFM). SHAP analysis identifies missingness and timestamp irregularity as the dominant error drivers across all model families.",
+  "url": "https://doi.org/10.3390/info16100836",
+  "taskEn": "Data quality assessment / energy management",
+  "inputDataEn": "Sensor data (time series)"
+}

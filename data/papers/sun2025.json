@@ -1,0 +1,35 @@
+{
+  "id": "sun2025",
+  "citation": "Sun et al./2025",
+  "title": "Automated Visualization for Structural Form-Finding using Orchestrated Multimodal Machine Learning Agents",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "结构形态概念可视化生成",
+  "phase": "规划与设计",
+  "inputData": "结构CAD视图与文本场景描述",
+  "representation": "多模态",
+  "llmMethod": "Agent",
+  "contribution": "提出带反思反馈回路的多智能体结构可视化框架，由专门智能体自动构思、生成、评价并修正图像，减少概念结构设计可视化中的人工重复生成。",
+  "pdfFile": "",
+  "markdownFile": "",
+  "abstract": "Effective collaboration is fundamental to successful structural design. While engineers rely on numerical models and technical diagrams, architects prefer conceptual visualizations conveying design intent. Traditional rendering is laborious, and current text-to-image workflows often require manual intervention to correct unnatural artifacts. This paper proposes an agent-workflow hybrid framework in which multiple machine-learning agents are orchestrated in a reflective loop to autonomously generate, evaluate and iteratively refine visualizations from a CAD view and a text description. When a result is flawed, the critique guides a new generation attempt, reducing manual rework and supporting rapid conceptual design exploration.",
+  "journal": "Proceedings of the IASS Annual Symposium 2025: The Living Past as a Source of Innovation",
+  "llmModels": [
+    "Gemini 2.5 Flash Preview 05-20",
+    "DeepSeek-V3-0324",
+    "GPT-4o"
+  ],
+  "keywords": [
+    "conceptual structural design",
+    "architectural visualization",
+    "form-finding",
+    "generative AI",
+    "multimodal agents",
+    "self-correction"
+  ],
+  "methodology": "The Dify 1.4.1 workflow orchestrates three specialized agents. A Dreamer powered by Gemini 2.5 Flash analyzes the CAD view and text brief, writes an enriched image prompt and invokes a local Depth Anything V2 workflow. A DeepSeek-V3 Generator calls a local SVDQuant FLUX.1 Depth image-synthesis workflow. A GPT-4o Evaluator inspects the candidate image and either accepts it or returns a critique that is stored in memory and used to revise the next attempt. ComfyUI exposes the two local vision workflows as tools. The prototype is demonstrated on synthetic 50 m bridges produced through Combinatorial Equilibrium Modelling and on additional form-found structural typologies.",
+  "results": "In the documented bridge case, the first 41.1-second iteration was rejected because of broken structural-member edges; the agents then reused the depth map, revised the prompt and produced an accepted image in a second 37.6-second iteration. The autonomous two-iteration workflow took 76.8 seconds and required user input only once. The earlier one-shot workflow averaged six manual regeneration attempts and 54.3 seconds yet still showed artifacts; the new result had better reported geometric fidelity and realism, although it was slower. Evidence is a focused case study plus qualitative examples rather than a large quantitative benchmark. The evaluator cannot guarantee structural accuracy, and agent autonomy remains limited to predefined tools.",
+  "url": "https://www.ingentaconnect.com/contentone/iass/piass/2025/00002025/00000011/art00004",
+  "taskEn": "Conceptual visualization generation for structural forms",
+  "inputDataEn": "Structural CAD views and textual scene descriptions"
+}

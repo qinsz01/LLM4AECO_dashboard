@@ -1,0 +1,35 @@
+{
+  "id": "kim2025b",
+  "citation": "Kim et al./2025",
+  "title": "Optimizing Large Vision-Language Models for Context-Aware Construction Safety Assessment",
+  "year": 2025,
+  "abstract": "This paper presents a context-aware large vision-language model (LVLM) for automated construction site safety assessment, addressing the limitations of existing models in domain-specific hazard recognition. It introduces a framework that combines domain-specific image-text data generation, vision encoder fine-tuning for improved object recognition, and Low-Rank Adaptation (LoRA)-based model adjustment for context-aware safety reasoning. The model was evaluated on 400 images from 10 hazardous situations, demonstrating superior performance in the image captioning task (average ROUGE-L: 0.3852, SPICE: 0.3615, SBERT-based similarity: 0.7484). For safety assessment, the fine-tuned model achieved 94.25% accuracy in predicting safety status, significantly outperforming GPT-4 V (53.25%) and LLaVA 1.5 (48%). The quality of textual justifications was assessed using both GPT-4 V-based and expert-based evaluations of relevance and preference. In both settings, the fine-tuned model received the highest scores, demonstrating robust and context-aware safety reasoning. These findings confirm that domain-specific fine-tuning enhances safety classification and hazard interpretation, advancing construction site monitoring.",
+  "journal": "Automation in Construction",
+  "pdfFile": "Kim et al. - 2025 - Optimizing large vision-language models for context-aware construction safety assessment",
+  "markdownFile": "Kim et al. - 2025 - Optimizing large vision-language models for context-aware construction safety assessment",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106510",
+  "category": "施工管理与安全",
+  "task": "施工现场安全状态评估",
+  "taskEn": "Construction site safety status assessment",
+  "phase": "施工",
+  "inputData": "施工现场图像",
+  "inputDataEn": "Construction site images",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "llmModels": [
+    "LLaVA-1.5",
+    "GPT-4V",
+    "CLIP"
+  ],
+  "keywords": [
+    "construction safety assessment",
+    "large vision-language models",
+    "fine-tuning vision-language models",
+    "image-text data generation",
+    "construction site hazard recognition",
+    "context-aware safety monitoring"
+  ],
+  "contribution": "提出了一个结合领域特定图文数据生成、视觉编码器微调和LoRA适配的框架，显著提升了大视觉语言模型在施工安全评估中的上下文感知能力。",
+  "methodology": "利用GPT-4V生成施工安全领域的指令跟随训练数据，对CLIP视觉编码器进行针对施工对象的微调，并使用LoRA方法对LLaVA-1.5进行低秩自适应微调以对齐安全评估任务。",
+  "results": "在10种危险场景的400张图像上，微调模型安全状态预测准确率达94.25%，显著优于GPT-4V(53.25%)和LLaVA 1.5(48%)，在图像描述和安全理由质量评估中均获得最高分。"
+}

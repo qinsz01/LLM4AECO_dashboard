@@ -1,0 +1,36 @@
+{
+  "id": "paik2026",
+  "json_id": "paik2026",
+  "citation": "Paik et al./2026",
+  "title": "An Ontology-Driven MCP Agent Framework for Ensuring Integrity in Architectural Structural Design",
+  "year": 2026,
+  "abstract": "The rapid proliferation of Large Language Model (LLM)-based autonomous agents has demonstrated strong potential for automating knowledge-intensive tasks. However, their probabilistic reasoning often leads to hallucinations and weak domain knowledge integrity, limiting their applicability in high-stakes architecture, engineering, and construction (AEC) contexts where engineering reliability is critical. To address these challenges, this paper proposes a novel architecture, termed the Ontology-driven Model Context Protocol (O-MCP) Framework, which integrates formal ontology with the standardized Model Context Protocol to ensure logical consistency and trustworthy knowledge exchange. The framework introduces a three-layer architecture consisting of a Knowledge and Data Source Layer, a Semantic MCP Server Layer, and an Intelligent Agent Layer. Its core contribution is the Semantic MCP Server, which incorporates a semantic guardrail mechanism that validates agent requests in real time using ontology-based reasoning. A case study in architectural structural design illustrates how the framework formalizes expert tacit knowledge and preserves decentralized knowledge sovereignty. A proof-of-concept experiment in reinforced concrete slab design positions O-MCP as a reference standard for formalized expert knowledge.",
+  "journal": "IEEE Access",
+  "doi": "10.1109/ACCESS.2026.3681621",
+  "pdfFile": "Paik et al. - 2026 - An Ontology-Driven MCP Agent Framework for Ensuring Integrity in Architectural Structural Design",
+  "markdownFile": "Paik et al. - 2026 - An Ontology-Driven MCP Agent Framework for Ensuring Integrity in Architectural Structural Design",
+  "url": "https://doi.org/10.1109/ACCESS.2026.3681621",
+  "category": "结构设计与分析",
+  "task": "建筑结构设计知识完整性保障",
+  "taskEn": "Ensuring knowledge integrity in architectural structural design",
+  "phase": "规划与设计",
+  "inputData": "钢筋混凝土楼板设计参数、形式化本体知识、设计规范",
+  "inputDataEn": "Reinforced concrete slab design parameters, formal ontology knowledge, design codes",
+  "representation": "图结构",
+  "llmMethod": "Agent",
+  "llmModels": [
+    "Claude 3.5 Sonnet"
+  ],
+  "keywords": [
+    "ontology",
+    "Model Context Protocol",
+    "MCP",
+    "semantic guardrail",
+    "knowledge integrity",
+    "reinforced concrete design",
+    "LLM agent"
+  ],
+  "contribution": "提出O-MCP框架，将形式化本体与标准化模型上下文协议（MCP）集成，通过语义护栏机制实时验证Agent请求，确保建筑结构设计中的知识完整性与逻辑一致性，为AEC领域工程可靠性提供参考标准。",
+  "methodology": "三层架构框架：(1)知识与数据源层——存储形式化本体（OWL）和领域数据；(2)语义MCP服务器层——核心贡献，集成语义护栏机制，基于本体推理实时验证Agent请求的逻辑一致性与知识完整性；(3)智能Agent层——基于Claude 3.5 Sonnet的LLM Agent执行结构设计任务。概念验证实验以钢筋混凝土楼板设计为案例，30个测试用例对比LLM RAG系统与O-MCP框架。",
+  "results": "LLM RAG系统达到约83%的与形式化本体一致性，但在数值推理和多条件规则应用中存在系统性错误。O-MCP框架通过本体验证提供确定性的正确性保障，消除了RAG系统中的数值推理错误和多条件规则应用偏差，确保工程完整性。"
+}

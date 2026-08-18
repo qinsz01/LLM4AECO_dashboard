@@ -1,0 +1,33 @@
+{
+  "id": "sabir2025",
+  "citation": "Sabir et al./2025",
+  "title": "Personalized Construction Safety Training System Using Conversational AI in Virtual Reality",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "施工安全培训",
+  "phase": "施工",
+  "inputData": "施工安全培训场景数据",
+  "representation": "多模态",
+  "llmMethod": "Prompt",
+  "contribution": "开发iSafeTrainer系统，将LLM（ChatGPT）与VR技术集成，实现个性化的施工安全培训，支持以第三人称视角在非沉浸式桌面虚拟环境中进行工种特定训练，消除对头戴式显示设备的需求",
+  "pdfFile": "Sabir et al. - 2025 - Personalized construction safety training system using conversational AI in virtual reality.pdf",
+  "markdownFile": "Sabir et al. - 2025 - Personalized construction safety training system using conversational AI in virtual reality.md",
+  "abstract": "Training workers in safety protocols is crucial for mitigating job site hazards, yet traditional methods often fall short. This paper explores integrating virtual reality (VR) and large language models (LLMs) into iSafeTrainer, an AI-powered safety training system. The system allows trainees to engage with trade-specific content tailored to their expertise level in a third-person perspective in a non-immersive desktop virtual environment, eliminating the need for head-mounted displays. An experimental study evaluated the system through qualitative, survey-based assessments, focusing on user satisfaction, experience, engagement, guidance, and confidence. Results showed high satisfaction rates (>85 %) among novice users, with improved safety knowledge. Expert users suggested advanced scenarios, highlighting the system's potential for expansion. The modular architecture supports customization across various construction settings, ensuring adaptability for future improvements.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "GPT-4",
+    "Whisper"
+  ],
+  "keywords": [
+    "construction safety training",
+    "virtual reality",
+    "large language models",
+    "conversational AI",
+    "personalized training"
+  ],
+  "methodology": "开发iSafeTrainer系统，集成LLM（ChatGPT）与VR技术。系统采用模块化架构：(1) 使用Unity 3D构建非沉浸式桌面虚拟环境，以第三人称视角呈现施工场景；(2) 集成OpenAI Whisper进行语音识别，将学员口语输入转化为文本；(3) 通过ChatGPT基于Prompt工程生成个性化安全培训内容，根据学员工种（电气、脚手架、焊接）和 expertise level 定制对话内容；(4) 系统支持实时对话交互，学员可通过语音与AI培训师进行问答。实验通过定性调查评估，关注用户满意度、体验、参与度、指导和信心。",
+  "results": "新手用户满意度超过85%，安全知识显著提升。专家用户建议增加高级场景，突出系统的扩展潜力。81%的参与者对系统整体满意，85%的用户表示安全知识有所改善。模块化架构支持在不同施工环境中进行定制，确保未来改进的适应性。",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106207",
+  "taskEn": "Construction safety training",
+  "inputDataEn": "Construction safety training scenario data"
+}

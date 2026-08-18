@@ -1,0 +1,34 @@
+{
+  "id": "chenandbao2025",
+  "citation": "Chen and Bao/2025",
+  "title": "Multi-agent large language model framework for code-compliant automated design of reinforced concrete structures",
+  "year": 2025,
+  "category": "结构设计与分析",
+  "task": "结构设计",
+  "phase": "规划与设计",
+  "inputData": "结构设计参数",
+  "representation": "结构化",
+  "llmMethod": "Agent",
+  "contribution": "提出多智能体LLM框架实现钢筋混凝土结构自动规范合规设计，设计准确率达97%，节省90%时间，并开发支持自然语言查询的GUI",
+  "abstract": "The current manual approach for designing reinforced concrete, guided by structural design codes, is inefficient and susceptible to human error. This paper presents a Large Language Model (LLM) framework to automate code-compliant design and achieve interpretability and verifiability. The framework decomposes complex tasks into subtasks handled by coordinated LLM agents with specialized expertise, enabling automatic structural design and human-robot interaction for exploring alternative solutions and explanations. This framework was tested using case studies on the design and evaluation of 30 beams and compared against commercial engineering software SAP2000, demonstrating how the agents collaborate and cross-check results while maintaining high accuracy (97%), high efficiency (90% time-saving), and transparency in structural analysis and design. An intuitive Graphical User Interface (GUI) that supports natural language queries was developed to facilitate practical use. By bridging the gap between intuitive communication and rigorous structural analysis, this framework provides a paradigm shift for automatic structural design.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "DeepSeek-V3",
+    "GPT-4o"
+  ],
+  "keywords": [
+    "Building code compliance",
+    "Concrete structures",
+    "Automated design",
+    "Large language model",
+    "Multi-agent framework",
+    "Structural design"
+  ],
+  "methodology": "本研究提出一种多智能体LLM框架，用于钢筋混凝土结构的自动规范合规设计与评估。框架包含四类智能体：（1）Task Dispatcher——基于OCR增强的查询分类与参数提取，将用户自然语言输入路由至设计或评估路径；（2）Structure Design Agent——协调截面确定、荷载分析、结构分析、抗弯设计和抗剪设计等确定性计算工具序列，生成符合ACI 318-19规范的合规设计；（3）Design Evaluation Agent——对既有设计进行规范合规性检查，包括截面校核、承载力验算和适用性评估（挠度分析）；（4）Expert Consultation Agent——采用三LLM架构（主LLM生成响应、验证LLM校正计算错误、整合LLM合成最终回复），支持多轮对话式设计优化。核心设计在于将LLM的推理能力与外部确定性计算工具解耦，避免LLM直接执行数值计算，同时通过Code-based Knowledge Component集成规范条款和计算工具确保合规性。使用DeepSeek-V3和GPT-4o分别进行验证。",
+  "results": "框架在30根钢筋混凝土梁设计案例上与SAP2000对比验证：所有参数MAPE均低于3%，R2值为0.97-1.00；最大弯矩RMSE为5.69 kip-ft，最大剪力MAE为0.06 kip，所需纵筋面积RMSE为0.10 in2。配对t检验在99%置信水平下未拒绝零假设（p>0.01），Pearson相关系数均超过0.98。设计效率方面，相比手动计算节省约90%时间（DeepSeek-V3约5分钟/梁，GPT-4o约1分钟/梁），API成本分别为$0.007-0.009和$0.08-0.10每设计。三LLM验证架构可将最大计算误差从单LLM的20.2%降至0%，但响应时间从55秒增至189秒。",
+  "markdownFile": "Chen and Bao - 2025 - Multi-agent large language model framework for code-compliant automated design of reinforced concret.md",
+  "pdfFile": "Chen and Bao - 2025 - Multi-agent large language model framework for code-compliant automated design of reinforced concret.pdf",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106331",
+  "taskEn": "Structural design",
+  "inputDataEn": "Structural design parameters"
+}

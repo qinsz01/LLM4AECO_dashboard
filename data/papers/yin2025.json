@@ -1,0 +1,32 @@
+{
+  "id": "yin2025",
+  "citation": "Yin et al./2025",
+  "title": "Information Requirement Analysis for Establishing Intelligent Natural Language Query Interfaces in BIM-based Construction Projects",
+  "year": 2025,
+  "abstract": "Emerging artificial intelligence (AI)-based natural language interface (NLI) systems show significant potential for enabling stakeholders to efficiently retrieve complicated building information models (BIM). Previous studies have shown many technical pathways, but they have not investigated which information entities in complex BIM schemas and constraint types were most important for NLI-based data querying. This study investigates the information requirements for NLI-based BIM model retrieval. It begins with a survey of existing BIM query languages (BIMQLs) and software applications to identify popular information entities and constraints. We then recruited ten practitioners to create 200 queries and analyzed them to refine the information scope (IS) for NLI applications. Finally, we tested 14 selected queries via the NLI approach and other methods, revealing the types of queries that NLIs could better manage. This study identifies the most important information entities, constraint types, question forms, and condition combinations to develop intelligent NLI systems in BIM-based construction projects. The findings lay a crucial foundation for the advancement of AI-based NLIs by offering a definite IS, which can be used to generate training datasets or prompts for large language models.",
+  "journal": "Journal of Intelligent Construction",
+  "pdfFile": "Yin et al. - 2025 - Information Requirement Analysis for Establishing Intelligent Natural Language Query Interfaces in B",
+  "markdownFile": "Yin et al. - 2025 - Information Requirement Analysis for Establishing Intelligent Natural Language Query Interfaces in B",
+  "url": "https://doi.org/10.26599/JIC.2025.9180084",
+  "category": "BIM检索与管理",
+  "task": "BIM自然语言查询接口信息需求分析",
+  "taskEn": "Information requirement analysis for NLI-based BIM querying",
+  "phase": "施工",
+  "inputData": "BIM模型数据与自然语言查询",
+  "inputDataEn": "BIM model data and natural language queries",
+  "representation": "结构化",
+  "llmMethod": "其他",
+  "llmModels": [
+    "GPT"
+  ],
+  "keywords": [
+    "building information modeling",
+    "natural language interface",
+    "project information retrieval",
+    "information requirement analysis",
+    "digital construction management"
+  ],
+  "contribution": "系统分析了基于NLI的BIM模型检索的信息需求，通过调研现有BIM查询语言和软件、收集从业人员200条自然语言查询并进行对比实验，识别了最重要的信息实体、约束类型、问题形式和条件组合，提出了BIM查询表示框架（BQR）。",
+  "methodology": "首先调研18款IFC建模软件的信息实体暴露情况，其次分析25篇文献中131条BIM查询样本的实体与约束频率，然后邀请10名从业者生成200条NLQ，最后通过结构化查询语言、软件操作和NLI三种方式的对比实验评估查询效率。",
+  "results": "识别出BIM查询中最重要的实体类型（建筑产品、空间对象、建筑）、属性约束（元素特定属性、属性、数量、类型、材料）、关系约束（放置、包含、空间边界、重叠）和问题形式（元素选择、属性值查询、计算推理）；NLI方法相比传统方法节省84.9%和81.0%的查询时间，但准确率为85.7%。"
+}
