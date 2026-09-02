@@ -1,0 +1,124 @@
+name: Apply abstract-reviewed operation coding
+
+on:
+  push:
+    branches:
+      - feature/abstract-reviewed-operations
+    paths:
+      - .github/tmp/abstract-reviewed-operations.json
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/abstract-reviewed-operations
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Write paper-level coding and validate
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+
+          payload_path = Path('.github/tmp/abstract-reviewed-operations.json')
+          workflow_path = Path('.github/workflows/apply-abstract-reviewed-operations.yml')
+          payload = json.loads(payload_path.read_text(encoding='utf-8'))
+          coding = payload['papers']
+          valid = {
+              'generation_parameterization',
+              'editing_execution',
+              'analysis_compliance_diagnosis',
+              'retrieval_alignment',
+          }
+
+          paper_files = sorted(Path('data/papers').glob('*.json'))
+          assert len(paper_files) == 172, len(paper_files)
+          assert len(coding) == 172, len(coding)
+          assert {json.loads(p.read_text(encoding='utf-8'))['id'] for p in paper_files} == set(coding)
+
+          counts = Counter()
+          unlabelled = []
+          for path in paper_files:
+              paper = json.loads(path.read_text(encoding='utf-8'))
+              item = coding[paper['id']]
+              operations = item['operations']
+              assert isinstance(operations, list)
+              assert set(operations).issubset(valid)
+              assert isinstance(item['operationEvidence'], str) and item['operationEvidence'].strip()
+
+              paper['operations'] = operations
+              paper['operationEvidence'] = item['operationEvidence'].strip()
+              paper['operationCodingBasis'] = 'abstract'
+              path.write_text(
+                  json.dumps(paper, ensure_ascii=False, indent=2) + '\n',
+                  encoding='utf-8',
+              )
+              counts.update(operations)
+              if not operations:
+                  unlabelled.append(paper['id'])
+
+          expected = {
+              'generation_parameterization': 102,
+              'editing_execution': 71,
+              'analysis_compliance_diagnosis': 114,
+              'retrieval_alignment': 80,
+          }
+          assert dict(counts) == expected, (dict(counts), expected)
+          assert sum(counts.values()) == 367
+          assert unlabelled == ['alwashah2025', 'liu2025b'], unlabelled
+
+          documentation = '''# Data-processing operation coding
+
+Each paper was reviewed individually at the abstract level. The `methodology` and
+`results` summaries in the record were consulted when the abstract alone was
+ambiguous.
+
+The `operations` field is multi-label and uses four values:
+
+- `generation_parameterization`: creates a new model, design artifact, schedule,
+  report, code fragment, recommendation, or parameter set.
+- `editing_execution`: changes an existing state or invokes an external
+  database, API, authoring tool, simulator, controller, or executable interface.
+- `analysis_compliance_diagnosis`: derives, classifies, checks, calculates,
+  diagnoses, or interprets engineering findings.
+- `retrieval_alignment`: maps language or observations to documents, records,
+  identifiers, schemas, graph entities, software functions, or other stable
+  information targets.
+
+Only operations implemented and meaningfully evaluated in the reported workflow
+are coded. Background discussion, future work, incidental pipeline steps, and
+researcher-side evaluation alone are excluded.
+
+All 172 records contain `operations`, `operationEvidence`, and
+`operationCodingBasis`. Two secondary or perspective records do not evaluate a
+specific AECO LLM workflow and therefore have an empty `operations` array.
+'''
+          Path('data/OPERATION_CODING.md').write_text(documentation, encoding='utf-8')
+
+          # The temporary transport files must not remain in the PR diff.
+          payload_path.unlink()
+          workflow_path.unlink()
+          try:
+              payload_path.parent.rmdir()
+          except OSError:
+              pass
+          PY
+
+          git config user.name "Sizhong Qin"
+          git config user.email "76837485+qinsz01@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          git commit -m "data: add abstract-reviewed operation labels"
+          git push
