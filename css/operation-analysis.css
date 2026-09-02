@@ -1,9 +1,11 @@
 .chart-card-wide {
     grid-column: 1 / -1;
+    overflow-x: auto;
 }
 
 .chart-container-association {
-    height: 560px;
+    height: 620px;
+    min-width: 1080px;
 }
 
 .chart-note {
@@ -48,5 +50,6 @@
 @media (max-width: 760px) {
     .chart-container-association {
         height: 720px;
+        min-width: 1080px;
     }
 }

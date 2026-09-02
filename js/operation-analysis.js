@@ -53,6 +53,34 @@
         return (Number(value || 0) * 100).toFixed(1) + '%';
     }
 
+    function chartLabel(kind, key) {
+        var label = labelFor(kind, key);
+        var wrapped = isZh() ? {
+            '学习/工程化编码': '学习/工程化\n编码',
+            generation_parameterization: '生成与\n参数化',
+            analysis_compliance_diagnosis: '分析、合规\n与诊断',
+            retrieval_alignment: '检索与对齐',
+            '施工管理与安全': '施工管理\n与安全',
+            'BIM检索与管理': 'BIM检索\n与管理',
+            '结构设计与分析': '结构设计\n与分析',
+            '规范与合规检查': '规范与\n合规检查',
+            '设计优化与生成': '设计优化\n与生成',
+            '环境与碳评估': '环境与\n碳评估'
+        } : {
+            '学习/工程化编码': 'Learned/engineered\ncodes',
+            generation_parameterization: 'Generation and\nparameterization',
+            analysis_compliance_diagnosis: 'Analysis, compliance,\nand diagnosis',
+            retrieval_alignment: 'Retrieval and alignment',
+            '施工管理与安全': 'Construction management\nand safety',
+            'BIM检索与管理': 'BIM retrieval and\nmanagement',
+            '结构设计与分析': 'Structural analysis\nand design',
+            '规范与合规检查': 'Regulatory compliance\nchecking',
+            '设计优化与生成': 'Design generation\nand optimization',
+            '环境与碳评估': 'Environmental and\ncarbon assessment'
+        };
+        return wrapped[key] || label;
+    }
+
     function associationStatus(item) {
         var q = Number(item.fdrQ);
         if (q < 0.05 && Number(item.lift) > 1) {
@@ -139,7 +167,7 @@
         var significant = Number(item.fdrQ) < 0.05;
         var enriched = Number(item.lift) > 1;
         return {
-            opacity: significant ? 0.72 : 0.24,
+            opacity: significant ? 0.74 : 0.16,
             curveness: 0.46,
             color: significant && enriched ? 'source' : '#adb5bd'
         };
@@ -195,16 +223,39 @@
                 confine: true,
                 formatter: makeTooltip
             },
+            graphic: [
+                {
+                    type: 'text', left: '6%', top: 0,
+                    style: {
+                        text: isZh() ? '数据表征' : 'REPRESENTATION',
+                        font: '600 10px Arial', fill: '#868e96'
+                    }
+                },
+                {
+                    type: 'text', left: '43%', top: 0,
+                    style: {
+                        text: isZh() ? '数据处理操作' : 'DATA-PROCESSING OPERATION',
+                        font: '600 10px Arial', fill: '#868e96'
+                    }
+                },
+                {
+                    type: 'text', right: '6%', top: 0,
+                    style: {
+                        text: isZh() ? 'AECO任务类别' : 'AECO TASK CATEGORY',
+                        font: '600 10px Arial', fill: '#868e96'
+                    }
+                }
+            ],
             series: [{
                 type: 'sankey',
                 data: createNodes(),
                 links: createLinks(),
-                left: 12,
-                right: 12,
-                top: 18,
-                bottom: 20,
+                left: '15%',
+                right: '21%',
+                top: 34,
+                bottom: 18,
                 nodeWidth: 15,
-                nodeGap: 8,
+                nodeGap: 9,
                 draggable: false,
                 nodeAlign: 'justify',
                 layoutIterations: 64,
@@ -212,12 +263,13 @@
                 label: {
                     color: '#343a40',
                     fontSize: 11,
+                    lineHeight: 14,
                     formatter: function (params) {
                         var parsed = parseNodeName(params.name);
                         var kind = parsed.kind === 'repr'
                             ? 'representation'
                             : parsed.kind === 'op' ? 'operation' : 'task';
-                        return labelFor(kind, parsed.key) + '\n(n=' + params.data.paperTotal + ')';
+                        return chartLabel(kind, parsed.key) + '\n(n=' + params.data.paperTotal + ')';
                     }
                 },
                 lineStyle: {
@@ -226,9 +278,9 @@
                     curveness: 0.46
                 },
                 levels: [
-                    { depth: 0, label: { position: 'right' } },
-                    { depth: 1, label: { position: 'right' } },
-                    { depth: 2, label: { position: 'left' } }
+                    { depth: 0, label: { position: 'left', align: 'right' } },
+                    { depth: 1, label: { position: 'right', align: 'left' } },
+                    { depth: 2, label: { position: 'right', align: 'left' } }
                 ]
             }]
         }, true);
