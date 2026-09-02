@@ -5,7 +5,7 @@ on:
     branches:
       - feature/abstract-reviewed-operations
     paths:
-      - .github/tmp/abstract-reviewed-operations.json
+      - .github/tmp/abstract-reviewed-operations.json.gz.b64
 
 permissions:
   contents: write
@@ -28,13 +28,17 @@ jobs:
         shell: bash
         run: |
           python - <<'PY'
+          import base64
+          import gzip
           import json
           from collections import Counter
           from pathlib import Path
 
-          payload_path = Path('.github/tmp/abstract-reviewed-operations.json')
+          payload_path = Path('.github/tmp/abstract-reviewed-operations.json.gz.b64')
           workflow_path = Path('.github/workflows/apply-abstract-reviewed-operations.yml')
-          payload = json.loads(payload_path.read_text(encoding='utf-8'))
+          payload = json.loads(
+              gzip.decompress(base64.b64decode(payload_path.read_text(encoding='ascii'))).decode('utf-8')
+          )
           coding = payload['papers']
           valid = {
               'generation_parameterization',
