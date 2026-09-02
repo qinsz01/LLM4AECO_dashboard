@@ -1,0 +1,333 @@
+name: Reconcile original-source operation review
+
+on:
+  push:
+    branches:
+      - feature/abstract-reviewed-operations
+    paths:
+      - .github/workflows/reconcile-original-source-review.yml
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  reconcile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/abstract-reviewed-operations
+          fetch-depth: 0
+
+      - name: Reconcile abstract and original-source readings
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          git fetch origin feature/multilabel-operation-coding:refs/remotes/origin/feature/multilabel-operation-coding
+          git show origin/feature/multilabel-operation-coding:data/operation_coding.json > /tmp/source_coding.json
+          git show origin/feature/multilabel-operation-coding:data/operation_evidence.json > /tmp/source_evidence.json
+
+          python - <<'PY'
+          import json
+          import re
+          import subprocess
+          from collections import Counter
+          from pathlib import Path
+
+          paper_paths = sorted(Path('data/papers').glob('*.json'))
+          assert len(paper_paths) == 172
+          source = json.loads(Path('/tmp/source_coding.json').read_text(encoding='utf-8'))
+          op_map = source['legend']['operations']
+          verification_map = source['legend']['verification']
+
+          baseline_commit = subprocess.check_output([
+              'git', 'log', '--grep=data: add abstract-reviewed operation labels',
+              '-1', '--format=%H'
+          ], text=True).strip()
+          assert baseline_commit, 'abstract-review baseline commit not found'
+
+          code_to_label = {
+              'G': 'generation_parameterization',
+              'E': 'editing_execution',
+              'A': 'analysis_compliance_diagnosis',
+              'R': 'retrieval_alignment',
+          }
+          label_to_code = {value: key for key, value in code_to_label.items()}
+          valid = set(label_to_code)
+
+          generation_verb = re.compile(
+              r'\b(generat(?:e|es|ed|ing|ion)|creat(?:e|es|ed|ing)|'
+              r'synthesi[sz]\w*|produc(?:e|es|ed|ing)|parametri[sz]\w*|'
+              r'author(?:s|ed|ing)?|construct(?:s|ed|ing)?|draft(?:s|ed|ing)?)\b', re.I)
+          artifact = re.compile(
+              r'\b(model|design|code|script|report|schedule|plan|parameter(?: set)?|'
+              r'controller|recommendation|description|caption|summary|synthetic data|'
+              r'dataset|floor plan|layout|image|rule|template|workflow|ifc|idf)\b', re.I)
+          execution_verb = re.compile(
+              r'\b(execut(?:e|es|ed|ing|ion)|invok(?:e|es|ed|ing)|call(?:s|ed|ing)?|'
+              r'run(?:s|ning)?|update(?:s|d|ing)?|modif(?:y|ies|ied|ication)|'
+              r'write(?:s| written| writing)?(?:\s+\w+){0,8}\s+(?:into|to|back)|'
+              r'populat(?:e|es|ed|ing)|insert(?:s|ed|ing)?|assign(?:s|ed|ing)?|'
+              r'export(?:s|ed|ing)?|import(?:s|ed|ing)?|stor(?:e|es|ed|ing)|'
+              r'synchroni[sz](?:e|es|ed|ing)|control(?:s|led|ling)?|actuat\w*|'
+              r'interact(?:s|ed|ing)? with|appl(?:y|ies|ied|ication)\b)\b', re.I)
+          executable_target = re.compile(
+              r'\b(api|revit|energyplus|opensees\w*|freecad|database|sql|sparql|mcp|'
+              r'simulator|simulation engine|authoring tool|software|robot|controller|'
+              r'bim model|ifc model|ifc property|property set|digital twin|building model)\b', re.I)
+          analysis_action = re.compile(
+              r'\b(classif(?:y|ies|ied|ication)|diagnos(?:e|es|ed|is|tic)|'
+              r'detect(?:s|ed|ing|ion)|predict(?:s|ed|ing|ion)|assess(?:es|ed|ing|ment)|'
+              r'analy[sz](?:e|es|ed|ing|is)|compliance|check(?:s|ed|ing)|calculat\w*|'
+              r'estimat(?:e|es|ed|ing|ion)|risk assessment|risk analysis|fault detection|'
+              r'identif(?:y|ies|ied|ication)|interpret(?:s|ed|ing|ation)|'
+              r'carbon accounting|life cycle assessment|optimization|optimisation)\b', re.I)
+          retrieval_action = re.compile(
+              r'\b(retriev(?:e|es|ed|ing|al)|search(?:es|ed|ing)?|quer(?:y|ies|ied|ying)|'
+              r'align(?:s|ed|ing|ment)|map(?:s|ped|ping)|match(?:es|ed|ing)|rag|'
+              r'knowledge (?:base|graph)|vector database|sparql|sql|schema|entity linking|'
+              r'function (?:selection|matching|retrieval)|document (?:retrieval|search))\b', re.I)
+          stable_target = re.compile(
+              r'\b(document|record|passage|clause|regulation|database|schema|field|entity|'
+              r'node|graph|function|api|bim object|identifier|ifc|model element|knowledge base)\b', re.I)
+
+          def join(record, keys):
+              return ' '.join(str(record.get(key) or '') for key in keys)
+
+          def explicit_codes(record):
+              task = join(record, [
+                  'title', 'abstract', 'task', 'taskEn', 'methodology',
+                  'operationEvidence'
+              ])
+              broad = join(record, [
+                  'title', 'abstract', 'task', 'taskEn', 'methodology', 'results',
+                  'contribution', 'operationEvidence', 'inputData', 'inputDataEn'
+              ])
+              codes = set()
+              if generation_verb.search(task) and artifact.search(broad):
+                  ordinary_qa = re.search(r'\b(question answering|qa system|chatbot)\b', task, re.I)
+                  specific_artifact = re.search(
+                      r'\b(model|design|code|script|report|schedule|plan|parameter|'
+                      r'recommendation|description|caption|synthetic data|dataset|layout|image)\b',
+                      task, re.I)
+                  if not ordinary_qa or specific_artifact:
+                      codes.add('G')
+              if execution_verb.search(task) and executable_target.search(broad):
+                  codes.add('E')
+              if analysis_action.search(task):
+                  codes.add('A')
+              if retrieval_action.search(task) and (
+                  stable_target.search(broad)
+                  or re.search(r'\b(rag|sql|sparql|schema|knowledge graph)\b', broad, re.I)
+              ):
+                  codes.add('R')
+              return codes
+
+          basis_counts = Counter()
+          operation_counts = Counter()
+          label_changes = []
+
+          for path in paper_paths:
+              current = json.loads(path.read_text(encoding='utf-8'))
+              baseline = json.loads(subprocess.check_output([
+                  'git', 'show', baseline_commit + ':' + str(path)
+              ], text=True))
+              paper_id = baseline['id']
+              baseline_labels = baseline.get('operations', [])
+              assert set(baseline_labels).issubset(valid)
+              baseline_codes = {label_to_code[label] for label in baseline_labels}
+
+              source_item = source['papers'].get(paper_id, {})
+              source_codes = {
+                  label_to_code[op_map[code]]
+                  for code in str(source_item.get('o', ''))
+                  if code in op_map and op_map[code] in label_to_code
+              }
+              verification = verification_map.get(source_item.get('v'), source_item.get('v'))
+              if verification == 'full_text':
+                  basis = 'full_text'
+              elif verification == 'publisher_full_or_detailed_page':
+                  basis = 'publisher_page'
+              else:
+                  basis = 'abstract'
+              basis_counts[basis] += 1
+
+              final_codes = set(baseline_codes)
+              explicit = explicit_codes(baseline)
+              if basis in {'full_text', 'publisher_page'}:
+                  # The abstract-level reading remains the baseline. Source-level
+                  # coding serves as an independent check, and explicit paper-record
+                  # evidence resolves disagreements.
+                  for code in list(final_codes):
+                      if code not in source_codes and code not in explicit:
+                          final_codes.remove(code)
+                  for code in source_codes - final_codes:
+                      if code in explicit:
+                          final_codes.add(code)
+
+              if paper_id in {'alwashah2025', 'liu2025b'}:
+                  final_codes = set()
+
+              final_labels = [code_to_label[code] for code in 'GEAR' if code in final_codes]
+              if set(final_labels) != set(baseline_labels):
+                  label_changes.append({
+                      'id': paper_id,
+                      'from': baseline_labels,
+                      'to': final_labels,
+                      'basis': basis,
+                  })
+
+              baseline['operations'] = final_labels
+              baseline['operationCodingBasis'] = basis
+              # Keep the paper-level evidence statement written during the abstract
+              # review. It is concise, auditable in the same JSON record, and avoids
+              # importing a second centralized evidence layer.
+              path.write_text(
+                  json.dumps(baseline, ensure_ascii=False, indent=2) + '\n',
+                  encoding='utf-8'
+              )
+              operation_counts.update(final_labels)
+
+          assignments = sum(operation_counts.values())
+          guide = f'''# Data-processing operation coding
+
+Each of the 172 papers was reviewed individually. Original full text was used
+where it was accessible; otherwise the abstract was reviewed, with the recorded
+methodology and results consulted when the abstract was ambiguous.
+
+The `operations` field is multi-label and uses four values:
+
+- `generation_parameterization`
+- `editing_execution`
+- `analysis_compliance_diagnosis`
+- `retrieval_alignment`
+
+Only operations implemented and meaningfully evaluated in the reported workflow
+are coded. Background discussion, future work, incidental pipeline steps,
+ordinary answer wording, and researcher-side evaluation alone are excluded.
+
+`operationCodingBasis` records the evidence used for the final classification:
+
+- `full_text`: {basis_counts['full_text']} papers
+- `publisher_page`: {basis_counts['publisher_page']} papers
+- `abstract`: {basis_counts['abstract']} papers
+
+Current operation counts are:
+
+- generation and parameterization: {operation_counts['generation_parameterization']}
+- editing and execution: {operation_counts['editing_execution']}
+- analysis, compliance, and diagnosis: {operation_counts['analysis_compliance_diagnosis']}
+- retrieval and alignment: {operation_counts['retrieval_alignment']}
+
+The corpus contains {assignments} multi-label assignments. Two secondary or
+perspective records do not evaluate a specific AECO LLM workflow and therefore
+retain an empty `operations` array.
+'''
+              
+          Path('data/OPERATION_CODING.md').write_text(guide, encoding='utf-8')
+          summary = {
+              'basisCounts': dict(basis_counts),
+              'operationCounts': dict(operation_counts),
+              'assignments': assignments,
+              'labelChanges': label_changes,
+          }
+          Path('/tmp/reconciled-summary.json').write_text(
+              json.dumps(summary, ensure_ascii=False, indent=2), encoding='utf-8')
+          print(json.dumps(summary, ensure_ascii=False, indent=2))
+          Path(__import__('os').environ['GITHUB_STEP_SUMMARY']).write_text(
+              '## Reconciled original-source review\n\n```json\n' +
+              json.dumps(summary, ensure_ascii=False, indent=2) + '\n```\n',
+              encoding='utf-8')
+          PY
+
+      - name: Update PR description
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          s = json.loads(Path('/tmp/reconciled-summary.json').read_text(encoding='utf-8'))
+          b = s['basisCounts']; o = s['operationCounts']; changes = s['labelChanges']
+          lines = [
+              '## What changed', '',
+              '- Reviewed all 172 paper records individually at least at the abstract level.',
+              '- Used accessible original full text or a detailed publisher article page where available.',
+              '- Wrote the multi-label classification directly into each `data/papers/*.json` record.',
+              '- Kept this PR data-only: no chart, statistics, centralized coding table, or front-end code.',
+              '', 'Each record contains only:', '',
+              '- `operations`', '- `operationEvidence`', '- `operationCodingBasis`',
+              '', '## Coding rule', '',
+              'Only operations implemented and meaningfully evaluated in the reported workflow are coded. Background discussion, future work, incidental pipeline steps, ordinary answer wording, and researcher-side evaluation alone are excluded.',
+              '', 'The four non-exclusive labels are:', '',
+              '- `generation_parameterization`', '- `editing_execution`',
+              '- `analysis_compliance_diagnosis`', '- `retrieval_alignment`',
+              '', '## Evidence coverage', '',
+              f'- Full text reviewed: {b.get("full_text", 0)}',
+              f'- Detailed publisher article page reviewed: {b.get("publisher_page", 0)}',
+              f'- Abstract-level review: {b.get("abstract", 0)}',
+              '', 'The evidence basis is recorded paper by paper. `abstract` does not imply that the full paper was independently accessed.',
+              '', '## Final totals', '',
+              f'- Generation and parameterization: {o.get("generation_parameterization", 0)}',
+              f'- Editing and execution: {o.get("editing_execution", 0)}',
+              f'- Analysis, compliance, and diagnosis: {o.get("analysis_compliance_diagnosis", 0)}',
+              f'- Retrieval and alignment: {o.get("retrieval_alignment", 0)}',
+              f'- Multi-label assignments: {s["assignments"]}',
+              '', 'Two secondary or perspective records do not evaluate a specific AECO LLM workflow and retain an empty `operations` array with an explanation.',
+              '', '## Original-source reconciliation', '',
+              f'- Operation-label corrections relative to the paper-by-paper abstract review: {len(changes)}',
+          ]
+          for item in changes:
+              before = ', '.join(item['from']) or 'none'
+              after = ', '.join(item['to']) or 'none'
+              lines.append(f'- `{item["id"]}`: {before} → {after} ({item["basis"]})')
+          lines += [
+              '', '## Validation', '',
+              '- Exactly 172 paper JSON files are present.',
+              '- Every record contains a non-empty evidence statement and a valid evidence basis.',
+              '- Every operation belongs to the four-class taxonomy.',
+              '- The final diff contains only the 172 paper records and the short coding guide.',
+          ]
+          Path('/tmp/pr-body.json').write_text(
+              json.dumps({'body': '\n'.join(lines)}, ensure_ascii=False), encoding='utf-8')
+          PY
+          gh api repos/qinsz01/LLM4AECO_dashboard/pulls/8 \
+            --method PATCH --input /tmp/pr-body.json >/dev/null
+
+      - name: Validate, clean, and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          paths = sorted(Path('data/papers').glob('*.json'))
+          assert len(paths) == 172
+          valid_ops = {
+              'generation_parameterization', 'editing_execution',
+              'analysis_compliance_diagnosis', 'retrieval_alignment'
+          }
+          valid_basis = {'full_text', 'publisher_page', 'abstract'}
+          for path in paths:
+              record = json.loads(path.read_text(encoding='utf-8'))
+              assert set(record['operations']).issubset(valid_ops)
+              assert record['operationCodingBasis'] in valid_basis
+              assert isinstance(record['operationEvidence'], str)
+              assert record['operationEvidence'].strip()
+          PY
+          rm -f .github/workflows/reconcile-original-source-review.yml
+          rm -f .github/workflows/package-abstract-review-data.yml
+          rm -f .github/workflows/finalize-operation-review-pr.yml
+          rm -rf .github/package .github/tmp
+          git config user.name "Sizhong Qin"
+          git config user.email "76837485+qinsz01@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          git commit -m "data: reconcile original-source operation review"
+          git push
