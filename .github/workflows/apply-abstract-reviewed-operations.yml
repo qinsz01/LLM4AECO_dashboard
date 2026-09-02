@@ -5,7 +5,7 @@ on:
     branches:
       - feature/abstract-reviewed-operations
     paths:
-      - .github/tmp/abstract-reviewed-operations.json.gz.b64
+      - .github/tmp/RUN
 
 permissions:
   contents: write
@@ -36,6 +36,7 @@ jobs:
 
           payload_path = Path('.github/tmp/abstract-reviewed-operations.json.gz.b64')
           workflow_path = Path('.github/workflows/apply-abstract-reviewed-operations.yml')
+          trigger_path = Path('.github/tmp/RUN')
           payload = json.loads(
               gzip.decompress(base64.b64decode(payload_path.read_text(encoding='ascii'))).decode('utf-8')
           )
@@ -87,6 +88,7 @@ jobs:
           Path('data/OPERATION_CODING.md').write_text(documentation, encoding='utf-8')
 
           payload_path.unlink()
+          trigger_path.unlink()
           workflow_path.unlink()
           try:
               payload_path.parent.rmdir()
