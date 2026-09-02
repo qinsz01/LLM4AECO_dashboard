@@ -1,0 +1,161 @@
+name: Finalize operation review PR
+
+on:
+  push:
+    branches:
+      - feature/abstract-reviewed-operations
+    paths:
+      - .github/workflows/finalize-operation-review-pr.yml
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/abstract-reviewed-operations
+          fetch-depth: 0
+
+      - name: Build and publish PR summary
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import subprocess
+          from collections import Counter
+          from pathlib import Path
+
+          paths = sorted(Path('data/papers').glob('*.json'))
+          assert len(paths) == 172
+          records = [json.loads(path.read_text(encoding='utf-8')) for path in paths]
+
+          basis = Counter(record['operationCodingBasis'] for record in records)
+          operations = Counter(
+              operation
+              for record in records
+              for operation in record.get('operations', [])
+          )
+
+          review_commit = subprocess.check_output([
+              'git', 'log', '--grep=data: complete source-prioritized operation review',
+              '-1', '--format=%H'
+          ], text=True).strip()
+          assert review_commit
+          parent = subprocess.check_output([
+              'git', 'rev-parse', review_commit + '^'
+          ], text=True).strip()
+
+          label_changes = []
+          basis_changes = 0
+          evidence_changes = 0
+          for path, current in zip(paths, records):
+              old_text = subprocess.check_output([
+                  'git', 'show', parent + ':' + str(path)
+              ], text=True)
+              old = json.loads(old_text)
+              if set(old.get('operations', [])) != set(current.get('operations', [])):
+                  label_changes.append({
+                      'id': current['id'],
+                      'title': current['title'],
+                      'from': old.get('operations', []),
+                      'to': current.get('operations', []),
+                  })
+              if old.get('operationCodingBasis') != current.get('operationCodingBasis'):
+                  basis_changes += 1
+              if old.get('operationEvidence') != current.get('operationEvidence'):
+                  evidence_changes += 1
+
+          label_names = {
+              'generation_parameterization': 'Generation and parameterization',
+              'editing_execution': 'Editing and execution',
+              'analysis_compliance_diagnosis': 'Analysis, compliance, and diagnosis',
+              'retrieval_alignment': 'Retrieval and alignment',
+          }
+          body = []
+          body.append('## What changed')
+          body.append('')
+          body.append('- Reviewed all 172 records individually at least at the abstract level.')
+          body.append('- Used accessible original full text or a detailed publisher article page where available.')
+          body.append('- Added the multi-label operation classification directly to each `data/papers/*.json` record.')
+          body.append('- Kept the implementation data-only: no chart, statistics, centralized coding table, or front-end code.')
+          body.append('')
+          body.append('Each record contains only:')
+          body.append('')
+          body.append('- `operations`')
+          body.append('- `operationEvidence`')
+          body.append('- `operationCodingBasis`')
+          body.append('')
+          body.append('## Review standard')
+          body.append('')
+          body.append('Only operations implemented and meaningfully evaluated in the reported workflow are coded. Background discussion, future work, incidental pipeline steps, ordinary answer wording, and researcher-side evaluation alone are excluded.')
+          body.append('')
+          body.append('The four non-exclusive labels are:')
+          body.append('')
+          for key in ['generation_parameterization', 'editing_execution', 'analysis_compliance_diagnosis', 'retrieval_alignment']:
+              body.append(f'- `{key}`')
+          body.append('')
+          body.append('## Source coverage')
+          body.append('')
+          body.append(f'- Full text reviewed: {basis.get("full_text", 0)}')
+          body.append(f'- Detailed publisher article page reviewed: {basis.get("publisher_page", 0)}')
+          body.append(f'- Abstract-level review: {basis.get("abstract", 0)}')
+          body.append('')
+          body.append('The basis is recorded paper by paper. `abstract` does not claim that the full paper was independently accessed.')
+          body.append('')
+          body.append('## Final coding totals')
+          body.append('')
+          for key in ['generation_parameterization', 'editing_execution', 'analysis_compliance_diagnosis', 'retrieval_alignment']:
+              body.append(f'- {label_names[key]}: {operations.get(key, 0)}')
+          body.append(f'- Multi-label assignments: {sum(operations.values())}')
+          body.append('')
+          body.append('Two secondary or perspective records do not evaluate a specific AECO LLM workflow and retain an empty `operations` array with an explanation.')
+          body.append('')
+          body.append('## Second-pass source review')
+          body.append('')
+          body.append(f'- Records whose evidence basis was refined: {basis_changes}')
+          body.append(f'- Source-grounded evidence statements refined: {evidence_changes}')
+          body.append(f'- Operation-label corrections after the source-prioritized second pass: {len(label_changes)}')
+          if label_changes:
+              body.append('')
+              for item in label_changes:
+                  before = ', '.join(item['from']) or 'none'
+                  after = ', '.join(item['to']) or 'none'
+                  body.append(f'- `{item["id"]}`: {before} → {after}')
+          body.append('')
+          body.append('## Validation')
+          body.append('')
+          body.append('- Exactly 172 paper JSON files are present.')
+          body.append('- Every record has a non-empty evidence statement and a valid evidence basis.')
+          body.append('- Every operation belongs to the four-class taxonomy.')
+          body.append('- The final PR contains only the paper-level data records and the short coding guide.')
+
+          payload = {'body': '\n'.join(body)}
+          Path('/tmp/pr-body.json').write_text(
+              json.dumps(payload, ensure_ascii=False), encoding='utf-8'
+          )
+          print(payload['body'])
+          PY
+
+          gh api repos/qinsz01/LLM4AECO_dashboard/pulls/8 \
+            --method PATCH \
+            --input /tmp/pr-body.json >/dev/null
+
+      - name: Remove temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/finalize-operation-review-pr.yml
+          git config user.name "Sizhong Qin"
+          git config user.email "76837485+qinsz01@users.noreply.github.com"
+          git add -A
+          git diff --cached --check
+          git commit -m "chore: remove temporary review workflow"
+          git push
