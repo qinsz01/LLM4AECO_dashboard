@@ -1,0 +1,46 @@
+name: Apply association chart layout
+
+on:
+  push:
+    branches:
+      - feature/multilabel-operation-coding
+    paths:
+      - .github/chart_patch/RUN
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/multilabel-operation-coding
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply layout patch
+        run: python .github/chart_patch/update_chart_layout.py
+
+      - name: Validate
+        shell: bash
+        run: |
+          node --check js/operation-analysis.js
+          grep -q "DATA-PROCESSING OPERATION" js/operation-analysis.js
+          grep -q "min-width: 1080px" css/operation-analysis.css
+
+      - name: Commit and clean temporary files
+        shell: bash
+        run: |
+          rm -rf .github/chart_patch
+          rm -f .github/workflows/apply-association-chart-layout.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "style: improve association chart readability"
+          git push origin HEAD:feature/multilabel-operation-coding
