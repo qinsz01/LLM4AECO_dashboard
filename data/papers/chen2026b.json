@@ -38,5 +38,11 @@
   ],
   "contribution": "提出ConSTRAG框架，集成LLM驱动的多Agent与知识图谱推理，实现面向建筑工人的个性化安全培训材料自动生成，并开发了配套移动应用",
   "methodology": "构建三个核心组件：(1)施工安全培训文档数据库，通过LLM Agent自动构建领域知识图谱(CRKG)和向量数据库；(2)施工事故报告数据库，通过网络爬虫收集事故报告，经LLM Agent过滤和关键信息提取构建事故知识图谱(CAKG)；(3)个性化知识检索与生成模块，根据工人画像提取直接关键词和关联关键词，结合图谱推理和向量检索生成个性化培训内容和测试题",
-  "results": "在11,020题的施工管理题库上，ConSTRAG使用Qwen2.5-32B取得平均分81.25，比NaiveRAG基准高6.94分；专家问卷评估五个维度平均得分4.16/5，其中事故案例相关性得分最高4.28；框架在填空题等细粒度知识检索任务上优势尤为显著"
+  "results": "在11,020题的施工管理题库上，ConSTRAG使用Qwen2.5-32B取得平均分81.25，比NaiveRAG基准高6.94分；专家问卷评估五个维度平均得分4.16/5，其中事故案例相关性得分最高4.28；框架在填空题等细粒度知识检索任务上优势尤为显著",
+  "operations": [
+    "generation_parameterization",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The framework retrieves knowledge-graph and vector-database evidence and generates personalized construction-safety training materials and questions.",
+  "operationCodingBasis": "abstract"
 }

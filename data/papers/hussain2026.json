@@ -30,5 +30,11 @@
   ],
   "contribution": "提出了一个混合推理框架，将计算机视觉的几何推理能力与大语言模型的语义理解相结合，开发了移动端智能助手用于施工现场安全检查和隐患识别。",
   "methodology": "使用YOLOv12进行目标检测，通过基于规则的后处理算法评估安全合规性，再利用ChatGPT生成描述性安全字幕并支持交互式问答，部署为Android移动应用。",
-  "results": "在梯子使用、移动脚手架和动火作业三个场景中，检测准确率分别达到97%、94.6%和99%。用户评估显示系统在时间效率和易用性方面得分较高，BERTScore语义对齐良好。"
+  "results": "在梯子使用、移动脚手架和动火作业三个场景中，检测准确率分别达到97%、94.6%和99%。用户评估显示系统在时间效率和易用性方面得分较高，BERTScore语义对齐良好。",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The hybrid system identifies regulation-aware safety hazards and uses ChatGPT to generate evaluated descriptive safety captions and answers.",
+  "operationCodingBasis": "abstract"
 }

@@ -29,5 +29,11 @@
   "pdfFile": "Arslan et al. - 2025 - Monitoring indoor environmental conditions in office buildings using a sustainable Agentic RAG-LLM s.pdf",
   "markdownFile": "Arslan et al. - 2025 - Monitoring indoor environmental conditions in office buildings using a sustainable Agentic RAG-LLM s.md",
   "taskEn": "Thermal comfort monitoring",
-  "inputDataEn": "BIM models + sensor data + external data"
+  "inputDataEn": "BIM models + sensor data + external data",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The agentic RAG system retrieves BIM, sensor, weather, and guidance data and analyzes them to answer thermal-comfort and energy-efficiency queries.",
+  "operationCodingBasis": "abstract"
 }

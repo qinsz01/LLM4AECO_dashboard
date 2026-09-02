@@ -31,5 +31,11 @@
   "results": "DALL-E 3生成的合成数据集比其他图像生成模型更真实，混合数据集显著提升检测性能（mAP@0.5=88.5%，小目标mAP@0.5=75.8%）。使用YOLOv11检测结果作为结构化输入，Qwen2.5-VL-7B实现可靠的合规性推理（CRA=87.6%，SC=0.83，EQ=4.2）。整合平台支持自动化报告生成和交互式分析。",
   "url": "https://doi.org/10.1016/j.aei.2026.104364",
   "taskEn": "PPE compliance analysis in work-at-height",
-  "inputDataEn": "Construction site images and PPE standard data"
+  "inputDataEn": "Construction site images and PPE standard data",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "ChatGPT and text-to-image models generate synthetic PPE scenarios, while the object-guided VLM judges compliance and supports automated reporting.",
+  "operationCodingBasis": "abstract"
 }

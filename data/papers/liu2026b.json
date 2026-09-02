@@ -33,5 +33,12 @@
   ],
   "contribution": "将梁结构分析重新定义为代码生成任务，开发基于LLM的Agent，结合思维链与少样本提示生成OpenSeesPy代码并自动执行，在基准数据集上实现超过99%的准确率，解决了LLM直接数值推理可靠性不足的问题。",
   "methodology": "两阶段方法：(1)评估阶段——直接使用Llama-3.3 70B Instruct进行梁结构分析，测试其定量可靠性与鲁棒性；(2)Agent开发阶段——将结构分析重构为代码生成任务，Agent集成思维链（CoT）和少样本提示策略，生成OpenSeesPy代码，自动执行获取分析结果。基准数据集包含8个梁结构分析问题，覆盖不同荷载与边界条件。",
-  "results": "直接LLM推理：定性理解结构力学但定量可靠性不足（可靠性和鲁棒性均低于工程应用要求）。LLM Agent：准确率超过99.0%，可靠性>0.990，鲁棒性>0.996。消融实验表明完整示例和函数使用示例是Agent性能提升的主要贡献因素。"
+  "results": "直接LLM推理：定性理解结构力学但定量可靠性不足（可靠性和鲁棒性均低于工程应用要求）。LLM Agent：准确率超过99.0%，可靠性>0.990，鲁棒性>0.996。消融实验表明完整示例和函数使用示例是Agent性能提升的主要贡献因素。",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The agent generates OpenSeesPy code, executes it automatically, and returns structural-analysis results evaluated for reliability and robustness.",
+  "operationCodingBasis": "abstract"
 }

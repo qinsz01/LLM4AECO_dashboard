@@ -30,5 +30,13 @@
   "markdownFile": "Lu et al. - 2025 - Automated building energy modeling for energy retrofits using a large language model-based multi-age.md",
   "url": "https://doi.org/10.1016/j.isci.2025.113867",
   "taskEn": "Automated building energy modeling",
-  "inputDataEn": "Mixed data (CAD drawings + design documents + sensor data)"
+  "inputDataEn": "Mixed data (CAD drawings + design documents + sensor data)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "Data2BEM extracts heterogeneous building information, generates and calibrates EnergyPlus models, runs simulations, and evaluates retrofit scenarios.",
+  "operationCodingBasis": "abstract"
 }

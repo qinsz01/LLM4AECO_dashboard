@@ -36,5 +36,11 @@
   "markdownFile": "Pan et al. - 2025 - Application of LMM-Derived Prompt-Based AIGC in Low-Altitude Drone-Based Concrete Crack Monitoring.md",
   "url": "https://doi.org/10.3390/drones9090660",
   "taskEn": "Structural health monitoring (crack detection and segmentation)",
-  "inputDataEn": "Drone images + AIGC synthetic images + public crack datasets"
+  "inputDataEn": "Drone images + AIGC synthetic images + public crack datasets",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "An LMM generates prompts for synthetic crack imagery, and the resulting data support evaluated concrete-crack detection and segmentation.",
+  "operationCodingBasis": "abstract"
 }

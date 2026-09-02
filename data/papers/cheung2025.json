@@ -31,5 +31,11 @@
   "markdownFile": "Cheung和Di Marco - 2025 - Composing conversational architecture by integrating large language model From reactive to suggesti.md",
   "url": "https://doi.org/10.1007/s00004-024-00805-9",
   "taskEn": "Design theory",
-  "inputDataEn": "Text + user interaction"
+  "inputDataEn": "Text + user interaction",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "The LLM-integrated Grasshopper experiment generates and interactively changes architectural configurations in response to conversational input.",
+  "operationCodingBasis": "abstract"
 }

@@ -34,5 +34,10 @@
   ],
   "contribution": "提出面向施工现场极端天气防护的LLM框架，通过文献综述、数据增强和微调三个核心模块，开发定制化LLM模型（CMITS3-30E），为施工从业者提供施工现场材料与临时结构的安全防护建议，BERTScore F1达0.852。",
   "methodology": "三模块框架：(1)综合检索模块通过文献综述收集最佳管理实践；(2)数据准备模块利用ChatGPT增强文本数据多样性，构建CMITS数据集；(3)LLM开发模块对LLaMA系列模型进行微调。采用Alpaca数据集与领域专用CMITS数据集进行训练。",
-  "results": "CMITS3-30E模型取得BERTScore F1=0.852的最佳性能，在生成主动防护建议方面优于其他模型配置，在计算效率与建议质量之间取得平衡。"
+  "results": "CMITS3-30E模型取得BERTScore F1=0.852的最佳性能，在生成主动防护建议方面优于其他模型配置，在计算效率与建议质量之间取得平衡。",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "The fine-tuned LLM generates site-specific severe-weather preparedness recommendations for construction materials and temporary structures.",
+  "operationCodingBasis": "abstract"
 }

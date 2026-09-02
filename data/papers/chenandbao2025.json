@@ -30,5 +30,12 @@
   "pdfFile": "Chen and Bao - 2025 - Multi-agent large language model framework for code-compliant automated design of reinforced concret.pdf",
   "url": "https://doi.org/10.1016/j.autcon.2025.106331",
   "taskEn": "Structural design",
-  "inputDataEn": "Structural design parameters"
+  "inputDataEn": "Structural design parameters",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The agents generate code-compliant reinforced-concrete beam designs, invoke deterministic analysis and design tools, and evaluate existing designs against code requirements.",
+  "operationCodingBasis": "abstract"
 }

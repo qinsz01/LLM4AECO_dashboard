@@ -30,5 +30,11 @@
   "results": "RAG-GPT模型（A1）在数值正确性上达到80%（8/10题正确），远超其他模型（A2: 20%, A3: 0%, A4: 0%, A5: 50%）。专家评估中，RAG-GPT在相关性（4.45/5）、准确性（4.41/5）和完整性（4.10/5）上均获得最高分，86.5%的专家认为其回答最符合问题语境。57%的施工工人认为回答对工作有益，67%认为信息获取效率提高。RAG策略通过向量数据增强信息检索，显著提升了施工安全信息的准确性。",
   "url": "https://doi.org/10.1016/j.autcon.2024.105926",
   "taskEn": "Construction safety information generation",
-  "inputDataEn": "Construction safety regulation documents and codes"
+  "inputDataEn": "Construction safety regulation documents and codes",
+  "operations": [
+    "generation_parameterization",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "RAG-GPT retrieves construction-safety regulations and cases and generates detailed safety information for evaluated user questions.",
+  "operationCodingBasis": "abstract"
 }

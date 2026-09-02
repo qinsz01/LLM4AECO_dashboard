@@ -26,5 +26,11 @@
   "results": "BQS shows a strong inverse correlation with NILM error across models; a 0.1 increase in BQS corresponds to approximately 0.06-0.36 NMAE reduction. Simple forward-fill with mean-fallback imputation reduced average NMAE from 0.82 to 0.76 (Bayesian), 0.71 to 0.64 (BI-LSTM), and 0.59 to 0.53 (TFM). SHAP analysis identifies missingness and timestamp irregularity as the dominant error drivers across all model families.",
   "url": "https://doi.org/10.3390/info16100836",
   "taskEn": "Data quality assessment / energy management",
-  "inputDataEn": "Sensor data (time series)"
+  "inputDataEn": "Sensor data (time series)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The pipeline diagnoses time-series data quality, calculates an interpretable quality score, and generates actionable LLM narratives from diagnostic results.",
+  "operationCodingBasis": "abstract"
 }

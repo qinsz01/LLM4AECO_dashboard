@@ -32,5 +32,10 @@
   "url": "https://doi.org/10.1016/j.aei.2025.104027",
   "taskEn": "Contract Q&A and knowledge retrieval",
   "inputDataEn": "Building contract documents + laws & regulations + national codes",
-  "pdfFile": "Zhang and Ning - 2026 - Improving construction contract question answering through embedding optimization and semantic chunk"
+  "pdfFile": "Zhang and Ning - 2026 - Improving construction contract question answering through embedding optimization and semantic chunk",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "CC-RAG semantically chunks construction contracts, retrieves coherent domain passages, and answers contract questions with adapted embeddings.",
+  "operationCodingBasis": "abstract"
 }

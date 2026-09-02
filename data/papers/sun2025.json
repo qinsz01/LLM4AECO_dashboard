@@ -31,5 +31,12 @@
   "results": "In the documented bridge case, the first 41.1-second iteration was rejected because of broken structural-member edges; the agents then reused the depth map, revised the prompt and produced an accepted image in a second 37.6-second iteration. The autonomous two-iteration workflow took 76.8 seconds and required user input only once. The earlier one-shot workflow averaged six manual regeneration attempts and 54.3 seconds yet still showed artifacts; the new result had better reported geometric fidelity and realism, although it was slower. Evidence is a focused case study plus qualitative examples rather than a large quantitative benchmark. The evaluator cannot guarantee structural accuracy, and agent autonomy remains limited to predefined tools.",
   "url": "https://www.ingentaconnect.com/contentone/iass/piass/2025/00002025/00000011/art00004",
   "taskEn": "Conceptual visualization generation for structural forms",
-  "inputDataEn": "Structural CAD views and textual scene descriptions"
+  "inputDataEn": "Structural CAD views and textual scene descriptions",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The agents generate structural visualizations, invoke local depth and image-synthesis tools, and critique and refine flawed outputs.",
+  "operationCodingBasis": "abstract"
 }

@@ -31,5 +31,10 @@
   "results": "FT-GPT-4o模型在测试集上达到100%规则应用准确率和84.21%分类准确率，微调成本仅2.65美元。三个真实商业建筑测试确认系统生成的决策与专家判断一致，将决策时间从人工评估的数分钟缩短至数秒。框架成功将劳动密集型商业建筑节能改造审计转化为AI增强的工作流。",
   "url": "https://doi.org/10.1016/j.enbuild.2026.117486",
   "taskEn": "Building energy retrofit decision support",
-  "inputDataEn": "Building energy and equipment operational data"
+  "inputDataEn": "Building energy and equipment operational data",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The fine-tuned models diagnose commercial-building retrofit targets by applying a structured rule base and producing rule-compliant decisions.",
+  "operationCodingBasis": "abstract"
 }

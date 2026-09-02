@@ -35,5 +35,10 @@
   ],
   "contribution": "提出两阶段后训练方法（SFT+GRPO）微调Gemma-3-4B-IT，实现从自由文本自动生成可仿真的EnergyPlus IDF文件，端到端有效率达78%，减少建筑能耗建模中的专家干预。",
   "methodology": "两阶段后训练流程：第一阶段对2100样本数据集进行监督微调（SFT），对齐文本- IDF模式映射；第二阶段对300样本数据集进行组相对偏好优化（GRPO），提升几何精度与约束满足。采用LoRA进行参数高效微调。数据集覆盖单区、双区和三区矩形建筑。",
-  "results": "第一阶段SFT：解析通过率98.33%，边界一致性96.00%，但窗口几何一致率仅31.00%，端到端有效率24.67%。第二阶段GRPO：窗口几何一致率提升至85.00%，端到端有效率提升至78.00%，解析通过率97.67%。显著优于ChatGPT 5.2、Gemini 3 Pro和DeepSeek-V3.2等通用大模型。"
+  "results": "第一阶段SFT：解析通过率98.33%，边界一致性96.00%，但窗口几何一致率仅31.00%，端到端有效率24.67%。第二阶段GRPO：窗口几何一致率提升至85.00%，端到端有效率提升至78.00%，解析通过率97.67%。显著优于ChatGPT 5.2、Gemini 3 Pro和DeepSeek-V3.2等通用大模型。",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "The fine-tuned model converts free-form building descriptions into parseable, geometry-consistent EnergyPlus IDF files.",
+  "operationCodingBasis": "abstract"
 }

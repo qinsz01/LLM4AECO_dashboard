@@ -29,5 +29,10 @@
   "markdownFile": "Schmid, C. etal - 2025 - Spatiotemporal mapping of Swiss exterior wall material stock using a large language model and archit....md",
   "url": "https://doi.org/10.1111/jiec.70058",
   "taskEn": "Building stock material information extraction and prediction",
-  "inputDataEn": "Building energy performance certificate (EPC) texts + building registry data"
+  "inputDataEn": "Building energy performance certificate (EPC) texts + building registry data",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The LLM extracts exterior-wall materials and dimensions from energy certificates, enabling prediction and calculation of material stocks and associated emissions.",
+  "operationCodingBasis": "abstract"
 }

@@ -31,5 +31,13 @@
   ],
   "contribution": "提出了一种从手绘建筑草图和自然语言描述自动生成完整EnergyPlus仿真模型的方法，结合多模态大语言模型与计算机视觉技术实现几何重建，利用RAG技术从历史模型库检索相似案例指导热工参数生成。",
   "methodology": "方法分为五个核心模块：需求解析器、建筑几何生成器（使用GPT-4o去噪草图并提取房间功能和尺寸，Gemini-2.5-Pro进行OCR和尺寸推断，计算机视觉方法生成墙体和窗户坐标）、热工参数生成器（基于RAG从EnergyPlus模型库检索相似案例）、运行参数生成器和IDF生成器。",
-  "results": "在四个不同形态和气候区的建筑案例上验证，墙体长度平均误差0.05 m，房间功能分类准确率91.2%，生成模型与专家基准的年小时负荷平均R2超过0.995，平均建模时间仅8分钟。"
+  "results": "在四个不同形态和气候区的建筑案例上验证，墙体长度平均误差0.05 m，房间功能分类准确率91.2%，生成模型与专家基准的年小时负荷平均R2超过0.995，平均建模时间仅8分钟。",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The method retrieves analogous energy models, reconstructs geometry from sketches, generates complete simulation models, and validates their hourly-load behavior.",
+  "operationCodingBasis": "abstract"
 }

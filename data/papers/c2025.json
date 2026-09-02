@@ -34,5 +34,10 @@
   "pdfFile": "Wu, C. etal - 2025 - Retrieval augmented generation-driven information retrieval and question answering in construction m....pdf",
   "markdownFile": "Wu, C. etal - 2025 - Retrieval augmented generation-driven information retrieval and question answering in construction m....md",
   "taskEn": "Information retrieval / Q&A support",
-  "inputDataEn": "Mixed data (project documents: standards, construction plans, contracts, meeting minutes, etc.)"
+  "inputDataEn": "Mixed data (project documents: standards, construction plans, contracts, meeting minutes, etc.)",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "RAG4CM parses project documents into a hierarchical knowledge pool and retrieves evidence for construction-management question answering.",
+  "operationCodingBasis": "abstract"
 }

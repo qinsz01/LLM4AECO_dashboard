@@ -28,5 +28,12 @@
   "results": "AcciVid检测到的潜在安全违规比人类安全调查员多90%p，F2分数为82.4%（人类为54.8%）。AcciVid平均仅需42秒生成报告草稿，而人类调查员平均需要4.6小时。在召回率（83.3%）、准确率、F1分数和F2分数上均优于人类专家。通过Delphi方法验证，10名建筑安全专家中18/22项候选违规达到60%以上一致性。",
   "url": "https://doi.org/10.1016/j.autcon.2025.106363",
   "taskEn": "Construction safety accident video analysis",
-  "inputDataEn": "Construction safety accident videos and regulation texts"
+  "inputDataEn": "Construction safety accident videos and regulation texts",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "AcciVid retrieves graph-encoded safety regulations, analyzes accident videos for violations, and generates draft investigation reports.",
+  "operationCodingBasis": "abstract"
 }

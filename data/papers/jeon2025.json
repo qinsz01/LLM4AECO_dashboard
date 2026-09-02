@@ -32,5 +32,10 @@
   "markdownFile": "Jeon and Lee - 2025 - Hybrid large language model approach for prompt and sensitive defect management A comparative analy.md",
   "url": "https://doi.org/10.1016/j.aei.2024.103076",
   "taskEn": "Defect management Q&A",
-  "inputDataEn": "Text (defect reports)"
+  "inputDataEn": "Text (defect reports)",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The fine-tuned local LLM answers sensitive construction-defect questions, with QA performance compared against GraphRAG and other baselines.",
+  "operationCodingBasis": "abstract"
 }

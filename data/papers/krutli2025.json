@@ -31,5 +31,10 @@
   "results": "Quantitative results on 30 QA pairs: average ROUGE-1 F1 = 0.3486, ROUGE-2 F1 = 0.1602, BLEU = 0.0879, semantic similarity = 0.9409. Semantic similarity was generally high (most answers above 0.99), indicating strong content understanding, though lexical precision (ROUGE/BLEU) showed more variability. Best-performing answer (Q2) achieved ROUGE-1 F1 of 0.625 and semantic similarity of 1.0. Qualitative ChatGPT-based evaluation averages: accuracy = 7.30/10, relevance = 8.13/10, coherence = 7.83/10, fluency = 8.80/10. 60% of answers (18/30) scored above 7 for accuracy; 83% (25/30) scored above 7 for relevance; 97% (29/30) scored above 7 for fluency. Key issues identified: (1) some answers contained hallucinated information when relevant context was missing from retrieved chunks (e.g., answer 6); (2) several answers were abruptly truncated due to a likely max_tokens misconfiguration; (3) preprocessing of HTML tables into continuous text sometimes lost critical structured data.",
   "url": "https://doi.org/10.3390/info16020076",
   "taskEn": "Facility management information retrieval",
-  "inputDataEn": "Text (documents, manuals, etc.)"
+  "inputDataEn": "Text (documents, manuals, etc.)",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The secure RAG system retrieves multimodal facility-management documents and answers evaluated information-access questions.",
+  "operationCodingBasis": "abstract"
 }

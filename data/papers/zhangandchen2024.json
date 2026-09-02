@@ -28,5 +28,11 @@
   "markdownFile": "Zhang and Chen - 2024 - Large language model-based interpretable machine learning control in building energy systems.md",
   "pdfFile": "Zhang and Chen - 2024 - Large language model-based interpretable machine learning control in building energy systems.pdf",
   "taskEn": "Building control interpretability",
-  "inputDataEn": "Building operational time series data (temperature, energy, weather, occupancy)"
+  "inputDataEn": "Building operational time series data (temperature, energy, weather, occupancy)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The framework interprets SHAP and control constraints and generates human-readable explanations of machine-learning control decisions.",
+  "operationCodingBasis": "abstract"
 }

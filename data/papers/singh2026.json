@@ -42,5 +42,10 @@
   "markdownFile": "Singh, A.K. etal - 2026 - Multi-LLM-based augmentation and synthetic data generation of construction schedules and task descri....md",
   "url": "https://doi.org/10.1016/j.aei.2025.103825",
   "taskEn": "Schedule data augmentation and synthetic data generation",
-  "inputDataEn": "Construction documents + schedules"
+  "inputDataEn": "Construction documents + schedules",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "The multi-LLM framework augments construction schedules and generates synthetic schedules and task descriptions.",
+  "operationCodingBasis": "abstract"
 }

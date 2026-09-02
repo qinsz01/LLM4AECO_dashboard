@@ -29,5 +29,10 @@
   ],
   "contribution": "提出了一种混合主导的对话框架，将LLM和VLM定位为工程设计的反思伙伴而非解决方案提供者，定义了五个上下文信息通道和上下文保真度概念，通过46人用户研究揭示了不同保真度对设计思维、对话和行为的差异化影响。",
   "methodology": "开发了集成实时FEA仿真的交互式2D结构设计工具，基于五个上下文通道（任务角色、设计状态、历史、评估信号、目标参考）设计高保真和低保真两种AI代理，通过46人组间对照实验从设计目标、解质量、探索模式、对话动态和认知负荷等维度进行系统评估。",
-  "results": "对话代理虽未直接改善粗粒度设计目标，但显著影响了设计过程的细微方面。高保真代理促使用户产生更具对称性和拓扑一致性的设计方案，激发更深层反思，降低精神负荷，支持更审慎的设计决策；代理支持组表现出更聚焦的探索模式，而对照组倾向于更广的试错策略。"
+  "results": "对话代理虽未直接改善粗粒度设计目标，但显著影响了设计过程的细微方面。高保真代理促使用户产生更具对称性和拓扑一致性的设计方案，激发更深层反思，降低精神负荷，支持更审慎的设计决策；代理支持组表现出更聚焦的探索模式，而对照组倾向于更广的试错策略。",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The context-aware agents interpret live structural-design states and evaluation signals to provide reflective questions, explanations, and design guidance.",
+  "operationCodingBasis": "abstract"
 }

@@ -30,5 +30,11 @@
   "pdfFile": "Jiang et al. - 2026 - Building regulation question-answering system using retrieval-augmented generation with dual-stage f.pdf",
   "markdownFile": "Jiang et al. - 2026 - Building regulation question-answering system using retrieval-augmented generation with dual-stage f.md",
   "taskEn": "Building regulation Q&A",
-  "inputDataEn": "Regulatory documents"
+  "inputDataEn": "Regulatory documents",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The multi-stage RAG system retrieves linked building regulations and produces traceable, domain-specific answers to regulatory questions.",
+  "operationCodingBasis": "abstract"
 }

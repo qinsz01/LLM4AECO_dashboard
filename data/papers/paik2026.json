@@ -32,5 +32,12 @@
   ],
   "contribution": "提出O-MCP框架，将形式化本体与标准化模型上下文协议（MCP）集成，通过语义护栏机制实时验证Agent请求，确保建筑结构设计中的知识完整性与逻辑一致性，为AEC领域工程可靠性提供参考标准。",
   "methodology": "三层架构框架：(1)知识与数据源层——存储形式化本体（OWL）和领域数据；(2)语义MCP服务器层——核心贡献，集成语义护栏机制，基于本体推理实时验证Agent请求的逻辑一致性与知识完整性；(3)智能Agent层——基于Claude 3.5 Sonnet的LLM Agent执行结构设计任务。概念验证实验以钢筋混凝土楼板设计为案例，30个测试用例对比LLM RAG系统与O-MCP框架。",
-  "results": "LLM RAG系统达到约83%的与形式化本体一致性，但在数值推理和多条件规则应用中存在系统性错误。O-MCP框架通过本体验证提供确定性的正确性保障，消除了RAG系统中的数值推理错误和多条件规则应用偏差，确保工程完整性。"
+  "results": "LLM RAG系统达到约83%的与形式化本体一致性，但在数值推理和多条件规则应用中存在系统性错误。O-MCP框架通过本体验证提供确定性的正确性保障，消除了RAG系统中的数值推理错误和多条件规则应用偏差，确保工程完整性。",
+  "operations": [
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The ontology-driven MCP server grounds and validates agent requests, invokes structural-design functions, and checks logical and engineering integrity.",
+  "operationCodingBasis": "abstract"
 }

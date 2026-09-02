@@ -33,5 +33,13 @@
   "markdownFile": "Dong et al. - 2025 - AI BIM coordinator for non-expert interaction in building design using LLM-driven multi-agent system.md",
   "url": "https://doi.org/10.1016/j.autcon.2025.106563",
   "taskEn": "Design coordination",
-  "inputDataEn": "User requirements"
+  "inputDataEn": "User requirements",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The agents align user requests with Revit functions, generate and check API code, execute it in Revit, and assess the resulting coordination tasks.",
+  "operationCodingBasis": "abstract"
 }

@@ -28,5 +28,11 @@
   "markdownFile": "Jang et al. - 2024 - Automated detailing of exterior walls using NADIA Natural-language-based architectural detailing th.md",
   "url": "https://doi.org/10.1016/j.aei.2024.102532",
   "taskEn": "Architectural detailing",
-  "inputDataEn": "BIM models + natural language descriptions"
+  "inputDataEn": "BIM models + natural language descriptions",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "NADIA converts natural-language wall specifications into BIM detailing operations that create exterior wall layers in Revit.",
+  "operationCodingBasis": "abstract"
 }

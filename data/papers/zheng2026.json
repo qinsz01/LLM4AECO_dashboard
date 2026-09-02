@@ -32,5 +32,13 @@
   "results": "Claude 3.5-Sonnet with rule-based adaptive prompt achieved the highest Recall@5avg of 81.55%, surpassing the fine-tuned BERT model (68.50%) by 19%. The rule-based adaptive prompt improved Recall@5avg by 4.6%, 5.6%, 1.2%, and 2.8% for ChatGPT-4o, Claude 3.5-Sonnet, DeepSeek-V3, and DeepSeek-R1 respectively over full-prompt baselines. DeepSeek-R1 had the lowest hallucination rate (0.14%), followed by Claude 3.5-Sonnet (0.29%). Nearly perfect F1 scores were achieved on simple clauses and complex clauses with a single atomic function; for complex clauses with 2-3 atomic functions, F1 consistently exceeded 0.8. The proof-of-concept demonstrated automatic generation of executable Python code from complex regulatory clauses, with LLM-FuncMapper producing function recommendations in approximately 5 seconds per clause versus several minutes for manual expert analysis.",
   "url": "https://doi.org/10.1016/j.engappai.2025.112823",
   "taskEn": "Regulation interpretation and code generation",
-  "inputDataEn": "Building regulation texts"
+  "inputDataEn": "Building regulation texts",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "LLM-FuncMapper aligns regulatory clauses with atomic checking functions, composes executable code, and applies the functions to an IFC model for rule checking.",
+  "operationCodingBasis": "abstract"
 }

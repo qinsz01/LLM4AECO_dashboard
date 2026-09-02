@@ -33,5 +33,13 @@
   ],
   "contribution": "提出了一个基于多智能体AI和物理信息机器学习的框架，包含11个专业智能体和72个MCP工具，实现了建筑集群能耗建模、仿真、控制和自动化的端到端智能执行。",
   "methodology": "采用分层多智能体架构，包括协调智能体、11个领域专用智能体和72个MCP工具接口，在BESTOpt物理信息运行环境中进行建筑-暖通空调-分布式能源的联合优化。",
-  "results": "在20栋住宅建筑集群案例中展示了多领域多智能体协调能力。大规模基准测试(6156次运行)系统评估了规划准确性、智能体选择、工具选择和参数提取等性能指标，为智能体AI系统设计提供了实证依据。"
+  "results": "在20栋住宅建筑集群案例中展示了多领域多智能体协调能力。大规模基准测试(6156次运行)系统评估了规划准确性、智能体选择、工具选择和参数提取等性能指标，为智能体AI系统设计提供了实证依据。",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The agents align requests with MCP tools, execute building modeling, simulation, control, and automation workflows, and assess energy and resilience outcomes.",
+  "operationCodingBasis": "abstract"
 }

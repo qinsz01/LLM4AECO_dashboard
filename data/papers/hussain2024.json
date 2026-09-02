@@ -31,5 +31,10 @@
   ],
   "contribution": "开发了iSafeCom系统，首次将VR模拟与基于ChatGPT的对话式AI虚拟讲师集成，为面临语言和读写障碍的移民工人提供个性化安全培训。",
   "methodology": "利用Whisper进行语音识别与翻译，ChatGPT通过提示工程作为虚拟安全讲师生成上下文相关回答，Amazon Polly将文本转为语音，集成于Unity VR环境中实现沉浸式培训。",
-  "results": "52名来自五个国家的参与者实验显示，培训前后测试分数平均提高23%，Cohen's d效应量为1.925，系统在不同语言和教育背景的参与者中表现一致，有经验的工人受益更多。"
+  "results": "52名来自五个国家的参与者实验显示，培训前后测试分数平均提高23%，Cohen's d效应量为1.925，系统在不同语言和教育背景的参与者中表现一致，有经验的工人受益更多。",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "ChatGPT acts as a live VR safety instructor and generates contextual multilingual training responses for construction workers.",
+  "operationCodingBasis": "abstract"
 }

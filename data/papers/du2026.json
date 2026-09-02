@@ -34,5 +34,12 @@
   "pdfFile": "Du, C. etal - 2026 - Text2BIM Generating Building Models Using a Large Language Model-Based Multiagent Framework.pdf",
   "markdownFile": "Du, C. etal - 2026 - Text2BIM Generating Building Models Using a Large Language Model-Based Multiagent Framework.md",
   "taskEn": "Natural language to BIM model generation",
-  "inputDataEn": "Natural language descriptions"
+  "inputDataEn": "Natural language descriptions",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The agents generate BIM-authoring code, execute it through Vectorworks APIs, and iteratively check the resulting models against design rules.",
+  "operationCodingBasis": "abstract"
 }

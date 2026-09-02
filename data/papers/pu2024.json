@@ -28,5 +28,11 @@
   "pdfFile": "Pu et al. - 2024 - AutoRepo A general framework for multimodal LLM-based automated construction reporting.pdf",
   "markdownFile": "Pu et al. - 2024 - AutoRepo A general framework for multimodal LLM-based automated construction reporting.md",
   "taskEn": "Automated report generation",
-  "inputDataEn": "On-site images"
+  "inputDataEn": "On-site images",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "AutoRepo interprets construction-site inspection imagery and generates standardized inspection reports evaluated for quality and regulatory coverage.",
+  "operationCodingBasis": "abstract"
 }

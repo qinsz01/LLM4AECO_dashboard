@@ -28,5 +28,12 @@
   "markdownFile": "Park et al. - 2025 - Integrating Large Language Models with Multimodal Virtual Reality Interfaces to Support Collaborativ.md",
   "pdfFile": "Park et al. - 2025 - Integrating Large Language Models with Multimodal Virtual Reality Interfaces to Support Collaborativ.pdf",
   "taskEn": "Human-robot collaborative interaction",
-  "inputDataEn": "Voice commands & VR controller inputs"
+  "inputDataEn": "Voice commands & VR controller inputs",
+  "operations": [
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The interface aligns multimodal worker commands with BIM object identities and robot actions, confirms task interpretation, and executes the collaboration workflow through ROS.",
+  "operationCodingBasis": "abstract"
 }

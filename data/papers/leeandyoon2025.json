@@ -32,5 +32,13 @@
   "pdfFile": "Lee and Yoon - 2025 - Metadata schema for virtual building models in digital twins VB schema implemented in GPT-based app.pdf",
   "url": "https://doi.org/10.1016/j.enbuild.2024.115039",
   "taskEn": "Intelligent digital twin-based O&M services (virtual modeling & calibration, virtual sensing, sensor calibration, ontology interpretation, knowledge extraction)",
-  "inputDataEn": "Sensor data + ontology (RDF/Brick Schema) + operational data"
+  "inputDataEn": "Sensor data + ontology (RDF/Brick Schema) + operational data",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The VB schema grounds GPT tool selection, virtual-model construction and recalibration, and interpretation of operational model results.",
+  "operationCodingBasis": "abstract"
 }

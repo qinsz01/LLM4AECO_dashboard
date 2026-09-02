@@ -31,5 +31,13 @@
   "pdfFile": "Song, J etal - 2024 - Ontology-assisted GPT-based building performance simulation and assessment Implementation of multizo....pdf",
   "markdownFile": "Song, J etal - 2024 - Ontology-assisted GPT-based building performance simulation and assessment Implementation of multizo....md",
   "taskEn": "Building performance simulation",
-  "inputDataEn": "Text (natural language / building parameter descriptions)"
+  "inputDataEn": "Text (natural language / building parameter descriptions)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The ontology-assisted agents retrieve simulation information, generate CONTAM inputs, execute airflow simulations, and analyze and visualize results.",
+  "operationCodingBasis": "abstract"
 }

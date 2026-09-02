@@ -33,5 +33,12 @@
   "results": "The TRaiC platform successfully demonstrated an integrated eight-stage workflow from raw 360° panoramic images to comprehensive geological reports. The DeepLabV3+ based trace detection achieved effective pixel-level segmentation of discontinuity traces across multiple tunnel faces. The LSD algorithm detected 879 line segments compared to 275 by Hough Transform, with LSD showing superior geometric precision but higher computational cost. The 2D segment linking consolidated 879 fragmented segments into 84 longer linked segments. The 3D trace network analysis produced mean visible trace length of 1.29 m with identified joint sets via Kernel density stereonet analysis. The LLM-assisted face description system generated geological interpretations including rock type, weathering grade, joint conditions, and structural features. The RMR scoring module automated rock mass classification with real-time calculation. The RAG-LLM system produced standardized tunnel face mapping reports integrating quantitative measurements and qualitative geological descriptions. Initial evaluations indicated substantial reductions in processing time and expert assessment workload compared to traditional manual mapping. However, the authors note the current system remains semi-automated, sensitive to threshold settings, and relies on non-secure cloud-based LLM APIs, serving primarily as a prototype rather than a production-ready solution.",
   "url": "https://doi.org/10.20944/preprints202508.0784.v1",
   "taskEn": "Tunnel face mapping and rock mass classification",
-  "inputDataEn": "On-site images (360-degree panoramic images)"
+  "inputDataEn": "On-site images (360-degree panoramic images)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "TRaiC retrieves geotechnical knowledge, generates 3D tunnel-face and reporting outputs, and performs discontinuity analysis, RMR classification, and geological interpretation.",
+  "operationCodingBasis": "abstract"
 }

@@ -28,5 +28,10 @@
   "pdfFile": "Kang et al. - 2024 - Earthwork Network Architecture (ENA) Research for Earthwork Quantity Estimation Method Improvement.pdf",
   "markdownFile": "Kang et al. - 2024 - Earthwork Network Architecture (ENA) Research for Earthwork Quantity Estimation Method Improvement.md",
   "taskEn": "Earthwork quantity estimation",
-  "inputDataEn": "CAD"
+  "inputDataEn": "CAD",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The LLM-based Earthwork Network Architecture classifies quantity-takeoff information and estimates earthwork quantities from CAD-derived features.",
+  "operationCodingBasis": "abstract"
 }

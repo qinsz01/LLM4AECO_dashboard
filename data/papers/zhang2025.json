@@ -31,5 +31,12 @@
   "results": "PV-GPT with GPT-4o achieves a task completion rate of 98.14% and 100% code executability on over 1000 QA pairs, compared to 13.29% for the baseline GPT-4o few-shot prompting approach. Average end-to-end response latency is 2-6 seconds, with PV-GPT(GPT-4o) averaging 3.26s.",
   "url": "https://doi.org/10.1016/j.jobe.2025.114535",
   "taskEn": "Data query and analysis",
-  "inputDataEn": "Time series data / semantic models"
+  "inputDataEn": "Time series data / semantic models",
+  "operations": [
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "PV-GPT maps natural-language requests to Brick, API, and time-series queries, executes modular functions, and derives photovoltaic performance answers.",
+  "operationCodingBasis": "abstract"
 }

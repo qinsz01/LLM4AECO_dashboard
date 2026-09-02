@@ -32,5 +32,11 @@
   "results": "In a simulated interior wall painting case study with a Husky UGV and UR5 arm, the robot successfully completed painting across 9 locations through 43 prompt-response exchanges (average response time 4.32s) in the standard scenario, and 32 exchanges (average response time 4.86s) in the superintendent-input scenario, with 10/10 successful trial completions in each phase; the system demonstrated adaptive replanning and motion parameter adjustment capabilities without hardcoded logic.",
   "url": "https://doi.org/10.3390/robotics14090117",
   "taskEn": "Construction robot task planning",
-  "inputDataEn": "Text (natural language task descriptions)"
+  "inputDataEn": "Text (natural language task descriptions)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "ChatGPT-4 generates structured robot task instructions and supports adaptive execution and plan modification in a simulated wall-painting workflow.",
+  "operationCodingBasis": "abstract"
 }

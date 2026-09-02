@@ -32,5 +32,12 @@
   ],
   "contribution": "提出基于MLLM点云分割和实例级Scan-vs-BIM的BIM-LiDAR集成框架，实现施工过程环境影响自动评估，将手动报告转化为可信的数据驱动环境管理基础",
   "methodology": "构建包含三个核心组件的框架：(1)连接施工数据与环境绩效指标的语义知识图谱；(2)基于多模态大语言模型(MLLM)的点云分割实现BIM富化机制，无需训练即可完成施工场景点云分割；(3)利用富化BIM统一框架量化施工进度和环境影响，通过实例级Scan-vs-BIM几何验证进行精确的环境绩效评估",
-  "results": "在施工项目测试中达到96.54%的点云分割准确率；通过精确的几何验证，测量并验证了项目在关键里程碑处5.77%的环境绩效改善；框架成功将手动环境报告转化为基于数据的可信环境管理基础"
+  "results": "在施工项目测试中达到96.54%的点云分割准确率；通过精确的几何验证，测量并验证了项目在关键里程碑处5.77%的环境绩效改善；框架成功将手动环境报告转化为基于数据的可信环境管理基础",
+  "operations": [
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The framework aligns segmented LiDAR instances with BIM objects, enriches the BIM model, and quantifies construction progress and environmental performance.",
+  "operationCodingBasis": "abstract"
 }

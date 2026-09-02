@@ -31,5 +31,13 @@
   ],
   "contribution": "提出数据-物理混合框架，利用LLM多Agent协调遗传优化算法与有限元分析，实现超高性能混凝土梁的自动化结构优化设计，将人工工作量减少88%",
   "methodology": "构建包含规划、实施和评估三个模块的多Agent框架：规划模块通过Agentic RAG系统从自然语言查询中提取设计参数；实施模块使用NSGA-II多目标遗传算法结合ABAQUS有限元分析进行优化搜索，并由LLM精炼Agent自适应调整优化参数；评估模块提供对话式分析接口，支持工程师通过自然语言交互验证设计方案",
-  "results": "框架在UHPC梁设计案例中生成27个Pareto最优解（成本$1,340-$6,405，挠度1.67-73.21mm），人工工作量降至0.5小时（比手动设计减少88%，比传统优化减少75%），计算时间减少53.4%，查询处理器在30个测试查询中达到F1=1.0的完美精度"
+  "results": "框架在UHPC梁设计案例中生成27个Pareto最优解（成本$1,340-$6,405，挠度1.67-73.21mm），人工工作量降至0.5小时（比手动设计减少88%，比传统优化减少75%），计算时间减少53.4%，查询处理器在30个测试查询中达到F1=1.0的完美精度",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The agentic workflow extracts design parameters, generates Pareto-optimal UHPC beam designs, invokes finite-element analyses, and supports result evaluation.",
+  "operationCodingBasis": "abstract"
 }

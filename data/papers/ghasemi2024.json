@@ -31,5 +31,10 @@
   "markdownFile": "Ghasemi and Dai - 2024 - Can ChatGPT assist in cost analysis and bid pricing in construction estimating A pilot study using.md",
   "url": "https://doi.org/10.55092/sc20240009",
   "taskEn": "Cost estimation and bid pricing",
-  "inputDataEn": "Text (project descriptions + expert knowledge)"
+  "inputDataEn": "Text (project descriptions + expert knowledge)",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The custom GPT calculates construction work-item costs and bid prices and compares the estimates with manual ground truth and real bids.",
+  "operationCodingBasis": "abstract"
 }

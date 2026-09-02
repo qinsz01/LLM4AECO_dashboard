@@ -31,5 +31,11 @@
   "pdfFile": "Li and Wang - 2026 - BuildingGPT Query building semantic data using large language models and vector-graph retrieval-aug.pdf",
   "url": "https://doi.org/10.1016/j.buildenv.2025.113855",
   "taskEn": "Semantic data query (NL2SPARQL)",
-  "inputDataEn": "Brick Schema semantic models (TTL format) + natural language questions"
+  "inputDataEn": "Brick Schema semantic models (TTL format) + natural language questions",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "BuildingGPT retrieves ontology entities and relations, generates SPARQL queries, executes them over Brick models, and returns grounded answers.",
+  "operationCodingBasis": "abstract"
 }

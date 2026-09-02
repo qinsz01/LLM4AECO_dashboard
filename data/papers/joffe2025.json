@@ -39,5 +39,10 @@
   "pdfFile": "Joffe, I. etal - 2025 - The Framework and Implementation of Using Large Language Models to Answer Questions about Building C....pdf",
   "markdownFile": "Joffe, I. etal - 2025 - The Framework and Implementation of Using Large Language Models to Answer Questions about Building C....md",
   "taskEn": "Building regulation Q&A",
-  "inputDataEn": "Regulatory documents"
+  "inputDataEn": "Regulatory documents",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The RAG framework retrieves cited building-code provisions and generates grounded answers to engineers’ code and standards questions.",
+  "operationCodingBasis": "abstract"
 }

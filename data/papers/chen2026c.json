@@ -40,5 +40,10 @@
   ],
   "contribution": "开发了Qwen-AEC系列模型，通过指令微调而非领域预训练实现建筑规范文本分类和命名实体识别的SOTA级性能，证明轻量级1.7B参数模型即可媲美大型专用模型",
   "methodology": "基于Qwen3系列模型，构建建筑规范领域的指令跟随数据集，将文本分类（7类：direct/indirect/method/reference/general/term/others）和命名实体识别（7类实体）统一为指令格式，使用LoRA参数高效微调技术进行指令微调，在1.7B和8B两种参数规模上进行实验",
-  "results": "Qwen-AEC-8B-TC-think在文本分类上达到加权F1=92.40%，与领域专用SOTA模型（ARCBERT-Large 94.4%）差距仅2个百分点；Qwen-AEC-8B-NER在命名实体识别上达到部分匹配宏F1=83.75%，超越SOTA模型ARCBERT-Small（81.8%）；轻量级1.7B模型在两个任务上分别达到92.21%和78.06%"
+  "results": "Qwen-AEC-8B-TC-think在文本分类上达到加权F1=92.40%，与领域专用SOTA模型（ARCBERT-Large 94.4%）差距仅2个百分点；Qwen-AEC-8B-NER在命名实体识别上达到部分匹配宏F1=83.75%，超越SOTA模型ARCBERT-Small（81.8%）；轻量级1.7B模型在两个任务上分别达到92.21%和78.06%",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "Qwen-AEC classifies building-code text and performs named-entity recognition, with both tasks evaluated by F1 scores.",
+  "operationCodingBasis": "abstract"
 }

@@ -39,5 +39,13 @@
   "results": "The paper demonstrates both the limitations and capabilities of LLMs in geotechnical engineering through qualitative examples: (1) Without context, GPT-3 hallucinated a USCS soil classification code that incorrectly omitted Atterberg limits while claiming compliance with ASTM D2487-17. (2) The context-specific semantic search engine successfully identified the correct DIGGS XML tag for plastic limit (<diggs:waterContent> within <diggs:plasticLimitTrial>), whereas without context GPT fabricated an incorrect generic tag. (3) Chain-of-thought prompting enabled GPT to correctly classify a fine-grained soil with LL=30 and PL=10 as 'CL' (low-plasticity clay), whereas without reasoning examples it incorrectly classified it as 'CH' or 'MH'. (4) For the Leaning Tower of Pisa bearing capacity problem, naive GPT-3 produced an incorrect result of 6,037 MN (61x overestimate) due to hallucinated equations, incorrect bearing capacity factors, arithmetic errors, and wrong geometric assumptions. Using the proposed ReAct framework with engineering tools, GPT correctly computed the maximum allowable load as 98.022 MN, matching the ground truth calculated from the soil report (Su=35 kPa).",
   "url": "https://doi.org/10.1061/JGGEFK.GTENG-11828",
   "taskEn": "Geotechnical analysis, code generation and engineering workflow automation",
-  "inputDataEn": "Text (natural language descriptions), engineering reports, domain knowledge bases (DIGGS Schema)"
+  "inputDataEn": "Text (natural language descriptions), engineering reports, domain knowledge bases (DIGGS Schema)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The demonstrated workflows retrieve geotechnical context, generate code, invoke engineering tools through ReAct, and solve soil classification and safety-analysis problems.",
+  "operationCodingBasis": "abstract"
 }

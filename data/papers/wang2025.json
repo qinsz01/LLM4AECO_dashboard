@@ -33,5 +33,10 @@
   "pdfFile": "Wang et al. - 2025 - Entropy-Optimized Dynamic Text Segmentation and RAG-Enhanced LLMs for Construction Engineering Knowl.pdf",
   "markdownFile": "Wang et al. - 2025 - Entropy-Optimized Dynamic Text Segmentation and RAG-Enhanced LLMs for Construction Engineering Knowl.md",
   "taskEn": "Construction standards knowledge-base Q&A",
-  "inputDataEn": "Regulatory documents"
+  "inputDataEn": "Regulatory documents",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The RAG knowledge base segments and ranks construction standards and retrieves relevant chunks for domain question answering.",
+  "operationCodingBasis": "abstract"
 }

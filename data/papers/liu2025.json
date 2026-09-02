@@ -32,5 +32,11 @@
   "pdfFile": "Liu et al. - 2025 - An integrated method for BIM data retrieval using large language model.pdf",
   "markdownFile": "Liu et al. - 2025 - An integrated method for BIM data retrieval using large language model.md",
   "taskEn": "Data retrieval",
-  "inputDataEn": "BIM models + natural language queries"
+  "inputDataEn": "BIM models + natural language queries",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The agents retrieve prompt context, translate BIM questions into SQL, execute the queries, and reflect on execution errors.",
+  "operationCodingBasis": "abstract"
 }

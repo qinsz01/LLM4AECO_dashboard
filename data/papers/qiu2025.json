@@ -28,5 +28,11 @@
   "results": "FP-Interpreter significantly outperforms the base LLAMA model in floor plan recognition: BLEU improved by 250%, ROUGE-1 by 38%, ROUGE-2 by 119%, ROUGE-L by 92%, Cosine Similarity from 0.81 to 0.87, and Euclidean Distance reduced by 20%. FP-Generator achieves over 90% F1 score for room quantity accuracy, ~70% F1 for binary classification tasks (alignment, function layout), and 56% F1 for twelve-category quiet zone partitioning. Compared to House Diffusion, FP-Generator achieves higher IoU (0.88 vs 0.84) and better Chamfer Distance (7.24 vs 10.16), though with higher GED (9.36 vs 5.64). A large-scale Tell2Floorplan dataset of ~20,000 samples was automatically generated.",
   "url": "https://doi.org/10.1016/j.autcon.2025.106512",
   "taskEn": "Floor plan generation",
-  "inputDataEn": "Text (user requirements)"
+  "inputDataEn": "Text (user requirements)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "One model recognizes and describes existing floor plans, while the second interprets user requirements and generates vectorized floor plans.",
+  "operationCodingBasis": "abstract"
 }

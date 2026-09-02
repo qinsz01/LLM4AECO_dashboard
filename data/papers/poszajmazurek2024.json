@@ -29,5 +29,11 @@
   "results": "The CNN-based tool achieved a 25% total carbon footprint reduction (from 15.18 to 11.29 kgCO2eq/m2) in a test building by optimizing shape and construction technology. The LLM-assisted tools successfully suggested lower-carbon material replacements (e.g., straw insulation at 12.31 vs. mineral wool at 33.58 kgCO2eq/m3), though some suggestions were architecturally infeasible, highlighting the need for domain-specific AI models. The BIM-integrated 3D application calculated an embodied carbon footprint of 64,120 kgCO2eq for a test building and provided actionable AI-driven optimization suggestions.",
   "url": "https://doi.org/10.3390/en17122997",
   "taskEn": "Low-carbon building design",
-  "inputDataEn": "Mixed data (BIM, LCA database, design parameters)"
+  "inputDataEn": "Mixed data (BIM, LCA database, design parameters)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The prototypes estimate building carbon impacts and generate lower-carbon material and design recommendations from BIM or early design inputs.",
+  "operationCodingBasis": "abstract"
 }

@@ -33,5 +33,11 @@
   "markdownFile": "Diara etal - 2025 - Open Source HBIM and OpenAI Review and New Analyses on LLMs Integration.md",
   "url": "https://doi.org/10.3390/heritage8050149",
   "taskEn": "Text-to-BIM model generation",
-  "inputDataEn": "Archaeological floor plans + textual descriptions"
+  "inputDataEn": "Archaeological floor plans + textual descriptions",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "The LLM generates Python scripts that are executed in FreeCAD to create parametric HBIM elements for the Parthenon.",
+  "operationCodingBasis": "abstract"
 }

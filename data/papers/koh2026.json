@@ -30,5 +30,11 @@
   "markdownFile": "Koh et al. - 2026 - Cost-effective and minimal-intervention BIM information retrieval via condensed multi-LLM agent code.md",
   "url": "https://doi.org/10.1016/j.autcon.2025.106585",
   "taskEn": "BIM information retrieval",
-  "inputDataEn": "BIM + text (natural language queries)"
+  "inputDataEn": "BIM + text (natural language queries)",
+  "operations": [
+    "generation_parameterization",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "ARCBIM aligns natural-language queries with Revit API functions and generates refined BIM information-retrieval code.",
+  "operationCodingBasis": "abstract"
 }

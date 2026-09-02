@@ -32,5 +32,10 @@
   "markdownFile": "Bagasi et al. - 2025 - BIM and AI in Early Design Stage Advancing Architect–Client Communication.md",
   "url": "https://doi.org/10.3390/buildings15121977",
   "taskEn": "Design communication",
-  "inputDataEn": "Client requirements + BIM models"
+  "inputDataEn": "Client requirements + BIM models",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "The proposed AI-BIM workflow converts client requirements into generative concept visualizations and BIM-informed early-design outputs.",
+  "operationCodingBasis": "abstract"
 }

@@ -29,5 +29,11 @@
   "results": "Few-shot学习在22个测试样本上取得平均结构相似度0.69和平均文本相似度0.76。微调（15个训练对）相比Few-shot学习有明显改进，特别是在结构相似性方面，表明模型更好地学习了YAML层级结构。渐进式主动学习在三轮迭代后表现最优，高置信度样本数量逐步增加，在结构和文本相似性两个指标上均达到最高分数。主动学习方法在所有样本中表现最为稳健一致，尤其在文本相似性方面表现突出。所有25个测试文件的最终评估结果表明，主动学习显著优于Few-shot学习和普通微调方法。",
   "url": "https://doi.org/10.1109/ACCESS.2024.3512434",
   "taskEn": "RASE tagging and regulatory text structuring",
-  "inputDataEn": "Building regulation documents (M2, L2A, BB100)"
+  "inputDataEn": "Building regulation documents (M2, L2A, BB100)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GPT-4o interprets regulatory clauses through RASE tagging and generates structured YAML files evaluated for structural and semantic accuracy.",
+  "operationCodingBasis": "abstract"
 }

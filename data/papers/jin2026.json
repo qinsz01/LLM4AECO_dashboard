@@ -30,5 +30,11 @@
   ],
   "contribution": "首次系统评估了通用LLM在无需微调条件下独立解释IFC-BIM数据的能力，提出了一个将IFC文件重构为JSON格式的框架，用于平台无关的BIM语义查询和设计变更检测。",
   "methodology": "使用IfcOpenShell库将IFC文件解析并转换为结构化JSON文件，通过零样本提示范式让GPT模型执行自然语言查询和模型变更检测两项任务，在软件无关环境下评估LLM的BIM推理能力。",
-  "results": "LLM在数据显式结构化时能够以合理准确度提取和总结BIM信息，但在空间推理和细微变更检测方面存在持续性挑战，为基于文本的BIM解释方法提供了实证依据。"
+  "results": "LLM在数据显式结构化时能够以合理准确度提取和总结BIM信息，但在空间推理和细微变更检测方面存在持续性挑战，为基于文本的BIM解释方法提供了实证依据。",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The LLM answers natural-language queries over JSON-structured IFC data and detects modifications between paired BIM models.",
+  "operationCodingBasis": "abstract"
 }

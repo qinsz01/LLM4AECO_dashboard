@@ -35,5 +35,12 @@
   "markdownFile": "Madireddy et al. - 2025 - Large Language Model-Driven Code Compliance Checking in Building Information Modeling.md",
   "url": "https://doi.org/10.3390/electronics14112146",
   "taskEn": "Code compliance checking",
-  "inputDataEn": "BIM models + regulatory documents"
+  "inputDataEn": "BIM models + regulatory documents",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The LLM interprets code provisions, generates and debugs Revit Python scripts, executes checks, and reports BIM compliance violations.",
+  "operationCodingBasis": "abstract"
 }

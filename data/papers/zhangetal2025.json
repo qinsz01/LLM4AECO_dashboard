@@ -28,5 +28,12 @@
   "pdfFile": "Zhang et al. - 2025 - Multi-condition building decarbonization using deep reinforcement learning and large language model.pdf",
   "url": "https://doi.org/10.1016/j.enbuild.2025.115810",
   "taskEn": "Building carbon emission optimization, HVAC control strategy generation, human-computer interaction",
-  "inputDataEn": "BIM simulation data, weather data, building operational parameters"
+  "inputDataEn": "BIM simulation data, weather data, building operational parameters",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The interface retrieves surrogate-model and optimization results, while the framework identifies decarbonization strategies and generates operational recommendations.",
+  "operationCodingBasis": "abstract"
 }

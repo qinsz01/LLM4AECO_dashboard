@@ -32,5 +32,10 @@
   "url": "https://doi.org/10.3390/buildings14061696",
   "markdownFile": "Maceika et al. - 2024 - Evaluating Modular House Construction Projects A Delphi Method Enhanced by Conversational AI.md",
   "taskEn": "Evaluation criteria development for modular housing construction projects",
-  "inputDataEn": "Thirty-six evaluation factors from the Delphi expert survey and scale-description requirements"
+  "inputDataEn": "Thirty-six evaluation factors from the Delphi expert survey and scale-description requirements",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "ChatGPT generates detailed Likert-scale descriptions for modular-house evaluation criteria that are checked by an expert.",
+  "operationCodingBasis": "abstract"
 }

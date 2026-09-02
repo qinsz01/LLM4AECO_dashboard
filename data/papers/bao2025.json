@@ -28,5 +28,11 @@
   "pdfFile": "Bao and Bu - 2025 - Defining and generating operation and maintenance management requirements in digital twin applicatio.pdf",
   "markdownFile": "Bao and Bu - 2025 - Defining and generating operation and maintenance management requirements in digital twin applicatio.md",
   "taskEn": "O&M management requirement definition",
-  "inputDataEn": "Design drawings + COBie documents + textual requirements"
+  "inputDataEn": "Design drawings + COBie documents + textual requirements",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "DT-GPT extracts O&M-relevant components from drawings and generates function and non-geometric data requirement lists for owner guidelines.",
+  "operationCodingBasis": "abstract"
 }

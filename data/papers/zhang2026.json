@@ -31,5 +31,11 @@
   ],
   "contribution": "提出了BIMVLM视觉语言模型，通过将BIM模型生成过程形式化为建模动作序列规划问题，实现从自然语言描述和多视图图像到可执行Revit代码的端到端构件BIM模型生成。",
   "methodology": "基于LLaVA架构构建视觉语言模型，使用SigLIP作为视觉编码器，通过LoRA微调Qwen2.5系列语言模型，将多模态输入映射为建模动作序列，再通过提示工程转换为Revit API可执行代码，支持迭代优化。",
-  "results": "Qwen2.5-3B在步骤一致性（87.23%）、操作类型准确率（80.89%）、对象类型准确率（87.25%）和方向准确率（63.22%）上取得最佳性能，生成的Revit API代码100%可成功执行。"
+  "results": "Qwen2.5-3B在步骤一致性（87.23%）、操作类型准确率（80.89%）、对象类型准确率（87.25%）和方向准确率（63.22%）上取得最佳性能，生成的Revit API代码100%可成功执行。",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "BIMVLM plans BIM modeling action sequences, converts them to executable Revit API code, and iteratively generates component models.",
+  "operationCodingBasis": "abstract"
 }

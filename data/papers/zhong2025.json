@@ -30,5 +30,12 @@
   "markdownFile": "Zhong et al. - 2025 - EnergAI A Large Language Model-Driven Generative Design Method for Early-Stage Building Energy Opti.md",
   "url": "https://doi.org/10.3390/en18225921",
   "taskEn": "Architectural design optimization",
-  "inputDataEn": "Text / design parameters"
+  "inputDataEn": "Text / design parameters",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "EnergAI generates parametric building forms, evaluates them through ClimateStudio simulation, and optimizes energy and cost performance.",
+  "operationCodingBasis": "abstract"
 }

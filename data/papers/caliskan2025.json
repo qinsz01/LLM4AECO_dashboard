@@ -28,5 +28,11 @@
   "url": "https://doi.org/10.31127/tuje.1591495",
   "markdownFile": "Caliskan - 2025 - Exploring possibilities and limits of ChatGPT Usage in building design studies.md",
   "taskEn": "Capability assessment",
-  "inputDataEn": "Architectural design documents & images (DWG/DXF/PDF/JPEG/IFC/TXT/SKP)"
+  "inputDataEn": "Architectural design documents & images (DWG/DXF/PDF/JPEG/IFC/TXT/SKP)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "ChatGPT is evaluated on analyzing architectural project files and creating design-related insights, critiques, and content.",
+  "operationCodingBasis": "abstract"
 }

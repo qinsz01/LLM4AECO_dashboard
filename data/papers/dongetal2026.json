@@ -32,5 +32,12 @@
   "pdfFile": "Dong et al. - 2026 - A KG-LLM-Enabled Inspection Work Packaging Approach in Module Prefabrication.pdf",
   "url": "https://ascelibrary.com/doi/full/10.1061/JCCEE5.CPENG-6595",
   "taskEn": "Automated inspection work package generation",
-  "inputDataEn": "Knowledge graphs + text (inspection plans, regulatory documents)"
+  "inputDataEn": "Knowledge graphs + text (inspection plans, regulatory documents)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The KG-LLM maps modular products to inspection tasks and clusters the mapped tasks into optimized inspection work packages.",
+  "operationCodingBasis": "abstract"
 }

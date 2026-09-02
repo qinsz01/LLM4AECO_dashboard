@@ -33,5 +33,10 @@
   "markdownFile": "Jang, KM etal - 2025 - Multimodal Large Language Models as Built Environment Auditing Tools.md",
   "url": "https://doi.org/10.1080/00330124.2024.2404894",
   "taskEn": "Built environment auditing",
-  "inputDataEn": "On-site images & videos (street view imagery)"
+  "inputDataEn": "On-site images & videos (street view imagery)",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "Multimodal LLMs audit street-view images for ten built-environment features and are evaluated against DeepLabv3+ outputs.",
+  "operationCodingBasis": "abstract"
 }

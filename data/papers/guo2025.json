@@ -31,5 +31,10 @@
   "pdfFile": "Guo et al. - 2025 - Advancing BIM information retrieval with an LLM-based query-domain-specific language and library cod.pdf",
   "markdownFile": "Guo et al. - 2025 - Advancing BIM information retrieval with an LLM-based query-domain-specific language and library cod.md",
   "taskEn": "Information retrieval",
-  "inputDataEn": "Natural language queries + BIM models"
+  "inputDataEn": "Natural language queries + BIM models",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "Synergistic BIM Aligners maps natural-language BIM queries to Revit C# API functions and evaluates alignment accuracy and errors.",
+  "operationCodingBasis": "abstract"
 }

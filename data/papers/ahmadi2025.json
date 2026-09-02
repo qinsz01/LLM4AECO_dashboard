@@ -35,5 +35,10 @@
   ],
   "contribution": "首次将多种先进LLM应用于施工事故报告的多属性分类，系统比较了GPT-3.5、GPT-4.0、Gemini Pro和LLaMA 3.1在根本原因、伤害原因、受伤部位、严重程度和事故时间五个属性上的分类性能。",
   "methodology": "从OSHA数据库提取2002-2023年事故报告，采用零样本学习策略设计统一提示词，利用GPT-3.5、GPT-4.0、Gemini Pro和LLaMA 3.1进行五类属性分类，并以BERT及其变体作为微调基线进行对比。",
-  "results": "GPT-4.0在大多数属性分类中准确率最高，事故时间分类达到100%准确率；Gemini Pro在伤害原因分类上表现最优（96.74%）；LLaMA 3.1在严重程度（99.46%）和根本原因分类上表现突出。研究揭示了不同模型在处理复杂事故描述时的误分类模式。"
+  "results": "GPT-4.0在大多数属性分类中准确率最高，事故时间分类达到100%准确率；Gemini Pro在伤害原因分类上表现最优（96.74%）；LLaMA 3.1在严重程度（99.46%）和根本原因分类上表现突出。研究揭示了不同模型在处理复杂事故描述时的误分类模式。",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The study uses LLMs to classify accident-report attributes including root cause, injury cause, severity, affected body part, and accident time.",
+  "operationCodingBasis": "abstract"
 }

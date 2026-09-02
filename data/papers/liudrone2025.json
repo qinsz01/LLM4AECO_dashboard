@@ -41,5 +41,13 @@
   "markdownFile": "Liu et al. - 2025 - A LLM-informed multi-agent AI system for drone-based visual inspection for infrastructure",
   "taskEn": "On-site inspection and analysis",
   "inputDataEn": "On-site images & videos + point clouds",
-  "pdfFile": "Liu et al. - 2025 - A LLM-informed multi-agent AI system for drone-based visual inspection for infrastructure"
+  "pdfFile": "Liu et al. - 2025 - A LLM-informed multi-agent AI system for drone-based visual inspection for infrastructure",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The agents query 3D scene graphs, generate inspection paths, control the drone, and interpret visual observations for infrastructure inspection.",
+  "operationCodingBasis": "abstract"
 }

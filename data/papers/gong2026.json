@@ -28,5 +28,11 @@
   "results": "The BIM-based carbon emission extraction algorithm achieved near-identical results to manual calculation (total error < 0.03%), saving over 90% of manual calculation time for carbon quantification of the O-PARK2 project in Hong Kong. The LLM-enhanced method achieved 84.43% accuracy in \"E\"-aware data extraction across 10 repeated tests (60 results total), maintaining comparable accuracy to the manual method. Connecting the LLM to the local database via RAG improved accuracy by 13.8% compared to the general LLM without RAG. The LLM-based approach saved 64.6% of working time compared to manual processing (LLM completed tasks in ~15 minutes vs. 45 minutes average for manual participants, with the fastest manual participant taking 25 minutes). User satisfaction evaluation (QoE) with 20 participants from a Hong Kong construction company's environmental management department showed: 90% satisfaction with accuracy, 95% with response time, 100% with degree of fit, 90% with ease of use, and 100% with overall satisfaction (on a 5-point scale). Main LLM error types were: (1) data not expressed, and (2) irrelevant indicator information appearing.",
   "url": "https://doi.org/10.1016/j.aei.2025.103920",
   "taskEn": "ESG data management",
-  "inputDataEn": "BIM models + environmental data"
+  "inputDataEn": "BIM models + environmental data",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The RAG-LLM retrieves and maps ESG evidence to environmental indicators, while the workflow extracts and quantifies project-level environmental data.",
+  "operationCodingBasis": "abstract"
 }

@@ -34,5 +34,10 @@
   "results": "LLMs achieved an average semantic similarity of 0.825 in identifying challenges and a correlation of 0.557 in ranking them compared to human experts; prompts with pre-knowledge boosted performance above average, CoT prompting improved ranking but not identification, and no significant performance gap existed among the four LLMs or their advanced versions.",
   "url": "https://doi.org/10.1016/j.buildenv.2025.112891",
   "taskEn": "Retrofit decision-making",
-  "inputDataEn": "Building energy retrofit cases"
+  "inputDataEn": "Building energy retrofit cases",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The study evaluates LLMs for identifying and ranking building-energy retrofit challenges against a human-expert benchmark.",
+  "operationCodingBasis": "abstract"
 }

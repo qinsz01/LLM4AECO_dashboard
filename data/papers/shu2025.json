@@ -37,5 +37,10 @@
   "results": "For CO2 reduction, top LLMs achieve Top-1 accuracy up to 54.5% and Top-5 accuracy up to 92.8%; for payback period minimization, Top-1 accuracy peaks at 14.3% and Top-5 at 52.5%. Models correctly prioritize location and architectural features but exhibit oversimplified reasoning and low inter-model consistency.",
   "url": "https://doi.org/10.3390/buildings15224081",
   "taskEn": "Energy retrofit decision-making",
-  "inputDataEn": "Residential building parameters + energy simulation data + retrofit cost data"
+  "inputDataEn": "Residential building parameters + energy simulation data + retrofit cost data",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The study evaluates LLM recommendations for CO2-reduction and payback-period retrofit decisions against EnergyPlus-derived reference rankings.",
+  "operationCodingBasis": "abstract"
 }

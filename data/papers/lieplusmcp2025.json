@@ -30,5 +30,13 @@
   "url": "https://doi.org/10.1016/j.softx.2025.102367",
   "taskEn": "Building performance simulation",
   "inputDataEn": "Simulation models (IDF files) + weather data (EPW) + natural language",
-  "pdfFile": "Li et al. - 2025 - EnergyPlus-MCP A model-context-protocol server for ai-driven building energy modeling"
+  "pdfFile": "Li et al. - 2025 - EnergyPlus-MCP A model-context-protocol server for ai-driven building energy modeling",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "EnergyPlus-MCP selects model resources, exposes model-generation and editing tools, executes simulations, and analyzes retrofit and HVAC results.",
+  "operationCodingBasis": "abstract"
 }

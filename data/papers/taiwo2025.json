@@ -34,5 +34,10 @@
   "results": "The systematic review found only 6 peer-reviewed articles on LLM applications in construction, indicating very early-stage adoption. The Delphi study with 11 experts identified 76 potential GenAI applications across text-to-text, text-to-image, text-to-video, image-to-text, image-to-image, image-to-video, video-to-text, video-to-image, and video-to-video modalities, and 18 key challenges in domain-specific, technological, adoption, and ethical categories. In the case study, the baseline GPT-4 achieved 100% answer rate, quality score of 3.87/5 (77.4%), relevance of 4.01/5 (80.2%), and reproducibility of 4.53/5 (90.6%). The RAG-enhanced GPT-4 achieved 90% answer rate but improved quality to 4.13/5 (82.6%, +5.2%), relevance to 4.48/5 (89.6%, +9.4%), and reproducibility to 4.77/5 (95.4%, +4.8%). RAG reduced hallucination by grounding outputs in retrieved contract passages but defaulted to non-answers for 2 questions due to chunking and retrieval limitations.",
   "url": "https://doi.org/10.1016/j.aej.2024.12.079",
   "taskEn": "Review + framework + case validation",
-  "inputDataEn": "Building contract documents + industry literature"
+  "inputDataEn": "Building contract documents + industry literature",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "Within the broader Delphi study, an implemented RAG case study retrieves construction-contract passages and answers validated contract queries.",
+  "operationCodingBasis": "abstract"
 }

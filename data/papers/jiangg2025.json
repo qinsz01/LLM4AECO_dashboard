@@ -47,5 +47,10 @@
   "url": "https://doi.org/10.1016/j.energy.2025.134548",
   "taskEn": "Automated building energy modeling",
   "inputDataEn": "Text (natural language building descriptions + IDF file examples)",
-  "pdfFile": "Jiang, G. etal - 2025 - Prompt engineering to inform large language model in automated building energy modeling"
+  "pdfFile": "Jiang, G. etal - 2025 - Prompt engineering to inform large language model in automated building energy modeling",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "The study evaluates prompt strategies for generating complete building energy models from natural-language descriptions.",
+  "operationCodingBasis": "abstract"
 }

@@ -29,5 +29,10 @@
   ],
   "contribution": "提出了BifrostRAG双知识图谱增强的RAG系统，通过构建实体网络图（ENG）和文档导航图（DNG）捕捉安全规范中的语言关系和文档结构，实现了对复杂施工安全规范的多跳问答。",
   "methodology": "构建双知识图谱架构：实体网络图（ENG）捕获词和短语级别的语义关系，文档导航图（DNG）建模文档级别的层级结构和交叉引用关系。采用混合检索机制结合图遍历和向量语义搜索，使用GPT-4o作为LLM代理进行实体提取和知识图谱构建。",
-  "results": "在93个多跳问题数据集上，BifrostRAG达到92.8%精确率、85.5%召回率和87.3%的F1分数，显著优于纯向量RAG和纯图RAG基线方法。"
+  "results": "在93个多跳问题数据集上，BifrostRAG达到92.8%精确率、85.5%召回率和87.3%的F1分数，显著优于纯向量RAG和纯图RAG基线方法。",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "BifrostRAG traverses linguistic and document-structure graphs to retrieve evidence for multi-hop construction-safety questions.",
+  "operationCodingBasis": "abstract"
 }

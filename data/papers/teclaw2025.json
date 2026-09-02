@@ -28,5 +28,12 @@
   "markdownFile": "Teclaw et al. - 2025 - Building information model and schema cross-validation using semantics – conceptual framework.md",
   "url": "https://doi.org/10.1177/14780771251352954",
   "taskEn": "MEP schematic–BIM cross-validation",
-  "inputDataEn": "Mixed data (MEP schematic images + BIM)"
+  "inputDataEn": "Mixed data (MEP schematic images + BIM)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The proof-of-concept aligns MEP schematics with BIM entities, generates Brick-based structured representations, and identifies cross-representation inconsistencies.",
+  "operationCodingBasis": "abstract"
 }

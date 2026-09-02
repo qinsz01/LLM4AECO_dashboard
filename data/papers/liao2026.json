@@ -31,5 +31,11 @@
   ],
   "contribution": "提出VECTOR2BEM框架，实现从2D矢量平面图半自动重建3D建筑能耗模型，集成LLM支持自然语言编辑几何属性与运行参数，显著降低专家操作依赖。",
   "methodology": "四模块框架：(1)数据预处理模块解析DXF格式矢量平面图；(2)基于规则的处理模块（墙体延伸、空间围合）自动建立结构化中间件；(3)gbXML生成模块结合手动垂直尺寸输入生成能耗模型文件；(4)LLM交互编辑模块（Qwen-Plus）支持自然语言编辑几何属性与运行参数。",
-  "results": "开口精度达99.4%，墙体精度达99.9%，空间围合率>99%，在多种平面图类型上展现强适应性，支持通过自然语言命令精确编辑建筑能耗模型参数。"
+  "results": "开口精度达99.4%，墙体精度达99.9%，空间围合率>99%，在多种平面图类型上展现强适应性，支持通过自然语言命令精确编辑建筑能耗模型参数。",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "VECTOR2BEM reconstructs gbXML energy models from vector floor plans and supports natural-language editing of geometry and operating parameters.",
+  "operationCodingBasis": "abstract"
 }

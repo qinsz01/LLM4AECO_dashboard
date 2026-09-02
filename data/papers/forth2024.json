@@ -32,5 +32,11 @@
   "pdfFile": "Forth, K. etal - 2024 - Semantic enrichment for BIM-based building energy performance simulations using semantic textual sim....pdf",
   "markdownFile": "Forth, K. etal - 2024 - Semantic enrichment for BIM-based building energy performance simulations using semantic textual sim....md",
   "taskEn": "BIM-to-BEM semantic enrichment",
-  "inputDataEn": "BIM models"
+  "inputDataEn": "BIM models",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The method aligns BIM room and material descriptions with thermal-property databases and enriches BIM elements with the matched information.",
+  "operationCodingBasis": "abstract"
 }

@@ -28,5 +28,11 @@
   ],
   "contribution": "系统分析了基于NLI的BIM模型检索的信息需求，通过调研现有BIM查询语言和软件、收集从业人员200条自然语言查询并进行对比实验，识别了最重要的信息实体、约束类型、问题形式和条件组合，提出了BIM查询表示框架（BQR）。",
   "methodology": "首先调研18款IFC建模软件的信息实体暴露情况，其次分析25篇文献中131条BIM查询样本的实体与约束频率，然后邀请10名从业者生成200条NLQ，最后通过结构化查询语言、软件操作和NLI三种方式的对比实验评估查询效率。",
-  "results": "识别出BIM查询中最重要的实体类型（建筑产品、空间对象、建筑）、属性约束（元素特定属性、属性、数量、类型、材料）、关系约束（放置、包含、空间边界、重叠）和问题形式（元素选择、属性值查询、计算推理）；NLI方法相比传统方法节省84.9%和81.0%的查询时间，但准确率为85.7%。"
+  "results": "识别出BIM查询中最重要的实体类型（建筑产品、空间对象、建筑）、属性约束（元素特定属性、属性、数量、类型、材料）、关系约束（放置、包含、空间边界、重叠）和问题形式（元素选择、属性值查询、计算推理）；NLI方法相比传统方法节省84.9%和81.0%的查询时间，但准确率为85.7%。",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The tested natural-language interface maps practitioner questions to BIM entities and constraints and executes model information queries.",
+  "operationCodingBasis": "abstract"
 }

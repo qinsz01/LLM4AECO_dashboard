@@ -39,5 +39,10 @@
   "pdfFile": "Yang et al. - 2025 - Boosting expertise and efficiency in LLM A knowledge-enhanced framework for construction support.pdf",
   "url": "https://doi.org/10.1016/j.aej.2025.09.029",
   "taskEn": "Knowledge Q&A and decision support",
-  "inputDataEn": "Construction engineering Q&A datasets + construction regulatory documents"
+  "inputDataEn": "Construction engineering Q&A datasets + construction regulatory documents",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The knowledge-enhanced model retrieves and injects construction-domain evidence to answer evaluated construction questions.",
+  "operationCodingBasis": "abstract"
 }

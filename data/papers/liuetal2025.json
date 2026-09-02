@@ -30,5 +30,11 @@
   "pdfFile": "Liu et al. - 2025 - Balancing performance and cost of LLMs in a multi-agent framework for BIM data retrieval.pdf",
   "url": "https://doi.org/10.1080/17452007.2025.2456768",
   "taskEn": "BIM information retrieval",
-  "inputDataEn": "Natural language queries + BIM models"
+  "inputDataEn": "Natural language queries + BIM models",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The planner classifies BIM retrieval-query difficulty, assigns an appropriate LLM, and executes the resulting multi-agent data-retrieval workflow.",
+  "operationCodingBasis": "abstract"
 }

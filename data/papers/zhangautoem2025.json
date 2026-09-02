@@ -30,5 +30,11 @@
   "markdownFile": "Zhang et al. - 2025 - Automatic building energy model development and debugging using large language models agentic workfl",
   "taskEn": "Energy model development and debugging",
   "inputDataEn": "Text (natural language descriptions) + IDF files (EnergyPlus models)",
-  "pdfFile": "Zhang et al. - 2025 - Automatic building energy model development and debugging using large language models agentic workfl"
+  "pdfFile": "Zhang et al. - 2025 - Automatic building energy model development and debugging using large language models agentic workfl",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "The agentic workflow generates EnergyPlus IDF objects, runs validation, and iteratively debugs the model until it is error-free.",
+  "operationCodingBasis": "abstract"
 }

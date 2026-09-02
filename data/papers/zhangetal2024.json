@@ -28,5 +28,12 @@
   "pdfFile": "Zhang et al. - 2024 - Generative pre-trained transformers (GPT)-based automated data mining for building energy management.pdf",
   "url": "https://doi.org/10.1016/j.enbenv.2023.06.005",
   "taskEn": "Energy prediction / fault diagnosis / anomaly detection",
-  "inputDataEn": "Time series operational data / fault data / association rules"
+  "inputDataEn": "Time series operational data / fault data / association rules",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GPT-4 generates and runs data-mining code for energy-load prediction and performs fault-diagnosis and anomaly-detection tasks.",
+  "operationCodingBasis": "abstract"
 }

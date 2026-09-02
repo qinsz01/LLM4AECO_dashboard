@@ -29,5 +29,10 @@
   "pdfFile": "Bazrafshan, P. etal - 2025 - Semantic and lexical analysis of pre-trained vision language artificial intelligence models for auto....pdf",
   "markdownFile": "Bazrafshan, P. etal - 2025 - Semantic and lexical analysis of pre-trained vision language artificial intelligence models for auto....md",
   "taskEn": "Image captioning",
-  "inputDataEn": "Civil engineering and construction site images"
+  "inputDataEn": "Civil engineering and construction site images",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "ChatGPT-4V generates civil-engineering image descriptions that are evaluated against human descriptions using semantic and lexical similarity.",
+  "operationCodingBasis": "abstract"
 }

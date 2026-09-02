@@ -33,5 +33,11 @@
   "results": "The framework achieved accuracy rates of 83.5% (zero-shot) and 99.5% (few-shot) for classifying predefined labels, 98.6% and 99.5% for object category classification, 92.1% and 97.8% for filter parameter identification, 90.1% and 98.2% for projection parameter identification, 78.3% and 88.9% for identified value prediction, and 62.0% and 81.7% for extracted value recognition. The few-shot approach with only 2% of data achieved comparable F1 scores to the RoBERTa model trained on 80% of the same dataset. The ablation study revealed that the Instruction component is the most critical for NLU performance, while the Relevant Information component is particularly beneficial in zero-shot scenarios.",
   "url": "https://doi.org/10.1016/j.autcon.2023.105067",
   "taskEn": "Information retrieval",
-  "inputDataEn": "Text (natural language queries)"
+  "inputDataEn": "Text (natural language queries)",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "BIMS-GPT maps natural-language requests to BIM query labels and parameters, executes database searches, and returns text and 3D results.",
+  "operationCodingBasis": "abstract"
 }

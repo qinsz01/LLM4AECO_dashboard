@@ -34,5 +34,10 @@
   "markdownFile": "Postle and Salingaros - 2025 - LLM and Pattern Language Synthesis A Hybrid Tool for Human-Centered Architectural Design.md",
   "url": "https://doi.org/10.3390/buildings15142400",
   "taskEn": "Architectural design support",
-  "inputDataEn": "Text (pattern language descriptions)"
+  "inputDataEn": "Text (pattern language descriptions)",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "The hybrid tool synthesizes selected architectural patterns into experiential narratives and representative design images.",
+  "operationCodingBasis": "abstract"
 }

@@ -54,5 +54,11 @@
   "pdfFile": "Smetana et al. - 2025 - Evaluating Expertise of Concrete Pavement Construction in Modern Large Language Models.pdf",
   "markdownFile": "Smetana et al. - 2025 - Evaluating Expertise of Concrete Pavement Construction in Modern Large Language Models.md",
   "taskEn": "Knowledge assessment and training",
-  "inputDataEn": "Regulatory documents + construction manuals"
+  "inputDataEn": "Regulatory documents + construction manuals",
+  "operations": [
+    "generation_parameterization",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The study generates a concrete-pavement question set and evaluates RAG-enhanced models that retrieve domain evidence to answer it.",
+  "operationCodingBasis": "abstract"
 }

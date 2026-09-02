@@ -29,5 +29,11 @@
   "markdownFile": "Samsami etal - 2024 - Optimizing the Utilization of Generative Artificial Intelligence (AI) in the AEC Industry ChatGPT Pr....md",
   "url": "https://doi.org/10.3390/civileng5040049",
   "taskEn": "Review + methodology validation",
-  "inputDataEn": "Construction schedule data + OSHA safety hazard images"
+  "inputDataEn": "Construction schedule data + OSHA safety hazard images",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The evaluated prompts produce construction schedules, charts, checklists, and images and analyze durations, risks, and safety hazards.",
+  "operationCodingBasis": "abstract"
 }

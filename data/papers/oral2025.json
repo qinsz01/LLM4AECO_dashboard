@@ -27,5 +27,10 @@
   "markdownFile": "Oral, M. etal - 2025 - Usability of large language models for building construction safety risk assessment.md",
   "url": "https://doi.org/10.1108/ECAM-08-2024-1143",
   "taskEn": "Safety risk assessment",
-  "inputDataEn": "Text (risk descriptions)"
+  "inputDataEn": "Text (risk descriptions)",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "ChatGPT assigns probability and severity ratings to construction safety risks and is statistically compared with ten experts.",
+  "operationCodingBasis": "abstract"
 }

@@ -32,5 +32,12 @@
   ],
   "contribution": "提出结合微调LLM语义相似度匹配与标记属性图(LPG)的BIM语义富化方法，实现建筑构件拆卸潜力和建筑循环性指标(BCI)的自动计算；三个案例、两种LLM的BCI总体偏差平均2.2%，微调模型平均1.5%",
   "methodology": "构建包含四个步骤的工作流：(1)使用微调LLM通过语义文本相似度(STS)将IFC元素与建筑构件原型数据库匹配；(2)将IFC模型和原型数据转换为标记属性图并融合为统一循环性图；(3)富化连接类型、可达性和装配逻辑等拆卸相关属性；(4)基于循环性图计算构件级拆卸潜力和建筑级BCI指标",
-  "results": "三个案例、两种LLM下，自动匹配所得BCI相对人工基准的偏差均低于4%，总体平均2.2%；微调IfcMaterial2MP平均偏差1.5%，预训练text-embedding-3-small平均2.9%；但元素匹配准确率低于70%，建议采用半自动化工作流进行人工验证；开发了交互式IFC-循环性图查看器"
+  "results": "三个案例、两种LLM下，自动匹配所得BCI相对人工基准的偏差均低于4%，总体平均2.2%；微调IfcMaterial2MP平均偏差1.5%，预训练text-embedding-3-small平均2.9%；但元素匹配准确率低于70%，建议采用半自动化工作流进行人工验证；开发了交互式IFC-循环性图查看器",
+  "operations": [
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The workflow matches IFC elements to circularity archetypes, enriches a property graph with disassembly knowledge, and calculates circularity indicators.",
+  "operationCodingBasis": "abstract"
 }
