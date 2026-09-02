@@ -30,16 +30,29 @@ jobs:
           python -m json.tool data/association_repr_operation.json >/dev/null
           python -m json.tool data/association_operation_task.json >/dev/null
 
-      - name: Package site
+      - name: Package site with local ECharts
         shell: bash
         run: |
           mkdir -p preview
           cp -r index.html paper.html css js data preview/
           rm -rf preview/data/papers/*.pdf preview/data/papers/*.md || true
+          curl --fail --location --retry 3 \
+            https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js \
+            --output preview/js/echarts.min.js
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('preview/index.html')
+          text = p.read_text(encoding='utf-8')
+          text = text.replace(
+              'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js',
+              'js/echarts.min.js'
+          )
+          p.write_text(text, encoding='utf-8')
+          PY
 
       - name: Upload preview
         uses: actions/upload-artifact@v4
         with:
-          name: operation-analysis-preview
+          name: operation-analysis-preview-offline
           path: preview
           retention-days: 3
