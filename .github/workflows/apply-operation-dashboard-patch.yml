@@ -1,0 +1,52 @@
+name: Apply operation dashboard patch
+
+on:
+  push:
+    branches:
+      - feature/multilabel-operation-coding
+    paths:
+      - .github/operation_patch/RUN
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/multilabel-operation-coding
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Apply source patches
+        run: python .github/operation_patch/patch_dashboard.py
+
+      - name: Validate JavaScript and JSON
+        shell: bash
+        run: |
+          node --check js/app.js
+          node --check js/i18n.js
+          node --check js/charts.js
+          node --check js/operation-analysis.js
+          python -m json.tool data/operation_coding.json >/dev/null
+          python -m json.tool data/operation_evidence.json >/dev/null
+          python -m json.tool data/association_repr_operation.json >/dev/null
+          python -m json.tool data/association_operation_task.json >/dev/null
+          grep -q 'id="chart-association"' index.html
+
+      - name: Commit patched dashboard and remove temporary files
+        shell: bash
+        run: |
+          rm -rf .github/operation_patch
+          rm -f .github/workflows/apply-operation-dashboard-patch.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "feat: integrate multi-label operation analysis"
+          git push origin HEAD:feature/multilabel-operation-coding
