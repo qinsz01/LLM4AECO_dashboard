@@ -24,12 +24,12 @@ Only operations implemented and meaningfully evaluated in the reported workflow 
 
 Source level used for the present draft:
 
-- Accessible full text reviewed: **21**
+- Accessible full text reviewed: **22**
 - Publisher full text or detailed article page reviewed: **9**
-- Primary or indexed abstract reviewed: **68**
-- Detailed corpus record reviewed; independent primary text still pending: **74**
+- Primary or indexed abstract reviewed: **70**
+- Detailed corpus record reviewed; independent primary text still pending: **71**
 
-The dashboard records the source-verification level, coding confidence, operation evidence, and review-citation audit status for every paper. The 74 records without independently accessible primary text remain explicitly marked for further review. This is therefore a reviewable draft, not a claim that all 172 full texts have been independently re-read.
+The dashboard records the source-verification level, coding confidence, operation evidence, and review-citation audit status for every paper. The 71 records without independently accessible primary text remain explicitly marked for further review. This is therefore a reviewable draft, not a claim that all 172 full texts have been independently re-read.
 
 ## Citation-context audit
 
