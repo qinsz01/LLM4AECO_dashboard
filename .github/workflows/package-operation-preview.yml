@@ -1,0 +1,45 @@
+name: Package operation analysis preview
+
+on:
+  push:
+    branches:
+      - feature/multilabel-operation-coding
+    paths:
+      - .github/preview/RUN
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: feature/multilabel-operation-coding
+
+      - name: Validate site files
+        shell: bash
+        run: |
+          node --check js/app.js
+          node --check js/i18n.js
+          node --check js/operation-analysis.js
+          python -m json.tool data/operation_coding.json >/dev/null
+          python -m json.tool data/operation_evidence.json >/dev/null
+          python -m json.tool data/association_repr_operation.json >/dev/null
+          python -m json.tool data/association_operation_task.json >/dev/null
+
+      - name: Package site
+        shell: bash
+        run: |
+          mkdir -p preview
+          cp -r index.html paper.html css js data preview/
+          rm -rf preview/data/papers/*.pdf preview/data/papers/*.md || true
+
+      - name: Upload preview
+        uses: actions/upload-artifact@v4
+        with:
+          name: operation-analysis-preview
+          path: preview
+          retention-days: 3
