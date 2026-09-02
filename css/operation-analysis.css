@@ -1,0 +1,52 @@
+.chart-card-wide {
+    grid-column: 1 / -1;
+}
+
+.chart-container-association {
+    height: 560px;
+}
+
+.chart-note {
+    margin: -2px 0 10px;
+    color: var(--text-muted);
+    font-size: 0.82rem;
+    line-height: 1.55;
+}
+
+.tag-operation {
+    background: #edf2ff;
+    color: #4263eb;
+    border: 1px solid #dbe4ff;
+}
+
+.modal-operations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 8px 0 14px;
+}
+
+.audit-box {
+    margin-top: 16px;
+    padding: 12px 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: #f8f9fa;
+    font-size: 0.88rem;
+    line-height: 1.55;
+}
+
+.audit-box p {
+    margin: 5px 0;
+}
+
+.audit-warning {
+    color: #a61e4d;
+    font-weight: 600;
+}
+
+@media (max-width: 760px) {
+    .chart-container-association {
+        height: 720px;
+    }
+}
