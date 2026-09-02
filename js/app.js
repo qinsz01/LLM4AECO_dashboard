@@ -12,6 +12,7 @@
             phase: null,
             llmMethod: null,
             representation: null,
+            operation: null,
             year: null,
             search: ''
         },
@@ -46,18 +47,20 @@
             if (f.phase !== null && p.phase !== f.phase) return false;
             if (f.llmMethod !== null && p.llmMethod !== f.llmMethod) return false;
             if (f.representation !== null && p.representation !== f.representation) return false;
+            if (f.operation !== null && (!p.operations || p.operations.indexOf(f.operation) === -1)) return false;
             if (f.year !== null && p.year !== f.year) return false;
 
             if (searchLower) {
                 var haystack = [
                     p.title, p.citation, p.category, p.task, p.taskEn,
-                    p.phase, p.llmMethod, p.representation,
+                    p.phase, p.llmMethod, p.representation, p.operationEvidence,
                     p.contribution, p.abstract, p.journal, p.url, p.sourceUrl,
                     p.doi, p.pii, p.inputData, p.inputDataEn,
                     p.methodology, p.results
                 ].concat(
                     p.llmModels || [],
-                    p.keywords || []
+                    p.keywords || [],
+                    p.operations || []
                 ).filter(Boolean).join(' ').toLowerCase();
                 if (haystack.indexOf(searchLower) === -1) return false;
             }
@@ -90,6 +93,7 @@
         state.filters.phase = null;
         state.filters.llmMethod = null;
         state.filters.representation = null;
+        state.filters.operation = null;
         state.filters.year = null;
         state.filters.search = '';
         document.getElementById('search-input').value = '';
@@ -124,6 +128,7 @@
             { key: 'phase', label: I18n.ui('filterPhase'), value: f.phase },
             { key: 'llmMethod', label: I18n.ui('filterMethod'), value: f.llmMethod },
             { key: 'representation', label: I18n.ui('filterRepr'), value: f.representation },
+            { key: 'operation', label: I18n.ui('filterOperation'), value: f.operation },
             { key: 'year', label: I18n.ui('filterYear'), value: f.year }
         ];
 
@@ -179,6 +184,10 @@
                 ? escapeHtml(paper.contribution)
                 : escapeHtml(paper.abstract ? paper.abstract.substring(0, 200) + (paper.abstract.length > 200 ? '...' : '') : '');
 
+            var operationTags = (paper.operations || []).map(function (op) {
+                return '<span class="tag tag-operation" data-filter="operation" data-value="' + escapeHtml(op) + '">' + escapeHtml(I18n.field('operation', op)) + '</span>';
+            }).join('');
+
             card.innerHTML =
                 '<div class="card-title">' + escapeHtml(paper.title) + '</div>' +
                 '<div class="card-citation">' + escapeHtml(paper.citation) + '</div>' +
@@ -187,6 +196,7 @@
                     '<span class="tag tag-category" data-filter="category" data-value="' + escapeHtml(paper.category) + '">' + escapeHtml(I18n.field('category', paper.category)) + '</span>' +
                     '<span class="tag tag-method" data-filter="llmMethod" data-value="' + escapeHtml(paper.llmMethod) + '">' + escapeHtml(I18n.field('llmMethod', paper.llmMethod)) + '</span>' +
                     '<span class="tag tag-repr" data-filter="representation" data-value="' + escapeHtml(paper.representation) + '">' + escapeHtml(I18n.field('representation', paper.representation)) + '</span>' +
+                    operationTags +
                 '</div>' +
                 '<div class="card-contribution">' + contributionText + '</div>';
 
@@ -309,6 +319,34 @@
             ? '<p><strong>' + escapeHtml(I18n.ui('modalContribution')) + ':</strong> ' + escapeHtml(paper.contribution) + '</p>'
             : '<p><strong>' + escapeHtml(I18n.ui('modalAbstract')) + ':</strong> ' + escapeHtml(paper.abstract || '') + '</p>';
 
+        var operationTags = (paper.operations || []).map(function (op) {
+            return '<span class="tag tag-operation">' + escapeHtml(I18n.field('operation', op)) + '</span>';
+        }).join('');
+        var verificationLabels = {
+            full_text: { zh: '已核对可获取全文', en: 'Accessible full text reviewed' },
+            publisher_full_or_detailed_page: { zh: '已核对出版社全文或详细文章页面', en: 'Publisher full text or detailed article page reviewed' },
+            primary_or_indexed_abstract: { zh: '已核对原始或索引摘要', en: 'Primary or indexed abstract reviewed' },
+            detailed_corpus_record_only: { zh: '已核对详细语料记录，原始全文待补', en: 'Detailed corpus record reviewed; primary text pending' }
+        };
+        var citationLabels = {
+            consistent_with_primary_source: { zh: '综述引用与可获取原始来源一致', en: 'Review use is consistent with an accessible primary source' },
+            consistent_with_primary_abstract: { zh: '综述引用与原始摘要一致', en: 'Review use is consistent with the primary abstract' },
+            consistent_with_detailed_corpus_record_primary_check_pending: { zh: '综述引用与详细语料记录一致，原始全文待核', en: 'Review use is consistent with the detailed corpus record; primary-text check pending' },
+            not_cited_in_review: { zh: '当前综述正文未引用', en: 'Not cited in the current review text' }
+        };
+        function auditText(map, key) {
+            var item = map[key];
+            if (!item) return key || '';
+            return I18n.isZh() ? item.zh : item.en;
+        }
+        var auditHtml = paper.operationVerification ?
+            '<div class="audit-box">' +
+            '<p><strong>' + escapeHtml(I18n.ui('modalVerification')) + ':</strong> ' + escapeHtml(auditText(verificationLabels, paper.operationVerification)) + '</p>' +
+            '<p><strong>' + escapeHtml(I18n.ui('modalCitationAudit')) + ':</strong> ' + escapeHtml(auditText(citationLabels, paper.citationAuditStatus)) +
+            (paper.citationContextCount !== undefined ? ' (n=' + escapeHtml(String(paper.citationContextCount)) + ')' : '') + '</p>' +
+            (paper.primaryTextReviewRequired ? '<p class="audit-warning">' + escapeHtml(I18n.ui('modalPrimaryReviewPending')) + '</p>' : '') +
+            '</div>' : '';
+
         content.innerHTML =
             '<h2>' + escapeHtml(paper.title) + '</h2>' +
             '<p><strong>' + escapeHtml(I18n.ui('modalCitation')) + ':</strong> ' + escapeHtml(paper.citation) + '</p>' +
@@ -319,12 +357,17 @@
             '<p><strong>' + escapeHtml(I18n.ui('modalInputData')) + ':</strong> ' + escapeHtml((I18n.isEn() && paper.inputDataEn) ? paper.inputDataEn : (paper.inputData || '')) + '</p>' +
             '<p><strong>' + escapeHtml(I18n.ui('modalRepr')) + ':</strong> ' + escapeHtml(I18n.field('representation', paper.representation)) + '</p>' +
             '<p><strong>' + escapeHtml(I18n.ui('modalMethod')) + ':</strong> ' + escapeHtml(I18n.field('llmMethod', paper.llmMethod)) + '</p>' +
+            (operationTags ? '<p><strong>' + escapeHtml(I18n.ui('modalOperations')) + ':</strong></p><div class="modal-operations">' + operationTags + '</div>' : '') +
+            (paper.operationEvidence ? '<p><strong>' + escapeHtml(I18n.ui('modalOperationEvidence')) + ':</strong> ' + escapeHtml(paper.operationEvidence) + '</p>' : '') +
             contributionOrAbstract +
+            (paper.methodology ? '<p><strong>' + escapeHtml(I18n.ui('modalMethodology')) + ':</strong> ' + escapeHtml(paper.methodology) + '</p>' : '') +
+            (paper.results ? '<p><strong>' + escapeHtml(I18n.ui('modalResults')) + ':</strong> ' + escapeHtml(paper.results) + '</p>' : '') +
             (paper.url ? '<p><strong>' + escapeHtml(I18n.ui('modalDOI')) + ':</strong> <a href="' + escapeHtml(paper.url) + '" target="_blank" rel="noopener">' + escapeHtml(paper.url) + '</a></p>' : '') +
             (paper.llmModels && paper.llmModels.length ? '<p><strong>' + escapeHtml(I18n.ui('modalModels')) + ':</strong> ' + escapeHtml(paper.llmModels.join(', ')) + '</p>' : '') +
             (paper.keywords && paper.keywords.length ? '<p><strong>' + escapeHtml(I18n.ui('modalKeywords')) + ':</strong> ' + escapeHtml(paper.keywords.join(', ')) + '</p>' : '') +
             (paper.pdfFile ? '<p><strong>' + escapeHtml(I18n.ui('modalPDF')) + ':</strong> ' + escapeHtml(paper.pdfFile) + '</p>' : '') +
-            (paper.markdownFile ? '<p><strong>' + escapeHtml(I18n.ui('modalMarkdown')) + ':</strong> ' + escapeHtml(paper.markdownFile) + '</p>' : '');
+            (paper.markdownFile ? '<p><strong>' + escapeHtml(I18n.ui('modalMarkdown')) + ':</strong> ' + escapeHtml(paper.markdownFile) + '</p>' : '') +
+            auditHtml;
 
         document.getElementById('modal-overlay').classList.add('visible');
         document.body.style.overflow = 'hidden';
@@ -420,9 +463,38 @@
                         });
                 });
 
-                return Promise.all(fetches);
+                return Promise.all([
+                    Promise.all(fetches),
+                    fetch('data/operation_coding.json').then(function (res) {
+                        if (!res.ok) throw new Error('Failed to load operation_coding.json');
+                        return res.json();
+                    }),
+                    fetch('data/operation_evidence.json').then(function (res) {
+                        if (!res.ok) throw new Error('Failed to load operation_evidence.json');
+                        return res.json();
+                    })
+                ]);
             })
-            .then(function (papers) {
+            .then(function (loaded) {
+                var papers = loaded[0];
+                var coding = loaded[1];
+                var evidence = loaded[2];
+                var operationLegend = coding.legend.operations;
+                var verificationLegend = coding.legend.verification;
+                var citationLegend = coding.legend.citationAudit;
+                papers.forEach(function (paper) {
+                    var item = coding.papers[paper.id];
+                    if (!item) return;
+                    paper.operations = String(item.o || '').split('').filter(Boolean).map(function (code) {
+                        return operationLegend[code];
+                    }).filter(Boolean);
+                    paper.operationEvidence = evidence[paper.id] || '';
+                    paper.operationVerification = verificationLegend[item.v] || item.v;
+                    paper.citationAuditStatus = citationLegend[item.c] || item.c;
+                    paper.citationContextCount = item.n;
+                    paper.primaryTextReviewRequired = item.v === 'D';
+                });
+                state.operationSummary = coding.summary;
                 state.allPapers = papers;
                 applyFilters();
                 bindEvents();
