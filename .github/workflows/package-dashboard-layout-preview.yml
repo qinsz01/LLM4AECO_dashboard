@@ -1,0 +1,63 @@
+name: Package dashboard layout preview
+
+on:
+  push:
+    branches:
+      - fix/dashboard-layout-and-heatmap-legend
+    paths:
+      - .github/workflows/package-dashboard-layout-preview.yml
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/dashboard-layout-and-heatmap-legend
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript and data hooks
+        run: |
+          node --check js/app.js
+          node --check js/charts.js
+          node --check js/i18n.js
+          node --check js/dashboard-layout.js
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          index = json.loads(Path('data/index.json').read_text(encoding='utf-8'))
+          assert len(index) == 172
+          for entry in index:
+              paper = json.loads((Path('data') / entry['file']).read_text(encoding='utf-8'))
+              assert isinstance(paper.get('operations'), list)
+              assert paper.get('operationEvidence')
+          html = Path('index.html').read_text(encoding='utf-8')
+          for hook in ['overview', 'tasks', 'representations', 'operations', 'chart-task', 'chart-representation', 'chart-repr-operation', 'chart-operation-task']:
+              assert f'id="{hook}"' in html
+          PY
+      - name: Package offline preview
+        run: |
+          mkdir -p preview
+          cp -r index.html paper.html css js data preview/
+          rm -rf preview/data/papers/*.pdf preview/data/papers/*.md || true
+          curl --fail --location --retry 3 \
+            https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js \
+            --output preview/js/echarts.min.js
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('preview/index.html')
+          text = p.read_text(encoding='utf-8').replace(
+              'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js',
+              'js/echarts.min.js'
+          )
+          p.write_text(text, encoding='utf-8')
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: dashboard-layout-preview
+          path: preview
+          retention-days: 3
