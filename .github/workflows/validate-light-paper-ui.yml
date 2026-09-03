@@ -1,0 +1,71 @@
+name: Validate light paper UI
+
+on:
+  push:
+    branches:
+      - fix/light-mode-paper-detail
+    paths:
+      - .github/workflows/validate-light-paper-ui.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/light-mode-paper-detail
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript
+        run: |
+          node --check js/theme.js
+          node --check js/app.js
+          node --check js/paper-detail.js
+      - name: Build light-mode preview
+        run: |
+          mkdir -p preview
+          cp -r index.html paper.html css js data preview/
+          rm -rf preview/data/papers/*.pdf preview/data/papers/*.md || true
+          curl --fail --location --retry 3 https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js -o preview/js/echarts.min.js
+          sed -i 's#https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js#js/echarts.min.js#' preview/index.html
+          sed -i "s/localStorage.getItem(STORAGE_KEY) || 'dark'/localStorage.getItem(STORAGE_KEY) || 'light'/" preview/js/theme.js
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('preview/index.html')
+          text = p.read_text(encoding='utf-8')
+          text = text.replace('</body>', '<script>setTimeout(function(){var c=document.querySelector(".paper-card");if(c)c.click();},2500);</script></body>')
+          p.write_text(text, encoding='utf-8')
+          PY
+      - name: Render and inspect
+        run: |
+          python3 -m http.server 8765 --directory preview >/tmp/dashboard-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          sleep 2
+          CHROME=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser)
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1500,1150 --virtual-time-budget=10000 --screenshot=light-modal.png http://127.0.0.1:8765/index.html
+          "$CHROME" --headless --no-sandbox --disable-gpu --virtual-time-budget=10000 --dump-dom http://127.0.0.1:8765/index.html > rendered.html
+          test -s light-modal.png
+          if grep -q 'class="card-evidence"' rendered.html; then
+            echo 'Preview evidence still present' >&2
+            exit 1
+          fi
+          python - <<'PY'
+          from pathlib import Path
+          html = Path('rendered.html').read_text(encoding='utf-8')
+          info = html.find('modal-info-grid modal-info-grid-first')
+          abstract = html.find('modal-details-stack modal-details-intro')
+          operation = html.find('operation-panel operation-panel-secondary')
+          assert info >= 0 and abstract >= 0 and operation >= 0
+          assert info < abstract < operation
+          print({'info': info, 'abstract': abstract, 'operation': operation})
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: light-paper-ui-preview
+          path: light-modal.png
+          retention-days: 2
