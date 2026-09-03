@@ -3,19 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper Detail - LLM4AECO</title>
+    <title>Paper Detail · LLM4AECO</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body class="paper-page">
     <header class="header">
         <div class="header-inner">
-            <a href="index.html" class="back-link">← Back to Dashboard</a>
-            <h1 class="paper-title" id="paper-title">Loading...</h1>
+            <div class="paper-page-header">
+                <a href="index.html" class="back-link" data-i18n="paperBack">返回仪表板</a>
+                <button id="lang-toggle" class="btn btn-primary" type="button">EN</button>
+            </div>
         </div>
     </header>
-    <div class="paper-meta" id="paper-meta"></div>
-    <article class="paper-content" id="paper-content"><p>Loading paper content...</p></article>
+
+    <main class="paper-detail-shell">
+        <section class="paper-hero" id="paper-hero" aria-live="polite">
+            <h1 class="paper-title" id="paper-title">Loading…</h1>
+            <p class="paper-citation" id="paper-citation"></p>
+            <div class="paper-meta" id="paper-meta"></div>
+            <div class="paper-operation-card" id="paper-operation-card"></div>
+            <div class="paper-actions" id="paper-actions"></div>
+        </section>
+
+        <section class="paper-record-grid" id="paper-record-grid" aria-label="Structured paper record"></section>
+
+        <section class="paper-content-section">
+            <h2 class="paper-fulltext-heading" data-i18n="paperFullText">论文全文</h2>
+            <article class="paper-content" id="paper-content">
+                <p data-i18n="paperLoading">正在加载论文内容…</p>
+            </article>
+        </section>
+    </main>
+
+    <script src="js/i18n.js"></script>
     <script src="js/paper-detail.js"></script>
 </body>
 </html>
