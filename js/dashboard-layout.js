@@ -6,6 +6,14 @@
     var MUTED = '#9aa8bd';
     var GRID = '#2a3550';
     var CARD = '#151d2f';
+
+    function syncThemePalette() {
+        var styles = getComputedStyle(document.documentElement);
+        TEXT = styles.getPropertyValue('--chart-text').trim() || '#e8edf7';
+        MUTED = styles.getPropertyValue('--chart-muted').trim() || '#9aa8bd';
+        GRID = styles.getPropertyValue('--chart-grid').trim() || '#2a3550';
+        CARD = styles.getPropertyValue('--chart-card').trim() || '#151d2f';
+    }
     var REPRESENTATION_ORDER = ['文本', '结构化', '多模态', '图结构', '学习/工程化编码'];
     var REPRESENTATION_COLORS = {
         '文本': '#94a3b8',
@@ -257,6 +265,7 @@
     }
 
     function renderAll() {
+        syncThemePalette();
         var papers = selectedPapers();
         renderTaskDistribution(papers);
         renderRepresentationDistribution(papers);
@@ -303,6 +312,7 @@
     window.addEventListener('papersLoaded', renderAll);
     window.addEventListener('filtersChanged', renderAll);
     window.addEventListener('langChanged', renderAll);
+    window.addEventListener('themeChanged', renderAll);
     window.addEventListener('resize', function () {
         Object.keys(charts).forEach(function (key) {
             if (charts[key] && !charts[key].isDisposed()) charts[key].resize();

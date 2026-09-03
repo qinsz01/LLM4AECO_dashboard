@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    var lang = localStorage.getItem('llm4aeco-lang') || 'zh';
+    var lang = localStorage.getItem('llm4aeco-lang') || 'en';
     var OPERATION_ORDER = [
         'generation_parameterization',
         'editing_execution',
