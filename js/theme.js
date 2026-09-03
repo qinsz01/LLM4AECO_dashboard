@@ -53,6 +53,7 @@
         var operation = content.querySelector('.operation-panel');
         var details = content.querySelector('.modal-details-stack:not(.modal-details-intro)');
         if (!heading || !info || !operation || !details) return;
+        if (operation.getAttribute('data-polished-order') === 'true') return;
 
         rearrangingModal = true;
         info.classList.add('modal-info-grid-first');
@@ -73,6 +74,7 @@
         }
 
         operation.classList.add('operation-panel-secondary');
+        operation.setAttribute('data-polished-order', 'true');
         anchor.insertAdjacentElement('afterend', operation);
         operation.insertAdjacentElement('afterend', details);
         rearrangingModal = false;
