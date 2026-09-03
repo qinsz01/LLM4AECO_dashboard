@@ -33,6 +33,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "Stable Diffusion generates synthetic fracture imagery, and the multimodal GPT framework predicts tunnel rock-mass integrity from images, numbers, and text.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Stable Diffusion generates synthetic tunnel-fracture images, and TunnelRIP-GPT integrates image, numerical, and text inputs to predict and explain rock-mass integrity.",
+  "operationCodingBasis": "full_text"
 }

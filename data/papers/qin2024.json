@@ -35,6 +35,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The LLM translates design requests into executable calls to shear-wall generation and optimization tools and evaluates structural and material-performance criteria.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The LLM controller translates design requirements into executable method calls, invokes shear-wall generation and two-stage optimization, and evaluates empirical, mechanical, and material-consumption criteria.",
+  "operationCodingBasis": "full_text"
 }

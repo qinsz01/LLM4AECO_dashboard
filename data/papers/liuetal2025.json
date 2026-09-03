@@ -35,6 +35,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The planner classifies BIM retrieval-query difficulty, assigns an appropriate LLM, and executes the resulting multi-agent data-retrieval workflow.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The planner aligns query difficulty with a suitable LLM and executes BIM retrieval; performance/cost comparison is researcher-side.",
+  "operationCodingBasis": "full_text"
 }

@@ -37,6 +37,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "Multimodal LLMs audit street-view images for ten built-environment features and are evaluated against DeepLabv3+ outputs.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Multimodal LLMs detect ten built-environment features in street-view images and are benchmarked against DeepLabv3+ audit outputs.",
+  "operationCodingBasis": "full_text"
 }

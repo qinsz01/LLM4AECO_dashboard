@@ -33,6 +33,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "Computer vision derives activity and productivity information from site videos, and ChatGPT generates structured daily construction reports.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Computer vision detects and tracks site activities and calculates productivity, while ChatGPT converts the derived information into structured daily construction reports tested on a live project.",
+  "operationCodingBasis": "full_text"
 }

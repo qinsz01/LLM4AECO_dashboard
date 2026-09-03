@@ -38,6 +38,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "The fine-tuned LLM generates site-specific severe-weather preparedness recommendations for construction materials and temporary structures.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Fine-tuned models generate site-specific severe-weather preparedness recommendations for materials and temporary structures, evaluated against curated answers.",
+  "operationCodingBasis": "full_text"
 }

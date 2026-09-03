@@ -40,6 +40,6 @@
   "taskEn": "Review/Survey",
   "inputDataEn": "Literature data (Scopus & Google Scholar)",
   "operations": [],
-  "operationEvidence": "This is a secondary review and does not evaluate a specific AECO LLM workflow under the four operation classes.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "This is a mixed systematic/bibliometric review and synthesis framework, not an evaluated paper-specific LLM workflow.",
+  "operationCodingBasis": "full_text"
 }

@@ -38,8 +38,9 @@
   "inputDataEn": "Residential interior photos, architectural floor plans",
   "pdfFile": "Li et al. - 2025 - Estimating demolition waste from residential interior photos A Large Language Model solution",
   "operations": [
-    "analysis_compliance_diagnosis"
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
   ],
-  "operationEvidence": "The framework classifies interior finish types from photos and estimates room-level demolition waste from the recognized materials and floor-plan geometry.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The framework classifies finishes, segments walls, matches photo evidence to floor-plan rooms, and calculates room-level demolition waste.",
+  "operationCodingBasis": "full_text"
 }

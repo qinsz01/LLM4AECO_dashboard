@@ -44,6 +44,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "Qwen-AEC classifies building-code text and performs named-entity recognition, with both tasks evaluated by F1 scores.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Instruction-tuned Qwen-AEC performs building-code text classification and named-entity recognition, evaluated by F1; no retrieval or tool execution is implemented.",
+  "operationCodingBasis": "full_text"
 }

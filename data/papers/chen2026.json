@@ -38,6 +38,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The agentic workflow extracts design parameters, generates Pareto-optimal UHPC beam designs, invokes finite-element analyses, and supports result evaluation.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Coordinated agents retrieve code/formula inputs, generate candidate UHPC designs, invoke FEA/optimisation tools, and interpret Pareto results.",
+  "operationCodingBasis": "full_text"
 }

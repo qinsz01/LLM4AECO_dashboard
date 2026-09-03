@@ -33,6 +33,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "ChatGPT generates personalized, trade-specific safety-training dialogue and guidance inside the iSafeTrainer virtual environment.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The ChatGPT-powered virtual instructor dynamically generates personalized, trade-specific safety dialogue, feedback, and guidance; the evaluated system does not diagnose site state or invoke construction tools.",
+  "operationCodingBasis": "full_text"
 }

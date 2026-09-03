@@ -39,6 +39,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The study uses LLMs to classify accident-report attributes including root cause, injury cause, severity, affected body part, and accident time.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The LLMs classify five accident-report attributes, and the paper evaluates those classifications against labeled data.",
+  "operationCodingBasis": "full_text"
 }

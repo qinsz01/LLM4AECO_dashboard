@@ -37,6 +37,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The workflow retrieves resilience methods, generates machine-readable scenarios, runs urban-scale EnergyPlus simulations through MCP, and derives resilience indicators.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The LLM workflow retrieves resilience methods, generates machine-readable scenarios, invokes urban-scale EnergyPlus through MCP tools, and calculates and interprets resilience indicators.",
+  "operationCodingBasis": "full_text"
 }

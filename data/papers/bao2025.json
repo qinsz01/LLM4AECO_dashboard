@@ -33,6 +33,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "DT-GPT extracts O&M-relevant components from drawings and generates function and non-geometric data requirement lists for owner guidelines.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "DT-GPT generates O&M function/data lists and extracts O&M components from drawings, with semantic-similarity and extraction-accuracy evaluation.",
+  "operationCodingBasis": "full_text"
 }

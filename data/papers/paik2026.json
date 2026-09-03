@@ -38,6 +38,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The ontology-driven MCP server grounds and validates agent requests, invokes structural-design functions, and checks logical and engineering integrity.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The ontology-driven MCP server maps requests to formal structural-design knowledge, invokes design and reasoning functions, and validates requests and slab-design constraints in real time.",
+  "operationCodingBasis": "full_text"
 }

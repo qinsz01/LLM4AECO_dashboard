@@ -40,6 +40,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The similarity-based LLM classifier assigns road-inspection comments to maintenance categories under limited labeled data.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The proposed semantic-similarity classifier assigns road-inspection comments to maintenance categories and is evaluated as a classification method; it does not retrieve records or execute an external system.",
+  "operationCodingBasis": "full_text"
 }

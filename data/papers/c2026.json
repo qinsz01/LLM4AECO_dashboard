@@ -31,6 +31,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The ontology-grounded LLM infers construction activity labels and associated entities from symbolic representations derived from site images.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The ontology-conditioned LLM infers construction activities and entities from image-derived symbolic inputs, evaluated with activity and element metrics; ontology context is supplied rather than retrieved.",
+  "operationCodingBasis": "full_text"
 }

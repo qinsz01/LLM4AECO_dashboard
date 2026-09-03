@@ -33,6 +33,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The framework interprets SHAP and control constraints and generates human-readable explanations of machine-learning control decisions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The framework interprets SHAP attributions and control constraints and generates human-readable explanations of machine-learning control signals; actuation is not delegated to the LLM.",
+  "operationCodingBasis": "full_text"
 }

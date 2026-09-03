@@ -39,8 +39,9 @@
   "taskEn": "Energy retrofit decision-making",
   "inputDataEn": "Residential building parameters + energy simulation data + retrofit cost data",
   "operations": [
+    "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The study evaluates LLM recommendations for CO2-reduction and payback-period retrofit decisions against EnergyPlus-derived reference rankings.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The evaluated LLMs analyze building and retrofit inputs, select and explain recommended measures for carbon reduction and payback objectives, and are compared with EnergyPlus-derived rankings.",
+  "operationCodingBasis": "full_text"
 }

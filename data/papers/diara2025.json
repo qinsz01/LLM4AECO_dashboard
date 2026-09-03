@@ -38,6 +38,6 @@
     "generation_parameterization",
     "editing_execution"
   ],
-  "operationEvidence": "The LLM generates Python scripts that are executed in FreeCAD to create parametric HBIM elements for the Parthenon.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "AI agents generate FreeCAD Python scripts that are run to create and modify parametric HBIM elements in the Parthenon experiment.",
+  "operationCodingBasis": "full_text"
 }

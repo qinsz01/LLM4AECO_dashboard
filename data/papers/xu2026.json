@@ -36,6 +36,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "ChatGPT and text-to-image models generate synthetic PPE scenarios, while the object-guided VLM judges compliance and supports automated reporting.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT and text-to-image models create traceable synthetic PPE scenarios, while the object-guided VLM reasons over detected PPE to issue compliance judgments and structured reports.",
+  "operationCodingBasis": "full_text"
 }

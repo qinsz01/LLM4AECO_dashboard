@@ -35,6 +35,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "ChatGPT acts as a live VR safety instructor and generates contextual multilingual training responses for construction workers.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT provides contextual multilingual VR safety instruction and the system's training effect is evaluated in a participant pre/post study.",
+  "operationCodingBasis": "full_text"
 }

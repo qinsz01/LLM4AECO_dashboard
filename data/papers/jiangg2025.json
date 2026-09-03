@@ -51,6 +51,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "The study evaluates prompt strategies for generating complete building energy models from natural-language descriptions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The study tests prompt strategies across 18 LLMs for generating complete EnergyPlus IDF models; it evaluates files without a reported execution workflow.",
+  "operationCodingBasis": "full_text"
 }

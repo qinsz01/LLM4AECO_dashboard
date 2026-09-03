@@ -37,6 +37,6 @@
   "operations": [
     "retrieval_alignment"
   ],
-  "operationEvidence": "The RAG knowledge base segments and ranks construction standards and retrieves relevant chunks for domain question answering.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The construction knowledge base dynamically segments and ranks technical standards and retrieves the most semantically relevant chunks to ground domain question answering.",
+  "operationCodingBasis": "full_text"
 }

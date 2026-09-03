@@ -34,6 +34,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "AcciVid retrieves graph-encoded safety regulations, analyzes accident videos for violations, and generates draft investigation reports.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "AcciVid analyzes accident-video events, maps them to graph-encoded safety entities and retrieved regulations, and generates explanations, violation findings, and draft investigation-report content.",
+  "operationCodingBasis": "full_text"
 }

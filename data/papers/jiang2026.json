@@ -35,6 +35,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The multi-stage RAG system retrieves linked building regulations and produces traceable, domain-specific answers to regulatory questions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The dual-stage system retrieves linked regulation blocks/questions and extracts/reasons over them to answer regulatory inquiries with traceable evidence.",
+  "operationCodingBasis": "full_text"
 }

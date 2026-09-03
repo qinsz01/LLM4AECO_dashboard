@@ -40,6 +40,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "SDA-Chat identifies and interprets post-earthquake structural damage from images across seven assessment tasks.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "SDA-Chat assesses seven post-earthquake damage attributes from images and produces textual interpretations, with task-level accuracy evaluation.",
+  "operationCodingBasis": "full_text"
 }

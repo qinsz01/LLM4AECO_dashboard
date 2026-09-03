@@ -36,6 +36,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The domain-pretrained models perform construction-management text classification and named-entity recognition.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The domain-pretrained models perform and are evaluated on construction-management text classification and named-entity recognition tasks.",
+  "operationCodingBasis": "full_text"
 }

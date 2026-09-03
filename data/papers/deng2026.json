@@ -37,6 +37,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The method retrieves design and maintenance knowledge and uses graph-constrained rules plus an LLM to classify and explain HVAC efficiency faults.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The method retrieves HVAC design/maintenance context and uses graph-constrained rules plus an LLM to diagnose and explain efficiency faults against expert labels.",
+  "operationCodingBasis": "full_text"
 }

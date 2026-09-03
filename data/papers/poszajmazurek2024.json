@@ -34,6 +34,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The prototypes estimate building carbon impacts and generate lower-carbon material and design recommendations from BIM or early design inputs.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The LLM-based assistants generate lower-carbon material and design recommendations, while the integrated prototypes calculate or predict embodied-carbon impacts from early-design and IFC inputs.",
+  "operationCodingBasis": "full_text"
 }

@@ -38,6 +38,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The method retrieves analogous energy models, reconstructs geometry from sketches, generates complete simulation models, and validates their hourly-load behavior.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The method reconstructs sketch geometry, retrieves analogous model parameters, generates executable EnergyPlus models, runs them, and analyzes hourly-load behavior and parameter plausibility.",
+  "operationCodingBasis": "full_text"
 }

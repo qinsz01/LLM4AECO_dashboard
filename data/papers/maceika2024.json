@@ -36,6 +36,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "ChatGPT generates detailed Likert-scale descriptions for modular-house evaluation criteria that are checked by an expert.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT generates criterion-specific Likert scale descriptions used in a Delphi-based modular-house assessment; experts, not the model, perform the case evaluation.",
+  "operationCodingBasis": "full_text"
 }

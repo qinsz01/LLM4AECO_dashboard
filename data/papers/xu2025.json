@@ -34,6 +34,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The platform runs real-time energy and infection-risk simulations, evaluates health, energy, and comfort trade-offs, and generates occupant recommendations and alerts.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The platform integrates real-time sensor data with energy and infection-risk simulations, detects indoor-environment abnormalities, and generates occupant recommendations and facility alerts.",
+  "operationCodingBasis": "full_text"
 }

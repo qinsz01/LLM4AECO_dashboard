@@ -30,9 +30,10 @@
   "taskEn": "Construction planning constraint Q&A",
   "inputDataEn": "BIM models + meeting minutes + construction logs + schedules",
   "operations": [
+    "editing_execution",
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "Graph RAG maps natural-language questions to Cypher queries over BIM-linked planning constraints and derives answers, filters, and calculations.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Graph RAG generates and executes Cypher against the constraint KG, retrieves BIM-linked constraints, and derives/calculates answers to complex queries.",
+  "operationCodingBasis": "full_text"
 }

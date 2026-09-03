@@ -38,6 +38,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "BIMS-GPT maps natural-language requests to BIM query labels and parameters, executes database searches, and returns text and 3D results.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "BIMS-GPT maps natural-language intent and parameters to structured BIM database queries, executes the searches, and returns grounded text summaries with linked 3D results.",
+  "operationCodingBasis": "full_text"
 }

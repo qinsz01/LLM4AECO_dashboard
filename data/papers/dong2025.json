@@ -40,6 +40,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The agents align user requests with Revit functions, generate and check API code, execute it in Revit, and assess the resulting coordination tasks.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Agents align requests with Revit tasks, generate/check code, execute BIM creation and coordination actions, and evaluate resulting models and retrieval tasks.",
+  "operationCodingBasis": "full_text"
 }

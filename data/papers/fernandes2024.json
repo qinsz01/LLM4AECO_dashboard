@@ -39,6 +39,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "DAVE maps text or voice requests to defined Revit functions and executes model queries and updates through the Revit API.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "DAVE classifies requests into defined Revit functions and executes model queries/updates, with success and error analysis; chat responses are incidental.",
+  "operationCodingBasis": "full_text"
 }

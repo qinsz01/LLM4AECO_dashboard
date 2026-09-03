@@ -34,6 +34,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "AutoBEE retrieves standards, modifies IDF models, runs EnergyPlus simulations, analyzes results, and generates structured performance reports.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "AutoBEE retrieves relevant knowledge, modifies IDF parameters, invokes EnergyPlus through its tool library, analyzes simulated energy and comfort results, and produces structured reports and compliance conclusions.",
+  "operationCodingBasis": "full_text"
 }

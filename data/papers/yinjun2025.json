@@ -35,6 +35,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "FP-LLaMa generates floor plans, while FloorPlan-MPS analyzes functionality, circulation, and architectural reasonableness to provide alignment rewards.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "FP-LLaMa generates floor plans, while FloorPlan-MPS evaluates functionality, circulation, and overall architectural reasonableness and supplies alignment rewards.",
+  "operationCodingBasis": "full_text"
 }

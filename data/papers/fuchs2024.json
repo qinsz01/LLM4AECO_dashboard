@@ -34,6 +34,6 @@
     "generation_parameterization",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The method retrieves representative examples for in-context learning and translates building regulations into computable LegalRuleML representations.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The system retrieves n-gram-selected in-context examples and generates LegalRuleML representations; execution-based checking is explicitly future work.",
+  "operationCodingBasis": "full_text"
 }

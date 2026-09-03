@@ -1,8 +1,8 @@
 # Data-processing operation coding
 
-Each paper was reviewed individually at the abstract level. The `methodology` and
-`results` summaries in the record were consulted when the abstract alone was
-ambiguous.
+Each paper was reviewed individually against the highest available primary
+source. Full texts were checked for all 172 papers. A locally misfiled PDF was
+rejected and replaced with the correct publisher PDF.
 
 The `operations` field is multi-label and uses four values:
 
@@ -20,6 +20,17 @@ Only operations implemented and meaningfully evaluated in the reported workflow
 are coded. Background discussion, future work, incidental pipeline steps, and
 researcher-side evaluation alone are excluded.
 
+Boundary rules used in the review:
+
+- ordinary question-answer prose is not generation;
+- researcher-computed metrics are not system analysis;
+- mentioning software or an API is not execution;
+- vector retrieval is retrieval, while executed SQL, Cypher, or SPARQL queries
+  are both retrieval and execution;
+- a recommendation is generation only when it is an implemented and evaluated
+  task output.
+
 All 172 records contain `operations`, `operationEvidence`, and
-`operationCodingBasis`. Two secondary or perspective records do not evaluate a
-specific AECO LLM workflow and therefore have an empty `operations` array.
+`operationCodingBasis`, with `full_text` recorded as the basis for every paper.
+Two review or perspective records do not evaluate a specific AECO LLM workflow
+and therefore have an empty `operations` array.

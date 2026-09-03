@@ -36,6 +36,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "BuildingGPT retrieves ontology entities and relations, generates SPARQL queries, executes them over Brick models, and returns grounded answers.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "BuildingGPT retrieves graph context, generates SPARQL as an alignment artifact, and executes it over Brick models; natural-language answers are incidental.",
+  "operationCodingBasis": "full_text"
 }

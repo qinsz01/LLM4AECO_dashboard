@@ -42,6 +42,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "AECBench evaluates LLMs across authentic AEC tasks spanning code retrieval, document generation, reasoning, calculation, and knowledge application.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "AECBench directly evaluates LLMs on AEC retrieval, reasoning/calculation/evaluation, and professional document/design-proposal creation tasks.",
+  "operationCodingBasis": "full_text"
 }

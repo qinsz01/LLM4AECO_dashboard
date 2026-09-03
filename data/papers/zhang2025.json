@@ -37,6 +37,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "PV-GPT maps natural-language requests to Brick, API, and time-series queries, executes modular functions, and derives photovoltaic performance answers.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "PV-GPT maps natural-language requests to Brick entities and registered primitives, executes semantic, API, and time-series queries, and calculates photovoltaic performance answers from real data.",
+  "operationCodingBasis": "full_text"
 }

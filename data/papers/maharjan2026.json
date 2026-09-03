@@ -40,6 +40,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "BrDSL extracts and retrieves bridge precedents, generates constrained specifications, builds and runs Abaqus models, and validates structural responses.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "BrDSL retrieves/extracts precedent specifications, generates constrained bridge JSON, builds/runs Abaqus models, and validates code/structural response.",
+  "operationCodingBasis": "full_text"
 }

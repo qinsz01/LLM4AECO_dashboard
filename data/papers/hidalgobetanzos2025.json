@@ -32,8 +32,9 @@
   "taskEn": "Renovation measure diagnosis",
   "inputDataEn": "Building information + text (current condition descriptions)",
   "operations": [
+    "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "ChatGPT diagnoses feasible building-energy renovation measures and estimates preliminary costs and payback for comparison with expert solutions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT diagnoses renovation needs and generates evaluated retrofit recommendations, preliminary costs, and payback information against expert/literature cases.",
+  "operationCodingBasis": "full_text"
 }

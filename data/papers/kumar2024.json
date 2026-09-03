@@ -46,6 +46,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The demonstrated workflows retrieve geotechnical context, generate code, invoke engineering tools through ReAct, and solve soil classification and safety-analysis problems.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The demonstrated geotechnical workflows retrieve vector context, generate/execute Python or ReAct tool calls, and solve soil-classification and engineering-analysis problems.",
+  "operationCodingBasis": "full_text"
 }

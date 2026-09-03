@@ -35,6 +35,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "HouseMind performs floor-plan understanding, generates controllable layouts from instructions, and edits existing layouts through unified spatial tokens.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "HouseMind infers room functions and spatial relations, generates complete controllable floor plans from text and outlines, and edits existing layouts through unified spatial tokens.",
+  "operationCodingBasis": "full_text"
 }

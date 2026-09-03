@@ -31,9 +31,10 @@
   "inputDataEn": "Mixed data (MEP schematic images + BIM)",
   "operations": [
     "generation_parameterization",
+    "editing_execution",
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The proof-of-concept aligns MEP schematics with BIM entities, generates Brick-based structured representations, and identifies cross-representation inconsistencies.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The proof of concept extracts and aligns MEP schematic and BIM entities into Brick graphs, executes SPARQL queries on both graphs, and generates structured representations and discrepancy findings.",
+  "operationCodingBasis": "full_text"
 }

@@ -35,6 +35,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The custom GPT calculates construction work-item costs and bid prices and compares the estimates with manual ground truth and real bids.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT calculates itemized costs and bid prices and is compared with manual ground truth/real bids; the principal output is an estimate, not a new design artifact.",
+  "operationCodingBasis": "full_text"
 }

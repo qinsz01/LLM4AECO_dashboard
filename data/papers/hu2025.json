@@ -36,6 +36,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The agents query Brick models, generate PI-controller code, execute and tune it in BOPTEST, and evaluate HVAC control performance.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Agents parse Brick models, generate PI-controller code, execute/tune it in BOPTEST, and evaluate control performance across three cases.",
+  "operationCodingBasis": "full_text"
 }

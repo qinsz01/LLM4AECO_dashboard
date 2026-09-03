@@ -31,6 +31,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The pipeline diagnoses time-series data quality, calculates an interpretable quality score, and generates actionable LLM narratives from diagnostic results.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The framework detects missingness, timestamp, and sensor-quality problems, calculates interpretable quality scores and degradation risks, and has the LLM generate actionable narratives from diagnostic charts and tables.",
+  "operationCodingBasis": "full_text"
 }

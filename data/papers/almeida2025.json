@@ -33,8 +33,9 @@
   "taskEn": "Building energy prediction and optimization",
   "inputDataEn": "Time series data",
   "operations": [
+    "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The workflow predicts HVAC efficiency and uses GPT-4 to interpret the results and produce energy-management insights.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GPT-4 interprets LSTM energy forecasts and generates context-specific operating recommendations; no control action is executed.",
+  "operationCodingBasis": "full_text"
 }

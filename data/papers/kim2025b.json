@@ -36,6 +36,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The vision-language model generates construction-image captions and predicts safety status with contextual justifications.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The LVLM produces image captions/contextual explanations and classifies construction safety status, with textual and safety assessments evaluated.",
+  "operationCodingBasis": "full_text"
 }

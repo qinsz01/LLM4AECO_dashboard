@@ -40,6 +40,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The method groups and interprets CAD material annotations, classifies functions and object types, and uses the Revit API to generate semantically enriched BIM objects.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The method associates CAD annotations with material layers, classifies functions/object types, and uses the Revit API to create enriched BIM objects.",
+  "operationCodingBasis": "full_text"
 }

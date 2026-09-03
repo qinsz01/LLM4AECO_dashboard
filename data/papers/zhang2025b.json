@@ -34,8 +34,9 @@
   "results": "探索性实验验证了LLM生成EnergyPlus模型的可行性，IDF文件生成仅需196秒，生成的建筑模型年能耗模拟结果为8681 kWh（其中制冷2380 kWh，供暖6301 kWh），最大制冷负荷5956 W，最大供暖负荷13112 W。",
   "operations": [
     "generation_parameterization",
-    "editing_execution"
+    "editing_execution",
+    "retrieval_alignment"
   ],
-  "operationEvidence": "Alongside its review, the exploratory workflow retrieves prior cases, generates an EnergyPlus IDF model, and runs the model to obtain load results.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The exploratory workflow retrieves similar EnergyPlus models and requirement text, generates a complete IDF model, and runs EnergyPlus to obtain load results.",
+  "operationCodingBasis": "full_text"
 }

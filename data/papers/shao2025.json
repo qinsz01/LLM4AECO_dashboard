@@ -34,6 +34,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "GPT-4 and a text-to-image model generate synthetic crack datasets that are evaluated through crack classification and detection tasks.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GPT-4 creates detailed crack-scene prompts and the text-to-image model generates a synthetic dataset whose value is evaluated through crack classification and object-detection experiments.",
+  "operationCodingBasis": "full_text"
 }

@@ -38,6 +38,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The framework aligns segmented LiDAR instances with BIM objects, enriches the BIM model, and quantifies construction progress and environmental performance.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The MLLM segments point clouds, aligns instances with BIM objects, enriches BIM properties, and quantifies progress/environmental performance.",
+  "operationCodingBasis": "full_text"
 }

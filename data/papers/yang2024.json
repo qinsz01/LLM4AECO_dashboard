@@ -33,6 +33,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "The prompt-based framework translates International Building Code requirements into machine-processable Picat logic clauses.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The prompt-based translator converts IBC requirements into machine-processable Picat logic clauses; the study evaluates translation quality rather than executing compliance checks.",
+  "operationCodingBasis": "full_text"
 }

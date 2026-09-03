@@ -40,6 +40,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The agents generate BIM-authoring code, execute it through Vectorworks APIs, and iteratively check the resulting models against design rules.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Text2BIM generates imperative BIM API code, executes it in Vectorworks, and iteratively checks/fixes model requirements.",
+  "operationCodingBasis": "full_text"
 }

@@ -35,6 +35,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "The LLM-driven BIM-DfMA framework produces design and fabrication or assembly guidance to support free-form prefabricated building workflows.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "LLM-driven simulated DfMA conversations generate coordination/design/fabrication guidance; BIM construction itself predates the LLM experiment and no retrieval or tool execution is tested.",
+  "operationCodingBasis": "full_text"
 }

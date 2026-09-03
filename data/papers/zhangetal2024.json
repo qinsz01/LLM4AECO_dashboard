@@ -34,6 +34,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "GPT-4 generates and runs data-mining code for energy-load prediction and performs fault-diagnosis and anomaly-detection tasks.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GPT-4 generates data-preprocessing, feature-engineering, training, evaluation, and visualization code that is run on building data, and performs fault diagnosis and anomaly detection.",
+  "operationCodingBasis": "full_text"
 }

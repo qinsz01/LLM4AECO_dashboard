@@ -34,6 +34,6 @@
     "generation_parameterization",
     "editing_execution"
   ],
-  "operationEvidence": "EPlus-LLMv2 generates complex EnergyPlus IDF models and its interface can run the resulting models in EnergyPlus for validation and visualization.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "EPlus-LLMv2 generates complex IDF models and runs/visualizes EnergyPlus simulations for validation; result comparison is researcher-side.",
+  "operationCodingBasis": "full_text"
 }

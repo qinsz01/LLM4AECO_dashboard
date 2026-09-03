@@ -38,6 +38,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The workflow matches IFC elements to circularity archetypes, enriches a property graph with disassembly knowledge, and calculates circularity indicators.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The workflow matches IFC elements to circularity archetypes, enriches the labeled property graph, and calculates disassembly/BCI indicators against manual benchmarks.",
+  "operationCodingBasis": "full_text"
 }

@@ -33,8 +33,9 @@
   "inputDataEn": "Text (project case descriptions)",
   "pdfFile": "Nyqvist et al. - 2024 - Can ChatGPT exceed humans in construction project risk management",
   "operations": [
+    "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "ChatGPT identifies, analyzes, and proposes controls for construction-project risks, with its plans compared against expert responses.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GPT-4 identifies and analyzes construction-project risks and generates risk-control recommendations and complete risk-management plans that are blindly compared with expert plans.",
+  "operationCodingBasis": "full_text"
 }

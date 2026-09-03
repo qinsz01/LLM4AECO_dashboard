@@ -41,8 +41,9 @@
   "results": "在11,020题的施工管理题库上，ConSTRAG使用Qwen2.5-32B取得平均分81.25，比NaiveRAG基准高6.94分；专家问卷评估五个维度平均得分4.16/5，其中事故案例相关性得分最高4.28；框架在填空题等细粒度知识检索任务上优势尤为显著",
   "operations": [
     "generation_parameterization",
+    "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The framework retrieves knowledge-graph and vector-database evidence and generates personalized construction-safety training materials and questions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ConSTRAG classifies and extracts accident knowledge, retrieves profile-specific KG/vector evidence, and generates evaluated training materials and questions.",
+  "operationCodingBasis": "full_text"
 }

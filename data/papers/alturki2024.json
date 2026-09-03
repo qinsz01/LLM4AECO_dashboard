@@ -34,6 +34,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "GPT-4o interprets regulatory clauses through RASE tagging and generates structured YAML files evaluated for structural and semantic accuracy.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GPT-4o interprets regulatory clauses and generates RASE-structured YAML, evaluated for structural and semantic fidelity.",
+  "operationCodingBasis": "full_text"
 }

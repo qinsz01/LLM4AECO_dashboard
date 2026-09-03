@@ -31,8 +31,9 @@
   "results": "识别出BIM查询中最重要的实体类型（建筑产品、空间对象、建筑）、属性约束（元素特定属性、属性、数量、类型、材料）、关系约束（放置、包含、空间边界、重叠）和问题形式（元素选择、属性值查询、计算推理）；NLI方法相比传统方法节省84.9%和81.0%的查询时间，但准确率为85.7%。",
   "operations": [
     "editing_execution",
+    "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The tested natural-language interface maps practitioner questions to BIM entities and constraints and executes model information queries.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The tested NLI maps practitioner questions and constraints to BIM entities, generates and executes SPARQL/BIM queries, and supports selection, counting, and inferred-data calculations.",
+  "operationCodingBasis": "full_text"
 }

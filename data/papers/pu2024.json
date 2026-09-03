@@ -33,6 +33,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "AutoRepo interprets construction-site inspection imagery and generates standardized inspection reports evaluated for quality and regulatory coverage.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "AutoRepo interprets site-inspection images, identifies relevant safety and quality conditions, and generates standardized construction inspection reports evaluated by professionals.",
+  "operationCodingBasis": "full_text"
 }

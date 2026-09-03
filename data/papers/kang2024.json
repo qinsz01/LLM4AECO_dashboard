@@ -32,6 +32,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The LLM-based Earthwork Network Architecture classifies quantity-takeoff information and estimates earthwork quantities from CAD-derived features.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ENA classifies CAD-derived earthwork quantity information and estimates takeoff quantities, evaluated by loss, QTC accuracy, and convergence.",
+  "operationCodingBasis": "full_text"
 }

@@ -35,6 +35,6 @@
     "generation_parameterization",
     "retrieval_alignment"
   ],
-  "operationEvidence": "RAG-GPT retrieves construction-safety regulations and cases and generates detailed safety information for evaluated user questions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "RAG-GPT retrieves construction-safety laws, regulations, and cases and generates detailed safety information for standardized user questions evaluated by experts.",
+  "operationCodingBasis": "full_text"
 }

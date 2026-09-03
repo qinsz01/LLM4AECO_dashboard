@@ -33,6 +33,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "ChatGPT generates occupancy schedules that are applied in DesignBuilder simulations and evaluated against survey and measured energy patterns.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT predicts/generates occupant schedules that are applied in DesignBuilder simulations and assessed against surveys and measured energy patterns.",
+  "operationCodingBasis": "full_text"
 }

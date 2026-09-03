@@ -33,6 +33,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "ChatGPT-4V generates civil-engineering image descriptions that are evaluated against human descriptions using semantic and lexical similarity.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT-4V generates civil-engineering image descriptions that are compared with human descriptions using lexical and semantic metrics.",
+  "operationCodingBasis": "full_text"
 }

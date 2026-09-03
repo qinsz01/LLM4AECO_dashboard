@@ -33,6 +33,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The LLM extracts exterior-wall materials and dimensions from energy certificates, enabling prediction and calculation of material stocks and associated emissions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The LLM extracts and classifies exterior-wall materials and dimensions from energy certificates, enabling downstream material-stock and emissions calculations; it does not retrieve external records.",
+  "operationCodingBasis": "full_text"
 }

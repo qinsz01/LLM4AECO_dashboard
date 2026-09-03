@@ -37,6 +37,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The case studies retrieve BEM knowledge, generate and modify EnergyPlus IDF files, and invoke modeling and visualization workflows.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The case studies retrieve BEM knowledge, generate and iteratively correct EnergyPlus IDF content, and use executable workflows for model creation and result visualization without an evaluated diagnostic agent.",
+  "operationCodingBasis": "full_text"
 }

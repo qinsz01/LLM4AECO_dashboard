@@ -43,6 +43,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The agents extract audit information, retrieve domain evidence, execute analysis tools, diagnose building performance, and generate retrofit recommendations.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The agents extract audit data, retrieve domain evidence, generate and execute analysis code in a Python sandbox, diagnose energy performance, and produce retrofit recommendations.",
+  "operationCodingBasis": "full_text"
 }

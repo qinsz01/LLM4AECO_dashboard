@@ -31,6 +31,6 @@
     "generation_parameterization",
     "retrieval_alignment"
   ],
-  "operationEvidence": "BuildThemis retrieves related code examples and generates structured draft scripts that translate building rules into computable form.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "BuildThemis retrieves semantically related rule-script examples and generates structured draft scripts that convert building regulations into computer-processable compliance logic.",
+  "operationCodingBasis": "full_text"
 }

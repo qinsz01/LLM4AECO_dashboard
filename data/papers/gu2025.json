@@ -35,6 +35,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "CECA parses BIM material and equipment names, aligns them with carbon-emission factors, and calculates embodied-carbon results.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "CECA semantically matches BIM materials/equipment to emission factors and calculates embodied carbon across 18 real projects.",
+  "operationCodingBasis": "full_text"
 }

@@ -37,6 +37,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "Data2BEM extracts heterogeneous building information, generates and calibrates EnergyPlus models, runs simulations, and evaluates retrofit scenarios.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Data2BEM retrieves heterogeneous source information, generates/calibrates EnergyPlus models, executes simulations, and analyzes retrofit outcomes.",
+  "operationCodingBasis": "full_text"
 }

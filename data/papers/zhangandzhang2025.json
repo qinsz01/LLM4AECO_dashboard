@@ -32,6 +32,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "GMFS segments and classifies rooms and doors from raster plans and calculates egress paths and wheelchair clearances for accessibility analysis.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GMFS segments and classifies rooms and doors in raster floor plans and calculates egress paths and wheelchair clearances for accessibility assessment.",
+  "operationCodingBasis": "full_text"
 }

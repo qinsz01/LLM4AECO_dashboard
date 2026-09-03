@@ -37,6 +37,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The platform forecasts construction cost indices, analyzes news sentiment, and retrieves supporting information for cost consultation.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The platform classifies news sentiment, forecasts CCI trends, and retrieves structured/vector evidence for RAG consultation; it does not execute control or editing actions.",
+  "operationCodingBasis": "full_text"
 }

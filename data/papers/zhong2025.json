@@ -36,6 +36,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "EnergAI generates parametric building forms, evaluates them through ClimateStudio simulation, and optimizes energy and cost performance.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "EnergAI generates parametric building forms, passes them through a linked ClimateStudio workflow, and evaluates and optimizes energy-use and cost objectives in a closed loop.",
+  "operationCodingBasis": "full_text"
 }

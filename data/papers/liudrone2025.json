@@ -48,6 +48,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The agents query 3D scene graphs, generate inspection paths, control the drone, and interpret visual observations for infrastructure inspection.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Agents retrieve 3D-scene-graph entities, generate inspection paths, invoke drone/vision tools, and interpret observed infrastructure conditions.",
+  "operationCodingBasis": "full_text"
 }

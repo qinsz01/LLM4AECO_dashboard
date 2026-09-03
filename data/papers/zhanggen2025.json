@@ -33,6 +33,6 @@
     "generation_parameterization",
     "editing_execution"
   ],
-  "operationEvidence": "The decision-transformer model generates building-control action sequences that are applied across training and unseen building environments.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The GPT-2 decision-transformer generates sequential building-control actions that are applied and evaluated across trained and unseen simulated building environments.",
+  "operationCodingBasis": "full_text"
 }

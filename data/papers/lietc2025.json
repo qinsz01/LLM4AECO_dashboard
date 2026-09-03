@@ -36,6 +36,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The LLM proposes PVAC control parameters, iteratively applies them in a validated simulation, and evaluates cost and comfort outcomes.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The LLM proposes control parameters, iteratively applies them through a validated PVAC simulation loop, and reasons over cost/comfort metrics.",
+  "operationCodingBasis": "full_text"
 }

@@ -41,6 +41,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The LLM interprets code provisions, generates and debugs Revit Python scripts, executes checks, and reports BIM compliance violations.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "LLMs interpret provided code clauses, generate/debug Revit Python, execute checks, and produce compliance reports/recommendations.",
+  "operationCodingBasis": "full_text"
 }

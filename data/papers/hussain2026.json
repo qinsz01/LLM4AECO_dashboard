@@ -35,6 +35,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The hybrid system identifies regulation-aware safety hazards and uses ChatGPT to generate evaluated descriptive safety captions and answers.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The hybrid assistant applies YOLOv12 and predefined geometric safety rules to diagnose regulation-specific hazards, while ChatGPT generates evaluated safety captions and interactive mitigation guidance; comprehensive regulation retrieval and external action execution are not implemented.",
+  "operationCodingBasis": "full_text"
 }

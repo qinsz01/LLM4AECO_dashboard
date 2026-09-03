@@ -35,6 +35,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The LLM answers natural-language queries over JSON-structured IFC data and detects modifications between paired BIM models.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "LLMs answer natural-language questions over structured IFC JSON and detect/classify design changes between paired BIM models.",
+  "operationCodingBasis": "full_text"
 }

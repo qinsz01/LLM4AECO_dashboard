@@ -33,6 +33,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "ChatGPT is evaluated on analyzing architectural project files and creating design-related insights, critiques, and content.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT is experimentally prompted with project files to interpret drawings/IFC content and create design-related text and recommendations.",
+  "operationCodingBasis": "full_text"
 }

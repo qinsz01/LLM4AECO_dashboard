@@ -43,6 +43,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The system maps natural-language questions to SQL, executes the queries on a building database, and returns answers from the retrieved records.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The prototype maps natural-language requests to SQL, executes the query, and returns database-grounded answers; researcher-side scoring is not a system analysis operation.",
+  "operationCodingBasis": "full_text"
 }

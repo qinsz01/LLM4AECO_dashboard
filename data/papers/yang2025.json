@@ -34,6 +34,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The LLM extracts design specifications into structured rules, and the framework compares those rules with bridge BIM attributes to identify compliance issues.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The LLM turns highway-bridge specifications into structured rule and knowledge-graph entries, and the framework compares those rules with IFC attributes to produce compliance findings and adjustment recommendations.",
+  "operationCodingBasis": "full_text"
 }

@@ -34,6 +34,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The agentic RAG system retrieves BIM, sensor, weather, and guidance data and analyzes them to answer thermal-comfort and energy-efficiency queries.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ThermalComfortBot retrieves BIM, sensor, weather, and guidance evidence and reasons over it to answer and assess thermal-comfort queries.",
+  "operationCodingBasis": "full_text"
 }

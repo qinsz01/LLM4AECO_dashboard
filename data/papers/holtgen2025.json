@@ -39,6 +39,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The workflow aligns database schemas with ontologies, generates SQL and R2RML mappings, and executes RDF conversion to enrich condition data.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "LLMs align relational schemas with ontologies and generate SQL/R2RML mappings that are syntactically checked and converted into RDF triples.",
+  "operationCodingBasis": "full_text"
 }

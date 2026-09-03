@@ -38,6 +38,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The ontology-assisted agents retrieve simulation information, generate CONTAM inputs, execute airflow simulations, and analyze and visualize results.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Ontology-assisted GPT agents resolve simulation concepts, generate CONTAM inputs, invoke the simulation engine, and query, analyze, and visualize multizone-airflow results.",
+  "operationCodingBasis": "full_text"
 }

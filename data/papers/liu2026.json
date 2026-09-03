@@ -39,6 +39,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "The fine-tuned model converts free-form building descriptions into parseable, geometry-consistent EnergyPlus IDF files.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The fine-tuned model generates schema-aligned, geometrically valid EnergyPlus IDF files; simulation is an external evaluation criterion rather than an invoked agent tool.",
+  "operationCodingBasis": "full_text"
 }

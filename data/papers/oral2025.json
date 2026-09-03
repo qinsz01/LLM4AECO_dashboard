@@ -31,6 +31,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "ChatGPT assigns probability and severity ratings to construction safety risks and is statistically compared with ten experts.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT scores the probability and severity of predefined construction risks and selects from predefined precautions; the evaluated capability is risk assessment rather than artifact generation or external execution.",
+  "operationCodingBasis": "full_text"
 }

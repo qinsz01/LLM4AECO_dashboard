@@ -36,8 +36,9 @@
   "taskEn": "BIM command recommendation",
   "inputDataEn": "BIM software usage logs (large-scale Vectorworks interaction logs)",
   "operations": [
-    "generation_parameterization"
+    "generation_parameterization",
+    "retrieval_alignment"
   ],
-  "operationEvidence": "The model predicts and recommends the next BIM authoring commands from large-scale user interaction sequences.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The transformer predicts/recommends the next BIM command and aligns multilingual usage-log sequences with a stable command catalogue, evaluated using Recall@K.",
+  "operationCodingBasis": "full_text"
 }

@@ -36,6 +36,6 @@
     "generation_parameterization",
     "editing_execution"
   ],
-  "operationEvidence": "BIMVLM plans BIM modeling action sequences, converts them to executable Revit API code, and iteratively generates component models.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "BIMVLM plans component-modeling action sequences, converts them into executable Revit API code, runs the code, and iteratively creates and refines BIM component models.",
+  "operationCodingBasis": "full_text"
 }

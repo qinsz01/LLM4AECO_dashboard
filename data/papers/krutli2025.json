@@ -35,6 +35,6 @@
   "operations": [
     "retrieval_alignment"
   ],
-  "operationEvidence": "The secure RAG system retrieves multimodal facility-management documents and answers evaluated information-access questions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The secure Mixtral-Milvus RAG system retrieves multimodal FM documents and is evaluated on grounded information-access questions.",
+  "operationCodingBasis": "full_text"
 }

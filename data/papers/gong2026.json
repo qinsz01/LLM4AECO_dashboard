@@ -33,6 +33,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The RAG-LLM retrieves and maps ESG evidence to environmental indicators, while the workflow extracts and quantifies project-level environmental data.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The RAG-LLM maps multi-source project evidence to ESG indicators and the workflow extracts/quantifies environmental data; database access serves retrieval and calculation, not mutable-state editing.",
+  "operationCodingBasis": "full_text"
 }

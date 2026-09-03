@@ -36,6 +36,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "Graph-DT-GPT interprets natural-language requests, generates and executes graph queries, and returns answers grounded in digital-twin data.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Graph-DT-GPT converts natural-language requests into graph-grounded queries, executes them against digital-twin graphs, and extracts answers from the returned records.",
+  "operationCodingBasis": "full_text"
 }

@@ -39,6 +39,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "TRaiC retrieves geotechnical knowledge, generates 3D tunnel-face and reporting outputs, and performs discontinuity analysis, RMR classification, and geological interpretation.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "TRaiC analyzes discontinuities/RMR, retrieves geotechnical context, and generates 3D tunnel-face and standardized geological reports; LLM does not orchestrate external tools.",
+  "operationCodingBasis": "full_text"
 }

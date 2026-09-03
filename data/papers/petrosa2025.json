@@ -34,6 +34,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The tool aligns IFC elements with LCA datasets, writes the selected matches into IFC property sets, and estimates embodied global-warming potential.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The tool semantically matches IFC elements to LCA dataset identifiers, writes confirmed matches into IFC property sets, and calculates and visualizes embodied global-warming impacts.",
+  "operationCodingBasis": "full_text"
 }

@@ -36,6 +36,6 @@
   "operations": [
     "retrieval_alignment"
   ],
-  "operationEvidence": "CC-RAG semantically chunks construction contracts, retrieves coherent domain passages, and answers contract questions with adapted embeddings.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "CC-RAG semantically chunks and clusters construction contracts, retrieves coherent domain passages with adapted embeddings, and uses them to ground contract question answering.",
+  "operationCodingBasis": "full_text"
 }

@@ -38,6 +38,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The multi-agent system interprets natural-language spatial questions and executes decomposed queries over IFC geometry and spatial indexes.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Agents map natural-language spatial questions to decomposed geometric queries and execute them over IFC indexes; returned spatial relations are retrieval results.",
+  "operationCodingBasis": "full_text"
 }

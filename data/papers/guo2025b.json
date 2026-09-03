@@ -35,6 +35,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The BiRAG framework retrieves relevant safety regulations and uses a visual LLM to judge construction-site safety compliance from images.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "BiRAG retrieves safety provisions from visual evidence and the VLM judges site compliance, with separate retrieval and compliance evaluations.",
+  "operationCodingBasis": "full_text"
 }

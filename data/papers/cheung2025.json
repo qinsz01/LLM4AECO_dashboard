@@ -36,6 +36,6 @@
     "generation_parameterization",
     "editing_execution"
   ],
-  "operationEvidence": "The LLM-integrated Grasshopper experiment generates and interactively changes architectural configurations in response to conversational input.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The theatre-hall experiment generates spatial configurations and changes Grasshopper-controlled ceiling orientation through conversational input.",
+  "operationCodingBasis": "full_text"
 }

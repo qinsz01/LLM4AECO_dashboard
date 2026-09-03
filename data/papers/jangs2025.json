@@ -34,6 +34,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The graph model uses LLM embeddings to infer functional requirements and detailed subtypes for low-LOD BIM objects.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The GNN with LLM embeddings predicts functional requirements and detailed BIM object subtypes; labels are inferred, not written back to a model.",
+  "operationCodingBasis": "full_text"
 }

@@ -38,6 +38,6 @@
   "operations": [
     "retrieval_alignment"
   ],
-  "operationEvidence": "RAG4CM parses project documents into a hierarchical knowledge pool and retrieves evidence for construction-management question answering.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "RAG4CM parses documents into a hierarchical knowledge pool and evaluates retrieval/ranking and grounded question answering.",
+  "operationCodingBasis": "full_text"
 }

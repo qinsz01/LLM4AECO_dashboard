@@ -34,8 +34,9 @@
   "inputDataEn": "Urban building data (multi-source data)",
   "operations": [
     "generation_parameterization",
+    "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "GPT-UBEM produces energy-prediction and feature-optimization workflows and analyzes urban building energy signatures across four case studies.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GPT-UBEM uses GPT's executable data-analysis environment to preprocess/align datasets, build prediction workflows, and analyze energy signatures across four cases.",
+  "operationCodingBasis": "full_text"
 }

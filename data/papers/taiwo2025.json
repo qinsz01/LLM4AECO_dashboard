@@ -38,6 +38,6 @@
   "operations": [
     "retrieval_alignment"
   ],
-  "operationEvidence": "Within the broader Delphi study, an implemented RAG case study retrieves construction-contract passages and answers validated contract queries.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The implemented case study retrieves construction-contract passages through RAG and evaluates the quality, relevance, and reproducibility of grounded answers; answer prose alone is not counted as generation.",
+  "operationCodingBasis": "full_text"
 }

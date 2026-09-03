@@ -33,8 +33,9 @@
   "inputDataEn": "BIM + text (natural language queries)",
   "operations": [
     "generation_parameterization",
+    "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "ARCBIM aligns natural-language queries with Revit API functions and generates refined BIM information-retrieval code.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ARCBIM aligns queries to Revit C# functions, generates/refines retrieval code, and executes it to verify both correctness and returned BIM information.",
+  "operationCodingBasis": "full_text"
 }

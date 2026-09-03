@@ -34,6 +34,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The system retrieves sensor, BIM, and diagnostic evidence and uses it to diagnose room-level damp and mould risks.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The agentic RAG workflow retrieves heterogeneous evidence and produces evaluated damp/mould risk diagnoses; retrieval-only tools do not establish a separate execution operation.",
+  "operationCodingBasis": "full_text"
 }

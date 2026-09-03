@@ -36,6 +36,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "The proposed AI-BIM workflow converts client requirements into generative concept visualizations and BIM-informed early-design outputs.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The illustrated ChatGPT/Midjourney workflow turns client requirements into design goals and visual options; claimed BIM updates are proposed rather than independently executed and tested.",
+  "operationCodingBasis": "full_text"
 }

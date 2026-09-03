@@ -38,6 +38,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "The hybrid tool synthesizes selected architectural patterns into experiential narratives and representative design images.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The web tool uses selected Alexander patterns to generate a project-specific narrative synthesis and representative design imagery; its empirical discussion is not an implemented diagnostic operation.",
+  "operationCodingBasis": "full_text"
 }

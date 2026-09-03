@@ -35,6 +35,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The multi-agent system autonomously constructs, calibrates, and manages virtual building models and evaluates their predictive accuracy on an operating HVAC system.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The agents construct/calibrate virtual building models, access BIM/operational data, and evaluate predictive behavior for an operating HVAC system.",
+  "operationCodingBasis": "full_text"
 }

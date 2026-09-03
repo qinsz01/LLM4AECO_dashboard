@@ -33,8 +33,9 @@
   "operations": [
     "generation_parameterization",
     "editing_execution",
-    "analysis_compliance_diagnosis"
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
   ],
-  "operationEvidence": "The framework interprets regulatory clauses, generates executable checking logic, applies it to BIM information, and reports compliance results.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The pipeline extracts structured rules, aligns them with ontology/BIM entities, executes ontology queries/checks, and reports compliance findings.",
+  "operationCodingBasis": "full_text"
 }

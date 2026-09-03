@@ -39,6 +39,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "LLM-FuncMapper aligns regulatory clauses with atomic checking functions, composes executable code, and applies the functions to an IFC model for rule checking.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "LLM-FuncMapper aligns regulatory clauses with atomic checking functions, composes executable Python code, runs it against IFC models, and reports compliance failures and affected element identifiers.",
+  "operationCodingBasis": "full_text"
 }

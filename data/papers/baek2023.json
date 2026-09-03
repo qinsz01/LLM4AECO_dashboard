@@ -33,6 +33,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "ChatGPT extracts conflict-related keyphrases from infrastructure news and classifies them into predefined social-conflict drivers.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT extracts keyphrases and classifies predefined social-conflict drivers, with F1 and case-study validation.",
+  "operationCodingBasis": "full_text"
 }

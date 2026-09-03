@@ -40,6 +40,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The agents align requests with MCP tools, execute building modeling, simulation, control, and automation workflows, and assess energy and resilience outcomes.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The orchestrator aligns requests to MCP schemas/tools, creates specialist configurations, executes modeling/simulation/control workflows, and assesses energy/resilience outcomes.",
+  "operationCodingBasis": "full_text"
 }

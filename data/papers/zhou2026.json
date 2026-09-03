@@ -35,6 +35,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "DeepSeek-R1 generates, executes, corrects, optimizes, and evaluates FE, machine-learning, and deep-learning modeling code for CFST applications.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "DeepSeek-R1 generates, executes, diagnoses, corrects, optimizes, and interprets FE, machine-learning, and deep-learning code for CFST design and maintenance tasks.",
+  "operationCodingBasis": "full_text"
 }

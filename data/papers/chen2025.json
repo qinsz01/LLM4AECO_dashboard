@@ -38,6 +38,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The study evaluates LLMs for identifying and ranking building-energy retrofit challenges against a human-expert benchmark.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "LLMs identify, rank, and assess retrofit challenges against an expert-derived benchmark; model-output evaluation is researcher-side.",
+  "operationCodingBasis": "full_text"
 }

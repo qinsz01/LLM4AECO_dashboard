@@ -33,8 +33,9 @@
   "pdfFile": "Zhang et al. - 2025 - Automatic building energy model development and debugging using large language models agentic workfl",
   "operations": [
     "generation_parameterization",
-    "editing_execution"
+    "editing_execution",
+    "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The agentic workflow generates EnergyPlus IDF objects, runs validation, and iteratively debugs the model until it is error-free.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The agentic workflow generates EnergyPlus IDF objects, executes validation, diagnoses returned errors, and iteratively revises the model until an error-free executable model is obtained.",
+  "operationCodingBasis": "full_text"
 }

@@ -35,6 +35,6 @@
   "operations": [
     "retrieval_alignment"
   ],
-  "operationEvidence": "Synergistic BIM Aligners maps natural-language BIM queries to Revit C# API functions and evaluates alignment accuracy and errors.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Synergistic BIM Aligners maps natural-language queries to Revit C# classes/functions and evaluates alignment accuracy; it stops before code execution.",
+  "operationCodingBasis": "full_text"
 }

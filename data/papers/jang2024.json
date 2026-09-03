@@ -31,8 +31,9 @@
   "inputDataEn": "BIM models + natural language descriptions",
   "operations": [
     "generation_parameterization",
-    "editing_execution"
+    "editing_execution",
+    "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "NADIA converts natural-language wall specifications into BIM detailing operations that create exterior wall layers in Revit.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "NADIA generates JSON wall details, instantiates them in Revit, and checks design requirements and ASHRAE thermal performance.",
+  "operationCodingBasis": "full_text"
 }

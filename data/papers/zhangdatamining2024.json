@@ -35,6 +35,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "GPT interprets mined building-operation patterns, detects energy-waste conditions, and consolidates the findings into diagnostic reports.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GPT interprets mined building-operation patterns, identifies energy-waste and equipment-fault conditions, and consolidates the selected findings into diagnostic reports.",
+  "operationCodingBasis": "full_text"
 }

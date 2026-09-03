@@ -41,6 +41,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "An LMM generates prompts for synthetic crack imagery, and the resulting data support evaluated concrete-crack detection and segmentation.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The LMM creates detailed prompts for AIGC concrete-crack images, and models trained on the generated dataset perform and are evaluated on crack classification and segmentation.",
+  "operationCodingBasis": "full_text"
 }

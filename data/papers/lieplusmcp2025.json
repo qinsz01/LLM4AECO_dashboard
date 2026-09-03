@@ -37,6 +37,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "EnergyPlus-MCP selects model resources, exposes model-generation and editing tools, executes simulations, and analyzes retrofit and HVAC results.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "EnergyPlus-MCP exposes and selects 35 tools for model creation/editing, executes simulations, and analyzes HVAC/retrofit results.",
+  "operationCodingBasis": "full_text"
 }

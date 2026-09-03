@@ -32,6 +32,6 @@
   "operations": [
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "GPT-4o extracts and standardizes product circularity and environmental fields from EPDs for large-scale statistical analysis.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GPT-4o extracts, normalizes, and scores circularity and environmental fields from heterogeneous EPDs, supporting the paper's large-scale statistical analysis without retrieving external records.",
+  "operationCodingBasis": "full_text"
 }

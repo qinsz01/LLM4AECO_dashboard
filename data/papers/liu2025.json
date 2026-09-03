@@ -37,6 +37,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The agents retrieve prompt context, translate BIM questions into SQL, execute the queries, and reflect on execution errors.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The multi-agent system retrieves prompt examples, generates SQL, executes queries over exported BIM data, and reflects on query errors.",
+  "operationCodingBasis": "full_text"
 }

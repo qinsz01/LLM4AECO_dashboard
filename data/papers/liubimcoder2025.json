@@ -33,6 +33,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "BIMCoder maps natural-language questions to structured BIM query statements and validates their execution in professional BIM software.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "BIMCoder maps language to structured BIM queries and validates them by execution in BIMserver; query strings are alignment artifacts, not design generation.",
+  "operationCodingBasis": "full_text"
 }

@@ -33,6 +33,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "One model recognizes and describes existing floor plans, while the second interprets user requirements and generates vectorized floor plans.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The recognition model extracts structured attributes from existing floor plans, while the generation model interprets user requirements and creates corresponding vectorized floor plans.",
+  "operationCodingBasis": "full_text"
 }

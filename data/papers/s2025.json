@@ -38,6 +38,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The ontology-enabled agents retrieve digital-twin entities, construct and update virtual models, invoke O&M tools, and interpret building-system results.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Ontology-enabled agents resolve digital-twin entities, create and update virtual in-situ models, select and invoke O&M applications, and analyze and report VIM and fault-diagnosis results.",
+  "operationCodingBasis": "full_text"
 }

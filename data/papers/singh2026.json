@@ -46,6 +46,6 @@
   "operations": [
     "generation_parameterization"
   ],
-  "operationEvidence": "The multi-LLM framework augments construction schedules and generates synthetic schedules and task descriptions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The multi-LLM pipelines enrich existing WBS task descriptions and generate complete synthetic construction schedules and descriptions; the SLM judge evaluates those outputs researcher-side.",
+  "operationCodingBasis": "full_text"
 }

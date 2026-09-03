@@ -34,6 +34,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The LLM converts prompts into structured solver commands, invokes OpenSees through MCP, and evaluates structural responses against ETABS references.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GPT creates structured analysis/optimisation inputs, the MCP server invokes OpenSees, and outputs are checked against ETABS and code limits.",
+  "operationCodingBasis": "full_text"
 }

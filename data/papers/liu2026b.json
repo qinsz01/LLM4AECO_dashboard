@@ -39,6 +39,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The agent generates OpenSeesPy code, executes it automatically, and returns structural-analysis results evaluated for reliability and robustness.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The agent generates OpenSeesPy code, automatically invokes it, and returns structural-analysis results tested for reliability and robustness.",
+  "operationCodingBasis": "full_text"
 }

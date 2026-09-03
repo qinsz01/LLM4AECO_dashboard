@@ -59,6 +59,6 @@
     "generation_parameterization",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The study generates a concrete-pavement question set and evaluates RAG-enhanced models that retrieve domain evidence to answer it.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The framework uses an LLM to generate a validated concrete-pavement question set and evaluates RAG configurations that retrieve domain documents to ground model answers.",
+  "operationCodingBasis": "full_text"
 }

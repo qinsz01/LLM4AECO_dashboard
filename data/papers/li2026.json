@@ -35,6 +35,6 @@
     "generation_parameterization",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The knowledge-graph RAG framework retrieves architectural precedents and generates consolidated precedent recommendations for early-stage design.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ArchLogicRAG retrieves precedent cases/design logic from its graph and generates integrated, cited early-design recommendations.",
+  "operationCodingBasis": "full_text"
 }

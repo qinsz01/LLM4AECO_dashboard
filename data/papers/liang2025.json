@@ -38,6 +38,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "OpenFACADES predicts building attributes and generates open-vocabulary façade captions to enrich building profiles from street-view imagery.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "OpenFACADES uses GPT-4o to generate facade captions/labels and predicts multiple building attributes from street-view imagery.",
+  "operationCodingBasis": "full_text"
 }

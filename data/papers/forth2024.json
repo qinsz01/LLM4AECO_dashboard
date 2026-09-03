@@ -37,6 +37,6 @@
     "editing_execution",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The method aligns BIM room and material descriptions with thermal-property databases and enriches BIM elements with the matched information.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The method matches BIM descriptions to thermal-property records and writes matched properties into BEM elements; simulation is used to evaluate enrichment rather than as an LLM analysis.",
+  "operationCodingBasis": "full_text"
 }

@@ -37,6 +37,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The agents generate structural visualizations, invoke local depth and image-synthesis tools, and critique and refine flawed outputs.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The agents generate structural visualizations, invoke local depth-estimation and image-synthesis tools, evaluate artifacts and geometric fidelity, and iteratively refine rejected outputs.",
+  "operationCodingBasis": "full_text"
 }

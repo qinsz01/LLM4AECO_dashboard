@@ -38,6 +38,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The KG-LLM maps modular products to inspection tasks and clusters the mapped tasks into optimized inspection work packages.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The KG-LLM maps products to inspection tasks, analyzes/clusters task features, and generates optimized inspection work packages in controlled experiments.",
+  "operationCodingBasis": "full_text"
 }

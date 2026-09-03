@@ -38,6 +38,6 @@
     "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "GPT-4o generates qualitative and structured inspection summaries and assigns building risk levels from unstructured inspection reports.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "GPT-4o extracts structured inspection attributes, assesses risk levels and structural conditions, and generates qualitative summaries and recommendations for digital building logbooks.",
+  "operationCodingBasis": "full_text"
 }

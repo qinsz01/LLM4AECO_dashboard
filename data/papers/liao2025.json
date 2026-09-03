@@ -35,6 +35,6 @@
   "operations": [
     "retrieval_alignment"
   ],
-  "operationEvidence": "The localized RAG system retrieves prefabricated-construction safety knowledge and answers consultation questions evaluated by experts and examinations.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The localized FAISS RAG system retrieves prefabricated-construction safety knowledge and answers consultation questions evaluated by experts.",
+  "operationCodingBasis": "full_text"
 }

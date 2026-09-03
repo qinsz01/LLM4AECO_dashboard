@@ -36,6 +36,6 @@
     "generation_parameterization",
     "editing_execution"
   ],
-  "operationEvidence": "VECTOR2BEM reconstructs gbXML energy models from vector floor plans and supports natural-language editing of geometry and operating parameters.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "VECTOR2BEM reconstructs gbXML energy models from vector drawings and executes six natural-language geometry/parameter editing operations.",
+  "operationCodingBasis": "full_text"
 }

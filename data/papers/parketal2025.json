@@ -34,6 +34,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The interface aligns multimodal worker commands with BIM object identities and robot actions, confirms task interpretation, and executes the collaboration workflow through ROS.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The interface maps voice/controller commands to BIM object identifiers and robot actions, checks and confirms task interpretations, detects instruction errors, and executes the resulting workflow through ROS.",
+  "operationCodingBasis": "full_text"
 }

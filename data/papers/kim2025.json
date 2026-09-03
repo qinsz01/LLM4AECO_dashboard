@@ -37,6 +37,6 @@
     "generation_parameterization",
     "editing_execution"
   ],
-  "operationEvidence": "ChatGPT-4 generates structured robot task instructions and supports adaptive execution and plan modification in a simulated wall-painting workflow.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "ChatGPT generates structured painting-robot instructions and the simulated robot executes/adapts plans through dialogue; BIM extraction remains hardcoded.",
+  "operationCodingBasis": "full_text"
 }

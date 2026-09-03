@@ -31,8 +31,9 @@
   "taskEn": "Automated building energy modeling",
   "inputDataEn": "Text (natural language descriptions)",
   "operations": [
-    "generation_parameterization"
+    "generation_parameterization",
+    "editing_execution"
   ],
-  "operationEvidence": "EPlus-LLM translates natural-language building descriptions into validated EnergyPlus IDF model files.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "EPlus-LLM generates EnergyPlus IDF files, invokes the EnergyPlus API, and returns simulation outputs; it does not interpret those outputs as engineering findings.",
+  "operationCodingBasis": "full_text"
 }

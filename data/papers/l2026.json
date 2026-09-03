@@ -41,9 +41,10 @@
   "taskEn": "Safety monitoring",
   "inputDataEn": "On-site images & videos + BIM",
   "operations": [
+    "editing_execution",
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "VS-BIM aligns panoramic video and BIM information in a queryable 3D cognitive map and uses it for spatial reasoning and construction-risk assessment.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "VS-BIM retrieves cognitive-map instances, registers/aligned objects through the Revit API, and performs configuration, spatial, temporal, and risk assessment.",
+  "operationCodingBasis": "full_text"
 }

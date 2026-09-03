@@ -36,6 +36,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The agents generate code-compliant reinforced-concrete beam designs, invoke deterministic analysis and design tools, and evaluate existing designs against code requirements.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "Agents generate beam designs, invoke deterministic analysis/design tools, and perform code/serviceability checks validated against references and SAP2000.",
+  "operationCodingBasis": "full_text"
 }

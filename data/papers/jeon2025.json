@@ -36,6 +36,6 @@
   "operations": [
     "retrieval_alignment"
   ],
-  "operationEvidence": "The fine-tuned local LLM answers sensitive construction-defect questions, with QA performance compared against GraphRAG and other baselines.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The study implements and compares fine-tuned QA and GraphRAG retrieval over defect entities; its outputs are knowledge answers rather than diagnoses of new cases.",
+  "operationCodingBasis": "full_text"
 }

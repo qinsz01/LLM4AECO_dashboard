@@ -31,8 +31,9 @@
   "taskEn": "Evacuation safety design assessment",
   "inputDataEn": "CAD architectural floor plans",
   "operations": [
+    "generation_parameterization",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "IEPTool predicts evacuation time, exit flows, and pedestrian density and uses an LLM to interpret safety risks and optimization options.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "IEPTool predicts evacuation metrics and the LLM interprets risks and generates evaluated optimization suggestions for exits/layouts.",
+  "operationCodingBasis": "full_text"
 }

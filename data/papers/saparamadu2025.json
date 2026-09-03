@@ -38,6 +38,6 @@
     "analysis_compliance_diagnosis",
     "retrieval_alignment"
   ],
-  "operationEvidence": "The specialized chatbot retrieves construction regulations and interprets contract clauses to answer and justify contract-related questions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The specialized chatbot retrieves construction regulations from a vector database and interprets the grounded contract material to answer and justify standardized contract questions.",
+  "operationCodingBasis": "full_text"
 }

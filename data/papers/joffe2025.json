@@ -43,6 +43,6 @@
   "operations": [
     "retrieval_alignment"
   ],
-  "operationEvidence": "The RAG framework retrieves cited building-code provisions and generates grounded answers to engineers’ code and standards questions.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The implemented system retrieves code/standard passages and generates cited answers, with search and end-to-end QA components evaluated separately.",
+  "operationCodingBasis": "full_text"
 }
