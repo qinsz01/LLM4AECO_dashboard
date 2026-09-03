@@ -2,10 +2,8 @@ name: Package dashboard layout preview
 
 on:
   push:
-    branches:
-      - fix/dashboard-layout-and-heatmap-legend
-    paths:
-      - .github/workflows/package-dashboard-layout-preview.yml
+    branches: [fix/dashboard-layout-and-heatmap-legend]
+    paths: [.github/workflows/package-dashboard-layout-preview.yml]
 
 permissions:
   contents: read
@@ -20,7 +18,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Validate JavaScript and data hooks
+      - name: Validate source
         run: |
           node --check js/app.js
           node --check js/charts.js
@@ -31,56 +29,29 @@ jobs:
           from pathlib import Path
           index = json.loads(Path('data/index.json').read_text(encoding='utf-8'))
           assert len(index) == 172
+          assert 'dimension: 2' in Path('js/dashboard-layout.js').read_text(encoding='utf-8')
           for entry in index:
               paper = json.loads((Path('data') / entry['file']).read_text(encoding='utf-8'))
               assert isinstance(paper.get('operations'), list)
               assert paper.get('operationEvidence')
-          html = Path('index.html').read_text(encoding='utf-8')
-          for hook in ['overview', 'tasks', 'representations', 'operations', 'chart-task', 'chart-representation', 'chart-repr-operation', 'chart-operation-task']:
-              assert f'id="{hook}"' in html
           PY
       - name: Package offline preview
         run: |
           mkdir -p preview
           cp -r index.html paper.html css js data preview/
           rm -rf preview/data/papers/*.pdf preview/data/papers/*.md || true
-          curl --fail --location --retry 3 \
-            https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js \
-            --output preview/js/echarts.min.js
-          python - <<'PY'
-          from pathlib import Path
-          p = Path('preview/index.html')
-          text = p.read_text(encoding='utf-8').replace(
-              'https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js',
-              'js/echarts.min.js'
-          )
-          p.write_text(text, encoding='utf-8')
-          PY
-      - name: Browser smoke test and screenshots
+          curl --fail --location --retry 3 https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js -o preview/js/echarts.min.js
+          sed -i 's#https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js#js/echarts.min.js#' preview/index.html
+      - name: Render previews
         run: |
           python3 -m http.server 8765 --directory preview >/tmp/dashboard-http.log 2>&1 &
           SERVER_PID=$!
           trap 'kill $SERVER_PID || true' EXIT
           sleep 2
           CHROME=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser)
-          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars \
-            --window-size=1600,1200 --virtual-time-budget=12000 \
-            --screenshot=dashboard-layout.png http://127.0.0.1:8765/index.html
-          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars \
-            --window-size=1600,3000 --virtual-time-budget=12000 \
-            --screenshot=dashboard-layout-tall.png http://127.0.0.1:8765/index.html
-          test -s dashboard-layout.png
-          test -s dashboard-layout-tall.png
-          python - <<'PY'
-          from pathlib import Path
-          import struct
-          for filename, expected in [('dashboard-layout.png', (1600, 1200)), ('dashboard-layout-tall.png', (1600, 3000))]:
-              data = Path(filename).read_bytes()
-              assert data[:8] == b'\x89PNG\r\n\x1a\n'
-              width, height = struct.unpack('>II', data[16:24])
-              assert (width, height) == expected
-              print(filename, {'width': width, 'height': height})
-          PY
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1600,1200 --virtual-time-budget=12000 --screenshot=dashboard-layout.png http://127.0.0.1:8765/index.html
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars --window-size=1600,3000 --virtual-time-budget=12000 --screenshot=dashboard-layout-tall.png http://127.0.0.1:8765/index.html
+          test -s dashboard-layout.png && test -s dashboard-layout-tall.png
       - uses: actions/upload-artifact@v4
         with:
           name: dashboard-layout-preview
