@@ -241,11 +241,27 @@
         });
     }
 
+    function patchMethodChart() {
+        var element = document.getElementById('chart-method');
+        if (!element || !window.echarts) return;
+        var chart = echarts.getInstanceByDom(element);
+        if (!chart) return;
+        chart.setOption({
+            grid: {
+                left: I18n.isZh() ? 105 : 142,
+                right: 44,
+                top: 10,
+                bottom: 28
+            }
+        });
+    }
+
     function renderAll() {
         var papers = selectedPapers();
         renderTaskDistribution(papers);
         renderRepresentationDistribution(papers);
         window.requestAnimationFrame(function () {
+            patchMethodChart();
             patchExistingHeatmap('chart-repr-operation', 'representation-operation');
             patchExistingHeatmap('chart-operation-task', 'operation-task');
         });
@@ -291,6 +307,7 @@
         Object.keys(charts).forEach(function (key) {
             if (charts[key] && !charts[key].isDisposed()) charts[key].resize();
         });
+        patchMethodChart();
         patchExistingHeatmap('chart-repr-operation', 'representation-operation');
         patchExistingHeatmap('chart-operation-task', 'operation-task');
     });
