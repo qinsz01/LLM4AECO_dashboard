@@ -1,0 +1,152 @@
+/* Detail and paper-card polish layered on top of the main theme. */
+
+.paper-card {
+    min-height: 350px;
+}
+
+.modal-info-grid-first {
+    margin-top: 22px;
+}
+
+.modal-details-intro {
+    margin-top: 12px;
+}
+
+.operation-panel-secondary {
+    margin-top: 14px;
+}
+
+html[data-theme="light"] .operation-generation {
+    --operation-color: #2f62c7;
+    --operation-rgb: 47, 98, 199;
+}
+
+html[data-theme="light"] .operation-editing {
+    --operation-color: #a55208;
+    --operation-rgb: 165, 82, 8;
+}
+
+html[data-theme="light"] .operation-analysis {
+    --operation-color: #047857;
+    --operation-rgb: 4, 120, 87;
+}
+
+html[data-theme="light"] .operation-retrieval {
+    --operation-color: #6d3cc5;
+    --operation-rgb: 109, 60, 197;
+}
+
+html[data-theme="light"] .modal {
+    background: #ffffff;
+    color: #172033;
+}
+
+html[data-theme="light"] .modal-kicker,
+html[data-theme="light"] .card-year,
+html[data-theme="light"] .back-link,
+html[data-theme="light"] .operation-evidence > span {
+    color: #315fae;
+}
+
+html[data-theme="light"] .modal-info-card,
+html[data-theme="light"] .modal-detail,
+html[data-theme="light"] .paper-record-card,
+html[data-theme="light"] .paper-content {
+    border-color: #d7e0eb;
+    background: #f8fafc;
+    color: #334155;
+}
+
+html[data-theme="light"] .operation-panel,
+html[data-theme="light"] .paper-operation-card {
+    border-color: #c7d7ef;
+    background: linear-gradient(145deg, #eef4fd, #f8fbff 72%);
+    color: #26364d;
+}
+
+html[data-theme="light"] .detail-row,
+html[data-theme="light"] .operation-evidence {
+    border-color: #dfe7f0;
+}
+
+html[data-theme="light"] .detail-row dt,
+html[data-theme="light"] .modal-list strong {
+    color: #64748b;
+}
+
+html[data-theme="light"] .detail-row dd,
+html[data-theme="light"] .modal-info-card h3,
+html[data-theme="light"] .operation-panel-heading h3,
+html[data-theme="light"] .modal-detail summary,
+html[data-theme="light"] .modal-detail p,
+html[data-theme="light"] .operation-evidence p,
+html[data-theme="light"] .paper-record-card h2,
+html[data-theme="light"] .paper-record-card p,
+html[data-theme="light"] .paper-operation-heading h2,
+html[data-theme="light"] .paper-operation-evidence,
+html[data-theme="light"] .paper-content p,
+html[data-theme="light"] .paper-content li {
+    color: #334155;
+}
+
+html[data-theme="light"] .tag-phase {
+    border-color: #bfd1f4;
+    background: #edf3ff;
+    color: #2f5fae;
+}
+
+html[data-theme="light"] .tag-category {
+    border-color: #d7c8f2;
+    background: #f5f1fc;
+    color: #6843a5;
+}
+
+html[data-theme="light"] .tag-method {
+    border-color: #bfe4d2;
+    background: #eef9f3;
+    color: #176b4d;
+}
+
+html[data-theme="light"] .tag-repr {
+    border-color: #ead8a8;
+    background: #fff9e9;
+    color: #815d08;
+}
+
+html[data-theme="light"] .tag-operation {
+    border-color: rgba(var(--operation-rgb), 0.24);
+    background: rgba(var(--operation-rgb), 0.08);
+    color: var(--operation-color);
+}
+
+html[data-theme="light"] .review-basis {
+    color: #08765a;
+}
+
+html[data-theme="light"] .review-check,
+html[data-theme="light"] .review-basis-strong {
+    border-color: #b8e2d3;
+    background: #edf9f4;
+    color: #08765a;
+}
+
+html[data-theme="light"] .modal-close:hover,
+html[data-theme="light"] .button-link:hover {
+    color: #172033;
+}
+
+html[data-theme="light"] .paper-hero {
+    border-color: #d6dfeb;
+    background: linear-gradient(145deg, #ffffff, #f4f7fb);
+    box-shadow: 0 8px 22px rgba(47, 65, 91, 0.06);
+}
+
+html[data-theme="light"] .paper-content pre {
+    border-color: #d7e0eb;
+    background: #eef2f7;
+}
+
+html[data-theme="light"] .paper-content code {
+    background: #eaf1fb;
+    color: #315fae;
+}
