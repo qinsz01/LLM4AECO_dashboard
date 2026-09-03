@@ -1,0 +1,68 @@
+name: Validate operation-aware dashboard
+
+on:
+  push:
+    branches:
+      - feature/operation-aware-dashboard
+    paths:
+      - index.html
+      - paper.html
+      - css/style.css
+      - js/app.js
+      - js/charts.js
+      - js/i18n.js
+      - js/paper-detail.js
+      - .github/workflows/validate-operation-aware-dashboard.yml
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate JavaScript
+        run: |
+          node --check js/app.js
+          node --check js/charts.js
+          node --check js/i18n.js
+          node --check js/paper-detail.js
+      - name: Validate data integration
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          index = json.loads(Path('data/index.json').read_text(encoding='utf-8'))
+          assert len(index) == 172
+          valid = {
+              'generation_parameterization',
+              'editing_execution',
+              'analysis_compliance_diagnosis',
+              'retrieval_alignment',
+          }
+          assignments = 0
+          reviewed = 0
+          for entry in index:
+              paper = json.loads((Path('data') / entry['file']).read_text(encoding='utf-8'))
+              assert paper['id'] == entry['id']
+              operations = paper.get('operations')
+              assert isinstance(operations, list)
+              assert set(operations).issubset(valid)
+              assert isinstance(paper.get('operationEvidence'), str)
+              assert paper['operationEvidence'].strip()
+              assignments += len(operations)
+              reviewed += (paper.get('operationCodingBasis') == 'full_text')
+          print({'papers': len(index), 'operation_assignments': assignments, 'full_text_reviewed': reviewed})
+          PY
+      - name: Validate HTML hooks
+        run: |
+          grep -q 'id="operation-cards"' index.html
+          grep -q 'id="chart-representation-operation"' index.html
+          grep -q 'id="chart-operation-task"' index.html
+          grep -q 'id="papers-grid"' index.html
+          grep -q 'js/paper-detail.js' paper.html
