@@ -1,0 +1,352 @@
+html[lang="zh-CN"] .lang-en,
+html[lang="zh"] .lang-en,
+html[lang="en"] .lang-zh {
+    display: none !important;
+}
+
+.dashboard-nav {
+    margin-bottom: 14px;
+    padding: 7px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow-x: auto;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: rgba(16, 24, 39, 0.78);
+    scrollbar-width: none;
+}
+
+.dashboard-nav::-webkit-scrollbar {
+    display: none;
+}
+
+.dashboard-nav a {
+    flex: 0 0 auto;
+    padding: 7px 13px;
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 0.78rem;
+    font-weight: 650;
+    transition: color 0.16s ease, background-color 0.16s ease;
+}
+
+.dashboard-nav a:hover {
+    background: var(--bg-hover);
+    color: var(--text-primary);
+}
+
+.dashboard-section {
+    margin-top: 14px;
+    padding: 18px;
+    scroll-margin-top: 92px;
+    border: 1px solid rgba(40, 53, 80, 0.9);
+    border-radius: var(--radius-lg);
+    background: rgba(16, 24, 39, 0.56);
+}
+
+.dashboard-section:first-of-type {
+    margin-top: 0;
+}
+
+.compact-section-heading {
+    margin-bottom: 13px;
+    align-items: center;
+}
+
+.compact-section-heading h2 {
+    margin-bottom: 3px;
+}
+
+.compact-section-heading p:not(.section-eyebrow) {
+    font-size: 0.8rem;
+    line-height: 1.45;
+}
+
+.compact-stats-row {
+    gap: 9px;
+    margin-bottom: 12px;
+}
+
+.compact-stats-row .stat-card {
+    min-height: 78px;
+    padding: 12px 14px;
+    border-radius: 12px;
+}
+
+.compact-stats-row .stat-card::after {
+    width: 68px;
+    height: 68px;
+}
+
+.compact-stats-row .stat-number {
+    margin-bottom: 2px;
+    font-size: 1.48rem;
+}
+
+.compact-stats-row .stat-label {
+    font-size: 0.66rem;
+}
+
+.section-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 10px;
+}
+
+.section-grid > .chart-card {
+    padding: 12px;
+    border-radius: 13px;
+}
+
+.section-grid .chart-card-heading {
+    min-height: 32px;
+    margin-bottom: 1px;
+}
+
+.section-grid .chart-card-heading h3 {
+    font-size: 0.74rem;
+}
+
+.overview-grid > .chart-card {
+    grid-column: span 4;
+}
+
+.compact-chart {
+    height: 215px;
+}
+
+.task-distribution-card {
+    grid-column: span 3;
+}
+
+.task-phase-card {
+    grid-column: span 5;
+}
+
+.task-method-card {
+    grid-column: span 4;
+}
+
+.task-chart {
+    height: 300px;
+}
+
+.representation-distribution-card {
+    grid-column: span 4;
+}
+
+.representation-task-card {
+    grid-column: span 8;
+}
+
+.representation-chart {
+    height: 300px;
+}
+
+.compact-operation-grid {
+    gap: 9px;
+    margin-bottom: 10px;
+}
+
+.compact-operation-grid .operation-card {
+    min-height: 154px;
+    padding: 13px 14px;
+    border-radius: 13px;
+}
+
+.compact-operation-grid .operation-card-top {
+    margin-bottom: 9px;
+}
+
+.compact-operation-grid .operation-code {
+    width: 31px;
+    height: 31px;
+    border-radius: 8px;
+    font-size: 0.82rem;
+}
+
+.compact-operation-grid .operation-count {
+    font-size: 1.42rem;
+}
+
+.compact-operation-grid .operation-card h3 {
+    margin-bottom: 4px;
+    font-size: 0.88rem;
+}
+
+.compact-operation-grid .operation-card > p {
+    min-height: 40px;
+    font-size: 0.72rem;
+    line-height: 1.45;
+}
+
+.compact-operation-grid .operation-card-footer {
+    margin-top: 8px;
+    padding-top: 7px;
+    font-size: 0.66rem;
+}
+
+.operation-grid-layout {
+    margin-top: 10px;
+}
+
+.operation-distribution-card,
+.operation-depth-card {
+    grid-column: span 6;
+}
+
+.repr-operation-card {
+    grid-column: span 5;
+}
+
+.operation-task-card {
+    grid-column: span 7;
+}
+
+.operation-summary-chart {
+    height: 225px;
+}
+
+.operation-heatmap {
+    height: 300px;
+}
+
+.heatmap-heading {
+    min-height: 47px !important;
+    align-items: flex-start;
+}
+
+.heatmap-heading > div {
+    min-width: 0;
+}
+
+.chart-help-inline {
+    max-width: none;
+    display: block;
+    margin-top: 3px;
+    text-align: left;
+    line-height: 1.35;
+}
+
+.heatmap-scale {
+    flex: 0 0 auto;
+    margin-top: 1px;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    color: var(--text-muted);
+    font-size: 0.62rem;
+    white-space: nowrap;
+}
+
+.heatmap-scale i {
+    width: 72px;
+    height: 7px;
+    display: block;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+}
+
+.heatmap-scale-blue i {
+    background: linear-gradient(90deg, #182237, #304f7d, #5b8def, #8eaef5);
+}
+
+.heatmap-scale-green i {
+    background: linear-gradient(90deg, #182237, #274f4a, #10b981, #6ee7b7);
+}
+
+#papers.dashboard-section {
+    padding-bottom: 20px;
+}
+
+@media (max-width: 1240px) {
+    .task-distribution-card,
+    .task-method-card,
+    .representation-distribution-card {
+        grid-column: span 4;
+    }
+
+    .task-phase-card,
+    .representation-task-card {
+        grid-column: span 8;
+    }
+
+    .repr-operation-card,
+    .operation-task-card {
+        grid-column: span 6;
+    }
+}
+
+@media (max-width: 960px) {
+    .dashboard-section {
+        padding: 15px;
+    }
+
+    .overview-grid > .chart-card,
+    .task-distribution-card,
+    .task-phase-card,
+    .task-method-card,
+    .representation-distribution-card,
+    .representation-task-card,
+    .operation-distribution-card,
+    .operation-depth-card,
+    .repr-operation-card,
+    .operation-task-card {
+        grid-column: span 12;
+    }
+
+    .compact-chart,
+    .operation-summary-chart {
+        height: 240px;
+    }
+
+    .task-chart,
+    .representation-chart,
+    .operation-heatmap {
+        height: 330px;
+    }
+}
+
+@media (max-width: 720px) {
+    .dashboard-section {
+        padding: 13px;
+        border-radius: 13px;
+    }
+
+    .compact-stats-row {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .compact-operation-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .compact-operation-grid .operation-card {
+        min-height: 146px;
+    }
+
+    .heatmap-heading {
+        display: block;
+    }
+
+    .heatmap-scale {
+        margin-top: 7px;
+    }
+}
+
+@media (max-width: 480px) {
+    .compact-operation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .task-chart,
+    .representation-chart,
+    .operation-heatmap {
+        height: 360px;
+    }
+
+    .heatmap-scale i {
+        width: 58px;
+    }
+}
