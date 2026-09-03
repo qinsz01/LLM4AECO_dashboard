@@ -66,15 +66,20 @@ jobs:
           "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars \
             --window-size=1600,1200 --virtual-time-budget=12000 \
             --screenshot=dashboard-layout.png http://127.0.0.1:8765/index.html
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars \
+            --window-size=1600,1050 --virtual-time-budget=12000 \
+            --screenshot=dashboard-operations.png http://127.0.0.1:8765/index.html#operations
           test -s dashboard-layout.png
+          test -s dashboard-operations.png
           python - <<'PY'
           from pathlib import Path
           import struct
-          data = Path('dashboard-layout.png').read_bytes()
-          assert data[:8] == b'\x89PNG\r\n\x1a\n'
-          width, height = struct.unpack('>II', data[16:24])
-          assert width == 1600 and height == 1200
-          print({'screenshot_width': width, 'screenshot_height': height})
+          for filename, expected in [('dashboard-layout.png', (1600, 1200)), ('dashboard-operations.png', (1600, 1050))]:
+              data = Path(filename).read_bytes()
+              assert data[:8] == b'\x89PNG\r\n\x1a\n'
+              width, height = struct.unpack('>II', data[16:24])
+              assert (width, height) == expected
+              print(filename, {'width': width, 'height': height})
           PY
       - uses: actions/upload-artifact@v4
         with:
@@ -82,4 +87,5 @@ jobs:
           path: |
             preview
             dashboard-layout.png
+            dashboard-operations.png
           retention-days: 3
