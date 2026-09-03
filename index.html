@@ -6,6 +6,7 @@
     <meta name="description" content="Interactive dashboard for the LLM4AECO systematic literature review.">
     <title>LLM4AECO · Systematic Literature Review</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard-layout.css">
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 </head>
 <body>
@@ -28,85 +29,152 @@
     </header>
 
     <main class="page-shell">
-        <section class="stats-row" id="stats-row" aria-label="Corpus statistics">
-            <div class="stat-card"><div class="stat-number" id="stat-total">–</div><div class="stat-label" data-i18n="statPapers">论文</div></div>
-            <div class="stat-card"><div class="stat-number" id="stat-categories">–</div><div class="stat-label" data-i18n="statCategories">任务分类</div></div>
-            <div class="stat-card"><div class="stat-number" id="stat-representations">–</div><div class="stat-label" data-i18n="statRepresentations">表征类型</div></div>
-            <div class="stat-card"><div class="stat-number" id="stat-assignments">–</div><div class="stat-label" data-i18n="statAssignments">操作标签</div></div>
-            <div class="stat-card"><div class="stat-number" id="stat-multi">–</div><div class="stat-label" data-i18n="statMultiOperation">多操作论文</div></div>
-            <div class="stat-card stat-card-accent"><div class="stat-number" id="stat-filtered">–</div><div class="stat-label" data-i18n="statShowing">当前显示</div></div>
+        <nav class="dashboard-nav" aria-label="Dashboard sections">
+            <a href="#overview"><span class="lang-zh">基本情况</span><span class="lang-en">Overview</span></a>
+            <a href="#tasks"><span class="lang-zh">任务</span><span class="lang-en">Tasks</span></a>
+            <a href="#representations"><span class="lang-zh">表征</span><span class="lang-en">Representations</span></a>
+            <a href="#operations"><span class="lang-zh">数据处理</span><span class="lang-en">Data processing</span></a>
+            <a href="#papers"><span class="lang-zh">论文</span><span class="lang-en">Papers</span></a>
+        </nav>
+
+        <section class="content-section dashboard-section overview-section" id="overview">
+            <div class="section-heading compact-section-heading">
+                <div>
+                    <p class="section-eyebrow">Corpus overview</p>
+                    <h2 data-i18n="corpusLandscape">语料概览</h2>
+                    <p data-i18n="corpusLandscapeNote">查看研究年份、生命周期阶段、LLM方法以及表征与任务分布。图表均可点击筛选。</p>
+                </div>
+            </div>
+
+            <div class="stats-row compact-stats-row" id="stats-row" aria-label="Corpus statistics">
+                <div class="stat-card"><div class="stat-number" id="stat-total">–</div><div class="stat-label" data-i18n="statPapers">论文</div></div>
+                <div class="stat-card"><div class="stat-number" id="stat-categories">–</div><div class="stat-label" data-i18n="statCategories">任务分类</div></div>
+                <div class="stat-card"><div class="stat-number" id="stat-representations">–</div><div class="stat-label" data-i18n="statRepresentations">表征类型</div></div>
+                <div class="stat-card"><div class="stat-number" id="stat-assignments">–</div><div class="stat-label" data-i18n="statAssignments">操作标签</div></div>
+                <div class="stat-card"><div class="stat-number" id="stat-multi">–</div><div class="stat-label" data-i18n="statMultiOperation">多操作论文</div></div>
+                <div class="stat-card stat-card-accent"><div class="stat-number" id="stat-filtered">–</div><div class="stat-label" data-i18n="statShowing">当前显示</div></div>
+            </div>
+
+            <div class="charts-grid section-grid overview-grid">
+                <article class="chart-card">
+                    <div class="chart-card-heading"><h3 data-i18n="chartTrend">发表趋势</h3></div>
+                    <div class="chart-container compact-chart" id="chart-trend"></div>
+                </article>
+                <article class="chart-card">
+                    <div class="chart-card-heading"><h3 data-i18n="chartPhase">阶段分布</h3></div>
+                    <div class="chart-container compact-chart" id="chart-phase"></div>
+                </article>
+                <article class="chart-card">
+                    <div class="chart-card-heading"><h3 data-i18n="chartMethod">LLM方法分布</h3></div>
+                    <div class="chart-container compact-chart" id="chart-method"></div>
+                </article>
+            </div>
         </section>
 
-        <section class="content-section operation-overview-section">
-            <div class="section-heading">
+        <section class="content-section dashboard-section" id="tasks">
+            <div class="section-heading compact-section-heading">
                 <div>
-                    <p class="section-eyebrow">G · E · A · R</p>
+                    <p class="section-eyebrow">AECO applications</p>
+                    <h2><span class="lang-zh">任务与应用</span><span class="lang-en">Tasks and applications</span></h2>
+                    <p>
+                        <span class="lang-zh">先查看九类工程任务的总体分布，再比较不同生命周期阶段和 LLM 方法在各任务中的使用情况。</span>
+                        <span class="lang-en">Start with the nine engineering task categories, then compare their lifecycle-phase and LLM-method profiles.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="charts-grid section-grid task-grid">
+                <article class="chart-card task-distribution-card">
+                    <div class="chart-card-heading">
+                        <h3><span class="lang-zh">任务分类分布</span><span class="lang-en">Task-category distribution</span></h3>
+                    </div>
+                    <div class="chart-container task-chart" id="chart-task"></div>
+                </article>
+                <article class="chart-card task-phase-card">
+                    <div class="chart-card-heading"><h3 data-i18n="chartStacked">阶段 × 任务分类</h3></div>
+                    <div class="chart-container task-chart" id="chart-stacked"></div>
+                </article>
+                <article class="chart-card task-method-card">
+                    <div class="chart-card-heading"><h3 data-i18n="chartSunburst">任务分类 × LLM方法</h3></div>
+                    <div class="chart-container task-chart" id="chart-sunburst"></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section dashboard-section" id="representations">
+            <div class="section-heading compact-section-heading">
+                <div>
+                    <p class="section-eyebrow">Model-facing information</p>
+                    <h2><span class="lang-zh">数据表征</span><span class="lang-en">Data representations</span></h2>
+                    <p>
+                        <span class="lang-zh">比较五类模型侧表征的总体使用情况，以及它们在不同工程任务中的分布。</span>
+                        <span class="lang-en">Compare the overall use of the five model-facing representation families and their distribution across engineering tasks.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="charts-grid section-grid representation-grid">
+                <article class="chart-card representation-distribution-card">
+                    <div class="chart-card-heading">
+                        <h3><span class="lang-zh">表征类型分布</span><span class="lang-en">Representation distribution</span></h3>
+                    </div>
+                    <div class="chart-container representation-chart" id="chart-representation"></div>
+                </article>
+                <article class="chart-card representation-task-card">
+                    <div class="chart-card-heading">
+                        <h3 data-i18n="chartHeatmap">表征 × 任务分类</h3>
+                        <span class="chart-help"><span class="lang-zh">数字为论文数</span><span class="lang-en">Labels show paper counts</span></span>
+                    </div>
+                    <div class="chart-container representation-chart" id="chart-heatmap"></div>
+                </article>
+            </div>
+        </section>
+
+        <section class="content-section dashboard-section operation-overview-section" id="operations">
+            <div class="section-heading compact-section-heading">
+                <div>
+                    <p class="section-eyebrow">Generation · Editing · Analysis · Retrieval</p>
                     <h2 data-i18n="operationOverview">数据处理操作</h2>
                     <p data-i18n="operationOverviewNote">每篇论文可具有多个操作标签。卡片中的数量表示当前筛选范围内涉及该操作的论文数。</p>
                 </div>
                 <div class="review-coverage" id="review-coverage"></div>
             </div>
-            <div class="operation-grid" id="operation-cards"></div>
-        </section>
+            <div class="operation-grid compact-operation-grid" id="operation-cards"></div>
 
-        <section class="content-section charts-section operation-analysis-section">
-            <div class="section-heading">
-                <div>
-                    <p class="section-eyebrow">Representation → Operation → Task</p>
-                    <h2 data-i18n="operationAnalysis">表征、操作与任务</h2>
-                    <p data-i18n="operationAnalysisNote">热力图使用条件占比进行着色，并在单元格中显示论文数，以减少不同类别规模带来的视觉偏差。</p>
-                </div>
-            </div>
-            <div class="charts-grid charts-grid-analysis">
-                <article class="chart-card">
+            <div class="charts-grid section-grid operation-grid-layout">
+                <article class="chart-card operation-distribution-card">
                     <div class="chart-card-heading">
                         <h3 data-i18n="chartOperation">操作分布</h3>
                         <span class="chart-help" data-i18n="chartAssignmentsNote">多标签统计，合计可超过论文总数。</span>
                     </div>
-                    <div class="chart-container" id="chart-operation"></div>
+                    <div class="chart-container operation-summary-chart" id="chart-operation"></div>
                 </article>
-                <article class="chart-card">
-                    <div class="chart-card-heading">
-                        <h3 data-i18n="chartOperationDepth">每篇论文包含的操作数</h3>
-                    </div>
-                    <div class="chart-container" id="chart-operation-depth"></div>
+                <article class="chart-card operation-depth-card">
+                    <div class="chart-card-heading"><h3 data-i18n="chartOperationDepth">每篇论文包含的操作数</h3></div>
+                    <div class="chart-container operation-summary-chart" id="chart-operation-depth"></div>
                 </article>
-                <article class="chart-card chart-card-wide">
-                    <div class="chart-card-heading">
-                        <h3 data-i18n="chartReprOperation">表征 × 数据处理操作</h3>
-                        <span class="chart-help" data-i18n="chartReprOperationNote">颜色表示同一表征类型中涉及该操作的论文比例；数字为论文数。</span>
+                <article class="chart-card repr-operation-card">
+                    <div class="chart-card-heading heatmap-heading">
+                        <div>
+                            <h3 data-i18n="chartReprOperation">表征 × 数据处理操作</h3>
+                            <span class="chart-help chart-help-inline" data-i18n="chartReprOperationNote">颜色表示同一表征类型中涉及该操作的论文比例；数字为论文数。</span>
+                        </div>
+                        <span class="heatmap-scale heatmap-scale-blue" aria-label="0 to 100 percent"><span>0%</span><i></i><span>100%</span></span>
                     </div>
-                    <div class="chart-container chart-container-heatmap" id="chart-repr-operation"></div>
+                    <div class="chart-container operation-heatmap" id="chart-repr-operation"></div>
                 </article>
-                <article class="chart-card chart-card-full">
-                    <div class="chart-card-heading">
-                        <h3 data-i18n="chartOperationTask">数据处理操作 × 任务分类</h3>
-                        <span class="chart-help" data-i18n="chartOperationTaskNote">颜色表示同一任务分类中涉及该操作的论文比例；数字为论文数。</span>
+                <article class="chart-card operation-task-card">
+                    <div class="chart-card-heading heatmap-heading">
+                        <div>
+                            <h3 data-i18n="chartOperationTask">数据处理操作 × 任务分类</h3>
+                            <span class="chart-help chart-help-inline" data-i18n="chartOperationTaskNote">颜色表示同一任务分类中涉及该操作的论文比例；数字为论文数。</span>
+                        </div>
+                        <span class="heatmap-scale heatmap-scale-green" aria-label="0 to 100 percent"><span>0%</span><i></i><span>100%</span></span>
                     </div>
-                    <div class="chart-container chart-container-task" id="chart-operation-task"></div>
+                    <div class="chart-container operation-heatmap" id="chart-operation-task"></div>
                 </article>
             </div>
         </section>
 
-        <section class="content-section charts-section">
-            <div class="section-heading">
-                <div>
-                    <p class="section-eyebrow">Corpus landscape</p>
-                    <h2 data-i18n="corpusLandscape">语料概览</h2>
-                    <p data-i18n="corpusLandscapeNote">查看研究年份、生命周期阶段、LLM方法以及表征与任务分布。图表均可点击筛选。</p>
-                </div>
-            </div>
-            <div class="charts-grid">
-                <article class="chart-card"><div class="chart-card-heading"><h3 data-i18n="chartPhase">阶段分布</h3></div><div class="chart-container" id="chart-phase"></div></article>
-                <article class="chart-card"><div class="chart-card-heading"><h3 data-i18n="chartMethod">LLM方法分布</h3></div><div class="chart-container" id="chart-method"></div></article>
-                <article class="chart-card"><div class="chart-card-heading"><h3 data-i18n="chartTrend">发表趋势</h3></div><div class="chart-container" id="chart-trend"></div></article>
-                <article class="chart-card chart-card-wide"><div class="chart-card-heading"><h3 data-i18n="chartHeatmap">表征 × 任务分类</h3></div><div class="chart-container chart-container-heatmap" id="chart-heatmap"></div></article>
-                <article class="chart-card"><div class="chart-card-heading"><h3 data-i18n="chartStacked">阶段 × 任务分类</h3></div><div class="chart-container chart-container-tall" id="chart-stacked"></div></article>
-                <article class="chart-card"><div class="chart-card-heading"><h3 data-i18n="chartSunburst">任务分类 × LLM方法</h3></div><div class="chart-container chart-container-tall" id="chart-sunburst"></div></article>
-            </div>
-        </section>
-
-        <section class="content-section papers-section">
+        <section class="content-section papers-section dashboard-section" id="papers">
             <div class="section-heading papers-heading">
                 <div>
                     <p class="section-eyebrow">Evidence records</p>
