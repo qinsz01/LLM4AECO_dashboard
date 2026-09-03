@@ -26,6 +26,7 @@ jobs:
           node --check js/app.js
           node --check js/paper-detail.js
           grep -q 'removePreviewEvidence' js/theme.js
+          grep -q 'removeDuplicateReviewBasis' js/theme.js
           grep -q 'data-polished-order' js/theme.js
           grep -q 'modal-info-grid-first' css/theme-polish.css
       - name: Build light-mode previews
