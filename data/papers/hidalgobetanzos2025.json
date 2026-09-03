@@ -30,5 +30,11 @@
   "markdownFile": "Hidalgo-Betanzos et al. - 2025 - Can ChatGPT AI Replace or Contribute to Experts’ Diagnosis for Renovation Measures Identification.md",
   "url": "https://doi.org/10.3390/buildings15030421",
   "taskEn": "Renovation measure diagnosis",
-  "inputDataEn": "Building information + text (current condition descriptions)"
+  "inputDataEn": "Building information + text (current condition descriptions)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "ChatGPT diagnoses renovation needs and generates evaluated retrofit recommendations, preliminary costs, and payback information against expert/literature cases.",
+  "operationCodingBasis": "full_text"
 }

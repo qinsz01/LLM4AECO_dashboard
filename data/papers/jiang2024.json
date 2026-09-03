@@ -29,5 +29,11 @@
   "markdownFile": "Jiang et al. - 2024 - EPlus-LLM A large language model-based computing platform for automated building energy modeling.md",
   "url": "https://doi.org/10.1016/j.apenergy.2024.123431",
   "taskEn": "Automated building energy modeling",
-  "inputDataEn": "Text (natural language descriptions)"
+  "inputDataEn": "Text (natural language descriptions)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "EPlus-LLM generates EnergyPlus IDF files, invokes the EnergyPlus API, and returns simulation outputs; it does not interpret those outputs as engineering findings.",
+  "operationCodingBasis": "full_text"
 }

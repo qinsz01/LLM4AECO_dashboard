@@ -28,5 +28,11 @@
   "methodology": "A framework integrating computer vision and ChatGPT for automated daily report generation from construction videos. CV methods (YOLO-v5 worker detection, SORT tracking, 3D ResNet activity recognition) extract productivity information from on-site video footage. Extracted data (activity types, productivity metrics, worker times) are formalized via prompt engineering and fed to GPT-3.5 through the OpenAI API to generate structured daily reports in markdown format. A web application was developed for video management, productivity visualization, and report management.",
   "results": "The vision-based productivity analysis achieved an average accuracy of 91.13% across three activities (rebar 91.76%, formwork 89.88%, concrete 91.74%). User experience evaluation with 10 participants showed the system scored 4.24 out of 5 overall, with satisfaction scoring 4.60 and report clarity scoring 4.64. ChatGPT report quality evaluation showed 1.0 response relevance, 0.8 factual accuracy, and 1.0 response completeness on average. The framework was validated over one month on a real construction site in Hong Kong.",
   "taskEn": "Schedule management / document generation",
-  "inputDataEn": "On-site images & videos"
+  "inputDataEn": "On-site images & videos",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "Computer vision detects and tracks site activities and calculates productivity, while ChatGPT converts the derived information into structured daily construction reports tested on a live project.",
+  "operationCodingBasis": "full_text"
 }

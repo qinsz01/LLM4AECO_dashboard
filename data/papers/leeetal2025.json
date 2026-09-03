@@ -27,5 +27,12 @@
   "results": "ChatGPT-generated occupancy rates showed lower average errors (weekday 0.106, weekend 0.130) against survey results than DesignBuilder library (weekday 0.244, weekend 0.244) and were competitive with ASHRAE 90.1 (weekday 0.148, weekend 0.147). In energy simulation, Case 2 (ChatGPT) total energy consumption was 262.26 kWh electricity and 138.8 kWh gas, compared to Case 1 (DesignBuilder) at 329.48 kWh and 178.56 kWh, and Case 3 (measured) at 249 kWh and 66.51 kWh. ChatGPT-based simulations better captured hourly energy usage patterns, particularly weekday afternoon vacancy and weekend hot water consumption peaks, demonstrating closer alignment with actual measured data.",
   "url": "https://doi.org/10.1007/s44189-025-00077-z",
   "taskEn": "Building occupancy prediction",
-  "inputDataEn": "Text (occupancy types + schedule descriptions)"
+  "inputDataEn": "Text (occupancy types + schedule descriptions)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "ChatGPT predicts/generates occupant schedules that are applied in DesignBuilder simulations and assessed against surveys and measured energy patterns.",
+  "operationCodingBasis": "full_text"
 }

@@ -29,5 +29,13 @@
   "markdownFile": "Zhang et al. - 2025 - Automated data-driven building energy load prediction method based on generative pre-trained transfo",
   "taskEn": "Energy consumption prediction",
   "inputDataEn": "Time series data + text",
-  "pdfFile": "Zhang et al. - 2025 - Automated data-driven building energy load prediction method based on generative pre-trained transfo"
+  "pdfFile": "Zhang et al. - 2025 - Automated data-driven building energy load prediction method based on generative pre-trained transfo",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The method retrieves external modeling knowledge, generates and self-corrects forecasting code, executes training and deployment, and predicts and explains building loads.",
+  "operationCodingBasis": "full_text"
 }

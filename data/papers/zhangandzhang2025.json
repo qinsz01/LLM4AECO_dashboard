@@ -28,5 +28,10 @@
   "markdownFile": "Zhang and Zhang - 2025 - Few-shot learning with large foundation models for automated segmentation and accessibility analysis.md",
   "url": "https://doi.org/10.1016/j.iintel.2024.100137",
   "taskEn": "Architectural floor plan semantic segmentation and accessibility analysis",
-  "inputDataEn": "2D raster architectural floor plans"
+  "inputDataEn": "2D raster architectural floor plans",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GMFS segments and classifies rooms and doors in raster floor plans and calculates egress paths and wheelchair clearances for accessibility assessment.",
+  "operationCodingBasis": "full_text"
 }

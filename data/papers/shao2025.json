@@ -29,5 +29,11 @@
   "pdfFile": "Shao et al. - 2025 - Advancing crack detection with generative AI for structural health monitoring.pdf",
   "markdownFile": "Shao et al. - 2025 - Advancing crack detection with generative AI for structural health monitoring.md",
   "taskEn": "Crack detection and image classification",
-  "inputDataEn": "Synthetic images + on-site images"
+  "inputDataEn": "Synthetic images + on-site images",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GPT-4 creates detailed crack-scene prompts and the text-to-image model generates a synthetic dataset whose value is evaluated through crack classification and object-detection experiments.",
+  "operationCodingBasis": "full_text"
 }

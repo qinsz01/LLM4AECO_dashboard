@@ -31,5 +31,11 @@
   "pdfFile": "Almeida, F. etal - 2025 - Smart energy strategies Leveraging LSTM and LLMs for advanced energy management.pdf",
   "markdownFile": "Almeida, F. etal - 2025 - Smart energy strategies Leveraging LSTM and LLMs for advanced energy management.md",
   "taskEn": "Building energy prediction and optimization",
-  "inputDataEn": "Time series data"
+  "inputDataEn": "Time series data",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GPT-4 interprets LSTM energy forecasts and generates context-specific operating recommendations; no control action is executed.",
+  "operationCodingBasis": "full_text"
 }

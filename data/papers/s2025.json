@@ -31,5 +31,13 @@
   "pdfFile": "Yoon, S. etal - 2025 - Ontology-enabled AI agent-driven intelligent digital twins for building operations and maintenance.pdf",
   "markdownFile": "Yoon, S. etal - 2025 - Ontology-enabled AI agent-driven intelligent digital twins for building operations and maintenance.md",
   "taskEn": "Intelligent digital twin-based O&M services (virtual modeling, fault detection & diagnosis, information retrieval, ontology update)",
-  "inputDataEn": "Sensor data + ontology (RDF/Brick Schema) + operational data"
+  "inputDataEn": "Sensor data + ontology (RDF/Brick Schema) + operational data",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "Ontology-enabled agents resolve digital-twin entities, create and update virtual in-situ models, select and invoke O&M applications, and analyze and report VIM and fault-diagnosis results.",
+  "operationCodingBasis": "full_text"
 }

@@ -27,5 +27,13 @@
   "results": "Validated across 54 typical building performance analysis scenarios, AutoBEE achieved 100% accuracy, 10-20x speed improvement over manual methods (processing in 50-99 seconds), superior content richness and rationality compared to human experts, and controlled token costs (mostly $0.069-$0.098 per task) through the information-hiding strategy.",
   "url": "https://doi.org/10.1016/j.enbuild.2025.116516",
   "taskEn": "Energy and environmental parameter analysis",
-  "inputDataEn": "IDF files (EnergyPlus models) + text (natural language instructions)"
+  "inputDataEn": "IDF files (EnergyPlus models) + text (natural language instructions)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "AutoBEE retrieves relevant knowledge, modifies IDF parameters, invokes EnergyPlus through its tool library, analyzes simulated energy and comfort results, and produces structured reports and compliance conclusions.",
+  "operationCodingBasis": "full_text"
 }

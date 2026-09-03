@@ -34,5 +34,11 @@
   "markdownFile": "Li et al. - 2025 - A large language model-based building operation and maintenance information query",
   "taskEn": "Building O&M information query",
   "inputDataEn": "Sensor data + query text",
-  "pdfFile": "Li et al. - 2025 - A large language model-based building operation and maintenance information query"
+  "pdfFile": "Li et al. - 2025 - A large language model-based building operation and maintenance information query",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The O&M model retrieves prompt context, generates formal SQL as alignment, and executes building-database queries with execution accuracy evaluation.",
+  "operationCodingBasis": "full_text"
 }

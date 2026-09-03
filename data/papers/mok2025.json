@@ -36,5 +36,10 @@
   "pdfFile": "Mok et al. - 2025 - Data-efficient classification of road inspection texts with a semantic similarity criterion.pdf",
   "markdownFile": "Mok et al. - 2025 - Data-efficient classification of road inspection texts with a semantic similarity criterion.md",
   "taskEn": "Road inspection text classification",
-  "inputDataEn": "Text (road inspection comments)"
+  "inputDataEn": "Text (road inspection comments)",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The proposed semantic-similarity classifier assigns road-inspection comments to maintenance categories and is evaluated as a classification method; it does not retrieve records or execute an external system.",
+  "operationCodingBasis": "full_text"
 }

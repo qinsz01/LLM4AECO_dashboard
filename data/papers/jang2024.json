@@ -28,5 +28,12 @@
   "markdownFile": "Jang et al. - 2024 - Automated detailing of exterior walls using NADIA Natural-language-based architectural detailing th.md",
   "url": "https://doi.org/10.1016/j.aei.2024.102532",
   "taskEn": "Architectural detailing",
-  "inputDataEn": "BIM models + natural language descriptions"
+  "inputDataEn": "BIM models + natural language descriptions",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "NADIA generates JSON wall details, instantiates them in Revit, and checks design requirements and ASHRAE thermal performance.",
+  "operationCodingBasis": "full_text"
 }

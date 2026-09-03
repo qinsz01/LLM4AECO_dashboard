@@ -38,5 +38,8 @@
   "markdownFile": "Alwashah et al. - 2025 - Generative artificial intelligence for construction Use cases, trends, challenges, and opportunitie.md",
   "url": "https://doi.org/10.1016/j.jobe.2025.113802",
   "taskEn": "Review/Survey",
-  "inputDataEn": "Literature data (Scopus & Google Scholar)"
+  "inputDataEn": "Literature data (Scopus & Google Scholar)",
+  "operations": [],
+  "operationEvidence": "This is a mixed systematic/bibliometric review and synthesis framework, not an evaluated paper-specific LLM workflow.",
+  "operationCodingBasis": "full_text"
 }

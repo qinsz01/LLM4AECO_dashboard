@@ -28,5 +28,10 @@
   "pdfFile": "Vergés et al. - 2026 - Large-scale analysis of environmental and circularity metrics in construction products through autom.pdf",
   "markdownFile": "Vergés et al. - 2026 - Large-scale analysis of environmental and circularity metrics in construction products through autom.md",
   "taskEn": "Environmental impact assessment / circular economy assessment",
-  "inputDataEn": "Text (EPD documents in PDF)"
+  "inputDataEn": "Text (EPD documents in PDF)",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GPT-4o extracts, normalizes, and scores circularity and environmental fields from heterogeneous EPDs, supporting the paper's large-scale statistical analysis without retrieving external records.",
+  "operationCodingBasis": "full_text"
 }

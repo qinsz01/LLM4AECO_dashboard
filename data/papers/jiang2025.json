@@ -36,5 +36,10 @@
   "markdownFile": "Jiang et al. - 2025 - Large language model for post-earthquake structural damage assessment of buildings.md",
   "url": "https://doi.org/10.1111/mice.70010",
   "taskEn": "Post-earthquake structural damage assessment",
-  "inputDataEn": "Images (structural damage photos) + text (natural language Q&A)"
+  "inputDataEn": "Images (structural damage photos) + text (natural language Q&A)",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "SDA-Chat assesses seven post-earthquake damage attributes from images and produces textual interpretations, with task-level accuracy evaluation.",
+  "operationCodingBasis": "full_text"
 }

@@ -30,5 +30,13 @@
   ],
   "contribution": "提出了一个LLM协调的工作流，结合RAG和自定义MCP工具链，实现了从文献检索到场景配置再到城市尺度建筑韧性评估的透明、可复现和可扩展的自动化流程。",
   "methodology": "构建四步工作流：基于506篇文献构建RAG知识库（使用sentence-transformers和FAISS），通过结构化模板查询获取建模指导；使用Gemini模型从文献中提取场景设置和韧性指标；开发MCP工具链封装EnergyPlus仿真引擎；以上海为案例，涵盖113个建筑原型代表311,612栋建筑进行热浪停电场景仿真。",
-  "results": "在城市尺度上，停电场景下20-26摄氏度舒适区间的占用时间占比从42.5%降至20.9%，35摄氏度以上小时数从0%增至26.7%，工业和交通建筑类型升温最显著，验证了LLM协调的场景到指标城市韧性评估流程的可行性。"
+  "results": "在城市尺度上，停电场景下20-26摄氏度舒适区间的占用时间占比从42.5%降至20.9%，35摄氏度以上小时数从0%增至26.7%，工业和交通建筑类型升温最显著，验证了LLM协调的场景到指标城市韧性评估流程的可行性。",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The LLM workflow retrieves resilience methods, generates machine-readable scenarios, invokes urban-scale EnergyPlus through MCP tools, and calculates and interprets resilience indicators.",
+  "operationCodingBasis": "full_text"
 }

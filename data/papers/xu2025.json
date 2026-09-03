@@ -28,5 +28,12 @@
   "pdfFile": "Xu et al. - 2025 - A large language model-based platform for real-time building monitoring and occupant interaction.pdf",
   "markdownFile": "Xu et al. - 2025 - A large language model-based platform for real-time building monitoring and occupant interaction.md",
   "taskEn": "Environmental monitoring / energy management",
-  "inputDataEn": "Mixed data (sensor data + BIM + IoT)"
+  "inputDataEn": "Mixed data (sensor data + BIM + IoT)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The platform integrates real-time sensor data with energy and infection-risk simulations, detects indoor-environment abnormalities, and generates occupant recommendations and facility alerts.",
+  "operationCodingBasis": "full_text"
 }

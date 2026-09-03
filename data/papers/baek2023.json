@@ -29,5 +29,10 @@
   "results": "关键词分类（KPC）性能评估显示：微平均F1值为85.7%，宏平均F1值为83.6%，加权平均F1值为84.7%。在18个冲突驱动因素中，15个的召回率超过90%，生态问题（D-03, F1=94.0%）、反对运动与回应（D-07, F1=92.3%）、感知与情感问题（D-08, F1=92.5%）、专业调查问题（D-09, F1=94.9%）、项目组织问题（D-11, F1=92.5%）和公私合作问题（D-12, F1=100.0%）表现优异。赔偿问题（D-02, F1=69.9%）、项目目标问题（D-10, F1=77.2%）和技术问题（D-17, F1=65.6%）的F1值低于80%。两个案例研究（天城山隧道和加德岛新机场）验证了关键词提取结果与实际冲突情况高度吻合。与建筑领域其他文本分类模型相比，该方法在无需额外训练的情况下取得了具有竞争力的性能。",
   "url": "https://doi.org/10.3390/app132011171",
   "taskEn": "Conflict management",
-  "inputDataEn": "News articles"
+  "inputDataEn": "News articles",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "ChatGPT extracts keyphrases and classifies predefined social-conflict drivers, with F1 and case-study validation.",
+  "operationCodingBasis": "full_text"
 }

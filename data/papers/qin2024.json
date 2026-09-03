@@ -29,5 +29,12 @@
   "results": "The intelligent design system achieved approximately 30x speedup compared to traditional manual design (73 minutes vs. 35 hours for an 8-story, 552 m² shear wall structure case study). Stage 1 optimization (459 s) improved empirical rule scores from AI-generated baseline (Sshape=0.45, Scorner=1.00) to near-engineer quality (Sshape=0.82, Scorner=1.00). Stage 2 optimization (59 min) further reduced total material cost from 925.49 k CNY (AI-generated) to 832.90 k CNY, which is 47.04 k CNY less than engineer-designed (879.94 k CNY) and 45.88 k CNY less than traditional optimization (878.78 k CNY). Steel reinforcement consumption decreased from 129.74 t (engineer) to 119.25 t (after Stage 2), and concrete from 1203.28 m³ to 1186.32 m³. The LLM controller accurately interpreted natural language design requirements and invoked correct functions with appropriate parameters, including seeking clarification when essential parameters were missing.",
   "url": "https://doi.org/10.1016/j.jobe.2024.109996",
   "taskEn": "Structural design optimization",
-  "inputDataEn": "Text (design requirements) + architectural CAD drawings"
+  "inputDataEn": "Text (design requirements) + architectural CAD drawings",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The LLM controller translates design requirements into executable method calls, invokes shear-wall generation and two-stage optimization, and evaluates empirical, mechanical, and material-consumption criteria.",
+  "operationCodingBasis": "full_text"
 }

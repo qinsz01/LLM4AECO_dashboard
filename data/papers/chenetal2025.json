@@ -32,5 +32,12 @@
   "markdownFile": "Chen et al. - 2025 - Customized large-scale model for human-AI collaborative operation and maintenance management of buil",
   "taskEn": "Fault diagnosis, O&M Q&A, energy prediction",
   "inputDataEn": "Natural language queries, physical parameter time series data, domain knowledge documents",
-  "pdfFile": "Chen et al. - 2025 - Customized large-scale model for human-AI collaborative operation and maintenance management of buil"
+  "pdfFile": "Chen et al. - 2025 - Customized large-scale model for human-AI collaborative operation and maintenance management of buil",
+  "operations": [
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The customized model routes queries to direct, retrieval, or tool paths and performs evaluated tool-integrated fault diagnosis; ordinary responses are not coded as generation.",
+  "operationCodingBasis": "full_text"
 }

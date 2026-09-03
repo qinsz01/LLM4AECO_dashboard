@@ -31,5 +31,11 @@
   "results": "在城市级用例中，使用Claude Sonnet 4.5和GPT-4o分别达到100%和95.5%的回答正确率；在房间级用例中达到100%正确率。相比LangChain Neo4j基线方法分别提高约40%和10%。框架在不同规模的图数据库上均展现出良好的可扩展性和可靠性，验证了多Agent架构在减少LLM幻觉方面的有效性。",
   "url": "https://doi.org/10.1016/j.autcon.2026.106791",
   "taskEn": "Digital twin information retrieval",
-  "inputDataEn": "Graph-based digital twin data"
+  "inputDataEn": "Graph-based digital twin data",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "Graph-DT-GPT converts natural-language requests into graph-grounded queries, executes them against digital-twin graphs, and extracts answers from the returned records.",
+  "operationCodingBasis": "full_text"
 }

@@ -28,5 +28,12 @@
   "results": "Validation was conducted through two approaches: (1) Testing with seven hypothetical IFC elements (five walls, one door, one window) against shortened OKOBAUDAT databases, repeated ten times each, confirming the AI model's ability to decompose semantic terms and correctly prioritize concrete types, with user-provided element descriptions enabling precise dataset selection; (2) A case study on the Duplex_A IFC example building (296 individual elements, 55 unique fingerprinted requests) comparing automatic vs. manual matching. The automatic matching achieved 66% accuracy as evaluated by an expert, with a confidence-correctness correlation of 0.4125. Processing time was reduced from approximately 3 hours (manual) to 11 minutes (automatic), at a cost of approximately $0.06 USD per full pass (~538,000 tokens). The automatic matching estimated total GWP at 28.0 t CO2 eq. compared to 36.6 t CO2 eq. from manual matching. The results support the interactive approach as more suitable at the current development stage given limited input information.",
   "url": "https://doi.org/10.1007/s43621-025-02203-8",
   "taskEn": "Environmental impact assessment",
-  "inputDataEn": "Mixed data (BIM, LCA database)"
+  "inputDataEn": "Mixed data (BIM, LCA database)",
+  "operations": [
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The tool semantically matches IFC elements to LCA dataset identifiers, writes confirmed matches into IFC property sets, and calculates and visualizes embodied global-warming impacts.",
+  "operationCodingBasis": "full_text"
 }

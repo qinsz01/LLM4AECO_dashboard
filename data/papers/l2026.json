@@ -39,5 +39,12 @@
   "markdownFile": "Wang, L. etal - 2026 - VS-BIM A cognitive map-driven framework enhancing MLLM for automatic safety inspection in constructi....md",
   "url": "https://doi.org/10.1016/j.aei.2025.103985",
   "taskEn": "Safety monitoring",
-  "inputDataEn": "On-site images & videos + BIM"
+  "inputDataEn": "On-site images & videos + BIM",
+  "operations": [
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "VS-BIM retrieves cognitive-map instances, registers/aligned objects through the Revit API, and performs configuration, spatial, temporal, and risk assessment.",
+  "operationCodingBasis": "full_text"
 }

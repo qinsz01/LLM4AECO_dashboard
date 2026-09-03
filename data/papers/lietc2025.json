@@ -30,5 +30,12 @@
   "url": "https://doi.org/10.1016/j.energy.2025.139328",
   "taskEn": "PVAC system control parameter optimization",
   "inputDataEn": "Sensor data (temperature, solar radiation, PV power) + simulation metrics (PPD, PMV, cost)",
-  "pdfFile": "Li et al. - 2025 - An LLM-assisted decision-making framework of rule-based control strategy for photovoltaic driven air"
+  "pdfFile": "Li et al. - 2025 - An LLM-assisted decision-making framework of rule-based control strategy for photovoltaic driven air",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The LLM proposes control parameters, iteratively applies them through a validated PVAC simulation loop, and reasons over cost/comfort metrics.",
+  "operationCodingBasis": "full_text"
 }

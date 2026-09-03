@@ -31,5 +31,12 @@
   ],
   "contribution": "全面综述了数据驱动建筑负荷预测方法，并提出了基于LLM的RAG技术生成EnergyPlus模型的技术框架，结合时空图神经网络实现房间级负荷预测，降低负荷预测的专业门槛。",
   "methodology": "系统回顾了统计学习、传统机器学习、深度学习和混合方法在建筑负荷预测中的应用，提出利用RAG技术结合Llama-3-8B模型从设计标准和历史模型库中检索相似案例，自动生成EnergyPlus IDF文件，并用STGNN进行房间级负荷预测。",
-  "results": "探索性实验验证了LLM生成EnergyPlus模型的可行性，IDF文件生成仅需196秒，生成的建筑模型年能耗模拟结果为8681 kWh（其中制冷2380 kWh，供暖6301 kWh），最大制冷负荷5956 W，最大供暖负荷13112 W。"
+  "results": "探索性实验验证了LLM生成EnergyPlus模型的可行性，IDF文件生成仅需196秒，生成的建筑模型年能耗模拟结果为8681 kWh（其中制冷2380 kWh，供暖6301 kWh），最大制冷负荷5956 W，最大供暖负荷13112 W。",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The exploratory workflow retrieves similar EnergyPlus models and requirement text, generates a complete IDF model, and runs EnergyPlus to obtain load results.",
+  "operationCodingBasis": "full_text"
 }

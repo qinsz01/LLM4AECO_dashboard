@@ -31,5 +31,12 @@
   "markdownFile": "Djafar-Henni, N. etal - 2025 - SAP2000 API Expert a custom generative pre-trained transformer (GPT) for converting narrative struct....md",
   "pdfFile": "Djafar-Henni, N. etal - 2025 - SAP2000 API Expert a custom generative pre-trained transformer (GPT) for converting narrative struct....pdf",
   "taskEn": "Structural analysis",
-  "inputDataEn": "Text (natural language descriptions) + images (structural diagrams)"
+  "inputDataEn": "Text (natural language descriptions) + images (structural diagrams)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The custom GPT generates/debugs SAP2000 API code, executes structural models, and compares numerical responses with validated benchmarks.",
+  "operationCodingBasis": "full_text"
 }

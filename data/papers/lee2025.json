@@ -29,5 +29,12 @@
   "markdownFile": "Lee et al. - 2025 - From design to operation Multi-agent AI for virtual in-situ modeling of digital twins in BIM.md",
   "url": "https://doi.org/10.1016/j.autcon.2025.106477",
   "taskEn": "Automated virtual building model construction",
-  "inputDataEn": "BIM models + ontology data + operational data"
+  "inputDataEn": "BIM models + ontology data + operational data",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The agents construct/calibrate virtual building models, access BIM/operational data, and evaluate predictive behavior for an operating HVAC system.",
+  "operationCodingBasis": "full_text"
 }

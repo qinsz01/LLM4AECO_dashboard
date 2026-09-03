@@ -28,5 +28,11 @@
   "url": "https://doi.org/10.3390/app15147647",
   "taskEn": "Natural language to BIM structured query conversion",
   "inputDataEn": "Natural language queries + BIM structured query statement pairs",
-  "pdfFile": "Liu et al. - 2025 - BIMCoder A Comprehensive Large Language Model Fusion Framework for Natural Language-Based BIM Infor"
+  "pdfFile": "Liu et al. - 2025 - BIMCoder A Comprehensive Large Language Model Fusion Framework for Natural Language-Based BIM Infor",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "BIMCoder maps language to structured BIM queries and validates them by execution in BIMserver; query strings are alignment artifacts, not design generation.",
+  "operationCodingBasis": "full_text"
 }

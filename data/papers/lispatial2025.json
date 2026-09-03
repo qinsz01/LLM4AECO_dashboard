@@ -33,5 +33,11 @@
   "url": "https://doi.org/10.1016/j.aei.2025.103375",
   "taskEn": "BIM spatial relationship query",
   "inputDataEn": "Natural language queries + BIM models",
-  "pdfFile": "Li et al. - 2025 - An interactive system for 3D spatial relationship query by integrating tree-based element indexing a"
+  "pdfFile": "Li et al. - 2025 - An interactive system for 3D spatial relationship query by integrating tree-based element indexing a",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "Agents map natural-language spatial questions to decomposed geometric queries and execute them over IFC indexes; returned spatial relations are retrieval results.",
+  "operationCodingBasis": "full_text"
 }

@@ -31,5 +31,11 @@
   ],
   "contribution": "提出了一个结合领域特定图文数据生成、视觉编码器微调和LoRA适配的框架，显著提升了大视觉语言模型在施工安全评估中的上下文感知能力。",
   "methodology": "利用GPT-4V生成施工安全领域的指令跟随训练数据，对CLIP视觉编码器进行针对施工对象的微调，并使用LoRA方法对LLaVA-1.5进行低秩自适应微调以对齐安全评估任务。",
-  "results": "在10种危险场景的400张图像上，微调模型安全状态预测准确率达94.25%，显著优于GPT-4V(53.25%)和LLaVA 1.5(48%)，在图像描述和安全理由质量评估中均获得最高分。"
+  "results": "在10种危险场景的400张图像上，微调模型安全状态预测准确率达94.25%，显著优于GPT-4V(53.25%)和LLaVA 1.5(48%)，在图像描述和安全理由质量评估中均获得最高分。",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The LVLM produces image captions/contextual explanations and classifies construction safety status, with textual and safety assessments evaluated.",
+  "operationCodingBasis": "full_text"
 }

@@ -28,5 +28,11 @@
   "results": "TunnelRIP-GPT方法达到92%的预测准确率，克服了传统Transformer和CNN方法无法直接集成多模态数据的局限。在三个隧道项目数据集上验证了泛化能力。通过评估各参数集的预测效能，为不同隧道条件提供定制化解决方案。展示了生成式LLM替代传统CV和数字图像处理在岩土工程应用中的潜力。",
   "url": "https://doi.org/10.1016/j.tust.2025.107291",
   "taskEn": "Tunnel rock mass integrity evaluation",
-  "inputDataEn": "Multimodal geological data"
+  "inputDataEn": "Multimodal geological data",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "Stable Diffusion generates synthetic tunnel-fracture images, and TunnelRIP-GPT integrates image, numerical, and text inputs to predict and explain rock-mass integrity.",
+  "operationCodingBasis": "full_text"
 }

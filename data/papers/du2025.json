@@ -34,5 +34,11 @@
   "pdfFile": "Du, C. etal - 2025 - Predictive modeling BIM command recommendation based on large-scale usage logs.pdf",
   "url": "https://doi.org/10.1016/j.aei.2025.103574",
   "taskEn": "BIM command recommendation",
-  "inputDataEn": "BIM software usage logs (large-scale Vectorworks interaction logs)"
+  "inputDataEn": "BIM software usage logs (large-scale Vectorworks interaction logs)",
+  "operations": [
+    "generation_parameterization",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The transformer predicts/recommends the next BIM command and aligns multilingual usage-log sequences with a stable command catalogue, evaluated using Recall@K.",
+  "operationCodingBasis": "full_text"
 }

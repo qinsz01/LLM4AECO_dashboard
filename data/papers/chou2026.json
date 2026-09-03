@@ -32,5 +32,11 @@
   ],
   "contribution": "开发了集成深度学习与LLM的AI驱动造价指数预测与咨询决策支持系统，结合xLSTM时序预测、QLoRA情感分析和RAG咨询功能，通过PWO算法优化模型超参数",
   "methodology": "构建多源数据框架整合历史CCI记录、宏观经济指标和繁体中文建筑新闻情感信息；使用QLoRA微调LLM进行施工新闻情感分类；采用xLSTM网络进行时序预测；通过PWO算法同时优化LLM和xLSTM的超参数，生成短期和中期两种预测配置；集成RAG技术提供可解释的咨询功能",
-  "results": "集成情感特征和PWO优化后，预测精度相对于基准模型持续改善；系统在短期和中期预测中均表现优异；部署的平台整合了CCI预测、情感分析和检索增强咨询，为建筑管理中的成本控制和决策提供可解释的预测支持"
+  "results": "集成情感特征和PWO优化后，预测精度相对于基准模型持续改善；系统在短期和中期预测中均表现优异；部署的平台整合了CCI预测、情感分析和检索增强咨询，为建筑管理中的成本控制和决策提供可解释的预测支持",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The platform classifies news sentiment, forecasts CCI trends, and retrieves structured/vector evidence for RAG consultation; it does not execute control or editing actions.",
+  "operationCodingBasis": "full_text"
 }

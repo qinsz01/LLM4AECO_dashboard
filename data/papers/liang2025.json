@@ -33,5 +33,11 @@
   "pdfFile": "Liang, X. etal - 2025 - OpenFACADES An open framework for architectural caption and attribute data enrichment via street vie....pdf",
   "url": "https://doi.org/10.1016/j.isprsjprs.2025.10.014",
   "taskEn": "Building attribute recognition and caption generation",
-  "inputDataEn": "Street view imagery + building geometric data"
+  "inputDataEn": "Street view imagery + building geometric data",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "OpenFACADES uses GPT-4o to generate facade captions/labels and predicts multiple building attributes from street-view imagery.",
+  "operationCodingBasis": "full_text"
 }

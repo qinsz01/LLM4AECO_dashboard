@@ -29,5 +29,11 @@
   "methodology": "The framework integrates CNN-based feature extraction, LSTM-Attention networks for exit flow sequence prediction, and Pix2Pix GAN for dynamic density heatmap generation, trained on a Pathfinder simulation database of 66 real floor plans from six large infrastructure types with rotational data augmentation; an LLM is incorporated via system prompts for interactive risk analysis and optimization guidance through a seven-step GUI workflow.",
   "results": "The CNN module achieved R-squared of 99% for evacuation time prediction with testing tolerance of [-2.34%, +2.57%]; the LSTM-Attention module reached R-squared of 98% for flow sequences with tolerance of [-4.48%, +4.66%]; and the GAN-based density module achieved prediction error of [-10.24%, +9.76%], all substantially outperforming prior methods whose errors range from 6.5% to over 36%.",
   "taskEn": "Evacuation safety design assessment",
-  "inputDataEn": "CAD architectural floor plans"
+  "inputDataEn": "CAD architectural floor plans",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "IEPTool predicts evacuation metrics and the LLM interprets risks and generates evaluated optimization suggestions for exits/layouts.",
+  "operationCodingBasis": "full_text"
 }

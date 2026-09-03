@@ -36,5 +36,13 @@
   "doi": "10.1016/j.enbuild.2024.114691",
   "pii": "S0378778824008077",
   "taskEn": "Energy-audit information extraction, performance diagnosis, and retrofit recommendation",
-  "inputDataEn": "Heterogeneous Chinese building energy-audit reports plus ASHRAE guidance, energy codes, and engineering reports; tables, formulas, and images are preprocessed into Markdown text"
+  "inputDataEn": "Heterogeneous Chinese building energy-audit reports plus ASHRAE guidance, energy codes, and engineering reports; tables, formulas, and images are preprocessed into Markdown text",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The agents extract audit data, retrieve domain evidence, generate and execute analysis code in a Python sandbox, diagnose energy performance, and produce retrofit recommendations.",
+  "operationCodingBasis": "full_text"
 }

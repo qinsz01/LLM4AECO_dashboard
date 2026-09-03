@@ -29,5 +29,11 @@
   "pdfFile": "Fuchs, S. etal - 2024 - Using Large Language Models for the Interpretation of Building Regulations.pdf",
   "markdownFile": "Fuchs, S. etal - 2024 - Using Large Language Models for the Interpretation of Building Regulations.md",
   "taskEn": "Regulation interpretation",
-  "inputDataEn": "Building regulation texts"
+  "inputDataEn": "Building regulation texts",
+  "operations": [
+    "generation_parameterization",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The system retrieves n-gram-selected in-context examples and generates LegalRuleML representations; execution-based checking is explicitly future work.",
+  "operationCodingBasis": "full_text"
 }

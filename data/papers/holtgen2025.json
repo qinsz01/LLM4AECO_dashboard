@@ -33,5 +33,12 @@
   "markdownFile": "Höltgen, L. etal - 2025 - Utilizing large language models for semantic enrichment of infrastructure condition data a comparati....md",
   "url": "https://doi.org/10.1007/s43503-025-00055-9",
   "taskEn": "Infrastructure condition data semantic enrichment",
-  "inputDataEn": "Relational databases (bridge inspection data) + ontology files"
+  "inputDataEn": "Relational databases (bridge inspection data) + ontology files",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "LLMs align relational schemas with ontologies and generate SQL/R2RML mappings that are syntactically checked and converted into RDF triples.",
+  "operationCodingBasis": "full_text"
 }

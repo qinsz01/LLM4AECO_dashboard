@@ -31,5 +31,12 @@
   "markdownFile": "Zhang et al. - 2024 - Advancing building energy modeling with large language models Exploration and case studies.md",
   "url": "https://doi.org/10.1016/j.enbuild.2024.114788",
   "taskEn": "Energy model development",
-  "inputDataEn": "Text / energy consumption data"
+  "inputDataEn": "Text / energy consumption data",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The case studies retrieve BEM knowledge, generate and iteratively correct EnergyPlus IDF content, and use executable workflows for model creation and result visualization without an evaluated diagnostic agent.",
+  "operationCodingBasis": "full_text"
 }

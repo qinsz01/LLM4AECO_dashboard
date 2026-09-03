@@ -30,5 +30,11 @@
   "results": "The fine-tuned Claude-3.5 model achieves the best matching accuracy of 0.8412 (F1-score: 0.6930), outperforming GPT-4o (accuracy: 0.6912) and traditional ML algorithms. Across 18 real-world building cases, CECA produces embodied carbon estimates with an average MAPE of 12.5% compared to LCA, while reducing computation time from 3.6 hours to approximately 60 seconds per building.",
   "url": "https://doi.org/10.1016/j.buildenv.2025.112694",
   "taskEn": "Embodied carbon assessment",
-  "inputDataEn": "BIM models + material & equipment lists"
+  "inputDataEn": "BIM models + material & equipment lists",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "CECA semantically matches BIM materials/equipment to emission factors and calculates embodied carbon across 18 real projects.",
+  "operationCodingBasis": "full_text"
 }

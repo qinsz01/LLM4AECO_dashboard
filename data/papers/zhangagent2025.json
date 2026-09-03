@@ -28,5 +28,13 @@
   "markdownFile": "Zhang et al. - 2025 - Large language model-based agent Schema and library for automated building energy analysis and model",
   "taskEn": "Building energy analysis and modeling agent framework",
   "inputDataEn": "Text descriptions + CSV data + PDF documents",
-  "pdfFile": "Zhang et al. - 2025 - Large language model-based agent Schema and library for automated building energy analysis and model"
+  "pdfFile": "Zhang et al. - 2025 - Large language model-based agent Schema and library for automated building energy analysis and model",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The reproduced agents retrieve modeling data, generate and modify energy models and code, invoke EnergyPlus and analysis tools, and analyze and visualize sensor or simulation results.",
+  "operationCodingBasis": "full_text"
 }

@@ -31,5 +31,12 @@
   "pdfFile": "Choi and Yoon - 2024 - GPT-based data-driven urban building energy modeling (GPT-UBEM) Concept, methodology, and case stud.pdf",
   "markdownFile": "Choi and Yoon - 2024 - GPT-based data-driven urban building energy modeling (GPT-UBEM) Concept, methodology, and case stud.md",
   "taskEn": "Energy consumption prediction",
-  "inputDataEn": "Urban building data (multi-source data)"
+  "inputDataEn": "Urban building data (multi-source data)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GPT-UBEM uses GPT's executable data-analysis environment to preprocess/align datasets, build prediction workflows, and analyze energy signatures across four cases.",
+  "operationCodingBasis": "full_text"
 }

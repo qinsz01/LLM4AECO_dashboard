@@ -38,5 +38,11 @@
   "methodology": "Design science research (DSR) methodology with a text-to-SQL-to-text pipeline comprising three steps: (1) write_query (natural language to SQL), (2) execute_query (PostgreSQL execution), (3) generate_answer (SQL results to natural language). 120 experimental runs (6 questions x 10 models x 2 setups with/without database schema) evaluated on execution validity, correctness, contextual relevance, and hallucination rate.",
   "results": "Providing database schema context is decisive for performance. Execution validity improved from 0% without schema to 35% on average (top 67%) with schema. Correctness rose from 38% to 58%. Hallucination rate dropped from 65% to 50% with schema. Qwen-3-32b achieved the highest correctness (1.00) and execution validity (0.33). LLaMA-4-Scout-17b achieved the best contextual relevance (0.75) and lowest hallucination rate (0.25). LLaMA-3.3-70b reached 0.92 correctness but only 0.08 execution validity. Execution validity and hallucination rate are not necessarily correlated.",
   "taskEn": "Information management",
-  "inputDataEn": "Structured databases"
+  "inputDataEn": "Structured databases",
+  "operations": [
+    "editing_execution",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The prototype maps natural-language requests to SQL, executes the query, and returns database-grounded answers; researcher-side scoring is not a system analysis operation.",
+  "operationCodingBasis": "full_text"
 }

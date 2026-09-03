@@ -36,5 +36,12 @@
   ],
   "contribution": "提出了AECBench，一个面向AEC领域的层级化LLM知识评测基准，包含五级认知框架和23个评测任务，构建了4800题的高质量数据集，并引入LLM-as-a-Judge方法实现开放式回答的自动评测。",
   "methodology": "基于布鲁姆分类法设计五级认知评估框架，由领域工程师从真实AEC实践中设计23个评测任务，构建4800题数据集经两轮专家审核，采用LLM-as-a-Judge方法对九个主流LLM进行系统评测。",
-  "results": "评测九个LLM后发现，模型在知识记忆和理解层面表现较好，但在建筑规范表格解读、复杂推理与计算以及专业文档生成等高层认知任务上表现显著下降，揭示了当前LLM在AEC安全关键领域的不足。"
+  "results": "评测九个LLM后发现，模型在知识记忆和理解层面表现较好，但在建筑规范表格解读、复杂推理与计算以及专业文档生成等高层认知任务上表现显著下降，揭示了当前LLM在AEC安全关键领域的不足。",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "AECBench directly evaluates LLMs on AEC retrieval, reasoning/calculation/evaluation, and professional document/design-proposal creation tasks.",
+  "operationCodingBasis": "full_text"
 }

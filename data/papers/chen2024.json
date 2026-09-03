@@ -29,5 +29,13 @@
   "results": "The proposed BERT-TextCNN-LSTM fusion model achieved the best text classification performance with 0.97 validation accuracy, outperforming individual models (TextCNN, LSTM, BERT) across all three information layer categories (F1-scores: 0.995 for single-layer, 0.951 for double-layer, 0.954 for triple-layer). GPT-4 with one-shot ICL successfully extracted structured information (Object-Property-Condition-Value) from regulatory texts across all complexity levels. The automated SPARQL-based compliance checking correctly identified non-compliant BIM objects in a nine-story residential building case study, locating specific floors and rooms that violated area requirements from GB-50096-2011. The framework demonstrated high efficiency in processing complex multi-layer regulatory clauses, significantly reducing manual intervention compared to traditional compliance checking methods.",
   "url": "https://doi.org/10.3390/buildings14071983",
   "taskEn": "Code compliance checking",
-  "inputDataEn": "Building design code texts"
+  "inputDataEn": "Building design code texts",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The pipeline extracts structured rules, aligns them with ontology/BIM entities, executes ontology queries/checks, and reports compliance findings.",
+  "operationCodingBasis": "full_text"
 }

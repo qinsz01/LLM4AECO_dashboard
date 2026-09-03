@@ -30,5 +30,11 @@
   ],
   "contribution": "提出了一个结合定制化知识图谱的RAG框架，针对建筑设计先例案例中的视觉数据主导和语言多样性挑战，通过轻量级图结构表示设计逻辑、多模态知识抽取管道以及知识聚合与问答方法，实现了更准确的先例检索和设计支持。",
   "methodology": "利用GPT-4o从建筑案例的图像和文本中抽取设计策略-目标关系元组构建轻量级知识图谱，采用UMAP降维和GMM聚类进行跨案例知识聚合，基于RRF算法融合多种检索方法（文本匹配、分析语句匹配、图像嵌入匹配），并设计多步问答管道和对话式界面。",
-  "results": "在WikiArch数据集上，检索准确率aNDCG@20达到0.35，优于基线方法；参考适配度提升约20%，参考多样性提升约30%；用户体验评估中在全面性、多样性、赋能感和直接性四个维度上均大幅超越GPT-4o直接回答，同时有效减少了幻觉问题。"
+  "results": "在WikiArch数据集上，检索准确率aNDCG@20达到0.35，优于基线方法；参考适配度提升约20%，参考多样性提升约30%；用户体验评估中在全面性、多样性、赋能感和直接性四个维度上均大幅超越GPT-4o直接回答，同时有效减少了幻觉问题。",
+  "operations": [
+    "generation_parameterization",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "ArchLogicRAG retrieves precedent cases/design logic from its graph and generates integrated, cited early-design recommendations.",
+  "operationCodingBasis": "full_text"
 }

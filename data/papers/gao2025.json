@@ -32,5 +32,13 @@
   "markdownFile": "Gao et al. - 2025 - Lifecycle framework for AI-driven parametric generative design in industrialized construction.md",
   "url": "https://doi.org/10.1016/j.autcon.2025.106146",
   "taskEn": "Integrated design framework",
-  "inputDataEn": "Design requirements"
+  "inputDataEn": "Design requirements",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The lifecycle framework retrieves domain requirements, generates and executes parametric multidisciplinary designs, and analyzes cost, carbon, daylight, and thermal outcomes.",
+  "operationCodingBasis": "full_text"
 }

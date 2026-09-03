@@ -33,5 +33,13 @@
   ],
   "contribution": "提出BrDSL端到端框架，通过LLM驱动的文档提取、约束RAG生成、多级验证与迭代修复、自动有限元仿真验证，从最小用户输入生成满足工程约束的桥梁规格数据，严格可行率达95%，基线方法均为0%。",
   "methodology": "三模块框架：(1)文档-JSON提取模块——LLM将标准化桥梁设计文档转换为规范JSON模式，构建领域知识库（1056份文档，96.7%提取覆盖率）；(2)桥梁数据生成模块——基于OpenAI嵌入的语义检索获取原型设计，GPT-5约束生成候选规格，三级验证（模式/工程规则/统计合理性），有界迭代修复（确定性规则修复+可选LLM补丁）；(3)自动FEM验证模块——JSON-to-Abaqus自动构建有限元模型，线性静力分析验证应力与挠度标准。",
-  "results": "信息提取：从1056份文档中成功提取1021份JSON（96.7%覆盖率），字段级F1=85.7%。生成对比：BrDSL严格可行率95%（38/40），而LLM/RAG/RAG+Prior基线均为0%。BrDSL平均复合违规分数J=0.10，工程规则违规降低98.3%。仿真验证：所有40个生成规格均通过FEM应力与挠度验证，50个额外配置同样全部通过。"
+  "results": "信息提取：从1056份文档中成功提取1021份JSON（96.7%覆盖率），字段级F1=85.7%。生成对比：BrDSL严格可行率95%（38/40），而LLM/RAG/RAG+Prior基线均为0%。BrDSL平均复合违规分数J=0.10，工程规则违规降低98.3%。仿真验证：所有40个生成规格均通过FEM应力与挠度验证，50个额外配置同样全部通过。",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "BrDSL retrieves/extracts precedent specifications, generates constrained bridge JSON, builds/runs Abaqus models, and validates code/structural response.",
+  "operationCodingBasis": "full_text"
 }

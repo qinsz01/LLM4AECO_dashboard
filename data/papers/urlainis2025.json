@@ -33,5 +33,11 @@
   "markdownFile": "Urlainis et al. - 2025 - Harnessing Large Language Models for Digital Building Logbook Implementation.md",
   "url": "https://doi.org/10.3390/buildings15183399",
   "taskEn": "Information management / data standardization",
-  "inputDataEn": "Building inspection reports (unstructured text)"
+  "inputDataEn": "Building inspection reports (unstructured text)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GPT-4o extracts structured inspection attributes, assesses risk levels and structural conditions, and generates qualitative summaries and recommendations for digital building logbooks.",
+  "operationCodingBasis": "full_text"
 }

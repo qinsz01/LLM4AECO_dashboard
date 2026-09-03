@@ -29,5 +29,11 @@
   "pdfFile": "He et al. - 2025 - Enriched Construction Regulation Inquiry Responses A Hybrid Search Approach for Large Language Mode.pdf",
   "markdownFile": "He et al. - 2025 - Enriched Construction Regulation Inquiry Responses A Hybrid Search Approach for Large Language Mode.md",
   "taskEn": "Construction quality compliance checking",
-  "inputDataEn": "Regulatory documents + natural language queries"
+  "inputDataEn": "Regulatory documents + natural language queries",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The hybrid RAG system retrieves applicable regulations and produces quality-check findings with justifications across 110 QA scenarios.",
+  "operationCodingBasis": "full_text"
 }

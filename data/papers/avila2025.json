@@ -28,5 +28,12 @@
   "results": "The GPT+MCP framework produced results consistent with conventional structural analysis software (ETABS), with relative errors below 1.43% for maximum displacement. In contrast, standalone GPT exhibited high relative errors of 230–270% with large dispersion. GPT+MCP and manual OpenSees maintained near-identical outputs. The end-to-end runtime was reduced from approximately 12–15 min (manual ETABS integration) to only 6–12 seconds with the GPT+MCP pipeline, demonstrating significant computational efficiency. The dataset covers four study cases with four modelling groups each (16 total analyses), reporting inter-storey drifts, maximum displacements (m), base shear (kN), and fundamental periods (s) with relative error analyses.",
   "url": "https://doi.org/10.3390/data10110169",
   "taskEn": "Structural analysis",
-  "inputDataEn": "Building structural data"
+  "inputDataEn": "Building structural data",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GPT creates structured analysis/optimisation inputs, the MCP server invokes OpenSees, and outputs are checked against ETABS and code limits.",
+  "operationCodingBasis": "full_text"
 }

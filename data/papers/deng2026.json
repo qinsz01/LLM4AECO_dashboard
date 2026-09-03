@@ -32,5 +32,11 @@
   "methodology": "提出一种基于图约束关联规则挖掘与知识增强LLM的HVAC系统能效诊断方法。该方法包含三个模块：(1) 关联图构建：将原始传感器测量值、衍生能效指标和环境控制变量构建为多模态节点，有向边编码物理连接、热力学耦合和控制依赖关系，形成有向无权关联图；(2) 图约束关联规则挖掘(GC-ARM)：对监测数据进行离群值去除和区间离散化预处理，将候选项集限制在图的k跳邻域内，搜索具有高支持度和强局部物理相关性的关联规则，大幅缩减搜索空间；(3) 知识增强LLM能效诊断：通过RAG机制将设计参数、领域专业知识和维护记录等外部领域知识注入LLM，LLM对每条候选规则进行有效性评估和分类（无效规则、设计异常、运行异常、性能退化），并提供自然语言因果解释。实验采用深圳某大型办公建筑HVAC系统2024年全年运行数据，30个变量，758032条有效数据，k=2跳邻域约束，最小支持度0.02，最小置信度0.30。",
   "results": "在真实HVAC系统运行数据上的实验结果表明：(1) 图约束将候选规则从6044条缩减至296条，减少95.10%以上，计算复杂度显著降低；(2) 知识增强后ChatGPT-4o诊断准确率最高达89.08%±1.70%，误报率7.13%±2.74%，漏报率12.63%±8.35%，一致性82.43%；(3) 所有五个LLM在知识增强后准确率均有提升，DeepSeek-R1提升最大（54.73%→76.13%，+21.4个百分点）；(4) 与传统阈值检测方法（准确率72.97%，误报率31.34%）相比，LLM方法显著优于工程方法且具有可诊断性；(5) 在ASHRAE RP-1043跨数据集验证中，ChatGPT-4o准确率达91.59%，验证了方法的跨系统泛化能力；(6) 传统无监督基线方法(EIF, DBSCAN, GNN-VAE, SAE)准确率仅49%-59%，漏报率高达40%-50%。",
   "taskEn": "Fault diagnosis",
-  "inputDataEn": "HVAC system operational data"
+  "inputDataEn": "HVAC system operational data",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The method retrieves HVAC design/maintenance context and uses graph-constrained rules plus an LLM to diagnose and explain efficiency faults against expert labels.",
+  "operationCodingBasis": "full_text"
 }

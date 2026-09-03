@@ -31,5 +31,10 @@
   "pdfFile": "Han et al. - 2025 - Large language models driven BIM-based DfMA method for free-form prefabricated buildings framework.pdf",
   "markdownFile": "Han et al. - 2025 - Large language models driven BIM-based DfMA method for free-form prefabricated buildings framework.md",
   "taskEn": "Design for manufacture and assembly (DfMA)",
-  "inputDataEn": "BIM models + parametric design + text (design rules)"
+  "inputDataEn": "BIM models + parametric design + text (design rules)",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "LLM-driven simulated DfMA conversations generate coordination/design/fabrication guidance; BIM construction itself predates the LLM experiment and no retrieval or tool execution is tested.",
+  "operationCodingBasis": "full_text"
 }

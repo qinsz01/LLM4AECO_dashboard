@@ -29,5 +29,11 @@
   "pdfFile": "Jiang and Chen - 2025 - Efficient fine-tuning of large language models for automated building energy modeling in complex cas.pdf",
   "url": "https://doi.org/10.1016/j.autcon.2025.106223",
   "taskEn": "Automated building energy modeling",
-  "inputDataEn": "Text (natural language descriptions)"
+  "inputDataEn": "Text (natural language descriptions)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "EPlus-LLMv2 generates complex IDF models and runs/visualizes EnergyPlus simulations for validation; result comparison is researcher-side.",
+  "operationCodingBasis": "full_text"
 }

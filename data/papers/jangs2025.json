@@ -30,5 +30,10 @@
   "url": "https://doi.org/10.1016/j.aei.2024.103100",
   "taskEn": "BIM semantic enrichment (component functional requirement inference)",
   "inputDataEn": "BIM models (low LOD)",
-  "pdfFile": "Jang, S. etal - 2025 - Semantic elaboration of Low-LOD BIMs Inferring functional requirements using graph neural networks"
+  "pdfFile": "Jang, S. etal - 2025 - Semantic elaboration of Low-LOD BIMs Inferring functional requirements using graph neural networks",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The GNN with LLM embeddings predicts functional requirements and detailed BIM object subtypes; labels are inferred, not written back to a model.",
+  "operationCodingBasis": "full_text"
 }

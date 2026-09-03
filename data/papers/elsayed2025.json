@@ -32,5 +32,12 @@
   "results": "The framework achieved a 100% convergence rate across over 200 validation instances with diverse building typologies, using gpt-3.5-turbo-0125 for text-to-model (avg. 7.2s convergence) and gpt-4o-mini for image-to-model (avg. 13.4s convergence), producing EnergyPlus and Radiance models that yielded accurate energy use intensity (EUI), peak loads, and spatial daylight autonomy (sDA) results.",
   "url": "https://doi.org/10.1016/j.enbuild.2025.116092",
   "taskEn": "Energy modeling",
-  "inputDataEn": "Natural language descriptions / images"
+  "inputDataEn": "Natural language descriptions / images",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The text/image workflow generates simulation-ready BEM parameters/models, runs EnergyPlus/Radiance-linked processes, and reports energy-model results.",
+  "operationCodingBasis": "full_text"
 }

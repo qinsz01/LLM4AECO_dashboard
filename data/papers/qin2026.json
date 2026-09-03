@@ -29,5 +29,12 @@
   "results": "On the 2,308-sample test set, the task-specific understanding model achieved a room match rate of 0.998, location accuracy of 0.969, adjacency accuracy of 0.990 and relation accuracy of 0.808 in about 3 seconds per sample. The unified HouseMind-O generator reached Micro/Macro IoU of 0.710/0.654, FID 1.89, Node F1 0.994 and edge overlap 0.880 in about 2 seconds, compared with 0.589/0.521 IoU and FID 11.3 for ChatHouseDiffusion. The task-specific editor achieved change IoU 0.608, GED 0.467 and Node F1 0.998 in about 3 seconds. Current editing is limited mainly to room addition and deletion; doors, windows and furniture are not modeled, and outputs are not yet fully aligned with professional design preferences.",
   "url": "https://arxiv.org/abs/2603.11640",
   "taskEn": "Architectural floor plan understanding, generation, and localized editing",
-  "inputDataEn": "RPLAN residential floor plans, building outlines, natural-language spatial descriptions, and editing instructions"
+  "inputDataEn": "RPLAN residential floor plans, building outlines, natural-language spatial descriptions, and editing instructions",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "HouseMind infers room functions and spatial relations, generates complete controllable floor plans from text and outlines, and edits existing layouts through unified spatial tokens.",
+  "operationCodingBasis": "full_text"
 }

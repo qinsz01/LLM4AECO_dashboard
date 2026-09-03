@@ -36,5 +36,11 @@
   "markdownFile": "Li et al. - 2025 - Estimating demolition waste from residential interior photos A Large Language Model solution",
   "taskEn": "Demolition waste prediction, interior design type classification, floor plan segmentation",
   "inputDataEn": "Residential interior photos, architectural floor plans",
-  "pdfFile": "Li et al. - 2025 - Estimating demolition waste from residential interior photos A Large Language Model solution"
+  "pdfFile": "Li et al. - 2025 - Estimating demolition waste from residential interior photos A Large Language Model solution",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The framework classifies finishes, segments walls, matches photo evidence to floor-plan rooms, and calculates room-level demolition waste.",
+  "operationCodingBasis": "full_text"
 }

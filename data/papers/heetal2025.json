@@ -28,5 +28,12 @@
   "markdownFile": "He et al. - 2025 - Addressing the information silo of construction planning constraints - a graph retrieval augmented g.md",
   "url": "https://doi.org/10.1108/ECAM-08-2024-1066",
   "taskEn": "Construction planning constraint Q&A",
-  "inputDataEn": "BIM models + meeting minutes + construction logs + schedules"
+  "inputDataEn": "BIM models + meeting minutes + construction logs + schedules",
+  "operations": [
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "Graph RAG generates and executes Cypher against the constraint KG, retrieves BIM-linked constraints, and derives/calculates answers to complex queries.",
+  "operationCodingBasis": "full_text"
 }

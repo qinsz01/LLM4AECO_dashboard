@@ -30,5 +30,8 @@
   ],
   "contribution": "系统探讨了LLM在建筑能源领域的应用潜力与挑战，提出了涵盖上下文学习、领域微调、检索增强生成和多模态集成的LLM发展路线图，为建筑能源领域的LLM应用提供了前瞻性指导。",
   "methodology": "作为前瞻性综述论文，通过文献调研分析了LLM在建筑能源系统中作为前端交互界面和后端分析引擎的双重角色，识别了六个高潜力应用领域（自动建模、数据标注、能源管理、故障检测、预测分析和改造设计支持），并系统梳理了七项关键挑战。",
-  "results": "提出了面向建筑能源应用的LLM发展框架，包括提示工程与上下文学习、领域定制微调与RAG、LLM代理工作流以及多模态集成四个方向，指出了LLM在数学计算可靠性、幻觉问题、领域专业知识缺失、计算成本和数据隐私等方面的关键挑战。"
+  "results": "提出了面向建筑能源应用的LLM发展框架，包括提示工程与上下文学习、领域定制微调与RAG、LLM代理工作流以及多模态集成四个方向，指出了LLM在数学计算可靠性、幻觉问题、领域专业知识缺失、计算成本和数据隐私等方面的关键挑战。",
+  "operations": [],
+  "operationEvidence": "This perspective synthesizes potential building-energy LLM applications and proposes a roadmap but does not implement/evaluate a specific workflow.",
+  "operationCodingBasis": "full_text"
 }

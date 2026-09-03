@@ -33,5 +33,11 @@
   "markdownFile": "Zhang, YK etal - 2025 - SDIGLM leveraging large language models and multimodal chain of thought for structural damage identi...",
   "taskEn": "Structural damage identification and description",
   "inputDataEn": "Structural damage images + text descriptions",
-  "pdfFile": "Zhang, YK etal - 2025 - SDIGLM leveraging large language models and multimodal chain of thought for structural damage identi..."
+  "pdfFile": "Zhang, YK etal - 2025 - SDIGLM leveraging large language models and multimodal chain of thought for structural damage identi...",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "SDIGLM segments and identifies structural damage from images and generates detailed natural-language descriptions of damage types and characteristics.",
+  "operationCodingBasis": "full_text"
 }

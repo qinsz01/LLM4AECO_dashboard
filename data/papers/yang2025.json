@@ -29,5 +29,11 @@
   "pdfFile": "Yang et al. - 2025 - Automated Checking of Highway Bridge BIM Models Based on Large Language Models.pdf",
   "markdownFile": "Yang et al. - 2025 - Automated Checking of Highway Bridge BIM Models Based on Large Language Models.md",
   "taskEn": "Code compliance checking",
-  "inputDataEn": "Mixed data (regulatory documents + BIM)"
+  "inputDataEn": "Mixed data (regulatory documents + BIM)",
+  "operations": [
+    "generation_parameterization",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The LLM turns highway-bridge specifications into structured rule and knowledge-graph entries, and the framework compares those rules with IFC attributes to produce compliance findings and adjustment recommendations.",
+  "operationCodingBasis": "full_text"
 }

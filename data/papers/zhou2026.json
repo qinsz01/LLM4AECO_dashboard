@@ -29,5 +29,12 @@
   ],
   "contribution": "提出了基于DeepSeek-R1的自动化代码生成框架，涵盖有限元、机器学习和深度学习三种建模场景，用于钢管混凝土结构的设计与维护，全面评估了LLM在结构工程中的编程性能。",
   "methodology": "设计三步框架：提示词制定与代码生成、代码执行与纠错（自动纠错和用户引导纠错）、模型优化与评估。针对CFST结构的三种应用场景（有限元建模、机器学习强度预测、深度学习腐蚀检测），使用DeepSeek-R1生成Abaqus和PyCharm代码。",
-  "results": "DeepSeek-R1在ML和DL模型代码生成方面表现优异，无需纠错即可正确执行；FE模型代码稳定性最高；三个场景中模型预测精度均表现良好，但领域特定知识应用存在局限性，高自由度任务的代码稳定性较低。"
+  "results": "DeepSeek-R1在ML和DL模型代码生成方面表现优异，无需纠错即可正确执行；FE模型代码稳定性最高；三个场景中模型预测精度均表现良好，但领域特定知识应用存在局限性，高自由度任务的代码稳定性较低。",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "DeepSeek-R1 generates, executes, diagnoses, corrects, optimizes, and interprets FE, machine-learning, and deep-learning code for CFST design and maintenance tasks.",
+  "operationCodingBasis": "full_text"
 }

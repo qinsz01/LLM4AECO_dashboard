@@ -28,5 +28,11 @@
   "url": "https://doi.org/10.1109/TSG.2025.3589202",
   "taskEn": "Building energy management and control strategy generalization",
   "inputDataEn": "Sensor data (time series) / weather data / building equipment parameters",
-  "pdfFile": "Zhang et al. - 2025 - Leveraging Large Language Model for Generalization in Building Energy Management"
+  "pdfFile": "Zhang et al. - 2025 - Leveraging Large Language Model for Generalization in Building Energy Management",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "The GPT-2 decision-transformer generates sequential building-control actions that are applied and evaluated across trained and unseen simulated building environments.",
+  "operationCodingBasis": "full_text"
 }

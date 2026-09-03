@@ -29,5 +29,10 @@
   "results": "新手用户满意度超过85%，安全知识显著提升。专家用户建议增加高级场景，突出系统的扩展潜力。81%的参与者对系统整体满意，85%的用户表示安全知识有所改善。模块化架构支持在不同施工环境中进行定制，确保未来改进的适应性。",
   "url": "https://doi.org/10.1016/j.autcon.2025.106207",
   "taskEn": "Construction safety training",
-  "inputDataEn": "Construction safety training scenario data"
+  "inputDataEn": "Construction safety training scenario data",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "The ChatGPT-powered virtual instructor dynamically generates personalized, trade-specific safety dialogue, feedback, and guidance; the evaluated system does not diagnose site state or invoke construction tools.",
+  "operationCodingBasis": "full_text"
 }

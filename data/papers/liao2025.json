@@ -31,5 +31,10 @@
   "pdfFile": "Liao, L. etal - 2025 - Safety Consultation for Prefabricated Construction A Localized Retrieval-Augmented Generative Questi....pdf",
   "url": "https://doi.org/10.1061/JCCEE5.CPENG-6315",
   "taskEn": "Safety knowledge Q&A",
-  "inputDataEn": "Safety regulation texts + professional books + exam question banks"
+  "inputDataEn": "Safety regulation texts + professional books + exam question banks",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The localized FAISS RAG system retrieves prefabricated-construction safety knowledge and answers consultation questions evaluated by experts.",
+  "operationCodingBasis": "full_text"
 }

@@ -29,5 +29,13 @@
   "results": "Evaluated on three HVAC test cases (single-zone FCU, single-zone hydronic radiator, multi-zone hydronic heat pump) using BOPTEST, AutoControl achieved an average MAE of 0.323 deg C and an average RMSE of 0.766 deg C in temperature control over a one-week period, outperforming both baseline controllers and MPC in most metrics. The average API cost per design was US $0.029 using GPT-4o.",
   "url": "https://doi.org/10.1016/j.energy.2025.138329",
   "taskEn": "Building energy system control design",
-  "inputDataEn": "Semantic models (Brick)"
+  "inputDataEn": "Semantic models (Brick)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "Agents parse Brick models, generate PI-controller code, execute/tune it in BOPTEST, and evaluate control performance across three cases.",
+  "operationCodingBasis": "full_text"
 }

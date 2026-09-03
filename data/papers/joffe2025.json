@@ -39,5 +39,10 @@
   "pdfFile": "Joffe, I. etal - 2025 - The Framework and Implementation of Using Large Language Models to Answer Questions about Building C....pdf",
   "markdownFile": "Joffe, I. etal - 2025 - The Framework and Implementation of Using Large Language Models to Answer Questions about Building C....md",
   "taskEn": "Building regulation Q&A",
-  "inputDataEn": "Regulatory documents"
+  "inputDataEn": "Regulatory documents",
+  "operations": [
+    "retrieval_alignment"
+  ],
+  "operationEvidence": "The implemented system retrieves code/standard passages and generates cited answers, with search and end-to-end QA components evaluated separately.",
+  "operationCodingBasis": "full_text"
 }
