@@ -1,9 +1,11 @@
-name: Apply default language and theme update
+name: Apply language theme update
 
 on:
   push:
-    branches: [fix/method-chart-label-clipping]
-    paths: [.github/workflows/apply-language-theme-update.yml]
+    branches:
+      - fix/method-chart-label-clipping
+    paths:
+      - .github/workflows/apply-language-theme-update.yml
 
 permissions:
   contents: write
@@ -12,58 +14,38 @@ jobs:
   apply:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
         with:
           ref: fix/method-chart-label-clipping
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
-      - name: Apply focused frontend edits
+      - name: Edit files
+        shell: bash
         run: |
-          python - <<'PY'
+          python3 <<'PY'
           from pathlib import Path
 
-          def replace_once(path, old, new):
+          def rep(path, old, new):
               p = Path(path)
               text = p.read_text(encoding='utf-8')
               if old not in text:
-                  raise SystemExit(f'missing pattern in {path}: {old[:80]!r}')
+                  raise RuntimeError(f'pattern missing in {path}')
               p.write_text(text.replace(old, new, 1), encoding='utf-8')
 
-          # English is the default only when the visitor has no saved preference.
-          replace_once(
-              'js/i18n.js',
-              "var lang = localStorage.getItem('llm4aeco-lang') || 'zh';",
-              "var lang = localStorage.getItem('llm4aeco-lang') || 'en';"
-          )
+          rep('js/i18n.js', "var lang = localStorage.getItem('llm4aeco-lang') || 'zh';", "var lang = localStorage.getItem('llm4aeco-lang') || 'en';")
 
-          for path in ['index.html', 'paper.html']:
-              replace_once(path, '<html lang="zh-CN">', '<html lang="en">')
-              replace_once(
-                  path,
-                  '<title>',
-                  '<script>(function(){var t=localStorage.getItem(\'llm4aeco-theme\')||\'dark\';document.documentElement.setAttribute(\'data-theme\',t);document.documentElement.style.colorScheme=t;})();</script>\n    <title>'
-              )
-              replace_once(
-                  path,
-                  '<link rel="stylesheet" href="css/style.css">',
-                  '<link rel="stylesheet" href="css/style.css">\n    <link rel="stylesheet" href="css/theme.css">'
-              )
-              replace_once(
-                  path,
-                  '<button id="lang-toggle" class="btn btn-primary" type="button">EN</button>',
-                  '<button id="theme-toggle" class="btn btn-secondary theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode"><span class="theme-icon-light" aria-hidden="true">☀</span><span class="theme-icon-dark" aria-hidden="true">☾</span></button>\n                <button id="lang-toggle" class="btn btn-primary" type="button">中文</button>'
-              )
-              replace_once(
-                  path,
-                  '<script src="js/i18n.js"></script>',
-                  '<script src="js/i18n.js"></script>\n    <script src="js/theme.js"></script>'
-              )
+          for path in ('index.html', 'paper.html'):
+              rep(path, '<html lang="zh-CN">', '<html lang="en">')
+              rep(path, '<link rel="stylesheet" href="css/style.css">', '<link rel="stylesheet" href="css/style.css">\n    <link rel="stylesheet" href="css/theme.css">')
+              rep(path, '<title>', '<script>(function(){var t=localStorage.getItem("llm4aeco-theme")||"dark";document.documentElement.setAttribute("data-theme",t);document.documentElement.style.colorScheme=t;})();</script>\n    <title>')
+              rep(path, '<button id="lang-toggle" class="btn btn-primary" type="button">EN</button>', '<button id="theme-toggle" class="btn btn-secondary theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode"><span class="theme-icon-light" aria-hidden="true">☀</span><span class="theme-icon-dark" aria-hidden="true">☾</span></button>\n                <button id="lang-toggle" class="btn btn-primary" type="button">中文</button>')
+              rep(path, '<script src="js/i18n.js"></script>', '<script src="js/i18n.js"></script>\n    <script src="js/theme.js"></script>')
 
-          def add_theme_palette_sync(path, anchor, render_anchor, listener_anchor):
+          def patch_chart_file(path):
               p = Path(path)
               text = p.read_text(encoding='utf-8')
-              sync = """
+              anchor = "    var CARD = '#151d2f';\n"
+              if 'function syncThemePalette()' not in text:
+                  sync = """
     function syncThemePalette() {
         var styles = getComputedStyle(document.documentElement);
         TEXT = styles.getPropertyValue('--chart-text').trim() || '#e8edf7';
@@ -72,34 +54,17 @@ jobs:
         CARD = styles.getPropertyValue('--chart-card').trim() || '#151d2f';
     }
 """
-              if 'function syncThemePalette()' not in text:
-                  if anchor not in text:
-                      raise SystemExit(f'missing palette anchor in {path}')
                   text = text.replace(anchor, anchor + sync, 1)
-              if 'syncThemePalette();\n        var papers = selectedPapers();' not in text:
-                  if render_anchor not in text:
-                      raise SystemExit(f'missing render anchor in {path}')
-                  text = text.replace(render_anchor, render_anchor.replace('var papers = selectedPapers();', 'syncThemePalette();\n        var papers = selectedPapers();'), 1)
+              render = "    function renderAll() {\n        var papers = selectedPapers();"
+              if render in text:
+                  text = text.replace(render, "    function renderAll() {\n        syncThemePalette();\n        var papers = selectedPapers();", 1)
+              lang_listener = "    window.addEventListener('langChanged', renderAll);"
               if "window.addEventListener('themeChanged', renderAll);" not in text:
-                  if listener_anchor not in text:
-                      raise SystemExit(f'missing listener anchor in {path}')
-                  text = text.replace(listener_anchor, listener_anchor + "\n    window.addEventListener('themeChanged', renderAll);", 1)
+                  text = text.replace(lang_listener, lang_listener + "\n    window.addEventListener('themeChanged', renderAll);", 1)
               p.write_text(text, encoding='utf-8')
 
-          add_theme_palette_sync(
-              'js/charts.js',
-              "    var CARD = '#151d2f';\n",
-              "    function renderAll() {\n        var papers = selectedPapers();",
-              "    window.addEventListener('langChanged', renderAll);"
-          )
-          add_theme_palette_sync(
-              'js/dashboard-layout.js',
-              "    var CARD = '#151d2f';\n",
-              "    function renderAll() {\n        var papers = selectedPapers();",
-              "    window.addEventListener('langChanged', renderAll);"
-          )
-
-          # Remove this transport workflow from the final diff.
+          patch_chart_file('js/charts.js')
+          patch_chart_file('js/dashboard-layout.js')
           Path('.github/workflows/apply-language-theme-update.yml').unlink()
           PY
 
@@ -107,9 +72,6 @@ jobs:
           node --check js/theme.js
           node --check js/charts.js
           node --check js/dashboard-layout.js
-          node --check js/app.js
-          node --check js/paper-detail.js
-
           git config user.name "Sizhong Qin"
           git config user.email "76837485+qinsz01@users.noreply.github.com"
           git add -A
