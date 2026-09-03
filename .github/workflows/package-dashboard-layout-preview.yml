@@ -56,8 +56,30 @@ jobs:
           )
           p.write_text(text, encoding='utf-8')
           PY
+      - name: Browser smoke test and screenshots
+        run: |
+          python3 -m http.server 8765 --directory preview >/tmp/dashboard-http.log 2>&1 &
+          SERVER_PID=$!
+          trap 'kill $SERVER_PID || true' EXIT
+          sleep 2
+          CHROME=$(command -v google-chrome || command -v google-chrome-stable || command -v chromium || command -v chromium-browser)
+          "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars \
+            --window-size=1600,1200 --virtual-time-budget=12000 \
+            --screenshot=dashboard-layout.png http://127.0.0.1:8765/index.html
+          test -s dashboard-layout.png
+          python - <<'PY'
+          from pathlib import Path
+          import struct
+          data = Path('dashboard-layout.png').read_bytes()
+          assert data[:8] == b'\x89PNG\r\n\x1a\n'
+          width, height = struct.unpack('>II', data[16:24])
+          assert width == 1600 and height == 1200
+          print({'screenshot_width': width, 'screenshot_height': height})
+          PY
       - uses: actions/upload-artifact@v4
         with:
           name: dashboard-layout-preview
-          path: preview
+          path: |
+            preview
+            dashboard-layout.png
           retention-days: 3
