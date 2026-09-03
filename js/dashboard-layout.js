@@ -217,8 +217,20 @@
         if (!chart) return;
 
         var isRepresentationOperation = kind === 'representation-operation';
+        var colors = isRepresentationOperation
+            ? ['#182237', '#304f7d', '#5b8def', '#8eaef5']
+            : ['#182237', '#274f4a', '#10b981', '#6ee7b7'];
+
         chart.setOption({
-            visualMap: { show: false },
+            visualMap: {
+                show: false,
+                type: 'continuous',
+                min: 0,
+                max: 1,
+                dimension: 2,
+                calculable: false,
+                inRange: { color: colors }
+            },
             grid: {
                 left: 10,
                 right: 12,
