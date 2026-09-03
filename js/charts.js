@@ -1,861 +1,745 @@
 (function () {
     'use strict';
 
-    // =========================================================================
-    // Constants
-    // =========================================================================
+    var charts = {};
+    var PHASE_ORDER = ['规划与设计', '施工', '运维', '全生命周期', '翻新与拆除'];
+    var METHOD_ORDER = ['Prompt', 'RAG', 'Agent', '微调', '其他'];
+    var REPRESENTATION_ORDER = ['文本', '结构化', '多模态', '图结构', '学习/工程化编码'];
+
     var PHASE_COLORS = {
-        '规划与设计': '#5b8def', '施工': '#f59e0b', '运维': '#10b981',
-        '全生命周期': '#8b5cf6', '翻新与拆除': '#ef4444'
+        '规划与设计': '#5b8def',
+        '施工': '#f59e0b',
+        '运维': '#10b981',
+        '全生命周期': '#8b5cf6',
+        '翻新与拆除': '#ef4444'
     };
-
-    var PALETTE = ['#5b8def', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444',
-        '#06b6d4', '#ec4899', '#84cc16', '#f97316', '#6366f1'];
-
-    var REPR_MAP = {
-        '文本': '文本', '结构化': '结构化', '多模态': '多模态',
-        '图结构': '图结构', '学习/工程化编码': '学习/工程化编码'
+    var OPERATION_COLORS = {
+        generation_parameterization: '#5b8def',
+        editing_execution: '#f59e0b',
+        analysis_compliance_diagnosis: '#10b981',
+        retrieval_alignment: '#8b5cf6'
     };
+    var REPRESENTATION_COLORS = {
+        '文本': '#94a3b8',
+        '结构化': '#38bdf8',
+        '多模态': '#f472b6',
+        '图结构': '#a78bfa',
+        '学习/工程化编码': '#a3e635'
+    };
+    var PALETTE = ['#5b8def', '#8b5cf6', '#10b981', '#f59e0b', '#ef4444', '#06b6d4', '#ec4899', '#84cc16', '#f97316'];
+    var TEXT = '#e8edf7';
+    var MUTED = '#9aa8bd';
+    var GRID = '#2a3550';
+    var CARD = '#151d2f';
 
-    // Dark theme axis / label colors
-    var AXIS_LINE = '#2a3350';
-    var AXIS_LABEL = '#9aa0b0';
-    var SPLIT_LINE = '#1e2538';
-
-    // =========================================================================
-    // Helpers
-    // =========================================================================
-    function countBy(arr, key) {
-        var map = {};
-        arr.forEach(function (item) {
-            var val = item[key];
-            if (val == null) return;
-            map[val] = (map[val] || 0) + 1;
-        });
-        return map;
+    function state() {
+        return window.appState;
     }
 
-    function normalizeRepr(val) {
-        return REPR_MAP[val] || val;
+    function selectedPapers() {
+        var app = state();
+        return app && app.filteredPapers ? app.filteredPapers : [];
     }
 
-    function sortedKeys(countMap) {
-        return Object.keys(countMap).sort(function (a, b) {
-            return countMap[b] - countMap[a];
-        });
+    function allPapers() {
+        var app = state();
+        return app && app.allPapers ? app.allPapers : [];
     }
 
-    function setFilter(key, value) {
-        var state = window.appState;
-        if (state.filters[key] === value) {
-            state.filters[key] = null;
-        } else {
-            state.filters[key] = value;
+    function getChart(id) {
+        var element = document.getElementById(id);
+        if (!element || !window.echarts) return null;
+        if (!charts[id] || charts[id].isDisposed()) {
+            charts[id] = echarts.init(element, null, { renderer: 'canvas' });
         }
-        state.applyFilters();
+        return charts[id];
     }
 
-    // =========================================================================
-    // Chart instances
-    // =========================================================================
-    var charts = [];
-
-    function createChart(domId) {
-        var dom = document.getElementById(domId);
-        if (!dom) return null;
-        var chart = echarts.init(dom);
-        charts.push(chart);
-        return chart;
-    }
-
-    // =========================================================================
-    // Chart 1: Phase Distribution (Donut)
-    // =========================================================================
-    var phaseChart = null;
-
-    function buildPhaseChart(papers) {
-        phaseChart = createChart('chart-phase');
-        if (!phaseChart) return;
-
-        var counts = countBy(papers, 'phase');
-        var data = Object.keys(PHASE_COLORS).map(function (phase) {
-            return {
-                name: phase,
-                value: counts[phase] || 0,
-                itemStyle: { color: PHASE_COLORS[phase] }
-            };
-        });
-
-        var option = {
-            tooltip: {
-                trigger: 'item',
-                formatter: function (params) {
-                    return I18n.field('phase', params.name) + ': ' + params.value + ' (' + params.percent + '%)';
-                },
-                backgroundColor: 'rgba(15,20,25,0.9)',
-                borderColor: SPLIT_LINE,
-                textStyle: { color: '#e2e8f0', fontSize: 12 }
-            },
-            series: [{
-                type: 'pie',
-                radius: ['40%', '70%'],
-                center: ['50%', '50%'],
-                avoidLabelOverlap: true,
-                itemStyle: {
-                    borderRadius: 4,
-                    borderColor: '#0f1419',
-                    borderWidth: 2
-                },
-                label: {
-                    color: AXIS_LABEL,
-                    fontSize: 11,
-                    formatter: function (params) {
-                        return I18n.field('phase', params.name) + '\n' + params.value;
-                    }
-                },
-                labelLine: { lineStyle: { color: AXIS_LABEL } },
-                emphasis: {
-                    label: { fontSize: 13, fontWeight: 'bold' },
-                    itemStyle: { shadowBlur: 10, shadowColor: 'rgba(0,0,0,0.5)' }
-                },
-                data: data
-            }]
+    function baseTooltip() {
+        return {
+            trigger: 'item',
+            confine: true,
+            backgroundColor: 'rgba(10, 15, 28, 0.96)',
+            borderColor: GRID,
+            borderWidth: 1,
+            textStyle: { color: TEXT, fontSize: 12 },
+            extraCssText: 'box-shadow:0 12px 30px rgba(0,0,0,.35);border-radius:8px;padding:10px 12px;'
         };
+    }
 
-        phaseChart.setOption(option);
-        phaseChart.on('click', function (params) {
-            setFilter('phase', params.name);
+    function countBy(items, key) {
+        var counts = {};
+        items.forEach(function (item) {
+            var value = item[key];
+            if (value === null || value === undefined || value === '') return;
+            counts[value] = (counts[value] || 0) + 1;
+        });
+        return counts;
+    }
+
+    function countOperations(items) {
+        var counts = {};
+        I18n.operationOrder().forEach(function (operation) { counts[operation] = 0; });
+        items.forEach(function (paper) {
+            (paper.operations || []).forEach(function (operation) {
+                counts[operation] = (counts[operation] || 0) + 1;
+            });
+        });
+        return counts;
+    }
+
+    function orderedValues(items, key) {
+        var counts = countBy(items, key);
+        return Object.keys(counts).sort(function (a, b) {
+            return counts[b] - counts[a] || String(a).localeCompare(String(b));
         });
     }
 
-    // =========================================================================
-    // Chart 2: LLM Method Distribution (Horizontal Bar)
-    // =========================================================================
-    var methodChart = null;
+    function percent(value) {
+        return (Number(value || 0) * 100).toFixed(1) + '%';
+    }
 
-    function buildMethodChart(papers) {
-        methodChart = createChart('chart-method');
-        if (!methodChart) return;
+    function translated(kind, value) {
+        return I18n.field(kind, value);
+    }
 
-        var counts = countBy(papers, 'llmMethod');
-        var keys = sortedKeys(counts);
+    function operationLabel(value) {
+        return I18n.operation(value).label;
+    }
 
+    function shortOperationLabel(value) {
+        var label = operationLabel(value);
+        if (I18n.isZh()) return label;
+        return label.replace(' & ', '\n& ').replace(', compliance & diagnosis', ', compliance\n& diagnosis');
+    }
+
+    function toggleFilter(key, value) {
+        var app = state();
+        if (app && typeof app.setFilter === 'function') app.setFilter(key, value);
+    }
+
+    function togglePair(firstKey, firstValue, secondKey, secondValue) {
+        var app = state();
+        if (!app || typeof app.setFilters !== 'function') return;
+        var same = app.filters[firstKey] === firstValue && app.filters[secondKey] === secondValue;
+        var patch = {};
+        patch[firstKey] = same ? null : firstValue;
+        patch[secondKey] = same ? null : secondValue;
+        app.setFilters(patch);
+    }
+
+    function setChartOption(id, option, clickHandler) {
+        var chart = getChart(id);
+        if (!chart) return;
+        chart.setOption(option, true);
+        chart.off('click');
+        if (clickHandler) chart.on('click', clickHandler);
+    }
+
+    function renderOperationDistribution(papers) {
+        var operations = I18n.operationOrder();
+        var counts = countOperations(papers);
+        var total = papers.length;
+        var selected = state().filters.operation;
         var option = {
-            tooltip: {
+            animationDuration: 350,
+            tooltip: Object.assign(baseTooltip(), {
                 trigger: 'axis',
                 axisPointer: { type: 'shadow' },
-                backgroundColor: 'rgba(15,20,25,0.9)',
-                borderColor: SPLIT_LINE,
-                textStyle: { color: '#e2e8f0', fontSize: 12 },
                 formatter: function (params) {
-                    var p = params[0];
-                    return I18n.field('llmMethod', keys[p.dataIndex]) + ': ' + p.value;
+                    var item = params[0];
+                    var operation = operations[item.dataIndex];
+                    return '<strong>' + operationLabel(operation) + '</strong><br>' +
+                        I18n.ui('chartCount') + ': ' + item.value + '<br>' +
+                        I18n.ui('chartShare') + ': ' + (total ? percent(item.value / total) : '0.0%');
                 }
-            },
-            grid: { left: 80, right: 30, top: 10, bottom: 30 },
+            }),
+            grid: { left: I18n.isZh() ? 125 : 185, right: 58, top: 10, bottom: 30 },
             xAxis: {
                 type: 'value',
-                axisLine: { lineStyle: { color: AXIS_LINE } },
-                axisLabel: { color: AXIS_LABEL, fontSize: 11 },
-                splitLine: { lineStyle: { color: SPLIT_LINE } }
+                minInterval: 1,
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: MUTED },
+                splitLine: { lineStyle: { color: GRID } }
             },
             yAxis: {
                 type: 'category',
-                data: keys,
-                axisLine: { lineStyle: { color: AXIS_LINE } },
+                inverse: true,
+                data: operations,
+                axisLine: { show: false },
+                axisTick: { show: false },
                 axisLabel: {
-                    color: AXIS_LABEL,
+                    color: MUTED,
                     fontSize: 11,
-                    formatter: function (val) {
-                        return I18n.field('llmMethod', val);
-                    }
-                },
-                axisTick: { show: false }
+                    formatter: function (value) { return operationLabel(value); }
+                }
             },
             series: [{
                 type: 'bar',
                 barWidth: 18,
-                data: keys.map(function (k, i) {
+                data: operations.map(function (operation) {
                     return {
-                        value: counts[k],
-                        itemStyle: { color: PALETTE[i % PALETTE.length] }
+                        value: counts[operation] || 0,
+                        itemStyle: {
+                            color: OPERATION_COLORS[operation],
+                            opacity: selected && selected !== operation ? 0.35 : 0.95,
+                            borderRadius: [0, 5, 5, 0]
+                        }
                     };
                 }),
                 label: {
                     show: true,
                     position: 'right',
-                    color: AXIS_LABEL,
-                    fontSize: 11
-                },
-                emphasis: {
-                    itemStyle: { shadowBlur: 10, shadowColor: 'rgba(0,0,0,0.5)' }
+                    color: TEXT,
+                    fontSize: 11,
+                    formatter: function (params) {
+                        return params.value + (total ? ' · ' + percent(params.value / total) : '');
+                    }
                 }
             }]
         };
-
-        methodChart.setOption(option);
-        methodChart.on('click', function (params) {
-            var name = keys[params.dataIndex];
-            setFilter('llmMethod', name);
+        setChartOption('chart-operation', option, function (params) {
+            toggleFilter('operation', operations[params.dataIndex]);
         });
     }
 
-    // =========================================================================
-    // Chart 3: Publication Trend (Line + Bar mixed)
-    // =========================================================================
-    var trendChart = null;
-
-    function buildTrendChart(papers) {
-        trendChart = createChart('chart-trend');
-        if (!trendChart) return;
-
-        var counts = countBy(papers, 'year');
-        var years = Object.keys(counts).map(Number).sort(function (a, b) { return a - b; });
-        var values = years.map(function (y) { return counts[y] || 0; });
-
+    function renderOperationDepth(papers) {
+        var counts = { 0: 0, 1: 0, 2: 0, 3: 0, 4: 0 };
+        papers.forEach(function (paper) {
+            var depth = Math.min(4, (paper.operations || []).length);
+            counts[depth] = (counts[depth] || 0) + 1;
+        });
+        var colors = ['#475569', '#64748b', '#5b8def', '#8b5cf6', '#10b981'];
+        var data = [0, 1, 2, 3, 4].map(function (depth) {
+            return {
+                name: depth === 0 ? I18n.ui('chartNoOperation') : (depth === 1 ? I18n.ui('operationCountOne') : depth + ' ' + I18n.ui('operationCountUnit')),
+                value: counts[depth],
+                itemStyle: { color: colors[depth] }
+            };
+        });
         var option = {
-            tooltip: {
-                trigger: 'axis',
-                backgroundColor: 'rgba(15,20,25,0.9)',
-                borderColor: SPLIT_LINE,
-                textStyle: { color: '#e2e8f0', fontSize: 12 }
-            },
-            grid: { left: 50, right: 20, top: 20, bottom: 30 },
-            xAxis: {
-                type: 'category',
-                data: years.map(String),
-                axisLine: { lineStyle: { color: AXIS_LINE } },
-                axisLabel: { color: AXIS_LABEL, fontSize: 11 },
-                axisTick: { show: false }
-            },
-            yAxis: {
-                type: 'value',
-                axisLine: { lineStyle: { color: AXIS_LINE } },
-                axisLabel: { color: AXIS_LABEL, fontSize: 11 },
-                splitLine: { lineStyle: { color: SPLIT_LINE } }
-            },
-            series: [
-                {
-                    name: 'Count',
-                    type: 'bar',
-                    barWidth: 40,
-                    data: values,
-                    itemStyle: {
-                        color: '#5b8def',
-                        borderRadius: [4, 4, 0, 0]
-                    },
-                    label: {
-                        show: true,
-                        position: 'top',
-                        color: AXIS_LABEL,
-                        fontSize: 12,
-                        fontWeight: 'bold'
-                    },
-                    emphasis: {
-                        itemStyle: { shadowBlur: 10, shadowColor: 'rgba(0,0,0,0.5)' }
-                    }
-                },
-                {
-                    name: 'Trend',
-                    type: 'line',
-                    smooth: true,
-                    symbolSize: 8,
-                    lineStyle: { color: '#f59e0b', width: 2 },
-                    itemStyle: { color: '#f59e0b' },
-                    data: values
+            animationDuration: 350,
+            tooltip: Object.assign(baseTooltip(), {
+                formatter: function (params) {
+                    return '<strong>' + params.name + '</strong><br>' + I18n.ui('chartCount') + ': ' + params.value;
                 }
-            ]
+            }),
+            legend: {
+                type: 'scroll',
+                bottom: 0,
+                textStyle: { color: MUTED, fontSize: 10 },
+                itemWidth: 10,
+                itemHeight: 10
+            },
+            series: [{
+                type: 'pie',
+                radius: ['42%', '72%'],
+                center: ['50%', '43%'],
+                avoidLabelOverlap: true,
+                itemStyle: { borderColor: CARD, borderWidth: 3, borderRadius: 5 },
+                label: {
+                    color: TEXT,
+                    fontSize: 11,
+                    formatter: function (params) { return params.value ? params.value : ''; }
+                },
+                labelLine: { lineStyle: { color: MUTED } },
+                data: data
+            }]
         };
-
-        trendChart.setOption(option);
-        trendChart.on('click', function (params) {
-            var year = parseInt(years[params.dataIndex], 10);
-            setFilter('year', year);
-        });
+        setChartOption('chart-operation-depth', option);
     }
 
-    // =========================================================================
-    // Chart 4: Representation x Category Heatmap
-    // =========================================================================
-    var heatmapChart = null;
-
-    function buildHeatmapChart(papers) {
-        heatmapChart = createChart('chart-heatmap');
-        if (!heatmapChart) return;
-
-        // Build cross-count: normalized repr x category
-        var categories = [];
-        var reprs = ['文本', '结构化', '多模态', '图结构', '学习/工程化编码'];
-
-        // Collect unique categories in stable order
-        var catSet = {};
-        papers.forEach(function (p) {
-            if (p.category) catSet[p.category] = true;
-        });
-        categories = Object.keys(catSet).sort();
-
-        // Build matrix
+    function renderRepresentationOperation(papers) {
+        var operations = I18n.operationOrder();
+        var representationTotals = countBy(papers, 'representation');
         var matrix = {};
-        papers.forEach(function (p) {
-            var r = normalizeRepr(p.representation);
-            var c = p.category;
-            if (!c) return;
-            var key = r + '||' + c;
-            matrix[key] = (matrix[key] || 0) + 1;
-        });
-
-        var heatData = [];
-        var maxVal = 0;
-        reprs.forEach(function (r, ri) {
-            categories.forEach(function (c, ci) {
-                var val = matrix[r + '||' + c] || 0;
-                heatData.push([ci, ri, val]);
-                if (val > maxVal) maxVal = val;
+        papers.forEach(function (paper) {
+            (paper.operations || []).forEach(function (operation) {
+                var key = paper.representation + '||' + operation;
+                matrix[key] = (matrix[key] || 0) + 1;
             });
         });
-
+        var data = [];
+        REPRESENTATION_ORDER.forEach(function (representation, yi) {
+            operations.forEach(function (operation, xi) {
+                var count = matrix[representation + '||' + operation] || 0;
+                var total = representationTotals[representation] || 0;
+                data.push([xi, yi, total ? count / total : 0, count, total]);
+            });
+        });
         var option = {
-            tooltip: {
+            animationDuration: 350,
+            tooltip: Object.assign(baseTooltip(), {
                 formatter: function (params) {
-                    return I18n.field('representation', reprs[params.value[1]]) + ' x ' +
-                        I18n.field('category', categories[params.value[0]]) +
-                        '<br/>Count: ' + params.value[2];
-                },
-                backgroundColor: 'rgba(15,20,25,0.9)',
-                borderColor: SPLIT_LINE,
-                textStyle: { color: '#e2e8f0', fontSize: 12 }
-            },
-            grid: { left: 20, right: 30, top: 10, bottom: 70, containLabel: true },
+                    var value = params.value;
+                    return '<strong>' + translated('representation', REPRESENTATION_ORDER[value[1]]) + ' × ' + operationLabel(operations[value[0]]) + '</strong><br>' +
+                        I18n.ui('chartCount') + ': ' + value[3] + ' / ' + value[4] + '<br>' +
+                        I18n.ui('chartShare') + ': ' + percent(value[2]);
+                }
+            }),
+            grid: { left: I18n.isZh() ? 122 : 172, right: 45, top: 20, bottom: 72 },
             xAxis: {
                 type: 'category',
-                data: categories,
-                axisLine: { lineStyle: { color: AXIS_LINE } },
-                axisLabel: {
-                    color: AXIS_LABEL,
-                    fontSize: 10,
-                    rotate: 35,
-                    interval: 0,
-                    formatter: function (val) {
-                        return I18n.field('category', val);
-                    }
-                },
+                data: operations,
+                axisLine: { lineStyle: { color: GRID } },
                 axisTick: { show: false },
-                splitArea: { show: false }
+                axisLabel: {
+                    color: MUTED,
+                    fontSize: 10,
+                    interval: 0,
+                    formatter: function (value) { return shortOperationLabel(value); }
+                }
             },
             yAxis: {
                 type: 'category',
-                data: reprs,
-                axisLine: { lineStyle: { color: AXIS_LINE } },
-                axisLabel: {
-                    color: AXIS_LABEL,
-                    fontSize: 10,
-                    formatter: function (val) {
-                        return I18n.field('representation', val);
-                    }
-                },
+                data: REPRESENTATION_ORDER,
+                axisLine: { lineStyle: { color: GRID } },
                 axisTick: { show: false },
-                splitArea: { show: false }
+                axisLabel: {
+                    color: MUTED,
+                    fontSize: 10,
+                    formatter: function (value) { return translated('representation', value); }
+                }
             },
             visualMap: {
                 min: 0,
-                max: maxVal || 1,
+                max: 1,
                 calculable: false,
                 orient: 'horizontal',
                 left: 'center',
-                bottom: 0,
-                itemWidth: 12,
-                itemHeight: 80,
-                textStyle: { color: AXIS_LABEL, fontSize: 10 },
-                inRange: {
-                    color: ['#1e2538', '#3b5998', '#5b8def']
-                }
+                bottom: 8,
+                itemWidth: 120,
+                itemHeight: 10,
+                text: ['100%', '0%'],
+                textStyle: { color: MUTED, fontSize: 10 },
+                inRange: { color: ['#182237', '#304f7d', '#5b8def', '#8eaef5'] }
             },
             series: [{
                 type: 'heatmap',
-                data: heatData,
+                data: data,
                 label: {
                     show: true,
-                    color: '#e2e8f0',
-                    fontSize: 10,
-                    formatter: function (params) {
-                        return params.value[2] || '';
-                    }
+                    color: '#f8fafc',
+                    fontWeight: 600,
+                    formatter: function (params) { return params.value[3] || ''; }
                 },
-                itemStyle: {
-                    borderColor: '#0f1419',
-                    borderWidth: 1
-                },
-                emphasis: {
-                    itemStyle: { shadowBlur: 10, shadowColor: 'rgba(0,0,0,0.5)' }
-                }
+                itemStyle: { borderColor: CARD, borderWidth: 2, borderRadius: 4 },
+                emphasis: { itemStyle: { borderColor: '#ffffff', borderWidth: 2, shadowBlur: 12, shadowColor: 'rgba(0,0,0,.45)' } }
             }]
         };
-
-        heatmapChart.setOption(option);
-        heatmapChart.on('click', function (params) {
-            var category = categories[params.value[0]];
-            var repr = reprs[params.value[1]];
-            var state = window.appState;
-            // Set both filters (toggle logic)
-            if (state.filters.category === category && state.filters.representation === repr) {
-                state.filters.category = null;
-                state.filters.representation = null;
-            } else {
-                state.filters.category = category;
-                state.filters.representation = repr;
-            }
-            state.applyFilters();
+        setChartOption('chart-repr-operation', option, function (params) {
+            togglePair('representation', REPRESENTATION_ORDER[params.value[1]], 'operation', operations[params.value[0]]);
         });
     }
 
-    // =========================================================================
-    // Chart 5: Phase x Category Stacked Bar
-    // =========================================================================
-    var stackedChart = null;
-
-    function buildStackedChart(papers) {
-        stackedChart = createChart('chart-stacked');
-        if (!stackedChart) return;
-
-        var categories = [];
-        var catSet = {};
-        papers.forEach(function (p) {
-            if (p.category) catSet[p.category] = true;
-        });
-        categories = Object.keys(catSet).sort();
-
-        var phaseKeys = Object.keys(PHASE_COLORS);
-
-        // Build counts per category per phase
+    function renderOperationTask(papers) {
+        var operations = I18n.operationOrder();
+        var categories = orderedValues(allPapers(), 'category');
+        var categoryTotals = countBy(papers, 'category');
         var matrix = {};
-        papers.forEach(function (p) {
-            var c = p.category;
-            var ph = p.phase;
-            if (!c || !ph) return;
-            var key = c + '||' + ph;
+        papers.forEach(function (paper) {
+            (paper.operations || []).forEach(function (operation) {
+                var key = operation + '||' + paper.category;
+                matrix[key] = (matrix[key] || 0) + 1;
+            });
+        });
+        var data = [];
+        operations.forEach(function (operation, yi) {
+            categories.forEach(function (category, xi) {
+                var count = matrix[operation + '||' + category] || 0;
+                var total = categoryTotals[category] || 0;
+                data.push([xi, yi, total ? count / total : 0, count, total]);
+            });
+        });
+        var option = {
+            animationDuration: 350,
+            tooltip: Object.assign(baseTooltip(), {
+                formatter: function (params) {
+                    var value = params.value;
+                    return '<strong>' + operationLabel(operations[value[1]]) + ' × ' + translated('category', categories[value[0]]) + '</strong><br>' +
+                        I18n.ui('chartCount') + ': ' + value[3] + ' / ' + value[4] + '<br>' +
+                        I18n.ui('chartShare') + ': ' + percent(value[2]);
+                }
+            }),
+            grid: { left: I18n.isZh() ? 145 : 205, right: 45, top: 20, bottom: I18n.isZh() ? 92 : 112 },
+            xAxis: {
+                type: 'category',
+                data: categories,
+                axisLine: { lineStyle: { color: GRID } },
+                axisTick: { show: false },
+                axisLabel: {
+                    color: MUTED,
+                    fontSize: 10,
+                    rotate: 28,
+                    interval: 0,
+                    formatter: function (value) { return translated('category', value); }
+                }
+            },
+            yAxis: {
+                type: 'category',
+                data: operations,
+                axisLine: { lineStyle: { color: GRID } },
+                axisTick: { show: false },
+                axisLabel: {
+                    color: MUTED,
+                    fontSize: 10,
+                    formatter: function (value) { return operationLabel(value); }
+                }
+            },
+            visualMap: {
+                min: 0,
+                max: 1,
+                calculable: false,
+                orient: 'horizontal',
+                left: 'center',
+                bottom: 8,
+                itemWidth: 130,
+                itemHeight: 10,
+                text: ['100%', '0%'],
+                textStyle: { color: MUTED, fontSize: 10 },
+                inRange: { color: ['#182237', '#274f4a', '#10b981', '#6ee7b7'] }
+            },
+            series: [{
+                type: 'heatmap',
+                data: data,
+                label: {
+                    show: true,
+                    color: '#f8fafc',
+                    fontWeight: 600,
+                    formatter: function (params) { return params.value[3] || ''; }
+                },
+                itemStyle: { borderColor: CARD, borderWidth: 2, borderRadius: 4 },
+                emphasis: { itemStyle: { borderColor: '#ffffff', borderWidth: 2, shadowBlur: 12, shadowColor: 'rgba(0,0,0,.45)' } }
+            }]
+        };
+        setChartOption('chart-operation-task', option, function (params) {
+            togglePair('operation', operations[params.value[1]], 'category', categories[params.value[0]]);
+        });
+    }
+
+    function renderPhase(papers) {
+        var counts = countBy(papers, 'phase');
+        var data = PHASE_ORDER.map(function (phase) {
+            return { name: phase, value: counts[phase] || 0, itemStyle: { color: PHASE_COLORS[phase] } };
+        });
+        var option = {
+            animationDuration: 350,
+            tooltip: Object.assign(baseTooltip(), {
+                formatter: function (params) {
+                    return '<strong>' + translated('phase', params.name) + '</strong><br>' + I18n.ui('chartCount') + ': ' + params.value;
+                }
+            }),
+            series: [{
+                type: 'pie',
+                radius: ['43%', '72%'],
+                center: ['50%', '48%'],
+                itemStyle: { borderColor: CARD, borderWidth: 3, borderRadius: 5 },
+                label: {
+                    color: MUTED,
+                    fontSize: 10,
+                    formatter: function (params) { return translated('phase', params.name) + '\n' + params.value; }
+                },
+                labelLine: { lineStyle: { color: MUTED } },
+                data: data
+            }]
+        };
+        setChartOption('chart-phase', option, function (params) { toggleFilter('phase', params.name); });
+    }
+
+    function renderMethod(papers) {
+        var counts = countBy(papers, 'llmMethod');
+        var option = {
+            animationDuration: 350,
+            tooltip: Object.assign(baseTooltip(), {
+                trigger: 'axis',
+                axisPointer: { type: 'shadow' },
+                formatter: function (params) {
+                    var method = METHOD_ORDER[params[0].dataIndex];
+                    return '<strong>' + translated('llmMethod', method) + '</strong><br>' + I18n.ui('chartCount') + ': ' + params[0].value;
+                }
+            }),
+            grid: { left: 105, right: 44, top: 10, bottom: 28 },
+            xAxis: {
+                type: 'value',
+                minInterval: 1,
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: MUTED },
+                splitLine: { lineStyle: { color: GRID } }
+            },
+            yAxis: {
+                type: 'category',
+                inverse: true,
+                data: METHOD_ORDER,
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: MUTED, formatter: function (value) { return translated('llmMethod', value); } }
+            },
+            series: [{
+                type: 'bar',
+                barWidth: 18,
+                data: METHOD_ORDER.map(function (method, index) {
+                    return { value: counts[method] || 0, itemStyle: { color: PALETTE[index], borderRadius: [0, 5, 5, 0] } };
+                }),
+                label: { show: true, position: 'right', color: TEXT }
+            }]
+        };
+        setChartOption('chart-method', option, function (params) { toggleFilter('llmMethod', METHOD_ORDER[params.dataIndex]); });
+    }
+
+    function renderTrend(papers) {
+        var counts = countBy(papers, 'year');
+        var years = orderedValues(allPapers(), 'year').map(Number).sort(function (a, b) { return a - b; });
+        var values = years.map(function (year) { return counts[year] || 0; });
+        var option = {
+            animationDuration: 350,
+            tooltip: Object.assign(baseTooltip(), { trigger: 'axis', axisPointer: { type: 'shadow' } }),
+            grid: { left: 46, right: 22, top: 20, bottom: 34 },
+            xAxis: {
+                type: 'category',
+                data: years.map(String),
+                axisLine: { lineStyle: { color: GRID } },
+                axisTick: { show: false },
+                axisLabel: { color: MUTED }
+            },
+            yAxis: {
+                type: 'value',
+                minInterval: 1,
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: MUTED },
+                splitLine: { lineStyle: { color: GRID } }
+            },
+            series: [
+                {
+                    type: 'bar',
+                    barWidth: '48%',
+                    data: values,
+                    itemStyle: { color: '#5b8def', borderRadius: [5, 5, 0, 0] },
+                    label: { show: true, position: 'top', color: TEXT, fontWeight: 600 }
+                },
+                {
+                    type: 'line',
+                    data: values,
+                    smooth: true,
+                    symbolSize: 7,
+                    lineStyle: { color: '#f59e0b', width: 2 },
+                    itemStyle: { color: '#f59e0b' }
+                }
+            ]
+        };
+        setChartOption('chart-trend', option, function (params) {
+            toggleFilter('year', Number(years[params.dataIndex]));
+        });
+    }
+
+    function renderRepresentationCategory(papers) {
+        var categories = orderedValues(allPapers(), 'category');
+        var matrix = {};
+        var max = 0;
+        papers.forEach(function (paper) {
+            var key = paper.representation + '||' + paper.category;
+            matrix[key] = (matrix[key] || 0) + 1;
+            max = Math.max(max, matrix[key]);
+        });
+        var data = [];
+        REPRESENTATION_ORDER.forEach(function (representation, yi) {
+            categories.forEach(function (category, xi) {
+                data.push([xi, yi, matrix[representation + '||' + category] || 0]);
+            });
+        });
+        var option = {
+            animationDuration: 350,
+            tooltip: Object.assign(baseTooltip(), {
+                formatter: function (params) {
+                    return '<strong>' + translated('representation', REPRESENTATION_ORDER[params.value[1]]) + ' × ' + translated('category', categories[params.value[0]]) + '</strong><br>' +
+                        I18n.ui('chartCount') + ': ' + params.value[2];
+                }
+            }),
+            grid: { left: I18n.isZh() ? 122 : 172, right: 36, top: 20, bottom: I18n.isZh() ? 90 : 112 },
+            xAxis: {
+                type: 'category',
+                data: categories,
+                axisLine: { lineStyle: { color: GRID } },
+                axisTick: { show: false },
+                axisLabel: {
+                    color: MUTED,
+                    fontSize: 10,
+                    rotate: 28,
+                    interval: 0,
+                    formatter: function (value) { return translated('category', value); }
+                }
+            },
+            yAxis: {
+                type: 'category',
+                data: REPRESENTATION_ORDER,
+                axisLine: { lineStyle: { color: GRID } },
+                axisTick: { show: false },
+                axisLabel: { color: MUTED, fontSize: 10, formatter: function (value) { return translated('representation', value); } }
+            },
+            visualMap: {
+                min: 0,
+                max: max || 1,
+                show: false,
+                inRange: { color: ['#182237', '#334f7d', '#5b8def'] }
+            },
+            series: [{
+                type: 'heatmap',
+                data: data,
+                label: { show: true, color: '#f8fafc', formatter: function (params) { return params.value[2] || ''; } },
+                itemStyle: { borderColor: CARD, borderWidth: 2, borderRadius: 4 }
+            }]
+        };
+        setChartOption('chart-heatmap', option, function (params) {
+            togglePair('representation', REPRESENTATION_ORDER[params.value[1]], 'category', categories[params.value[0]]);
+        });
+    }
+
+    function renderPhaseCategory(papers) {
+        var categories = orderedValues(allPapers(), 'category');
+        var matrix = {};
+        papers.forEach(function (paper) {
+            var key = paper.category + '||' + paper.phase;
             matrix[key] = (matrix[key] || 0) + 1;
         });
-
-        var series = phaseKeys.map(function (phase) {
+        var series = PHASE_ORDER.map(function (phase) {
             return {
                 name: phase,
                 type: 'bar',
                 stack: 'total',
-                barWidth: 18,
-                emphasis: {
-                    focus: 'series'
-                },
-                itemStyle: {
-                    color: PHASE_COLORS[phase],
-                    borderRadius: 0
-                },
-                data: categories.map(function (cat) {
-                    return matrix[cat + '||' + phase] || 0;
-                })
+                barWidth: 16,
+                emphasis: { focus: 'series' },
+                itemStyle: { color: PHASE_COLORS[phase] },
+                data: categories.map(function (category) { return matrix[category + '||' + phase] || 0; })
             };
         });
-
-        // Round corners on top of stack only: first and last series
-        if (series.length > 0) {
-            series[0].itemStyle.borderRadius = [0, 0, 0, 0];
-        }
-
         var option = {
-            tooltip: {
+            animationDuration: 350,
+            tooltip: Object.assign(baseTooltip(), {
                 trigger: 'axis',
                 axisPointer: { type: 'shadow' },
-                backgroundColor: 'rgba(15,20,25,0.9)',
-                borderColor: SPLIT_LINE,
-                textStyle: { color: '#e2e8f0', fontSize: 12 },
                 formatter: function (params) {
-                    var catName = I18n.field('category', categories[params[0].dataIndex]);
-                    var lines = [catName];
-                    params.forEach(function (p) {
-                        if (p.value > 0) {
-                            lines.push(I18n.field('phase', p.seriesName) + ': ' + p.value);
-                        }
+                    var lines = ['<strong>' + translated('category', categories[params[0].dataIndex]) + '</strong>'];
+                    params.forEach(function (item) {
+                        if (item.value) lines.push(translated('phase', item.seriesName) + ': ' + item.value);
                     });
-                    return lines.join('<br/>');
+                    return lines.join('<br>');
                 }
-            },
+            }),
             legend: {
-                data: phaseKeys,
+                type: 'scroll',
                 bottom: 0,
-                textStyle: { color: AXIS_LABEL, fontSize: 10 },
+                textStyle: { color: MUTED, fontSize: 9 },
                 itemWidth: 10,
                 itemHeight: 10,
-                itemGap: 6,
-                type: 'scroll',
-                formatter: function (name) {
-                    return I18n.field('phase', name);
-                }
+                formatter: function (name) { return translated('phase', name); }
             },
-            grid: { left: 90, right: 20, top: 10, bottom: 50 },
+            grid: { left: I18n.isZh() ? 105 : 142, right: 20, top: 12, bottom: 52 },
             xAxis: {
                 type: 'value',
-                axisLine: { lineStyle: { color: AXIS_LINE } },
-                axisLabel: { color: AXIS_LABEL, fontSize: 11 },
-                splitLine: { lineStyle: { color: SPLIT_LINE } }
+                minInterval: 1,
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: MUTED },
+                splitLine: { lineStyle: { color: GRID } }
             },
             yAxis: {
                 type: 'category',
+                inverse: true,
                 data: categories,
-                axisLine: { lineStyle: { color: AXIS_LINE } },
-                axisLabel: {
-                    color: AXIS_LABEL,
-                    fontSize: 10,
-                    formatter: function (val) {
-                        return I18n.field('category', val);
-                    }
-                },
-                axisTick: { show: false }
+                axisLine: { show: false },
+                axisTick: { show: false },
+                axisLabel: { color: MUTED, fontSize: 9, formatter: function (value) { return translated('category', value); } }
             },
             series: series
         };
-
-        stackedChart.setOption(option);
-        stackedChart.on('click', function (params) {
-            setFilter('category', categories[params.dataIndex]);
+        setChartOption('chart-stacked', option, function (params) {
+            togglePair('category', categories[params.dataIndex], 'phase', params.seriesName);
         });
     }
 
-    // =========================================================================
-    // Chart 6: Sunburst (Category -> LLM Method)
-    // =========================================================================
-    var sunburstChart = null;
-
-    function buildSunburstChart(papers) {
-        sunburstChart = createChart('chart-sunburst');
-        if (!sunburstChart) return;
-
-        // Build hierarchy: category -> llmMethod
-        var catMap = {};
-        papers.forEach(function (p) {
-            var cat = p.category;
-            var method = p.llmMethod;
-            if (!cat || !method) return;
-            if (!catMap[cat]) catMap[cat] = {};
-            catMap[cat][method] = (catMap[cat][method] || 0) + 1;
+    function renderSunburst(papers) {
+        var categories = orderedValues(allPapers(), 'category');
+        var matrix = {};
+        papers.forEach(function (paper) {
+            if (!matrix[paper.category]) matrix[paper.category] = {};
+            matrix[paper.category][paper.llmMethod] = (matrix[paper.category][paper.llmMethod] || 0) + 1;
         });
-
-        var catKeys = Object.keys(catMap).sort();
-        var data = catKeys.map(function (cat, idx) {
-            var children = Object.keys(catMap[cat]).map(function (method) {
-                return {
-                    name: method,
-                    value: catMap[cat][method]
-                };
+        var data = categories.map(function (category, index) {
+            var methods = matrix[category] || {};
+            var children = METHOD_ORDER.filter(function (method) { return methods[method]; }).map(function (method) {
+                return { name: method, value: methods[method] };
             });
             return {
-                name: cat,
-                value: children.reduce(function (s, c) { return s + c.value; }, 0),
+                name: category,
+                value: children.reduce(function (sum, child) { return sum + child.value; }, 0),
                 children: children,
-                itemStyle: { color: PALETTE[idx % PALETTE.length] }
+                itemStyle: { color: PALETTE[index % PALETTE.length] }
             };
         });
-
         var option = {
-            tooltip: {
+            animationDuration: 350,
+            tooltip: Object.assign(baseTooltip(), {
                 formatter: function (params) {
-                    var path = params.treePathInfo.map(function (p) { return p.name; }).filter(Boolean);
-                    var translatedPath = path.map(function (name, idx) {
-                        if (idx === 0) return I18n.field('category', name);
-                        return I18n.field('llmMethod', name);
+                    var path = params.treePathInfo.slice(1).map(function (item, index) {
+                        return index === 0 ? translated('category', item.name) : translated('llmMethod', item.name);
                     });
-                    return translatedPath.join(' > ') + '<br/>Count: ' + params.value;
-                },
-                backgroundColor: 'rgba(15,20,25,0.9)',
-                borderColor: SPLIT_LINE,
-                textStyle: { color: '#e2e8f0', fontSize: 12 }
-            },
+                    return '<strong>' + path.join(' → ') + '</strong><br>' + I18n.ui('chartCount') + ': ' + params.value;
+                }
+            }),
             series: [{
                 type: 'sunburst',
-                radius: ['15%', '90%'],
+                radius: ['12%', '88%'],
                 data: data,
                 nodeClick: false,
                 sort: null,
-                emphasis: {
-                    focus: 'ancestor'
-                },
+                emphasis: { focus: 'ancestor' },
                 levels: [
                     {},
                     {
-                        // Inner ring: categories
-                        r0: '15%',
-                        r: '55%',
-                        label: {
-                            fontSize: 11,
-                            color: '#ffffff',
-                            rotate: 'tangential',
-                            formatter: function (params) {
-                                return I18n.field('category', params.name);
-                            }
-                        },
-                        itemStyle: {
-                            borderWidth: 2,
-                            borderColor: '#0f1419'
-                        }
+                        r0: '12%', r: '55%',
+                        label: { color: '#ffffff', fontSize: 9, rotate: 'tangential', formatter: function (params) { return translated('category', params.name); } },
+                        itemStyle: { borderColor: CARD, borderWidth: 2 }
                     },
                     {
-                        // Outer ring: llm methods
-                        r0: '55%',
-                        r: '90%',
-                        label: {
-                            fontSize: 10,
-                            color: AXIS_LABEL,
-                            rotate: 'tangential',
-                            position: 'inside',
-                            formatter: function (params) {
-                                return I18n.field('llmMethod', params.name);
-                            }
-                        },
-                        itemStyle: {
-                            borderWidth: 1,
-                            borderColor: '#0f1419'
-                        }
+                        r0: '55%', r: '88%',
+                        label: { color: MUTED, fontSize: 8, rotate: 'tangential', formatter: function (params) { return translated('llmMethod', params.name); } },
+                        itemStyle: { borderColor: CARD, borderWidth: 1 }
                     }
                 ]
             }]
         };
-
-        sunburstChart.setOption(option);
-        sunburstChart.on('click', function (params) {
-            var treePath = params.treePathInfo;
-            // treePathInfo[0] is root, [1] is inner ring (category), [2] is outer ring (method)
-            if (treePath.length === 2) {
-                // Inner ring click -> toggle category
-                setFilter('category', params.name);
-            } else if (treePath.length === 3) {
-                // Outer ring click -> toggle llmMethod
-                setFilter('llmMethod', params.name);
-            }
+        setChartOption('chart-sunburst', option, function (params) {
+            var path = params.treePathInfo || [];
+            if (path.length === 2) toggleFilter('category', params.name);
+            if (path.length === 3) togglePair('category', path[1].name, 'llmMethod', params.name);
         });
     }
 
-    // =========================================================================
-    // Highlight / Update on filtersChanged
-    // =========================================================================
-    function updateHighlights() {
-        var state = window.appState;
-        var f = state.filters;
-
-        // --- Phase pie: dim non-selected slices ---
-        if (phaseChart) {
-            var phaseCounts = countBy(state.filteredPapers, 'phase');
-            var phaseData = Object.keys(PHASE_COLORS).map(function (phase) {
-                var isSelected = (f.phase === null || f.phase === phase);
-                return {
-                    name: phase,
-                    value: phaseCounts[phase] || 0,
-                    itemStyle: {
-                        color: PHASE_COLORS[phase],
-                        opacity: isSelected ? 1 : 0.3
-                    },
-                    label: { opacity: isSelected ? 1 : 0.3 }
-                };
-            });
-            phaseChart.setOption({
-                series: [{
-                    data: phaseData
-                }]
-            });
-        }
-
-        // --- Trend chart: update to filtered counts ---
-        if (trendChart) {
-            var yearCounts = countBy(state.filteredPapers, 'year');
-            var years = [2023, 2024, 2025, 2026];
-            var yearValues = years.map(function (y) { return yearCounts[y] || 0; });
-
-            // Highlight selected year
-            var barColors = years.map(function (y) {
-                if (f.year !== null && f.year !== y) return '#2a3350';
-                return '#5b8def';
-            });
-            var lineColor = (f.year !== null) ? '#2a3350' : '#f59e0b';
-
-            trendChart.setOption({
-                series: [
-                    {
-                        data: yearValues.map(function (v, i) {
-                            return {
-                                value: v,
-                                itemStyle: { color: barColors[i] }
-                            };
-                        })
-                    },
-                    {
-                        data: yearValues,
-                        lineStyle: { color: lineColor },
-                        itemStyle: { color: lineColor }
-                    }
-                ]
-            });
-        }
-
-        // --- Method chart: update counts from filtered ---
-        if (methodChart) {
-            var methodCounts = countBy(state.filteredPapers, 'llmMethod');
-            var methodKeys = sortedKeys(countBy(state.allPapers, 'llmMethod'));
-            methodChart.setOption({
-                series: [{
-                    data: methodKeys.map(function (k, i) {
-                        var isSelected = (f.llmMethod === null || f.llmMethod === k);
-                        return {
-                            value: methodCounts[k],
-                            itemStyle: {
-                                color: isSelected ? PALETTE[i % PALETTE.length] : '#2a3350'
-                            }
-                        };
-                    })
-                }]
-            });
-        }
-
-        // --- Heatmap: update counts from filtered ---
-        if (heatmapChart) {
-            var categories = [];
-            var reprs = ['文本', '结构化', '多模态', '图结构', '学习/工程化编码'];
-            var catSet = {};
-            state.allPapers.forEach(function (p) {
-                if (p.category) catSet[p.category] = true;
-            });
-            categories = Object.keys(catSet).sort();
-
-            var matrix = {};
-            state.filteredPapers.forEach(function (p) {
-                var r = normalizeRepr(p.representation);
-                var c = p.category;
-                if (!c) return;
-                matrix[r + '||' + c] = (matrix[r + '||' + c] || 0) + 1;
-            });
-
-            var heatData = [];
-            var maxVal = 0;
-            reprs.forEach(function (r, ri) {
-                categories.forEach(function (c, ci) {
-                    var val = matrix[r + '||' + c] || 0;
-                    heatData.push([ci, ri, val]);
-                    if (val > maxVal) maxVal = val;
-                });
-            });
-
-            heatmapChart.setOption({
-                visualMap: { max: maxVal || 1 },
-                series: [{ data: heatData }]
-            });
-        }
-
-        // --- Stacked chart: update from filtered ---
-        if (stackedChart) {
-            var categories = [];
-            var catSet = {};
-            state.allPapers.forEach(function (p) {
-                if (p.category) catSet[p.category] = true;
-            });
-            categories = Object.keys(catSet).sort();
-            var phaseKeys = Object.keys(PHASE_COLORS);
-
-            var matrix = {};
-            state.filteredPapers.forEach(function (p) {
-                var c = p.category;
-                var ph = p.phase;
-                if (!c || !ph) return;
-                matrix[c + '||' + ph] = (matrix[c + '||' + ph] || 0) + 1;
-            });
-
-            stackedChart.setOption({
-                series: phaseKeys.map(function (phase) {
-                    return {
-                        data: categories.map(function (cat) {
-                            return matrix[cat + '||' + phase] || 0;
-                        })
-                    };
-                })
-            });
-        }
-
-        // --- Sunburst: update from filtered ---
-        if (sunburstChart) {
-            var catMap = {};
-            state.filteredPapers.forEach(function (p) {
-                var cat = p.category;
-                var method = p.llmMethod;
-                if (!cat || !method) return;
-                if (!catMap[cat]) catMap[cat] = {};
-                catMap[cat][method] = (catMap[cat][method] || 0) + 1;
-            });
-            var catKeys = Object.keys(catMap).sort();
-            var sunData = catKeys.map(function (cat, idx) {
-                var children = Object.keys(catMap[cat]).map(function (method) {
-                    return { name: method, value: catMap[cat][method] };
-                });
-                return {
-                    name: cat,
-                    value: children.reduce(function (s, c) { return s + c.value; }, 0),
-                    children: children,
-                    itemStyle: { color: PALETTE[idx % PALETTE.length] }
-                };
-            });
-            sunburstChart.setOption({
-                series: [{ data: sunData }]
-            });
-        }
+    function renderAll() {
+        var papers = selectedPapers();
+        renderOperationDistribution(papers);
+        renderOperationDepth(papers);
+        renderRepresentationOperation(papers);
+        renderOperationTask(papers);
+        renderPhase(papers);
+        renderMethod(papers);
+        renderTrend(papers);
+        renderRepresentationCategory(papers);
+        renderPhaseCategory(papers);
+        renderSunburst(papers);
     }
 
-    // =========================================================================
-    // Init
-    // =========================================================================
-    function initCharts() {
-        var state = window.appState;
-        if (!state || !state.allPapers || state.allPapers.length === 0) return;
-
-        buildPhaseChart(state.allPapers);
-        buildMethodChart(state.allPapers);
-        buildTrendChart(state.allPapers);
-        buildHeatmapChart(state.allPapers);
-        buildStackedChart(state.allPapers);
-        buildSunburstChart(state.allPapers);
-
-        state.chartsReady = true;
-    }
-
-    // Listen for papersLoaded event from app.js
     window.addEventListener('papersLoaded', function () {
-        initCharts();
+        renderAll();
+        if (state()) state().chartsReady = true;
     });
-
-    // Listen for filtersChanged event
-    window.addEventListener('filtersChanged', function () {
-        if (window.appState.chartsReady) {
-            updateHighlights();
-        }
-    });
-
-    // Listen for language change: dispose and rebuild all charts
-    window.addEventListener('langChanged', function () {
-        charts.forEach(function (chart) {
-            if (chart && !chart.isDisposed()) chart.dispose();
-        });
-        charts = [];
-        phaseChart = null;
-        methodChart = null;
-        trendChart = null;
-        heatmapChart = null;
-        stackedChart = null;
-        sunburstChart = null;
-
-        if (window.appState && window.appState.allPapers.length > 0) {
-            initCharts();
-        }
-    });
-
-    // Handle window resize
+    window.addEventListener('filtersChanged', renderAll);
+    window.addEventListener('langChanged', renderAll);
     window.addEventListener('resize', function () {
-        charts.forEach(function (chart) {
-            if (chart && !chart.isDisposed()) {
-                chart.resize();
-            }
+        Object.keys(charts).forEach(function (key) {
+            if (charts[key] && !charts[key].isDisposed()) charts[key].resize();
         });
     });
 })();

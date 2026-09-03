@@ -3,60 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LLM4AECO - Systematic Literature Review</title>
+    <meta name="description" content="Interactive dashboard for the LLM4AECO systematic literature review.">
+    <title>LLM4AECO · Systematic Literature Review</title>
     <link rel="stylesheet" href="css/style.css">
     <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
 </head>
 <body>
-    <!-- Header with logo, subtitle, search input, lang toggle, clear-filters button -->
     <header class="header">
         <div class="header-inner">
             <div class="header-left">
                 <h1 class="logo">LLM4AECO</h1>
-                <span class="subtitle" id="subtitle-text" data-i18n="subtitle">系统性文献综述 · <span id="subtitle-count">–</span>篇论文 · 2023–2026</span>
+                <p class="subtitle" id="subtitle-text">系统性文献综述</p>
             </div>
             <div class="header-right">
-                <input type="text" id="search-input" class="search-input" placeholder="搜索论文..." data-i18n-placeholder="searchPlaceholder">
-                <button id="lang-toggle" class="btn-lang">EN</button>
-                <button id="clear-filters" class="btn-clear" data-i18n="resetBtn">✕ 重置</button>
+                <label class="search-box" for="search-input">
+                    <span class="search-icon" aria-hidden="true">⌕</span>
+                    <input type="search" id="search-input" class="search-input" placeholder="搜索标题、任务、表征、操作或模型…" data-i18n-placeholder="searchPlaceholder" autocomplete="off">
+                </label>
+                <button id="lang-toggle" class="btn btn-primary" type="button">EN</button>
+                <button id="clear-filters" class="btn btn-secondary" type="button" data-i18n="resetBtn">重置筛选</button>
             </div>
         </div>
-        <div class="filter-bar" id="filter-bar"></div>
+        <div class="filter-bar" id="filter-bar" aria-live="polite"></div>
     </header>
 
-    <!-- 5 stat cards in a row: Papers, Categories, Phases, Time Span, Showing -->
-    <section class="stats-row" id="stats-row">
-        <div class="stat-card"><div class="stat-number" id="stat-total">–</div><div class="stat-label" data-i18n="statPapers">论文</div></div>
-        <div class="stat-card"><div class="stat-number" id="stat-categories">9</div><div class="stat-label" data-i18n="statCategories">分类</div></div>
-        <div class="stat-card"><div class="stat-number" id="stat-phases">5</div><div class="stat-label" data-i18n="statPhases">阶段</div></div>
-        <div class="stat-card"><div class="stat-number" id="stat-years">2023–2026</div><div class="stat-label" data-i18n="statTimeSpan">时间跨度</div></div>
-        <div class="stat-card"><div class="stat-number" id="stat-filtered">–</div><div class="stat-label" data-i18n="statShowing">显示中</div></div>
-    </section>
+    <main class="page-shell">
+        <section class="stats-row" id="stats-row" aria-label="Corpus statistics">
+            <div class="stat-card"><div class="stat-number" id="stat-total">–</div><div class="stat-label" data-i18n="statPapers">论文</div></div>
+            <div class="stat-card"><div class="stat-number" id="stat-categories">–</div><div class="stat-label" data-i18n="statCategories">任务分类</div></div>
+            <div class="stat-card"><div class="stat-number" id="stat-representations">–</div><div class="stat-label" data-i18n="statRepresentations">表征类型</div></div>
+            <div class="stat-card"><div class="stat-number" id="stat-assignments">–</div><div class="stat-label" data-i18n="statAssignments">操作标签</div></div>
+            <div class="stat-card"><div class="stat-number" id="stat-multi">–</div><div class="stat-label" data-i18n="statMultiOperation">多操作论文</div></div>
+            <div class="stat-card stat-card-accent"><div class="stat-number" id="stat-filtered">–</div><div class="stat-label" data-i18n="statShowing">当前显示</div></div>
+        </section>
 
-    <!-- 6 charts in 3x2 grid -->
-    <section class="charts-section">
-        <h2 class="section-title" data-i18n="vizDashboard">可视化仪表板</h2>
-        <div class="charts-grid">
-            <div class="chart-card"><h3 class="chart-title" data-i18n="chartPhase">阶段分布</h3><div class="chart-container" id="chart-phase"></div></div>
-            <div class="chart-card"><h3 class="chart-title" data-i18n="chartMethod">LLM方法分布</h3><div class="chart-container" id="chart-method"></div></div>
-            <div class="chart-card"><h3 class="chart-title" data-i18n="chartTrend">发表趋势</h3><div class="chart-container" id="chart-trend"></div></div>
-            <div class="chart-card"><h3 class="chart-title" data-i18n="chartHeatmap">表示形式 × 分类</h3><div class="chart-container" id="chart-heatmap"></div></div>
-            <div class="chart-card"><h3 class="chart-title" data-i18n="chartStacked">阶段 × 任务分类</h3><div class="chart-container" id="chart-stacked"></div></div>
-            <div class="chart-card"><h3 class="chart-title" data-i18n="chartSunburst">LLM方法旭日图</h3><div class="chart-container" id="chart-sunburst"></div></div>
-        </div>
-    </section>
+        <section class="content-section operation-overview-section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-eyebrow">G · E · A · R</p>
+                    <h2 data-i18n="operationOverview">数据处理操作</h2>
+                    <p data-i18n="operationOverviewNote">每篇论文可具有多个操作标签。卡片中的数量表示当前筛选范围内涉及该操作的论文数。</p>
+                </div>
+                <div class="review-coverage" id="review-coverage"></div>
+            </div>
+            <div class="operation-grid" id="operation-cards"></div>
+        </section>
 
-    <!-- Paper cards list with pagination -->
-    <section class="papers-section">
-        <h2 class="section-title"><span id="papers-section-title" data-i18n="papersSection">论文</span> <span class="count" id="papers-count">–</span></h2>
-        <div class="papers-grid" id="papers-grid"></div>
-        <div class="pagination" id="pagination"></div>
-    </section>
+        <section class="content-section charts-section operation-analysis-section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-eyebrow">Representation → Operation → Task</p>
+                    <h2 data-i18n="operationAnalysis">表征、操作与任务</h2>
+                    <p data-i18n="operationAnalysisNote">热力图使用条件占比进行着色，并在单元格中显示论文数，以减少不同类别规模带来的视觉偏差。</p>
+                </div>
+            </div>
+            <div class="charts-grid charts-grid-analysis">
+                <article class="chart-card">
+                    <div class="chart-card-heading">
+                        <h3 data-i18n="chartOperation">操作分布</h3>
+                        <span class="chart-help" data-i18n="chartAssignmentsNote">多标签统计，合计可超过论文总数。</span>
+                    </div>
+                    <div class="chart-container" id="chart-operation"></div>
+                </article>
+                <article class="chart-card">
+                    <div class="chart-card-heading">
+                        <h3 data-i18n="chartOperationDepth">每篇论文包含的操作数</h3>
+                    </div>
+                    <div class="chart-container" id="chart-operation-depth"></div>
+                </article>
+                <article class="chart-card chart-card-wide">
+                    <div class="chart-card-heading">
+                        <h3 data-i18n="chartReprOperation">表征 × 数据处理操作</h3>
+                        <span class="chart-help" data-i18n="chartReprOperationNote">颜色表示同一表征类型中涉及该操作的论文比例；数字为论文数。</span>
+                    </div>
+                    <div class="chart-container chart-container-heatmap" id="chart-repr-operation"></div>
+                </article>
+                <article class="chart-card chart-card-full">
+                    <div class="chart-card-heading">
+                        <h3 data-i18n="chartOperationTask">数据处理操作 × 任务分类</h3>
+                        <span class="chart-help" data-i18n="chartOperationTaskNote">颜色表示同一任务分类中涉及该操作的论文比例；数字为论文数。</span>
+                    </div>
+                    <div class="chart-container chart-container-task" id="chart-operation-task"></div>
+                </article>
+            </div>
+        </section>
 
-    <!-- Modal overlay for paper summary -->
-    <div class="modal-overlay" id="modal-overlay">
-        <div class="modal" id="modal">
-            <button class="modal-close" id="modal-close">&times;</button>
+        <section class="content-section charts-section">
+            <div class="section-heading">
+                <div>
+                    <p class="section-eyebrow">Corpus landscape</p>
+                    <h2 data-i18n="corpusLandscape">语料概览</h2>
+                    <p data-i18n="corpusLandscapeNote">查看研究年份、生命周期阶段、LLM方法以及表征与任务分布。图表均可点击筛选。</p>
+                </div>
+            </div>
+            <div class="charts-grid">
+                <article class="chart-card"><div class="chart-card-heading"><h3 data-i18n="chartPhase">阶段分布</h3></div><div class="chart-container" id="chart-phase"></div></article>
+                <article class="chart-card"><div class="chart-card-heading"><h3 data-i18n="chartMethod">LLM方法分布</h3></div><div class="chart-container" id="chart-method"></div></article>
+                <article class="chart-card"><div class="chart-card-heading"><h3 data-i18n="chartTrend">发表趋势</h3></div><div class="chart-container" id="chart-trend"></div></article>
+                <article class="chart-card chart-card-wide"><div class="chart-card-heading"><h3 data-i18n="chartHeatmap">表征 × 任务分类</h3></div><div class="chart-container chart-container-heatmap" id="chart-heatmap"></div></article>
+                <article class="chart-card"><div class="chart-card-heading"><h3 data-i18n="chartStacked">阶段 × 任务分类</h3></div><div class="chart-container chart-container-tall" id="chart-stacked"></div></article>
+                <article class="chart-card"><div class="chart-card-heading"><h3 data-i18n="chartSunburst">任务分类 × LLM方法</h3></div><div class="chart-container chart-container-tall" id="chart-sunburst"></div></article>
+            </div>
+        </section>
+
+        <section class="content-section papers-section">
+            <div class="section-heading papers-heading">
+                <div>
+                    <p class="section-eyebrow">Evidence records</p>
+                    <h2><span data-i18n="papersSection">论文</span> <span class="section-count" id="papers-count">–</span></h2>
+                    <p data-i18n="papersSectionNote">点击论文卡片查看摘要、方法、结果和逐篇操作判定依据。</p>
+                </div>
+                <label class="sort-control" for="sort-select">
+                    <span data-i18n="sortLabel">排序</span>
+                    <select id="sort-select">
+                        <option value="newest" data-i18n="sortNewest">最新优先</option>
+                        <option value="oldest" data-i18n="sortOldest">最早优先</option>
+                        <option value="title" data-i18n="sortTitle">标题 A–Z</option>
+                    </select>
+                </label>
+            </div>
+            <div class="papers-grid" id="papers-grid"></div>
+            <nav class="pagination" id="pagination" aria-label="Pagination"></nav>
+        </section>
+    </main>
+
+    <div class="modal-overlay" id="modal-overlay" aria-hidden="true">
+        <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-content-title">
+            <button id="modal-close" class="modal-close" type="button" aria-label="Close">×</button>
             <div class="modal-content" id="modal-content"></div>
         </div>
     </div>
