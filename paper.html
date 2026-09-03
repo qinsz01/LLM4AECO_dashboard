@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>(function(){var t=localStorage.getItem("llm4aeco-theme")||"dark";document.documentElement.setAttribute("data-theme",t);document.documentElement.style.colorScheme=t;})();</script>
     <title>Paper Detail · LLM4AECO</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/theme.css">
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body class="paper-page">
@@ -12,7 +14,8 @@
         <div class="header-inner">
             <div class="paper-page-header">
                 <a href="index.html" class="back-link" data-i18n="paperBack">返回仪表板</a>
-                <button id="lang-toggle" class="btn btn-primary" type="button">EN</button>
+                <button id="theme-toggle" class="btn btn-secondary theme-toggle" type="button" aria-label="Switch to light mode" title="Switch to light mode"><span class="theme-icon-light" aria-hidden="true">☀</span><span class="theme-icon-dark" aria-hidden="true">☾</span></button>
+                <button id="lang-toggle" class="btn btn-primary" type="button">中文</button>
             </div>
         </div>
     </header>
@@ -37,6 +40,7 @@
     </main>
 
     <script src="js/i18n.js"></script>
+    <script src="js/theme.js"></script>
     <script src="js/paper-detail.js"></script>
 </body>
 </html>

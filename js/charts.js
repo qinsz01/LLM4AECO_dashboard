@@ -32,6 +32,14 @@
     var GRID = '#2a3550';
     var CARD = '#151d2f';
 
+    function syncThemePalette() {
+        var styles = getComputedStyle(document.documentElement);
+        TEXT = styles.getPropertyValue('--chart-text').trim() || '#e8edf7';
+        MUTED = styles.getPropertyValue('--chart-muted').trim() || '#9aa8bd';
+        GRID = styles.getPropertyValue('--chart-grid').trim() || '#2a3550';
+        CARD = styles.getPropertyValue('--chart-card').trim() || '#151d2f';
+    }
+
     function state() {
         return window.appState;
     }
@@ -718,6 +726,7 @@
     }
 
     function renderAll() {
+        syncThemePalette();
         var papers = selectedPapers();
         renderOperationDistribution(papers);
         renderOperationDepth(papers);
@@ -737,6 +746,7 @@
     });
     window.addEventListener('filtersChanged', renderAll);
     window.addEventListener('langChanged', renderAll);
+    window.addEventListener('themeChanged', renderAll);
     window.addEventListener('resize', function () {
         Object.keys(charts).forEach(function (key) {
             if (charts[key] && !charts[key].isDisposed()) charts[key].resize();
