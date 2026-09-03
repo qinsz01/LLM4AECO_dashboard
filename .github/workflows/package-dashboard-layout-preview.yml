@@ -67,14 +67,14 @@ jobs:
             --window-size=1600,1200 --virtual-time-budget=12000 \
             --screenshot=dashboard-layout.png http://127.0.0.1:8765/index.html
           "$CHROME" --headless --no-sandbox --disable-gpu --hide-scrollbars \
-            --window-size=1600,1050 --virtual-time-budget=12000 \
-            --screenshot=dashboard-operations.png http://127.0.0.1:8765/index.html#operations
+            --window-size=1600,3000 --virtual-time-budget=12000 \
+            --screenshot=dashboard-layout-tall.png http://127.0.0.1:8765/index.html
           test -s dashboard-layout.png
-          test -s dashboard-operations.png
+          test -s dashboard-layout-tall.png
           python - <<'PY'
           from pathlib import Path
           import struct
-          for filename, expected in [('dashboard-layout.png', (1600, 1200)), ('dashboard-operations.png', (1600, 1050))]:
+          for filename, expected in [('dashboard-layout.png', (1600, 1200)), ('dashboard-layout-tall.png', (1600, 3000))]:
               data = Path(filename).read_bytes()
               assert data[:8] == b'\x89PNG\r\n\x1a\n'
               width, height = struct.unpack('>II', data[16:24])
@@ -87,5 +87,5 @@ jobs:
           path: |
             preview
             dashboard-layout.png
-            dashboard-operations.png
+            dashboard-layout-tall.png
           retention-days: 3
