@@ -1,0 +1,260 @@
+name: Apply paper detail polish
+
+on:
+  push:
+    branches: [fix/light-mode-paper-detail]
+    paths: [.github/workflows/apply-paper-detail-polish.yml]
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: fix/light-mode-paper-detail
+      - name: Apply focused UI changes
+        shell: bash
+        run: |
+          python3 <<'PY'
+          from pathlib import Path
+
+          # 1) Paper preview cards: keep operation labels, remove internal coding rationale.
+          app = Path('js/app.js')
+          text = app.read_text(encoding='utf-8')
+          evidence_block = """                '<div class=\"card-evidence\">' +
+                    '<span class=\"card-evidence-label\">' + escapeHtml(I18n.ui('evidenceLabel')) + '</span>' +
+                    '<span>' + escapeHtml(paper.operationEvidence || '') + '</span>' +
+                '</div>' +
+"""
+          if evidence_block not in text:
+              raise RuntimeError('paper-card evidence block not found')
+          text = text.replace(evidence_block, '', 1)
+
+          # 2) Modal: study context first, then abstract, then review-specific operation coding.
+          start = text.index('        content.innerHTML =\n', text.index('    function showModal(paperId)'))
+          end = text.index('\n\n        var overlay = document.getElementById(\'modal-overlay\');', start)
+          new_block = r'''        content.innerHTML =
+            '<div class="modal-heading">' +
+                '<div class="modal-kicker">' + escapeHtml(paper.citation) + (paper.year ? ' · ' + escapeHtml(paper.year) : '') + '</div>' +
+                '<h2 id="modal-content-title">' + escapeHtml(paper.title) + '</h2>' +
+                '<div class="modal-actions">' +
+                    '<a class="button-link button-primary" href="' + recordUrl + '">' + escapeHtml(I18n.ui('modalOpenRecord')) + '</a>' +
+                    (source ? '<a class="button-link" href="' + escapeHtml(source) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(I18n.ui('modalOpenSource')) + '</a>' : '') +
+                '</div>' +
+            '</div>' +
+            '<div class="modal-info-grid modal-info-grid-first">' +
+                '<section class="modal-info-card"><h3>' + escapeHtml(I18n.ui('modalStudySummary')) + '</h3><dl>' +
+                    detailRow(I18n.ui('modalJournal'), paper.journal) +
+                    detailRow(I18n.ui('modalCategory'), I18n.field('category', paper.category)) +
+                    detailRow(I18n.ui('modalTask'), taskValue) +
+                    detailRow(I18n.ui('modalPhase'), I18n.field('phase', paper.phase)) +
+                '</dl></section>' +
+                '<section class="modal-info-card"><h3>' + escapeHtml(I18n.ui('modalInputData')) + '</h3><dl>' +
+                    detailRow(I18n.ui('modalInputData'), inputValue) +
+                    detailRow(I18n.ui('modalRepr'), I18n.field('representation', paper.representation)) +
+                    detailRow(I18n.ui('modalMethod'), I18n.field('llmMethod', paper.llmMethod)) +
+                    detailRow(I18n.ui('modalModels'), paper.llmModels && paper.llmModels.length ? paper.llmModels.join(', ') : '') +
+                '</dl></section>' +
+            '</div>' +
+            '<div class="modal-details-stack modal-details-intro">' +
+                detailSection(I18n.ui('modalAbstract'), paper.abstract, true) +
+            '</div>' +
+            '<section class="operation-panel operation-panel-secondary">' +
+                '<div class="operation-panel-heading">' +
+                    '<h3>' + escapeHtml(I18n.ui('modalOperations')) + '</h3>' +
+                    '<span class="review-basis review-basis-strong"><span class="review-check" aria-hidden="true">✓</span>' + escapeHtml(basisLabel(paper.operationCodingBasis)) + '</span>' +
+                '</div>' +
+                '<div class="modal-operation-tags">' + operationTags + '</div>' +
+                operationDescription +
+                (paper.operationEvidence ? '<div class="operation-evidence"><span>' + escapeHtml(I18n.ui('modalOperationEvidence')) + '</span><p>' + escapeHtml(paper.operationEvidence) + '</p></div>' : '') +
+            '</section>' +
+            '<div class="modal-details-stack">' +
+                detailSection(I18n.ui('modalMethodology'), paper.methodology, false) +
+                detailSection(I18n.ui('modalResults'), paper.results, false) +
+                detailSection(I18n.ui('modalContribution'), paper.contribution, false) +
+            '</div>' +
+            (paper.keywords && paper.keywords.length ? '<div class="modal-list"><strong>' + escapeHtml(I18n.ui('modalKeywords')) + '</strong><span>' + escapeHtml(paper.keywords.join(', ')) + '</span></div>' : '');'''
+          text = text[:start] + new_block + text[end:]
+          app.write_text(text, encoding='utf-8')
+
+          # 3) Dedicated paper page: place operation coding after the structured research record.
+          paper_html = Path('paper.html')
+          html = paper_html.read_text(encoding='utf-8')
+          old = '''            <div class="paper-meta" id="paper-meta"></div>\n            <div class="paper-operation-card" id="paper-operation-card"></div>\n            <div class="paper-actions" id="paper-actions"></div>\n        </section>\n\n        <section class="paper-record-grid" id="paper-record-grid" aria-label="Structured paper record"></section>'''
+          new = '''            <div class="paper-meta" id="paper-meta"></div>\n            <div class="paper-actions" id="paper-actions"></div>\n        </section>\n\n        <section class="paper-record-grid" id="paper-record-grid" aria-label="Structured paper record"></section>\n\n        <section class="paper-operation-card" id="paper-operation-card"></section>'''
+          if old not in html:
+              raise RuntimeError('paper.html operation position not found')
+          paper_html.write_text(html.replace(old, new, 1), encoding='utf-8')
+
+          # 4) Dedicated paper record: separate study context from input/model context.
+          detail = Path('js/paper-detail.js')
+          d = detail.read_text(encoding='utf-8')
+          old_task = '''        var taskData = [\n            I18n.ui('modalTask') + ': ' + (task || ''),\n            I18n.ui('modalInputData') + ': ' + (input || ''),\n            I18n.ui('modalRepr') + ': ' + I18n.field('representation', paper.representation),\n            I18n.ui('modalMethod') + ': ' + I18n.field('llmMethod', paper.llmMethod)\n        ].filter(Boolean).join('\\n');\n\n        document.getElementById('paper-record-grid').innerHTML =\n            recordCard(I18n.ui('modalStudySummary'), taskData) +\n            recordCard(I18n.ui('modalAbstract'), paper.abstract) +\n            recordCard(I18n.ui('modalMethodology'), paper.methodology) +\n            recordCard(I18n.ui('modalResults'), paper.results) +\n            recordCard(I18n.ui('modalContribution'), paper.contribution) +\n            recordCard(I18n.ui('modalModels'), (paper.llmModels || []).join(', ')) +\n            recordCard(I18n.ui('modalKeywords'), (paper.keywords || []).join(', '));'''
+          new_task = '''        var studyData = [\n            I18n.ui('modalJournal') + ': ' + (paper.journal || ''),\n            I18n.ui('modalCategory') + ': ' + I18n.field('category', paper.category),\n            I18n.ui('modalTask') + ': ' + (task || ''),\n            I18n.ui('modalPhase') + ': ' + I18n.field('phase', paper.phase)\n        ].filter(Boolean).join('\\n');\n        var modelData = [\n            I18n.ui('modalInputData') + ': ' + (input || ''),\n            I18n.ui('modalRepr') + ': ' + I18n.field('representation', paper.representation),\n            I18n.ui('modalMethod') + ': ' + I18n.field('llmMethod', paper.llmMethod),\n            I18n.ui('modalModels') + ': ' + (paper.llmModels || []).join(', ')\n        ].filter(Boolean).join('\\n');\n\n        document.getElementById('paper-record-grid').innerHTML =\n            recordCard(I18n.ui('modalStudySummary'), studyData) +\n            recordCard(I18n.ui('modalInputData'), modelData) +\n            recordCard(I18n.ui('modalAbstract'), paper.abstract) +\n            recordCard(I18n.ui('modalContribution'), paper.contribution) +\n            recordCard(I18n.ui('modalMethodology'), paper.methodology) +\n            recordCard(I18n.ui('modalResults'), paper.results) +\n            recordCard(I18n.ui('modalKeywords'), (paper.keywords || []).join(', '));'''
+          if old_task not in d:
+              raise RuntimeError('paper detail record block not found')
+          detail.write_text(d.replace(old_task, new_task, 1), encoding='utf-8')
+
+          # 5) Strengthen the actual light theme for nested modal/detail surfaces.
+          theme = Path('css/theme.css')
+          css = theme.read_text(encoding='utf-8')
+          additions = r'''
+
+/* Strong light-mode contrast for nested paper/detail surfaces. */
+html[data-theme="light"] .operation-generation { --operation-color: #2f62c7; --operation-rgb: 47, 98, 199; }
+html[data-theme="light"] .operation-editing { --operation-color: #a55208; --operation-rgb: 165, 82, 8; }
+html[data-theme="light"] .operation-analysis { --operation-color: #047857; --operation-rgb: 4, 120, 87; }
+html[data-theme="light"] .operation-retrieval { --operation-color: #6d3cc5; --operation-rgb: 109, 60, 197; }
+
+html[data-theme="light"] .modal {
+    background: #ffffff;
+    color: #172033;
+}
+
+html[data-theme="light"] .modal-kicker,
+html[data-theme="light"] .card-year,
+html[data-theme="light"] .back-link,
+html[data-theme="light"] .operation-evidence > span {
+    color: #315fae;
+}
+
+html[data-theme="light"] .modal-info-card,
+html[data-theme="light"] .modal-detail,
+html[data-theme="light"] .paper-record-card,
+html[data-theme="light"] .paper-content {
+    border-color: #d7e0eb;
+    background: #f8fafc;
+    color: #334155;
+}
+
+html[data-theme="light"] .operation-panel,
+html[data-theme="light"] .paper-operation-card {
+    border-color: #c7d7ef;
+    background: linear-gradient(145deg, #eef4fd, #f8fbff 72%);
+    color: #26364d;
+}
+
+html[data-theme="light"] .operation-panel-secondary {
+    margin-top: 14px;
+}
+
+html[data-theme="light"] .detail-row,
+html[data-theme="light"] .operation-evidence {
+    border-color: #dfe7f0;
+}
+
+html[data-theme="light"] .detail-row dt,
+html[data-theme="light"] .modal-list strong {
+    color: #64748b;
+}
+
+html[data-theme="light"] .detail-row dd,
+html[data-theme="light"] .modal-info-card h3,
+html[data-theme="light"] .operation-panel-heading h3,
+html[data-theme="light"] .modal-detail summary,
+html[data-theme="light"] .modal-detail p,
+html[data-theme="light"] .operation-evidence p,
+html[data-theme="light"] .paper-record-card h2,
+html[data-theme="light"] .paper-record-card p,
+html[data-theme="light"] .paper-operation-heading h2,
+html[data-theme="light"] .paper-operation-evidence,
+html[data-theme="light"] .paper-content p,
+html[data-theme="light"] .paper-content li {
+    color: #334155;
+}
+
+html[data-theme="light"] .tag-phase {
+    border-color: #bfd1f4;
+    background: #edf3ff;
+    color: #2f5fae;
+}
+
+html[data-theme="light"] .tag-category {
+    border-color: #d7c8f2;
+    background: #f5f1fc;
+    color: #6843a5;
+}
+
+html[data-theme="light"] .tag-method {
+    border-color: #bfe4d2;
+    background: #eef9f3;
+    color: #176b4d;
+}
+
+html[data-theme="light"] .tag-repr {
+    border-color: #ead8a8;
+    background: #fff9e9;
+    color: #815d08;
+}
+
+html[data-theme="light"] .tag-operation {
+    border-color: rgba(var(--operation-rgb), 0.24);
+    background: rgba(var(--operation-rgb), 0.08);
+    color: var(--operation-color);
+}
+
+html[data-theme="light"] .review-basis {
+    color: #08765a;
+}
+
+html[data-theme="light"] .review-check,
+html[data-theme="light"] .review-basis-strong {
+    border-color: #b8e2d3;
+    background: #edf9f4;
+    color: #08765a;
+}
+
+html[data-theme="light"] .modal-close:hover,
+html[data-theme="light"] .button-link:hover {
+    color: #172033;
+}
+
+html[data-theme="light"] .paper-hero {
+    border-color: #d6dfeb;
+    background: linear-gradient(145deg, #ffffff, #f4f7fb);
+    box-shadow: 0 8px 22px rgba(47, 65, 91, 0.06);
+}
+
+html[data-theme="light"] .paper-content pre {
+    border-color: #d7e0eb;
+    background: #eef2f7;
+}
+
+html[data-theme="light"] .paper-content code {
+    background: #eaf1fb;
+    color: #315fae;
+}
+
+/* The preview card shows classification labels, not reviewer rationale. */
+.paper-card {
+    min-height: 350px;
+}
+
+.modal-info-grid-first {
+    margin-top: 22px;
+}
+
+.modal-details-intro {
+    margin-top: 12px;
+}
+'''
+          if 'Strong light-mode contrast for nested paper/detail surfaces.' not in css:
+              css += additions
+          theme.write_text(css, encoding='utf-8')
+
+          # Remove the temporary workflow from the final branch state.
+          Path('.github/workflows/apply-paper-detail-polish.yml').unlink()
+          PY
+
+          node --check js/app.js
+          node --check js/paper-detail.js
+          git diff --check
+
+          git config user.name "Sizhong Qin"
+          git config user.email "76837485+qinsz01@users.noreply.github.com"
+          git add -A
+          git commit -m "fix: improve light mode and paper detail hierarchy"
+          git push
