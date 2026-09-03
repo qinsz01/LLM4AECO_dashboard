@@ -43,6 +43,15 @@
         });
     }
 
+    function removeDuplicateReviewBasis(info) {
+        if (!info) return;
+        var label = I18n.ui('modalCodingBasis');
+        info.querySelectorAll('.detail-row').forEach(function (row) {
+            var term = row.querySelector('dt');
+            if (term && term.textContent.trim() === label) row.remove();
+        });
+    }
+
     function reorderModal() {
         if (rearrangingModal) return;
         var content = document.getElementById('modal-content');
@@ -56,6 +65,7 @@
         if (operation.getAttribute('data-polished-order') === 'true') return;
 
         rearrangingModal = true;
+        removeDuplicateReviewBasis(info);
         info.classList.add('modal-info-grid-first');
         heading.insertAdjacentElement('afterend', info);
 
