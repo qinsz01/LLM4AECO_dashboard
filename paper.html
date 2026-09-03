@@ -3,19 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paper Detail - LLM4AECO</title>
+    <meta name="description" content="Paper-level evidence in the LLM4AECO systematic literature review.">
+    <title>Paper | LLM4AECO</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body class="paper-page">
-    <header class="header">
-        <div class="header-inner">
-            <a href="index.html" class="back-link">← Back to Dashboard</a>
-            <h1 class="paper-title" id="paper-title">Loading...</h1>
+    <header class="site-header detail-site-header">
+        <div class="header-main">
+            <a class="brand" href="index.html">
+                <span class="brand-mark">L4A</span>
+                <span class="brand-copy"><strong>LLM4AECO</strong><span data-i18n="paperDetailSubtitle">逐篇证据记录</span></span>
+            </a>
+            <div class="header-actions">
+                <a class="button button-secondary" href="index.html" data-i18n="backToDashboard">返回仪表板</a>
+                <button id="lang-toggle" class="button button-primary" type="button">EN</button>
+            </div>
         </div>
     </header>
-    <div class="paper-meta" id="paper-meta"></div>
-    <article class="paper-content" id="paper-content"><p>Loading paper content...</p></article>
+    <main class="paper-detail-shell">
+        <div id="paper-detail" class="paper-detail-loading" data-i18n="loadingPaper">正在载入论文记录…</div>
+    </main>
+    <script src="js/i18n.js"></script>
     <script src="js/paper-detail.js"></script>
 </body>
 </html>
