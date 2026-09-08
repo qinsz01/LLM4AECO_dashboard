@@ -1,0 +1,37 @@
+{
+  "id": "buildingagent2024",
+  "citation": "Zhong et al. / 2024",
+  "title": "Building-Agent: A 3D generation agent framework integrating large language models and graph-based 3D generation model",
+  "year": 2024,
+  "category": "设计优化与生成",
+  "task": "3D建筑布局生成与迭代",
+  "phase": "规划与设计",
+  "inputData": "自然语言设计任务 + Rhinoceros场地向量与图结构空间数据",
+  "representation": "图结构",
+  "llmMethod": "Agent",
+  "contribution": "提出Building-Agent，将GPT-4的任务理解与决策能力和图神经网络的3D生成能力结合，以图结构表示场地和建筑空间，支持自然语言驱动的3D建筑布局生成、自评估与多轮迭代。",
+  "abstract": "Building-Agent addresses the gap between language understanding and three-dimensional architectural generation by combining an LLM with a graph-based 3D generation model. Real design briefs and site constraints are used to test task processing. The framework reasons over graph representations of 3D site information and natural-language requirements, predicts building layouts, and supports interactive multi-step natural-language iteration.",
+  "journal": "eCAADe 2024",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "Building-Agent",
+    "large language model",
+    "graph generation model",
+    "3D spatial reasoning",
+    "architectural design"
+  ],
+  "methodology": "Vector site data from Rhinoceros are encoded as graph-structured 3D data whose nodes contain geometric and positional attributes and whose edges encode spatial adjacency. GPT-4 receives the design-task text and serialized graph information, then outputs graph-structured 3D vectors representing building-layout decisions. A pretrained Building-GNN consumes these graph outputs to generate voxelized 3D layouts. Generated layouts are checked against evaluation indicators extracted from the design brief; unsatisfied designs trigger self-iteration, while acceptable designs are output as 3D models.",
+  "results": "Experiments with real design briefs and site constraints show that Building-Agent can predict site-layout outcomes with high task-completion performance and can iteratively adjust 3D building layouts through multi-step natural-language instructions. The study demonstrates that explicit graph representations can bridge LLM reasoning and downstream 3D generation.",
+  "url": "https://doi.org/10.52842/conf.ecaade.2024.2.291",
+  "taskEn": "3D building layout generation and iterative refinement",
+  "inputDataEn": "Natural-language design tasks plus Rhinoceros site vectors and graph-structured spatial data",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GPT-4 generates graph-structured layout decisions; the generated graph is executed by the pretrained Building-GNN to create a 3D layout, and the workflow evaluates the generated form against design-task indicators to decide whether self-iteration is required.",
+  "operationCodingBasis": "full_text"
+}
