@@ -143,6 +143,23 @@
             });
     }
 
+    function isExcludedPaper(paperId) {
+        return fetch('data/excluded_secondary_studies.json')
+            .then(function (response) {
+                if (!response.ok) return [];
+                return response.json();
+            })
+            .then(function (entries) {
+                return entries.some(function (entry) {
+                    var id = typeof entry === 'string' ? entry : entry.id;
+                    return id === paperId;
+                });
+            })
+            .catch(function () {
+                return false;
+            });
+    }
+
     function init() {
         I18n.applyToDOM();
         document.getElementById('lang-toggle').addEventListener('click', function () { I18n.toggle(); });
@@ -157,7 +174,11 @@
             return;
         }
 
-        fetch('data/papers/' + encodeURIComponent(paperId) + '.json')
+        isExcludedPaper(paperId)
+            .then(function (excluded) {
+                if (excluded) throw new Error('Paper excluded from analytical corpus');
+                return fetch('data/papers/' + encodeURIComponent(paperId) + '.json');
+            })
             .then(function (response) {
                 if (!response.ok) throw new Error('HTTP ' + response.status);
                 return response.json();
