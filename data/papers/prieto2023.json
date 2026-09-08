@@ -1,0 +1,37 @@
+{
+  "id": "prieto2023",
+  "citation": "Prieto et al. / 2023",
+  "title": "Investigating the Use of ChatGPT for the Scheduling of Construction Projects",
+  "year": 2023,
+  "category": "施工管理与安全",
+  "task": "施工进度计划与资源配置",
+  "phase": "施工",
+  "inputData": "文本（自然语言项目范围、施工要求与资源信息）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "较早系统评估ChatGPT用于施工进度计划的研究，验证了自然语言项目描述直接生成资源加载施工计划的可行性，并通过多用户案例分析其准确性与局限性。",
+  "abstract": "Generative Pre-Trained Transformer (GPT) language models such as ChatGPT have the potential to revolutionize the construction industry by automating repetitive and time-consuming tasks. This paper presents a study in which ChatGPT was used to generate a construction schedule for a simple construction project. The output from ChatGPT was evaluated by a pool of participants that provided feedback regarding their overall interaction experience and the quality of the output. The results show that ChatGPT can generate a coherent schedule that follows a logical approach to fulfill the requirements of the scope indicated. The participants had an overall positive interaction experience and indicated the potential of such a tool in automating many preliminary and time-consuming tasks. However, the technology still has limitations, and further development is needed before it can be widely adopted in the industry.",
+  "journal": "Buildings",
+  "llmModels": [
+    "ChatGPT (GPT-3.5)"
+  ],
+  "keywords": [
+    "natural language processing",
+    "ChatGPT",
+    "scheduling",
+    "generative pre-training transformer",
+    "project management",
+    "Construction 5.0",
+    "GPT-3.5"
+  ],
+  "methodology": "A simple construction project was described to ChatGPT through detailed natural-language prompts. Participants used ChatGPT to produce a resource-loaded schedule containing activities, sequencing/dependencies, labor requirements and expected durations. The generated schedules and user interactions were then compared with a reference schedule and evaluated for dimensions including accuracy, efficiency, clarity, coherence, reliability, relevance, consistency, scalability and adaptability.",
+  "results": "ChatGPT generally produced coherent and logically ordered construction schedules and was positively perceived by participants for preliminary scheduling assistance. The study also identified practical weaknesses, including omissions or inaccuracies in activity durations and sequencing details, showing that expert review remained necessary before professional deployment.",
+  "url": "https://doi.org/10.3390/buildings13040857",
+  "taskEn": "Construction scheduling and resource allocation",
+  "inputDataEn": "Text (natural-language project scope, construction requirements, and resource information)",
+  "operations": [
+    "generation_parameterization"
+  ],
+  "operationEvidence": "ChatGPT generates a new resource-loaded construction schedule, including activity sequence, dependencies, labor requirements, and durations; the study does not execute the schedule in external project-management software.",
+  "operationCodingBasis": "full_text"
+}
