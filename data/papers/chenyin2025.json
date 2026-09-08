@@ -1,0 +1,38 @@
+{
+  "id": "chenyin2025",
+  "citation": "Chen and Yin / 2025",
+  "title": "Tailored vision-language framework for automated hazard identification and report generation in construction sites",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "施工现场危险识别与安全报告生成",
+  "phase": "施工",
+  "inputData": "施工现场图像 + 危险类别/文本标注 + 报告生成提示",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "contribution": "提出面向施工安全的视觉语言模型ChatCH，以真实工地危险图像进行领域适配，在32类细粒度危险识别上显著提升通用VLM性能，并将危险识别进一步连接到结构化、详细的施工安全报告自动生成。",
+  "abstract": "This study proposes a vision-language framework for automated construction hazard identification and report generation. A Construction Hazard Dataset containing 1,308 real construction hazard images across 32 fine-grained categories is developed, and the pre-trained Qwen2-VL-7B model is fine-tuned to create the construction-hazard identifier ChatCH. ChatCH reaches 89.4% precision, outperforming the original Qwen2-VL-7B by 43.5% and CLIP by 83.9%, while also showing few-shot capability and robustness. The framework further links hazard identification to an end-to-end pipeline that generates structured and detailed hazard reports and is validated in a real construction project.",
+  "journal": "Advanced Engineering Informatics",
+  "llmModels": [
+    "Qwen2-VL-7B",
+    "ChatCH",
+    "CLIP"
+  ],
+  "keywords": [
+    "construction hazard identification",
+    "vision-language model",
+    "construction safety",
+    "hazard report generation",
+    "fine-tuning"
+  ],
+  "methodology": "The framework first builds the Construction Hazard Dataset from real construction-site images with fine-grained hazard labels. A pre-trained Qwen2-VL-7B model is then parameter-efficiently adapted to the construction-safety domain to form ChatCH, which jointly interprets visual content and safety-oriented textual instructions. The end-to-end workflow processes site imagery, identifies one or more hazard categories, and uses prompt-guided generation to produce structured hazard reports. Model-level hazard recognition and the downstream reporting workflow are both evaluated, including validation on a real construction project.",
+  "results": "ChatCH achieved 89.4% precision across 32 construction-hazard categories, representing reported gains of 43.5% over the pre-trained Qwen2-VL-7B and 83.9% over CLIP. The adapted model also showed strong few-shot performance and robustness. The report-generation component produced structured, detailed hazard reports from site imagery, and the complete workflow was demonstrated on a real construction project.",
+  "url": "https://doi.org/10.1016/j.aei.2025.103478",
+  "taskEn": "Construction-site hazard identification and safety-report generation",
+  "inputDataEn": "Construction-site images plus hazard labels/text annotations and report-generation prompts",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "generation_parameterization"
+  ],
+  "operationEvidence": "ChatCH classifies and interprets safety hazards in construction-site imagery, and the evaluated end-to-end workflow generates structured hazard reports as a formal task output.",
+  "operationCodingBasis": "full_text"
+}
