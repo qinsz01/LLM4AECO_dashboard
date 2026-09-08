@@ -1,0 +1,33 @@
+{
+  "id": "chatdesign2024",
+  "citation": "Li et al. / 2024",
+  "title": "ChatDesign: Bootstrapping Generative Floor Plan Design With Pre-trained Large Language Models",
+  "year": 2024,
+  "category": "设计优化与生成",
+  "task": "交互式平面图生成与编辑",
+  "phase": "规划与设计",
+  "inputData": "自然语言需求及多种用户交互（文本、语音、点击、拖拽），统一转换为标准化操作与几何参数",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "提出ChatDesign，将预训练大语言模型用于自然语言驱动的平面图生成，并通过统一指令翻译器将不同交互形式映射为Locate、Move、Resize、Add和Delete等结构化操作，实现迭代生成与局部编辑。",
+  "abstract": "Large language models have achieved remarkable success in language-centered tasks, but architectural floor plan generation requires satisfying complex spatial and relational constraints. ChatDesign leverages pre-trained LLMs to generate floor plans from natural-language descriptions and supports iterative modifications based on user interaction. The framework combines initial text-driven generation with repeated refinement, allowing users to adjust designs through standardized editing operations.",
+  "journal": "CAADRIA 2024",
+  "keywords": [
+    "large language models",
+    "floor plan generation",
+    "architectural design",
+    "natural language interaction",
+    "interactive editing"
+  ],
+  "methodology": "The workflow starts from a user's textual description to produce an initial floor plan. Randomly modified textual samples are used to generate alternatives, which are evaluated and selectively fed into subsequent iterations. A Uniform Instructions Translator normalizes text, voice, mouse-click and drag-and-drop interactions into five core operations—Locate, Move, Resize, Add and Delete—with parameters such as object type, target location and dimensions, enabling consistent generation and editing.",
+  "results": "The study demonstrates that pre-trained LLMs can generate floor plans from natural-language requirements and support iterative refinement through standardized interaction operations. Reported experiments show that the iterative workflow can progressively adjust generated layouts toward user requirements while retaining an accessible natural-language-centered interaction process.",
+  "url": "https://doi.org/10.52842/conf.caadria.2024.1.099",
+  "taskEn": "Interactive floor plan generation and editing",
+  "inputDataEn": "Natural-language requirements and multimodal user interactions (text, voice, clicks, and drag-and-drop), normalized into structured operations and geometric parameters",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "ChatDesign generates floor-plan alternatives from user requirements and implements Locate, Move, Resize, Add, and Delete operations that modify an existing floor-plan state through structured operation parameters.",
+  "operationCodingBasis": "full_text"
+}
