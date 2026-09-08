@@ -4,30 +4,35 @@
   "title": "Agent-Driven Parametric 3D Building Generation via Natural Language Interface",
   "year": 2025,
   "category": "设计优化与生成",
-  "task": "自然语言驱动的参数化3D建筑生成",
+  "task": "自然语言驱动的参数化3D建筑生成与迭代编辑",
   "phase": "规划与设计",
-  "inputData": "自然语言设计指令，解析为可执行的参数化建模意图与参数",
+  "inputData": "文本/语音设计对话 + 历史参数 + 建筑设计知识；经规划模块提取半结构化意图，再映射为JSON参数",
   "representation": "结构化",
   "llmMethod": "Agent",
-  "contribution": "提出面向参数化3D建筑生成的自然语言智能体接口，将非结构化设计意图转译为结构化、可执行的参数化建模操作，降低传统参数化建模对专业命令和手工参数调整的依赖。",
-  "abstract": "This work investigates an agent-driven natural-language interface for parametric 3D building generation. The system translates designers' textual intentions into structured commands and parameters that can drive a parametric modeling workflow, aiming to make architectural 3D generation more accessible while retaining explicit control over geometric design variables.",
+  "contribution": "提出面向早期建筑设计的LLM智能体框架，将文本或语音中的模糊设计需求解析为半结构化设计意图，再通过工具调用映射为结构化JSON参数，并驱动Rhino/Grasshopper中的PCG模块生成和迭代修改可编辑3D建筑模型；案例实验显示多参数调整时间较手工方式降低78%。",
+  "abstract": "An agent-driven natural-language interface is developed for precise parametric 3D building generation. The workflow processes text or voice conversations, identifies design intents, maps them to modelling parameters, and executes procedural content generation modules to create editable 3D models. A high-rise building case study demonstrates iterative generation and modification for professional and non-professional users and reports substantial time savings over manual parameter adjustment.",
   "journal": "CAADRIA 2025",
-  "keywords": [
-    "large language model",
-    "agent",
-    "parametric design",
-    "3D building generation",
-    "natural language interface"
+  "llmModels": [
+    "GPT-4o",
+    "Whisper API"
   ],
-  "methodology": "The proposed agent receives natural-language design requests, interprets design intent and relevant parameter slots, and converts them into structured commands for a parametric 3D building-generation workflow. The emphasis is on connecting conversational input to deterministic parametric operations rather than producing an image-only design output, allowing the generated instructions to be executed as editable geometric modeling actions.",
-  "results": "The reported demonstrations show that natural-language interaction can be used to control parametric 3D building generation and lower the interaction barrier associated with manually editing parameter sets. The paper positions the agent interface as a bridge between high-level design intent and executable geometric modeling.",
+  "keywords": [
+    "3D building model generation",
+    "large language models",
+    "parametric architecture design",
+    "procedural content generation",
+    "user interactions"
+  ],
+  "methodology": "The prototype accepts spoken or typed multi-user design conversations. Whisper API first converts audio to text. A planning module using the OpenAI GPT API combines the raw dialogue, optional historical parameters, and architectural expert knowledge to derive semi-structured design-intent documents for building elements. A mapping module then uses GPT tool-calling to translate those intents into structured JSON dictionaries of modelling parameters. The PCG execution module interprets the JSON, maps parameters to predefined Rhino Grasshopper components, removes conflicting instructions through logical checks, and generates editable 3D models across layout, height, massing transformation, and facade dimensions. Historical parameter groups support iterative modification, while minor changes can also be made through direct slider interaction.",
+  "results": "The authors conducted 10 rounds of dialogue-based high-rise design experiments. The system generated diverse building forms and supported initial generation, iterative modification, and regeneration. Under identical multi-parameter modification requirements, the agent workflow reduced modelling time by 78% compared with manual Rhino slider adjustment; for single-parameter minor changes, users still preferred direct manual control. Professional users gave generation-accuracy ratings of 7, 6, and 7 across three iterative models, while non-professional users rated four successive models 3, 7, 5, and 4, with modification rounds generally rated higher than initial or regenerated outputs. The study also identifies differences in how professionals use precise numerical/modelling vocabulary versus non-professionals' functional or metaphorical descriptions.",
   "url": "https://doi.org/10.52842/conf.caadria.2025.1.203",
-  "taskEn": "Natural-language-driven parametric 3D building generation",
-  "inputDataEn": "Natural-language design instructions parsed into executable parametric modeling intents and parameters",
+  "taskEn": "Natural-language-driven parametric 3D building generation and iterative editing",
+  "inputDataEn": "Text/voice design dialogue plus historical parameters and architectural knowledge; planning produces semi-structured intents that are mapped to JSON parameters",
   "operations": [
+    "retrieval_alignment",
     "generation_parameterization",
     "editing_execution"
   ],
-  "operationEvidence": "The implemented agent converts natural-language design intent into structured parametric modeling commands and uses those commands to generate or modify editable 3D building geometry.",
-  "operationCodingBasis": "abstract"
+  "operationEvidence": "The planning and mapping modules align unstructured dialogue and semi-structured intents with specific PCG parameter/function targets through GPT tool calls; structured JSON parameters are generated and then executed by Rhino/Grasshopper PCG modules to create or iteratively modify editable 3D building geometry.",
+  "operationCodingBasis": "full_text"
 }
