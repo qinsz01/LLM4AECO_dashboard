@@ -1,0 +1,42 @@
+[
+  {
+    "id": "ahn2023",
+    "file": "papers/ahn2023.json",
+    "title": "Alternative Approaches to HVAC Control of Chat Generative Pre-Trained Transformer (ChatGPT) for Autonomous Building System Operations",
+    "year": 2023,
+    "category": "管理",
+    "phase": "运维",
+    "llmMethod": "Prompt",
+    "representation": "结构化"
+  },
+  {
+    "id": "prieto2023",
+    "file": "papers/prieto2023.json",
+    "title": "Investigating the Use of ChatGPT for the Scheduling of Construction Projects",
+    "year": 2023,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "Prompt",
+    "representation": "文本"
+  },
+  {
+    "id": "uddin2023",
+    "file": "papers/uddin2023.json",
+    "title": "Leveraging ChatGPT to Aid Construction Hazard Recognition and Support Safety Education and Training",
+    "year": 2023,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "Prompt",
+    "representation": "文本"
+  },
+  {
+    "id": "you2023",
+    "file": "papers/you2023.json",
+    "title": "Robot-Enabled Construction Assembly with Automated Sequence Planning Based on ChatGPT: RoboGPT",
+    "year": 2023,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "Prompt",
+    "representation": "文本"
+  }
+]

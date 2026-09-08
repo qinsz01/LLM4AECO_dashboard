@@ -1,0 +1,39 @@
+{
+  "id": "uddin2023",
+  "citation": "Uddin et al. / 2023",
+  "title": "Leveraging ChatGPT to Aid Construction Hazard Recognition and Support Safety Education and Training",
+  "year": 2023,
+  "category": "施工管理与安全",
+  "task": "施工安全培训与危险识别辅助",
+  "phase": "施工",
+  "inputData": "文本（施工工序、设备与危险相关问题；案例图像由参与者查看而非输入ChatGPT）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "通过42名施工专业学生的前后测实验评估ChatGPT辅助危险识别和安全教育的效果，结果表明在人工查看施工场景图像、ChatGPT提供文本安全知识辅助的模式下，危险识别能力显著提升。",
+  "abstract": "Proper hazard recognition is fundamental to effective safety management in construction workplaces. This investigation examined whether ChatGPT can aid hazard recognition when integrated into the curriculum of students pursuing a career in the construction industry. The experimental study involved 42 students. Their hazard recognition ability was measured before the intervention, ChatGPT and guidance for using it in hazard recognition were then introduced, and post-intervention hazard recognition performance was measured. The results suggest that ChatGPT can improve hazard recognition levels and can support safety education and training.",
+  "journal": "Sustainability",
+  "llmModels": [
+    "ChatGPT"
+  ],
+  "keywords": [
+    "ChatGPT",
+    "hazard recognition",
+    "hazard identification",
+    "education",
+    "safety education",
+    "safety management",
+    "occupational safety",
+    "safety training",
+    "generative AI"
+  ],
+  "methodology": "A repeated-measures within-subject experiment was conducted with 42 construction students. Baseline hazard recognition was measured using four randomly selected construction case images per participant. ChatGPT was then introduced as an educational intervention, with example prompts for common hazards and hazards associated with specific work operations or equipment. In the post-intervention stage, participants examined a different set of four case images and were encouraged to use ChatGPT while cataloging hazards. Participant recognition scores and perceptions of ChatGPT were then analyzed.",
+  "results": "Mean hazard recognition increased from 34.87% before the intervention to 60.26% after the ChatGPT-assisted intervention, with the paired comparison statistically significant (t = -18.248, p < 0.01). More than 95% of participants agreed or strongly agreed that ChatGPT could aid construction hazard recognition and support safety education and training.",
+  "url": "https://doi.org/10.3390/su15097121",
+  "taskEn": "Construction safety training and hazard-recognition assistance",
+  "inputDataEn": "Text (questions about construction operations, equipment, and hazards; case images are viewed by participants rather than provided to ChatGPT)",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "ChatGPT is used to derive operation- and equipment-specific construction hazards from text prompts during the evaluated hazard-recognition workflow; participants, not ChatGPT, inspect the construction case images.",
+  "operationCodingBasis": "full_text"
+}
