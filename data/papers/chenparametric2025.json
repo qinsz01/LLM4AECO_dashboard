@@ -29,5 +29,5 @@
     "editing_execution"
   ],
   "operationEvidence": "The implemented agent converts natural-language design intent into structured parametric modeling commands and uses those commands to generate or modify editable 3D building geometry.",
-  "operationCodingBasis": "full_text"
+  "operationCodingBasis": "abstract"
 }
