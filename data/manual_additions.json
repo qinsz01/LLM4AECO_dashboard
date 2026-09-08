@@ -38,5 +38,55 @@
     "phase": "施工",
     "llmMethod": "Prompt",
     "representation": "文本"
+  },
+  {
+    "id": "chatdesign2024",
+    "file": "papers/chatdesign2024.json",
+    "title": "ChatDesign: Bootstrapping Generative Floor Plan Design With Pre-trained Large Language Models",
+    "year": 2024,
+    "category": "设计优化与生成",
+    "phase": "规划与设计",
+    "llmMethod": "Prompt",
+    "representation": "结构化"
+  },
+  {
+    "id": "buildingagent2024",
+    "file": "papers/buildingagent2024.json",
+    "title": "Building-Agent: A 3D generation agent framework integrating large language models and graph-based 3D generation model",
+    "year": 2024,
+    "category": "设计优化与生成",
+    "phase": "规划与设计",
+    "llmMethod": "Agent",
+    "representation": "图结构"
+  },
+  {
+    "id": "archiagents2025",
+    "file": "papers/archiagents2025.json",
+    "title": "Archi-Agents: Approximating the architectural design process with collaborative specialized multi-agent system LLM and Building Information Modeling",
+    "year": 2025,
+    "category": "设计优化与生成",
+    "phase": "规划与设计",
+    "llmMethod": "Agent",
+    "representation": "图结构"
+  },
+  {
+    "id": "chenparametric2025",
+    "file": "papers/chenparametric2025.json",
+    "title": "Agent-Driven Parametric 3D Building Generation via Natural Language Interface",
+    "year": 2025,
+    "category": "设计优化与生成",
+    "phase": "规划与设计",
+    "llmMethod": "Agent",
+    "representation": "结构化"
+  },
+  {
+    "id": "generalistagent2025",
+    "file": "papers/generalistagent2025.json",
+    "title": "Generalist Generative Agent: Open-ended design exploration with large language models",
+    "year": 2025,
+    "category": "设计优化与生成",
+    "phase": "规划与设计",
+    "llmMethod": "Agent",
+    "representation": "多模态"
   }
 ]
