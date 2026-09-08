@@ -1,0 +1,37 @@
+{
+  "id": "ahn2023",
+  "citation": "Ahn et al. / 2023",
+  "title": "Alternative Approaches to HVAC Control of Chat Generative Pre-Trained Transformer (ChatGPT) for Autonomous Building System Operations",
+  "year": 2023,
+  "category": "管理",
+  "task": "HVAC自主控制与建筑能源管理",
+  "phase": "运维",
+  "inputData": "结构化建筑运行状态（室内外环境、HVAC能耗与控制变量等）",
+  "representation": "结构化",
+  "llmMethod": "Prompt",
+  "contribution": "将GPT-4与EnergyPlus建筑仿真闭环耦合，使LLM根据实时建筑运行状态连续生成HVAC控制决策，并与DQN控制策略进行对比，展示了无需额外训练的LLM建筑自主控制可行性。",
+  "abstract": "Artificial intelligence technology has rapidly advanced and transformed the nature of scientific inquiry. This study applied ChatGPT to autonomous building system operations, specifically coupling it with an EnergyPlus reference office building simulation model. The operational objective was to minimize the energy use of the building systems while ensuring that indoor CO2 concentrations remain below 1000 ppm. The performance of ChatGPT in an autonomous operation was compared with control results based on a deep Q-network. ChatGPT and the DQN lowered the total energy use by 16.8% and 24.1%, respectively, compared with the baseline operation while maintaining the indoor CO2 constraint.",
+  "journal": "Buildings",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "ChatGPT",
+    "large language model",
+    "deep Q-network",
+    "reinforcement learning",
+    "artificial intelligence",
+    "autonomous building"
+  ],
+  "methodology": "The authors coupled a DOE reference office EnergyPlus model with the OpenAI Chat Completion API through Python. At each control step, quantified building states were serialized into a prompt containing indoor/outdoor conditions, HVAC energy use, chilled-water temperatures and recent changes. GPT-4 (temperature 0) selected outdoor-air damper opening ratios and chilled-water leaving-temperature setpoints, which were returned to EnergyPlus as control variables. Performance was compared with baseline operation and a DQN controller.",
+  "results": "Over the reported three-day evaluation, GPT-4-based control reduced total building energy use by 16.8% relative to baseline while maintaining indoor CO2 below 1000 ppm; DQN achieved a 24.1% reduction. The LLM controller required no task-specific training but showed response-format inconsistency and less optimal quantified decision making than the trained DQN.",
+  "url": "https://doi.org/10.3390/buildings13112680",
+  "taskEn": "Autonomous HVAC control and building energy management",
+  "inputDataEn": "Structured building operational states (indoor/outdoor conditions, HVAC energy use, and control variables)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "GPT-4 generates HVAC setpoints from quantified building states, and the generated control variables are passed through the Python/EnergyPlus co-simulation interface to change the simulated building operation at each control step.",
+  "operationCodingBasis": "full_text"
+}
