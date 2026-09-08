@@ -7,7 +7,8 @@
     "category": "管理",
     "phase": "运维",
     "llmMethod": "Prompt",
-    "representation": "结构化"
+    "representation": "结构化",
+    "provenance": "supplementary_reconciliation"
   },
   {
     "id": "prieto2023",
@@ -17,7 +18,8 @@
     "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "Prompt",
-    "representation": "文本"
+    "representation": "文本",
+    "provenance": "supplementary_reconciliation"
   },
   {
     "id": "uddin2023",
@@ -27,7 +29,8 @@
     "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "Prompt",
-    "representation": "文本"
+    "representation": "文本",
+    "provenance": "supplementary_reconciliation"
   },
   {
     "id": "you2023",
@@ -37,7 +40,8 @@
     "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "Prompt",
-    "representation": "文本"
+    "representation": "文本",
+    "provenance": "supplementary_reconciliation"
   },
   {
     "id": "chatdesign2024",
@@ -47,7 +51,8 @@
     "category": "设计优化与生成",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
-    "representation": "结构化"
+    "representation": "结构化",
+    "provenance": "original_search_reinstatement"
   },
   {
     "id": "buildingagent2024",
@@ -57,7 +62,8 @@
     "category": "设计优化与生成",
     "phase": "规划与设计",
     "llmMethod": "Agent",
-    "representation": "图结构"
+    "representation": "图结构",
+    "provenance": "supplementary_reconciliation"
   },
   {
     "id": "archiagents2025",
@@ -67,7 +73,8 @@
     "category": "设计优化与生成",
     "phase": "规划与设计",
     "llmMethod": "Agent",
-    "representation": "图结构"
+    "representation": "图结构",
+    "provenance": "original_search_reinstatement"
   },
   {
     "id": "chenparametric2025",
@@ -77,7 +84,8 @@
     "category": "设计优化与生成",
     "phase": "规划与设计",
     "llmMethod": "Agent",
-    "representation": "结构化"
+    "representation": "结构化",
+    "provenance": "supplementary_reconciliation"
   },
   {
     "id": "generalistagent2025",
@@ -87,7 +95,8 @@
     "category": "设计优化与生成",
     "phase": "规划与设计",
     "llmMethod": "Agent",
-    "representation": "多模态"
+    "representation": "多模态",
+    "provenance": "supplementary_reconciliation"
   },
   {
     "id": "leeragft2024",
@@ -97,7 +106,8 @@
     "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "其他",
-    "representation": "图结构"
+    "representation": "图结构",
+    "provenance": "original_search_reinstatement"
   },
   {
     "id": "leelongcontext2025",
@@ -107,7 +117,8 @@
     "category": "规范与合规检查",
     "phase": "规划与设计",
     "llmMethod": "Prompt",
-    "representation": "文本"
+    "representation": "文本",
+    "provenance": "original_search_reinstatement"
   },
   {
     "id": "iversen2026",
@@ -117,7 +128,8 @@
     "category": "规范与合规检查",
     "phase": "规划与设计",
     "llmMethod": "Agent",
-    "representation": "结构化"
+    "representation": "结构化",
+    "provenance": "original_search_reinstatement"
   },
   {
     "id": "chenyin2025",
@@ -127,7 +139,8 @@
     "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "微调",
-    "representation": "多模态"
+    "representation": "多模态",
+    "provenance": "supplementary_reconciliation"
   },
   {
     "id": "gaocontract2025",
@@ -137,7 +150,8 @@
     "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "RAG",
-    "representation": "文本"
+    "representation": "文本",
+    "provenance": "supplementary_reconciliation"
   },
   {
     "id": "zhangcontractft2026",
@@ -147,7 +161,8 @@
     "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "微调",
-    "representation": "文本"
+    "representation": "文本",
+    "provenance": "supplementary_reconciliation"
   },
   {
     "id": "lifall2026",
@@ -157,6 +172,128 @@
     "category": "施工管理与安全",
     "phase": "施工",
     "llmMethod": "微调",
-    "representation": "多模态"
+    "representation": "多模态",
+    "provenance": "supplementary_reconciliation"
+  },
+  {
+    "id": "janglee2024",
+    "file": "papers/janglee2024.json",
+    "title": "Interactive Design by Integrating a Large Pre-Trained Language Model and Building Information Modeling",
+    "year": 2024,
+    "category": "设计优化与生成",
+    "phase": "规划与设计",
+    "llmMethod": "Prompt",
+    "representation": "结构化",
+    "provenance": "original_search_reinstatement"
+  },
+  {
+    "id": "wangsafety2025",
+    "file": "papers/wangsafety2025.json",
+    "title": "An integrated approach for automatic safety inspection in construction: Domain knowledge with multimodal large language model",
+    "year": 2025,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "RAG",
+    "representation": "多模态",
+    "provenance": "original_search_reinstatement"
+  },
+  {
+    "id": "mouseless2026",
+    "file": "papers/mouseless2026.json",
+    "title": "Artifact-driven LLM integration for mouseless design workflows",
+    "year": 2026,
+    "category": "设计优化与生成",
+    "phase": "规划与设计",
+    "llmMethod": "Prompt",
+    "representation": "文本",
+    "provenance": "original_search_reinstatement"
+  },
+  {
+    "id": "wongcontract2024",
+    "file": "papers/wongcontract2024.json",
+    "title": "Construction contract risk identification based on knowledge-augmented language models",
+    "year": 2024,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "RAG",
+    "representation": "文本",
+    "provenance": "targeted_supplementary_reconciliation"
+  },
+  {
+    "id": "zhengcontract2025",
+    "file": "papers/zhengcontract2025.json",
+    "title": "Automating construction contract review using knowledge graph-enhanced large language models",
+    "year": 2025,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "RAG",
+    "representation": "图结构",
+    "provenance": "targeted_supplementary_reconciliation"
+  },
+  {
+    "id": "xuar2024",
+    "file": "papers/xuar2024.json",
+    "title": "Augmented Reality for Maintenance Tasks with ChatGPT for Automated Text-to-Action",
+    "year": 2024,
+    "category": "管理",
+    "phase": "运维",
+    "llmMethod": "Prompt",
+    "representation": "文本",
+    "provenance": "targeted_supplementary_reconciliation"
+  },
+  {
+    "id": "chanvlsafety2025",
+    "file": "papers/chanvlsafety2025.json",
+    "title": "Context-aware vision-language model agent enriched with domain-specific ontology for construction site safety monitoring",
+    "year": 2025,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "微调",
+    "representation": "多模态",
+    "provenance": "targeted_supplementary_reconciliation"
+  },
+  {
+    "id": "buildinggpt2_2026",
+    "file": "papers/buildinggpt2_2026.json",
+    "title": "Enhancing LLM-based building data query with chain-of-thought, retrieval-augmented generation, and fine-tuning",
+    "year": 2026,
+    "category": "BIM检索与管理",
+    "phase": "运维",
+    "llmMethod": "RAG",
+    "representation": "图结构",
+    "provenance": "targeted_supplementary_reconciliation"
+  },
+  {
+    "id": "smalllm2026",
+    "file": "papers/smalllm2026.json",
+    "title": "Toward construction-specialized, small language models: The interplay of domain adaptation, model scale and data volume",
+    "year": 2026,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "其他",
+    "representation": "文本",
+    "provenance": "targeted_supplementary_reconciliation"
+  },
+  {
+    "id": "bmsrag2026",
+    "file": "papers/bmsrag2026.json",
+    "title": "Retrieval-augmented LLM with structured sampling for Building Management Systems point tagging under minimal context",
+    "year": 2026,
+    "category": "管理",
+    "phase": "运维",
+    "llmMethod": "RAG",
+    "representation": "结构化",
+    "provenance": "targeted_supplementary_reconciliation"
+  },
+  {
+    "id": "actorask2026",
+    "file": "papers/actorask2026.json",
+    "title": "Act or ask: Interactive construction robots via vision–language models with confidence-guided decision deferral",
+    "year": 2026,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "Prompt",
+    "representation": "多模态",
+    "provenance": "targeted_supplementary_reconciliation"
   }
 ]
