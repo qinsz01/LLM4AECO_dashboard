@@ -1,0 +1,36 @@
+{
+  "id": "you2023",
+  "citation": "You et al. / 2023",
+  "title": "Robot-Enabled Construction Assembly with Automated Sequence Planning Based on ChatGPT: RoboGPT",
+  "year": 2023,
+  "category": "施工管理与安全",
+  "task": "机器人施工装配与序列规划",
+  "phase": "施工",
+  "inputData": "文本（装配任务描述、对象与位置/空间约束）",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "提出RoboGPT，将ChatGPT-4用于施工机器人装配序列规划，并通过指令解析与机器人控制接口把语言模型生成的步骤转化为真实机械臂动作，在施工装配案例中验证了LLM驱动机器人执行的可行性。",
+  "abstract": "Robot-based assembly in construction has emerged as a promising solution to address challenges such as increasing costs, labor shortages, and the demand for safe and efficient construction processes. This paper introduces RoboGPT, a system that leverages ChatGPT for automated sequence planning in robot-based assembly applied to construction tasks. The proposed system adapts ChatGPT for construction sequence planning and demonstrates its feasibility and effectiveness through two case studies and 80 trials involving real construction tasks. The results show that RoboGPT-driven robots can handle complex construction operations and adapt to changes on the fly.",
+  "journal": "Buildings",
+  "llmModels": [
+    "ChatGPT-4"
+  ],
+  "keywords": [
+    "robot assembly",
+    "sequential learning",
+    "ChatGPT",
+    "construction robotics",
+    "sequence planning"
+  ],
+  "methodology": "RoboGPT receives construction assembly requirements through prompts and uses ChatGPT-4 to generate stepwise assembly sequences. The system constrains responses into interpretable action-object-target semantics, passes the generated sequence through a decoder and object-matching layer, and sends the resulting commands to a Franka Emika Panda robot through a Unity/Python interface. Experiments include material stacking and more constrained assembly tasks, with two case studies and 80 physical trials.",
+  "results": "The experiments showed that RoboGPT could generate executable assembly sequences and drive the robot through construction-related manipulation tasks while adapting to changed task conditions. Performance was strongest for simpler or familiar configurations and degraded as geometric and sequence constraints became more demanding, highlighting limitations in reliable spatial reasoning despite successful end-to-end execution.",
+  "url": "https://doi.org/10.3390/buildings13071772",
+  "taskEn": "Robotic construction assembly and sequence planning",
+  "inputDataEn": "Text (assembly task descriptions, objects, and position/spatial constraints)",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "ChatGPT-4 generates assembly action sequences, and the decoded sequence is transmitted through the Unity/Python control pipeline to a Franka Emika Panda robot for physical execution.",
+  "operationCodingBasis": "full_text"
+}
