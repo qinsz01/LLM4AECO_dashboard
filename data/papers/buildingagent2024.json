@@ -1,0 +1,37 @@
+{
+  "id": "buildingagent2024",
+  "citation": "Zhong et al. / 2024",
+  "title": "Building-Agent: A 3D generation agent framework integrating large language models and graph-based 3D generation model",
+  "year": 2024,
+  "category": "设计优化与生成",
+  "task": "3D建筑布局生成与迭代",
+  "phase": "规划与设计",
+  "inputData": "自然语言设计任务 + Rhinoceros场地向量与图结构空间数据",
+  "representation": "图结构",
+  "llmMethod": "Agent",
+  "contribution": "提出Building-Agent，将GPT-4的任务理解与决策能力和图神经网络的3D生成能力结合，以图结构表示场地和建筑空间，支持自然语言驱动的3D建筑布局生成、自评估与多轮迭代。",
+  "abstract": "Building-Agent combines GPT-4 decision making with a graph-based 3D generation model so that natural-language design briefs and site constraints can be converted into graph-structured building-layout decisions and then into 3D voxel layouts.",
+  "journal": "eCAADe 2024",
+  "llmModels": [
+    "GPT-4"
+  ],
+  "keywords": [
+    "Building-Agent",
+    "large language model",
+    "graph generation model",
+    "3D spatial reasoning",
+    "architectural design"
+  ],
+  "methodology": "Vector site data from Rhinoceros are encoded as graph-structured 3D data whose nodes contain geometric and positional attributes and whose edges encode spatial adjacency. The site graph is serialized for GPT-4 together with the textual design brief. Prompt-engineering modules extract evaluation indicators and compute the Design Requirements Satisfaction Index (DRSI). GPT-4 outputs graph-structured 3D vectors representing building-layout decisions; a pretrained Building-GNN converts those vectors into voxelized 3D layouts. Generated results are evaluated against task indicators, and unsatisfied designs trigger self-iteration while accepted designs are output as 3D models.",
+  "results": "In Experiment 1, half of the initial layouts had DRSI above 80% and the lowest initial DRSI was 56.25%; after iteration, final DRSI exceeded 90% across tested temperature settings. The best IoU reported was 0.677267 at GPT-4 temperature 0.4–0.6. Experiment 2 evaluated 200 real-world OSM site models; representative scenarios reached DRSI/IoU values including 100%/0.653846, 40%/0.530526, 100%/0.700, and 100%/0.813978. Experiment 3 showed that new natural-language requirements could be added while preserving earlier site/task information, demonstrating memory-supported iterative layout modification.",
+  "url": "https://doi.org/10.52842/conf.ecaade.2024.2.291",
+  "taskEn": "3D building layout generation and iterative refinement",
+  "inputDataEn": "Natural-language design tasks plus Rhinoceros site vectors and graph-structured spatial data",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "GPT-4 generates graph-structured layout decisions; Building-GNN executes those decisions to create a 3D layout; the workflow quantitatively evaluates generated forms using DRSI and IoU and self-iterates when design requirements are not satisfied.",
+  "operationCodingBasis": "full_text"
+}

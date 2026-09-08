@@ -1,0 +1,35 @@
+{
+  "id": "archiagents2025",
+  "citation": "Tang et al. / 2025",
+  "title": "Archi-Agents: Approximating the architectural design process with collaborative specialized multi-agent system LLM and Building Information Modeling",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "多智能体BIM方案生成与协同优化",
+  "phase": "规划与设计",
+  "inputData": "自然语言设计需求 + IFC/BIM模型 + 空间、成本与性能知识库",
+  "representation": "图结构",
+  "llmMethod": "Agent",
+  "contribution": "提出Archi-Agents，以Project Architect、Architectural Programmer、Cost Engineer和Energy Analyst等专门智能体协同完成建筑方案生成与迭代，并结合BIM知识图谱、多视角向量知识库和RAG支持空间、成本、能耗与用户需求的综合决策。",
+  "abstract": "Architectural design requires collaboration across spatial functionality, cost efficiency, energy performance and user preferences. Archi-Agents introduces a specialized multi-agent LLM system integrated with a multi-perspective vector knowledge base and BIM. Role-differentiated agents collaborate iteratively to generate and refine BIM-based design solutions from natural-language requirements while incorporating spatial, cost and performance information.",
+  "journal": "CAADRIA 2025",
+  "keywords": [
+    "generative design",
+    "Building Information Modeling",
+    "large language model",
+    "multi-agent system",
+    "retrieval-augmented generation",
+    "human-agent collaboration"
+  ],
+  "methodology": "The framework organizes specialized LLM agents into a Chatchain-enabled collaborative workflow. IFC models are processed with ifcOpenShell and transformed into simplified BIM knowledge graphs and semantic JSON, while a multi-perspective knowledge base supports hybrid retrieval over structured numerical/categorical information and semantic vector embeddings. Agents retrieve relevant spatial, cost, and performance knowledge, propose and negotiate design changes, and a Revit-oriented parametric refactoring/interface component applies design transformations and exports updated BIM/IFC models. Human designers can intervene during the iterative process.",
+  "results": "The paper reports a prototype design-generation demonstration rather than a quantitative benchmark. The workflow shows specialized agents retrieving spatial, cost, and energy information and producing/refining a BIM design through a Revit-oriented interface. The authors explicitly note limitations: the current knowledge base mainly covers conceptual spatial layers; materials, structures, furnishings, and regulation/code information are incomplete; the training/data basis is limited; and simplified space, cost, and energy calculations constrain accuracy. The evidence should therefore be read as proof-of-concept rather than validated performance superiority.",
+  "url": "https://doi.org/10.52842/conf.caadria.2025.3.141",
+  "taskEn": "Multi-agent BIM design generation and collaborative optimization",
+  "inputDataEn": "Natural-language design requirements plus IFC/BIM models and spatial, cost, and performance knowledge bases",
+  "operations": [
+    "retrieval_alignment",
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "Archi-Agents retrieves structured and semantic BIM knowledge through its hybrid knowledge base, generates and negotiates design modifications across specialized agents, and applies the resulting parametric transformations through a Revit/BIM interface to produce updated model outputs.",
+  "operationCodingBasis": "full_text"
+}
