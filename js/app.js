@@ -561,10 +561,18 @@
         I18n.applyToDOM();
         Promise.all([
             loadIndex('data/index.json', true),
-            loadIndex('data/manual_additions.json', false)
+            loadIndex('data/manual_additions.json', false),
+            loadIndex('data/excluded_secondary_studies.json', false)
         ])
             .then(function (indexes) {
-                return indexes[0].concat(indexes[1]);
+                var excludedIds = {};
+                indexes[2].forEach(function (entry) {
+                    var id = typeof entry === 'string' ? entry : entry.id;
+                    if (id) excludedIds[id] = true;
+                });
+                return indexes[0].concat(indexes[1]).filter(function (entry) {
+                    return !excludedIds[entry.id];
+                });
             })
             .then(function (index) {
                 return Promise.all(index.map(function (entry) {
