@@ -1,0 +1,33 @@
+{
+  "id": "chenparametric2025",
+  "citation": "Chen et al. / 2025",
+  "title": "Agent-Driven Parametric 3D Building Generation via Natural Language Interface",
+  "year": 2025,
+  "category": "设计优化与生成",
+  "task": "自然语言驱动的参数化3D建筑生成",
+  "phase": "规划与设计",
+  "inputData": "自然语言设计指令，解析为可执行的参数化建模意图与参数",
+  "representation": "结构化",
+  "llmMethod": "Agent",
+  "contribution": "提出面向参数化3D建筑生成的自然语言智能体接口，将非结构化设计意图转译为结构化、可执行的参数化建模操作，降低传统参数化建模对专业命令和手工参数调整的依赖。",
+  "abstract": "This work investigates an agent-driven natural-language interface for parametric 3D building generation. The system translates designers' textual intentions into structured commands and parameters that can drive a parametric modeling workflow, aiming to make architectural 3D generation more accessible while retaining explicit control over geometric design variables.",
+  "journal": "CAADRIA 2025",
+  "keywords": [
+    "large language model",
+    "agent",
+    "parametric design",
+    "3D building generation",
+    "natural language interface"
+  ],
+  "methodology": "The proposed agent receives natural-language design requests, interprets design intent and relevant parameter slots, and converts them into structured commands for a parametric 3D building-generation workflow. The emphasis is on connecting conversational input to deterministic parametric operations rather than producing an image-only design output, allowing the generated instructions to be executed as editable geometric modeling actions.",
+  "results": "The reported demonstrations show that natural-language interaction can be used to control parametric 3D building generation and lower the interaction barrier associated with manually editing parameter sets. The paper positions the agent interface as a bridge between high-level design intent and executable geometric modeling.",
+  "url": "https://doi.org/10.52842/conf.caadria.2025.1.203",
+  "taskEn": "Natural-language-driven parametric 3D building generation",
+  "inputDataEn": "Natural-language design instructions parsed into executable parametric modeling intents and parameters",
+  "operations": [
+    "generation_parameterization",
+    "editing_execution"
+  ],
+  "operationEvidence": "The implemented agent converts natural-language design intent into structured parametric modeling commands and uses those commands to generate or modify editable 3D building geometry.",
+  "operationCodingBasis": "full_text"
+}
