@@ -10,7 +10,7 @@
   "representation": "多模态",
   "llmMethod": "Agent",
   "contribution": "提出Generalist Generative Agent，以多智能体链路把抽象设计隐喻转化为建筑设计任务、Rhino/Grasshopper程序化建模代码、3D概念模型与视觉评价，探索LLM在开放式早期建筑设计中的生成、执行和自评估能力。",
-  "abstract": "Architects often use metaphors and conceptual models to work with ambiguity during early-stage design, while conventional computational tools tend to rely on narrowly predefined design spaces. The Generalist Generative Agent investigates whether LLM-based agents can support open-ended architectural exploration by interpreting ambiguous concepts, generating procedural 3D models and evaluating resulting designs.",
+  "abstract": "The paper investigates whether LLM-based agents can support open-ended early-stage architectural exploration by interpreting metaphors, formulating design tasks, producing procedural 3D models, and evaluating rendered outputs. The framework is designed to work with ambiguous conceptual inputs rather than a narrowly predefined design space.",
   "journal": "CAADRIA 2025",
   "llmModels": [
     "GPT-4o"
@@ -22,8 +22,8 @@
     "multi-agent framework",
     "design synthesis"
   ],
-  "methodology": "The framework contains four agents. A Metaphor Agent generates architectural metaphors; an Interpretation Agent translates them into concrete design implications and tasks; a Modelling Agent generates and iteratively repairs procedural Python/RhinoCommon code executed in Rhino 8 and Grasshopper to create parameterized 3D concept models; and an Evaluation Agent uses GPT-4o vision on Blender-rendered outputs to score metaphor alignment, conceptual strength, geometric complexity, and task adherence. Experiments compare metaphor-only, design-task, and history/few-shot contexts.",
-  "results": "Across 20 metaphors and 100 design tasks, the study ran 1,100 generation attempts and produced 992 3D models, corresponding to about 90% model-generation success. Across parameter variations, 3,992 valid OBJ/render outputs were produced from 4,960 expected outputs (about 80%). Generation required approximately 18.5 hours and automated evaluation about 11 hours; an architect subsequently selected 137 images as notable designs. The experiment demonstrates scalable procedural generation and automated visual scoring, while the paper still treats expert judgement as necessary for interpreting architectural quality.",
+  "methodology": "The framework contains four agents. A Metaphor Agent generates architectural metaphors and traits; an Interpretation Agent converts them into design implications and tasks; a Modelling Agent produces procedural Python/RhinoCommon code that is executed in Rhino 8 and Grasshopper and iteratively repaired when necessary; and an Evaluation Agent uses GPT-4o vision on Blender-rendered models together with JSON metadata to score Metaphor Alignment, Conceptual Strength, Geometric Complexity, and Design-Task Adherence on a 1–5 scale. The modelling experiments compare zero-shot metaphor-only, zero-shot metaphor-plus-design-task, and few-shot/history conditions, with agent outputs exchanged through JSON and generated functions saved as Grasshopper-compatible Python files.",
+  "results": "The study generated approximately 1,000 procedural designs and 4,000 rendered images from 20 metaphors. Across the reported experiment, 1,100 generation attempts yielded 992 valid model outputs after filtering failures, demonstrating that the agent chain can produce a broad variety of executable concept models and automatically assess them through visual evaluation. Results show meaningful diversity and stronger task adherence when design tasks or prior examples are supplied, while also exposing limitations in geometric robustness, code reliability, and the consistency of LLM-based self-evaluation for open-ended design.",
   "url": "https://doi.org/10.52842/conf.caadria.2025.1.193",
   "taskEn": "Open-ended concept design and procedural 3D generation",
   "inputDataEn": "Text metaphors/design tasks plus procedural-modeling context and rendered images/JSON evaluation information",
@@ -32,6 +32,6 @@
     "editing_execution",
     "analysis_compliance_diagnosis"
   ],
-  "operationEvidence": "The agent chain generates architectural concepts and executable Rhino/Grasshopper code, runs that code to create and vary 3D models, renders the outputs, and uses GPT-4o vision to score the generated designs against explicit conceptual and geometric criteria.",
+  "operationEvidence": "The agent chain generates architectural concepts and executable Rhino/Grasshopper code, executes and repairs that code to create parameterized 3D models, renders the outputs in Blender, and uses GPT-4o vision to evaluate generated designs against explicit conceptual and geometric criteria.",
   "operationCodingBasis": "full_text"
 }
