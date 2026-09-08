@@ -1,0 +1,38 @@
+{
+  "id": "lifall2026",
+  "citation": "Li et al. / 2026",
+  "title": "Construction site fall hazard identification and automated captioning using adapted vision-language models",
+  "year": 2026,
+  "category": "施工管理与安全",
+  "task": "高处作业坠落危险识别与标准化描述生成",
+  "phase": "施工",
+  "inputData": "施工高处作业图像 + 标准化安全危险文本描述",
+  "representation": "多模态",
+  "llmMethod": "微调",
+  "contribution": "提出施工安全视觉语言模型CS-VLM，通过BERT驱动的自然语言描述标准范式转换方法统一同类危险的文本表达，再采用MS-Swift适配器与LoRA对Qwen2.5-7B-Instruct进行高效领域微调，实现复杂坠落危险识别和标准化自动描述。",
+  "abstract": "This study proposes the Construction Safety Vision-Language Model (CS-VLM) for construction-site fall-hazard identification and automated captioning. A standardized image-text dataset is built using a BERT-based natural-language conversion method to reduce variation in hazard descriptions. Qwen2.5-7B-Instruct is then efficiently adapted with ModelScope Swift adapters and LoRA. CS-VLM achieves a CIDEr score of 1.324, a SPICE score of 0.391, and a hazard-identification F1-score of 90.2%, showing improved adaptability to complex scenarios and the ability to identify composite hazards involving both human and object factors.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "Qwen2.5-7B-Instruct",
+    "CS-VLM",
+    "BERT"
+  ],
+  "keywords": [
+    "Fall hazard identification",
+    "Image captioning",
+    "Vision-language large model",
+    "Parameter-efficient fine-tuning",
+    "Natural language processing"
+  ],
+  "methodology": "The authors collect authentic construction work-at-height imagery and develop a standardized terminology basis for fall hazards. The Natural Language Description Standard Paradigm Conversion Method (NLDSPCM), using BERT-based language conversion, transforms varied free-form hazard descriptions into unified expressions aligned more closely with safety regulations. These standardized image-text pairs form the training, validation, and testing data. The pre-trained Qwen2.5-7B-Instruct vision-language model is adapted using MS-Swift lightweight adapters and LoRA so that the resulting CS-VLM can jointly identify multiple fall-hazard factors and produce standardized natural-language descriptions in complex construction scenes.",
+  "results": "CS-VLM achieved CIDEr 1.324 and SPICE 0.391 for hazard captioning and an F1-score of 90.2% for hazard identification. The adapted model outperformed the compared state-of-the-art approaches in complex-scenario adaptability while using parameter-efficient fine-tuning. Qualitative and quantitative results show improved recognition of composite fall hazards that combine unsafe worker behavior with unsafe object or environmental conditions, together with more consistent standardized descriptions.",
+  "url": "https://doi.org/10.1016/j.autcon.2026.106790",
+  "taskEn": "Construction fall-hazard identification and standardized automated captioning",
+  "inputDataEn": "Construction work-at-height images plus standardized safety-hazard text descriptions",
+  "operations": [
+    "analysis_compliance_diagnosis",
+    "generation_parameterization"
+  ],
+  "operationEvidence": "CS-VLM identifies fall hazards from construction imagery and generates standardized hazard captions; both hazard recognition and caption quality are explicitly evaluated with task-specific metrics.",
+  "operationCodingBasis": "full_text"
+}
