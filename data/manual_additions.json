@@ -88,5 +88,75 @@
     "phase": "规划与设计",
     "llmMethod": "Agent",
     "representation": "多模态"
+  },
+  {
+    "id": "leeragft2024",
+    "file": "papers/leeragft2024.json",
+    "title": "Performance comparison of retrieval-augmented generation and fine-tuned large language models for construction safety management knowledge retrieval",
+    "year": 2024,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "其他",
+    "representation": "图结构"
+  },
+  {
+    "id": "leelongcontext2025",
+    "file": "papers/leelongcontext2025.json",
+    "title": "Long context window-based zero-shot legal interpretation of building codes and regulations",
+    "year": 2025,
+    "category": "规范与合规检查",
+    "phase": "规划与设计",
+    "llmMethod": "Prompt",
+    "representation": "文本"
+  },
+  {
+    "id": "iversen2026",
+    "file": "papers/iversen2026.json",
+    "title": "Leveraging large language models for BIM-based automated compliance checking",
+    "year": 2026,
+    "category": "规范与合规检查",
+    "phase": "规划与设计",
+    "llmMethod": "Agent",
+    "representation": "结构化"
+  },
+  {
+    "id": "chenyin2025",
+    "file": "papers/chenyin2025.json",
+    "title": "Tailored vision-language framework for automated hazard identification and report generation in construction sites",
+    "year": 2025,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "微调",
+    "representation": "多模态"
+  },
+  {
+    "id": "gaocontract2025",
+    "file": "papers/gaocontract2025.json",
+    "title": "Application of large language models to intelligently analyze long construction contract texts",
+    "year": 2025,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "RAG",
+    "representation": "文本"
+  },
+  {
+    "id": "zhangcontractft2026",
+    "file": "papers/zhangcontractft2026.json",
+    "title": "Automating construction contract question answering using large language model and fine-tuning",
+    "year": 2026,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "微调",
+    "representation": "文本"
+  },
+  {
+    "id": "lifall2026",
+    "file": "papers/lifall2026.json",
+    "title": "Construction site fall hazard identification and automated captioning using adapted vision-language models",
+    "year": 2026,
+    "category": "施工管理与安全",
+    "phase": "施工",
+    "llmMethod": "微调",
+    "representation": "多模态"
   }
 ]
