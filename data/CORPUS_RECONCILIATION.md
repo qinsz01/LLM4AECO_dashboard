@@ -79,3 +79,12 @@ Two close research-line relationships were inspected manually and are **not dupl
 ## Date/cutoff check
 
 All newly indexed studies fall within the review's 2023–May 2026 eligibility window when assessed by formal bibliographic publication year and/or first online publication availability. Borderline 2026 records were checked against publisher metadata before inclusion. The corpus is frozen after this reconciliation; subsequent papers may be cited narratively but should not be added to corpus statistics without reopening the review protocol.
+
+
+## Bibliographic metadata corrections
+
+- `mehrishal2025` was originally stored with its Preprints.org metadata. The
+  record has been updated to the formal peer-reviewed article in *Remote
+  Sensing* 17(16), 2891, DOI `10.3390/rs17162891`, first published online on
+  2025-08-20. This is a bibliographic correction only; the study coding and
+  corpus membership are unchanged.
