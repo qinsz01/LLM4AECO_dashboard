@@ -1,0 +1,35 @@
+{
+  "id": "zhangcontractft2026",
+  "citation": "Zhang et al. / 2026",
+  "title": "Automating construction contract question answering using large language model and fine-tuning",
+  "year": 2026,
+  "category": "施工管理与安全",
+  "task": "施工合同知识问答与条款解释",
+  "phase": "施工",
+  "inputData": "FIDIC Yellow Book合同条款 + 解释材料 + 构造的专业问答数据",
+  "representation": "文本",
+  "llmMethod": "微调",
+  "contribution": "提出面向施工合同知识问答的领域适配路线，以FIDIC Yellow Book及解释材料构造高质量问答数据，并通过监督微调与基于人类偏好的强化学习将专业合同知识内化到小型开源模型中，为隐私敏感、低成本的本地化合同智能提供替代RAG的参数化适配方案。",
+  "abstract": "Construction contract management depends heavily on expert knowledge and efficient access to contract provisions. This study develops a domain-adapted contract QA model by combining supervised fine-tuning and reinforcement learning on a small open-source LLM. A high-quality QA dataset is constructed from FIDIC standard contract conditions and interpretive materials. The training pipeline enables a smaller locally deployable model to reach performance comparable to general-purpose LLMs across key evaluation dimensions, while the accompanying data-construction framework offers a transferable approach for professional domains with scarce QA data.",
+  "journal": "Expert Systems with Applications",
+  "llmModels": [
+    "DeepSeek-R1-Distill-Qwen-14B"
+  ],
+  "keywords": [
+    "Large language model",
+    "Knowledge question answering",
+    "Construction contracts management",
+    "Supervised fine-tuning",
+    "Reinforcement learning"
+  ],
+  "methodology": "The study uses FIDIC Yellow Book standard contract conditions and related interpretive materials as the domain knowledge source. An LLM-assisted data-construction pipeline creates 5,000 instruction-format QA pairs; 4,800 are used for training and 200 for validation. DeepSeek-R1-Distill-Qwen-14B is first adapted through supervised fine-tuning using LoRA (rank 16), followed by reward-model training and reinforcement learning with Proximal Policy Optimization under an RLHF-style pipeline. The resulting model is evaluated on construction-contract QA and compared with general-purpose LLMs across multiple answer-quality dimensions.",
+  "results": "The domain-adapted model substantially improves construction-contract QA over the unadapted small open-source base and achieves performance comparable to general-purpose LLMs across multiple key evaluation dimensions. The experiments support the feasibility of combining SFT and preference-based reinforcement learning to internalize professional contract knowledge in a relatively small model suitable for lower-cost and privacy-sensitive deployment.",
+  "url": "https://doi.org/10.1016/j.eswa.2025.129493",
+  "taskEn": "Construction-contract knowledge question answering and clause interpretation",
+  "inputDataEn": "FIDIC Yellow Book clauses, interpretive materials, and constructed domain QA data",
+  "operations": [
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "The fine-tuned model is evaluated on professional construction-contract questions that require understanding and interpreting contractual provisions; ordinary answer prose is not separately coded as generation and the deployed model does not use runtime retrieval.",
+  "operationCodingBasis": "full_text"
+}
