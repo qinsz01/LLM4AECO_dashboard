@@ -1,0 +1,14 @@
+[
+  {
+    "id": "alwashah2025",
+    "title": "Generative artificial intelligence for construction: Use cases, trends, challenges, and opportunities",
+    "studyType": "review",
+    "reason": "Secondary review without an implemented and evaluated paper-specific LLM-enabled AECO workflow."
+  },
+  {
+    "id": "liu2025b",
+    "title": "Large Language Models for Building Energy Applications: Opportunities and Challenges",
+    "studyType": "perspective",
+    "reason": "Perspective/secondary study without an implemented and evaluated paper-specific LLM-enabled AECO workflow."
+  }
+]
