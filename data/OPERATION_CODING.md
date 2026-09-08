@@ -1,8 +1,9 @@
 # Data-processing operation coding
 
-Each paper was reviewed individually against the highest available primary
-source. Full texts were checked for all 172 papers. A locally misfiled PDF was
-rejected and replaced with the correct publisher PDF.
+Each active study was reviewed individually against the highest available
+primary source. Full texts were checked for the final **197-study analytical
+corpus**. A locally misfiled PDF encountered during coding was rejected and
+replaced with the correct publisher PDF.
 
 The `operations` field is multi-label and uses four values:
 
@@ -30,7 +31,10 @@ Boundary rules used in the review:
 - a recommendation is generation only when it is an implemented and evaluated
   task output.
 
-All 172 records contain `operations`, `operationEvidence`, and
-`operationCodingBasis`, with `full_text` recorded as the basis for every paper.
-Two review or perspective records do not evaluate a specific AECO LLM workflow
-and therefore have an empty `operations` array.
+All **197 active analytical records** contain `operations`,
+`operationEvidence`, and `operationCodingBasis`; all active records have at
+least one operation label and the final corpus contains **445 operation
+assignments** in total. The two secondary/non-primary records tracked in
+`excluded_secondary_studies.json` are not part of the active analytical corpus
+and retain empty operation arrays because they do not evaluate a paper-specific
+LLM-enabled AECO workflow.
