@@ -1,0 +1,34 @@
+{
+  "id": "iversen2026",
+  "citation": "Iversen and Huang / 2026",
+  "title": "Leveraging large language models for BIM-based automated compliance checking",
+  "year": 2026,
+  "category": "规范与合规检查",
+  "task": "BIM自动规范合规检查",
+  "phase": "规划与设计",
+  "inputData": "建筑规范文本 + BIM模型数据 + 预定义数据提取/检查工具",
+  "representation": "结构化",
+  "llmMethod": "Agent",
+  "contribution": "提出LLM中心的端到端BIM自动合规检查框架，使模型直接解释规范、选择并调用BIM数据提取工具、执行规则检查并生成带推理依据的合规报告，从而绕过传统ACC中人工规则数字化的主要瓶颈。",
+  "abstract": "Automated compliance checking in AECO is constrained by the effort required to manually digitize regulatory rules. Using design science research, this study develops an LLM-centric artifact that directly interprets building regulations, prepares BIM data, executes compliance checks, and generates detailed reports. The artifact achieves 97% F1 for rule classification, 100% F1 for dependency identification, correctly selects BIM data-extraction tools in 97% of cases, and reaches 97.7% accuracy in rule execution. The final reports include the LLM's reasoning, demonstrating a holistic alternative to traditional rule-digitization pipelines.",
+  "journal": "Automation in Construction",
+  "keywords": [
+    "Automated compliance checking",
+    "Digital building permitting",
+    "Large language models",
+    "Building information modeling"
+  ],
+  "methodology": "The artifact organizes compliance checking as a multi-stage LLM-driven workflow. Regulatory clauses are first interpreted to determine rule type and dependencies. For requirements that need model information, the LLM identifies the appropriate pre-written BIM data-extraction functions and orchestrates their use to obtain task-relevant structured model data. The resulting values are evaluated against the interpreted regulation, after which the system synthesizes the checking result and supporting reasoning into a detailed compliance report. The study evaluates rule interpretation, tool selection/model preparation, rule execution, and reporting as separate stages of the end-to-end artifact.",
+  "results": "Rule interpretation achieved 97% F1 for classification and 100% F1 for dependency identification. During BIM model preparation, the artifact selected the correct data-extraction tool in 97% of evaluated cases. Rule execution reached 97.7% accuracy and significantly outperformed a naive baseline. The reporting stage produced detailed compliance reports containing the model's reasoning, showing that the structured multi-stage workflow can support end-to-end BIM-based regulatory checking.",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106707",
+  "taskEn": "BIM-based automated regulatory compliance checking",
+  "inputDataEn": "Building regulations plus BIM model data and predefined extraction/checking tools",
+  "operations": [
+    "retrieval_alignment",
+    "editing_execution",
+    "analysis_compliance_diagnosis",
+    "generation_parameterization"
+  ],
+  "operationEvidence": "The LLM maps regulatory requirements to relevant BIM extraction functions, invokes those tools and executes checks on structured model data, determines compliance, and generates a detailed compliance report with supporting reasoning.",
+  "operationCodingBasis": "full_text"
+}

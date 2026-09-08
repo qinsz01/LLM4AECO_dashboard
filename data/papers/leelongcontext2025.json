@@ -1,0 +1,37 @@
+{
+  "id": "leelongcontext2025",
+  "citation": "Lee and Lee / 2025",
+  "title": "Long context window-based zero-shot legal interpretation of building codes and regulations",
+  "year": 2025,
+  "category": "规范与合规检查",
+  "task": "建筑规范法律解释与条文检索",
+  "phase": "规划与设计",
+  "inputData": "建筑法规文本 + 法律解释咨询问题 + 法规条文数据库",
+  "representation": "文本",
+  "llmMethod": "Prompt",
+  "contribution": "提出基于长上下文窗口LLM的自动建筑规范解释器ABCI，通过条文提取、相关条文递归推断、法规内容调用和法律解释四个模块，在不进行微调或传统RAG分块的情况下完成跨条文法律解释，并直接展示长上下文组织方式相对RAG分块的优势。",
+  "abstract": "Building-code interpretation requires reasoning over frequently updated, heavily cross-referenced legal texts. This study proposes three Automated Building Code Interpreter variants—ABCI-Original, ABCI-Inferred, and ABCI-Filtered—built on long-context-window LLMs and zero-shot reasoning. The framework separates provision retrieval from legal interpretation and is evaluated on 171 challenging Legal Interpretative Question Answering cases. ABCI-Filtered achieves 63.2% accuracy, outperforming a RAG baseline at 56.1%, Claude 3.7 at 60.2%, ABCI-Inferred at 60.8%, and ABCI-Original at 56.7%. On an easier building-code QA dataset, ABCI-Filtered and ABCI-Inferred reach 79.6% and 80.0%, respectively.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "Long-context-window LLMs",
+    "Claude 3.7 Sonnet"
+  ],
+  "keywords": [
+    "Legal interpretation",
+    "Building code",
+    "Large language model",
+    "Context window",
+    "Task-specific patterns"
+  ],
+  "methodology": "ABCI decomposes legal interpretation into four modules. The Mentioned Provision Filter extracts statutes or provisions explicitly cited in a user's inquiry. The Relevant Provision Inferrer recursively infers additional provisions needed for interpretation. The Caller requests the corresponding statute and provision contents from legal databases and passes them downstream. The Legal Interpreter jointly analyzes the assembled provisions with multi-hop and contextual reasoning to answer the inquiry. Three variants combine these modules differently, allowing the study to isolate the effects of recursive provision search and filtering while avoiding fine-tuning and conventional fixed-chunk RAG.",
+  "results": "On 171 LIQA cases, ABCI-Filtered achieved 63.2% accuracy compared with 56.1% for the RAG baseline and 60.2% for Claude 3.7. Recursive search recovered an average of 2.13 additional relevant provisions and was particularly effective for definitions and attached forms. Separating provision search from answer generation reduced overthinking and improved accuracy by 7.3 percentage points. On a simpler building-code QA dataset, ABCI-Filtered and ABCI-Inferred achieved 79.6% and 80.0% accuracy.",
+  "url": "https://doi.org/10.1016/j.autcon.2025.106450",
+  "taskEn": "Building-code legal interpretation and provision retrieval",
+  "inputDataEn": "Building regulations, legal-interpretation inquiries, and statute/provision database contents",
+  "operations": [
+    "retrieval_alignment",
+    "analysis_compliance_diagnosis"
+  ],
+  "operationEvidence": "ABCI identifies and recursively retrieves relevant statutory provisions, then interprets the assembled legal context to determine how building codes and regulations apply to the submitted case.",
+  "operationCodingBasis": "full_text"
+}

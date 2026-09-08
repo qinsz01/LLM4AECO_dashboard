@@ -1,0 +1,37 @@
+{
+  "id": "leeragft2024",
+  "citation": "Lee et al. / 2024",
+  "title": "Performance comparison of retrieval-augmented generation and fine-tuned large language models for construction safety management knowledge retrieval",
+  "year": 2024,
+  "category": "施工管理与安全",
+  "task": "安全知识检索与预防措施生成",
+  "phase": "施工",
+  "inputData": "事故摘要文本 + 施工安全指南知识图谱/问答数据",
+  "representation": "图结构",
+  "llmMethod": "其他",
+  "contribution": "直接比较面向施工安全知识检索的知识图谱RAG与领域微调LLM：RAG将GPT-4与由安全指南构建的知识图谱结合，微调模型使用同源问答数据训练；两者均较通用GPT-4提升事故案例预防措施生成质量，为RAG与参数内化两类领域适配路线提供了直接对照。",
+  "abstract": "Construction safety standards are often stored in unstructured text and image documents, limiting their direct use in daily safety management. This study develops and compares two domain-adapted approaches for construction safety knowledge retrieval: a retrieval-augmented generation model integrating GPT-4 with a knowledge graph derived from construction safety guidelines, and a fine-tuned LLM trained on a question-answering dataset derived from the same guidelines. Accident synopses are used as case-study queries to generate preventive measures, and the generated responses are compared with reference preventive strategies using cosine similarity, Euclidean distance, BLEU, and ROUGE. Both approaches outperform standard GPT-4, with reported improvements of 21.5% for RAG and 26% for the fine-tuned LLM.",
+  "journal": "Automation in Construction",
+  "llmModels": [
+    "GPT-4",
+    "fine-tuned construction-safety LLM"
+  ],
+  "keywords": [
+    "Large Language Model",
+    "Retrieval-Augmented Generation",
+    "Fine-tuned LLM",
+    "Construction safety",
+    "Knowledge graph"
+  ],
+  "methodology": "The study constructs two parallel construction-safety LLM workflows from official safety-guideline documents. In the RAG branch, safety-guideline knowledge is represented as a knowledge graph and supplied to GPT-4 through retrieval. In the fine-tuning branch, question-answer pairs derived from the same guideline source are used to adapt an LLM to construction-safety knowledge. Accident synopses are then submitted as queries and the systems generate preventive measures. The generated outputs are evaluated against preventive measures in official accident-case references using semantic-distance and text-overlap metrics, enabling a controlled comparison of non-parametric retrieval grounding and parameter-based domain adaptation.",
+  "results": "Both domain-adapted systems outperformed the standard GPT-4 baseline on the construction-safety case studies. The paper reports an overall improvement of 21.5% for the knowledge-graph RAG model and 26% for the fine-tuned LLM, with BLEU, ROUGE, cosine-similarity, and Euclidean-distance evaluations showing improved relevance and keyword-level agreement with reference preventive measures. The comparison also highlights different trade-offs between dynamic knowledge retrieval and knowledge internalization through fine-tuning.",
+  "url": "https://doi.org/10.1016/j.autcon.2024.105846",
+  "taskEn": "Construction safety knowledge retrieval and preventive-measure generation",
+  "inputDataEn": "Accident synopsis text plus construction-safety guideline knowledge graph / QA data",
+  "operations": [
+    "retrieval_alignment",
+    "generation_parameterization"
+  ],
+  "operationEvidence": "The RAG branch retrieves construction-safety guideline knowledge from an explicit knowledge graph, while both evaluated systems generate preventive measures for accident synopses and compare those recommendations with official reference measures.",
+  "operationCodingBasis": "full_text"
+}

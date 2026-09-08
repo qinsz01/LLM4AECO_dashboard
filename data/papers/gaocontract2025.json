@@ -1,0 +1,39 @@
+{
+  "id": "gaocontract2025",
+  "citation": "Gao et al. / 2025",
+  "title": "Application of large language models to intelligently analyze long construction contract texts",
+  "year": 2025,
+  "category": "施工管理与安全",
+  "task": "长施工合同压缩与智能问答",
+  "phase": "施工",
+  "inputData": "FIDIC/NEC长合同文本 + 用户合同问题",
+  "representation": "文本",
+  "llmMethod": "RAG",
+  "contribution": "针对施工合同超过LLM上下文窗口的问题提出两阶段语义/长度分割方法，并将高质量文本块用于合同内容压缩和检索式问答；8K上下文模型在该信息组织方式下达到与128K长上下文模型相近的问答表现，直接展示了model-facing文本组织对工程任务性能的影响。",
+  "abstract": "Long construction contracts frequently exceed the context windows of large language models. This study proposes a two-stage text-segmentation method that reorganizes lengthy contract documents into semantically coherent chunks and then uses those chunks for content compression and intelligent question answering. FIDIC contracts are used as the principal test case. The condensed contract output maintains high correctness and readability, while the question-answering workflow reaches a 93.3% satisfaction rate. The authors further show that an 8K-context model using the proposed processing method performs comparably to 128K long-context models while requiring less computational capacity.",
+  "journal": "Construction Management and Economics",
+  "llmModels": [
+    "GPT-4 (8K context)",
+    "GPT-4 (128K context)",
+    "Kimi Chat",
+    "GLM-4"
+  ],
+  "keywords": [
+    "Construction contracts",
+    "Large language models",
+    "Long text analysis",
+    "Content compression",
+    "Intelligent question-answering"
+  ],
+  "methodology": "The method first divides long construction-contract documents using a two-stage protocol that combines semantic boundaries with token-length control so that coherent legal units are preserved within the model context window. The segmented chunks are used in two downstream workflows. For content compression, GPT-4 is prompted to condense contract provisions using serial and parallel compression schemes and the resulting text is assessed for correctness and readability. For intelligent QA, query-relevant chunks are selected using semantic embedding similarity and supplied to the LLM as context. FIDIC Red Book experiments are supplemented by tests on NEC4 and comparisons with long-context models.",
+  "results": "The two-stage segmentation method produced higher-quality contract chunks than token-based segmentation. In the QA evaluation, the proposed workflow reached a 93.3% successful matching rate and a 93.3% satisfaction rate without substantive answer errors. Expert evaluation found the compressed contract outputs to retain high correctness and readability. An 8K-context GPT-4 workflow using the proposed segmentation/retrieval method achieved performance comparable to 128K-context alternatives, showing that text organization can partly offset limited native context length.",
+  "url": "https://doi.org/10.1080/01446193.2024.2415676",
+  "taskEn": "Long construction-contract compression and intelligent question answering",
+  "inputDataEn": "Long FIDIC/NEC construction-contract texts plus user contract queries",
+  "operations": [
+    "retrieval_alignment",
+    "generation_parameterization"
+  ],
+  "operationEvidence": "The QA workflow semantically matches user questions to coherent contract chunks before LLM inference, while the content-compression workflow generates condensed contract artifacts whose correctness and readability are explicitly evaluated.",
+  "operationCodingBasis": "full_text"
+}
