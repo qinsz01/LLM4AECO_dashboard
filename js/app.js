@@ -539,12 +539,32 @@
         });
     }
 
+    function loadIndex(path, required) {
+        return fetch(path)
+            .then(function (response) {
+                if (!response.ok) {
+                    if (!required) return [];
+                    throw new Error('Failed to load ' + path);
+                }
+                return response.json();
+            })
+            .catch(function (error) {
+                if (!required) {
+                    console.warn('Optional index unavailable:', path, error);
+                    return [];
+                }
+                throw error;
+            });
+    }
+
     function init() {
         I18n.applyToDOM();
-        fetch('data/index.json')
-            .then(function (response) {
-                if (!response.ok) throw new Error('Failed to load index.json');
-                return response.json();
+        Promise.all([
+            loadIndex('data/index.json', true),
+            loadIndex('data/manual_additions.json', false)
+        ])
+            .then(function (indexes) {
+                return indexes[0].concat(indexes[1]);
             })
             .then(function (index) {
                 return Promise.all(index.map(function (entry) {
