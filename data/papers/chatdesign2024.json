@@ -10,17 +10,18 @@
   "representation": "结构化",
   "llmMethod": "Prompt",
   "contribution": "提出ChatDesign，将预训练大语言模型用于自然语言驱动的平面图生成，并通过统一指令翻译器将不同交互形式映射为Locate、Move、Resize、Add和Delete等结构化操作，实现迭代生成与局部编辑。",
-  "abstract": "Large language models have achieved remarkable success in language-centered tasks, but architectural floor plan generation requires satisfying complex spatial and relational constraints. ChatDesign leverages pre-trained LLMs to generate floor plans from natural-language descriptions and supports iterative modifications based on user interaction. The framework combines initial text-driven generation with repeated refinement, allowing users to adjust designs through standardized editing operations.",
+  "abstract": "ChatDesign uses a pre-trained large language model and decoder to generate floor-plan regression parameters from natural-language descriptions and supports iterative refinement through user feedback. It also integrates multiple interaction modalities through standardized editing operations.",
   "journal": "CAADRIA 2024",
   "keywords": [
-    "large language models",
     "floor plan generation",
-    "architectural design",
-    "natural language interaction",
-    "interactive editing"
+    "large language models",
+    "user interactions",
+    "automatic design",
+    "deep learning",
+    "pre-train models"
   ],
-  "methodology": "The workflow starts from a user's textual description to produce an initial floor plan through an LLM-based generation pipeline. A Uniform Instructions Translator normalizes text, audio, mouse-click, and drag-and-drop interactions into five explicit operations—Locate, Move, Resize, Add, and Delete—with object, location, and geometric parameters, so later turns can modify the existing plan in a consistent machine-operable form.",
-  "results": "On the main comparison, ChatDesign achieved Micro/Macro IoU values of 58.31/55.43, outperforming Tell2Design at 54.34/53.30; the iterative ChatDesign variant reached 54.57/57.24, while human layouts scored 64.67/62.32. On ten challenging Tell2Design cases, ChatDesign achieved 56.82/60.56 versus 47.56/51.10, showing a roughly 9–10 point improvement in both metrics.",
+  "methodology": "The workflow uses a pre-trained LLM to process natural-language floor-plan requirements and a decoder to produce regression parameters and floor-plan outputs. Iterative refinement incorporates the original text, previous results, and subsequent user feedback. A Uniform Instructions Translator normalizes text, audio, mouse-click, and drag-and-drop interactions into five core operations—Locate, Move, Resize, Add, and Delete—with explicit object, position, and dimension parameters so the same downstream editing mechanism can handle different interaction modalities.",
+  "results": "On the main benchmark, ChatDesign achieved Micro-IoU 58.31 and Macro-IoU 55.43, compared with 54.34 and 53.30 for Tell2Design and 64.67 and 62.32 for human designers. The iterative variant achieved Micro-IoU 54.57 and Macro-IoU 57.24. On 10 challenging Tell2Design examples, ChatDesign reached Micro-IoU 56.82 and Macro-IoU 60.56 versus Tell2Design's 47.56 and 51.10, showing roughly a 10% improvement after interactive refinement. Visual comparisons also show generated layouts approaching the ground-truth and human-designed plans.",
   "url": "https://doi.org/10.52842/conf.caadria.2024.1.099",
   "taskEn": "Interactive floor plan generation and editing",
   "inputDataEn": "Natural-language requirements and multimodal user interactions (text, voice, clicks, and drag-and-drop), normalized into structured operations and geometric parameters",
@@ -28,6 +29,6 @@
     "generation_parameterization",
     "editing_execution"
   ],
-  "operationEvidence": "ChatDesign generates floor-plan alternatives from user requirements and implements Locate, Move, Resize, Add, and Delete operations that modify an existing floor-plan state through structured operation parameters.",
+  "operationEvidence": "ChatDesign generates floor-plan parameters/designs from user requirements and implements Locate, Move, Resize, Add, and Delete operations that modify an existing floor-plan state through explicit operation parameters.",
   "operationCodingBasis": "full_text"
 }
